@@ -75,7 +75,7 @@ Now you have an external table which will be used in the Integration flow.
 ## Task 2: Create Object Storage Bucket
 
 1.  Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
-    ![Select Object Storage](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/storage-buckets.png)
+    ![Select Object Storage](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
 2.  Select the compartment that you want to create your bucket in.
     Click **Create Bucket**
