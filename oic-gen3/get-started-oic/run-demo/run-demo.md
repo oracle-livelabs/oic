@@ -33,7 +33,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2.  Connect with File Server using any FTP Client example: FileZilla. Place the *sales_orders.csv* file in the folder **/home/users/&ltyour username&gt/Output**
+2.  Connect with File Server using any FTP Client example: FileZilla. Place the *sales_orders.csv* file in the folder **/home/users/`<your-folder-name>`/Output**
 
 ## Task 2: Run the Scheduled Integration Flow
 
@@ -134,4 +134,4 @@ Verify sales orders file archived in OCI Object storage
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - 
+* **Last Updated By/Date** -

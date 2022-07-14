@@ -61,7 +61,7 @@ Add FTP Invoke to integration canvas.
     | --- | ----------- |
     | Select Operation        | **Download File**       |
     | Select a Transfer Mode  | **Binary** |
-    | Input Directory | **/home/users/#####/Output** |
+    | Input Directory | **/home/users/`<your-folder-name>`/Output** |
     | File Name | **sales_orders.csv** |
     | Download Directory | **/tmp/stage** |
 
