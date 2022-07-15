@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, we shall talk about provisioning Oracle Integration instance, enabling File Server, provisioning Oracle Autonomous Database and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration. You will learn how to create an integration flow that reads a file from the File Server and bulk import into Oracle Autonomous Database.
+In this workshop, we shall talk about provisioning Oracle Integration 3 instance, enabling File Server, provisioning Oracle Autonomous Database and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration. You will learn how to create an integration flow that reads a file from the File Server and bulk import into Oracle Autonomous Database.
 
 Estimated Time: 1 hour 30 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 1 hour 30 minutes
 
 In this workshop, you will learn how to:
 
-* Provision Oracle Integration in Oracle Cloud Infrastructure
+* Provision Oracle Integration 3 in Oracle Cloud Infrastructure
 * How to enable the File Server in Oracle Integration instance.
 * Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
 * Learn several Integrations specific concepts
@@ -23,7 +23,7 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-### What is Oracle Integration?
+### What is Oracle Integration 3?
 
 Integration is a fundamental part of your digital business development. It involves connecting on-premises applications and cloud applications and services. Oracle Integration makes it easy to connect your applications and automate end-to-end processes such as procure to pay, inquiry to order, and hire to retire.
 
@@ -49,9 +49,9 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
+* [Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - 
+* **Last Updated By/Date** -

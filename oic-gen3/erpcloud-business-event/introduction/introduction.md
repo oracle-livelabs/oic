@@ -3,12 +3,12 @@
 ## About this Workshop
 The ERP Cloud Business Event Workshop will cover the recommended steps to complete an end-to-end use case based on ERP Cloud Business Events in Oracle Integration. This workshop will leverage the Oracle ERP Cloud Adapter, which enables you to create an integration with Oracle Enterprise Resource Planning (ERP) applications. One of the key differentiators of this adapter is support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Cloud.
 
-This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to the Oracle Autonomous Database. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in Oracle Integration.
+This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to the Oracle Autonomous Database. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in Oracle Integration 3.
 
 Estimated workshop time: 1 hour
 
-## What is Oracle Integration
-With Oracle Integration (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
+## What is Oracle Integration 3
+With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
 ## Leveraging the ERP Adapter in Oracle Integration
 The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS applications with Oracle ERP Cloud without having to know about the specific details involved in the integration.
@@ -43,7 +43,7 @@ This lab assumes you have the following:
 You may now **proceed to the next lab**.
 
 ## Want to Learn More?
-* [Getting Started with OCI Application Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
 * [Using the Oracle ERP Cloud Adapter with OCI Application Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
 
 

@@ -1,10 +1,10 @@
-# Provision Oracle Integration
+# Provision Oracle Integration 3
 
 > **Note:** This step is required **only** if have have not yet provisioned an Oracle Integration instance.
 
 ## Introduction
 
-This lab walks you through the process of provisioning an instance of Oracle Integration, assuming you don't already have one available to you. If you do, you can skip this lab and move on to the next one.
+This lab walks you through the process of provisioning an instance of Oracle Integration 3, assuming you don't already have one available to you. If you do, you can skip this lab and move on to the next one.
 
 Estimated Time: 10 minutes
 
@@ -22,7 +22,7 @@ This lab assumes you have:
 
 If you just created a new Cloud account following the instructions in Getting Started, you must wait up to 30 minutes before you attempt to create an instance of Oracle Integration. (It could take anywhere between 10 and 30 minutes for a new user account to be fully provisioned) If you already have a Cloud account, you don't need to wait. Either way, make sure you've signed in to the Oracle Cloud as an Oracle Identity Cloud Service user before proceeding.
 
-## Task 1: Create an Instance of Oracle Integration
+## Task 1: Create an Instance of Oracle Integration 3
 
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you want to create your Oracle Integration instance. Once created, instances are visible only in the region in which they were created.
 
@@ -43,8 +43,10 @@ If you just created a new Cloud account following the instructions in Getting St
 6. Enter the following details, and click **Create**
 | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- |
-| Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
-| Version|Lists Version available in this tenancy. Select "OCI Application Integration" for Gen3 instance.
+| Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
+| Version|Lists Version available in this tenancy. Select "Oracle Integration 3" for Gen3 instance|
+| Edition|Enterprise|
+| Shape|Development|
 | License Type |Select - Subscribe to a new Oracle Integration License|
 | Message Packs |1|
 | Access Token | If this field is displayed, you are creating an instance as a non-federated user. Sign in as a federated user and restart creating an instance.|
@@ -53,9 +55,9 @@ If you just created a new Cloud account following the instructions in Getting St
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as Active and you'll receive an email. You are now ready to access your instance.
 
-## Task 2: Accessing an Oracle Integration Instance
+## Task 2: Accessing an Oracle Integration Instance 3
 
-Navigate to an Oracle Integration instance in the Oracle Cloud Infrastructure Console to open it.
+Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure Console to open it.
 
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
 2. If needed, select the compartment where you created your Oracle Integration instance. You should see your instance.
@@ -66,7 +68,7 @@ Navigate to an Oracle Integration instance in the Oracle Cloud Infrastructure Co
 
 ## Learn More
 
-* [Provisioning Oracle Integration Instance](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/creating-oracle-integration-instance.html#GUID-930F40E8-5149-4091-9CDA-8E05C8449BA6)
+* [Provisioning Oracle Integration 3 Instance](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/creating-oracle-integration-instance.html#GUID-930F40E8-5149-4091-9CDA-8E05C8449BA6)
 
 
 ## Acknowledgements
