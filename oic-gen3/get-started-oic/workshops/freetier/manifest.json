@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Get Started with Oracle Integration",
+    "workshoptitle": "Get Started with Oracle Integration 3",
     "help": "livelabs-help_oic_us@oracle.com",
     "tutorials": [
         {
@@ -11,8 +11,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Provision an Oracle Integration Instance",
-            "description": "Follow these steps to create a new OCI Integration service instance",
+            "title": "Lab 1: Provision an Oracle Integration 3 Instance",
+            "description": "Follow these steps to create a new Oracle Integration 3 service instance",
             "filename": "../../../common/provision-oic/provision.md"
         },
         {

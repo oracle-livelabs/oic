@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the process of enabling the Oracle Integration File Server. By default, the File Server is not enabled, but is required for this workshop.
+This lab walks you through the process of enabling the Oracle Integration 3 File Server. By default, the File Server is not enabled, but is required for this workshop.
 
 Estimated Time: 5 minutes
 
@@ -16,19 +16,19 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Successfully provisioned Oracle Integration Instance and able to access the home page.
+* Successfully provisioned Oracle Integration 3 Instance and able to access the home page.
 
 ## Task 1: Enable File Server
 
-To begin using File Server in Oracle Integration, it must first be enabled for the Oracle Integration instance in the Oracle Cloud Infrastructure Console. Enabling File Server is a one time action.
+To begin using File Server in Oracle Integration 3, it must first be enabled for the Oracle Integration 3 instance in the Oracle Cloud Infrastructure Console. Enabling File Server is a one time action.
 
-If you select File Server from the navigation pane and it's not yet enabled for Oracle Integration, the following message appears:
+If you select File Server from the navigation pane and it's not yet enabled for Oracle Integration 3, the following message appears:
    ![File Server Enablement](images/file-server-enablement0.png)
 
 To enable File Server:
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
-2. If needed, select the compartment where you created your Oracle Integration instance. You should see your instance.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
+2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
 3. Select your instance.
    The Integration Instance Details page is displayed.

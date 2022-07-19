@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "ERP Cloud Real Time Synchronization with Oracle Integration",
+    "workshoptitle": "ERP Cloud Real Time Synchronization with Oracle Integration 3",
     "help": "livelabs-help_oic_us@oracle.com",
     "tutorials": [
         {
@@ -13,7 +13,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Provision Oracle Integration",
+            "title": "Lab 1: Provision Oracle Integration 3",
             "filename": "../../../common/provision-oic/provision.md"
         },
         {
@@ -21,7 +21,7 @@
             "filename": "../../../common/enable-file-server/enable-file-server.md"
         },
         {
-            "title": "Lab 3: Configure ERP Cloud for Oracle Integration",
+            "title": "Lab 3: Configure ERP Cloud for Oracle Integration 3",
             "filename": "../../../common/configure-erpcloud-for-oic/configure-erpcloud-for-oic.md"
         },
         {

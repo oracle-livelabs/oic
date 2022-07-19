@@ -1,9 +1,9 @@
-# Configure ERP Cloud for OCI Integration
+# Configure ERP Cloud for Oracle Integration 3
 
-> **Note:** This step is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration
+> **Note:** This step is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration 3
 
 ## Introduction
-In this lab you will assign a custom role to an integration service user. This user account will be specified when creating an Oracle ERP Cloud Adapter connection in Oracle Integration.
+In this lab you will assign a custom role to an integration service user. This user account will be specified when creating an Oracle ERP Cloud Adapter connection in Oracle Integration 3.
 
 Estimated Time: 10 minutes
 
@@ -15,7 +15,7 @@ Estimated Time: 10 minutes
 ### Prerequisites
 This lab assumes you have
 * An Oracle ERP Cloud account
-* Access to an ERP Cloud user account with privileges to assign specific roles to an integration user. 
+* Access to an ERP Cloud user account with privileges to assign specific roles to an integration user.
 
 
 ## Task 1: Create a custom Integration role
@@ -25,7 +25,7 @@ This lab assumes you have
 2. Select **Navigator** > **Tools** > **Security Console**.
     ![Open Security Console](images/erp-open-security-console.png)
 
-3. In the *Roles* tab, click **Create Role**. 
+3. In the *Roles* tab, click **Create Role**.
 
 4. In the *Create Role* Canvas, enter the following information:
     | **Field**  | **Value** |
@@ -45,7 +45,7 @@ This lab assumes you have
     | Role | Integration Specialist | FND\_INTEGRATION\_SPECIALIST\_JOB
     | Role | Attachments User | AttachmentsUser |
     | Role | SOA Operator | SOAOperator |
-    | 
+    |
 
 
 7. In the *Summary* screen, click **Save and Close**.
@@ -68,11 +68,11 @@ This lab assumes you have
 
 3. Click **Add Role**.
 
-4. Search for the custom role created earlier by entering at least the first 3 characters of the role name. 
+4. Search for the custom role created earlier by entering at least the first 3 characters of the role name.
 
-5. Select the role from the resulting list, then click **Add Role Membership**. 
+5. Select the role from the resulting list, then click **Add Role Membership**.
 
-6. Click **Done** to close the Role Membership dialog. 
+6. Click **Done** to close the Role Membership dialog.
 
 7. In the *User Information* canvas, click **Save and Close**.
     ![Save user with added role](images/erp-user-with-roles.png)
@@ -83,9 +83,9 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 * [Prerequisites for Creating an ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/prerequisites-creating-connection.html)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3
 ](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
 
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, March 2022
+* **Last Updated By/Date** - Subhani Italapuram, July 2022

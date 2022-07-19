@@ -1,6 +1,6 @@
 # Provision Oracle Integration 3
 
-> **Note:** This step is required **only** if have have not yet provisioned an Oracle Integration instance.
+> **Note:** This step is required **only** if have have not yet provisioned an Oracle Integration 3 instance.
 
 ## Introduction
 
@@ -20,11 +20,11 @@ This lab assumes you have:
 
 ### Background
 
-If you just created a new Cloud account following the instructions in Getting Started, you must wait up to 30 minutes before you attempt to create an instance of Oracle Integration. (It could take anywhere between 10 and 30 minutes for a new user account to be fully provisioned) If you already have a Cloud account, you don't need to wait. Either way, make sure you've signed in to the Oracle Cloud as an Oracle Identity Cloud Service user before proceeding.
+If you just created a new Cloud account following the instructions in Getting Started, you must wait up to 30 minutes before you attempt to create an instance of Oracle Integration 3. (It could take anywhere between 10 and 30 minutes for a new user account to be fully provisioned) If you already have a Cloud account, you don't need to wait. Either way, make sure you've signed in to the Oracle Cloud as an Oracle Identity Cloud Service user before proceeding.
 
 ## Task 1: Create an Instance of Oracle Integration 3
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you want to create your Oracle Integration instance. Once created, instances are visible only in the region in which they were created.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you want to create your Oracle Integration 3 instance. Once created, instances are visible only in the region in which they were created.
 
 2. On the Oracle Cloud Get Started page, click the menu in the upper left corner to display the services you can provision.
 
@@ -44,7 +44,7 @@ If you just created a new Cloud account following the instructions in Getting St
 | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- |
 | Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
-| Version|Lists Version available in this tenancy. Select "Oracle Integration 3" for Gen3 instance|
+| Version|Lists Version available in this tenancy. Select "Oracle Integration 3"|
 | Edition|Enterprise|
 | Shape|Development|
 | License Type |Select - Subscribe to a new Oracle Integration License|
@@ -55,12 +55,12 @@ If you just created a new Cloud account following the instructions in Getting St
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as Active and you'll receive an email. You are now ready to access your instance.
 
-## Task 2: Accessing an Oracle Integration Instance 3
+## Task 2: Accessing an Oracle Integration 3 Instance
 
 Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure Console to open it.
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
-2. If needed, select the compartment where you created your Oracle Integration instance. You should see your instance.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
+2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 3. At the far right, click the Task menu and select Service Console. A new browser window will open to your Oracle Integration home page.
 	![Oracle Integration Home Page](./images/oic-homepage.png)
 
