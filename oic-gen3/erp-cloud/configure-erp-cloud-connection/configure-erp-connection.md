@@ -70,7 +70,7 @@ Step 3: [Configure OAuth Security Policy information in ERP Cloud Adapter](https
 ##	Task	2: (Exercise) Create an ERP Cloud Adapter Connection
 Create a connection with the Oracle ERP Cloud Adapter.
 
-1. Show the left Navigation menu, and click ***Integrations*** > ***Connections***.
+1. Show the left Navigation menu, and click ***Design*** > ***Connections***.
 
 2. Click ***Create***.
 

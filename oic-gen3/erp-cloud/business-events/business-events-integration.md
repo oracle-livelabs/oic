@@ -33,7 +33,7 @@ This lab assumes you have:
 
 ## Task 1: Configure File Server
 
-Configure File Server settings. This is required as you are using Embedded File Serve of Oracle Integration and using File Server as a target application in your integration flow.
+Configure File Server settings. This is required as you are using Embedded File Server of Oracle Integration and using File Server as a target application in your integration flow.
 
 1. Starting at the Oracle Integration **Home** page, select ***Settings***, then ***File Server*** from the left Navigation pane.
 2. Select ***Settings*** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of the IP and port number.
@@ -71,7 +71,7 @@ If the permissions are configured correctly, you should be able to list, read, a
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 **Note**: You can use an existing connection if one has already been configured for your environment.
 
-1. Starting at the Oracle Integration **Home** page, select ***Integrations***, then ***Connections*** from the left Navigation pane.
+1. Starting at the Oracle Integration **Home** page, select ***Design***, then ***Connections*** from the left Navigation pane.
 2. Click ***Create***, then select the ***FTP*** Adapter and click ***Select***.
 3. From the **Create Connection** dialog, **Name** your connection ***File Server*** and leave the rest of the configurations as default. Click ***Create***.  
 **Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
@@ -85,13 +85,13 @@ To access the File Server from an Integration, you will need to create an FTP Co
 | Username                | Your Oracle Integration username                      |
 | Password                | Your Oracle Integration password                      |
 
-5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the **Connection File Server was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
+5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the **Connection File Server was tested successfully** confirmation message. Click ***Save*** and Click ***Go back*** to exit the Connection editor.
 
 
 ##	Task 4: Create the PO Event Integration
-1. In the left Navigation pane, click ***Integrations*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Select***
+3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png)
 4. In the **Create New Integration** dialog, enter the following information:
 
@@ -116,7 +116,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 3. On the Basic Info page, for the **What do you want to call your endpoint?** element, enter ***POEvent***.
 
-4. Click ***Next***.
+4. Click ***> (Next Step)***.
 
 5. On the Request page, select the following values:
 
@@ -137,17 +137,13 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     > **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***Next***.
+6. Click ***> (Next Step)***.
 
-7. On the Response page, for **Response Type** element, choose ***None***. Click ***Next***.
+7. On the Response page, for **Response Type** element, choose ***None***. Click ***> (Next Step)***.
 
 8. On the Summary page, click ***Done***.
 
-9. On the integration canvas, from the Layout list, choose ***Horizontal***.
-
-    ![Horizontal Flow layout](images/horizontal-flow-layout-1.png)
-
-10. Click ***Save*** to persist changes.
+9. Click ***Save*** to persist changes.
 
 ## Task 6: Add the FTP Adapter as invoke activity
 Add the FTP Adapter invoke to the integration canvas.
@@ -184,7 +180,7 @@ This invokes the FTP adapter Configuration Wizard.
 </copy>
 ```
 5. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
-6. Click ***Next*** and Review the **Summary** page and click on ***Done***
+6. Click ***> (Next Step)*** and Review the **Summary** page and click on ***Done***
 7. Click on ***Save***
 
 ## Task 7: Map data between ERP trigger and FTP invoke
@@ -192,7 +188,7 @@ Use the mapper to drag fields from the source structure (POEvent)  to the target
 
 When we added the FTP invoke to the integration, a map icon was automatically added.
 
-1. Hover your cursor over the **Map to Write2FTP** Mapper icon, click once, then select ***Edit***.
+1. Hover your cursor over the **Map Write2FTP** Mapper icon, click on **...** and then select ***Edit***.
    ![Edit ERP-FTP Mapper](images/mapper-edit-erp-ftp.png)
 
 2. Use the mapper to drag element nodes in the source ERP Cloud structure to element nodes in the target FTP structure.
@@ -224,9 +220,9 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 
    ![Completed Mapping](images/mapper-completed-erp-ftp-1.png)
 
-3. Click ***Validate***, then wait for the confirmation message **Mapping is valid and ready to use.**
+3. Click ***Validate***, then wait for the confirmation message **Map to Write2FTP successfully validated.**
 
-4. Click ***Close***
+4. Click ***< (Go back)***
 
 5. Click ***Save*** to persist changes.
 ## Task 8: Define Tracking Fields
@@ -235,18 +231,16 @@ Manage business identifiers that enable you to track fields in messages during r
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click the ***Actions*** menu on the top right, then select ***Tracking***.
+1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the **Source** section, expand ***getPurchaseOrderResponse*** > ***result***, click ***Load more***, expand ***Value***, and click ***Load more***. Drag the ***POHeaderId*** and ***OrderNumber***  fields from **ERP PO source** to the **Drag a trigger field here** section:
+2. From the **Source** section, expand ***getPurchaseOrderResponse*** > ***result***, click on 2nd ***<sequence>***, expand ***Value***. Drag the ***POHeaderId*** and ***OrderNumber***  fields to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
-    > **Note:** Only the Used fields are displayed due to the *Filter* on the top left side of the screen.
 
-3. Click ***Save***.
+3. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***< (Go back)*** button.
 
-4. On the Integration canvas, click ***Save***, followed by ***Close***.
 
 ## Task 9: Activate the integration
 
@@ -346,7 +340,7 @@ Access your ERP Cloud environment.
 ## Task 12: Track message flow triggered by the PO Create Event
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
-1. In the Integration navigation pane, click ***Home*** > ***Monitoring*** > ***Integrations*** > ***Tracking***
+1. In the Integration navigation pane, click ***Home*** > ***Observability*** > ***Instances***
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
@@ -358,12 +352,9 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
       ![Completed integration flow](images/completed-integration-flow.png)
 
-4. Click on the ***Actions*** menu on the top right of the screen, and select ***View Activity Stream***.
+4. In the Activity Steam window, click on the different ***Message*** links to review the flow of request and response messages.
 
-
-5. In the Activity Steam window, click on the different ***Message*** links to review the flow of request and response messages.
-
-6. Click ***Close*** after reviewing the Activity Stream.
+6. Click ***< (Go back)*** button after reviewing the Activity Stream.
 
 
 ## Task 13: Verify PO record in FTP Server
@@ -380,11 +371,11 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
 
 ## Acknowledgements
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Last Updated By/Date** - Kishore Katta, July 2022
