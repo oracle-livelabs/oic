@@ -452,7 +452,7 @@ We will be testing the Integration flow with a happy case and fault case by modi
 
 We will test the end to end Integration flow using the built-in Test Client. In an ideal scenario, the request would be posted from a Web, Mobile Client and so on.
 
-1. From **Integrations** page Hover over the **Invoice Validation** Integration Flow and Select ***Run*** and Click on ***Test***
+1. From **Integrations** page, Selection **Invoice Validation** Integration Flow, Click on ***... (Actions)*** and Click on  ***Run*** and Click on ***Test Integration***
 
 2. Select ***Body*** Tab and make sure ***Text*** Radio button is selected. Provide the below Payload
 
@@ -524,9 +524,6 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
   1.  Create Otherwise condition for Supplier and Supplier Site to return fault payload accordingly
 
-      Your Final Integration Flow after the Bonus Lab Activity should be per below
-
-      ![Final Bonus Integration Flow](images\final-integration-flow-bonus.png)
 
 **Congratulations!** You have learnt how to invoke ERP Cloud REST API with the Out of the box adapter capabilities. ERP Cloud Adapter abstracts the API/Services/Business Objects and provides an intuitive interface which Simplifies the task to perform Real-Time Synchronization.
 
@@ -539,4 +536,4 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2022
