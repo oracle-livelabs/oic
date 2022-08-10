@@ -37,24 +37,16 @@
             "filename": "../../adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-            "title": "Lab 7: Business Events Integration",
-            "filename": "../../business-events/business-events-integration.md"
+            "title": "Lab 7: Atom Feeds",
+            "filename": "../../AtomFeeds/atomfeeds.md"
         },
         {
-            "title": "Lab 8: Business Services Integration",
-            "filename": "../../business-services/business-services-integration.md"
-        },
-        {
-            "title": "Lab 9: FBDI Import",
-            "filename": "../../FBDIImport/fbdiimport.md"
-        },
-        {
-            "title": "Lab 10: Bulk Extract",
+            "title": "Lab 8: Bulk Extract",
             "filename": "../../BulkExtract/bulkextract.md"
         },
         {
-            "title": "Lab 11: BIP Report",
-            "filename": "../../BIPReport/bipreport.md"
+            "title": "Lab 9: Bulk FBDIImport",
+            "filename": "../../BulkImport/bulkimport.md"
         },
         {
             "title": "Need Help?",

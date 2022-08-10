@@ -395,10 +395,6 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 4.  Select ***Validate*** and click on ***< (Go back)***
 
-Your final Integration Flow should look as below
-
-![Final Integration Flow](images\final-integration-flow.png)
-
 ## Task 7: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
@@ -413,7 +409,13 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click ***(I)***
 
+Your final Integration Flow should look as below
+
+  ![Final Integration Flow](images\final-integration-flow.png)
+
+
 4. On the Integration canvas, click ***Save***, followed by ***< (Go back)***.
+
 
 ## Task 8: Activate the integration
 
