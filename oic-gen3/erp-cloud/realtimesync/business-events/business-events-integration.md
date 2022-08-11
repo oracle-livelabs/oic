@@ -1,4 +1,4 @@
-# ERP Cloud Adapter Connection configuration
+# Business Events
 
 ## Introduction
 
