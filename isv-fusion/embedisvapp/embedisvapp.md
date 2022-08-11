@@ -20,7 +20,7 @@ This lab assumes you have:
 ## Task 1: Create VBCS application
 
 1. Login to Oracle Visual Builder.
-2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration) ** > **Finish**.
+2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration)** > **Finish**.
 3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
 
 
