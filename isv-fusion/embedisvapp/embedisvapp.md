@@ -1,4 +1,4 @@
-# Embed ISV application within Fusion Application Page
+# Lab 1 : Embed ISV application within Fusion Application Page
 
 ## Introduction
 This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page using the application composer.
