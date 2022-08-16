@@ -63,7 +63,158 @@ Please note that zip file should contain three files:ApInvoiceInterface.csv, ApI
 
 Note: Failing to copy the APTEST.PROPERTIES file will prevent the import payables job from running.
 
-Note: For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the AP_INVOICES_INTERFACE sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file
+Note: For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the ```AP_INVOICES_INTERFACE``` sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file
+
+Note: For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the ```AP_INVOICES_INTERFACE``` sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file.
+
+## Task 2: Upload the FBDI file to the FTP Server
+1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
+2. Copy the apinvoiceimport.zip file to the following directory.
+/upload/public_ftp/```<<your oic username>>```
+
+## Task 3: Create the Invoice Bulk Import to ERP integration
+1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+2. On the **Integrations page**, click ***Create***.
+3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
+![Select Integration Style](images/select-integration-style-1.png)
+4. In the **Create New Integration** dialog, enter the following information:
+
+    | **Element**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | `Invoice Bulk Import to ERP`       |
+    | Description  | `This integration demonstrates the use of OIC’s ERP Cloud Adapter with the FTP adapter to retrieve an AP Invoices file, import it to the ERP Cloud.` |
+
+    Accept all other default values.
+
+5. Click ***Create***.
+
+6. Click ***Save*** to persist changes..
+
+## Task 4: Get the File from FTP Server
+
+1. Click the ***+*** sign after **Schedule** in the integration canvas.
+
+2. Select the FTP File Server which you have created in the previous labs. This invokes the FTP Adapter Configuration Wizard.
+
+3. On the Basic Info page, for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***.
+4. On the Basic Info page, for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***.
+5. Click ***> (Next Step)***.
+6. From the **Operations** page, select ***Read a file*** as an Operation and from the **Select a Transfer Mode** option, select ***ASCII*** and enter the following values.
+| **Element**        | **Value**          |       
+| --- | ----------- |
+| Input Directory         | /upload/public_ftp/oicusersc###       |
+| File Name | apinvoiceimport.zip |
+
+7. Click ***> (Next Step)***.
+8. On the **Schema** page, in the **Do you want to specify the structure for the contents of the file** section, select No.
+9. Click ***> (Next Step)***.
+10. Review the summary and click ***Done***.
+11. Click ***Save*** to persist changes.
+![ReadFileFromFTP](images/readFileFromFTP.png)
+
+## Task 5: Upload the file to ERP Cloud
+1. Hover over the outgoing arrow for ReadAPInvoicesFileFromFTP and click + icon.
+2. Begin typing ERP in the Search field to find the connection to your ERP Cloud.
+3. Select the connection which you have created in the previous labs.
+The Configure Oracle ERP Cloud Endpoint wizard appears.
+4. On the Basic Info page, In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
+5. In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
+6. Click ***> (Next Step)***.
+7. On the Actions page, select ***Import Bulk Data into Oracle ERP Cloud***
+8. Click ***> (Next Step)***.
+9. On the Operations page, select ***Import Payables Invoices*** (Search for it)
+10. Click ***> (Next Step)***.
+11. On the Response page, select the following options:
+
+From the **Notification Mode** list, select ***Email & Bell Notification***
+
+From the **Occurrence** list, select ***Send in any case***.
+
+12. Click ***> (Next Step)***.
+13. Review the summary and click ***Done***.
+14. Click ***Save*** to persist changes.
+![UploadFiletoERP](images/uploadFileToERP.png)
+
+## Task 6: Define the data Mapping
+A map action named ImportAPInvoicestoERPCloud is automatically created. We will define this data mapping.
+1. Select the action **Map ImportAPInvoicestoERPCloud** and click on **...** and click on **Edit**
+2. In the Sources section successively expand the following elements:
+
+  a. ReadAPInvoicesFileFromFTP Response (FTP)
+
+  b. Sync Read File Response
+
+  c. File Read Response
+
+  d. ICS File
+
+3. In the Target section successively expand the following elements:
+
+  a. Import Bulk Data
+
+  b. ICS File
+
+4. Drag the File Reference element From the Sources section, and drop it on the element of the same name in the Target section.
+5. In the Sources and Target sections expand Properties located under ICS File.
+6. Drag the following elements from the Sources and drop them on the element of the same name in the Target section:
+
+   a. directory
+
+   b. filename
+
+![DataMapping](images/dataMapping.png)
+7. Click on ***Validate***
+A confirmation message appears.
+8. Click ***< (Go back)***
+9. Click ***Save*** to persist changes.
+
+## Task 7: Define Tracking Fields
+Manage business identifiers that enable you to track fields in messages during runtime.
+
+> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    ![Error Icon in Design Canvas](images/error-icon.png)
+
+1. Click on the ***(I) Business Identifiers*** menu on the top right.
+    ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
+
+2. From the **Source** section, expand ***schedule*** > ***startTime***. Drag the ***startTime*** field to the right side section:
+
+    ![Assign Business Identifiers](images/assign-business-identifiers.png)
+
+
+3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
+
+## Task 8: Activate the integration
+
+1. On the **Integrations** page, click on the ***Activate*** icon.
+
+    ![Click to Activate Integration](images/click-activate-integration.png)
+
+2. On the **Activate Integration** dialog, select ***Enable Tracing***, followed by ***Include Payload*** options.
+
+3. Click ***Activate***.
+
+    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
+## Task 9: Run the integration
+Refresh your page after few seconds.
+1. Click on ***Run***
+    ![Run Integration](images/run-integration.png)
+2. Click on ***Submit Now*** and then click on ***Submit Now*** again when prompted.
+3. Click the link which appears on top to track the instance.
+The track instance page appears. The Integration state should be processing or successful.
+Importing of the invoices to the ERP Cloud might take few minutes.
+## Task 10: Verify the Bulk Import
+Wait 5 minutes before performing this procedure.
+1. Open a browser to sign in to the ERP Cloud using the information provided to you.
+2. Click Payables, click Invoices and Click on the search in the Details panel located under the User menu.
+3. Enter the invoice number and click search.
+The invoice should appear in the search results.
+4. Congratulations! You have finished your integration flow.
+
+
+
+
+
 
 You may now **proceed to the next lab**.
 
