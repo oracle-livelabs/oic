@@ -106,7 +106,7 @@ Accept all other default values.
      - for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***
      - Click ***> (Next Step)***.
 4. From the **Operations** page,
-    - select ***Read a file*** as an Operation
+    - select ***Read a File*** as an Operation
     - from the **Select a Transfer Mode** option, select ***ASCII***
     - Enter the following values and Click ***> (Next Step)***.
 
