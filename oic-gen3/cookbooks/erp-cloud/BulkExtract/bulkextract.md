@@ -1,23 +1,23 @@
-# File Based Data Import (FBDI) Import
+# ERP Cloud Extracts
 
 ## Introduction
 
 This lab walks you through the steps to create Integration flow.
 
-This use case uses Oracle Integration and ERP Cloud Import bulk data services with File Based Data Import (FBDI) complaint files.
-The goal is to import ERP data such as account payable invoices using processes in ERP Cloud.
+This use case explores the use of Oracle Integration to extract data from Oracle Business Intelligence Publisher (BIP).
 
-The typical flow of this use case is:
+This use case includes the following steps:
 
-1. The user uploads an FBDI based account payable invoice file to an FTP Server.
-2. Oracle Integration imports the account payable invoice file into the ERP Cloud.
+* Get the most recent list of approved invoices.
+* Extract the most recent payment data and update other applications to reflect new payments.
+* Deliver the report to UCM or SFTP or trigger a report using ERP integration service
 
-This labs will explore the ERP Cloud adapter and File Adapter features and lets you know how to perform the following tasks:
- 1. Read files from an SFTP Server
- 2. Synchronize account payable invoices into the ERP Cloud
+The data file can be larger than 10MB. Oracle Integration supports handling large files as an attachment (instead of base64 encoding). We recommend that you use CSV format to reduce the size of the file.
 
-  The following diagram shows the runtime interaction between the systems involved in this use case:
-  ![FBDIImport](images/bulk-import-simple.png)
+See this blog article to learn how to handle files from various interfaces and file size constraints.
+
+ The following diagram shows the interaction between the systems involved in this use case.
+  ![FBDIImport](images/bulk-export-callback.png)
 
 Estimated Time: 30 minutes
 
@@ -25,8 +25,8 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-* Connect to file server to read file.
-* Understand how to bulk import data in the Oracle ERP cloud leveraging out of the box ERP cloud
+* Connect to ERP Cloud to extract the bulk data
+* Understand how to bulk export the data from the Oracle ERP cloud leveraging out of the box ERP cloud
   adapter capabilities
 
 
@@ -37,43 +37,8 @@ This lab assumes you have:
 * All previous labs successfully completed.
 
 
-## Task 1: Create FBDI file
+## Task 1: Create the ERP Bulk Extract Integration
 
-1. [Download the Invoice Import Template Spreadsheet](files/GSEPayablesStandardInvoiceImportTemplate.xlsm)
-2. [Download the APTEST.PROPERTIES file](files/APTEST.PROPERTIES)
-3. Open GSEPayablesStandardInvoiceImportTemplate.xlsm (If you are using Mac, then you need to download the templates from ERP Cloud documentation which are compatible with Mac)
-
-Please note that this spreadsheet contains macros and you might get a security warning when you open the file. Select the option to enable the content.
-4. Go to the ```AP_INVOICES_INTERFACE``` sheet and update the following fields with unique random numbers:
-      - Invoice ID
-      - Invoice Number
-
-For example, you can use your OIC user number concatenated with the current date.
-Enter the data in each cell, do not copy and paste it. This is to preserve the data type of each column. If you change the data type, this lab will fail.
-You might get a warning message about the macros used in this spreadsheet. Accept the message.
-
-5. Click on ```AP_INVOICE_LINE_INTERFACE``` sheet.
-6. Enter the same invoice IDs that you used in the ```AP_INVOICES_INTERFACE``` sheet.
-7. Save the file, Open the Instructions and CSV Generation Sheet and click Generate CSV file.
-A file browser dialog appears.
-8. Name the zip file as ```apinvoiceimport.zip```, save the ```AP_INVOICES_INTERFACE``` file as ApInvoiceInterface.csv, save the ```AP_INVOICE_LINE_INTERFACE``` file as APInvoiceLinesInterface.csv
-9. Close the GSEPayablesStandardInvoiceImportTemplate.xlsm file
-10. From File Explorer, copy the APTEST.PROPERTIES file to the apinvoiceimport.zip file.
-
-Please note that zip file should contain ONLY three files: ApInvoiceInterface.csv, ApInvoiceLinesInterface.csv and APTEST.PROPERTIES and all of them in under root folder only, no sub folders.
-
-Note: Failing to copy the APTEST.PROPERTIES file will prevent the import payables job from running.
-
-Note: For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the ```AP_INVOICES_INTERFACE``` sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file
-
-## Task 2: Upload the FBDI file to the FTP Server
-1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
-2. Copy the apinvoiceimport.zip file to the following directory.
-/upload/public_ftp/```<<your oic usernumber>>```
-
-Note: If you have received your oic usernumber then you can use as is, otherwise, you can use any random number
-
-## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
@@ -83,11 +48,11 @@ Note: If you have received your oic usernumber then you can use as is, otherwise
     | **Element**          | **Value**          |       
     | --- | ----------- |
     | Name         |```
-    <copy>Invoice Bulk Import to ERP</copy
+    <copy>ERP Bulk Extract</copy
     ```
     |
     | Description |```
-    <copy>This integration demonstrates the use of OIC’s ERP Cloud Adapter with the FTP adapter to retrieve an AP Invoices file, import it to the ERP Cloud.</copy
+    <copy>This integration starts the extraction of payable transactions in the ERP Cloud</copy
     ```
     |
 
@@ -95,7 +60,7 @@ Accept all other default values.
 
 5. Click ***Create***.
 
-## Task 4: Get the File from FTP Server
+## Task 4: Create the Initiate Extract Activity
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
