@@ -59,58 +59,32 @@ This lab assumes you have:
 Accept all other default values.
 
 5. Click ***Create***.
+6. Click on Horizontal to change the layout as Horizontal
+![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
-## Task 4: Create the Initiate Extract Activity
+## Task 2: Create the Initiate Extract Activity
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
-2. Select the FTP File Server which you have created in the previous labs. This invokes the FTP Adapter Configuration Wizard.
+2. Select the ERP Cloud connection which you have created in the previous labs. This invokes the ERP Cloud Configuration Wizard.
 
 3. On the Basic Info page,
-     - for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***
-     - for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***
+     - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
+     - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
      - Click ***> (Next Step)***.
+4. From the **Actions** page,
+    - select ***Query, Create, Update or Delete Information*** option
 4. From the **Operations** page,
-    - select ***Read a File*** as an Operation
-    - from the **Select a Transfer Mode** option, select ***ASCII***
-    - Enter the following values and Click ***> (Next Step)***.
-
-| **Element**        | **Value**   |
-| --- | ----------- |
-| Input Directory         | /upload/public_ftp/```<<your oic usernumber>>```       
-| File Name | apinvoiceimport.zip |
-
-5. On the **Schema** page,
-    - in the **Do you want to specify the structure for the contents of the file** section, select No.
+    - select ***Services*** from the Browse by list
+    - In the Select Service field, enter **ERPIntegrationService** and select it from the list
+    - From the Operation to perform on the Business Object/Resource of Service list, select Export Bulk Data
     - Click ***> (Next Step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
 ![ReadFileFromFTP](images/readFileFromFTP.png)
 
-## Task 5: Upload the file to ERP Cloud
-1. Hover over the outgoing arrow for ReadAPInvoicesFileFromFTP and click + icon.
-2. Begin typing ERP in the Search field to find the connection to your ERP Cloud.
-3. Select the connection which you have created in the previous labs.
-The Configure Oracle ERP Cloud Endpoint wizard appears.
-4. On the Basic Info page,
-    - In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
-    - In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
-    - Click ***> (Next Step)***.
-5. On the Actions page,
-    - select ***Import Bulk Data into Oracle ERP Cloud***
-    - Click ***> (Next Step)***.
-6. On the Operations page,
-    - select ***Import Payables Invoices*** (Search for it)
-    - Click ***> (Next Step)***.
-7. On the Response page, select the following options:
-    - From the **Notification Mode** list, select ***Email & Bell Notification***
-    - From the **Occurrence** list, select ***Send in any case***.
-    - Click ***> (Next Step)***.
-8. Review the summary and click ***Done***.
-9. Click ***Save*** to persist changes.
-![UploadFiletoERP](images/uploadFileToERP.png)
 
-## Task 6: Define the data Mapping
+## Task 3: Define the data Mapping
 A map action named ImportAPInvoicestoERPCloud is automatically created. We will define this data mapping.
 1. Select the action **Map ImportAPInvoicestoERPCloud** and click on **...** and click on **Edit**
 2. In the Sources section successively expand the following elements:
@@ -143,7 +117,7 @@ A confirmation message appears.
 8. Click ***< (Go back)***
 9. Click ***Save*** to persist changes.
 
-## Task 7: Define Tracking Fields
+## Task 4: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -159,7 +133,16 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
 
-## Task 8: Activate the integration
+## Task 5: Create the ERP Bulk Extract Callback Integration
+## Task 6: Create the ERP Cloud Callback Trigger
+## Task 7: Create the Download Activity
+## Task 8: Define the Data mapping
+## Task 9: Create the Write Extract Activity
+## Task 10: Define the Data mapping
+## Task 11: Define Tracking Fields
+## Task 12: Activate the ERP Bulk Extract Callback Integration
+## Task 13: Map the Callback URL
+## Task 14: Activate the ERP Bulk Extract Integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
 
@@ -170,7 +153,8 @@ Manage business identifiers that enable you to track fields in messages during r
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
-## Task 9: Run the integration
+## Task 15: Run the ERP Bulk Extract Integration
+
 Refresh your page after few seconds.
 1. Click on ***Run***
     ![Run Integration](images/run-integration.png)
@@ -179,7 +163,7 @@ Refresh your page after few seconds.
 The track instance page appears. The Integration state should be processing or successful.
 Importing of the invoices to the ERP Cloud might take few minutes.
 OR you can also track by clicking on ***Design***, ***Observability*** and ***Instances***
-## Task 10: Verify the Bulk Import
+## Task 16: Verify
 Wait 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
 2. Click on Navigator Menu(On top lift corner), Click on Payables, click Invoices and Click on the search in the Details panel located below the User menu.

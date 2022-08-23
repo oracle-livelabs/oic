@@ -72,6 +72,7 @@ Note: For the purpose of this lab we won't change the values for the Business Un
 /upload/public_ftp/```<<your oic usernumber>>```
 
 Note: If you have received your oic usernumber then you can use as is, otherwise, you can use any random number
+And please create directory if it is not there by following the steps given in the setup lab.
 
 ## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
@@ -99,7 +100,7 @@ Accept all other default values.
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
-2. Select the FTP File Server which you have created in the previous labs. This invokes the FTP Adapter Configuration Wizard.
+2. Select the FTP Connection which you have created in the previous labs. This invokes the FTP Adapter Configuration Wizard.
 
 3. On the Basic Info page,
      - for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***
@@ -221,10 +222,6 @@ Wait 5 minutes before performing this procedure.
 3. Enter the invoice number and click search.
 The invoice should appear in the search results.
 4. Congratulations! You have finished your integration flow.
-
-
-
-
 
 
 You may now **proceed to the next lab**.

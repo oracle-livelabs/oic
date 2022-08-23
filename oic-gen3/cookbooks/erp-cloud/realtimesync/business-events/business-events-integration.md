@@ -31,64 +31,7 @@ This lab assumes you have:
 
 * All previous labs successfully completed.
 
-## Task 1: Configure File Server
-
-Configure File Server settings. This is required as you are using Embedded File Server of Oracle Integration and using File Server as a target application in your integration flow.
-
-1. Starting at the Oracle Integration **Home** page, select ***Settings***, then ***File Server*** from the left Navigation pane.
-2. Select ***Settings*** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of the IP and port number.
-![File Server Settings page](images/file-server-settings.png)
-**Note**: Ensure the **Authentication Type** is set to ***Password or Key***.
-3. Select ***Files*** from left Navigation pane.
-![Navigation to Files](images/file-server-files1.png)
-4. Click on ***home***, click on ***users***, click on your username and from the top right click ***Create*** and create a Folder named ***Output***.
-5. Click on ***Permissions*** on the ***Output*** Folder
-![Workshop Folder structure](images/fs-permissions.png)
-**Note**: You will be using the above Folder structure in the lab.
-10. Click ***Add Permissions*** and select your user. Click ***Add***.
-![Add user to Folder permissions](images/user-permissions-1.png)
-11. Select ***All*** and ***Propagate to subfolders***. All of the permission checkboxes should be checked. Click ***Save*** and exit the Permissions page.
-![Folder permissions](images/user-permissions1-1.png)
-
-## Task 2: Connect to File Server with FTP Client
-
-To access files on the File Server you will need to use an FTP Client. You will need to configure your FTP Client with the following:
-
-* File Server IP Address.
-* File Server Port.
-* Your Oracle Integration username.
-* Your Oracle Integration password.
-
-1. To obtain the File Server IP Address and Port, select ***Settings*** from the left Navigation pane. The IP and Port are located in the **IP and Port Information** section of the **Settings** page.
-2. Using your FTP Client choice, connect to the File Server using the SFTP - SSH File Transfer Protocol.  
-![Example FTP Client configuration](images/ftpclient1.png)
-An example configuration using FileZilla FTP Client.  
-If the permissions are configured correctly, you should be able to list, read, and write files on the **Output** folder.
-![Example FTP Client directory listing](images/ftpclient2-1.png)
-
-## Task 3: Creating Connection with File Server
-
-To access the File Server from an Integration, you will need to create an FTP Connection.  
-**Note**: You can use an existing connection if one has already been configured for your environment.
-
-1. Starting at the Oracle Integration **Home** page, select ***Design***, then ***Connections*** from the left Navigation pane.
-2. Click ***Create***, then select the ***FTP*** Adapter and click ***Select***.
-3. From the **Create Connection** dialog, **Name** your connection ***File Server*** and leave the rest of the configurations as default. Click ***Create***.  
-**Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
-4. Enter the following configurations in the **FTP Connection** with the information you previously gathered from the File Server Settings page.  
-| Field                   | Value                                                 |
-|-------------------------|-------------------------------------------------------|
-| FTP Server Host Address | From File Server Settings - IP and Port Information   |
-| FPT Server Port         | From File Server Settings - IP and Port Information   |
-| SFTP Connection         | Yes                                                   |
-| Security                | FTP Server Access Policy                              |
-| Username                | Your Oracle Integration username                      |
-| Password                | Your Oracle Integration password                      |
-
-5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the **Connection File Server was tested successfully** confirmation message. Click ***Save*** and Click ***Go back*** to exit the Connection editor.
-
-
-##	Task 4: Create the PO Event Integration
+##	Task 1: Create the PO Event Integration
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
@@ -107,7 +50,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
 6. Click ***Save*** to apply changes.
 
-## Task 5: Define ERP Purchase Order (PO) Event trigger
+## Task 2: Define ERP Purchase Order (PO) Event trigger
 Add ERP PO Event trigger to the empty integration canvas.
 
 1. Click the ***+*** sign below **START** in the integration canvas.
@@ -145,7 +88,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 9. Click ***Save*** to persist changes.
 
-## Task 6: Add the FTP Adapter as invoke activity
+## Task 3: Add the FTP Adapter as invoke activity
 Add the FTP Adapter invoke to the integration canvas.
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the FTP Connection the previous lab.
 This invokes the FTP adapter Configuration Wizard.
@@ -183,7 +126,7 @@ This invokes the FTP adapter Configuration Wizard.
 6. Click ***> (Next Step)*** and Review the **Summary** page and click on ***Done***
 7. Click on ***Save***
 
-## Task 7: Map data between ERP trigger and FTP invoke
+## Task 4: Map data between ERP trigger and FTP invoke
 Use the mapper to drag fields from the source structure (POEvent)  to the target structure (Write2FTP) to map elements between the two.
 
 When we added the FTP invoke to the integration, a map icon was automatically added.
@@ -225,7 +168,7 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 4. Click ***< (Go back)***
 
 5. Click ***Save*** to persist changes.
-## Task 8: Define Tracking Fields
+## Task 5: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -242,7 +185,7 @@ Manage business identifiers that enable you to track fields in messages during r
 3. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***< (Go back)*** button.
 
 
-## Task 9: Activate the integration
+## Task 6: Activate the integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
 
@@ -254,7 +197,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Task 10: Create Purchase Order in ERP Cloud
+## Task 7: Create Purchase Order in ERP Cloud
 Access your ERP Cloud environment.
 
 1. Login with a user having the correct roles and privileges to create a PO.
@@ -317,7 +260,7 @@ Access your ERP Cloud environment.
 14. Click ***OK*** to close the confirmation dialog.
 
 
-## Task 11: Validate Purchase Order status
+## Task 8: Validate Purchase Order status
   After the PO is submitted, the initial status becomes **Pending Approval**. The PO Create event will occur once the status changes to **Open**.
 
 1. In the **Overview** section, click ***Tasks*** button on the right.
@@ -337,7 +280,7 @@ Access your ERP Cloud environment.
     **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
 
 
-## Task 12: Track message flow triggered by the PO Create Event
+## Task 9: Track message flow triggered by the PO Create Event
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
 1. In the Integration navigation pane, click ***Home*** > ***Observability*** > ***Instances***
@@ -357,11 +300,11 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 6. Click ***< (Go back)*** button after reviewing the Activity Stream.
 
 
-## Task 13: Verify PO record in FTP Server
+## Task 10: Verify PO record in FTP Server
 
 Follow these steps to view the file in the FTP Server
 
-1. In the Integration navigation pane, click ***Home*** > ***Settings*** > ***File Server*** > ***Files*** > ***home*** > ***users*** > ***Select your username*** > ***Output*** > You should see the **PO%.json** file.
+1. In the Integration navigation pane, click ***Home*** > ***Settings*** > ***File Server*** > ***Folders*** > ***home*** > ***users*** > ***Select your username*** > ***Output*** > You should see the **PO%.json** file.
 
   **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
 

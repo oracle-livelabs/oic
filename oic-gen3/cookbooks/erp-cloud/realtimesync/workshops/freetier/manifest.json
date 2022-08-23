@@ -21,39 +21,47 @@
             "filename": "../../../../../common/enable-file-server/enable-file-server.md"
         },
         {
-            "title": "Lab 3: Configure ERP Cloud for Oracle Integration 3",
+            "title": "Lab 3: Setup",
+            "filename": "../../../../../common/setup/setup.md"
+        },
+        {
+            "title": "Lab 4: Configure FTP Server Connection",
+            "filename": "../../../../..//common/create-connections/create-connections.md"
+        },
+        {
+            "title": "Lab 5: Configure ERP Cloud for Oracle Integration 3",
             "filename": "../../../../../common/configure-erpcloud-for-oic/configure-erpcloud-for-oic.md"
         },
         {
-            "title": "Lab 4: Introduction to Design Patterns",
+            "title": "Lab 6: Introduction to Design Patterns",
             "filename": "../../intro-design-patterns/intro-to-design-patterns.md"
         },
         {
-            "title": "Lab 5: Configure ERP Cloud Connection",
+            "title": "Lab 7: Configure ERP Cloud Connection",
             "filename": "../../configure-erp-cloud-connection/configure-erp-connection.md"
         },
         {
-            "title": "Lab 6: Functional Details of the ERP Cloud Adapter",
+            "title": "Lab 8: Functional Details of the ERP Cloud Adapter",
             "filename": "../../adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-            "title": "Lab 7: Business Events Integration",
+            "title": "Lab 9: Business Events Integration",
             "filename": "../../business-events/business-events-integration.md"
         },
         {
-            "title": "Lab 8: Business Services Integration",
+            "title": "Lab 10: Business Services Integration",
             "filename": "../../business-services/business-services-integration.md"
         },
         {
-            "title": "Lab 9: FBDI Import",
+            "title": "Lab 11: FBDI Import",
             "filename": "../../../FBDIImport/fbdiimport.md"
         },
         {
-            "title": "Lab 10: Bulk Extract",
+            "title": "Lab 12: Bulk Extract",
             "filename": "../../../BulkExtract/bulkextract.md"
         },
         {
-            "title": "Lab 11: BIP Report",
+            "title": "Lab 13: BIP Report",
             "filename": "../../../BIPReport/bipreport.md"
         },
         {

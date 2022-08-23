@@ -140,8 +140,8 @@ Configure File Server settings. This is required as you are using Embedded File 
 2. Select **Settings** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of IP and port number.
 ![File Server Settings page](images/file-server-settings.png)
 **Note**: Ensure the *Authentication Type* is set to **Password or Key**.
-3. Select **Files** from left Navigation pane.
-![Navigation to Files](images/file-server-files1.png)
+3. Select **Folders** from left Navigation pane.
+![Navigation to Folders](images/file-server-files1.png)
 4. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.
 5. Click on **Permissions** on the **Output** Folder
 ![Workshop Folder structure](images/fs-permissions.png)

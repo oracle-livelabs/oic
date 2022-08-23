@@ -81,9 +81,9 @@ Create a connection with the Oracle ERP Cloud Adapter.
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
-    | Name         | `LLDemo_ERP`       |
-    | Description  | `ERP Connection for LiveLabs demo` |
-    |
+    | Name         | `ERP Cloud`       |
+    | Description  | `ERP Cloud Connection for OIC LiveLabs` |
+
 
     Keep all other values as default.
 
