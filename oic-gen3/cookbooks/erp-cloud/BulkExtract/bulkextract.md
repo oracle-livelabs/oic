@@ -59,7 +59,7 @@ This lab assumes you have:
 Accept all other default values.
 
 5. Click ***Create***.
-6. Click on Horizontal to change the layout as Horizontal
+6. Click on Horizontal to change the layout to Horizontal
 ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
 ## Task 2: Create the Initiate Extract Activity
@@ -68,50 +68,51 @@ Accept all other default values.
 
 2. Select the ERP Cloud connection which you have created in the previous labs. This invokes the ERP Cloud Configuration Wizard.
 
-3. On the Basic Info page,
+3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
      - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
      - Click ***> (Next Step)***.
 4. From the **Actions** page,
     - select ***Query, Create, Update or Delete Information*** option
+    - Click ***> (Next Step)***.
 4. From the **Operations** page,
-    - select ***Services*** from the Browse by list
-    - In the Select Service field, enter **ERPIntegrationService** and select it from the list
-    - From the Operation to perform on the Business Object/Resource of Service list, select Export Bulk Data
+    - select ***Services*** from the **Browse by** list
+    - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
+    - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
     - Click ***> (Next Step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![ReadFileFromFTP](images/readFileFromFTP.png)
-
+![InitiateExtract](images/initiateextract.png)
 
 ## Task 3: Define the data Mapping
-A map action named ImportAPInvoicestoERPCloud is automatically created. We will define this data mapping.
-1. Select the action **Map ImportAPInvoicestoERPCloud** and click on **...** and click on **Edit**
-2. In the Sources section successively expand the following elements:
-
-  a. ReadAPInvoicesFileFromFTP Response (FTP)
-
-  b. Sync Read File Response
-
-  c. File Read Response
-
-  d. ICS File
-
-3. In the Target section successively expand the following elements:
-
-  a. Import Bulk Data
-
-  b. ICS File
-
-4. Drag the File Reference element From the Sources section, and drop it on the element of the same name in the Target section.
-5. In the Sources and Target sections expand Properties located under ICS File.
-6. Drag the following elements from the Sources and drop them on the element of the same name in the Target section:
-
-   a. directory
-
-   b. filename
-
-![DataMapping](images/dataMapping.png)
+A map action named InitiateExtract is automatically created. We will define this data mapping.
+1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
+2. In the Target section successively expand the ***InitiateExtract Request*** element.
+    - Right click on **Job Name** and then click on ***Create Target Node***
+![InitiateExtractMapping1](images/InitiateExtractMapping1.png)
+    - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
+![mappingsdeveloperview](images/mappingsdeveloperview.png)   
+    - Enter the value given below
+    ```
+    <copy>"oracle/apps/ess/financials/commonModules/shared/common/outbound,FinOutboundProcess"</copy
+    ```
+    - Click on Save
+    ![saveliteral](images/saveliteral.png)  
+    - Repeat the same thing for the below elements.
+    - Select **parameterList** and enter the value given below.
+    ```
+    <copy>"92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,#NULL,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,12-19,N,N,300000046975971,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL"</copy
+    ```
+    - Select **jobOptions** and enter the value given below.
+    ```
+    <copy>"ExtractFileType=ALL"</copy
+    ```
+    - For **callbackURL**, skip this mapping for now. We will assign a value after we design and activate the callback flow
+    - Select **notificationCode** and enter the value given below.
+    ```
+    <copy>30</copy
+    ```
+![initiateextractMapping](images/initiateextractMapping.png)
 7. Click on ***Validate***
 A confirmation message appears.
 8. Click ***< (Go back)***
@@ -121,7 +122,7 @@ A confirmation message appears.
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
-    ![Error Icon in Design Canvas](images/error-icon.png)
+    ![Error Icon in Design Canvas](images/error-icon.png =10%x*)
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png =20%x*)
@@ -129,7 +130,6 @@ Manage business identifiers that enable you to track fields in messages during r
 2. From the **Source** section, expand ***schedule*** > ***startTime***. Drag the ***startTime*** field to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png =40%x*)
-
 
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
 

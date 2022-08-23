@@ -183,7 +183,7 @@ A confirmation message appears.
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
-    ![Error Icon in Design Canvas](images/error-icon.png)
+    ![Error Icon in Design Canvas](images/error-icon.png =10%x*)
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png =20%x*)
