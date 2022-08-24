@@ -36,8 +36,40 @@ This lab assumes you have:
 
 * All previous labs successfully completed.
 
+##	Task	1: Create ERP Cloud callback Connection using SOAP adapter
+Create a connection with the SOAP Adapter.
 
-## Task 1: Create the ERP Bulk Extract Integration
+1. [Download the erpcbkinterface-onjobcompletion.wsdl](files/erpcbkinterface-onjobcompletion.wsdl)
+2. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
+3. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
+4. In the *Create Connection* dialog, enter the following information and click on ***Create***:
+
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | `ERP Cloud Callback`       |
+    | Description  | `ERP Cloud Callback for OIC LiveLabs` |
+
+
+    Keep all other values as default.
+
+5. In the *Configuration* page, enter the following information:
+
+    | **Field**  | **Values** |
+    |---|---|
+    |WSDL URL | upload ***the erpcbkinterface-onjobcompletion.wsdl*** |
+    |Security Policy | select ***Security Assertion Markup Language(SAMPL)***|
+    |
+
+![Create ERP Cloud Callback configuration](images/create-erpcallback-configuration.png)
+
+6. Click on ***Test***  and click on ***Validate and Test***  and wait until you receive a
+confirmation box that the test was successful.
+
+    > **Note:** The first time you run the test, it could take up to 2 minutes for completion.
+
+7. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
+
+## Task 2: Create the ERP Bulk Extract Integration
 
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
@@ -62,7 +94,7 @@ Accept all other default values.
 6. Click on Horizontal to change the layout to Horizontal
 ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
-## Task 2: Create the Initiate Extract Activity
+## Task 3: Create the Initiate Extract Activity
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
@@ -84,7 +116,7 @@ Accept all other default values.
 7. Click ***Save*** to persist changes.
 ![InitiateExtract](images/initiateextract.png)
 
-## Task 3: Define the data Mapping
+## Task 4: Define the data Mapping
 A map action named InitiateExtract is automatically created. We will define this data mapping.
 1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
 2. In the Target section successively expand the ***InitiateExtract Request*** element.
@@ -118,7 +150,7 @@ A confirmation message appears.
 8. Click ***< (Go back)***
 9. Click ***Save*** to persist changes.
 
-## Task 4: Define Tracking Fields
+## Task 5: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -133,8 +165,49 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
 
-## Task 5: Create the ERP Bulk Extract Callback Integration
-## Task 6: Create the ERP Cloud Callback Trigger
+## Task 6: Create the ERP Bulk Extract Callback Integration
+
+1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+2. On the **Integrations page**, click ***Create***.
+3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
+4. In the **Create New Integration** dialog, enter the following information:
+
+    | **Element**          | **Value**          |       
+    | --- | ----------- |
+    | Name         |```
+    <copy>ERP Bulk Extract Callback</copy
+    ```
+    |
+    | Description |```
+    <copy>This integration is triggered when it receives a callback from the ERP Bulk Extract integration. When it receives the callback, it downloads the extract, and uploads it to an FTP server</copy
+    ```
+    |
+
+Accept all other default values.
+
+5. Click ***Create***.
+6. Click on Horizontal to change the layout to Horizontal
+
+## Task 7: Create the ERP Cloud Callback Trigger
+
+1. Search for the ERP Cloud Callback connection which you have created in the previous Task and click on it. This invokes the ERP Cloud Configuration Wizard.
+
+3. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
+     - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
+     - Click ***> (Next Step)***.
+4. From the **Actions** page,
+    - select ***Query, Create, Update or Delete Information*** option
+    - Click ***> (Next Step)***.
+4. From the **Operations** page,
+    - select ***Services*** from the **Browse by** list
+    - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
+    - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
+    - Click ***> (Next Step)***.
+6. Review the summary and click ***Done***.
+7. Click ***Save*** to persist changes.
+![InitiateExtract](images/initiateextract.png)
+
 ## Task 7: Create the Download Activity
 ## Task 8: Define the Data mapping
 ## Task 9: Create the Write Extract Activity

@@ -21,7 +21,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 **Note**: You can use an existing connection if one has already been configured for your environment.
 
 1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
-2. select the **FTP** Adapter and click **Select**.
+2. select the **FTP** Adapter and click on it.
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**.  
 **Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
 4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
@@ -45,4 +45,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - 
+* **Last Updated By/Date** -
