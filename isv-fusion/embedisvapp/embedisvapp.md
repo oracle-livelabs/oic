@@ -83,6 +83,8 @@ Add Start Meet - Link from Available fields to Selected fields then Click **Save
 
 You may notice the Start Meet field has been added to the each Service Request Records.
 
+ ![Start Meet link emdeded within Fusion Page](images/Screenshot5.png)
+
 You may now **proceed to the next lab**.
 
 
