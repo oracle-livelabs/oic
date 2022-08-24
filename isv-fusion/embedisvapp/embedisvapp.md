@@ -73,6 +73,8 @@ This lab assumes you have:
 
 6. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
 
+  ![Fusion Page Layout Configuration](images/Screenshot4.png)
+
 7. Click **Edit icon**
 
 Add Start Meet - Link from Available fields to Selected fields then Click **Save and Close**.
