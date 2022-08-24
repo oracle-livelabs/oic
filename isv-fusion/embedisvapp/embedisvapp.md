@@ -61,6 +61,8 @@ This lab assumes you have:
 
 7. Click **Standard Objects** > **Service Request** > **Actions and Links** > **Actions** > **Create**.
 
+  ![Fusion Start Meet link Configuration](images/Screenshot3.png)
+
  | **Element**        | **Value** |       
  | --- | ----------- |
  | Display Label | `Start Meet`   |
@@ -68,8 +70,6 @@ This lab assumes you have:
  | Edit Script | `return *Live url of the VBCS application`|
 
     Leave the rest of the values as default and Click **Save**.
-
-    ![Fusion Start Meet link Configuration](images/Screenshot3.png)
 
 6. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
 
