@@ -69,7 +69,34 @@ confirmation box that the test was successful.
 
 7. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-## Task 2: Create the ERP Bulk Extract Integration
+##	Task	2: Create ERP Cloud Integration Service Connection using SOAP adapter
+Create a connection with the SOAP Adapter.
+1. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
+2. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
+3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
+
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | `ERP Cloud Integration Service`       |
+    | Description  | `ERP Cloud Integration Service for OIC LiveLabs` |
+
+
+    Keep all other values as default.
+
+4. In the *Configuration* page, enter the following information:
+
+    | **Field**  | **Values** |
+    |---|---|
+    |WSDL URL | enter ***https://ERPCloudHost/fscmService/ErpIntegrationService?wsdl*** |
+    |Security Policy | select ***Username Password Token*** |
+    |Username | Enter ***Enter username received from the instructor*** |
+    |Username | Enter ***Enter password received from the instructor*** |
+
+5. Click on ***Test***  and click on ***Validate and Test***  and wait until you receive a
+confirmation box that the test was successful.
+6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
+
+## Task 3: Create the ERP Bulk Extract Integration
 
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
@@ -94,7 +121,7 @@ Accept all other default values.
 6. Click on Horizontal to change the layout to Horizontal
 ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
-## Task 3: Create the Initiate Extract Activity
+## Task 4: Create the Initiate Extract Activity
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
@@ -116,7 +143,7 @@ Accept all other default values.
 7. Click ***Save*** to persist changes.
 ![InitiateExtract](images/initiateextract.png)
 
-## Task 4: Define the data Mapping
+## Task 5: Define the data Mapping
 A map action named InitiateExtract is automatically created. We will define this data mapping.
 1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
 2. In the Target section successively expand the ***InitiateExtract Request*** element.
@@ -150,7 +177,7 @@ A confirmation message appears.
 8. Click ***< (Go back)***
 9. Click ***Save*** to persist changes.
 
-## Task 5: Define Tracking Fields
+## Task 6: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -165,7 +192,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
 
-## Task 6: Create the ERP Bulk Extract Callback Integration
+## Task 7: Create the ERP Bulk Extract Callback Integration
 
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
@@ -188,27 +215,45 @@ Accept all other default values.
 5. Click ***Create***.
 6. Click on Horizontal to change the layout to Horizontal
 
-## Task 7: Create the ERP Cloud Callback Trigger
+## Task 8: Create the ERP Cloud Callback Trigger
 
-1. Search for the ERP Cloud Callback connection which you have created in the previous Task and click on it. This invokes the ERP Cloud Configuration Wizard.
+1. Search for the **ERP Cloud Callback** connection which you have created in the previous Task and click on it. This invokes the SOAP Adapter Configuration Wizard.
 
-3. On the **Basic Info** page,
-     - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
-     - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
+2. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***BulkExtractCallback***
+     - for the **What does this endpoint do?** element, enter ***This endpoint defines an ERP Cloud callback.***
      - Click ***> (Next Step)***.
-4. From the **Actions** page,
-    - select ***Query, Create, Update or Delete Information*** option
+3. From the **Operations** page,
+    - select ***onJobCompletion*** from the **Selected Operation**
     - Click ***> (Next Step)***.
-4. From the **Operations** page,
-    - select ***Services*** from the **Browse by** list
-    - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
-    - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
+4. From the **Callback Operations** page,
+    - select ***No Response*** (It is a Default option. If not, select No Response)
     - Click ***> (Next Step)***.
+5. From the **Headers** page, keep defaults and Click ***> (Next Step)***
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![InitiateExtract](images/initiateextract.png)
+![callback trigger](images/callbacktrigger.png)
 
-## Task 7: Create the Download Activity
+## Task 9: Create the Download Activity
+1. Hover over the outgoing arrow for the **BulkExtractCallback** activity and click ***+*** icon.
+2. In the Search field, begin typing **ERP Cloud Integration Service** to find your connection and Click on it.
+The Configure SOAP Endpoint wizard appears.
+3. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***DownloadFile***
+     - Click ***> (Next Step)***.
+4. From the **Operations** page,
+    - select ***getDocumentsForFilePrefix*** from the **Operation** list
+    - Click ***> (Next Step)***.
+Note: Be careful to select the correct operation as many of them have similiar names.    
+5. From the **Headers** page,
+    - select ***Accept attachments in response***
+    - Click ***> (Next Step)***.
+Note: The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
+If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
+6. Review the summary and click ***Done***.
+7. Click ***Save*** to persist changes.
+![Download File](images/downloadfile.png)
+
 ## Task 8: Define the Data mapping
 ## Task 9: Create the Write Extract Activity
 ## Task 10: Define the Data mapping
