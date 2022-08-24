@@ -9,6 +9,7 @@ Estimated Time: 30 minutes
 You will execute the following:
 - Create VBCS application with 8x8 video app.
 - Create new sandbox in the Fusion application.
+- ISV integration within the Fusion application using Springboard.
 - Embed the VBCS application within Fusion application page using application composer.
 - Launch the 8x8 video app from fusion application page.
 
@@ -41,8 +42,38 @@ This lab assumes you have:
 
 6. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
 
+## Task 3: ISV integration within the Fusion application using Springboard.
 
-## Task 3: Embed the VBCS application within the Fusion application page
+1. Login to Fusion Application with Administrator role
+
+2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
+
+3. Create a Sandbox. Click **Create Sandbox** > **Enter sandbox name (ISVFusionIntegration)**
+
+     Select following options (Structure , Application Composer , Page Composer)
+
+4. Click **Create and Enter**
+
+5. Go to **Home** > **Help Dest** > **HR Service Request**
+
+6. Go to **Tools** > **Structure**
+
+7. Click **Create** > **Create Group** > Enter the Group Name > **Save and Close**
+
+   ![Springboard Configuration](images/Screenshot6.png)
+
+8. Click **Create** > **Create Page Entry**
+
+9. Enter the details as per the screenshot below and Click **Save and Close**
+
+  ![Springboard Configuration](images/Screenshot7.png)
+
+10.Now you can launch the 8x8 video app from the Fusion Springboard navigator.
+
+  ![Springboard Configuration](images/Screenshot8.png)
+
+
+## Task 4: Embed the VBCS application within the Fusion application page
 
 
 1. Login to Fusion Application with Administrator role
