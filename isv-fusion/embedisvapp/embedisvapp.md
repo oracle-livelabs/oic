@@ -23,7 +23,7 @@ This lab assumes you have:
 2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration) ** > **Finish**.
 3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
 
-   ![VBCS Webapplication](images/Screenshot 2022-08-24 at 6.42.43 PM.png)
+   ![VBCS Webapplication](images/Screenshot1.png)
 
 ## Task 2: Add the 8x8 Video app within the VBCS web application
 
