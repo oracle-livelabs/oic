@@ -20,32 +20,31 @@ This lab assumes you have:
 ## Task 1: Create VBCS application
 
 1. Login to Oracle Visual Builder.
-2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration)** > **Finish**.
+2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration) ** > **Finish**.
 3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
 
+   ![VBCS Webapplication](images/Screenshot 2022-08-24 at 6.42.43 PM.png)
 
 ## Task 2: Add the 8x8 Video app within the VBCS web application
 
-1. Create launchapp.html file in the local desktop and copy the below code snippet in the file.
+1. Import the launchapp.html file into the Resources folder. **Resources (Right Click) ** > **Import**.
 
-2. Import the launchapp.html file into the Resources folder. **Resources (Right Click) ** > **Import**.
+2. Copy the below code snippet in the main-start page.
 
-3. Copy the below code snippet in the main-start page.
+3. Click **Preview**.
 
-4. Click **Preview**.
+4. Stage the application. Click **Hamburger icon (Right top corner)** > **Stage**.
 
-5. Stage the application. Click **Hamburger icon (Right top corner)** > **Stage**.
+5. Publish the application. Click **Hamburger icon (Right top corner)** > **Publish**.
 
-6. Publish the application. Click **Hamburger icon (Right top corner)** > **Publish**.
-
-7. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
+6. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
 
     ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
 ## Task 3: Embed the VBCS application within the Fusion application page
 
 
-1. Login to Fusion Application
+1. Login to Fusion Application with Administrator role
 
 2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
 

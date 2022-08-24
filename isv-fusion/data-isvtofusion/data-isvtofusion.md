@@ -35,6 +35,10 @@ This lab assumes you have:
 
 Click **Add endpoint**
 
+3. Launch the 8x8 video app from the HR Service Request Page through Start Meet link and Join the metting.
+
+4. You may notice the OIC instance are created that are triggered from the webhook configuration created in the previous step.
+
 
 ## Acknowledgements
 
