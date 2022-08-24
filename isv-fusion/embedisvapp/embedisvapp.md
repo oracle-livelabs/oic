@@ -55,7 +55,7 @@ This lab assumes you have:
 
 4. Click **Create and Enter**
 
-5. Go to **Home** > **HR Service Request**
+5. Go to **Home** > **Help Dest** > **HR Service Request**
 
 6. Go to **Tools** > **Application Composer**
 
@@ -68,6 +68,8 @@ This lab assumes you have:
  | Edit Script | `return *Live url of the VBCS application`|
 
     Leave the rest of the values as default and Click **Save**.
+
+    ![Fusion Start Meet link Configuration](images/Screenshot3.png)
 
 6. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
 
