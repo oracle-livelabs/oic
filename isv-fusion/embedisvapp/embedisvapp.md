@@ -29,7 +29,9 @@ This lab assumes you have:
 
 1. Import the launchapp.html file into the Resources folder. **Resources (Right Click) ** > **Import**.
 
-2. Copy the below code snippet in the main-start page.
+2. Copy the code snippet from main-start file and paste in the main/main-start page code section.
+
+ ![8x8 application within VBCS page](images/Screenshot2.png)
 
 3. Click **Preview**.
 
@@ -39,7 +41,6 @@ This lab assumes you have:
 
 6. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
 
-    ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
 ## Task 3: Embed the VBCS application within the Fusion application page
 
