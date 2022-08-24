@@ -32,7 +32,7 @@ This lab assumes you have:
 
 2. Copy the code snippet from main-start file and paste in the main/main-start page code section.
 
- ![8x8 application within VBCS page](images/Screenshot2.png)
+   ![8x8 application within VBCS page](images/Screenshot2.png)
 
 3. Click **Preview**.
 
@@ -66,14 +66,14 @@ This lab assumes you have:
 
 9. Enter the details as per the screenshot below and Click **Save and Close**
 
-  ![Springboard Configuration](images/Screenshot7.png)
+   ![Springboard Configuration](images/Screenshot7.png)
 
 10.Now you can launch the 8x8 video app from the Fusion Springboard navigator.
 
-  ![Springboard Configuration](images/Screenshot8.png)
+   ![Springboard Configuration](images/Screenshot8.png)
 
 
-## Task 4: Embed the VBCS application within the Fusion application page
+## Task 4: Embed the VBCS application within the Fusion application page using application composer.
 
 
 1. Login to Fusion Application with Administrator role
