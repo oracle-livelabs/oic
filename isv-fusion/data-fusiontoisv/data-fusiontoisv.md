@@ -34,9 +34,11 @@ This lab assumes you have:
 
 5. Check Pass On URL option.
 
+   ![Variable declaration](images/Screenshot1.png)
+
 6. Go to **isvfusionwebapp** > **main** > **main-start** > **code**  
 
-   Copy and Replace the below script.
+   Copy the content from main-start file and paste in the main/main-start file in the web application.
 
 7. Stage and Publish the application. (Refer Lab 1 , Task 2 , Steps 5 and 6).
 
@@ -56,7 +58,7 @@ This lab assumes you have:
 
 7. Select Start Meet field and Click **Edit**
 
-8. Copy the below snippet in the Edit Script panel and  Click **Validate** then **Save**.
+8. Copy the newly published application live url (Task 1 , Step 7) in the Edit Script panel and  Click **Validate** then **Save**.
 
 9. Launch the 8x8 video app from the HR Service Request Page through Start Meet link.
 
