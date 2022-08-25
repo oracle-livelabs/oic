@@ -254,19 +254,105 @@ If you don't see this option, it is likely you selected the wrong operation. Cli
 7. Click ***Save*** to persist changes.
 ![Download File](images/downloadfile.png)
 
-## Task 8: Define the Data mapping
-## Task 9: Create the Write Extract Activity
-## Task 10: Define the Data mapping
-## Task 11: Define Tracking Fields
-## Task 12: Activate the ERP Bulk Extract Callback Integration
-## Task 13: Map the Callback URL
-## Task 14: Activate the ERP Bulk Extract Integration
+## Task 10: Define the Data mapping for Download Activity
+A map action named DownloadFile is automatically created. We will define this data mapping.
+1. Select the action **Map DownloadFile** and click on **...** and click on **Edit**
+2. In the Target section, expand the **DownloadFile Request**, expand **Body** and expand **getDocumentsForFilePrefix**.
+3. Click the **Toggle functions** button located above the Target section toolbar
+4. In the Component palette, expand the **String** node.
+5. Drag the concat function and drop it on **prefix** element in the Target section.
+![Toggle File](images/togglefunctions.png)
+
+In the Expression window, edit the concat function to use the following parameters:
+
+    - "ESS_"
+    - //requestId
+    - "_BIPReport0"
+
+The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPReport0"*** )
+    - Click **Save** icon in the Expression editor to commit the expression
+
+![prefix element](images/prefixelement.png)
+
+6. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
+    - Right-mouse click on the **account** node and select **Create Target Node**.
+    - Click Edit icon in the Expression editor to enable edit mode.
+    - Enter the literal value ***"fin$/payables$/export$"***
+    - Click **Save** icon in the Expression editor to commit the data.
+
+7. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
+    - Right-mouse click on the **account** node and select **Create Target Node**.
+
+8. In the same way, map the **comments** element to the following expression:
+
+    - ***concat ( "processedby=", //requestId )***
+
+9. Click on ***Validate***
+    - A confirmation message appears.
+10. Click ***< (Go back)***
+11. Click ***Save*** to persist changes.
+
+
+## Task 11: Create the Write Extract Activity
+1. Hover over the outgoing arrow for the **DownloadFile** activity and click **+** icon.
+2. In the Search field, begin typing **File Server** to find your connection
+3. Select the connection named File Server.
+The Configure Oracle Adapter Endpoint Configuration Wizard appears.
+4. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***WriteExtract***
+     - Click ***> (Next Step)***.
+5. From the **Operations** page,
+    - select ***Write File*** from the **Select Operation** list
+    - Enter ***/home/users/```<<your oic usernumber>>```*** in the **Output Directory** field
+    - Enter ***PayablesExtract.xml*** in the **File Name Pattern** field
+    - Click ***> (Next Step)***.  
+6. From the **Schema** page,
+    - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
+    - Click ***> (Next Step)***.
+7. Review the summary and click ***Done***.
+8. Click ***Save*** to persist changes.
+![writeextract2ftp](images/writeextract2ftp.png)
+
+## Task 12: Define the Data mapping for WriteExtract
+
+A map action named WriteExtract is automatically created. We will define this data mapping.
+1. Select the action **Map WriteExtract** and click on **...** and click on **Edit**
+2. In the Source section, expand **DownloadFile Response**, then expand the **getDocumentsForFilePrefixResponse**, and then expand **result**.
+3. In the Target section, expand the **WriteExtract Request**, expand **ICSFile**.
+4. Map the **Content** element in the Source section to the **FileReference** element in the Target section.
+5. Click on ***Validate***
+    - A confirmation message appears.
+6. Click ***< (Go back)***
+7. Click ***Save*** to persist changes.
+8. Click ***< (Go back)***
+
+## Task 13: Define Tracking Fields
+
+Manage business identifiers that enable you to track fields in messages during runtime.
+
+1. Click on the ***(I) Business Identifiers*** menu on the top right.
+2. From the **Source** section, expand ***onJobCompletion*** > ***requestId***. Drag the ***requestId*** field to the right side section:
+3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
+4. Click ***Save***
+5. Click on ***< (Go back)*** button.
+
+## Task 14: Activate the ERP Bulk Extract Callback Integration
+1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
+2. On the **Activate Integration** dialog, select ***a tracing level***.
+![tracinglevel](images/tracinglevel.png)
+
+3. Click ***Activate***.
+
+    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
+
+## Task 15: Map the Callback URL
+## Task 16: Activate the ERP Bulk Extract Integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the **Activate Integration** dialog, select ***Enable Tracing***, followed by ***Include Payload*** options.
+2. On the **Activate Integration** dialog, select ***a tracing level***.
 
 3. Click ***Activate***.
 

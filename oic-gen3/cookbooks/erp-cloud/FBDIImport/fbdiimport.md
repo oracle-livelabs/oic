@@ -113,7 +113,7 @@ Accept all other default values.
 
 | **Element**        | **Value**   |
 | --- | ----------- |
-| Input Directory         | /upload/public_ftp/```<<your oic usernumber>>```       
+| Input Directory         | /home/users/```<<your oic usernumber>>```       
 | File Name | apinvoiceimport.zip |
 
 5. On the **Schema** page,
@@ -193,7 +193,9 @@ Manage business identifiers that enable you to track fields in messages during r
     ![Assign Business Identifiers](images/assign-business-identifiers.png =40%x*)
 
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
+3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
+4. Click ***Save***
+5. Click on ***< (Go back)*** button.
 
 ## Task 8: Activate the integration
 
@@ -201,7 +203,8 @@ Manage business identifiers that enable you to track fields in messages during r
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the **Activate Integration** dialog, select ***Enable Tracing***, followed by ***Include Payload*** options.
+2. On the **Activate Integration** dialog, select ***a tracing level***.
+![tracinglevel](images/tracinglevel.png)
 
 3. Click ***Activate***.
 
