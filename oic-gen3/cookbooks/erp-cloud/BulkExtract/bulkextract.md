@@ -340,44 +340,63 @@ Manage business identifiers that enable you to track fields in messages during r
 1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
 2. On the **Activate Integration** dialog, select ***a tracing level***.
 ![tracinglevel](images/tracinglevel.png)
-
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Task 15: Map the Callback URL
+Note: Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
+
+4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration
+![integrationactionsmenu](images/integrationactionsmenu.png)
+5. Click on ***Run details***
+6. Copy **Metadata URL** without the **?wsdl** at the end and save it in some text file.
+
+## Task 15: Map the Callback URL in ERP Bulk Extract Integration.
+1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+2. On the **Integrations page**, click ***ERP Bulk Extract*** to edit the integration.
+3. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
+2. In the Target section successively expand the ***InitiateExtract Request*** element.
+    - Right click on **Callback URL** and then click on ***Create Target Node***
+    - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
+    - Enter the Metadata URL which you have copied.
+    - Click on Save
+    ![callbackURL](images/callbackurl.png)
+    7. Click on ***Validate***
+    A confirmation message appears.
+    8. Click ***< (Go back)***
+    9. Click ***Save*** to persist changes.
+    10. Click ***< (Go back)***
+
 ## Task 16: Activate the ERP Bulk Extract Integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
-
     ![Click to Activate Integration](images/click-activate-integration.png)
-
 2. On the **Activate Integration** dialog, select ***a tracing level***.
-
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
-## Task 15: Run the ERP Bulk Extract Integration
+
+## Task 17: Run the ERP Bulk Extract Integration
 
 Refresh your page after few seconds.
-1. Click on ***Run***
+1. Select **ERP Bulk Extract**,  Click on **...(Actions)** menu and Click on ***Run***
     ![Run Integration](images/run-integration.png)
-2. Click on ***Submit Now*** and then click on ***Submit Now*** again when prompted.
+2. Click on ***Run***
 3. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
 Importing of the invoices to the ERP Cloud might take few minutes.
 OR you can also track by clicking on ***Design***, ***Observability*** and ***Instances***
-## Task 16: Verify
+
+## Task 18: Verify
 Wait 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
-2. Click on Navigator Menu(On top lift corner), Click on Payables, click Invoices and Click on the search in the Details panel located below the User menu.
-3. Enter the invoice number and click search.
-The invoice should appear in the search results.
-4. Congratulations! You have finished your integration flow.
-
-
-
-
+2. Click on Navigator Menu(On top lift corner), select Tools tab, click Scheduled Processes.
+3. Expand Search and search for the Process Id returned from your integration.
+4. Click the process to open and verify that the Payables transaction job completed successfully.
+5. Using an FTP client of your choice, log in to the File server
+6. Open the FTP directory which you have mentioned in the Callback integration flow and verify the PayablesExtract.xml file exits.
+7. Download the PayablesExtract.xml file and review.
+8. Congratulations! You have finished your integration flow.
 
 
 You may now **proceed to the next lab**.
