@@ -1,4 +1,4 @@
-# Lab 2 : Data Transfer from Fusion Application to 8x8 Jitsi Application
+# Lab 2 : Data Transfer from Fusion Application to 8x8 Jitsi (ISV) Application
 
 ## Introduction
 
@@ -60,7 +60,14 @@ This lab assumes you have:
 
 8. Copy the newly published application live url (Task 1 , Step 7) in the Edit Script panel and  Click **Validate** then **Save**.
 
+Sample script: return "https://xxxx-xxxxx-px.integration.ocp.oraclecloud.com/ic/builder/rt/ISVFusionIntegration/1.0.1/webApps/isvfusionwebapp/?username=SR : "+SrNumber;
+
+
 9. Launch the 8x8 video app from the HR Service Request Page through Start Meet link.
+
+![Select Service Request](images/Screenshot2.png)
+
+![SR number visible in the VBCS](images/Screenshot3.png)
 
 You may now **proceed to the next lab**.
 

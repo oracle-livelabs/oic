@@ -15,7 +15,8 @@ You will execute the following:
 
 ### Prerequisites
 This lab assumes you have:
-- Completed all the previous labs.
+- Basic knowledge on VBCS
+- Basic knowledge on Fusion technicals (sandbox , application composer , etc)
 
 
 ## Task 1: Create VBCS application
@@ -28,7 +29,7 @@ This lab assumes you have:
 
 ## Task 2: Add the 8x8 Video app within the VBCS web application
 
-1. Import the launchapp.html file into the Resources folder. **Resources (Right Click) ** > **Import**.
+1. Import the **launchapp.html** file into the Resources folder. **Resources (Right Click) ** > **Import**.
 
 2. Copy the code snippet from main-start file and paste in the main/main-start page code section.
 
@@ -41,6 +42,8 @@ This lab assumes you have:
 5. Publish the application. Click **Hamburger icon (Right top corner)** > **Publish**.
 
 6. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
+
+  Please keep the live url handy as it will be used in the following tasks.
 
 ## Task 3: ISV integration within the Fusion application using Springboard.
 
@@ -98,7 +101,7 @@ This lab assumes you have:
  | --- | ----------- |
  | Display Label | `Start Meet`   |
  | Type  | `Link`|
- | Edit Script | `return *Live url of the VBCS application`|
+ | Edit Script | `return *use the Live url from the previous task*`|
 
     Leave the rest of the values as default and Click **Save**.
 
