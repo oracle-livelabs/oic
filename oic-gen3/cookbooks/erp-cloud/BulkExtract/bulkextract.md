@@ -47,7 +47,7 @@ Create a connection with the SOAP Adapter.
     | **Field**        | **Value**          |       
     | --- | ----------- |
     | Name         | `ERP Cloud Callback`       |
-    | Description  | `ERP Cloud Callback for OIC LiveLabs` |
+    | Description  | `ERP Cloud Callback Connection for OIC LiveLabs` |
 
 
     Keep all other values as default.
@@ -78,7 +78,7 @@ Create a connection with the SOAP Adapter.
     | **Field**        | **Value**          |       
     | --- | ----------- |
     | Name         | `ERP Cloud Integration Service`       |
-    | Description  | `ERP Cloud Integration Service for OIC LiveLabs` |
+    | Description  | `ERP Cloud Integration Service Connection for OIC LiveLabs` |
 
 
     Keep all other values as default.
@@ -89,8 +89,8 @@ Create a connection with the SOAP Adapter.
     |---|---|
     |WSDL URL | enter ***https://ERPCloudHost/fscmService/ErpIntegrationService?wsdl*** |
     |Security Policy | select ***Username Password Token*** |
-    |Username | Enter ***Enter username received from the instructor*** |
-    |Username | Enter ***Enter password received from the instructor*** |
+    |Username | Enter ***Enter ERP Cloud username received from the instructor*** |
+    |Username | Enter ***Enter ERP Cloud password received from the instructor*** |
 
 5. Click on ***Test***  and click on ***Validate and Test***  and wait until you receive a
 confirmation box that the test was successful.
@@ -125,7 +125,7 @@ Accept all other default values.
 
 1. Click the ***+*** sign after **Schedule** in the integration canvas.
 
-2. Select the ERP Cloud connection which you have created in the previous labs. This invokes the ERP Cloud Configuration Wizard.
+2. Select the **ERP Cloud** connection which you have created in the previous labs. This invokes the ERP Cloud Configuration Wizard.
 
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
@@ -146,10 +146,10 @@ Accept all other default values.
 ## Task 5: Define the data Mapping
 A map action named InitiateExtract is automatically created. We will define this data mapping.
 1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
-2. In the Target section successively expand the ***InitiateExtract Request*** element.
+2. In the Target section, expand the ***InitiateExtract Request*** element.
     - Right click on **Job Name** and then click on ***Create Target Node***
 ![InitiateExtractMapping1](images/InitiateExtractMapping1.png)
-    - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
+    - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon. If you find expression editor in the edit mode which means you are in Developer view)
 ![mappingsdeveloperview](images/mappingsdeveloperview.png)   
     - Enter the value given below
     ```
@@ -157,17 +157,17 @@ A map action named InitiateExtract is automatically created. We will define this
     ```
     - Click on Save
     ![saveliteral](images/saveliteral.png)  
-    - Repeat the same thing for the below elements.
-    - Select **parameterList** and enter the value given below.
+
+    - Right click on **Parameter List** and then click on ***Create Target Node*** and enter the value given below.
     ```
     <copy>"92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,#NULL,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,12-19,N,N,300000046975971,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL"</copy
     ```
-    - Select **jobOptions** and enter the value given below.
+    - Right click on **Job Options** and then click on ***Create Target Node*** and enter the value given below.
     ```
     <copy>"ExtractFileType=ALL"</copy
     ```
-    - For **callbackURL**, skip this mapping for now. We will assign a value after we design and activate the callback flow
-    - Select **notificationCode** and enter the value given below.
+    - For **Callback URL**, skip this mapping for now. We will assign a value after we design and activate the callback flow
+    - Right click on **Notification Code** and then click on ***Create Target Node*** and enter the value given below.
     ```
     <copy>30</copy
     ```
@@ -258,9 +258,9 @@ If you don't see this option, it is likely you selected the wrong operation. Cli
 A map action named DownloadFile is automatically created. We will define this data mapping.
 1. Select the action **Map DownloadFile** and click on **...** and click on **Edit**
 2. In the Target section, expand the **DownloadFile Request**, expand **Body** and expand **getDocumentsForFilePrefix**.
-3. Click the **Toggle functions** button located above the Target section toolbar
-4. In the Component palette, expand the **String** node.
-5. Drag the concat function and drop it on **prefix** element in the Target section.
+    - Click the **Toggle functions** button located above the Target section toolbar
+    - In the Component palette, expand the **String** node.
+    - Drag the concat function and drop it on **prefix** element in the Target section.
 ![Toggle File](images/togglefunctions.png)
 
 In the Expression window, edit the concat function to use the following parameters:
@@ -274,23 +274,20 @@ The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPRepo
 
 ![prefix element](images/prefixelement.png)
 
-6. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
+3. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
     - Right-mouse click on the **account** node and select **Create Target Node**.
     - Click Edit icon in the Expression editor to enable edit mode.
     - Enter the literal value ***"fin$/payables$/export$"***
     - Click **Save** icon in the Expression editor to commit the data.
 
-7. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
-    - Right-mouse click on the **account** node and select **Create Target Node**.
-
-8. In the same way, map the **comments** element to the following expression:
+4. In the same way, map the **comments** element to the following expression:
 
     - ***concat ( "processedby=", //requestId )***
 
-9. Click on ***Validate***
+5. Click on ***Validate***
     - A confirmation message appears.
-10. Click ***< (Go back)***
-11. Click ***Save*** to persist changes.
+6. Click ***< (Go back)***
+7. Click ***Save*** to persist changes.
 
 
 ## Task 11: Create the Write Extract Activity
@@ -324,7 +321,7 @@ A map action named WriteExtract is automatically created. We will define this da
     - A confirmation message appears.
 6. Click ***< (Go back)***
 7. Click ***Save*** to persist changes.
-8. Click ***< (Go back)***
+
 
 ## Task 13: Define Tracking Fields
 
@@ -346,10 +343,10 @@ Manage business identifiers that enable you to track fields in messages during r
 
 Note: Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
 
-4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration
+4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
 ![integrationactionsmenu](images/integrationactionsmenu.png)
 5. Click on ***Run details***
-6. Copy **Metadata URL** without the **?wsdl** at the end and save it in some text file.
+6. Copy **Metadata URL** and save it in some text file.
 
 ## Task 15: Map the Callback URL in ERP Bulk Extract Integration.
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
@@ -359,6 +356,7 @@ Note: Wait for few seconds and refresh the screen and make sure that your integr
     - Right click on **Callback URL** and then click on ***Create Target Node***
     - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
     - Enter the Metadata URL which you have copied.
+    - Remove ***?wsdl*** and add ***/*** at the end along with the double quotes as per the image given below.
     - Click on Save
     ![callbackURL](images/callbackurl.png)
     7. Click on ***Validate***
@@ -371,7 +369,7 @@ Note: Wait for few seconds and refresh the screen and make sure that your integr
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
     ![Click to Activate Integration](images/click-activate-integration.png)
-2. On the **Activate Integration** dialog, select ***a tracing level***.
+2. On the **Activate Integration** dialog, select **a tracing level** as ***Audit***.
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
@@ -385,7 +383,9 @@ Refresh your page after few seconds.
 3. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
 Importing of the invoices to the ERP Cloud might take few minutes.
-OR you can also track by clicking on ***Design***, ***Observability*** and ***Instances***
+OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
+4. Make sure that both the integrations **ERP Bulk Extract** and **Bulk Extract Callback** completed successfully. If not, fix the issues.
+
 
 ## Task 18: Verify
 Wait 5 minutes before performing this procedure.
