@@ -4,11 +4,13 @@
 
 This lab will walk you through the steps to implement data transfer from Fusion to 8x8 Jitsi video conference platform.
 
+
 Estimated Time: 30 minutes
 
 ### Objectives
 
 You will execute the following:
+- SR number field from fusion application will be transferred to VBCS iframe and Display the SR number in the video heading.
 - Create variable in the VBCS application.
 - Fusion configurations.
 
