@@ -52,7 +52,7 @@ This lab assumes you have:
 
 3. Enter the oic credentials in the below format.
 
-  <username>:<password>
+  username:password
 
   Click **Encode**
 
