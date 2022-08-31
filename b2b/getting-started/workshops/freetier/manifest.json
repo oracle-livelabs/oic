@@ -14,11 +14,11 @@
         },
         {
             "title": "Lab 1: Provision Oracle Integration",
-            "filename": "../../../../common/provision-oic/provision.md"
+            "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Enable File Server",
-            "filename": "../../../../common/enable-file-server/enable-file-server.md"
+            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
         },
         {
             "title": "Lab 3: Setup Workshop Prerequisites",
