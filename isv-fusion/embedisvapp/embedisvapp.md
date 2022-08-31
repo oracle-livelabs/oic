@@ -7,7 +7,7 @@ Estimated Time: 30 minutes
 
 ### Objectives
 You will execute the following:
-- Create JaaS account
+- Create JaaS account.
 - Create VBCS application with 8x8 video app.
 - Create new sandbox in the Fusion application.
 - ISV integration within the Fusion application using Springboard.
@@ -21,18 +21,9 @@ This lab assumes you have:
 
 ## Task 1: Create JaaS account
 
-1. Go to https://jaas.8x8.vc url in browser and Sign up for the trail account.
+1. 
 
-2. Click on **Integrate meetings iFrame** under **My Video app**.
-
-![Download iframe html](images/Screenshot9.png)
-
-3. Click **Download Integration Code**
-
-  It downloads index.html file and this file will be used in the following lab.
-
-
-## Task 2: Create VBCS application
+## Task 1: Create VBCS application
 
 1. Login to Oracle Visual Builder.
 2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration) ** > **Finish**.
@@ -40,9 +31,9 @@ This lab assumes you have:
 
    ![VBCS Webapplication](images/Screenshot1.png)
 
-## Task 3: Add the 8x8 Video app within the VBCS web application
+## Task 2: Add the 8x8 Video app within the VBCS web application
 
-1. Import the **index.html** file into the Resources folder. **Resources (Right Click) ** > **Import**.
+1. Import the **launchapp.html** file into the Resources folder. **Resources (Right Click) ** > **Import**.
 
 2. Copy the code snippet from main-start file and paste in the main/main-start page code section.
 
@@ -58,7 +49,7 @@ This lab assumes you have:
 
   Please keep the live url handy as it will be used in the following tasks.
 
-## Task 4: ISV integration within the Fusion application using Springboard.
+## Task 3: ISV integration within the Fusion application using Springboard.
 
 1. Login to Fusion Application with Administrator role
 
@@ -89,7 +80,7 @@ This lab assumes you have:
    ![Springboard Configuration](images/Screenshot8.png)
 
 
-## Task 5: Embed the VBCS application within the Fusion application page using application composer.
+## Task 4: Embed the VBCS application within the Fusion application page using application composer.
 
 
 1. Login to Fusion Application with Administrator role
