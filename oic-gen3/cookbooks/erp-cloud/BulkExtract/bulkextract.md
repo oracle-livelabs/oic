@@ -19,7 +19,7 @@ See this blog article to learn how to handle files from various interfaces and f
  The following diagram shows the interaction between the systems involved in this use case.
   ![FBDIImport](images/bulk-export-callback.png)
 
-Estimated Time: 30 minutes
+Estimated Time: 60 minutes
 
 ### Objectives
 
