@@ -382,7 +382,6 @@ Refresh your page after few seconds.
 2. Click on ***Run***
 3. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
-Importing of the invoices to the ERP Cloud might take few minutes.
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
 4. Make sure that both the integrations **ERP Bulk Extract** and **Bulk Extract Callback** completed successfully. If not, fix the issues.
 

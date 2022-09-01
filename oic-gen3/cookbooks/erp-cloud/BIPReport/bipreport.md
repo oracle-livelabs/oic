@@ -173,7 +173,7 @@ A map action named GetBIPReport is automatically created. We will define this da
 1. Select the action **Map GetBIPReport** and click on **...** and click on **Edit**
 2. In the Source section, expand **ShortBIPReport** and then expand **Query Parameters**
 3. In the Target section, expand the **GetBIPReport Request**, expand **Body**, expand **runReport**, expand **reportRequest**.
-    - Map the Report Absolute Path field from the source section to the reportAbsolutePath of target section.
+    - Map the ***Report Absolute Path*** field from the source section to the ***reportAbsolutePath*** of target section.
     - In the Target section, expand the **parameterNameValues** and expand **item**
     - Right-mouse click on the **name** node and select **Create Target Node**.
     - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
@@ -194,73 +194,111 @@ A map action named GetBIPReport is automatically created. We will define this da
 
 ## Task 7: Write the file
 1. [Download the opaque_schema.xsd](files/opaque_schema.xsd)
-2. Hover over the outgoing arrow for the GetBIPReport activity (after first activity) and Click the ***+*** sign in the integration canvas.
+2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
     - Click ***> (Next Step)***.
-4. On the **Configure Operations** page,
-    - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
+4. On the **Configure Operation** page,
+    - for the **Choose Stage File Operation** element, select ***Write File***
+    - for the **Specify the File Name** element, select ***"temp.csv"***
+    - for the **Specify the Output Directory** element, select ***""/tmp""***
     - Click ***> (Next Step)***.
 5. On the **Schema Options** page,
-      - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
+      - select ***XML Schema (XSD) document***
       - Click ***> (Next Step)***.
 6. On the **Format Definition** page,
+      - click ***+*** and select the ***opaque_schema.xsd*** you downloaded
+      - Click ***> (Next Step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
-
+![StageFileWrite](images/stagefilewrite.png)
 
 ## Task 8: Define the Data Mapping
+A map action named StageFileWrite is automatically created. We will define this data mapping.
+1. Select the action **Map StageFileWrite** and click on **...** and click on **Edit**
+2. In the Source section, expand **GetBIPReport Response**, expand **runReportResponse**, expand **runReportReturn**
+3. In the Target section, expand the **StageFileWrite Response**
+4. Map the ***reportBytes*** from the source section to the ***Opaque Element*** of target section.
+5. Click on ***Validate***
+A confirmation message appears.
+6. Click ***< (Go back)***
+7. Click ***Save*** to persist changes.
+
 ## Task 9: Read the file from Stage
+1. [Download the GLCCReport.csv](files/GLCCReport.csv)
+2. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
+Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
+3. On the **Basic Info** page,
+    - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
+    - Click ***> (Next Step)***.
+4. On the **Configure Operation** page,
+    - for the **Choose Stage File Operation** element, select ***Read Entire File***
+    - for the **Specify the File Name** element, select ***"temp.csv"***
+    - for the **Specify the Directory** element, select ***""/tmp""***
+    - Click ***> (Next Step)***.
+5. On the **Schema Options** page,
+      - Click ***> (Next Step)***.
+6. On the **Format Definition** page,
+      - click ***+*** and select the ***GLCCReport.csv*** you downloaded
+      - for the **Enter Record Name**, enter ***Ledger***
+      - for the **Enter Record Name**, enter ***LedgerSet***
+      - Click ***> (Next Step)***.
+7. Review the summary and click ***Done***
+8. Click ***Save*** to persist changes
+![ReadFileFromStage](images/readfilefromstage.png)
+
 ## Task 10: Define the Data Mapping
+1. Select the action **Map ShortBIPReport** and click on **...** and click on **Edit**
+2. In the Source section, expand **ReadFileFromStage Response**, expand **Read Response**, expand **Ledger Set**
+3. In the Target section, expand the **ShortBIPReport Response**, expand **Response Wrapper**
+   - Map the ***Ledger*** from the source section to the ***Top Level Array*** of target section.
+   - In the Source section, expand **Ledger**, in the Target section, expand the **Top Level Array**
+   - Map the following fields from the Sources section to the fields in the Target section
+  | **Field**        | **Value**|       
+  | --- | ----------- |
+  | LEDGER NAME         | LEDGERNAME|
+  | SEGMENT3         | SEGMENT3|
+  | SEGMENT4         | SEGMENT4|
+  | FIN CATEGORY         | FIN CATEGORY|
+
+  - Click on ***Validate***. A confirmation message appears.
+  - Click ***< (Go back)***
+  - Click ***Save*** to persist changes.
+
+
 
 ## Task 8: Define Tracking Fields
 
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
-2. From the **Source** section, expand ***onJobCompletion*** > ***requestId***. Drag the ***requestId*** field to the right side section:
+2. From the **Source** section, expand ***execute*** > ***QueryParameters***. Drag the ***LEDGERNAME*** field to the right side section:
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
-4. Click ***Save***
+4. Click ***Save***.
+![completeShortBIPReport](images/completeShortBIPReport.png)
 5. Click on ***< (Go back)*** button.
 
-## Task 9: Activate the ERP Bulk Extract Callback Integration
-1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
-2. On the **Activate Integration** dialog, select ***a tracing level***.
-![tracinglevel](images/tracinglevel.png)
+
+## Task 9: Activate the Integration
+1. On the **Integrations** page, click on the ***Activate*** icon of **Short BIP Report** Integration.
+2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-Note: Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
-
-4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
-![integrationactionsmenu](images/integrationactionsmenu.png)
-
-
-
-## Task 10: Activate the ERP Bulk Extract Integration
-
-1. On the **Integrations** page, click on the ***Activate*** icon.
-    ![Click to Activate Integration](images/click-activate-integration.png)
-2. On the **Activate Integration** dialog, select **a tracing level** as ***Audit***.
-3. Click ***Activate***.
-
-    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
-
-## Task 11: Run the ERP Bulk Extract Integration
-
+## Task 11: Run the Integration
 Refresh your page after few seconds.
-1. Select **ERP Bulk Extract**,  Click on **...(Actions)** menu and Click on ***Run***
+1. Select **Short BIP Report**,  Click on **...(Actions)** menu and Click on ***Run***
     ![Run Integration](images/run-integration.png)
-2. Click on ***Run***
-3. Click the link which appears on top to track the instance.
+2. Configure the URI parameters:
+  - for **ReportAbsolutePath**, enter ***/Custom/Financials/GLCCReport.xdo***
+  - for **LedgerName**, enter ***US Primary Ledger***
+3. Click ***Run*** (in the upper right of the page).
+4. Expand the Response section to verify that you got a successful response and verify the Status is 200 OK
+5. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
-Importing of the invoices to the ERP Cloud might take few minutes.
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
-4. Make sure that both the integrations **ERP Bulk Extract** and **Bulk Extract Callback** completed successfully. If not, fix the issues.
-
-
 
 You may now **proceed to the next lab**.
 
