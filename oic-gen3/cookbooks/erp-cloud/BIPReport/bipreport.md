@@ -38,8 +38,8 @@ Create a connection with the SOAP Adapter.
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
-    | Name         | `ERP Cloud External Report Service`       |
-    | Description  | `ERP Cloud External Report Service Connection for OIC LiveLabs` |
+    | Name         | ERP Cloud External Report Service      |
+    | Description  | ERP Cloud External Report Service Connection for OIC LiveLabs |
 
     Keep all other values as default.
 
@@ -47,10 +47,10 @@ Create a connection with the SOAP Adapter.
 
     | **Field**  | **Values** |
     |---|---|
-    |WSDL URL | enter ***https://ERPCloudHost/xmlpserver/services/ExternalReportWSSService?WSDL*** |
-    |Security Policy | select ***Basic Authentication*** |
-    |Username | Enter ***Enter ERP Cloud username received from the instructor*** |
-    |Username | Enter ***Enter ERP Cloud password received from the instructor*** |
+    |WSDL URL | https://ERPCloudHost/xmlpserver/services/ExternalReportWSSService?WSDL |
+    |Security Policy | Basic Authentication |
+    |Username | #Enter ERP Cloud username received from the instructor |
+    |Username |  #Enter ERP Cloud password received from the instructor |
 
 5. Click on ***Test***  and click on ***Validate and Test***  and wait until you receive a
 confirmation box that the test was successful.
@@ -65,9 +65,9 @@ Create a connection with the REST Adapter.
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
-    | Name         | `REST Interface`       |
-    | Role         | `Trigger`       |
-    | Description  | `REST Interface Connection for OIC LiveLabs` |
+    | Name         | REST Interface     |
+    | Role         | Trigger       |
+    | Description  | REST Interface Connection for OIC LiveLabs |
 
     Keep all other values as default.
 
@@ -75,7 +75,7 @@ Create a connection with the REST Adapter.
 
     | **Field**  | **Values** |
     |---|---|
-    |Security Policy | select ***OAuth 2.0 Or Basic Authentication*** |
+    |Security Policy | OAuth 2.0 Or Basic Authentication |
 
 5. Click on ***Test***  and wait until you receive a confirmation box that the test was successful.
 6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
@@ -89,14 +89,8 @@ Create a connection with the REST Adapter.
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
-    | Name         |```
-    <copy>Short BIP Report</copy
-    ```
-    |
-    | Description |```
-    <copy>This integration shows you how to connect to the ERP BIP service, pulls a report, decodes the response, and return the report results.</copy
-    ```
-    |
+    |Name | Short BIP Report |
+    |Description | This integration shows you how to connect to the ERP BIP service, pulls a report, decodes the response, and return the report results |
 
 Accept all other default values.
 
@@ -149,8 +143,9 @@ A new row appears.
         ```
     - In the **What is the media-type of Response Body?** Select ***JSON***, It is select by Default. If not, you will have to select it explicitly.
 
-6. Review the summary and click ***Done***.
-7. Click ***Save*** to persist changes.
+6. Click ***> (Next Step)***
+7. Review the summary and click ***Done***.
+8. Click ***Save*** to persist changes.
 
 
 ## Task 5: Get the BIP report
@@ -166,6 +161,7 @@ Search for the **ERP Cloud External Report Service** connection which you have c
     - Click ***> (Next Step)***.    
 4. Review the summary and click ***Done***
 5. Click ***Save*** to persist changes
+6. If required, click on Zoom out/in to view the complete flow.
 ![GetBIPReport](images/GetBIPReport.png)
 
 ## Task 6: Define the Data Mapping
@@ -183,7 +179,7 @@ A map action named GetBIPReport is automatically created. We will define this da
     - Map the ***Ledger Name*** field in the Sources section, to the ***item*** field located under **values** in the Target section
     - Search for **sizeOfDataChunkDownload** in the Target section.
     - Right-mouse click on the **sizeOfDataChunkDownload** node and select **Create Target Node**.
-    - Enter ***-1**** and click on ***Save***
+    - Enter ***-1*** and click on ***Save***
     - Click on ***Validate***
     A confirmation message appears.
     - Click ***< (Go back)***
@@ -193,7 +189,7 @@ A map action named GetBIPReport is automatically created. We will define this da
 
 
 ## Task 7: Write the file
-1. [Download the opaque_schema.xsd](files/opaque_schema.xsd)
+1. [Download the opaque_schema.xsd](files/opaque_schema.xsd?download=1)
 2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
@@ -202,7 +198,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Write File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
-    - for the **Specify the Output Directory** element, select ***""/tmp""***
+    - for the **Specify the Output Directory** element, select ***"/tmp"***
     - Click ***> (Next Step)***.
 5. On the **Schema Options** page,
       - select ***XML Schema (XSD) document***
@@ -221,12 +217,12 @@ A map action named StageFileWrite is automatically created. We will define this 
 3. In the Target section, expand the **StageFileWrite Response**
 4. Map the ***reportBytes*** from the source section to the ***Opaque Element*** of target section.
 5. Click on ***Validate***
-A confirmation message appears.
+  - A confirmation message appears.
 6. Click ***< (Go back)***
 7. Click ***Save*** to persist changes.
 
 ## Task 9: Read the file from Stage
-1. [Download the GLCCReport.csv](files/GLCCReport.csv)
+1. [Download the GLCCReport.csv](files/GLCCReport.csv?download=1)
 2. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
@@ -235,7 +231,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Read Entire File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
-    - for the **Specify the Directory** element, select ***""/tmp""***
+    - for the **Specify the Directory** element, select ***"/tmp"***
     - Click ***> (Next Step)***.
 5. On the **Schema Options** page,
       - Click ***> (Next Step)***.
@@ -257,12 +253,13 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
    - Map the following fields from the Sources section to the fields in the Target section
   | **Field**        | **Value**|       
   | --- | ----------- |
-  | LEDGER NAME         | LEDGERNAME|
+  | LEDGERNAME         | LEDGERNAME|
   | SEGMENT3         | SEGMENT3|
   | SEGMENT4         | SEGMENT4|
   | FIN CATEGORY         | FIN CATEGORY|
 
-  - Click on ***Validate***. A confirmation message appears.
+  - Click on ***Validate***.
+     - A confirmation message appears.
   - Click ***< (Go back)***
   - Click ***Save*** to persist changes.
 
@@ -299,6 +296,10 @@ Refresh your page after few seconds.
 5. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
+
+## Task 12: Congratulations
+Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
+
 
 You may now **proceed to the next lab**.
 

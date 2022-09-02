@@ -39,7 +39,7 @@ This lab assumes you have:
 ##	Task	1: Create ERP Cloud callback Connection using SOAP adapter
 Create a connection with the SOAP Adapter.
 
-1. [Download the erpcbkinterface-onjobcompletion.wsdl](files/erpcbkinterface-onjobcompletion.wsdl)
+1. [Download the erpcbkinterface-onjobcompletion.wsdl](files/erpcbkinterface-onjobcompletion.wsdl?download=1)
 2. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
 3. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
 4. In the *Create Connection* dialog, enter the following information and click on ***Create***:

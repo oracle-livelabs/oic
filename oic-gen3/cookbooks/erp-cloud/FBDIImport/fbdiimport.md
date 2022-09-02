@@ -39,8 +39,8 @@ This lab assumes you have:
 
 ## Task 1: Create FBDI file
 
-1. [Download the Invoice Import Template Spreadsheet](files/GSEPayablesStandardInvoiceImportTemplate.xlsm)
-2. [Download the APTEST.PROPERTIES file](files/APTEST.PROPERTIES)
+1. [Download the Invoice Import Template Spreadsheet](files/GSEPayablesStandardInvoiceImportTemplate.xlsm?download=1)
+2. [Download the APTEST.PROPERTIES file](files/APTEST.PROPERTIES?download=1)
 3. Open GSEPayablesStandardInvoiceImportTemplate.xlsm (If you are using Mac, then you need to download the templates from ERP Cloud documentation which are compatible with Mac)
 
 Please note that this spreadsheet contains macros and you might get a security warning when you open the file. Select the option to enable the content.
