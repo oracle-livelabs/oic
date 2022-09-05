@@ -272,7 +272,7 @@ After exposing decisions as services, you can use the decision services within y
 	Select *Apply*
 
 6.	From the **Data Objects** Pane create a new Data object **autoApproveDO** and data Type as **boolean**
-		![data-object-approveDO](images/autoApproveDO.png)
+		![data-object-approveDO](images/data-object-approveDO.png)
 
 7.	Select the Decision and open **Data Association**. In the **Output** tab c.	Map the output of the
 		Decision Model task (the Interpretation field)  to this newly created DataObject
