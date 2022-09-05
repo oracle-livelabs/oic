@@ -46,7 +46,7 @@ This lab assumes you have:
 5. Confirm your Connection by clicking ***Test***. You should see the **Connection LL REST Interface was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
 
 ##	Task 2: Create the Invoice Validation Integration
-1. In the left Navigation pane, Click ***Integrations***.
+1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png)

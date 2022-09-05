@@ -4,7 +4,7 @@
 
 This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
 
-Estimated Time: 2 hours
+Estimated Time: 4 hours 30 minutes
 
 ### What Will You Learn?
 
