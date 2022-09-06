@@ -1,6 +1,6 @@
 # Provision Process Automation
 
-> **Note:** This step is required **only** if have have not yet provisioned an Process Automation instance. **Ignore** this section if you are using a **Oracle Process Automation for Fusion Applications**
+> **Note:** This step is required **only** if you have not yet provisioned a Process Automation instance. **Ignore** this section if you are using **Oracle Process Automation for Fusion Applications**
 
 ## Introduction
 

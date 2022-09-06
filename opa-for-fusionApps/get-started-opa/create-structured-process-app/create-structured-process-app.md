@@ -51,7 +51,7 @@ A process application is a container for key components: processes, forms, conne
 		and special characters.
 > **Note:** By default the Identifier Name field gets auto-populated with the title you enter.
 
-Tip: You can modify the default identifier to a name of your choice. For example: TravelRequestApp_1. But keep in mind that it has more restrictions than the title. For example, it supports hyphen (-) and under score (_) but does not support space, and it always begins with an alphabet (A-Z) but supports alphanumeric values also.
+Tip: You can modify the default identifier to a name of your choice. For example: TravelRequestApp\_1. But keep in mind that it has more restrictions than the title. For example, it supports hyphen (-) and under score (_) but does not support space, and it always begins with an alphabet (A-Z) but supports alphanumeric values also.
 
 3.	Enter a meaningful description in the **Description** field.
 
@@ -60,11 +60,11 @@ Tip: You can modify the default identifier to a name of your choice. For example
 		![Create Process Application](images/create-process-application.png)
 
 5.	Click *Create*.
-		A message indicates that it’s being created, then shows a link.
+		A message indicates that it’s being created, and then shows a link.
 
 6.	Click the *Open now* link in the message.
 
-If the link disappeared, select the My Applications tab to filter the list to show only those you created. Click Search icon and enter the first few characters of the application’s name (travel). Once you locate the application, select it to open it.
+If the link disappeared, select the My Applications tab to filter the list to show only those you created. Click the Search icon and enter the first few characters of the application’s name (travel). Once you locate the application, select it to open it.
 
 ## Task 2: Explore Components Tab and Navigation
 
@@ -85,7 +85,7 @@ You return to the Process Applications page. As you design components in your ap
 
 ## Task 3: Create Roles
 
-In Process Automation, you define roles to grant users or groups access to activated applications and to specify what they can do.
+In Process Automation, you define roles to grant users or groups access to activated applications and specify what they can do.
 
 -	Permissions provide increasingly greater access to an application’s resources: Inspect, Read, Use, and Administer.
 -	A role can be either local (to the application) or global (can be used in multiple applications). Note that permissions are specific to an application.
@@ -110,7 +110,7 @@ Let’s create the two roles.
 
 -	Leave **Users** selected in the drop-down field.
 -	In the Search **Search** icon field, enter the first few characters of the user name you signed in with.
--	Select the user. The user gets listed in the page.
+-	Select the user. The user gets listed on the page.
 
 6.	In the **Application Permission Level** options, leave *Use* selected.
 
@@ -150,7 +150,7 @@ The structured process editor opens. Start and end elements are already position
 
 ![Process Editor](images/process-editor.png)
 
-8.	Select the *End event* acitivity and rename it to **Completed**
+8.	Select the *End event* activity and rename it to **Completed**
 
 9.	Select the first swimlane containing the start and end element by clicking the bar on the left of the canvas. Click the *edit* icon to open the **Properties** pane. In the Properties pane, select *Requester* in the **Role** drop-down field.
 
@@ -198,7 +198,7 @@ Notice the following:
 -	When the form is selected (click away from a control), Form and Presentation tabs appear.
 -	When a control is selected, General and Styling tabs for that control appear.
 
-5.	Drag-and-Drop you first field from the right palette, choose an *Input text* field
+5.	Drag-and-Drop your first field from the right palette, choose an *Input text* field
 ![Firstname Field](images/firstname-field.png)
 
 6.	Change the field name to **firstName** and the label to **First Name** . See the automatic binding.
@@ -239,9 +239,9 @@ Define the if condition and Action as follows.
 In essence, this will throw an error if the End date is earlier than the Start date.
 Click *OK* and exit Events.
 
-3.	Select the *Estimated cost of Travel* field, notice that it has a default value of zero. Replace this by a blank value.
+3.	Select the *Estimated cost of Travel* field, notice that it has a default value of zero. Replace this with a blank value.
 
-Select the currency as USD and define the minimum value to 10 and the maximum value to 10000
+Select the currency as USD and define the minimum value as 10 and the maximum value as 10000
 
 ![Estimate Cost Of Travel Properties](images/estimate-cost-of-travel-properties.png)
 
@@ -249,7 +249,7 @@ Select the currency as USD and define the minimum value to 10 and the maximum va
 ![Travel Request Form Preview](images/travel-request-form-preview.png)
 
 ## Task 7: Create Presentations to the forms
-We can now have the same form appearing differently to different role which is convenient when some particular users do not need to see the form in the same way as others. In our case, we will create a **ManagerView** presentation that will show less fields, and it will be used for Manager approval task.
+We can now have the same form appearing differently to a different role which is convenient when some particular users do not need to see the form in the same way as others. In our case, we will create a **ManagerView** presentation that will show fewer fields, and it will be used for Manager approval task.
 
 1.	Navigate to **Travel Request Form**
 
@@ -321,7 +321,7 @@ At runtime, data objects contain information that might be altered as users inte
 
 Process Automation supports data objects that are based on generally simple data types. However, complex business objects can be created indirectly, by either creating a form or importing a JSON schema/sample in a connector.
 
-Let's create a data object explicitly based on existing Travel Request form
+Let's create a data object explicitly based on the existing Travel Request form
 
 1.	Navigate to **Travel Request Process** and then click *Data*
 
@@ -409,7 +409,7 @@ Before you begin, get familiar with the options in the Workspace navigation menu
 	managing roles, notifications, and credentials. Displays to users assigned an administrator role only.
 
 ###	Start an Application Instance
-In this case, pretend you are an end user who wants to request for a Travel. Each time the application is started, a process instance is created.
+In this case, pretend you are an end user who wants to request for Travel. Each time the application is started, a process instance is created.
 
 1.	From the **Start Requests** page, select the *Travel Request Application*.
 		The card’s banner lists the application identifier, and its process and start event titles appear below.
@@ -485,7 +485,7 @@ You need the following service information to configure a connectors
 -	List of parameters to pass to operations
 - Security Type (Basic Auth, OAuth 2.0 etc)
 
-In this scenario you will configure a connector to get list of countries from a REST service and populate the values in **Select** form control as choice list based on a form event. You will modify the **Travel Request Form** to incorporate the changes.
+In this scenario, you will configure a connector to get the list of countries from a REST service and populate the values in **Select** form control as choice list based on a form event. You will modify the **Travel Request Form** to incorporate the changes.
 
 ### Create a Version
 Before starting of with the new changes it is a good practice to version your application.
@@ -500,7 +500,7 @@ You can activate multiple application versions, but an application has only one 
 		(The selected version is listed at the top). The green dot displays next to the default version.
 
 3.	Create a new version by Clicking on *New Version*.
- 		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of application (1.1) is created and now marked as default application
+ 		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of the application (1.1) is created and now marked as default application
 		![New Version Pane](images/new-version-pane.png)
 
 ### Configure Connector
@@ -534,7 +534,7 @@ You can activate multiple application versions, but an application has only one 
 		The final complete path should like **https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET_COUNTRIES_LIST/1.0/countriesList**
 
 8.	Click on the *Response* (there is nothing to add to the request, as we have no
-		parameters to pass). In the **Body Definition** section Cick the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
+		parameters to pass). In the **Body Definition** section Click the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
 
 		```
 		<copy>
@@ -567,7 +567,7 @@ You can activate multiple application versions, but an application has only one 
 9.	Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
 		![Connector Add Resource Get Country Response Type](images/connector-add-resource-get-country-response-type.png)
 
-10.	In the Response Body Definition select Business Type as **countryType** which was created in previous step
+10.	In the Response Body Definition select Business Type as **countryType** which was created in the previous step
 		Select *Apply*. Your **GET** operation is now configured to get Countries from an external REST API
 
 
@@ -602,7 +602,7 @@ You can activate multiple application versions, but an application has only one 
 1.	Select *Activate* and verify that you are version is 1.1 (or whatever version you provided) Check the *Make it default*
 		![Activate Artifacts Milestone-2](images/activate-artifacts-milestone-2.png)
 
->Note: Refer the Task **Activate a Version of the Application** for detail steps.
+>Note: Refer to the Task **Activate a Version of the Application** for detailed steps.
 
 2.	Open the activated Version in the **workspace** by Selecting *Test in Workspace* while in Designer
 
@@ -610,7 +610,7 @@ You can activate multiple application versions, but an application has only one 
 
 Select the *All* tab and notice that all Versions are available.
 
-4.	 Test the new Version of the application and verify that the **country of destination** field now displays countries as dynamic choice list. Complete the whole test cycle repeating the steps as per **Task 12:	Test and Run the Application in Workspace**
+4.	 Test the new version of the application and verify that the **country of destination** field now displays countries as dynamic choice list. Complete the whole test cycle repeating the steps as per **Task 12:	Test and Run the Application in Workspace**
 
 You may now **proceed to the next lab**.
 

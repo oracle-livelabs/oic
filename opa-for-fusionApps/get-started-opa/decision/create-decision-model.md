@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab shows you how to create a Decision Model and configure in a Structured Process
+This lab shows you how to create a Decision Model and configure it in a Structured Process
 
 In the first application, you had to:  
 -	Create a travel request by entering the necessary data, and submit it for approval
@@ -10,7 +10,7 @@ In the first application, you had to:
 
 In the modified example, in addition to the previous steps, you will also need to:
 -	Create a rule that will make an automatic approval for travel requests to India or France IF the amount is  less than
-	1000 USD OR if there is at least 2 weeks advance notice.
+	1000 USD OR if there are at least 2 weeks advance notice.
 -	Activate the Decision Model
 -	Add a step to the process so that it checks with the newly activated Decision Model.
 -	Send some traffic to test the Rules
@@ -41,7 +41,7 @@ This lab assumes you have:
 
 Before starting of with the new changes it is a good practice to version your application.
 
-You can create a new version of an application at any time. The new version retains the same application name (although you can change it later) but has a different version tag, such as 1.1 versus 1.0. Once activated, application versions become different applications.
+You can create a new version of the application at any time. The new version retains the same application name (although you can change it later) but has a different version tag, such as 1.1 versus 1.0. Once activated, application versions become different applications.
 
 You can activate multiple application versions, but an application has only one default version, and that version is displayed by default in Workspace’s Start Requests. When you activate a version, you specify if it's the default version.
 
@@ -51,12 +51,12 @@ You can activate multiple application versions, but an application has only one 
 		The selected version is listed at the top. The green dot displays next to the default version.
 
 3.	Create a new version by Clicking on *New Version*.
- 		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of application (1.2) is created and now marked as default application
+ 		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of the application (1.2) is created and now marked as default application
 		![New Version Pane](images/new-version-pane-1.2.png)
 
 ## Task 2: Modify Webform
 
-You will modify the **Travel Request** web form to accommodate few UI changes such as **Country of Destination** in both Main form and Managers View Presentation.
+You will modify the **Travel Request** web form to accommodate a few UI changes such as **Country of Destination** in both the Main form and Managers View Presentation.
 
 > Note: Make sure you using the newly created version 1.2
 
@@ -65,7 +65,7 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 2.	In the **Default** presentation view, Drag and drop a *Select* component and provide **Name** as *countryOfDestination*
 		![Travel Request Form CountryofDestination](images/travel-request-fom-countryofDestination.png)
 
-Select the **Country of Destination** in Properties pane select *Options Source* as **static** and provide the option Names and Values per below
+Select the **Country of Destination** in the Properties pane select *Options Source* as **static** and provide the option Names and Values per below
 | Option Names | Option Values |
 | --- | --- |
 | Croatia | Croatia |
@@ -76,9 +76,9 @@ Select the **Country of Destination** in Properties pane select *Options Source*
 
 Mark as **Required**
 
-4.	In the **Manager View** presentation , Drag and drop an *Input Text* component from the Basic palette and provide **Name** as *countryOfDestination*. Select the existing binding *countryOfDestination* instead of using newly created binding. *Delete* the newly created binding from the **Data** pane below the properties. You will basically use the existing data object attribute. This is how you can manually bind fields to data attributes. Preview both the Presentations and make sure everything is fine.
+4.	In the **Manager View** presentation , Drag and drop an *Input Text* component from the Basic palette and provide **Name** as *countryOfDestination*. Select the existing binding *countryOfDestination* instead of using the newly created binding. *Delete* the newly created binding from the **Data** pane below the properties. You will use the existing data object attribute. This is how you can manually bind fields to data attributes. Preview both the Presentations and make sure everything is fine.
 
-We don't want Approving manager to modify any specific fields hence make all the fields on the form as *Read Only*
+We don't want the Approving manager to modify any specific fields hence make all the fields on the form as *Read Only*
 
 ## Task 3: Create a Decision Model
 
@@ -142,26 +142,26 @@ Model the decision logic by defining how each decision’s output is derived fro
 
 This will allow us to define the number of days between the **current date** and the **date of Travel**
 
-1.	Drag and drop **Expression** on to Decision Canvas. Name it **DaysBeforeTravel**
+1.	Drag and drop **Expression** onto Decision Canvas. Name it **DaysBeforeTravel**
 
 2.	Connect the **CurrentDate** input data field with the expression **DaysBeforeTravel**. Similary, connect **DateOfTravel** as well. It will make the input fields accessible with the expression definition.
 
-3.	Double Click on the expression component and define expression as below
+3.	Double Click on the expression component and define the expression as below
 **(DateOfTravel - CurrentDate) / duration("P1D" )**
 
-TIP: You can start typing few letters of the input data fields. The expression editor will list all the fields accessible and functions that can be used. Construct the expression as above.
+TIP: You can start typing a few letters of the input data fields. The expression editor will list all the fields accessible and functions that can be used. Construct the expression as above.
 P1D means “in 1 day unit”. We are here calculating the number of days between today and the travel date.
 
 ### Create a Decision Table
 
-1.	Drag and drop **Decision Table** on to Decision Canvas. Name it **AutoApproved**
+1.	Drag and drop **Decision Table** onto Decision Canvas. Name it **AutoApproved**
 
 2.	Connect **TravelAmount** and **CountryOfTravel** input data fields with **AutoApproved** Decision Table
 
 3.	Connect **DaysBeforeTravel** expression component with **AutoApproved** Decision Table
 		![Decision Service Logic-1](images/decision-service-logic-1.png)
 
-4.	Double click the **Decision Table**. You need to create a decision table with following Rules
+4.	Double click the **Decision Table**. You need to create a decision table with the following Rules
 		![Decision Service DT Spec Conditions](images/decision-service-dt-spec-conditions.png)
 
 5.	In the **Enter Expression** provide the **TravelAmount** input data variable
@@ -274,18 +274,18 @@ Select *Apply*
 
 2.	After **Activation** is done you should see a snapshot created and Activation date. Select the **Test in Workspace** which will Navigate to the **Workspace**.
 
-3.	From the **Start Requests** page. Launch the **Travel Request Application** and make sure the version is correct. Do a first test by entering the following values on your form:
-		-	Enter any name  and  email.
+3.	From the **Start Requests** page. Launch the **Travel Request Application** and make sure the version is correct. Do the first test by entering the following values on your form:
+		-	Enter any name and email.
 		-	Enter a Travel amount of 1200 USD
 		-	Enter a travel start date that is less than 15 days later than today
 		-	Choose France as the Country.
 
-4.	Navigate to **My Tasks**. Select **Team Tasks** from the drop down. You should see a approval request waiting for an action to be taken and should not be auto approved as per the decision logic. View the Travel Request information and make sure the **Managers View** is rendered as expected.
+4.	Navigate to **My Tasks**. Select **Team Tasks** from the drop down. You should see an approval request waiting for an action to be taken and should not be auto approved as per the decision logic. View the Travel Request information and make sure the **Managers View** is rendered as expected.
 
 5.	Do a second test by entering the same values on your form, except the dates. This time choose a departure date at more than 15 days from today.
 		Now, your Travel request should be auto approved, because trips for this country and with more than 15 days notice are auto-approved, regardless of the amount.
 
-6. 	Navigate to the **Tracking** and View the Audit Information for both the request. Notice the difference between the execution path and view list of activities executed.
+6. 	Navigate to the **Tracking** and View the Audit Information for both the requests. Notice the difference between the execution path and view the list of activities executed.
 
 **Congratulations!** You have successfully completed this lab.
 
