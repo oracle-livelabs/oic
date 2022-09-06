@@ -58,7 +58,7 @@ You can activate multiple application versions, but an application has only one 
 
 You will modify the **Travel Request** web form to accommodate a few UI changes such as **Country of Destination** in both the Main form and Managers View Presentation.
 
-> Note: Make sure you using the newly created version 1.2
+> **Note:** Make sure you using the newly created version 1.2
 
 1.	Select the *Travel Request Form*
 
@@ -186,7 +186,7 @@ TIP: Explore toolbar actions on the top to add/delete column/row
 12. Similarly, add more rows to define rules per below
 		![Decision Service DT Condition-2](images/decision-service-dt-condition-2.png)
 
-> Note: on the last line, you see that do not need to repeat the countries, you can just type a “-“ (minus) sign. You should see no Errors in your Decision Table. If there are any Select the Error section and fix each of them
+> **Note:** on the last line, you see that do not need to repeat the countries, you can just type a “-“ (minus) sign. You should see no Errors in your Decision Table. If there are any Select the Error section and fix each of them
 
 ##	Task 7:	Test the Decision
 

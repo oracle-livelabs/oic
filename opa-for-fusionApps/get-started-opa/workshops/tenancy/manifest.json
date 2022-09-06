@@ -1,15 +1,14 @@
 {
-    "workshoptitle": "Get Started with Oracle Process Automation",
+    "workshoptitle": "Get Started with Process Automation",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "livelabs-help_oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
-            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
             "filename": "../../introduction/introduction.md"
         },
         {
@@ -18,8 +17,8 @@
             "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Provision an Oracle Process Automation Instance",
-            "description": "Follow these steps to create a new OCI Integration service instance",
+            "title": "Provision a Process Automation Instance",
+            "description": "Follow these steps to create a new OCI Process automation instance",
             "filename": "../../../common/provision-opa/provision.md"
         },
         {
@@ -29,6 +28,7 @@
         },
         {
             "title": "Lab 2: Create a Decision Model",
+            "description": "Lab to create a decision model",
             "filename": "../../decision/create-decision-model.md"
         },
         {

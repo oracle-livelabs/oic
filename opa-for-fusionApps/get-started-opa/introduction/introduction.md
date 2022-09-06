@@ -4,7 +4,7 @@
 
 This workshop shows you how to use Process Automation to rapidly design, automate, and manage business processes.
 
-Estimated Time: 1 hour 30 minutes
+Estimated Time: 160 minutes
 
 ### What Will You Learn?
 

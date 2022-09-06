@@ -4,7 +4,7 @@
 
 This lab shows you how to create a  travel request application from scratch in Process Automation using a Structured Process.
 
-Estimated Lab Time: 90 minutes
+Estimated Time: 90 minutes
 
 ### Background
 
@@ -333,7 +333,7 @@ Let's create a data object explicitly based on the existing Travel Request form
 
 3.	Click on *Create*. Notice that a new Data Object is created in the **Process Data** category. We will use this data object to store travel request form data explicitly
 
-Note: A default process data object with the name TaskOutcomeDataObject is automatically created for the human task outcome when a human task is created. The Edit and Delete links are disabled for this data object.
+> **Note:** A default process data object with the name TaskOutcomeDataObject is automatically created for the human task outcome when a human task is created. The Edit and Delete links are disabled for this data object.
 
 ## Task 10: Configure Data Association
 
