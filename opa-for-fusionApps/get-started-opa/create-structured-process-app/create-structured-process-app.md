@@ -71,7 +71,7 @@ A process application is a container for key components: processes, forms, conne
 Opening a process application displays its components page. Components are design elements of your application, and they’re listed as tabs near the top of the components page.
 
 1.	From the **Components** tabs, click *UIs*.
-![components-tab](images/components-tab.png)
+![Components Tab](images/components-tab.png)
 
 Notice that a 0 appears for each component, since you haven’t created any yet.
 
@@ -102,8 +102,7 @@ Let’s create the two roles.
 2.	In the **Add component pane**, expand *Roles*, and click *New*.
 
 3.	In the **Title** field, enter *Requester*, and click *Create*.
-
-Notice how the role is now listed on the page and the Roles tab shows 1.
+		Notice how the role is now listed on the page and the Roles tab shows.
 
 4.	Click the *Open now* link or select the role from the Roles page to open it.
 
@@ -115,7 +114,7 @@ Notice how the role is now listed on the page and the Roles tab shows 1.
 
 6.	In the **Application Permission Level** options, leave *Use* selected.
 
-![create-roles](images/create-roles.png)
+![Create Roles](images/create-roles.png)
 
 This allows your user to start an application request in Workspace.
 
@@ -135,7 +134,7 @@ Now that we have created the two roles - Requester and Approver, let’s create 
 2.	From the top of the page, click *Add*.
 
 3.	In the Add component pane, expand **Processes**, and click *Structured*.
-		![structured-process](images/structured-process.png)
+		![Structured Process](images/structured-process.png)
 
 4.	Enter *Travel Request Process* in the **Title** field.
 
@@ -149,13 +148,13 @@ The structured process editor opens. Start and end elements are already position
 
 7. Select the *Start* element activity and rename it to **Submit Travel Request**
 
-![process-editor](images/process-editor.png)
+![Process Editor](images/process-editor.png)
 
 8.	Select the *End event* acitivity and rename it to **Completed**
 
 9.	Select the first swimlane containing the start and end element by clicking the bar on the left of the canvas. Click the *edit* icon to open the **Properties** pane. In the Properties pane, select *Requester* in the **Role** drop-down field.
 
-![edit-swimlane](images/edit-swimlane.png)
+![Edit Swimlane](images/edit-swimlane.png)
 Note that the swimlane’s name changes to Requester.
 
 10.	Similarly, edit the second swimlane and select *Approver*
@@ -171,7 +170,7 @@ Notice a line on the branch connecting to *Completed* activity. This indicates t
 
 15. Select the *Resubmit* acitivity and connect with **Approve Request** task
 
-![structured-process-without-implementation.png](images/structured-process-without-implementation.png)
+![Structured Process Without Implementation](images/structured-process-without-implementation.png)
 
 ## Task 5: Create a web form
 
@@ -191,7 +190,7 @@ Notice a line on the branch connecting to *Completed* activity. This indicates t
 
 If you missed the Open now link, click the *expand* arrow next to the **Travel Request Process** at the top, then click the *UIs* tab, and select the new form.
 
-![web-form-designer](images/web-form-designer.png)
+![Web Form Designer](images/web-form-designer.png)
 
 Notice the following:
 -	The palettes in the right pane. You have many more control types and options to choose from.
@@ -200,10 +199,10 @@ Notice the following:
 -	When a control is selected, General and Styling tabs for that control appear.
 
 5.	Drag-and-Drop you first field from the right palette, choose an *Input text* field
-![firstname-field](images/firstname-field.png)
+![Firstname Field](images/firstname-field.png)
 
 6.	Change the field name to **firstName** and the label to **First Name** . See the automatic binding.
-![firstname-field-properties](images/firstname-field-properties.png)
+![Firstname Field Properties](images/firstname-field-properties.png)
 
 7.	Repeat this operation for a **lastName** field of type input text, as well as an **email** field of type email.
 
@@ -214,7 +213,7 @@ Notice the following:
 10.	Add a *Text Area* to the bottom of the Form by drag-and-drop of a Text Area. Name this field **Justification**.
 
 11.	Make the following fields (email, start date, end date and cost of travel) *Required*
-![start-date-required](images/start-date-required.png)
+![Start Date Required](images/start-date-required.png)
 
 ## Task 6: Add dynamic controls to fields via Events
 
@@ -227,7 +226,7 @@ For example, you can introduce the following behaviors into your forms:
 -	Make a REST call on demand, store the call’s response, and use response data in an event action or condition.
 
 1.	Select the *End Date of Travel* field. In the properties pane scorll down to **Events** section. On the left pane, click *Add* to access the drop down field Events. Notice that there are a variety of events that you can choose from, such as on Change or on Submit. Pick *On Change* and then edit this field by clicking on the pen to the right. Provide the name of the event as **OnChangeOfEndDate**
-![start-date-events](images/start-date-events.png)
+![Start Date Events](images/start-date-events.png)
 
 2.	Edit the **OnChangeOfEndDate** to define event conditions
 
@@ -235,7 +234,7 @@ We need a condition such that if End date of travel is earlier than Start date o
 
 Define the if condition and Action as follows.
 
-![end-date-event-condition-error](images/end-date-event-condition-error.png)
+![End Date Event Condition Error](images/end-date-event-condition-error.png)
 
 In essence, this will throw an error if the End date is earlier than the Start date.
 Click *OK* and exit Events.
@@ -244,10 +243,10 @@ Click *OK* and exit Events.
 
 Select the currency as USD and define the minimum value to 10 and the maximum value to 10000
 
-![estimate-cost-of-travel-properties](images/estimate-cost-of-travel-properties.png)
+![Estimate Cost Of Travel Properties](images/estimate-cost-of-travel-properties.png)
 
 4.	Test your web form by Selecting *Preview*. Click *Submit* to see what errors are generated
-![travel-request-form-preview](images/travel-request-form-preview.png)
+![Travel Request Form Preview](images/travel-request-form-preview.png)
 
 ## Task 7: Create Presentations to the forms
 We can now have the same form appearing differently to different role which is convenient when some particular users do not need to see the form in the same way as others. In our case, we will create a **ManagerView** presentation that will show less fields, and it will be used for Manager approval task.
@@ -257,14 +256,14 @@ We can now have the same form appearing differently to different role which is c
 2.	From the main form properties pane, scroll down to **Presentation** section and add a presentation by clicking on *Add*.
 
 3.	In the **Select Presentation Type** select *Clone*. We selected to clone or copy the default presentation
-![select-presentation-type](images/select-presentation-type-1.png)
+![Select Presentation Type](images/select-presentation-type-1.png)
 
 4.	Give it a name such as *ManagerView* and a description. Click *Create*
-![managers-view](images/managers-view.png)
+![Managers View](images/managers-view.png)
 
 5.	Make this presentation more synthetic by removing the first name and email fields, and condensing fields on the same line. When you preview the form, it should look more or less like this (no obligation , you can do what you want):
 
-![managers-view-preview](images/managers-view-preview.png)
+![Managers View Preview](images/managers-view-preview.png)
 
 ## Task 8: Implement the process
 
@@ -272,7 +271,7 @@ We can now have the same form appearing differently to different role which is c
 
 2.	Select *Submit Travel Request*. Click on the *Hamburger* icon and Select *Open Properties*
 
-![submit-travel-request-impl](images/submit-travel-request-impl.png)
+![Submit Travel Request Impl](images/submit-travel-request-impl.png)
 
 3. In the properties pane configure per below
 
@@ -307,12 +306,12 @@ We can now have the same form appearing differently to different role which is c
 | Priority | Normal |
 
 6.	Select the connector from **Approved?** to **Completed** which is the default path. In the properties pane Configure **Name** as *Yes*
-![edit-gateway-yes](images/edit-gateway-yes.png)
+![Edit Gateway Yes](images/edit-gateway-yes.png)
 
 7.	Select the connector from **Approved?** to **Resubmit** which is the conditional path. In the properties pane Configure **Name** as *More Information Required*
 
 Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditional Flow*
-![edit-gateway-reject](images/edit-gateway-reject.png)
+![Edit Gateway Reject](images/edit-gateway-reject.png)
 
 ## Task 9: Define data objects
 
@@ -326,7 +325,7 @@ Let's create a data object explicitly based on existing Travel Request form
 
 1.	Navigate to **Travel Request Process** and then click *Data*
 
-![data-pane](images/data-pane.png)
+![Data Pane](images/data-pane.png)
 
 2.	In the Data pane, click on *+* to Create **Data Object**. Name the Data object as *travelRequestDO* . Select Type as *Business* and Business Object as *Travel Request Form*.
 
@@ -348,7 +347,7 @@ On the output side, after the activity has just finished, it needs output from t
 
 1.	In the **Travel Request Process** Select **Submit Travel Request** task , Click on *hamburger* icon and Select *Open Data Association*
 
-![submit-travel-request-data-association](images/submit-travel-request-da.png)
+![Submit Travel Request Data Association](images/submit-travel-request-da.png)
 
 The left pane displays source objects (Data Objects) in an expandable tree. The right pane displays the payload, or entry parameters the activity needs to perform its function
 
@@ -356,7 +355,7 @@ In the left pane Drag the data object **Input > travelRequestFormArgs** and drop
 
 In the right pane Drag the data object **Process Data > travelReqDO** and drop it in the output field title **New Association**
 
-![submit-travel-request-da-output-mapping](images/submit-travel-request-da-output-mapping.png)
+![Submit Travel Request DA Output Mapping](images/submit-travel-request-da-output-mapping.png)
 
 Click on *Apply*
 
@@ -366,10 +365,10 @@ In the Input tab, Map **Process Data > travelReqDO** to **input > travel request
 
 In the Output tab, Map per below
 **output > taskOutcome** to **Process Data > taskOutcomeDataObject**
-![approve-request-input-da](images/approve-request-input-da.png)
+![Approve Request Input DA](images/approve-request-input-da.png)
 
 **output > travelRequestForm** to **Process Data > travelRequestDO**
-![approve-request-output-da](images/approve-request-output-da.png)
+![Approve Request Output DA](images/approve-request-output-da.png)
 
 Click on *Apply*
 
@@ -383,18 +382,18 @@ Before you activate, note the following about Snapshots and Versions:
 
 So far your implementation artifacts should be per below
 
-![application-artifacts-milestone-1](images/application-artifacts-milestone-1.png)
+![Application Artifacts Milestone-1](images/application-artifacts-milestone-1.png)
 
 1.	Click *Activate* on the top right corner.
 		The Activate version pane appears. Notice that the version tag you specified at creation is shown (1.0).
-		![activate-artifacts-milestone-1](images/activate-artifacts-milestone-1.png)
+		![Activate Artifacts Milestone-1](images/activate-artifacts-milestone-1.png)
 
 2.	Leave the **Make it default** field selected.
 		An application always has a default version. In Workspace, users can choose to see all versions or the default only.		
 
 3.	Click *Activate*.
 		You’re informed that a snapshot of the application is being taken, followed by a message that the application is activated.
-		![activate-artifacts-success-milestone-1](images/activate-artifacts-success-milestone-1.png)
+		![Activate Artifacts Success Milestone-1](images/activate-artifacts-success-milestone-1.png)
 
 4.	Click *Test in Workspace*.
 
@@ -434,7 +433,7 @@ Now put yourself in the role of an approver - in this case, an *Approver* who ge
 
 2.	Click the *Team Tasks* tab.
 		You see tasks assigned with the title and process name you specified. Because they can be assigned to any user assigned to the role, you’ll need to claim a task to complete it.
-		![workspace-approve-task](images/workspace-approve-task.png)
+		![Workspace Approve Task](images/workspace-approve-task.png)
 
 3.	From the Actions column for a task, choose *Claim*. Click *Claim* in the Claim Task pane that
 		appears.
@@ -442,7 +441,7 @@ Now put yourself in the role of an approver - in this case, an *Approver* who ge
 
 4.	Select the **Approver to review request** approval task to open it.
 		The Travel Request form you created is displayed, with the Mangers View presentation shown this time.
-		![workspace-approver-view](images/workspace-approver-view.png)
+		![Workspace Approver View](images/workspace-approver-view.png)
 
 5.	Notice that the fields that are removed for **Managers View**.
 		Expand Comments, enter a comment, and click Post.
@@ -460,11 +459,11 @@ Now step into the role of a process owner, who wants to monitor processes to ens
 
 2.	Select the *Completed* tab.
 		You should see the Travel Application process you just completed with a Completed status.
-		![workspace-tracking-page](images/workspace-tracking-page.png)
+		![Workspace Tracking Page](images/workspace-tracking-page.png)
 
 3.	Select the *Completed* process.
 		A page for viewing the process history is displayed.
-		![workspace-tracking-audit-page](images/workspace-tracking-audit-page.png)
+		![Workspace Tracking Audit Page](images/workspace-tracking-audit-page.png)
 -	Expand the Audit section and notice each element in the structured process listed: Submit Travel
 	Request, Approve Request, Approved Gateway and Complete.
 -	Click the View Input and output links to view the form entry data (payload).
@@ -503,7 +502,7 @@ You can activate multiple application versions, but an application has only one 
 
 3.	Create a new version by Clicking on *New Version*.
  		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of application (1.1) is created and now marked as default application
-		![new-version-pane](images/new-version-pane.png)
+		![New Version Pane](images/new-version-pane.png)
 
 ### Configure Connector
 
@@ -522,21 +521,21 @@ You can activate multiple application versions, but an application has only one 
 3.	Select the **CountryConnector**
 
 4.	Add a Resource named **country**. Leave the resource path empty
-		![connector-add-resource-get-country](images/connector-add-resource-get-country.png)
+		![Connector Add Resource Get Country](images/connector-add-resource-get-country.png)
 
 5.	Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a 	
 		*GET*, with the name **getCountry**
-		![connector-add-operation-get-country](images/connector-add-operation-get-country.png)
+		![Connector Add Operation Get Country](images/connector-add-operation-get-country.png)
 
 6.	Select the operation created which will transition to the operation specific configuration. You
 		will configure Request and Response message
 
 7.	Configure the operation path as *countriesList*
-		![connector-add-resource-get-country-path](images/connector-add-resource-get-country-path.png)
+		![Connector Add Resource Get Country Path](images/connector-add-resource-get-country-path.png)
 		The final complete path should like **https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET_COUNTRIES_LIST/1.0/countriesList**
 
-8.	Click on the *Response* (there is nothing to add to the request, as we have no parameters to
-		pass). In the **Body Definition** section Cick the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
+8.	Click on the *Response* (there is nothing to add to the request, as we have no
+		parameters to pass). In the **Body Definition** section Cick the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
 
 		```
 		<copy>
@@ -567,7 +566,7 @@ You can activate multiple application versions, but an application has only one 
 		</copy>
 		```
 9.	Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
-		![connector-add-resource-get-country-response-type](images/connector-add-resource-get-country-response-type.png)
+		![Connector Add Resource Get Country Response Type](images/connector-add-resource-get-country-response-type.png)
 
 10.	In the Response Body Definition select Business Type as **countryType** which was created in previous step
 		Select *Apply*. Your **GET** operation is now configured to get Countries from an external REST API
@@ -576,12 +575,12 @@ You can activate multiple application versions, but an application has only one 
 ### Configure Security Type
 
 1.	In the extreme Right pane select *Security*
-		![connector-add-operation-get-country-security](images/connector-add-operation-get-country-security.png)
+		![Connector Add Operation Get Country Security](images/connector-add-operation-get-country-security.png)
 
 2.	Select *Edit* next to **No Security Defined**
 
 3.	Select Security Type as **Basic Auth**. Provide Username as **livelab.user** and Password as **2@4gXz9jdI8q**
-		![connector-add-operation-get-country-security-ba](images/connector-add-operation-get-country-security-ba.png)
+		![Connector Add Operation Get Country Security BA](images/connector-add-operation-get-country-security-ba.png)
 
 4.	Click on *Save*
 
@@ -590,20 +589,20 @@ You can activate multiple application versions, but an application has only one 
 1.	Open the **Travel Request Form**. Make sure the form Presentation is Selected as **Default** instead of Manager View
 
 2.	Drop on the form a new dropdown *Select* field. Select *Connector* as an **Options Source** (on the left properties palette)
-		![travel-request-form-country-of-destination](images/travel-request-form-country-of-destination.png)
+		![Travel Request Form Country Of Destination](images/travel-request-form-country-of-destination.png)
 
 3.	Select the *Connector*, *Resource* and *Operation* with the proper values of the REST connector you have created.
-		![travel-request-form-country-of-destination-connector-request](images/travel-request-form-country-of-destination-connector-request.png)
+		![Travel Request Form Country Of Destination Connector Request](images/travel-request-form-country-of-destination-connector-request.png)
 
 4.	Fill in the Option List as indicated here below, with the value *response.countries*. For the **Label** Binding and
 		**Value** Binding, choose the *name* and *code* fields accordingly. For the Default Value choose *First*
-		![travel-request-form-country-of-destination-connector-response](images/travel-request-form-country-of-destination-connector-response.png)
+		![Travel Request Form Country Of Destination Connector Response](images/travel-request-form-country-of-destination-connector-response.png)
 
 ### Activate the new version of Travel Request Application
 
 1.	Select *Activate* and verify that you are version is 1.1 (or whatever version you provided)
 		Check the *Make it default*
-		![activate-artifacts-milestone-2](images/activate-artifacts-milestone-2.png)
+		![Activate Artifacts Milestone-2](images/activate-artifacts-milestone-2.png)
 
 		Note: Refer the Task **Activate a Version of the Application** for detail steps.
 
@@ -617,6 +616,7 @@ You can activate multiple application versions, but an application has only one 
 4.	 Test the new Version of the application and verify that the **country of destination** field now displays countries as
 		 dynamic choice list. Complete the whole test cycle repeating the steps as per **Task 12:	Test and Run the Application in Workspace**
 
+You may now **proceed to the next lab**.
 
 ## Learn More
 

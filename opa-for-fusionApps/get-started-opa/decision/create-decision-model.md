@@ -52,7 +52,7 @@ You can activate multiple application versions, but an application has only one 
 
 3.	Create a new version by Clicking on *New Version*.
  		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of application (1.2) is created and now marked as default application
-		![new-version-pane](images/new-version-pane-1.2.png)
+		![New Version Pane](images/new-version-pane-1.2.png)
 
 ## Task 2: Modify Webform
 
@@ -64,7 +64,7 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 
 2.	In the **Default** presentation view, Drag and drop a *Select* component and provide **Name** as
 		*countryOfDestination*
-		![travel-request-fom-countryofDestination](images/travel-request-fom-countryofDestination.png)
+		![Travel Request Form CountryofDestination](images/travel-request-fom-countryofDestination.png)
 
 		Select the **Country of Destination** in Properties pane select *Options Source* as **static** and provide
 		the option Names and Values per below
@@ -97,7 +97,7 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 1.	In Process Automation, decisions are created in the graph view. In the graph view, you can create decision requirement diagrams (DRD), in accordance with DMN standards, to visually represent your decisions.
 
 2.	Process Automation currently supports one DRD per decision. The following table lists all the available DRD components, which you can use to create your decision.
-		![decision-elements-drd](images/decision-elements-drd.png)
+		![Decision Elements DRD](images/decision-elements-drd.png)
 
 3.	The graph view is divided into the following areas:
 -	Toolbar : The decision toolbar provides quick access controls to manage the decision canvas.
@@ -105,7 +105,7 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 					decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
 -	Diagram palette: From the diagram palette, drag and drop DRD components onto the canvas to use them in your
 									diagram.
-![decision-service-canvas](images/decision-service-canvas.png)
+![Decision Service Canvas](images/decision-service-canvas.png)
 
 ##	Task 5:	Create the Input Data Fields
 
@@ -117,7 +117,7 @@ You will create all the required input data fields to be passed to decision logi
 		**TravelAmount**.
 		![decision-service-travel-amount](images/decision-service-travel-amount.png)
 		Double click the *TravelAmount* field which brings up the **Input Properties** pane. Select the *mode* (type) as **number** and *Allowed Values* as **value**
-		![decision-service-travel-amount-edit](images/decision-service-travel-amount-edit.png)
+		![Decision Service Travel Amount Edit](images/decision-service-travel-amount-edit.png)
 
 2.	Similarly, create other fields per below
 
@@ -127,7 +127,7 @@ You will create all the required input data fields to be passed to decision logi
 | DateOfTravel | Date and Time | value|
 | CountryOfTravel | Text | value|
 
-![decision-service-input-data-fields](images/decision-service-input-data-fields.png)
+![Decision Service Input Data Fields](images/decision-service-input-data-fields.png)
 
 ##	Task 6:	Create the Decision Logic
 
@@ -166,21 +166,21 @@ This will allow us to define the number of days between the **current date** and
 2.	Connect **TravelAmount** and **CountryOfTravel** input data fields with **AutoApproved** Decision Table
 
 3.	Connect **DaysBeforeTravel** expression component with **AutoApproved** Decision Table
-		![decision-service-logic-1](images/decision-service-logic-1.png)
+		![Decision Service Logic-1](images/decision-service-logic-1.png)
 
 4.	Double click the **Decision Table**. You need to create a decision table with following Rules
-		![decision-service-dt-spec-conditions](images/decision-service-dt-spec-conditions.png)
+		![Decision Service DT Spec Conditions](images/decision-service-dt-spec-conditions.png)
 
 5.	In the **Enter Expression** provide the **TravelAmount** input data variable
 
 6.	Select the **TravelAmount** and add another column. In the newly added column **Enter Expression**
 		provide the **Country of Travel** data variable. In the Enter Allowed Values Select the **Auto** icon which brings up the Decision Table Input dialog.
 		TIP: Explore toolbar actions on the top to add/delete column/row
-		![decision-service-dt-countryOfTravel](images/decision-service-dt-countryOfTravel.png)
+		![Decision Service DT CountryOfTravel](images/decision-service-dt-countryOfTravel.png)
 
 7.	In the **Decision Table Input** dialog provide **Mode** as *Text*, **Allowed Values** to be
 		*list of Values*. Add values France and India. You will create rules for only 2 countries.
-		![decision-service-dt-countryOfTravel-allowedValues](images/decision-service-dt-countryOfTravel-allowedValues.png)
+		![Decision Service DT CountryOfTravel AllowedValues](images/decision-service-dt-countryOfTravel-allowedValues.png)
 
 8.	Add another column next to **CountryOfTravel** and Select data Variable **DaysBeforeTravel**. Leave
 		allowed values as empty.
@@ -189,13 +189,13 @@ This will allow us to define the number of days between the **current date** and
 		**True or False**
 
 10.	Click the *"U"* on the top left corner  and change the Hit policy to **First**
-		![decision-service-dt-hitpolicy](images/decision-service-dt-hitpolicy.png)
+		![Decision Service DT Hitpolicy](images/decision-service-dt-hitpolicy.png)
 
 11. Create a new Rule by adding a row. Provide the values per below
-		![decision-service-dt-condition-1](images/decision-service-dt-condition-1.png)
+		![Decision Service DT Condition-1](images/decision-service-dt-condition-1.png)
 
 12. Similarly, add more rows to define rules per below
-		![decision-service-dt-condition-2](images/decision-service-dt-condition-2.png)
+		![Decision Service DT Condition-2](images/decision-service-dt-condition-2.png)
 
 > Note: on the last line, you see that do not need to repeat the countries, you can just type a “-“ (minus) sign. You should see no Errors in your Decision Table. If there are any Select the Error section and fix each of them
 
@@ -210,7 +210,7 @@ After creating the decisions and supporting decisions within your decision model
 		Enter a date interval of more than 15 days
 	-	Enter an amount of 1200 USD
 	-	Enter India as a country
-	![decision-service-dt-test](images/decision-service-dt-test.png)
+	![Decision Service DT Test](images/decision-service-dt-test.png)
 
 2.	Click on *Start Test* and evaluate your result. Check for a couple of conditions and make sure the
 		result is as per the rules defined in the decision table
@@ -227,7 +227,7 @@ To use the decision you created for your application, you must add at least one 
 		pane
 
 3.	Enter a name for the decision service **TravelDecisionService** and click *OK*
-		![decision-service-expose-api](images/decision-service-expose-api.png)
+		![Decision Service Expose API](images/decision-service-expose-api.png)
 		The new service appears in the pane with two fields - Output Decisions and Input Data
 
 4.	Click the *Output Decisions* field to select the output decision **AutoApproved** . This is the value
@@ -235,7 +235,7 @@ To use the decision you created for your application, you must add at least one 
 
 5.	Click the *Input Data* field to select the input data to expose through the service. You can add
 		multiple values for the input data and the output decision.
-		![decision-service-configure-inputNoutput](images/decision-service-configure-inputNoutput.png)
+		![Decision Service Configure Input and output](images/decision-service-configure-inputNoutput.png)
 
 6.	Close the **Services pane**
 
@@ -249,7 +249,7 @@ After exposing decisions as services, you can use the decision services within y
 
 2.	In the BPMN palette, expand **Decision Service**. All the available decision services are listed under
 		it. Note that only when you have one or more decision services created for your decision, you can see Decision Service in the BPMN palette. Otherwise, it won't be visible.
-		![travel-request-process-add-decision](images/travel-request-process-add-decision.png)
+		![Travel Request Process Add Decision](images/travel-request-process-add-decision.png)
 
 3.	Change the name of Decision model to *Auto Approve Decision* Decision
 
@@ -258,7 +258,7 @@ After exposing decisions as services, you can use the decision services within y
 		-	Add the proper  connectors so that your initial start task flows to the decision task, then to the Gateway
 		-	From the gateway, the unconditional branch goes to the Management Approval  task, while the conditional
 			branch goes to **Completed** event. Your process might look like this:
-			![travel-request-process-add-autoapprove-gateway](images/travel-request-process-add-autoapprove-gateway.png)
+			![Travel Request Process Add Autoapprove Gateway](images/travel-request-process-add-autoapprove-gateway.png)
 
 5.	Select the Decision and open **Data Association**. In the Input Mapping Map the fields from
 		*Travel Request* Data Object to input field of Decision Service
@@ -269,15 +269,15 @@ After exposing decisions as services, you can use the decision services within y
 | travelReqDO.countryOfDestination | input.TravelDecisionServiceInput.CountryOfTravel |
 | 'now' | input.TravelDecisionServiceInput.CurrentDate |
 
-	![decsion-service-input-mapping](images/decsion-service-input-mapping.png)
+	![Decision Service Input Mapping](images/decsion-service-input-mapping.png)
 	Select *Apply*
 
 6.	From the **Data Objects** Pane create a new Data object **autoApproveDO** and data Type as **boolean**
-		![data-object-approveDO](images/data-object-approveDO.png)
+		![Data Object ApproveDO](images/data-object-approveDO.png)
 
 7.	Select the Decision and open **Data Association**. In the **Output** tab c.	Map the output of the
 		Decision Model task (the Interpretation field)  to this newly created DataObject
-		![decsion-service-output-mapping](images/decsion-service-output-mapping.png)
+		![Decsion Service Output Mapping](images/decsion-service-output-mapping.png)
 		Select *Apply*
 
 8.	Add the **Gateway** condition. Select the gateway branch that goes to **Completed** event, and edit

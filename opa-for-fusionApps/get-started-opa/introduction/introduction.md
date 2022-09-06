@@ -44,7 +44,7 @@ The service has two environments:
   - **Runtime** (Workspace): for running, monitoring, and managing activated applications
 ### Video Preview
 
-  [Introduction to Process Automation](TBD-Add-AV-Video)
+  [Introduction to Process Automation](youtube:Zy8ojscCD1g)
 
 You may now **proceed to the next lab**.
 

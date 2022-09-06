@@ -28,9 +28,9 @@ If you just created a new Cloud account following the instructions in Getting St
 2.	Click *Create Compartment*
 
 3.	Enter the following details:
--	Name: Enter a name that is unique across all compartments in your tenancy (maximum 100 characters, including letters, numbers, periods, hyphens, and underscores). For example, enter a name such as OCIPACompartment.
--	Description: Enter a description for this compartment.
--	Tags: Enter tags to organize and list resources based on your business needs
+	-	Name: Enter a name that is unique across all compartments in your tenancy (maximum 100 characters, including letters, numbers, periods, hyphens, and underscores). For example, enter a name such as OCIPACompartment.
+	-	Description: Enter a description for this compartment.
+	-	Tags: Enter tags to organize and list resources based on your business needs
 
 4.	Click *Create Compartment*
 
