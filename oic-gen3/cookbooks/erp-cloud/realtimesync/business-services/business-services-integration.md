@@ -31,21 +31,7 @@ This lab assumes you have:
 
 * All previous labs successfully completed.
 
-## Task 1: Create Rest Adapter Connection
-
-1. Starting at the Oracle Integration **Home** page, select ***Design***, then ***Connections*** from the left Navigation pane.
-2. Click ***Create***, then select the ***REST*** Adapter and click ***Select***.
-3. From the **Create Connection** dialog, **Name** your connection ***LL REST Interface*** and Select **Role** as ***Trigger*** , leave the rest of the configurations as defaulted. Click ***Create***.  
-**Note**: If you get an error that the identifier already exists, change the Connection Name by suffixing username or so and remember this name for later use in the workshop.
-4. Enter the following configurations in the **REST Connection**
-
-| Field                   | Value                                                 |
-|-------------------------|-------------------------------------------------------|
-| Security Policy         | Basic Authentication                                  |
-
-5. Confirm your Connection by clicking ***Test***. You should see the **Connection LL REST Interface was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
-
-##	Task 2: Create the Invoice Validation Integration
+##	Task 1: Create the Invoice Validation Integration
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
@@ -64,31 +50,28 @@ This lab assumes you have:
 **Note**: If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
 6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
-## Task 3: Create the REST Interface Trigger
+## Task 2: Create the REST Interface Trigger
 1. Click the ***+*** sign below **START** in the integration canvas.
 
-2. Begin typing ***LL REST Interface*** in the Search field to find the connection to your REST interface which is created in the previous Task.
+2. Begin typing ***REST Interface*** in the Search field to find the connection to your REST interface which is created in the previous Task.
 
-3. Select the connection named ***LL REST Interface***
+3. Select the connection named ***REST Interface***
 The Configure REST Endpoint wizard appears.
 
-4. Name your endpoint ***createInvoice***.
+4. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?**, enter ***createInvoice***
+     - for the **What does this endpoint do?**, enter ***This endpoint defines the REST interface***
+     - Click ***> (Next Step)***
 
-5.  In the **What does this endpoint do?** field, enter:
-***This endpoint defines the REST interface***
-
-6.  Click ***> (Next Step)***
-
-7.  On the Resource Configuration page, configure the following properties
-    - **What does this operation do?** ***Creates Invoice in ERP Cloud***
-    - **What is the endpoint's relative resource URI:** ***/createInvoice***
-    - **What action do you want to perform on the endpoint?:** select ***POST***
+5.  On the Resource Configuration page,
+    - for the **What does this operation do?**, enter ***Creates Invoice in ERP Cloud***
+    - for the **What is the endpoint's relative resource URI:**, enter ***/createInvoice***
+    - for the **What action do you want to perform on the endpoint?:**, enter select ***POST***
     - Select ***Configure request payload for this endpoint***
     - Select ***Configure this endpoint to receive the response***
+    - Click ***> (Next Step)***
 
-8. Click ***> (Next Step)***
-
-9. On the **Request** Page
+6. On the **Request** Page
     - Select the **Request Payload Format** to ***JSON Sample***
     - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
     - Provide the below JSON and Click ***Ok***
@@ -123,7 +106,7 @@ The Configure REST Endpoint wizard appears.
     - In the **What is the media-type of Request Body?** Select ***JSON***
     - Select ***> (Next Step)***
 
-10. On the **Response** Page
+7. On the **Response** Page,
       - Select the **Request Payload Format** to ***JSON Sample***
       - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
       - Provide the below JSON and Click ***Ok***
@@ -150,26 +133,24 @@ The Configure REST Endpoint wizard appears.
       - In the **What is the media-type of Response Body?** Select ***JSON***
       - Select ***> (Next Step)*** and Click ***Done***
 
-## Task 4: Configure Validate Business Unit
+## Task 3: Configure Validate Business Unit
 1.  Hover over the outgoing arrow for the **createInvoice** activity and click ***+***
 
-2.  Begin typing ***LLDemo_ERP*** Service in the Search field and Select the ERP Cloud Connection
+2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page name your endpoint ***validateBusinessUnit***
+3.  In the **Basic Info** page, name your endpoint ***validateBusinessUnit***. Click ***> (Next Step)***
 
-4.  Click ***> (Next Step)***
+5.  In the **Actions** page, Select ***Query,Create,Update or Delete Information***. Click ***> (Next Step)***
 
-5.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***> (Next Step)***
+6.  On the **Operations** page,
+    - In the **Browse by** list of values, Select ***Business (REST) Resources***
+    - for **Select a Service Application**, Select ***fscmRestApp***
+    - for **Select a Business Resource**, search for ***FinBusinessUnitsLOV*** and select
+    - **Select the operation** as ***getAll*** and click ***> (Next Step)***
 
-6.  On the **Operations** page
-    - In the **Browse by** list of values Select ***Business (REST) Resources***
-    - **Select a Service Application** Select ***fscmRestApp***
-    - **Select a Business Resource** to search for ***FinBusinessUnitsLOV*** and Select the Resources
-    - **Select the operation** as ***getAll*** and Click ***> (Next Step)***
+7.  On the **Summary** page, Select ***Done***
 
-7.  On the **Summary** page Select ***Done***
-
-## Task 5: Define the Data Mapping (validateBusinessUnit)
+## Task 4: Define the Data Mapping (validateBusinessUnit)
 
 A Map action named Map to validateBusinessUnit is automatically created. We'll define this data mapping.
 
@@ -195,8 +176,9 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
 
     | **Source**      | **Target**  |
     | --- | ----------- |
-    | In the expression field enter concat("BusinessUnitName=", /nssrcmpr:execute/nssrcdfl:request-wrapper/nssrcdfl:BusinessUnit) | Query |
+    | concat("BusinessUnitName=", /nssrcmpr:execute/nssrcdfl:request-wrapper/nssrcdfl:BusinessUnit) | Query |
 
+![MapValidateBusinessUnit](images/MapValidateBU.png)
     ```
     Note: The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
 
@@ -205,7 +187,7 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
 
 4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***< (Go back)*** and ***Save*** the Integration Flow.
 
-## Task 6: Check for Business Unit
+## Task 5: Check for Business Unit
 
 Let's check if the Business Unit sent in the Request payload is Valid or not.
 
@@ -240,15 +222,13 @@ Two flow branches appear in the flow:
 
 1.  Hover over the outgoing arrow after **Route1** activity and click ***+***
 
-2.  Begin typing ***LLDemo_ERP*** Service in the Search field and Select the ERP Cloud Connection
+2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page name your endpoint ***createERPInvoice***
+3.  In the **Basic Info** page name your endpoint ***createERPInvoice*** and click ***> (Next Step)***
 
-4.  Click ***> (Next Step)***
+4.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***> (Next Step)***
 
-5.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***> (Next Step)***
-
-6.  In the **Operations** page
+5.  In the **Operations** page
     - In the **Browse by** list of values Select ***Business (REST) Resources***
     - **Select a Service Application** Select ***fscmRestApp***
     - **Select a Business Resource** search for ***Invoices*** and Select the Resources
@@ -256,7 +236,7 @@ Two flow branches appear in the flow:
     - **Select Child Resources** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box. Click ***> (Next Step)***
     - In the **Select Flexfield contexts** Do not Select anything and Click ***> (Next Step)***
 
-7.  In the **Summary** page Select ***Done***
+6.  In the **Summary** page Select ***Done***
 ![createERPInvoice](images/create-erp-invoice.png)
 
 ### *Define the Mapping Map to createERPInvoice*
@@ -395,7 +375,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 4.  Select ***Validate*** and click on ***< (Go back)***
 
-## Task 7: Define Tracking Fields
+## Task 6: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -417,7 +397,7 @@ Your final Integration Flow should look as below
 4. On the Integration canvas, click ***Save***, followed by ***< (Go back)***.
 
 
-## Task 8: Activate the integration
+## Task 7: Activate the integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
 
@@ -427,7 +407,7 @@ Your final Integration Flow should look as below
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Task 9: Formulate Request Payload to Create Invoice
+## Task 8: Formulate Request Payload to Create Invoice
 
 We will be testing the Integration flow with a happy case and fault case by modifying the request payload.
 
@@ -450,7 +430,7 @@ We will be testing the Integration flow with a happy case and fault case by modi
 
     Do not create the Invoice. We will need valid values to formulate the Test Request payload.
 
-## Task 10: Test the Integration Flow
+## Task 9: Test the Integration Flow
 
 We will test the end to end Integration flow using the built-in Test Client. In an ideal scenario, the request would be posted from a Web, Mobile Client and so on.
 
@@ -498,7 +478,7 @@ We will test the end to end Integration flow using the built-in Test Client. In 
   5.  Modify the **Request Payload** with an Invalid Business Unit and Test the Integration Flow. Observe
       the Custom Fault Payload returned and the **Otherwise** condition is executed.
 
-## Task 11: Extend the Usecase (Bonus Lab)
+## Task 10: Extend the Usecase (Bonus Lab)
 
     There are a few hints provided in the Bonus Lab to extend the use case which will Validate the Supplier and Supplier Site. Refer to the Introduction section for High-Level Flow
 

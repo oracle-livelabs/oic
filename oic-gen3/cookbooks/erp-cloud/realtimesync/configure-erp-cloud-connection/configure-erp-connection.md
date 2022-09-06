@@ -67,7 +67,7 @@ Step 2: [Create OAuth Client in IDCS](https://docs.oracle.com/en/cloud/paas/inte
 
 Step 3: [Configure OAuth Security Policy information in ERP Cloud Adapter](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/create-connection.html#GUID-14DB5A84-DC57-46EC-A91C-F4EA3D080023)
 
-##	Task	2: (Exercise) Create an ERP Cloud Adapter Connection
+##	Task	2: Create an ERP Cloud Adapter Connection
 Create a connection with the Oracle ERP Cloud Adapter.
 
 1. Show the left Navigation menu, and click ***Design*** > ***Connections***.

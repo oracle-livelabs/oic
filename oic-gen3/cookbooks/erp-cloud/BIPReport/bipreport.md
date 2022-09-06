@@ -56,31 +56,8 @@ Create a connection with the SOAP Adapter.
 confirmation box that the test was successful.
 6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-##	Task	2: Create REST Interface connection using REST adapter
-Create a connection with the REST Adapter.
 
-1. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
-2. In the *Create Connection* dialog, select the ***REST*** adapter. To find the adapter, enter `REST` in the search field. Click on the highlighted adapter.
-3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
-
-    | **Field**        | **Value**          |       
-    | --- | ----------- |
-    | Name         | REST Interface     |
-    | Role         | Trigger       |
-    | Description  | REST Interface Connection for OIC LiveLabs |
-
-    Keep all other values as default.
-
-4. In the *Configuration* page, enter the following information:
-
-    | **Field**  | **Values** |
-    |---|---|
-    |Security Policy | OAuth 2.0 Or Basic Authentication |
-
-5. Click on ***Test***  and wait until you receive a confirmation box that the test was successful.
-6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
-
-## Task 3: Create the Short BIP Report Integration
+## Task 2: Create the Short BIP Report Integration
 
 1. In the left Navigation pane, click ***Design*** > ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
@@ -97,7 +74,7 @@ Accept all other default values.
 5. Click ***Create***.
 6. Click on Horizontal to change the layout to Horizontal
 
-## Task 4: Create the REST Trigger
+## Task 3: Create the REST Trigger
 
 1. Click the ***+*** sign in the integration canvas.
 Search for the **REST Interface** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
@@ -148,7 +125,7 @@ A new row appears.
 8. Click ***Save*** to persist changes.
 
 
-## Task 5: Get the BIP report
+## Task 4: Get the BIP report
 1. Hover over the outgoing arrow for the ShortBIPReport activity (after first activity) and Click the ***+*** sign in the integration canvas.
 Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
 2. On the **Basic Info** page,
@@ -164,7 +141,7 @@ Search for the **ERP Cloud External Report Service** connection which you have c
 6. If required, click on Zoom out/in to view the complete flow.
 ![GetBIPReport](images/GetBIPReport.png)
 
-## Task 6: Define the Data Mapping
+## Task 5: Define the Data Mapping
 A map action named GetBIPReport is automatically created. We will define this data mapping.
 1. Select the action **Map GetBIPReport** and click on **...** and click on **Edit**
 2. In the Source section, expand **ShortBIPReport** and then expand **Query Parameters**
@@ -188,7 +165,7 @@ A map action named GetBIPReport is automatically created. We will define this da
 ![MapGetBIPReport](images/MapGetBIPReport.png)
 
 
-## Task 7: Write the file
+## Task 6: Write the file
 1. [Download the opaque_schema.xsd](files/opaque_schema.xsd?download=1)
 2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
@@ -210,7 +187,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 8. Click ***Save*** to persist changes
 ![StageFileWrite](images/stagefilewrite.png)
 
-## Task 8: Define the Data Mapping
+## Task 7: Define the Data Mapping
 A map action named StageFileWrite is automatically created. We will define this data mapping.
 1. Select the action **Map StageFileWrite** and click on **...** and click on **Edit**
 2. In the Source section, expand **GetBIPReport Response**, expand **runReportResponse**, expand **runReportReturn**
@@ -221,7 +198,7 @@ A map action named StageFileWrite is automatically created. We will define this 
 6. Click ***< (Go back)***
 7. Click ***Save*** to persist changes.
 
-## Task 9: Read the file from Stage
+## Task 8: Read the file from Stage
 1. [Download the GLCCReport.csv](files/GLCCReport.csv?download=1)
 2. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
@@ -244,7 +221,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 8. Click ***Save*** to persist changes
 ![ReadFileFromStage](images/readfilefromstage.png)
 
-## Task 10: Define the Data Mapping
+## Task 9: Define the Data Mapping
 1. Select the action **Map ShortBIPReport** and click on **...** and click on **Edit**
 2. In the Source section, expand **ReadFileFromStage Response**, expand **Read Response**, expand **Ledger Set**
 3. In the Target section, expand the **ShortBIPReport Response**, expand **Response Wrapper**
@@ -265,7 +242,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 
 
 
-## Task 8: Define Tracking Fields
+## Task 10: Define Tracking Fields
 
 Manage business identifiers that enable you to track fields in messages during runtime.
 
@@ -277,14 +254,14 @@ Manage business identifiers that enable you to track fields in messages during r
 5. Click on ***< (Go back)*** button.
 
 
-## Task 9: Activate the Integration
+## Task 11: Activate the Integration
 1. On the **Integrations** page, click on the ***Activate*** icon of **Short BIP Report** Integration.
 2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Task 11: Run the Integration
+## Task 12: Run the Integration
 Refresh your page after few seconds.
 1. Select **Short BIP Report**,  Click on **...(Actions)** menu and Click on ***Run***
     ![Run Integration](images/run-integration.png)
@@ -297,7 +274,7 @@ Refresh your page after few seconds.
 The track instance page appears. The Integration state should be processing or successful.
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
 
-## Task 12: Congratulations
+## Task 13: Congratulations
 Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
 
 
