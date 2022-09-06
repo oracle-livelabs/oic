@@ -47,11 +47,11 @@ A process application is a container for key components: processes, forms, conne
 
 1.	Click *Create*. The **Create Application** side pane opens.
 
-2.	In the Title field, enter *Travel Request Application*. The title can have spaces and special characters.
+2.	In the Title field, enter *Travel Request Application*. The title can have spaces
+		and special characters.
+> **Note:** By default the Identifier Name field gets auto-populated with the title you enter.
 
-		Note that by default the Identifier Name field gets auto-populated with the title you enter.
-
-		Tip: You can modify the default identifier to a name of your choice. For example: TravelRequestApp_1. But keep in mind that it has more restrictions than the title. For example, it supports hyphen (-) and under score (_) but does not support space, and it always begins with an alphabet (A-Z) but supports alphanumeric values also.
+Tip: You can modify the default identifier to a name of your choice. For example: TravelRequestApp_1. But keep in mind that it has more restrictions than the title. For example, it supports hyphen (-) and under score (_) but does not support space, and it always begins with an alphabet (A-Z) but supports alphanumeric values also.
 
 3.	Enter a meaningful description in the **Description** field.
 
@@ -64,7 +64,7 @@ A process application is a container for key components: processes, forms, conne
 
 6.	Click the *Open now* link in the message.
 
-		If the link disappeared, select the My Applications tab to filter the list to show only those you created. Click Search icon and enter the first few characters of the application’s name (travel). Once you locate the application, select it to open it.
+If the link disappeared, select the My Applications tab to filter the list to show only those you created. Click Search icon and enter the first few characters of the application’s name (travel). Once you locate the application, select it to open it.
 
 ## Task 2: Explore Components Tab and Navigation
 
@@ -333,9 +333,8 @@ Let's create a data object explicitly based on existing Travel Request form
 
 3.	Click on *Create*. Notice that a new Data Object is created in the **Process Data** category. We will use this data object to store travel request form data explicitly
 
-	```
-	Note: A default process data object with the name TaskOutcomeDataObject is automatically created for the human task outcome when a human task is created. The Edit and Delete links are disabled for this data object.
-	```
+Note: A default process data object with the name TaskOutcomeDataObject is automatically created for the human task outcome when a human task is created. The Edit and Delete links are disabled for this data object.
+
 ## Task 10: Configure Data Association
 
 Data association refers to the flow of data within a process. Use the Data Association editor to define input and output for flow elements that need them.
@@ -435,8 +434,8 @@ Now put yourself in the role of an approver - in this case, an *Approver* who ge
 		You see tasks assigned with the title and process name you specified. Because they can be assigned to any user assigned to the role, you’ll need to claim a task to complete it.
 		![Workspace Approve Task](images/workspace-approve-task.png)
 
-3.	From the Actions column for a task, choose *Claim*. Click *Claim* in the Claim Task pane that
-		appears.
+3.	From the Actions column for a task, choose *Claim*. Click *Claim* in the Claim
+		Task pane that appears.
 		Click the *My Tasks* tab and your claimed Travel Request approval task now appears.
 
 4.	Select the **Approver to review request** approval task to open it.
@@ -447,8 +446,8 @@ Now put yourself in the role of an approver - in this case, an *Approver* who ge
 		Expand Comments, enter a comment, and click Post.
 		Click *APPROVE* or *REJECT*.
 
-		A message confirms that the task was approved or rejected. The approval human task is complete.
-		You return to the My Tasks page. The task you just completed is no longer listed.
+A message confirms that the task was approved or rejected. The approval human task is complete.
+You return to the My Tasks page. The task you just completed is no longer listed.
 
 ### Track Your Process
 
@@ -600,21 +599,18 @@ You can activate multiple application versions, but an application has only one 
 
 ### Activate the new version of Travel Request Application
 
-1.	Select *Activate* and verify that you are version is 1.1 (or whatever version you provided)
-		Check the *Make it default*
+1.	Select *Activate* and verify that you are version is 1.1 (or whatever version you provided) Check the *Make it default*
 		![Activate Artifacts Milestone-2](images/activate-artifacts-milestone-2.png)
 
-		Note: Refer the Task **Activate a Version of the Application** for detail steps.
+>Note: Refer the Task **Activate a Version of the Application** for detail steps.
 
 2.	Open the activated Version in the **workspace** by Selecting *Test in Workspace* while in Designer
 
-3.	Navigate to **Start Requests** and make sure you are in **Default Version** tab. Select the *Travel request
-		application* and notice the version is 1.1. You will see only Application versions marked as default.
+3.	Navigate to **Start Requests** and make sure you are in **Default Version** tab. Select the *Travel request application* and notice the version is 1.1. You will see only Application versions marked as default.
 
-		Select the *All* tab and notice that all Versions are available.
+Select the *All* tab and notice that all Versions are available.
 
-4.	 Test the new Version of the application and verify that the **country of destination** field now displays countries as
-		 dynamic choice list. Complete the whole test cycle repeating the steps as per **Task 12:	Test and Run the Application in Workspace**
+4.	 Test the new Version of the application and verify that the **country of destination** field now displays countries as dynamic choice list. Complete the whole test cycle repeating the steps as per **Task 12:	Test and Run the Application in Workspace**
 
 You may now **proceed to the next lab**.
 

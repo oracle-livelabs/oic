@@ -62,27 +62,23 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 
 1.	Select the *Travel Request Form*
 
-2.	In the **Default** presentation view, Drag and drop a *Select* component and provide **Name** as
-		*countryOfDestination*
+2.	In the **Default** presentation view, Drag and drop a *Select* component and provide **Name** as *countryOfDestination*
 		![Travel Request Form CountryofDestination](images/travel-request-fom-countryofDestination.png)
 
-		Select the **Country of Destination** in Properties pane select *Options Source* as **static** and provide
-		the option Names and Values per below
-		| Option Names | Option Values |
-		| --- | --- |
-		| Croatia | Croatia |
-		| France | France |
-		| India |India |
-		| UK | UK |
-		| US |US |
+Select the **Country of Destination** in Properties pane select *Options Source* as **static** and provide the option Names and Values per below
+| Option Names | Option Values |
+| --- | --- |
+| Croatia | Croatia |
+| France | France |
+| India |India |
+| UK | UK |
+| US |US |
 
-		Mark as **Required**
+Mark as **Required**
 
-4.	In the **Manager View** presentation , Drag and drop an *Input Text* component from the Basic palette and
-		provide **Name** as *countryOfDestination*. Select the existing binding *countryOfDestination* instead of using newly created binding. *Delete* the newly created binding from the **Data** pane below the properties. You will basically use the existing data object attribute. This is how you can manually bind fields to data attributes.
-		Preview both the Presentations and make sure everything is fine.
+4.	In the **Manager View** presentation , Drag and drop an *Input Text* component from the Basic palette and provide **Name** as *countryOfDestination*. Select the existing binding *countryOfDestination* instead of using newly created binding. *Delete* the newly created binding from the **Data** pane below the properties. You will basically use the existing data object attribute. This is how you can manually bind fields to data attributes. Preview both the Presentations and make sure everything is fine.
 
-		We don't want Approving manager to modify any specific fields hence make all the fields on the form as *Read Only*
+We don't want Approving manager to modify any specific fields hence make all the fields on the form as *Read Only*
 
 ## Task 3: Create a Decision Model
 
@@ -101,8 +97,7 @@ You will modify the **Travel Request** web form to accommodate few UI changes su
 
 3.	The graph view is divided into the following areas:
 -	Toolbar : The decision toolbar provides quick access controls to manage the decision canvas.
--	Canvas : The decision canvas is the central area where you can create a diagram that represents your
-					decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
+-	Canvas : The decision canvas is the central area where you can create a diagram that represents your decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
 -	Diagram palette: From the diagram palette, drag and drop DRD components onto the canvas to use them in your
 									diagram.
 ![Decision Service Canvas](images/decision-service-canvas.png)
@@ -113,10 +108,9 @@ Input Data fields can be of built-in or custom data types. You can leverage the 
 
 You will create all the required input data fields to be passed to decision logic.
 
-1.	On the **Diagram palette**, select the *Input Data* element and drag it onto the canvas. Name it as
-		**TravelAmount**.
+1.	On the **Diagram palette**, select the *Input Data* element and drag it onto the canvas. Name it as **TravelAmount**.
 		![decision-service-travel-amount](images/decision-service-travel-amount.png)
-		Double click the *TravelAmount* field which brings up the **Input Properties** pane. Select the *mode* (type) as **number** and *Allowed Values* as **value**
+Double click the *TravelAmount* field which brings up the **Input Properties** pane. Select the *mode* (type) as **number** and *Allowed Values* as **value**
 		![Decision Service Travel Amount Edit](images/decision-service-travel-amount-edit.png)
 
 2.	Similarly, create other fields per below
@@ -156,8 +150,8 @@ This will allow us to define the number of days between the **current date** and
 3.	Double Click on the expression component and define expression as below
 		**(DateOfTravel - CurrentDate) / duration("P1D" )**
 
-		TIP: You can start typing few letters of the input data fields. The expression editor will list all the fields accessible and functions that can be used. Construct the expression as above.
-		P1D means “in 1 day unit”. We are here calculating the number of days between today and the travel date.
+TIP: You can start typing few letters of the input data fields. The expression editor will list all the fields accessible and functions that can be used. Construct the expression as above.
+P1D means “in 1 day unit”. We are here calculating the number of days between today and the travel date.
 
 ### Create a Decision Table
 
