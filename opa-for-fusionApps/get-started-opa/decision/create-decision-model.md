@@ -144,11 +144,10 @@ This will allow us to define the number of days between the **current date** and
 
 1.	Drag and drop **Expression** on to Decision Canvas. Name it **DaysBeforeTravel**
 
-2.	Connect the **CurrentDate** input data field with the expression **DaysBeforeTravel**. Similary, connect
-		**DateOfTravel** as well. It will make the input fields accessible with the expression definition.
+2.	Connect the **CurrentDate** input data field with the expression **DaysBeforeTravel**. Similary, connect **DateOfTravel** as well. It will make the input fields accessible with the expression definition.
 
 3.	Double Click on the expression component and define expression as below
-		**(DateOfTravel - CurrentDate) / duration("P1D" )**
+**(DateOfTravel - CurrentDate) / duration("P1D" )**
 
 TIP: You can start typing few letters of the input data fields. The expression editor will list all the fields accessible and functions that can be used. Construct the expression as above.
 P1D means “in 1 day unit”. We are here calculating the number of days between today and the travel date.
@@ -167,20 +166,16 @@ P1D means “in 1 day unit”. We are here calculating the number of days betwee
 
 5.	In the **Enter Expression** provide the **TravelAmount** input data variable
 
-6.	Select the **TravelAmount** and add another column. In the newly added column **Enter Expression**
-		provide the **Country of Travel** data variable. In the Enter Allowed Values Select the **Auto** icon which brings up the Decision Table Input dialog.
-		TIP: Explore toolbar actions on the top to add/delete column/row
+6.	Select the **TravelAmount** and add another column. In the newly added column **Enter Expression** provide the **Country of Travel** data variable. In the Enter Allowed Values Select the **Auto** icon which brings up the Decision Table Input dialog.
+TIP: Explore toolbar actions on the top to add/delete column/row
 		![Decision Service DT CountryOfTravel](images/decision-service-dt-countryOfTravel.png)
 
-7.	In the **Decision Table Input** dialog provide **Mode** as *Text*, **Allowed Values** to be
-		*list of Values*. Add values France and India. You will create rules for only 2 countries.
+7.	In the **Decision Table Input** dialog provide **Mode** as *Text*, **Allowed Values** to be *list of Values*. Add values France and India. You will create rules for only 2 countries.
 		![Decision Service DT CountryOfTravel AllowedValues](images/decision-service-dt-countryOfTravel-allowedValues.png)
 
-8.	Add another column next to **CountryOfTravel** and Select data Variable **DaysBeforeTravel**. Leave
-		allowed values as empty.
+8.	Add another column next to **CountryOfTravel** and Select data Variable **DaysBeforeTravel**. Leave allowed values as empty.
 
-9.	In the **Output** column name it as **AutoApproved**. In the **Enter allowed values** select the mode as
-		**True or False**
+9.	In the **Output** column name it as **AutoApproved**. In the **Enter allowed values** select the mode as **True or False**
 
 10.	Click the *"U"* on the top left corner  and change the Hit policy to **First**
 		![Decision Service DT Hitpolicy](images/decision-service-dt-hitpolicy.png)
@@ -197,8 +192,7 @@ P1D means “in 1 day unit”. We are here calculating the number of days betwee
 
 After creating the decisions and supporting decisions within your decision model, you can verify that your decision model works the way you want by testing your model.
 
-1.	Click *Test* icon in the Right hand side Task pane. In the Test Decision Model page provide test 		
-		values for each of the input data fields.
+1.	Click *Test* icon in the Right hand side Task pane. In the Test Decision Model page provide test values for each of the input data fields.
 		Enter values for all the required field:
 	-	Dates should be entered in the form "2022-08-01" for August 1st, 2022 (without the double quotes). 	
 		Enter a date interval of more than 15 days
@@ -206,8 +200,7 @@ After creating the decisions and supporting decisions within your decision model
 	-	Enter India as a country
 	![Decision Service DT Test](images/decision-service-dt-test.png)
 
-2.	Click on *Start Test* and evaluate your result. Check for a couple of conditions and make sure the
-		result is as per the rules defined in the decision table
+2.	Click on *Start Test* and evaluate your result. Check for a couple of conditions and make sure the result is as per the rules defined in the decision table
 
 ##	Task 8:	Expose Decision as Service
 
@@ -250,12 +243,10 @@ After exposing decisions as services, you can use the decision services within y
 4.	Add an *Exclusive Gateway* to fork between **Auto Approved?** and management approval task
 		-	Drag and drop from the right pane an **Exclusive Gateway**
 		-	Add the proper  connectors so that your initial start task flows to the decision task, then to the Gateway
-		-	From the gateway, the unconditional branch goes to the Management Approval  task, while the conditional
-			branch goes to **Completed** event. Your process might look like this:
+		-	From the gateway, the unconditional branch goes to the Management Approval  task, while the conditional branch goes to **Completed** event. Your process might look like this:
 			![Travel Request Process Add Autoapprove Gateway](images/travel-request-process-add-autoapprove-gateway.png)
 
-5.	Select the Decision and open **Data Association**. In the Input Mapping Map the fields from
-		*Travel Request* Data Object to input field of Decision Service
+5.	Select the Decision and open **Data Association**. In the Input Mapping Map the fields from *Travel Request* Data Object to input field of Decision Service
 | Travel Request Process | Auto Approve Decsion|
 | --------- | -------- |
 | travelReqDO.estimatedCostOfTravel | input.TravelDecisionServiceInput.TravelAmount |
@@ -269,40 +260,32 @@ After exposing decisions as services, you can use the decision services within y
 6.	From the **Data Objects** Pane create a new Data object **autoApproveDO** and data Type as **boolean**
 		![Data Object ApproveDO](images/data-object-approveDO.png)
 
-7.	Select the Decision and open **Data Association**. In the **Output** tab c.	Map the output of the
-		Decision Model task (the Interpretation field)  to this newly created DataObject
+7.	Select the Decision and open **Data Association**. In the **Output** tab c.	Map the output of the Decision Model task (the Interpretation field)  to this newly created DataObject
 		![Decsion Service Output Mapping](images/decsion-service-output-mapping.png)
-		Select *Apply*
+Select *Apply*
 
-8.	Add the **Gateway** condition. Select the gateway branch that goes to **Completed** event, and edit
-		it.	Provide the condition **autoApproveDO==true**
+8.	Add the **Gateway** condition. Select the gateway branch that goes to **Completed** event, and edit it.	Provide the condition **autoApproveDO==true**
 
-9.	The Green check mark at the top indicates there are no validation errors. If you notice any Errors
-		select the Error pane and fix the same
+9.	The Green check mark at the top indicates there are no validation errors. If you notice any Errors select the Error pane and fix the same
 
 ##	Task 10:	Activate and Test the application
 
 1.	Select *Activate*, Mark as **Default** and click on *Activate*
 
-2.	After **Activation** is done you should see a snapshot created and Activation date. Select the
-		**Test in Workspace** which will Navigate to the **Workspace**.
+2.	After **Activation** is done you should see a snapshot created and Activation date. Select the **Test in Workspace** which will Navigate to the **Workspace**.
 
-3.	From the **Start Requests** page. Launch the **Travel Request Application** and make sure the version
-		is correct. Do a first test by entering the following values on your form:
+3.	From the **Start Requests** page. Launch the **Travel Request Application** and make sure the version is correct. Do a first test by entering the following values on your form:
 		-	Enter any name  and  email.
 		-	Enter a Travel amount of 1200 USD
 		-	Enter a travel start date that is less than 15 days later than today
 		-	Choose France as the Country.
 
-4.	Navigate to **My Tasks**. Select **Team Tasks** from the drop down. You should see a approval request
-		waiting for an action to be taken and should not be auto approved as per the decision logic. View the Travel Request information and make sure the **Managers View** is rendered as expected.
+4.	Navigate to **My Tasks**. Select **Team Tasks** from the drop down. You should see a approval request waiting for an action to be taken and should not be auto approved as per the decision logic. View the Travel Request information and make sure the **Managers View** is rendered as expected.
 
-5.	Do a second test by entering the same values on your form, except the dates. This time choose a
-		departure date at more than 15 days from today.
+5.	Do a second test by entering the same values on your form, except the dates. This time choose a departure date at more than 15 days from today.
 		Now, your Travel request should be auto approved, because trips for this country and with more than 15 days notice are auto-approved, regardless of the amount.
 
-6. 	Navigate to the **Tracking** and View the Audit Information for both the request. Notice the
-		difference between the execution path and view list of activities executed.
+6. 	Navigate to the **Tracking** and View the Audit Information for both the request. Notice the difference between the execution path and view list of activities executed.
 
 **Congratulations!** You have successfully completed this lab.
 
