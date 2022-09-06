@@ -17,7 +17,7 @@ In the modified example, in addition to the previous steps, you will also need t
 
 Estimated Time: 60 minutes
 
-### What is Decision Model?
+### What is a Decision Model?
 In business, decisions are everywhere. Should this loan application or document change be approved? Should emergency vehicles be dispatched to this incident? How many bonus shopping points is this shopping cart worth?
 
 Create decisions to automate the decision logic inherent in your business process. As part of creating decisions, define their input, model their logic using simple and complex types, test them, expose them as services, and use them in processes within your application.
@@ -27,8 +27,8 @@ Create decisions to automate the decision logic inherent in your business proces
 In this lab, you will:
 * Create a Decision Model
 * Re-use the Travel Request application created in the previous lab
-* Modify the Travel Approval process so that it leverages your Decision Service for ex: If a Travel is for a
-	particular set of country destinations, and the amount is below a certain threshold, no management approval will be needed
+* Modify the Travel Approval process so that it leverages your Decision Service for ex: If a Travel is for
+	a particular set of country destinations, and the amount is below a certain threshold, no management approval will be needed
 
 ### Prerequisites
 
@@ -134,9 +134,9 @@ You will create all the required input data fields to be passed to decision logi
 Model the decision logic by defining how each decision’s output is derived from its inputs. In Process Automation you have the following notations to model the logic within a decision
 
 -	**Decision Tables**: Decision tables are the notation of choice to model complex logic. Their tabular layout helps you effectively document all the possible conditions and results of a problem.
--	**Expressions**: An expression is a logical notation, defined according to the syntax of FEEL, that evaluates to a single value. It may consist of one or more entities, such as a literal, constant, or variable, interconnected by zero or more operators. In Oracle Cloud Infrastructure Process Automation, you can also use outputs of other decisions or built-in functions to define an expression.
+-	**Expressions**: An expression is a logical notation, defined according to the syntax of FEEL, that evaluates to a single value. It may consist of one or more entities, such as a literal, constant, or variable, interconnected by zero or more operators. In Process Automation, you can also use outputs of other decisions or built-in functions to define an expression.
 -	**If-Then-Else Statements**: An If-Then-Else expression is a logical notation that evaluates a test statement. It executes a primary expression if the test is true and a secondary expression if the test is not true. You can also introduce additional test statements using the Add Else If button.
--	**Functions**:	You can create functions to define specific operations that aren’t available through built-in functions. In Oracle Cloud Infrastructure Process Automation, decisions created using the Function notation return a value only when invoked from another decision.
+-	**Functions**:	You can create functions to define specific operations that aren’t available through built-in functions. In Process Automation, decisions created using the Function notation return a value only when invoked from another decision.
 -	**Contexts**: A context is a collection of one or more key-value pairs with an optional result field. Each pair is called a context entry. The key attribute within a context entry acts as an identifier to its corresponding value attribute.
 -	**Lists**:	A list notation is a vertical list of elements, where each element is an independent logical notation. The output of a list notation contains outputs of all its elements. You can also invoke the output of a particular list element from another decision.
 -	**Relations**:	A relation is a vertical list of similar contexts arranged horizontally. In other words, each row of a relation table is a context and each column consists of context entries, where the column name is the common key attribute for all cell entries under it that act as value attributes of respective contexts (rows).
@@ -210,6 +210,7 @@ After creating the decisions and supporting decisions within your decision model
 		Enter a date interval of more than 15 days
 	-	Enter an amount of 1200 USD
 	-	Enter India as a country
+	![decision-service-dt-test](images/decision-service-dt-test.png)
 
 2.	Click on *Start Test* and evaluate your result. Check for a couple of conditions and make sure the
 		result is as per the rules defined in the decision table

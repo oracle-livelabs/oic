@@ -1,26 +1,25 @@
-# Provision Oracle Process Automation
+# Provision Process Automation
 
-> **Note:** This step is required **only** if have have not yet provisioned an Oracle Process Automation instance. **Ignore** this section if you are using a **Oracle Process Automation for Fusion Applications**
+> **Note:** This step is required **only** if have have not yet provisioned an Process Automation instance. **Ignore** this section if you are using a **Oracle Process Automation for Fusion Applications**
 
 ## Introduction
 
-This lab walks you through the process of provisioning an instance of Oracle Process Automation, assuming you don't already have one available to you. If you do, you can skip this lab and move on to the next one.
+This lab walks you through the process of provisioning an instance of Process Automation, assuming you don't already have one available to you. If you do, you can skip this lab and move on to the next one.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-* Provision Oracle Process Automation Instance
+* Provision Process Automation Instance
 
 ### Prerequisites
 
-This lab assumes you have:
 * This lab requires completion of the Get Started section in the Contents menu on the left.
 
 ### Background
 
-If you just created a new Cloud account following the instructions in Getting Started, you must wait up to 30 minutes before you attempt to create an instance of Oracle Process Automation. (It could take anywhere between 10 and 30 minutes for a new user account to be fully provisioned) If you already have a Cloud account, you don't need to wait. Either way, make sure you've signed in to the Oracle Cloud as an Oracle Identity Cloud Service user before proceeding.
+If you just created a new Cloud account following the instructions in Getting Started, you must wait up to 30 minutes before you attempt to create an instance of Process Automation. (It could take anywhere between 10 and 30 minutes for a new user account to be fully provisioned) If you already have a Cloud account, you don't need to wait. Either way, make sure you've signed in to the Oracle Cloud as an Oracle Identity Cloud Service user before proceeding.
 
 ## Task 1: Create Compartment
 
@@ -35,11 +34,11 @@ If you just created a new Cloud account following the instructions in Getting St
 
 4.	Click *Create Compartment*
 
-## Task 2: Create an Instance of Oracle Process Automation
+## Task 2: Create an Instance of Process Automation
 
-You can provision an Oracle Cloud Infrastructure Process Automation instance in a selected compartment
+You can provision a Process Automation instance in a selected compartment
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you want to create your Oracle Process Automation instance. Once created, instances are visible only in the region in which they were created.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you want to create your Process Automation instance. Once created, instances are visible only in the region in which they were created.
 
 2. On the Oracle Cloud Get Started page, click the menu in the upper left corner to display the services you can provision.
 
@@ -60,7 +59,7 @@ You can provision an Oracle Cloud Infrastructure Process Automation instance in 
 | Description |Enter the description of the instance.|
 | Access Token |Enter the access token. For details on how to obtain the access token, see [Create an Access Token](https://docs.oracle.com/en-us/iaas/process-automation/oci-process-automation/create-access-token-provision-instance.html#GUID-82BCB285-4E96-43E0-B780-368DAFEF7C4E) to Provision an Instance. Note that this field is visible only to non-federated users (IAM users). If you are federated, this field won't be visible, as the access token will be pre-fetched for you.|
 | Shapes |Select the instance shape *Development*|
-| Metering Model |Select a metering model *Execution Pack*|
+| Metering Model |Select a metering model *Execution Pack* **Note: We are selecting this so we can leverage the free tier construct of Process Automation**|
 
 	![Create an instance](./images/ocipa-create-instance.png)
 
@@ -68,7 +67,7 @@ You can provision an Oracle Cloud Infrastructure Process Automation instance in 
 
 ## Task 3: Access the Process Automation Instance from the Infrastructure Console
 
-After you've provisioned a Oracle Cloud Infrastructure Process Automation instance, you can access it from the Oracle Cloud Infrastructure Console.
+After you've provisioned a Process Automation instance, you can access it from the Oracle Cloud Infrastructure Console.
 
 1.	Sign in to the Oracle Cloud Infrastructure Console.
 2.	Open the navigation menu and click Developer Services. Under Application Integration, click Process Automation.

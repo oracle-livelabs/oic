@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab shows you how to create a  travel request application from scratch in Oracle Process Automation using a Structured Process.
+This lab shows you how to create a  travel request application from scratch in Process Automation using a Structured Process.
 
 Estimated Lab Time: 90 minutes
 
@@ -23,17 +23,17 @@ Process applications that you create from scratch in Designer can consist of one
 ### Objectives
 
 In this lab, you will:
-* Create a Travel Application using Structured Process
-* Design Web form for User Interface
-* Use Connector to integrate with external REST service
+* Create a Travel Application using a Structured Process
+* Design a Web-Form based User Interface
+* Use Connectors to integrate with external REST service
 *	Model a decision and formulate multiple conditions
 * Create roles
 * Use workspace to work on assigned Tasks
 
 ### Prerequisites
-You need a web address and sign-in credentials for OCI Process Automation. Note that it is useful to have multiple credentials for testing purposes.
+You will need access to a Process Automation instance. Note that it is useful to have multiple credentials for testing purposes.
 
-1.	Enter the web address for Oracle Cloud Infrastructure Process Automation. Ask your administrator if you don’t have it.
+1.	Enter the web address for Process Automation. Ask your administrator if you don’t have it.
 
 2.	Complete the User Name and Password fields, and click Sign In.
 
@@ -175,10 +175,11 @@ Notice a line on the branch connecting to *Completed* activity. This indicates t
 
 ## Task 5: Create a web form
 
-Use forms for human interaction.
--	Define what users see when they run your process application.
--	Use forms from human tasks or start events.
--	Choose to create a simple form with the quick editor or create an advanced form with the web form editor. If needed, choose the quick editor and later switch to the web form editor.
+- Use forms for human interaction to:
+    - Define what users see when they initiate your process application
+    - Define what approvers see when they receive requests that need their attention or action
+- Process Automation allows you to create a simple form with the quick editor or create an advanced form
+	with the web form editor. If needed, you can choose the quick editor and later switch to the web form editor
 
 1.	Click *Add* at the top of the page.
 
@@ -414,6 +415,7 @@ In this case, pretend you are an end user who wants to request for a Travel. Eac
 
 1.	From the **Start Requests** page, select the *Travel Request Application*.
 		The card’s banner lists the application identifier, and its process and start event titles appear below.
+		![workspace-list-of-apps](images/workspace-list-of-apps.png)
 		The *Travel Request* form you created appears, with the first presentation shown.
 		![workspace-submit-travel-request](images/workspace-submit-travel-request.png)
 
@@ -497,7 +499,7 @@ You can activate multiple application versions, but an application has only one 
 1.	In Designer, open the **Travel Request Application**
 
 2.	From the breadcrumbs, display the Versions popup by clicking versions after the version indicator
-		The selected version is listed at the top. The green dot displays next to the default version.
+		(The selected version is listed at the top). The green dot displays next to the default version.
 
 3.	Create a new version by Clicking on *New Version*.
  		In the **New Version** pane accept the default Version Tag and Click on *Create*. A new version of application (1.1) is created and now marked as default application
@@ -535,6 +537,7 @@ You can activate multiple application versions, but an application has only one 
 
 8.	Click on the *Response* (there is nothing to add to the request, as we have no parameters to
 		pass). In the **Body Definition** section Cick the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
+
 		```
 		<copy>
 			{
@@ -563,7 +566,6 @@ You can activate multiple application versions, but an application has only one 
 			 }
 		</copy>
 		```
-
 9.	Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
 		![connector-add-resource-get-country-response-type](images/connector-add-resource-get-country-response-type.png)
 
