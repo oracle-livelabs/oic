@@ -73,6 +73,7 @@ Select the **Country of Destination** in the Properties pane select *Options Sou
 | India |India |
 | UK | UK |
 | US |US |
+{: title="Option List Values"}
 
 Mark as **Required**
 
@@ -120,6 +121,7 @@ Double click the *TravelAmount* field which brings up the **Input Properties** p
 | CurrentDate | Date and Time | value|
 | DateOfTravel | Date and Time | value|
 | CountryOfTravel | Text | value|
+{: title="Input Data Fields"}
 
 ![Decision Service Input Data Fields](images/decision-service-input-data-fields.png)
 
@@ -251,8 +253,9 @@ After exposing decisions as services, you can use the decision services within y
 | --------- | -------- |
 | travelReqDO.estimatedCostOfTravel | input.TravelDecisionServiceInput.TravelAmount |
 | travelReqDO.startDateOfTravel | input.TravelDecisionServiceInput.DateOfTravel |
-| travelReqDO.countryOfDestination | input.TravelDecisionServiceInput.CountryOfTravel |
+| travelReqDO.countryOfDestination | input.TravelDecisionServiceInput.CountryOfTravel|
 | 'now' | input.TravelDecisionServiceInput.CurrentDate |
+{: title="Decision Component input mapping"}
 
 	![Decision Service Input Mapping](images/decsion-service-input-mapping.png)
 	Select *Apply*

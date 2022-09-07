@@ -271,7 +271,7 @@ We can now have the same form appearing differently to a different role which is
 
 2.	Select *Submit Travel Request*. Click on the *Hamburger* icon and Select *Open Properties*
 
-![Submit Travel Request Impl](images/submit-travel-request-impl.png)
+![Submit Travel Request Implementation](images/submit-travel-request-impl.png)
 
 3. In the properties pane configure per below
 
@@ -281,6 +281,7 @@ We can now have the same form appearing differently to a different role which is
 | Title| Submit Travel Request |
 | UI | Travel Request Form |
 | Presentation | Default Presentation |
+{: title="Submit Travel Request Task Properties"}
 
 4.	Open the properties of **Approve Request** task. Configure the Properties per below
 
@@ -293,6 +294,7 @@ We can now have the same form appearing differently to a different role which is
 | Presentation | Managers View |
 | Action | APPROVE,REJECT |
 | Priority | Normal |
+{: title="Approve Request Task Properties"}
 
 5.	Open the properties of **Resubmit** task. Configure the Properties per below
 
@@ -304,6 +306,7 @@ We can now have the same form appearing differently to a different role which is
 | Presentation | Default Presentation |
 | Action | SUBMIT |
 | Priority | Normal |
+{: title="Resubmit Task Properties"}
 
 6.	Select the connector from **Approved?** to **Completed** which is the default path. In the properties pane Configure **Name** as *Yes*
 ![Edit Gateway Yes](images/edit-gateway-yes.png)
@@ -516,6 +519,7 @@ You can activate multiple application versions, but an application has only one 
 | Identifier | CountryConnector |
 | Base URL | https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET_COUNTRIES_LIST/1.0 |
 | Description | Rest Connector to fetch countries and codes |
+{: title="Connector properties configuration"}
 
 3.	Select the **CountryConnector**
 
