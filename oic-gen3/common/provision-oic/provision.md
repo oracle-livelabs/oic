@@ -43,7 +43,7 @@ If you just created a new Cloud account following the instructions in Getting St
 6. Enter the following details, and click **Create**
 | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- |
-| Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
+| Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
 | Version|Lists Version available in this tenancy. Select "Oracle Integration 3"|
 | Edition|Enterprise|
 | Shape|Development|
@@ -59,7 +59,7 @@ If you just created a new Cloud account following the instructions in Getting St
 
 Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure Console to open it.
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 3. At the far right, click the Task menu and select Service Console. A new browser window will open to your Oracle Integration home page.
 	![Oracle Integration Home Page](./images/oic-homepage.png)
@@ -68,7 +68,7 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 
 ## Learn More
 
-* [Provisioning Oracle Integration 3 Instance](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/creating-oracle-integration-instance.html#GUID-930F40E8-5149-4091-9CDA-8E05C8449BA6)
+* [Provisioning Oracle Integration 3 Instance](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/creating-oracle-integration-instance.html#GUID-930F40E8-5149-4091-9CDA-8E05C8449BA6)
 
 
 ## Acknowledgements

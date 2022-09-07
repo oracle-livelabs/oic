@@ -27,7 +27,7 @@ If you select File Server from the navigation pane and it's not yet enabled for 
 
 To enable File Server:
 
-1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click Developer Services. Under Application Integration, click Integration.
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
 3. Select your instance.

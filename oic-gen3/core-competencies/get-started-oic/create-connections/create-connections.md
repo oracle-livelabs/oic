@@ -25,7 +25,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
 1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
 
-2. In the *Create Connection - Select Adapter* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `adw` in the search field. Click on the highlighted adapter and hit **Select**.
+2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `adw` in the search field. Click on the highlighted adapter and hit **Select**.
     ![Create ADW connection](images/create-adw-connection.png)
 
 3. In the *Create Connection* dialog, enter the following information and click **Create**
@@ -56,7 +56,6 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
     |Private Key | `<*.pem file>` |
     |Finger Print | `<api-key-finger-print>` |
 
-    ![Configure ADW connection](images/database-connection-details.png)
 
 5. Click on **Test**, followed by **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 

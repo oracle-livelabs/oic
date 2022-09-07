@@ -40,22 +40,23 @@ We will start by creating a new integration and adding some basic info.
     Accept all other default values.
 
 5. Click **Create**.
-
-6. Click **Save** to apply changes.
+6. Change the Layout to Horizontal.
+![horizontallayout](images/horizontallayout.png)
+7. Click **Save** to apply changes.
 
 
 ## Task 2: Define FTP Invoke Activity
 Add FTP Invoke to integration canvas.
 
-1. Change the Layout to Horizontal from the Toolbar on the top. Hover over the outgoing arrow from the *Scheduled* activity and Click the **+** sign in the integration canvas.
+1. Hover over the outgoing arrow from the *Scheduled* activity and Click the **+** sign in the integration canvas.
 
 2. Select the configured FTP Adapter connection which is created in the previous lab. This invokes the FTP Adapter  Configuration Wizard.
 
-3. On the Basic Info page, for *What do you want to call the endpoint?* element, enter `downloadSalesOrders`. Leave the rest as defaults.
+3. On the **Basic Info** page,
+    - for ***What do you want to call the endpoint?*** element, enter ***downloadSalesOrders***. Leave the rest as defaults.
+    - Click ***> (Next Step)***
 
-4. Click **Next**.
-
-5. On the *Operations* page, Select the following values:
+4. On the **Operations** page, Select the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -67,11 +68,11 @@ Add FTP Invoke to integration canvas.
 
     ![FTP Invoke Operations Page](images/ftp-invoke-operations-page.png)
 
-6. Click **Next**.
+    - Click ***> (Next Step)***
 
-7. On the Summary page, review the configuration and click **Done**.
+5. On the **Summary** page, review the configuration and click **Done**.
 
-8. Click on **Save** to apply your changes.
+6. Click on **Save** to apply your changes.
 
     ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
@@ -88,12 +89,12 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | What do you want to call your endpoint? | `insertSalesOrders`       |
+    | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
 
-3. Click **Next**.
+    - Click ***> (Next Step)***
 
-4. On the *Bulk load from Object Storage to ATP table* page, select the following values:
+3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -107,7 +108,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
-5. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
+4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
 
     ![Edit Copy Format options](images/edit-copy-data-format-options-1.png)
 
@@ -122,13 +123,13 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     Leave the rest of the values as default and Select **Ok**.
 
-6. Click **Next**.
+5. Click ***> (Next Step)***
 
-7. On the Summary page, review the configuration and click **Done**.
+6. On the Summary page, review the configuration and click **Done**.
 
     ![Summary in ADW Wizard](images/adw-wizard-summary.png)
 
-8. Click **Save** to apply changes.
+7. Click ***Save*** to apply changes.
 
 
 ## Task 4: Map data between FTP Invoke and ADW invoke
@@ -165,10 +166,10 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
-4. Click **Go Back**
+4. Click ***< (Go back)***
     ![GoBack](images/mapper-goback-ftp-adw.png)
 
-5. Click **Save** to persist changes.
+5. Click ***Save*** to persist changes.
 
 
 ## Task 5: Define Tracking Fields
@@ -186,7 +187,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click **Business Identifiers icon** to save your changes.
 
-4. On the Integration canvas, click **>(Go Back) button** to go back to the list of integrations page.
+4. On the Integration canvas, click **< (Go back) button** to go back to the list of integrations page.
   ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
@@ -195,7 +196,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the *Activate Integration* dialog, select **Enable Tracing**, followed by **Include Payload** options.
+2. On the *Activate Integration* dialog, select ***Audit*** as tracing level.
 
 3. Click **Activate**.
 
@@ -213,5 +214,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Author** - Subhani Italapuram, Oracle Integration Product Management
+* **Last Updated By/Date** -

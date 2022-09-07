@@ -39,35 +39,27 @@ This lab assumes you have:
 
 Submit an Adhoc run of Scheduled Integration Flow
 
-1. From the **Integrations** page, hover over the Integration Flow and Select **Run** and Click on **Submit Now**.
+1. From the **Integrations** page, hover over the Integration Flow, click on ***...*** (Actions) menu, click on ***Run***
 
     ![Run Scheduled Integration Flow](images/run-integration.png)
 
-2. In the *Submit Now* dialog Select **Submit Now**
 
-    ![Submit Schedule Flow](images/submit-schedule-flow.png)
-
-3. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
+2. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
 
     **Note:** Alternatively, in the Integration navigation pane, Go to **Home page > Observability > Instances**
 
     ![Cofirmation Window](images/submit-confirmation.png)
 
-4.  From the *Instances* page, Click on the Integration Flow.
+3.  From the *Instances* page, Click on the Integration Flow.
 
    ![Open the Integration Instance](images/integration-instance-open.png)
 
     The flow ran successfully if it is displayed with a green line.
 
-    ![Completed integration flow](images/completed-integration-flow.png)
 
-4. Click on the **Activity Stream**.
+4. In the Activity Steam window, click on the different **Message** links to review the flow of request and response messages.
 
-     ![Open Activity Stream](images/open-activity-stream.png)
-
-5. In the Activity Steam window, click on the different **Message** links to review the flow of request and response messages.
-
-6. Click on the **Activity Stream** again to close the activity stream.
+5. Click on the **Activity Stream** again to close the activity stream.
 
 
 ## Task 3: Verify sales orders records in ADW Table
