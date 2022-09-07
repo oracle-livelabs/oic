@@ -539,10 +539,9 @@ You can activate multiple application versions, but an application has only one 
 
 8.	Click on the *Response* (there is nothing to add to the request, as we have no
 		parameters to pass). In the **Body Definition** section Click the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
-
-		```
-		<copy>
-			{
+		
+			```
+			<copy>{
 				 "countries":[
 						{
 							 "name":"Croatia",
@@ -565,8 +564,7 @@ You can activate multiple application versions, but an application has only one 
 							 "code":"US"
 						}
 				 ]
-			 }
-		</copy>
+			 }</copy>
 		```
 9.	Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
 		![Connector Add Resource Get Country Response Type](images/connector-add-resource-get-country-response-type.png)
