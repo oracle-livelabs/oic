@@ -517,7 +517,7 @@ You can activate multiple application versions, but an application has only one 
 | --- | --- |
 | Title | Country Connector |
 | Identifier | CountryConnector |
-| Base URL | https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET_COUNTRIES_LIST/1.0 |
+| Base URL | https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET\_COUNTRIES\_LIST/1.0 |
 | Description | Rest Connector to fetch countries and codes |
 {: title="Connector properties configuration"}
 
@@ -535,7 +535,7 @@ You can activate multiple application versions, but an application has only one 
 
 7.	Configure the operation path as *countriesList*
 		![Connector Add Resource Get Country Path](images/connector-add-resource-get-country-path.png)
-		The final complete path should like **https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET_COUNTRIES_LIST/1.0/countriesList**
+		The final complete path should like **https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/GET\_COUNTRIES\_LIST/1.0/countriesList**
 
 8.	Click on the *Response* (there is nothing to add to the request, as we have no
 		parameters to pass). In the **Body Definition** section Click the *JSON Sample* sign, to define the response. Select *From Sample* and copy paste the below json
