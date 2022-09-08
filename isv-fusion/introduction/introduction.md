@@ -26,7 +26,8 @@ In this workshop, you will learn how to:
   (https://apexapps.oracle.com/pls/apex/f?p=133:180:108906869801297::::wid:3231)
 
 * An Oracle Fusion Apps instance
-* JaaS trail account (https://jaas.8x8.vc)
+* JaaS trail account
+  Go to **https://jaas.8x8.vc** url in browser and Sign up for the trail account.
 * A Chrome browser.
 
 
