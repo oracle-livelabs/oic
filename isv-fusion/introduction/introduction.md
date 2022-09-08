@@ -20,9 +20,11 @@ In this workshop, you will learn how to:
 
 ### What Do You Need?
 
-* An Oracle Cloud Free Tier and Provision OIC/VBCS.
-  [Provision OIC/VBCS]
+* Provision of Oracle Cloud Free Tier with OIC/VBCS.
+
+  Complete until the **Lab 1** in the below workshop.
   (https://apexapps.oracle.com/pls/apex/f?p=133:180:108906869801297::::wid:3231)
+
 * An Oracle Fusion Apps instance
 * JaaS trail account (https://jaas.8x8.vc)
 * A Chrome browser.
