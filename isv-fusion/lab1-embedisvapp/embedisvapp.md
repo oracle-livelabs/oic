@@ -48,6 +48,14 @@ This lab assumes you have:
 
    ![8x8 application within VBCS page](images/Screenshot2.png)
 
+3. Go to **isvfusionwebapp** > **Settings** > **Security**
+
+    a. Uncheck **Require authenticated access**
+    b. Select **Allow embedding in any application domain**.
+    c. Check **Enable implicit grant for Service Connections**.
+
+     ![VBCS Webapplication](images/Screenshot10.png)
+
 3. Click **Preview**.
 
 4. Stage the application. Click **Hamburger icon (Right top corner)** > **Stage**.
@@ -62,7 +70,7 @@ This lab assumes you have:
 
 1. Login to Fusion Application with Administrator role
 
-2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
+2. Click **Home** > **Configuration** > **Sandboxes**
 
 3. Create a Sandbox. Click **Create Sandbox** > **Enter sandbox name (ISVFusionIntegration)**
 
@@ -94,7 +102,7 @@ This lab assumes you have:
 
 1. Login to Fusion Application with Administrator role
 
-2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
+2. Click **Home** > **Configuration** > **Sandboxes**
 
 3. Click **Enter Sandbox** which is created in the Task 4.
 
@@ -134,7 +142,7 @@ You may notice the Start Meet field has been added to the each Service Request R
 
  1. Login to Fusion Application with Administrator role
 
- 2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
+ 2. Click **Home** > **Configuration** > **Sandboxes**
 
  3. Click **Enter Sandbox** which is created in the Task 4.
 
@@ -172,7 +180,7 @@ You may notice the Start Meet field has been added to the each Service Request R
     b. Select **auto** for the **Stretch Content** field
 
     ![Page Editor](images/Screenshot17.png)
-    
+
     c. Click **Apply** then **OK**
 
 You may now **proceed to the next lab**.
