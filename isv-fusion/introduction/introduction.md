@@ -8,7 +8,7 @@ In this workshop, we are going to present how an ISV application (8x8 video conf
 2) Pass the fusion application data to 8x8 application. (Technology used : VBCS , Application Composer)
 3) Get the data from 8x8 to Fusion application. (Technology used : OIC)
 
-Estimated Time: 1 hour 30 minutes
+Estimated Time: 30 minutes
 
 ### What Will You Learn?
 
@@ -26,7 +26,7 @@ In this workshop, you will learn how to:
   (https://apexapps.oracle.com/pls/apex/f?p=133:180:108906869801297::::wid:3231)
 
 * An Oracle Fusion Apps instance
-* JaaS trail account
+* JaaS trail account .
   Go to **https://jaas.8x8.vc** url in browser and Sign up for the trail account.
 * A Chrome browser.
 

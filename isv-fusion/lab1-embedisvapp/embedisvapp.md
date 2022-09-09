@@ -21,7 +21,7 @@ This lab assumes you have:
 
 ## Task 1: Create JaaS account
 
-1. Go to https://jaas.8x8.vc url in browser and Sign up for the trail account.
+1. Go to https://jaas.8x8.vc url in browser and Sign in with trail account created in the previous lab.
 
 2. Click on **Integrate meetings iFrame** under **My Video app**.
 
@@ -96,17 +96,13 @@ This lab assumes you have:
 
 2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
 
-3. Create a Sandbox. Click **Create Sandbox** > **Enter sandbox name (ISVFusionIntegration)**
+3. Click **Enter Sandbox** which is created in the Task 4.
 
-     Select following options (Structure , Application Composer , Page Composer)
+4. Go to **Home** > **Help Dest** > **HR Service Request**
 
-4. Click **Create and Enter**
+5. Go to **Tools** > **Application Composer**
 
-5. Go to **Home** > **Help Dest** > **HR Service Request**
-
-6. Go to **Tools** > **Application Composer**
-
-7. Click **Standard Objects** > **Service Request** > **Actions and Links** > **Actions** > **Create**.
+6. Click **Standard Objects** > **Service Request** > **Actions and Links** > **Actions** > **Create**.
 
   ![Fusion Start Meet link Configuration](images/Screenshot3.png)
 
@@ -118,19 +114,66 @@ This lab assumes you have:
 
     Leave the rest of the values as default and Click **Save**.
 
-6. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
+7. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
 
   ![Fusion Page Layout Configuration](images/Screenshot4.png)
 
-7. Click **Edit icon**
+8. Click **Edit icon**
 
 Add Start Meet - Link from Available fields to Selected fields then Click **Save and Close**.
 
-8. Click **Hamburger Icon > **Help Desk** > **HR Service Request**.
+9. Click **Hamburger Icon > **Help Desk** > **HR Service Request**.
 
 You may notice the Start Meet field has been added to the each Service Request Records.
 
  ![Start Meet link emdeded within Fusion Page](images/Screenshot5.png)
+
+
+ ## Task 6: Embed the VBCS application within the Fusion application page using page composer.
+
+
+ 1. Login to Fusion Application with Administrator role
+
+ 2. Click **System Administration** > **Administration** > **Edit Pages** > **Activate a Sandbox**.
+
+ 3. Click **Enter Sandbox** which is created in the Task 4.
+
+ 4. Go to **Home** > **My Client Groups** > **Profiles**
+
+ 5. Go to **Tools** > **Page Composer** then Click **Structure** tab
+
+  ![Page composer](images/Screenshot11.png)
+
+ 6. Expand the Page Composer editor in the browser. Select **panelGroupLayout:vertical** tag. (Refer the screenshot below)
+
+    Click **+ icon**
+
+    ![Page Editor](images/Screenshot12.png)
+
+ 7. Click **Components** > **Web Page +Add** then Click **Close**
+
+    ![Page Editor](images/Screenshot13.png)
+
+ 8. Right Click on **Web Page** > **Edit** in the Page composer editor
+
+    a. Copy the vbcs web application live url in the **Source** input box . Go to **Style** tab and enter *800px* in the Width     and Height fields
+
+    b. Click **Apply** then **OK**
+
+    ![Page Editor](images/Screenshot14.png)
+
+    ![Page Editor](images/Screenshot15.png)
+
+ 9. Right Click on **showDetailFrame: Web Page** > **Edit** in the Page composer editor
+
+    ![Page Editor](images/Screenshot16.png)
+
+    a. Enter "8x8" in the Text field. then Go to **Advanced** tab.
+    b. Select **auto** for the **Stretch Content** field
+
+    ![Page Editor](images/Screenshot17.png)
+    
+    c. Click **Apply** then **OK**
 
 You may now **proceed to the next lab**.
 
