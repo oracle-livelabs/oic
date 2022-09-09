@@ -1,4 +1,4 @@
-# Introduction to ERP Cloud Integration Design Patterns
+# Introduction to ERP Cloud Integration Design Patterns - Learning purpose only. No action needed
 
 ## Introduction
 
@@ -14,9 +14,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-This lab assumes you have:
 
-* All previous labs completed.
 
 ##	Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities
 
@@ -147,10 +145,11 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Implement Common Patterns Using the ERP Cloud Adapter](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/implement-common-patterns-using-oracle-erp-cloud-adapter.html)
+* [Implement Common Patterns Using the ERP Cloud Adapter] (https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/implement-common-patterns-using-oracle-erp-cloud-adapter.html)
+
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

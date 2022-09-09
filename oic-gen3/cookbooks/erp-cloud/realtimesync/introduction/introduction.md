@@ -4,15 +4,18 @@
 
 This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
 
-Estimated Time: 4 hours 30 minutes
+Estimated Time: 1 hour 30 minutes
 
 ### What Will You Learn?
 
 In this workshop, you will learn how to:
 
+* Creating Free Trial Account
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
+* Enable File Server.
+* Configure File Server and connect with FTP client.
+* Create and configure common connections which are useful for this workshop like File Server, REST and ERP Connection
 * Learn ERP Cloud Integration Design Patterns and Usecases.
-* Configure ERP Cloud Adapter.
 * Create a Real-Time Synchronization scenario using Business Events.
 * Use Business Object to Integrate with ERP Cloud.
 
@@ -23,6 +26,8 @@ In this workshop, you will learn how to:
 
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
+
+[First Glimse - Oracle Integration 3](https://www.youtube.com/watch?v=yW3TEBWkFbg)
 
 ### Leverage the ERP Cloud Adapter in Oracle Integration 3
 
@@ -48,7 +53,6 @@ The Oracle ERP Cloud Adapter provides the following key benefits:
 - Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
 
 ###	Video Preview
-
 [ERP Cloud Integration Patterns](youtube:nKXbh2ZPuMI)
 
 You may now **proceed to the next lab**.
@@ -62,4 +66,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, July 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

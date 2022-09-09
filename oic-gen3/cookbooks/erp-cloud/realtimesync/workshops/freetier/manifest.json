@@ -45,8 +45,12 @@
             "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-            "title": "Lab 9: Business Events Integration",
-            "filename": "../../../business-events/business-events-integration.md"
+          "title": "Lab 9: Business Events Integration",
+          "filename": "../../business-events/business-events-integration.md"
+        },
+        {
+            "title": "Lab 9: Business Services Integration",
+            "filename": "../../business-services/business-services-integration.md"
         },
         {
             "title": "Need Help?",

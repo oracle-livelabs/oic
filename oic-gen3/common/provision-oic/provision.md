@@ -30,11 +30,11 @@ If you just created a new Cloud account following the instructions in Getting St
 
 	![OCI Services](./images/hamburger.png)
 
-3. Open the navigation menu and click Developer Services. Under Application Integration, click Integration
+3. Open the navigation menu and click **Developer Services**. Under **Application Integration**, click **Integration**
 
 	![OCI Developer Services](./images/integration-landing-page.png)
 
-4. From the Compartment list, click through the hierarchy of compartments and select the one in which to create the instance. You may need to expand the + icon to find the compartment to use. Compartments can contain other compartments. It may take several minutes for the new compartment to appear after the policy has been created.
+4. From the **Compartment** list, click through the hierarchy of compartments and select the one in which to create the instance. You may need to expand the + icon to find the compartment to use. Compartments can contain other compartments. It may take several minutes for the new compartment to appear after the policy has been created.
 
 	![OCI Compartments](./images/compartment-expand.png)
 
@@ -45,6 +45,7 @@ If you just created a new Cloud account following the instructions in Getting St
 | --- | --- |
 | Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
 | Version|Lists Version available in this tenancy. Select "Oracle Integration 3"|
+| Consumption Model|Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (Universal Credits)|
 | Edition|Enterprise|
 | Shape|Development|
 | License Type |Select - Subscribe to a new Oracle Integration License|
@@ -53,7 +54,8 @@ If you just created a new Cloud account following the instructions in Getting St
 
 	![OCI Federated User Login](./images/provision-oic-instance-1.png)
 
-7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as Active and you'll receive an email. You are now ready to access your instance.
+7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as **Active** in the State column and you'll receive an email. You are now ready to access your instance.
+Please note that once Instance is created, an instance is visible only in the region in which it was created
 
 ## Task 2: Accessing an Oracle Integration 3 Instance
 
@@ -61,10 +63,12 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
-3. At the far right, click the Task menu and select Service Console. A new browser window will open to your Oracle Integration home page.
+3. At the far right, click the Task menu and select **Service Console**. A new browser window will open to your Oracle Integration home page.
 	![Oracle Integration Home Page](./images/oic-homepage.png)
 
-	You may now **proceed to the next lab**.
+If a message appears that access was denied, or the home page flashes, you don't have access to the Oracle Integration instance. See [Assigning Oracle Integration Roles to Groups](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/assigning-oic-roles-groups.html#GUID-B839F41C-445D-4137-8F2C-BF5CCBEC3D5C)
+
+Please *proceed to the next lab*.
 
 ## Learn More
 
@@ -74,4 +78,4 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

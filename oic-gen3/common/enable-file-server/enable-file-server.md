@@ -20,10 +20,9 @@ This lab assumes you have:
 
 ## Task 1: Enable File Server
 
-To begin using File Server in Oracle Integration 3, it must first be enabled for the Oracle Integration 3 instance in the Oracle Cloud Infrastructure Console. Enabling File Server is a one time action.
+An administrator must enable File Server before an organization can start using it with their Oracle Integration instance. Enabling File Server is a one-time action in the Oracle Cloud Infrastructure Console
 
-If you select File Server from the navigation pane and it's not yet enabled for Oracle Integration 3, the following message appears:
-   ![File Server Enablement](images/file-server-enablement0.png)
+If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
 
 To enable File Server:
 
@@ -36,7 +35,7 @@ To enable File Server:
 
    ![Enable File Server](images/file-server-enablement1a.png)
 
-5. When prompted to confirm enabling File Server, click Enable. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
+5. When prompted to confirm enabling File Server, click **Enable**. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
 
    ![Enable File Server in Progress](images/file-server-enablement2.png)
 
@@ -48,10 +47,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [File Server](https://docs.oracle.com/en/cloud/paas/integration-cloud/file-server/file-server-overview.html)
+* [File Server](https://docs.oracle.com/en/cloud/paas/application-integration/file-server/administer-file-server.html)
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Oracle Integration team, Sep 2022

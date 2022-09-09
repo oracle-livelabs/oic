@@ -5,7 +5,7 @@
 
 This lab will walk you through the steps to create connections for all the services which will be used in the Integration Flow.
 
-Estimated Time: 10 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 In this lab, you will:
@@ -23,7 +23,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
 2. In the *Create Connection* dialog, select the **FTP** adapter to use for this connection. To find the adapter, enter FTP in the search field. Click on the highlighted adapter
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**.  
-**Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
+**Note**: If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
 4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
 | Field                   | Value                                                 |
 |-------------------------|-------------------------------------------------------|
@@ -65,7 +65,8 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration FTP Adatper](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/integration-cloud&id=ICSFT-GUID-59194DED-31DC-4E3D-893C-0064D7CC65A0)
+* [Oracle Integration FTP Adatper](https://docs.oracle.com/en/cloud/paas/application-integration/ftp-adapter/ftp-adapter-capabilities.html)
+* [Oracle Integration REST Adatper](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/rest-adapter-capabilities.html)
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration

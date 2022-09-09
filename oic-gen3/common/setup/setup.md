@@ -23,15 +23,16 @@ Configure File Server settings. This is required as you are using Embedded File 
 2. Select **Settings** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of IP and port number.
 ![File Server Settings page](images/file-server-settings.png)
 **Note**: Ensure the *Authentication Type* is set to **Password or Key**.
-3. Select **Folders** from left Navigation pane.
+3. Under SFTP Server Status, monitor the server's status, and stop or restart as needed
+4. Select **Folders** from left Navigation pane.
 ![Navigation to Folders](images/file-server-files1.png)
-4. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.
-5. Click on **Permissions** on the **Output** Folder
+5. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.
+6. Click on **Permissions** on the **Output** Folder
 ![Workshop Folder structure](images/fs-permissions.png)
 **Note**: You will be using the above Folder structure in the lab.
-10. Click **Add Permissions** and select your user. Click **Add**.
+7. Click **Add Permissions** and select your user. Click **Add**.
 ![Add user to Folder permissions](images/user-permissions-1.png)
-11. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.
+8. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.
 ![Folder permissions](images/user-permissions1-1.png)
 
 ## Task 2: Connect to File Server with FTP Client
@@ -51,6 +52,11 @@ If the permissions are configured correctly, you should be able to list, read, a
 
 
 You may now **proceed to the next lab**.
+
+
+## Learn More
+
+* [Configuring File Server Settings](https://docs.oracle.com/en/cloud/paas/application-integration/file-server/configure-file-server-settings.html)
 
 
 ## Acknowledgements

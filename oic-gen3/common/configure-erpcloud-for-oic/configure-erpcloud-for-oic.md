@@ -82,9 +82,9 @@ You may now **proceed to the next lab**.
 
 
 ## Learn More
-* [Prerequisites for Creating an ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter/prerequisites-creating-connection.html)
+* [Prerequisites for Creating an ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/prerequisites-creating-connection.html#GUID-FEA17A38-60BF-482D-99CD-31DA9E6C9E77)
 * [Using the Oracle ERP Cloud Adapter with Oracle Integration 3
-](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
+](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html#GUID-5ED9E9D5-66F4-4EAA-87D7-75BD405C1E07)
 
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
