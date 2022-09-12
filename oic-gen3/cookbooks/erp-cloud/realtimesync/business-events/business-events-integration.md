@@ -58,7 +58,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***POEvent***
-     - Click ***> (Next Step)***.
+     - Click ***> (Next step)***.
 
 4. On the **Request** page, select the following values:
 
@@ -79,7 +79,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     > **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***> (Next Step)***.
+6. Click ***> (Next step)***.
 7. On the **Summary** page, click ***Done***.
 8. Click ***Save*** to persist changes.
 9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
@@ -89,12 +89,12 @@ Add ERP PO Event trigger to the empty integration canvas.
 Add the FTP Adapter invoke to the integration canvas.
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the **File Server** Connection created in the previous lab.
 This invokes the FTP adapter Configuration Wizard.
-2. On the **Basic Info** page, select the following values and click ***> (Next Step)***.
+2. On the **Basic Info** page, select the following values and click ***> (Next step)***.
   | **Element**        | **Value**          |       
   | --- | ----------- |
   | What do you want to call your endpoint? | `Write2FTP`       |
 
-3. On the **Operation** page, select the following values and click ***> (Next Step)***.
+3. On the **Operation** page, select the following values and click ***> (Next step)***.
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -121,9 +121,9 @@ This invokes the FTP adapter Configuration Wizard.
   }
 </copy>
 ```
-4. Click ***> (Next Step)***.
+4. Click ***> (Next step)***.
 6. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
-7. Click ***> (Next Step)*** and Review the **Summary** page and click on ***Done***
+7. Click ***> (Next step)*** and Review the **Summary** page and click on ***Done***
 8. Click on ***Save***
 
 ## Task 4: Map data between ERP trigger and FTP invoke
