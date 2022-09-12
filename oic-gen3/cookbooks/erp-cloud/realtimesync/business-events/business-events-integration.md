@@ -53,7 +53,7 @@ This lab assumes you have:
 ## Task 2: Define ERP Purchase Order (PO) Event trigger
 Add ERP PO Event trigger to the empty integration canvas.
 
-1. Click the ***+*** sign below **START** in the integration canvas.
+1. Click the ***+*** sign in the integration canvas.
 
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 3. On the **Basic Info** page,
@@ -80,12 +80,9 @@ Add ERP PO Event trigger to the empty integration canvas.
     > **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 6. Click ***> (Next Step)***.
-7. On the **Response page**,
-    - for **Response Type** element, choose ***None***.
-    - Click ***> (Next Step)***.
-8. On the **Summary** page, click ***Done***.
-9. Click ***Save*** to persist changes.
-10. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
+7. On the **Summary** page, click ***Done***.
+8. Click ***Save*** to persist changes.
+9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
 ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
 ## Task 3: Add the FTP Adapter as invoke activity
@@ -109,7 +106,7 @@ This invokes the FTP adapter Configuration Wizard.
 3. On the **Schema page**,
     - For the **Do you want to specify the structure of the contents of the file?**, select as ***Yes***
     - select the ***Sample JSON document*** from the drop-down.
-    - Copy the below json content into a file and save it to your desktop. Name it as ***PurchaseOrder.json***
+    - Copy the below json content into a file and save it on to your desktop. Name it as ***PurchaseOrder.json***
 
 ```
 <copy>
@@ -194,11 +191,10 @@ Manage business identifiers that enable you to track fields in messages during r
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the **Activate Integration** dialog, select ***Audit*** as tracing level.
+2. On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
+![tracinglevel](images/tracinglevel.png)
 
-3. Click ***Activate***.
-
-    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
+The activation will complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
 ## Task 7: Create Purchase Order in ERP Cloud
 Access your ERP Cloud environment.
@@ -235,7 +231,7 @@ Access your ERP Cloud environment.
       | **Field**        | **Value**          |       
       | --- | ----------- |
       | Type | `Goods` |
-      | Description | Remove the existing description and enter the same value used for **Lab 7 > Task 5 > Step 5: Filter Expr for Purchase Order Event**. For example: `Lan Cable <your-initials>`|
+      | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: `Lan Cable <your-initials>`|
       | Category Name | search for Computer Supplies and then select it |
       | Quantity | Enter a valid number, eg. `1` |
       | UOM | `Ea` (Default) |
@@ -275,7 +271,7 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
       ![Find the Integration Instance](images/integration-instance-run.png)
 
-3. Click on your ***PO Header Id*** link to open the corresponding integration instance.
+3. Click on your ***POHeaderId*** link to open the corresponding integration instance.
 
       The flow ran successfully if it is displayed with a green line.
 
@@ -300,11 +296,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 ## Acknowledgements
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - 
+* **Last Updated By/Date** -
