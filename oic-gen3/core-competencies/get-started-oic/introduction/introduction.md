@@ -49,7 +49,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management

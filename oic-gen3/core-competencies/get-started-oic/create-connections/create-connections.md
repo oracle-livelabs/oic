@@ -25,7 +25,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
 1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
 
-2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `adw` in the search field. Click on the highlighted adapter and hit **Select**.
+2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter and hit **Select**.
     ![Create ADW connection](images/create-adw-connection.png)
 
 3. In the *Create Connection* dialog, enter the following information and click **Create**
@@ -85,11 +85,11 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration ADW Adapter](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/integration-cloud&id=ICADW-GUID-06231D46-0B10-4AB2-A515-947B1D9A92BC)
+* [Oracle Integration ADW Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/adw-adapter/oracle-autonomous-data-warehouse-adapter-capabilities.html)
 
-* [Oracle Integration FTP Adatper](https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/integration-cloud&id=ICSFT-GUID-59194DED-31DC-4E3D-893C-0064D7CC65A0)
+* [Oracle Integration FTP Adatper](https://docs.oracle.com/en/cloud/paas/application-integration/ftp-adapter/ftp-adapter-capabilities.html#GUID-59194DED-31DC-4E3D-893C-0064D7CC65A0)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Kishore Katta, July 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

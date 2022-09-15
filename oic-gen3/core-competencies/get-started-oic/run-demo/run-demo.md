@@ -119,9 +119,9 @@ Verify sales orders file archived in OCI Object storage
 
 ## Learn More
 
-* [Activate Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/integrations-user/activate-and-deactivate-integrations.html)
+* [Activate Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/activate-and-deactivate-integrations.html)
 
-* [Monitor Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/integrations-user/monitor-integrations-runtime.html)
+* [Monitor Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/track-integration-instances.html#GUID-46A7C0A0-CBE4-4F1B-9B45-62A5AFA89D74)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration

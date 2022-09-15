@@ -207,9 +207,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Scheduled Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/integrations-user/create-scheduled-integrations.html)
-
-* [Format Options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbdi/index.html)
+* [Getting Started with Oracle Integration](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 
 ## Acknowledgements
