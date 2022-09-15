@@ -45,7 +45,7 @@ This lab assumes you have:
 
     The *Edit Document (Purchase Order)* page is displayed.
 
-8. Under *General* section, in the *Description* field, enter the same value used for *Lab 2 > Task 2 > Step 5: Filter Expr for Purchase Order Event*. For example: `<your-initials>-demo`
+8. Under *General* section, in the *Description* field, enter the same value used for *Lab 2 &gt; Task 2 &gt; Step 5: Filter Expr for Purchase Order Event*. For example: `<your-initials>-demo`
 
     ![Add PO Line](images/enter-po-filter.png)
 
@@ -106,7 +106,7 @@ After the PO is submitted, the initial status becomes *Pending Approval*. The PO
 ## Task 3: Track message flow triggered by the PO Create Event
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
-1. In the Integration navigation pane, click **Home** > **Observability** > **Instances**
+1. In the Integration navigation pane, click **Home** &gt; **Observability** &gt; **Instances**
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Document Description* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 

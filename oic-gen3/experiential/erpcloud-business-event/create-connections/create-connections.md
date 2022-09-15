@@ -19,7 +19,7 @@ This lab assumes you have:
 ## Task 1: Create an Oracle ERP Cloud Adapter connection
 Create a connection with the Oracle ERP Cloud Adapter.
 
-1. Show the left Navigation menu, and click **Integrations** > **Connections**.
+1. Show the left Navigation menu, and click **Integrations** &gt; **Connections**.
 
 2. Click **Create**.
 
@@ -77,7 +77,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
     | **Field**  | **Value** |
     |---|---|
-    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Lab Setup** > **Task 1** > **Step 6**) |
+    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Lab Setup** &gt; **Task 1** &gt; **Step 6**) |
     |Security Policy | **JDBC Over SSL**|
     |Wallet | **Upload wallet file (Zip)** |
     |Wallet Password | `<wallet-password>`|

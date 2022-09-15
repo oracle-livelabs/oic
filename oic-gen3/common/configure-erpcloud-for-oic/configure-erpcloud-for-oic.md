@@ -1,6 +1,6 @@
 # Configure ERP Cloud for Oracle Integration 3
 
-> **Note:** This step is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration 3
+&gt; **Note:** This step is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration 3
 
 ## Introduction
 In this lab you will assign a custom role to an integration service user. This user account will be specified when creating an Oracle ERP Cloud Adapter connection in Oracle Integration 3.
@@ -22,7 +22,7 @@ This lab assumes you have
 
 1. Login to Oracle ERP Cloud
 
-2. Select **Navigator** > **Tools** > **Security Console**.
+2. Select **Navigator** &gt; **Tools** &gt; **Security Console**.
     ![Open Security Console](images/erp-open-security-console.png)
 
 3. In the *Roles* tab, click **Create Role**.

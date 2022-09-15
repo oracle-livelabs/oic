@@ -23,7 +23,7 @@ This lab assumes you have:
 ## Task 1: Initiate a Scheduled Integration Flow
 We will start by creating a new integration and adding some basic info.
 
-1. In the left Navigation pane, click **Design** > **Integrations**.
+1. In the left Navigation pane, click **Design** &gt; **Integrations**.
 2. On the Integrations page, click **Create**.
 3. On the *Create integration* dialog, select **Scheduled Orchestration**, followed by **Create**.
 
@@ -54,7 +54,7 @@ Add FTP Invoke to integration canvas.
 
 3. On the **Basic Info** page,
     - for ***What do you want to call the endpoint?*** element, enter ***downloadSalesOrders***. Leave the rest as defaults.
-    - Click ***> (Next Step)***
+    - Click ***&gt; (Next Step)***
 
 4. On the **Operations** page, Select the following values:
 
@@ -68,7 +68,7 @@ Add FTP Invoke to integration canvas.
 
     ![FTP Invoke Operations Page](images/ftp-invoke-operations-page.png)
 
-    - Click ***> (Next Step)***
+    - Click ***&gt; (Next Step)***
 
 5. On the **Summary** page, review the configuration and click **Done**.
 
@@ -92,7 +92,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
 
-    - Click ***> (Next Step)***
+    - Click ***&gt; (Next Step)***
 
 3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
 
@@ -123,7 +123,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     Leave the rest of the values as default and Select **Ok**.
 
-5. Click ***> (Next Step)***
+5. Click ***&gt; (Next Step)***
 
 6. On the Summary page, review the configuration and click **Done**.
 
@@ -166,7 +166,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
-4. Click ***< (Go back)***
+4. Click ***&lt; (Go back)***
     ![GoBack](images/mapper-goback-ftp-adw.png)
 
 5. Click ***Save*** to persist changes.
@@ -187,7 +187,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 3. Click **Business Identifiers icon** to save your changes.
 
-4. On the Integration canvas, click **< (Go back) button** to go back to the list of integrations page.
+4. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
   ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration

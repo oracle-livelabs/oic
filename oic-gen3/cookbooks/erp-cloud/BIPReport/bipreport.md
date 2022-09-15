@@ -32,7 +32,7 @@ This lab assumes you have:
 ##	Task	1: Create ERP Cloud External Report Service Connection using SOAP adapter
 Create a connection with the SOAP Adapter.
 
-1. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
+1. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
 2. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
 3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
@@ -59,7 +59,7 @@ confirmation box that the test was successful.
 
 ## Task 2: Create the Short BIP Report Integration
 
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 4. In the **Create New Integration** dialog, enter the following information:
@@ -81,19 +81,19 @@ Search for the **REST Interface** connection which you have created in the previ
 2. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***ShortBIPReport***
      - for the **What does this endpoint do?** element, enter ***This endpoint defines the REST interface.***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 3. From the **Resource Configuration** page,
     - for the **What does this operation do?** element, enter ***Retrieves ledgers from the ERP system.***
     - for the **What is the endpoint's relative resource URI?**, enter ***/BIP***
     - for the **What action do you want to perform on the endpoint?**, enter ***GET***
     - Select ***Add and review parameters for this endpoint*** checkbox
     - Select ***Configure this endpoint to receive the response*** checkbox
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 4. From the **Request Parameters** page, in the **Specify Query Parameter section**, click ***Add***
 A new row appears.
     - Enter ***LedgerName*** in the **Name** column and select ***string*** from the **Date Type** column
     - Click ***Add***, Enter ***ReportAbsolutePath*** in the **Name** column and select ***string*** from the **Date Type** column
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 
 5. On the **Response** Page
     - Select the **response payload format** to ***JSON Sample***
@@ -120,7 +120,7 @@ A new row appears.
         ```
     - In the **What is the media-type of Response Body?** Select ***JSON***, It is select by Default. If not, you will have to select it explicitly.
 
-6. Click ***> (Next Step)***
+6. Click ***&gt; (Next Step)***
 7. Review the summary and click ***Done***.
 8. Click ***Save*** to persist changes.
 
@@ -130,16 +130,16 @@ A new row appears.
 Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***GetBIPReport***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 3. On the **Operations** page,
     - for the **Select Operation list** element, enter ***runReport***
-    - Click ***> (Next Step)***.    
+    - Click ***&gt; (Next Step)***.    
 3. On the **Headers** page,
-    - Click ***> (Next Step)***.    
+    - Click ***&gt; (Next Step)***.    
 4. Review the summary and click ***Done***
 5. Click ***Save*** to persist changes
 6. If required, click on Zoom out/in to view the complete flow.
-![GetBIPReport](images/GetBIPReport.png)
+![GetBIPReport](images/getbipreport.png)
 
 ## Task 5: Define the Data Mapping
 A map action named GetBIPReport is automatically created. We will define this data mapping.
@@ -159,10 +159,10 @@ A map action named GetBIPReport is automatically created. We will define this da
     - Enter ***-1*** and click on ***Save***
     - Click on ***Validate***
     A confirmation message appears.
-    - Click ***< (Go back)***
+    - Click ***&lt; (Go back)***
     - Click ***Save*** to persist changes.
 
-![MapGetBIPReport](images/MapGetBIPReport.png)
+![MapGetBIPReport](images/map-getbipreport.png)
 
 
 ## Task 6: Write the file
@@ -171,18 +171,18 @@ A map action named GetBIPReport is automatically created. We will define this da
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Write File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
     - for the **Specify the Output Directory** element, select ***"/tmp"***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 5. On the **Schema Options** page,
       - select ***XML Schema (XSD) document***
-      - Click ***> (Next Step)***.
+      - Click ***&gt; (Next Step)***.
 6. On the **Format Definition** page,
       - click ***+*** and select the ***opaque_schema.xsd*** you downloaded
-      - Click ***> (Next Step)***.
+      - Click ***&gt; (Next Step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
 ![StageFileWrite](images/stagefilewrite.png)
@@ -195,7 +195,7 @@ A map action named StageFileWrite is automatically created. We will define this 
 4. Map the ***reportBytes*** from the source section to the ***Opaque Element*** of target section.
 5. Click on ***Validate***
   - A confirmation message appears.
-6. Click ***< (Go back)***
+6. Click ***&lt; (Go back)***
 7. Click ***Save*** to persist changes.
 
 ## Task 8: Read the file from Stage
@@ -204,19 +204,19 @@ A map action named StageFileWrite is automatically created. We will define this 
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Read Entire File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
     - for the **Specify the Directory** element, select ***"/tmp"***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 5. On the **Schema Options** page,
-      - Click ***> (Next Step)***.
+      - Click ***&gt; (Next Step)***.
 6. On the **Format Definition** page,
       - click ***+*** and select the ***GLCCReport.csv*** you downloaded
       - for the **Enter Record Name**, enter ***Ledger***
       - for the **Enter Record Name**, enter ***LedgerSet***
-      - Click ***> (Next Step)***.
+      - Click ***&gt; (Next Step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
 ![ReadFileFromStage](images/readfilefromstage.png)
@@ -237,7 +237,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 
   - Click on ***Validate***.
      - A confirmation message appears.
-  - Click ***< (Go back)***
+  - Click ***&lt; (Go back)***
   - Click ***Save*** to persist changes.
 
 
@@ -247,11 +247,11 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
-2. From the **Source** section, expand ***execute*** > ***QueryParameters***. Drag the ***LEDGERNAME*** field to the right side section:
+2. From the **Source** section, expand ***execute*** &gt; ***QueryParameters***. Drag the ***LEDGERNAME*** field to the right side section:
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click ***Save***.
 ![completeShortBIPReport](images/completeShortBIPReport.png)
-5. Click on ***< (Go back)*** button.
+5. Click on ***&lt; (Go back)*** button.
 
 
 ## Task 11: Activate the Integration

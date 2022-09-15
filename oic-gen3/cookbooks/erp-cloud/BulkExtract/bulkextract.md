@@ -40,7 +40,7 @@ This lab assumes you have:
 Create a connection with the SOAP Adapter.
 
 1. [Download the erpcbkinterface-onjobcompletion.wsdl](files/erpcbkinterface-onjobcompletion.wsdl?download=1)
-2. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
+2. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
 3. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
 4. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
@@ -71,7 +71,7 @@ confirmation box that the test was successful.
 
 ##	Task	2: Create ERP Cloud Integration Service Connection using SOAP adapter
 Create a connection with the SOAP Adapter.
-1. In the left Navigation pane of OIC, Click ***Design*** > ***Connections*** and Click ***Create***.
+1. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
 2. In the *Create Connection* dialog, select the ***SOAP*** adapter. To find the adapter, enter `SOAP` in the search field. Click on the highlighted adapter.
 3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
@@ -98,7 +98,7 @@ confirmation box that the test was successful.
 
 ## Task 3: Create the ERP Bulk Extract Integration
 
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png =40%x*)
@@ -130,15 +130,15 @@ Accept all other default values.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
      - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 4. From the **Actions** page,
     - select ***Query, Create, Update or Delete Information*** option
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 4. From the **Operations** page,
     - select ***Services*** from the **Browse by** list
     - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
     - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
 ![InitiateExtract](images/initiateextract.png)
@@ -148,7 +148,7 @@ A map action named InitiateExtract is automatically created. We will define this
 1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
 2. In the Target section, expand the ***InitiateExtract Request*** element.
     - Right click on **Job Name** and then click on ***Create Target Node***
-![InitiateExtractMapping1](images/InitiateExtractMapping1.png)
+![InitiateExtractMapping1](images/initiate-extract-mapping1.png)
     - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon. If you find expression editor in the edit mode which means you are in Developer view)
 ![mappingsdeveloperview](images/mappingsdeveloperview.png)   
     - Enter the value given below
@@ -171,10 +171,10 @@ A map action named InitiateExtract is automatically created. We will define this
     ```
     <copy>30</copy
     ```
-![initiateextractMapping](images/initiateextractMapping.png)
+![initiateextractMapping](images/initiate-extract-mapping.png)
 7. Click on ***Validate***
 A confirmation message appears.
-8. Click ***< (Go back)***
+8. Click ***&lt; (Go back)***
 9. Click ***Save*** to persist changes.
 
 ## Task 6: Define Tracking Fields
@@ -186,15 +186,15 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png =20%x*)
 
-2. From the **Source** section, expand ***schedule*** > ***startTime***. Drag the ***startTime*** field to the right side section:
+2. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png =40%x*)
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***< (Go back)*** button.
+3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***&lt; (Go back)*** button.
 
 ## Task 7: Create the ERP Bulk Extract Callback Integration
 
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 4. In the **Create New Integration** dialog, enter the following information:
@@ -222,14 +222,14 @@ Accept all other default values.
 2. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***BulkExtractCallback***
      - for the **What does this endpoint do?** element, enter ***This endpoint defines an ERP Cloud callback.***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 3. From the **Operations** page,
     - select ***onJobCompletion*** from the **Selected Operation**
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 4. From the **Callback Operations** page,
     - select ***No Response*** (It is a Default option. If not, select No Response)
-    - Click ***> (Next Step)***.
-5. From the **Headers** page, keep defaults and Click ***> (Next Step)***
+    - Click ***&gt; (Next Step)***.
+5. From the **Headers** page, keep defaults and Click ***&gt; (Next Step)***
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
 ![callback trigger](images/callbacktrigger.png)
@@ -240,14 +240,14 @@ Accept all other default values.
 The Configure SOAP Endpoint wizard appears.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***DownloadFile***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 4. From the **Operations** page,
     - select ***getDocumentsForFilePrefix*** from the **Operation** list
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 Note: Be careful to select the correct operation as many of them have similiar names.    
 5. From the **Headers** page,
     - select ***Accept attachments in response***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 Note: The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
 If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
 6. Review the summary and click ***Done***.
@@ -286,7 +286,7 @@ The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPRepo
 
 5. Click on ***Validate***
     - A confirmation message appears.
-6. Click ***< (Go back)***
+6. Click ***&lt; (Go back)***
 7. Click ***Save*** to persist changes.
 
 
@@ -297,15 +297,15 @@ The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPRepo
 The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***WriteExtract***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 5. From the **Operations** page,
     - select ***Write File*** from the **Select Operation** list
     - Enter ***/home/users/```<<your oic usernumber>>```*** in the **Output Directory** field
     - Enter ***PayablesExtract.xml*** in the **File Name Pattern** field
-    - Click ***> (Next Step)***.  
+    - Click ***&gt; (Next Step)***.  
 6. From the **Schema** page,
     - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 7. Review the summary and click ***Done***.
 8. Click ***Save*** to persist changes.
 ![writeextract2ftp](images/writeextract2ftp.png)
@@ -319,7 +319,7 @@ A map action named WriteExtract is automatically created. We will define this da
 4. Map the **Content** element in the Source section to the **FileReference** element in the Target section.
 5. Click on ***Validate***
     - A confirmation message appears.
-6. Click ***< (Go back)***
+6. Click ***&lt; (Go back)***
 7. Click ***Save*** to persist changes.
 
 
@@ -328,10 +328,10 @@ A map action named WriteExtract is automatically created. We will define this da
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
-2. From the **Source** section, expand ***onJobCompletion*** > ***requestId***. Drag the ***requestId*** field to the right side section:
+2. From the **Source** section, expand ***onJobCompletion*** &gt; ***requestId***. Drag the ***requestId*** field to the right side section:
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click ***Save***
-5. Click on ***< (Go back)*** button.
+5. Click on ***&lt; (Go back)*** button.
 
 ## Task 14: Activate the ERP Bulk Extract Callback Integration
 1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
@@ -349,7 +349,7 @@ Note: Wait for few seconds and refresh the screen and make sure that your integr
 6. Copy **Metadata URL** and save it in some text file.
 
 ## Task 15: Map the Callback URL in ERP Bulk Extract Integration.
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***ERP Bulk Extract*** to edit the integration.
 3. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
 2. In the Target section successively expand the ***InitiateExtract Request*** element.
@@ -361,9 +361,9 @@ Note: Wait for few seconds and refresh the screen and make sure that your integr
     ![callbackURL](images/callbackurl.png)
     7. Click on ***Validate***
     A confirmation message appears.
-    8. Click ***< (Go back)***
+    8. Click ***&lt; (Go back)***
     9. Click ***Save*** to persist changes.
-    10. Click ***< (Go back)***
+    10. Click ***&lt; (Go back)***
 
 ## Task 16: Activate the ERP Bulk Extract Integration
 

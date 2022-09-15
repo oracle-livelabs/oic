@@ -32,7 +32,7 @@ This lab assumes you have:
 * All previous labs successfully completed.
 
 ##	Task 1: Create the PO Event Integration
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png)
@@ -58,7 +58,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***POEvent***
-     - Click ***> (Next step)***.
+     - Click ***&gt; (Next step)***.
 
 4. On the **Request** page, select the following values:
 
@@ -79,7 +79,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     > **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***> (Next step)***.
+6. Click ***&gt; (Next step)***.
 7. On the **Summary** page, click ***Done***.
 8. Click ***Save*** to persist changes.
 9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
@@ -89,12 +89,12 @@ Add ERP PO Event trigger to the empty integration canvas.
 Add the FTP Adapter invoke to the integration canvas.
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the **File Server** Connection created in the previous lab.
 This invokes the FTP adapter Configuration Wizard.
-2. On the **Basic Info** page, select the following values and click ***> (Next step)***.
+2. On the **Basic Info** page, select the following values and click ***&gt; (Next step)***.
   | **Element**        | **Value**          |       
   | --- | ----------- |
   | What do you want to call your endpoint? | `Write2FTP`       |
 
-3. On the **Operation** page, select the following values and click ***> (Next step)***.
+3. On the **Operation** page, select the following values and click ***&gt; (Next step)***.
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -121,9 +121,9 @@ This invokes the FTP adapter Configuration Wizard.
   }
 </copy>
 ```
-4. Click ***> (Next step)***.
+4. Click ***&gt; (Next step)***.
 6. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
-7. Click ***> (Next step)*** and Review the **Summary** page and click on ***Done***
+7. Click ***&gt; (Next step)*** and Review the **Summary** page and click on ***Done***
 8. Click on ***Save***
 
 ## Task 4: Map data between ERP trigger and FTP invoke
@@ -165,7 +165,7 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 
 3. Click ***Validate***, then wait for the confirmation message **Map to Write2FTP successfully validated.**
 
-4. Click ***< (Go back)***
+4. Click ***&lt; (Go back)***
 
 5. Click ***Save*** to persist changes.
 ## Task 5: Define Tracking Fields
@@ -177,12 +177,12 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the **Source** section, expand ***getPurchaseOrderResponse*** > ***result***, click on 2nd sequence, expand ***Value***. Drag the ***PO Header Id*** and ***Order Number***  fields to the right side section:
+2. From the **Source** section, expand ***getPurchaseOrderResponse*** &gt; ***result***, click on 2nd sequence, expand ***Value***. Drag the ***PO Header Id*** and ***Order Number***  fields to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***< (Go back)*** button.
+3. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***&lt; (Go back)*** button.
 
 
 ## Task 6: Activate the integration
@@ -265,7 +265,7 @@ Access your ERP Cloud environment.
 ## Task 9: Track message flow triggered by the PO Create Event
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
-1. In the Integration navigation pane, Go back to the ***Home*** page > click on ***Observability*** > ***Instances***
+1. In the Integration navigation pane, Go back to the ***Home*** page &gt; click on ***Observability*** &gt; ***Instances***
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
@@ -279,14 +279,14 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 4. In the Activity Steam window, click on the different ***Message*** links to review the flow of request and response messages.
 
-6. Click ***< (Go back)*** button after reviewing the Activity Stream.
+6. Click ***&lt; (Go back)*** button after reviewing the Activity Stream.
 
 
 ## Task 10: Verify PO record in FTP Server
 
 Follow these steps to view the file in the FTP Server
 
-1. In the Integration navigation pane, click ***Home*** > ***Settings*** > ***File Server*** > ***Folders*** > ***home*** > ***users*** > ***Select your username*** > ***Output*** > You should see the **PO%.json** file.
+1. In the Integration navigation pane, click ***Home*** &gt; ***Settings*** &gt; ***File Server*** &gt; ***Folders*** &gt; ***home*** &gt; ***users*** &gt; ***Select your username*** &gt; ***Output*** &gt; You should see the **PO%.json** file.
 
   **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
 

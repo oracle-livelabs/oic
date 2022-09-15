@@ -23,7 +23,7 @@ This lab assumes you have:
 ## Task 1: Create an Oracle Autonomous Data Warehouse Connection
 Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
-1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
+1. In the left Navigation pane, click **Design** &gt; **Connections** &gt; click **Create**
 
 2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter and hit **Select**.
     ![Create ADW connection](images/create-adw-connection.png)
@@ -43,7 +43,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
     | **Field**  | **Value** |
     |---------------|----------------|
-    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Lab Setup** > **Task 3** > **Step 6**) |
+    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Lab Setup** &gt; **Task 3** &gt; **Step 6**) |
     |Security Policy | **JDBC With OCI Signature**|
     |Wallet | **Upload wallet file (Zip)** |
     |Wallet Password | `<wallet-password>`|
@@ -64,7 +64,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 **Note**: You can use an existing connection if one has already been configured for your environment.
 
-1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
+1. In the left Navigation pane, click **Design** &gt; **Connections** &gt; click **Create**
 2. select the **FTP** Adapter and click **Select**.
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**.  
 **Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.

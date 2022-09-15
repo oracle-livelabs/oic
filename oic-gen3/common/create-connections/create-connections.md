@@ -20,7 +20,7 @@ This lab assumes you have:
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 **Note**: You can use an existing connection if one has already been configured for your environment.
 
-1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
+1. In the left Navigation pane, click **Design** &gt; **Connections** &gt; click **Create**
 2. In the *Create Connection* dialog, select the **FTP** adapter to use for this connection. To find the adapter, enter FTP in the search field. Click on the highlighted adapter
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**.  
 **Note**: If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
@@ -39,7 +39,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 ##	Task	2: Create Connection using REST adapter
 Create a connection with the REST Adapter.
 
-1. In the left Navigation pane of OIC, Click **Design** > **Connections** and Click **Create**.
+1. In the left Navigation pane of OIC, Click **Design** &gt; **Connections** and Click **Create**.
 2. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter `REST` in the search field. Click on the highlighted adapter.
 3. In the *Create Connection* dialog, enter the following information and click on **Create**:
 

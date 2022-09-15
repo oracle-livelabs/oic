@@ -22,7 +22,7 @@ This lab assumes you have:
 ## Task 1: Initiate an App Driven integration Flow
 We will start by creating a new integration and adding some basic info.
 
-1. In the left Navigation pane, click **Design** > **Integrations**.
+1. In the left Navigation pane, click **Design** &gt; **Integrations**.
 2. On the Integrations page, click **Create**.
 3. On the *Integration Style* dialog, select **App Driven Orchestration**, followed by **Create**.
 
@@ -50,7 +50,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 3. On the Basic Info page, for *What do you want to call your endpoint?* element, enter `ERP_POEvent`.
 
-4. Click **>(Next Step)**.
+4. Click **&gt;(Next Step)**.
 
 5. On the Request page, select the following values:
 
@@ -70,9 +70,9 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     > **Note:** The filter is not required, however it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click **>(Next Step)**.
+6. Click **&gt;(Next Step)**.
 
-7. On the Response page, for *Response Type* element, choose **None**. Click **>(Next Step)**..
+7. On the Response page, for *Response Type* element, choose **None**. Click **&gt;(Next Step)**..
 
 8. On the Summary page, click **Done**.
 
@@ -103,7 +103,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | What operation do want to perform on Table? | **Insert** (Default)|
     |
 
-3. Click **> (Next Step)**.
+3. Click **&gt; (Next Step)**.
 
 4. On the Table Operation page, select the following values:
 
@@ -112,15 +112,15 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | Schema | **ADMIN**  |
     | Table Type | **TABLE** |
     | Table Name | &lt;keep blank&gt; and click **Search** |
-    | Available | Select **PURCHASEORDER** and click **>(Move to selected)** to move it to the *Selected* box |
+    | Available | Select **PURCHASEORDER** and click **&gt;(Move to selected)** to move it to the *Selected* box |
     |
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table1.png)
 
-5. Click on **Import Tables**, wait and press **> (Next Step)**.
+5. Click on **Import Tables**, wait and press **&gt; (Next Step)**.
 
-6. When the *Select the parent database table* element appears, click **> (Next Step)**.
+6. When the *Select the parent database table* element appears, click **&gt; (Next Step)**.
 
 7. On the Summary page, click **Done**.
 
@@ -183,7 +183,7 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click on **Business Identifiers** which is available on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **onEvent** > **getPurchaseOrderResponse** > **result** >  **2nd <sequence>** > expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
+2. From the *Source* section, expand **onEvent** &gt; **getPurchaseOrderResponse** &gt; **result** &gt;  **2nd &lt;sequence&gt;** &gt; expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 

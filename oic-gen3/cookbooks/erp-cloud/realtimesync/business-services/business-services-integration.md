@@ -32,7 +32,7 @@ This lab assumes you have:
 * All previous labs successfully completed.
 
 ##	Task 1: Create the Invoice Validation Integration
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png)
@@ -62,7 +62,7 @@ The Configure REST Endpoint wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?**, enter ***createInvoice***
      - for the **What does this endpoint do?**, enter ***This endpoint defines the REST interface***
-     - Click ***> (Next step)***
+     - Click ***&gt; (Next step)***
 
 5.  On the Resource Configuration page,
     - for the **What does this operation do?**, enter ***Creates Invoice in ERP Cloud***
@@ -70,7 +70,7 @@ The Configure REST Endpoint wizard appears.
     - for the **What action do you want to perform on the endpoint?:**, enter select ***POST***
     - Select ***Configure request payload for this endpoint***
     - Select ***Configure this endpoint to receive the response***
-    - Click ***> (Next step)***
+    - Click ***&gt; (Next step)***
 
 6. On the **Request** Page
     - Select the **Request Payload Format** to ***JSON Sample***
@@ -105,7 +105,7 @@ The Configure REST Endpoint wizard appears.
     </copy>
     ```
     - In the **What is the media-type of Request Body?** Select ***JSON*** (By default, this option is selected if not, you need to select)
-    - Select ***> (Next step)***
+    - Select ***&gt; (Next step)***
 
 7. On the **Response** Page,
       - Select the **Request Payload Format** to ***JSON Sample***
@@ -132,7 +132,7 @@ The Configure REST Endpoint wizard appears.
       </copy>
       ```
       - In the **What is the media-type of Response Body?** Select ***JSON***(By default, this option is selected if not, you need to select)
-      - Select ***> (Next step)*** and Click ***Done*** on Summary page.
+      - Select ***&gt; (Next step)*** and Click ***Done*** on Summary page.
       - Click ****** to apply changes.
 
 ## Task 3: Configure Validate Business Unit
@@ -140,15 +140,15 @@ The Configure REST Endpoint wizard appears.
 
 2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page, name your endpoint ***validateBusinessUnit***. Click ***> (Next step)***
+3.  In the **Basic Info** page, name your endpoint ***validateBusinessUnit***. Click ***&gt; (Next step)***
 
-5.  In the **Actions** page, Select ***Query,Create,Update or Delete Information***. Click ***> (Next step)***
+5.  In the **Actions** page, Select ***Query,Create,Update or Delete Information***. Click ***&gt; (Next step)***
 
 6.  On the **Operations** page,
     - In the **Browse by** list of values, Select ***Business (REST) Resources***
     - for **Select a Service Application**, Select ***fscmRestApp***
     - for **Select a Business Resource**, search for ***FinBusinessUnitsLOV*** and select
-    - **Select the operation** as ***getAll*** and click ***> (Next step)***
+    - **Select the operation** as ***getAll*** and click ***&gt; (Next step)***
 
 7.  On the **Summary** page, Select ***Done***
 
@@ -182,14 +182,14 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
     | --- | ----------- |
     | concat("BusinessUnitName=", /nssrcmpr:execute/nssrcdfl:request-wrapper/nssrcdfl:BusinessUnit) | Query |
 
-![MapValidateBusinessUnit](images/MapValidateBU.png)
+![MapValidateBusinessUnit](images/map-validate-bu.png)
     ```
     Note: The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
 
     Note: You can drag functions from the Component section, expand Functions, and then expand String Category
     ```
 
-4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***< (Go back)*** and ****** the Integration Flow.
+4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***&lt; (Go back)*** and ****** the Integration Flow.
 5. Click ***Save*** to persist changes.
 
 ## Task 5: Check for Business Unit
@@ -228,9 +228,9 @@ Two flow branches appear in the flow:
 
 2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page name your endpoint ***createERPInvoice*** and click ***> (Next step)***
+3.  In the **Basic Info** page name your endpoint ***createERPInvoice*** and click ***&gt; (Next step)***
 
-4.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***> (Next step)***
+4.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***&gt; (Next step)***
 
 5.  In the **Operations** page
     - In the **Browse by** list of values, Select ***Business (REST) Resources***
@@ -239,8 +239,8 @@ Two flow branches appear in the flow:
     - Click on **Browse and configure a child resource** and for **Child Resources of Invoices** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box.
     - for **Select the operation**, select ***create***
     - Click **OK**
-    - for **Select the operation**, select ***create*** and Click ***> (Next step)***
-    - In the **Select Flexfield contexts**, Do not Select anything and Click ***> (Next step)***
+    - for **Select the operation**, select ***create*** and Click ***&gt; (Next step)***
+    - In the **Select Flexfield contexts**, Do not Select anything and Click ***&gt; (Next step)***
 ![createinvoicesummary](images/createinvoicesummary.png)
 6.  In the **Summary** page Select ***Done***
 
@@ -290,7 +290,7 @@ A Map action named Map createERPInvoice is automatically created. We'll define t
     Note: You can easily find a Source or Target Element by using the Search functionality
     ```
 
-4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***< (Go back)*** and ****** the Integration Flow.
+4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***&lt; (Go back)*** and ****** the Integration Flow.
 
 ### *Define the Global Variable*
 
@@ -300,7 +300,7 @@ Define Global Variable to store the createInvoice Response. We need this because
 
 2.  Select ***Add Variable***.
 
-3.  Provide **Name** as ***invoice\_response\_var*** and Select **Type** as ***Object***. This brings up the Sources pane with all the variables. Select ***$createERPInvoice > createResponse > Invoices*** variable
+3.  Provide **Name** as ***invoice\_response\_var*** and Select **Type** as ***Object***. This brings up the Sources pane with all the variables. Select ***$createERPInvoice &gt; createResponse &gt; Invoices*** variable
 
     ![Create Global Variable](images/data-stitch-invoice-variable.png)
 
@@ -316,7 +316,7 @@ Define Global Variable to store the createInvoice Response. We need this because
 
     - Select the Tools Icon next to the  **Variable (x)** box to Switch to Developer View. From the **Sources** view select ***$invoice\_response\_var*** drag into the **Variable (x)** box.
     - Select **Operation** as ***Assign***
-    - In the **Value (x)** box (Switch to Developer view if required) Select ***$createERPInvoice > createResponse > Invoices*** drag into the **Value (x)** box
+    - In the **Value (x)** box (Switch to Developer view if required) Select ***$createERPInvoice &gt; createResponse &gt; Invoices*** drag into the **Value (x)** box
     - Click on ***Tick mark (Apply Editor Changes)*** and ****** the Integration flow and click on Stitch activity which will close the Data Stitch pane automatically
     ![Create Data Stitch Variable](images/data-stitch-activity.png)
 ### *Define the Response mapping (createInvoice)*
@@ -358,7 +358,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
     | Accounting Date | Accounting Date |
     | Description | Description |
 
-3.  Click ***Validate*** and click on ***< (Go back)***. ****** the Integration Flow
+3.  Click ***Validate*** and click on ***&lt; (Go back)***. ****** the Integration Flow
 
 
 ### *Define the Otherwise conditional flow*
@@ -381,7 +381,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
     ```
 
-4.  Select ***Validate*** and click on ***< (Go back)***
+4.  Select ***Validate*** and click on ***&lt; (Go back)***
 
 ## Task 6: Define Tracking Fields
 Manage business identifiers that enable you to track fields in messages during runtime.
@@ -391,7 +391,7 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click the ***(I)***  on the top right
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the **Source** section, expand ***execute > request-wrapper***, Drag the ***InvoiceNumber*** , ***BusinessUnit*** and ***InvoiceDate***  fields from Source to the *Business Identifier Field* section:
+2. From the **Source** section, expand ***execute &gt; request-wrapper***, Drag the ***InvoiceNumber*** , ***BusinessUnit*** and ***InvoiceDate***  fields from Source to the *Business Identifier Field* section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
@@ -402,7 +402,7 @@ Your final Integration Flow should look as below
   ![Final Integration Flow](images\final-integration-flow.png)
 
 
-4. On the Integration canvas, click ******, followed by ***< (Go back)***.
+4. On the Integration canvas, click ******, followed by ***&lt; (Go back)***.
 
 
 ## Task 7: Activate the integration
@@ -419,9 +419,9 @@ We will be testing the Integration flow with a happy case and fault case by modi
 
 1.  Login to ERP Cloud. Identify the user who has the role of Create Invoices
 
-2.  Navigate to ***Payables > Invoices***
+2.  Navigate to ***Payables &gt; Invoices***
 
-3.  Select ***Tasks > Create Invoice***
+3.  Select ***Tasks &gt; Create Invoice***
 
 4.  Provide the values per below
     | **Name**      | **Value**  |
@@ -490,7 +490,7 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
 ### *Validate Supplier Activity*
 
-  1.  Use **ERP Cloud** Connection and configure the REST resources to invoke ***SupplierLOV > getAll*** operation
+  1.  Use **ERP Cloud** Connection and configure the REST resources to invoke ***SupplierLOV &gt; getAll*** operation
 
   2.  In the **Child Resources** page Select ***sitesLOV***
 

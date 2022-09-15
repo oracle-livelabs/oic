@@ -46,7 +46,7 @@ Submit an Adhoc run of Scheduled Integration Flow
 
 2. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
 
-    **Note:** Alternatively, in the Integration navigation pane, Go to **Home page > Observability > Instances**
+    **Note:** Alternatively, in the Integration navigation pane, Go to **Home page &gt; Observability &gt; Instances**
 
     ![Cofirmation Window](images/submit-confirmation.png)
 

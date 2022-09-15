@@ -75,7 +75,7 @@ Note: If you have received your oic usernumber then you can use as is, otherwise
 And please create directory if it is not there by following the steps given in the setup lab.
 
 ## Task 3: Create the Invoice Bulk Import to ERP integration
-1. In the left Navigation pane, click ***Design*** > ***Integrations***.
+1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
 ![Select Integration Style](images/select-integration-style-1.png)
@@ -105,11 +105,11 @@ Accept all other default values.
 3. On the Basic Info page,
      - for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***
      - for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***
-     - Click ***> (Next Step)***.
+     - Click ***&gt; (Next Step)***.
 4. From the **Operations** page,
     - select ***Read a File*** as an Operation
     - from the **Select a Transfer Mode** option, select ***ASCII***
-    - Enter the following values and Click ***> (Next Step)***.
+    - Enter the following values and Click ***&gt; (Next Step)***.
 
 | **Element**        | **Value**   |
 | --- | ----------- |
@@ -118,7 +118,7 @@ Accept all other default values.
 
 5. On the **Schema** page,
     - in the **Do you want to specify the structure for the contents of the file** section, select No.
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
 ![ReadFileFromFTP](images/readFileFromFTP.png)
@@ -131,20 +131,20 @@ The Configure Oracle ERP Cloud Endpoint wizard appears.
 4. On the Basic Info page,
     - In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
     - In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 5. On the Actions page,
     - select ***Import Bulk Data into Oracle ERP Cloud***
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 6. On the Operations page,
     - select ***Import Payables Invoices*** (Search for it)
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 7. On the Response page, select the following options:
     - From the **Notification Mode** list, select ***Email & Bell Notification***
     - From the **Occurrence** list, select ***Send in any case***.
-    - Click ***> (Next Step)***.
+    - Click ***&gt; (Next Step)***.
 8. Review the summary and click ***Done***.
 9. Click ***Save*** to persist changes.
-![UploadFiletoERP](images/uploadFileToERP.png)
+![UploadFiletoERP](images/upload-file-to-erp.png)
 
 ## Task 6: Define the data Mapping
 A map action named ImportAPInvoicestoERPCloud is automatically created. We will define this data mapping.
@@ -173,10 +173,10 @@ A map action named ImportAPInvoicestoERPCloud is automatically created. We will 
 
    b. filename
 
-![DataMapping](images/dataMapping.png)
+![DataMapping](images/datamapping.png)
 7. Click on ***Validate***
 A confirmation message appears.
-8. Click ***< (Go back)***
+8. Click ***&lt; (Go back)***
 9. Click ***Save*** to persist changes.
 
 ## Task 7: Define Tracking Fields
@@ -188,14 +188,14 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png =20%x*)
 
-2. From the **Source** section, expand ***schedule*** > ***startTime***. Drag the ***startTime*** field to the right side section:
+2. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png =40%x*)
 
 
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click ***Save***
-5. Click on ***< (Go back)*** button.
+5. Click on ***&lt; (Go back)*** button.
 
 ## Task 8: Activate the integration
 
