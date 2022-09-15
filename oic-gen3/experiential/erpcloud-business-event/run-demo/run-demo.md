@@ -173,4 +173,4 @@ You have completed the final step of this workshop. Thank you!
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Jul 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

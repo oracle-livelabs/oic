@@ -183,7 +183,7 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click on **Business Identifiers** which is available on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **onEvent** > **getPurchaseOrderResponse** > **result** >  **2nd <sequence** > expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
+2. From the *Source* section, expand **onEvent** > **getPurchaseOrderResponse** > **result** >  **2nd <sequence>** > expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
@@ -198,9 +198,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the *Activate Integration* dialog, select **Enable Tracing**, followed by **Include Payload** options.
-
-3. Click **Activate**.
+2. On the *Activate Integration* dialog, select **Audit** as tracing level and click **Activate**
 
     The activation will complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to *Active*.
 
@@ -211,4 +209,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, July 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022

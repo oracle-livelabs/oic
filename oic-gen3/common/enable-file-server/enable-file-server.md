@@ -24,6 +24,8 @@ An administrator must enable File Server before an organization can start using 
 
 If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
 
+![File Server Not Enabled](images/fileservernotenabled.png =50%x50%)
+
 To enable File Server:
 
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
