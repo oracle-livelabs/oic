@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to get started using the Oracle Autonomous Database (Autonomous Data Warehouse [ADW] and Autonomous Transaction Processing [ATP]) on Oracle Cloud. In this lab, you will provision a new ADW instance.
 
- **Note:** While this lab uses ADW, the steps are the same for creating an ATP database.
+> **Note:** While this lab uses ADW, the steps are the same for creating an ATP database.
 
 Estimated Time: 5 minutes
 
@@ -27,7 +27,7 @@ In this lab, you will:
 1. Log in to the Oracle Cloud.
 2. Once you log in, the cloud services dashboard shows all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-    > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the __Quick Actions__ section of the dashboard.
+> **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the __Quick Actions__ section of the dashboard.
 
     ![Oracle home page.](./images/oci-navigation.png " ")
 
@@ -42,7 +42,7 @@ In this lab, you will:
     <if type="freetier">
     ![Check the workload type on the left.](images/adb-choose.png " ")
 
-   > **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
+> **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
    </if>
 
 5. This console shows that no databases yet exist. If there were a long list of databases, you could filter the list by the **State** of the databases (Available, Stopped, Terminated). You can also sort by **Workload Type**. In this example, **Data Warehouse** is the workload type.
@@ -98,7 +98,7 @@ In this lab, you will:
     - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     - __New Database Preview__ - If a checkbox is available to preview a new database version, do NOT select it.
 
-    > **Note:** You cannot scale up/down an Always Free autonomous database.
+> **Note:** You cannot scale up/down an Always Free autonomous database.
 
     ![Choose the remaining parameters.](./images/create-adb-configure.png)
 

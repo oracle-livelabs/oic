@@ -74,10 +74,10 @@ Add ERP PO Event trigger to the empty integration canvas.
     <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/">$eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable"</xpathExpr></copy>
     ```
 
-    > **Tip:** If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
+> **Tip:** If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
 
 
-    > **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
+> **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 6. Click ***&gt; (Next step)***.
 7. On the **Summary** page, click ***Done***.
@@ -259,7 +259,7 @@ Access your ERP Cloud environment.
 
 5. Validate the PO Status. If it's **Open** then the Business Event has occurred.
 
-    **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
+> **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
 
 
 ## Task 9: Track message flow triggered by the PO Create Event
@@ -288,7 +288,7 @@ Follow these steps to view the file in the FTP Server
 
 1. In the Integration navigation pane, click ***Home*** &gt; ***Settings*** &gt; ***File Server*** &gt; ***Folders*** &gt; ***home*** &gt; ***users*** &gt; ***Select your username*** &gt; ***Output*** &gt; You should see the **PO%.json** file.
 
-  **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
+> **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
 
 **Congratulations!** You have learnt how to subscribe to ERP Cloud Business Events by configuring the Out of the box ERP Cloud adapter. The Adapter abstracts the Business Events experience and provides an intuitive interface to select from the Catalog which greatly simplifies the task to perform Real-Time Synchronization.
 

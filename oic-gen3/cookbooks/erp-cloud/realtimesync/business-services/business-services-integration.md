@@ -48,7 +48,8 @@ This lab assumes you have:
 
 5. Click ***Create***
 
-**Note**: If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
+> **Note:** If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
+
 6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
 ## Task 2: Create the REST Interface Trigger
@@ -183,11 +184,10 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
     | concat("BusinessUnitName=", /nssrcmpr:execute/nssrcdfl:request-wrapper/nssrcdfl:BusinessUnit) | Query |
 
 ![MapValidateBusinessUnit](images/map-validate-bu.png)
-    ```
-    Note: The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
 
-    Note: You can drag functions from the Component section, expand Functions, and then expand String Category
-    ```
+> **Note:**  The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
+You can drag functions from the Component section, expand Functions, and then expand String Category
+
 
 4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***&lt; (Go back)*** and ***Save*** the Integration Flow.
 5. Click ***Save*** to persist changes.
@@ -286,9 +286,9 @@ A Map action named Map createERPInvoice is automatically created. We'll define t
     | Invoice Lines > Description | Invoice Lines > Description |
     | Invoice Lines > Prorate Across All Items Flag | Invoice Lines > Prorate Across All Item Lines |
 
-    ```
-    Note: You can easily find a Source or Target Element by using the Search functionality
-    ```
+
+> **Note:**  You can easily find a Source or Target Element by using the Search functionality
+
 
 4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***&lt; (Go back)*** and ***Save*** the Integration Flow.
 
@@ -372,10 +372,10 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
     | "The value for the Business Unit attribute is invalid. You must provide a valid value" | Detail |
     | "400" | Error Code |
 
-    ```
-    Note: If the Target element is greyed out, Select the target node and Right Click "Create Target Node" which brings up the Expression Editor
 
-    ```
+> **Note:**  If the Target element is greyed out, Select the target node and Right Click "Create Target Node" which brings up the Expression Editor
+
+
 
 4.  Select ***Validate*** and click on ***&lt; (Go back)***
 
