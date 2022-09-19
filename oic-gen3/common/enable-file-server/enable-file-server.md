@@ -37,7 +37,7 @@ To enable File Server:
 
    ![Enable File Server](images/file-server-enablement1a.png)
 
-5. When prompted to confirm enabling File Server, click **Enable**. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
+5. When prompted to confirm enabling File Server, click ***Enable***. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
 
    ![Enable File Server in Progress](images/file-server-enablement2.png)
 

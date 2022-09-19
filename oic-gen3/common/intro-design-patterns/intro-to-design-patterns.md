@@ -1,6 +1,4 @@
-# Introduction to ERP Cloud Integration Design Patterns - Learning purpose only. No action needed
-
-## Introduction
+# Introduction - Learning purpose only. No action needed in this lab.
 
 This section walks you through various design patterns and use cases integrating with Oracle ERP cloud & Oracle SCM Cloud
 
@@ -13,7 +11,6 @@ In this lab, you will:
 * Understand the ERP Cloud Design Patterns & Usecases
 
 ### Prerequisites
-
 
 
 ##	Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities

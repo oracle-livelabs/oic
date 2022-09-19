@@ -49,7 +49,7 @@ This lab assumes you have:
 5. Click ***Create***
 
 **Note**: If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
-6. Optional, Select Layout to ***Horizontal*** and Click ****** to apply changes.
+6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
 ## Task 2: Create the REST Interface Trigger
 1. Click the ***+*** sign below **START** in the integration canvas.
@@ -133,7 +133,7 @@ The Configure REST Endpoint wizard appears.
       ```
       - In the **What is the media-type of Response Body?** Select ***JSON***(By default, this option is selected if not, you need to select)
       - Select ***&gt; (Next step)*** and Click ***Done*** on Summary page.
-      - Click ****** to apply changes.
+      - Click ***Save*** to apply changes.
 
 ## Task 3: Configure Validate Business Unit
 1.  Hover over the outgoing arrow for the **Trigger createInvoice** activity and click ***+***
@@ -189,7 +189,7 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
     Note: You can drag functions from the Component section, expand Functions, and then expand String Category
     ```
 
-4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***&lt; (Go back)*** and ****** the Integration Flow.
+4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***&lt; (Go back)*** and ***Save*** the Integration Flow.
 5. Click ***Save*** to persist changes.
 
 ## Task 5: Check for Business Unit
@@ -236,10 +236,10 @@ Two flow branches appear in the flow:
     - In the **Browse by** list of values, Select ***Business (REST) Resources***
     - for **Select a Service Application**, Select ***fscmRestApp***
     - for **Select a Business Resource**, search for ***Invoices*** and Select it
-    - Click on **Browse and configure a child resource** and for **Child Resources of Invoices** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box.
     - for **Select the operation**, select ***create***
-    - Click **OK**
-    - for **Select the operation**, select ***create*** and Click ***&gt; (Next step)***
+    - click ***&gt; (Next step)***
+    - for **Child Resource** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box.
+    - click ***&gt; (Next step)***
     - In the **Select Flexfield contexts**, Do not Select anything and Click ***&gt; (Next step)***
 ![createinvoicesummary](images/createinvoicesummary.png)
 6.  In the **Summary** page Select ***Done***
@@ -290,7 +290,7 @@ A Map action named Map createERPInvoice is automatically created. We'll define t
     Note: You can easily find a Source or Target Element by using the Search functionality
     ```
 
-4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***&lt; (Go back)*** and ****** the Integration Flow.
+4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***&lt; (Go back)*** and ***Save*** the Integration Flow.
 
 ### *Define the Global Variable*
 
@@ -300,13 +300,13 @@ Define Global Variable to store the createInvoice Response. We need this because
 
 2.  Select ***Add Variable***.
 
-3.  Provide **Name** as ***invoice\_response\_var*** and Select **Type** as ***Object***. This brings up the Sources pane with all the variables. Select ***$createERPInvoice &gt; createResponse &gt; Invoices*** variable
+3.  Provide **Name** as ***invoice\_response\_var*** and Select **Type** as ***Object***. This brings up the Sources pane with all the variables. Expand ***$createERPInvoice &gt; createResponse &gt;***. Drag and drop ***Invoices*** variable onto the right side pane.
 
     ![Create Global Variable](images/data-stitch-invoice-variable.png)
 
 4.  Close the Global Variables pane, which creates and s the newly created Variable
 
-5.  ****** the Integration Flow
+5.  ***Save*** the the Integration Flow
 
 6.  Hover over the outgoing arrow for the **createERPInvoice** activity and click ***+***. Search for **Data Stitch** activity. (Alternatively, you can drag from the **Actions** palette)
 
@@ -314,10 +314,10 @@ Define Global Variable to store the createInvoice Response. We need this because
 
 8.  A pane for the Data Stitch activity appears. Here we select the Variable and Values.
 
-    - Select the Tools Icon next to the  **Variable (x)** box to Switch to Developer View. From the **Sources** view select ***$invoice\_response\_var*** drag into the **Variable (x)** box.
+    - Select the Tools Icon next to the  **Variable (x)** box to Switch to Developer View. From the **Sources** view select ***$invoice\_response\_var*** drag and drop onto the **Variable (x)** box.
     - Select **Operation** as ***Assign***
     - In the **Value (x)** box (Switch to Developer view if required) Select ***$createERPInvoice &gt; createResponse &gt; Invoices*** drag into the **Value (x)** box
-    - Click on ***Tick mark (Apply Editor Changes)*** and ****** the Integration flow and click on Stitch activity which will close the Data Stitch pane automatically
+    - Click on Stitch activity which will close the Data Stitch pane automatically
     ![Create Data Stitch Variable](images/data-stitch-activity.png)
 ### *Define the Response mapping (createInvoice)*
 
@@ -328,11 +328,8 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 2.  Use the mapper to drag element nodes in the source **invoice\_response\_var** Request structure to    
     element nodes in the target **createInvoice Response** Request structure.
 
-    Expand the **Source** node:
+    Expand the source node ***invoice\_response\_var***  and ***Invoices***
 
-    ```
-    invoice\_response\_var  > Invoices
-    ```
 
     Expand the **Target** node:
 
@@ -358,13 +355,12 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
     | Accounting Date | Accounting Date |
     | Description | Description |
 
-3.  Click ***Validate*** and click on ***&lt; (Go back)***. ****** the Integration Flow
+3.  Click ***Validate*** and click on ***&lt; (Go back)***. ***Save*** the Integration Flow
 
 
 ### *Define the Otherwise conditional flow*
 
-1.  Select ***Actions*** and drag ***Fault Return*** Activity. This activity returns a Custom
-    Fault
+1.  Select ***Actions*** and drag ***Fault Return*** Activity after ***Map createInvoice*** activity. This activity returns a Custom Fault
 
 2.  Select the ***Map createInvoice*** to configure Fault details.
 
@@ -402,7 +398,7 @@ Your final Integration Flow should look as below
   ![Final Integration Flow](images\final-integration-flow.png)
 
 
-4. On the Integration canvas, click ******, followed by ***&lt; (Go back)***.
+4. On the Integration canvas, click ***Save***, followed by ***&lt; (Go back)***.
 
 
 ## Task 7: Activate the integration
@@ -440,7 +436,7 @@ We will be testing the Integration flow with a happy case and fault case by modi
 
 We will test the end to end Integration flow using the built-in Test Client. In an ideal scenario, the request would be posted from a Web, Mobile Client and so on.
 
-1. From **Integrations** page, Selection **Invoice Validation** Integration Flow, Click on ***... (Actions)*** and Click on  ***Run*** and Click on ***Test Integration***
+1. From **Integrations** page, Selection **Invoice Validation** Integration Flow, Click on ***... (Actions)*** and Click on  ***Run***
 
 2. Select ***Body*** Tab and make sure ***Text*** Radio button is selected. Provide the below Payload
 
@@ -473,7 +469,7 @@ We will test the end to end Integration flow using the built-in Test Client. In 
     ```
     Modify the above payload with the values captured from ERP Cloud for **Business Unit, Supplier and Supplier Site**. Provide a unique **Invoice Number**
 
-  3.  Click on ***Test***. Observe the **Response** payload returned.
+  3.  Click on ***Run***. Observe the **Response** payload returned.
 
       ![Activity Stream](images/activity-stream.png)
 
@@ -523,4 +519,4 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Aug 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
