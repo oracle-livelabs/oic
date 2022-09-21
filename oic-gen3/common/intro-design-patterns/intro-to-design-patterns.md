@@ -38,10 +38,10 @@ Customers choose to have some modules running on-premise and many of them in the
     - BI Publisher  and Business Intelligence Cloud Connect (BICC) used for SaaS extracts
 -	Collaboration Messaging Framework (CMK) for B2B
 
-| **Business Event Integration** | **Import Bulk Data to Fusion Applications** | **Callback Integration** | **Business Object Integration** | **Send Files to Fusion Applications ** |
-|:---:|:---:|:---:|:---:|:---:|
-| Subscribe to Business events from FA applications. | Import bulk data into the SaaS application using FBDI compliant bulk operations. | Receive callback from FA when bulk import/export operation completes. | Invoke business services using the Service Catalog WSDL (SOAP) or Interface Catalog (REST) using CRUD operations. | Upload files to Oracle WebCenterContent (UCM) when using ‘Import Bulk Data’ is not appropriate (non FBDI files)|
-| Direction:  INBOUND | Direction: OUTBOUND | Direction:  INBOUND (using a business event) | Direction: INBOUND/OUTBOUND | Direction:  OUTBOUND |
+  | **Business Event Integration** | **Import Bulk Data to Fusion Applications** | **Callback Integration** | **Business Object Integration** | **Send Files to Fusion Applications** |
+  |:---:|:---:|:---:|:---:|:---:|
+  | Subscribe to Business events from FA applications. | Import bulk data into the SaaS application using FBDI compliant bulk operations. | Receive callback from FA when bulk import/export operation completes. | Invoke business services using the Service Catalog WSDL (SOAP) or Interface Catalog (REST) using CRUD operations. | Upload files to Oracle WebCenterContent (UCM) when using ‘Import Bulk Data’ is not appropriate (non FBDI files)|
+  | Direction:  INBOUND | Direction: OUTBOUND | Direction:  INBOUND (using a business event) | Direction: INBOUND/OUTBOUND | Direction:  OUTBOUND |
 
 ##	Task 2: Real-Time Integration
 
