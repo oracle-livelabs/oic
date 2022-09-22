@@ -1,4 +1,6 @@
-# Introduction - Learning purpose only. No action needed in this lab.
+# Introduction to ERP Cloud Integration Design Patterns - READ Only
+
+## Introduction
 
 This section walks you through various design patterns and use cases integrating with Oracle ERP cloud & Oracle SCM Cloud
 
@@ -13,7 +15,10 @@ In this lab, you will:
 ### Prerequisites
 
 
-##	Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities
+* None.
+
+
+## Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities
 
 Across virtually every industry for almost 30 years, ERP has been at the foundation of the business. ERPs act as the system of record or data master for most of an organization’s data and transactions, containing important customer and business information across most essential business functions in finance, human capital management, enterprise performance management, and supplier relationship management. With the explosion of best-of-breed solutions across every industry, today’s tech stacks expand far beyond ERP. Companies increasingly rely on modern CRM systems to act as a system of engagement.
 
@@ -43,7 +48,7 @@ Customers choose to have some modules running on-premise and many of them in the
   | Subscribe to Business events from FA applications. | Import bulk data into the SaaS application using FBDI compliant bulk operations. | Receive callback from FA when bulk import/export operation completes. | Invoke business services using the Service Catalog WSDL (SOAP) or Interface Catalog (REST) using CRUD operations. | Upload files to Oracle WebCenterContent (UCM) when using ‘Import Bulk Data’ is not appropriate (non FBDI files)|
   | Direction:  INBOUND | Direction: OUTBOUND | Direction:  INBOUND (using a business event) | Direction: INBOUND/OUTBOUND | Direction:  OUTBOUND |
 
-##	Task 2: Real-Time Integration
+## Task 2: Real-Time Integration
 
 There are several ways to Synchronize data between ERP Cloud and downstream applications
 - Business Events - Oracle Integration subscribes to events from ERP Cloud
