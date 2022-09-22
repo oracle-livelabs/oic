@@ -14,9 +14,8 @@ In this lab, you will:
 
 ### Prerequisites
 
-This lab assumes you have:
 
-* All previous labs completed.
+* None.
 
 
 ## Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities
