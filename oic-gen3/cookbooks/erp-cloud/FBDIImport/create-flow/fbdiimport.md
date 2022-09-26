@@ -233,6 +233,8 @@ You may now **proceed to the next lab**.
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 * [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html)
+* [Invoke a File-Based Data Import (FBDI) Job](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/invoke-file-based-data-import-fbdi-job.html)
+* [Oracle Fusion Cloud FBDI templates and process](https://docs.oracle.com/en/cloud/saas/financials/22c/oefbf/external-data-integration-services-for-importing-data.html)
 
 ## Acknowledgements
 
