@@ -35,9 +35,9 @@ We will start by creating a new integration and adding some basic info.
     | --- | ----------- |
     | Name         | `LL Insert Sales Orders to ADW`       |
     | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
-    |
+    {: title="Create New Integration"}
 
-    Accept all other default values.
+Accept all other default values.
 
 5. Click ***Create***.
 6. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
@@ -65,6 +65,7 @@ Add FTP Invoke to integration canvas.
     | Input Directory | **/home/users/`<your-folder-name>`/Output** |
     | File Name | **sales_orders.csv** |
     | Download Directory | **/tmp/stage** |
+    {: title="File Server Operations"}
 
     ![FTP Invoke Operations Page](images/ftp-invoke-operations-page.png)
 
@@ -91,6 +92,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
+    {: title="ADW Basic Info"}
 
     - Click ***&gt; (Next Step)***
 
@@ -103,6 +105,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
     | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
+    {: title="Object Storage Info"}
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
@@ -119,6 +122,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | --- | ----------- |
     | Delimeter | **Comma** |
     | Skip Headers | **1** |
+    {: title="Data format"}
 
     ![Edit Copy Format options](images/edit-copy-data-format-options-2.png)
 
@@ -162,6 +166,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
     | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest Oracle ADW)* |
     | --- | ----------- |
     | FileReference | FileReference |
+    {: title="Map"}
 
    ![Completed FTP to ADW Mapping](images/mapper-completed-ftp-adw.png)
 
