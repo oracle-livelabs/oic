@@ -15,7 +15,7 @@
         {
             "title": "Lab 1: Provision an OCI Integration Instance",
             "description": "Follow these steps to create a new OCI Integration service instance",
-            "filename": "../../../common/provision-oic/provision.md"
+            "filename": "../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Setup Workshop Prerequisites",
