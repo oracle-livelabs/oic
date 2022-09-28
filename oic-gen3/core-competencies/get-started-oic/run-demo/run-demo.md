@@ -8,7 +8,7 @@ Estimated Time: 10 minutes
 ### Objectives
 In this lab, you will:
 - Create a file in the File Server
-- Execute an Adhoc run of Scheduled Integration Flow
+- Execute an adhoc run of Scheduled Integration Flow
 - Track message flow triggered
 - Verify the sales orders records in ADW Table
 - Verify the sales orders file in Object Storage
@@ -37,9 +37,9 @@ This lab assumes you have:
 
 ## Task 2: Run the Scheduled Integration Flow
 
-Submit an Adhoc run of Scheduled Integration Flow
+Submit an adhoc run of Scheduled Integration Flow
 
-1. From the **Integrations** page, hover over the Integration Flow, click on ***...*** (Actions) menu, click on ***Run*** and again click on ***Run***.
+1. From the *Integrations* page, hover over the Integration Flow, click on **...** (Actions) menu, click on **Run** and again click on **Run**.
 
     ![Run Scheduled Integration Flow](images/run-integration.png)
 
@@ -57,7 +57,7 @@ Submit an Adhoc run of Scheduled Integration Flow
     The flow ran successfully if it is displayed with a green line.
 
 
-4. In the Activity Steam window, click on the different **Message** links to review the flow of request and response messages.
+4. In the *Activity Stream* window, click on the Messages which has **View Payload** icon to review the request and response messages of each and every activity.
 
 5. Click on the **Activity Stream** again to close the activity stream.
 

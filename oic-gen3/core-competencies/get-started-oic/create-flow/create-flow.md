@@ -23,9 +23,9 @@ This lab assumes you have:
 ## Task 1: Initiate a Scheduled Integration Flow
 We will start by creating a new integration and adding some basic info.
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
+1. In the left Navigation pane, click **Design** &gt; **Integrations**.
 2. On the Integrations page, click ***Create***.
-3. On the *Create integration* dialog, select ***Scheduled Orchestration***, followed by ***Create***.
+3. On the *Create integration* dialog, select **Scheduled Orchestration**, followed by **Create**.
 
     ![Select Integration Style](images/select-integration-style.png)
 
@@ -39,8 +39,8 @@ We will start by creating a new integration and adding some basic info.
 
 Accept all other default values.
 
-5. Click ***Create***.
-6. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
+5. Click **Create**.
+6. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
 ![horizontallayout](images/horizontallayout.png)
 
 
@@ -48,15 +48,15 @@ Accept all other default values.
 ## Task 2: Define FTP Invoke Activity
 Add FTP Invoke to integration canvas.
 
-1. Hover over the outgoing arrow from the *Scheduled* activity and Click the ***+*** sign in the integration canvas.
+1. Hover over the outgoing arrow from the *Scheduled* activity and Click the **+** sign in the integration canvas.
 
 2. Select the configured FTP Adapter connection which is created in the previous lab. This invokes the FTP Adapter  Configuration Wizard.
 
-3. On the **Basic Info** page,
-    - for ***What do you want to call the endpoint?*** element, enter ***downloadSalesOrders***. Leave the rest as defaults.
-    - Click ***&gt; (Next Step)***
+3. On the *Basic Info* page,
+    - for *What do you want to call the endpoint?* element, enter **downloadSalesOrders**. Leave the rest as defaults.
+    - Click **&gt; (Next Step)**
 
-4. On the **Operations** page, Select the following values:
+4. On the *Operations* page, Select the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -69,24 +69,24 @@ Add FTP Invoke to integration canvas.
 
     ![FTP Invoke Operations Page](images/ftp-invoke-operations-page.png)
 
-    - Click ***&gt; (Next Step)***
+    - Click **&gt; (Next Step)**
 
-5. On the **Summary** page, review the configuration and click **Done**.
+5. On the *Summary* page, review the configuration and click **Done**.
 
-6. Click on ***Save*** to apply your changes.
+6. Click on **Save** to apply your changes.
 
     ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
 ## Task 3: Add the ADW invoke activity
 Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canvas.
 
-1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the **+** sign. Click the ***+*** sign and select the ADW connection created in the previous lab.
+1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the ***+*** sign. Click the **+** sign and select the ADW connection created in the previous lab.
 
     ![Add ADW Connection](images/add-adw-connection.png)
 
     This invokes the Oracle Autonomous Data Warehouse Endpoint Configuration Wizard.
 
-2. On the Basic Info page, select the following values:
+2. On the *Basic Info* page, select the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -94,7 +94,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
     {: title="ADW Basic Info"}
 
-    - Click ***&gt; (Next Step)***
+    - Click **&gt; (Next Step)**
 
 3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
 
@@ -128,13 +128,13 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     Leave the rest of the values as default and Select **Ok**.
 
-5. Click ***&gt; (Next Step)***
+5. Click **&gt; (Next Step)**
 
 6. On the Summary page, review the configuration and click **Done**.
 
     ![Summary in ADW Wizard](images/adw-wizard-summary.png)
 
-7. Click ***Save*** to apply changes.
+7. Click **Save** to apply changes.
 
 
 ## Task 4: Map data between FTP Invoke and ADW invoke
@@ -172,10 +172,10 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
-4. Click ***&lt; (Go back)***
+4. Click **&lt; (Go back)**
     ![GoBack](images/mapper-goback-ftp-adw.png)
 
-5. Click ***Save*** to persist changes.
+5. Click **Save** to persist changes.
 
 
 ## Task 5: Define Tracking Fields
@@ -191,20 +191,20 @@ Manage business identifiers that enable you to track fields in messages during r
 
     ![Assign Business Identifiers](images/add-business-identifiers.png)
 
-3. Click **Business Identifiers icon** to save your changes.
-4. Click on ***Save*** to apply your changes.
+3. Click **Business Identifiers icon** to hide the dialog.
+4. Click on **Save** to apply your changes.
 5. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
   ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
 
-1. On the *Integrations* page, click on the ***Activate*** icon.
+1. On the *Integrations* page, click on the **Activate** icon.
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the *Activate Integration* dialog, select ****Audit**** as tracing level.
+2. On the *Activate Integration* dialog, select **Debug** as tracing level.
 
-3. Click ***Activate***.
+3. Click **Activate**.
 
     The activation will be complete in a few seconds. Once activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to *Active*.
 
