@@ -77,7 +77,7 @@ You will create an Insight Model with 5 Milestones, an Initial and a Terminal, a
 2. Name the Draft Model **My Order Processing** and provide the description of **My First Model**.
 3. You will need to click **Create** to finish. When you've completed it; it will open the Milestone Process for you.
 
-## Task 2: Create A Milestone
+## Task 2: Create Milestones
 
 As taught, each Model needs an Initial and Terminal Milestone. Initial Milestones display a Rocket symbol and Terminal Milestones display a Finish Line Flag symbol
 
@@ -90,7 +90,7 @@ Models can have additional Milestones. These are called Standard Milestones and 
 2. Add Milestone named **Discount Applied**
 3. Add Milestone named **Shipped**
 
-## Task 3: Create an Identifier
+## Task 3: Create Identifiers
 
 Finish your Draft Model by creating an Identifier and attach the Identifier to each of your created  Milestones.
 
