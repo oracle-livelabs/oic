@@ -34,9 +34,9 @@ This lab assumes you have:
 
     The *Create Order* dialog is displayed.
 
-6. Enter a valid entry in the *Supplier* field, for example `ABC Consulting`, and select the corresponding supplier in the drop down.
+6. Enter a valid entry in the *Supplier* field, for example `ABC Consulting`, and select the corresponding supplier in the drop down and also select Requisitioning BU as per Procurement BU field.
 
-    > **Tip:** You can also search for valid suppliers using the **Search** icon.
+> **Tip:** You can also search for valid suppliers using the **Search** icon.
 
 
 7. Click **Create**.
@@ -45,7 +45,7 @@ This lab assumes you have:
 
     The *Edit Document (Purchase Order)* page is displayed.
 
-8. Under *General* section, in the *Description* field, enter the same value used for *Lab 2 &gt; Task 2 &gt; Step 5: Filter Expr for Purchase Order Event*. For example: `<your-initials>-demo`
+8. Under *General* section, in the *Description* field, enter the same value used for *Lab 6 &gt; Task 2 &gt; Step 5: Filter Expr for Purchase Order Event*. For example: `<your-initials>-demo`
 
     ![Add PO Line](images/enter-po-filter.png)
 
@@ -62,6 +62,7 @@ This lab assumes you have:
     | Quantity | Enter a valid number, eg. `2` |
     | UOM | `Ea` (Default) |
     | Base Price | Enter a valid number, eg. `200`
+    {: title="Line Item Values"}
 
      ![Review PO line](images/review-po-line.png)
 
@@ -134,7 +135,7 @@ Follow these steps to view the PO record in the designated DB table.
 
     ![Select Autonomous Database](../setup/images/adb-navigation.png)
 
-> Note: You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
+> **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.
 
@@ -173,4 +174,4 @@ You have completed the final step of this workshop. Thank you!
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2022
