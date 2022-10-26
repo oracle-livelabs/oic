@@ -20,7 +20,7 @@ This lab assumes you have:
 Create a connection with the Oracle ERP Cloud Adapter.
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
-2. In the *Create Connection* dialog, select the **Oracle ERP Cloud** adapter to use for this connection. To find the adapter, enter `erp` in the search field. Click on the highlighted adapter.
+2. In the *Create Connection* dialog, select the **Oracle ERP Cloud** adapter to use for this connection. To find the adapter, enter `ERP` in the search field. Click on the highlighted adapter.
     ![Create ERP Cloud connection](images/create-erp-connection.png)
 
 4. In the *Create Connection* dialog, enter the following information and click on ***Create***:
