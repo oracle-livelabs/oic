@@ -104,8 +104,9 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html)
+
 
 ## Acknowledgements
 
