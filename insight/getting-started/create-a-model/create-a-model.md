@@ -86,9 +86,10 @@ As taught, each Model needs an Initial and Terminal Milestone. Initial Milestone
 
 Models can have additional Milestones. These are called Standard Milestones and are have a Flag symbol. You will need to add three more to the model.
 
-1. Add Milestone named **Backordered**
-2. Add Milestone named **Discount Applied**
-3. Add Milestone named **Shipped**
+3. Add Milestone named **Backordered**
+4. Add Milestone named **Discount Applied**
+5. Add Milestone named **Shipped**
+6. Click Save
 
 ## Task 3: Create Identifiers
 
@@ -96,7 +97,7 @@ Finish your Draft Model by creating an Identifier and attach the Identifier to e
 
 1. The Identifier name is  **Order Number**,  for Milestone select  **Order Received**, the Data Type is **String**.
 2. Click "Assign to Another Milestone" and add the remaining 4 Milestones: **Backordered**, **Discount Applied**, **Shipped** and **Order Completed**
-3. Save and Close your Draft Model. You will receive a confirmation that states "Successfully saved changes."
+3. Save your Draft Model. You will receive a confirmation that states "Successfully saved the changes."
 
 Great job creating your Draft Model.
 

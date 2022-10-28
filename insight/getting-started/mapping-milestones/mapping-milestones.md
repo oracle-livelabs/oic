@@ -35,7 +35,7 @@ As part of the mapping process you must also define extraction criteria for the 
         2. This will open the Integrations, either search or scroll to find your integration
         3. At the far right (actions), and click on Insight Designer
             a. You will see your Milestones on the right
-            b. Drag and drop the related criteria from the left to your Milestone
+            b. Drag and drop the related activity from the left to your Milestone
                 1. Select from dropdown "On Entry" or "On Exit"
             c. Repeat for each Milestone you wish to map.
 
@@ -45,8 +45,8 @@ As part of the mapping process you must also define extraction criteria for the 
         1. Under mappings you will click on "Open mapped integration to define extraction criteria" 
         2. This will open the Integrations, that was previously used, for you to map 
         3. You will see your Identifier on the right
-            a. Under Milestone you will see Extraction Criteria
-                1. Click on Define extraction Criteria
+            a. Under Milestone you will see Extraction Activity
+                1. Click on Define extraction Activity
                 2. This will open the expression page
                     a. Under Source click on $OrderNumber and drag and drop to the Expression box, located on the right side 
             c. You may click "Validate" to confirm its readiness to use or click "Close" to return to the integration mapping page.
@@ -85,7 +85,7 @@ Accessing your draft model, go to Milestones. You will map 5 Milestones and Iden
 1. Map your Order Received Milestone **On Exit** event to the **OrderReceived** activity.
 2. Map your Backordered Milestone **On Exit** event to the **Backordered** activity.
 3. Map your Discount Applied Milestone **On Exit** event to the **DiscountApplied** activity.
-4. Map your Shipped Milestone **On Exit** event to the **OrderCompleted** activity.
+4. Map your Shipped Milestone **On Exit** event to the **Shipped** activity.
 5. Map your Order Completed Milestone **On Exit** event to the **OrderCompleted** activity.
 6. Click **Save** and return to your Model.
 
@@ -102,7 +102,7 @@ For each integration, you must assign the model's identifier to at least one map
 
 ## Task 3: Draft to Configured State
 
-You may now click **Save** and ensure you receive the message box **Successfully saved the changes** and close your model. To activate the model, go to Task 3.
+You may now click **Save** and ensure you receive the message box **Successfully saved the changes** and close your model. To activate the model, go to Task 4.
 
 ## Task 4: Configured State to Active State
 
