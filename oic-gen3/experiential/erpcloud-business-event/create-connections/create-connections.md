@@ -83,6 +83,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
     |
 
     ![Configure ADW connection](images/configure-adw-connection.png)
+    ![Configure ADW conn security](images/configure-adw-connection1.png)
 
 5. Click on ***Test***, followed by ***Save***. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
