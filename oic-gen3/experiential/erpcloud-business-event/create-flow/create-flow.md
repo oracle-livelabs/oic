@@ -46,15 +46,13 @@ We will start by creating a new integration and adding some basic info.
 ## Task 2: Define ERP Purchase Order (PO) Event trigger
 Add ERP PO Event trigger to the empty integration canvas.
 
-1. Click the ***+*** sign below *START* in the integration canvas.
+1. Select the configured ERP Cloud connection. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 
-2. Select the configured ERP Cloud adapter. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
+2. On the Basic Info page, for *What do you want to call your endpoint?* element, enter `ERP_POEvent`.
 
-3. On the Basic Info page, for *What do you want to call your endpoint?* element, enter `ERP_POEvent`.
+3. Click ***&gt; (Next step)***.
 
-4. Click ***&gt; (Next step)***.
-
-5. On the Request page, select the following values:
+4. On the Request page, select the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -72,13 +70,13 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 > **Note:** The filter is not required, however it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***&gt; (Next step)***.
+5. Click ***&gt; (Next step)***.
 
-7. On the Summary page, click ***Done***.
+6. On the Summary page, click ***Done***.
 
     ![ERP Adapter Wizard Summary](images/erp-adapter-summary.png)
 
-8. Click ***Save*** to persist changes.
+7. Click ***Save*** to persist changes.
 
 
 ## Task 3: Add the ADW invoke activity
