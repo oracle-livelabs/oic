@@ -84,11 +84,15 @@ Notice how the Instance advises you via the green markers that it was successful
 
 ## Task 2: Additional Orders and Test  
 
-In order to have a robust example for the Console Dashboards, you will need an additional orders. 
+In order to have a robust example for the Console Dashboards, you will need additional orders. 
 
-1. Download the sample from this link
+1. Download the sample from this link and save to your desktop or locale drive
 
-2. Run the Test  
+2. Select **ReceiveOrder(Post)**
+
+3. Select tab named **Body** and select **File**, Choose the json file you saved
+
+4. Click **Test**. 
 
 ## Task 2: Console View
 
