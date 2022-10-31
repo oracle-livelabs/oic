@@ -55,7 +55,7 @@ Testing your mappings is vital. Ensuring that the mapped item function correctly
             c. Click text and copy the json file information
         4. Click "Test", located far center right of screen
         5. You will receive a message box and then see the Activity stream 
-            a. Activity stream will showcase in Ascending order and will show green if successful
+            a. Activity stream will showcase in Ascending order and will show green, if successful
             b. Activity stream will showcase yellow or red, if unsuccessful
 
 Now your turn to try!
@@ -64,7 +64,7 @@ Now your turn to try!
 
 ## Task 1: Test Mapping
 
-1. Open the Integration named **Order Processing Lab** in Test. Locate the drop down next to Operation and select ReceiveOrder(Post). Click on the tab named **Body**, notice that the information below is already displayed.
+1. Open the Integration named **Order Processing Lab** in Test. Locate the drop down next to **Operation** and select ReceiveOrder(Post). Click on the tab named **Body**, notice that the information below is already displayed.
 
 ```
     <copy>
@@ -78,6 +78,7 @@ Now your turn to try!
 } 
     </copy>
 ```
+
 2. Click **Test**.  A confirmation will appear and the Activity Stream will display the Instance.
 Notice how the Instance advises you via the green markers that it was successful. Yellow and Red markers will also display when an Instance is not successful and needs corrections.
 
