@@ -64,7 +64,7 @@ Now your turn to try!
 
 ## Task 1: Test Mapping
 
-Open the Integration named **Order Processing Lab** in Test. Copy the following information:
+1. Open the Integration named **Order Processing Lab** in Test. Locate the drop down next to Operation and select ReceiveOrder(Post). Click on the tab named **Body**, notice that the information below is already displayed.
 
 ```
     <copy>
@@ -78,8 +78,16 @@ Open the Integration named **Order Processing Lab** in Test. Copy the following 
 } 
     </copy>
 ```
+2. Click **Test**.  A confirmation will appear and the Activity Stream will display the Instance.
+Notice how the Instance advises you via the green markers that it was successful. Yellow and Red markers will also display when an Instance is not successful and needs corrections.
 
-You will need to open the Console page to verify.
+## Task 2: Additional Orders amd Test  
+
+In order to have a robust example for the Console Dashboards, you will need an additional orders. 
+
+1. Download the sample from this link
+
+2. Run the Test again 
 
 ## Task 2: Console View
 

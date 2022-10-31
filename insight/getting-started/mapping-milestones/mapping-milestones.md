@@ -41,7 +41,7 @@ As part of the mapping process you must also define extraction criteria for the 
 
 ### How to Map an Identifier
 
-    A. Click your Identifier, this will expand the view area.   
+    A. Click dropdown and choose Identifier, this will expand the view area.   
         1. Under mappings you will click on "Open mapped integration to define extraction criteria" 
         2. This will open the Integrations, that was previously used, for you to map 
         3. You will see your Identifier on the right
