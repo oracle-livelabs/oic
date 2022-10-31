@@ -82,13 +82,13 @@ Now your turn to try!
 2. Click **Test**.  A confirmation will appear and the Activity Stream will display the Instance.
 Notice how the Instance advises you via the green markers that it was successful. Yellow and Red markers will also display when an Instance is not successful and needs corrections.
 
-## Task 2: Additional Orders amd Test  
+## Task 2: Additional Orders and Test  
 
 In order to have a robust example for the Console Dashboards, you will need an additional orders. 
 
 1. Download the sample from this link
 
-2. Run the Test again 
+2. Run the Test  
 
 ## Task 2: Console View
 
