@@ -8,6 +8,7 @@ Estimated Time: 10 minutes
 
 ## Prerequisites
 
+
 This lab assumes you have:
 
 - Completed Labs 1 through 8
@@ -20,19 +21,13 @@ In this lab, you will learn how to create the following:
 - Modify your Draft into a Configured state
 - Activate your Insight Model
 
-You can associate an Insight Model to a business process implementation in integrations.
+You can associate an Insight Model to a business process implementation in Integrations.
 
 To associate a Model to a business process implementation in Integrations, you must map Indicators to Integrations actions.  Mapping Indicators involves identifying execution points that best represent when the milestone has been passed.
 
 As seen in Lab 6, part of the mapping process you must also define extraction criteria for the Indicators. Extraction criteria define the rules to extract information from runtime messages and is expressed using XPath expressions. Before you can activate a model, the extraction criteria must be defined.
 
 First practice the steps to familiarize yourself with the commands and then do the exercise.
-
-### Deactivate a Model
-
-    A. Click on the **DeActivate** button, you will receive deactivate confirmation box and click **Deactivate".  This may take upto 5 minutes to accomplish. 
-        1. Click on your model name
-        2. Click on **Open Draft**
 
 ### How to Map an Indicator
 
@@ -72,19 +67,26 @@ Activating a Model allows it to be tested or used. Active models showcase status
 
 Now your turn to try!
 
- You will map your Indicators to an existing integration. The Integration you will use is called **Order Processing Lab**. You will move your active model into a draft mode. After completing mapping the Indicators you will move your draft model into a configured model state and then re-active model state.
+ You will map your Indicators to an existing integration. The Integration you will use is called **Order Processing Lab**. After completing mapping the Indicators you will move your draft model into a configured model state and then re-active model state.
 
 ## Task 1: Map Indicators
 
-Access your active model and de-active it to return to a Draft model state. You will map 5 Indicators.<br />
-![deactivate](./images/deactivate.jpg " ") <br />
-Open the Draft
-![draft](./images/draft.jpg " ")  <br />
-Let's start with the **Order Received** Milestone Indicators. Set the **Country** Indicator Extraction Criteria to **$Country**.<br />
-![indicatorproduct](./images/indicator-product.jpg " ")
- Set the **Product** Indicator Extraction Criteria to **$Product**. Set the **Quantity** Indicator Extraction Criteria to **$Quantity**. <br />
-Set the **UnitPrice** Indicator Extraction Criteria to **$UnitPrice**. Set the **Total** Indicator Extraction Criteria to **$Total**. <br />
-Now let's map the new milestone and Identifier <br />
+Access your deactivated model. You will map 5 Indicators.<br />
+
+Let's start with the **Order Received** Milestone Indicators. Under the **Extraction Criteria**,  Click **Open mapped integration to define extraction criteria** 
+
+1. Set the **Country** Indicator Extraction Criteria to **$Country**.<br />
+![indicatorproduct](./images/indicator-product.jpg " "). 
+
+2. Set the **Total** Indicator Extraction Criteria to **$Total**. 
+
+3. Set the **Product** Indicator Extraction Criteria to **$Product**.
+ 
+4. Set the **Quantity** Indicator Extraction Criteria to **$Quantity**. <br />
+
+5. Set the **UnitPrice** Indicator Extraction Criteria to **$UnitPrice**.  
+
+Now let's map the new Standard milestone and Identifier <br />
 
 ## Task 2: Map Milestone and Identifiers  
 
