@@ -8,7 +8,6 @@ Estimated Time: 10 minutes
 
 ## Prerequisites
 
-
 This lab assumes you have:
 
 - Completed Labs 1 through 8
@@ -73,15 +72,15 @@ Now your turn to try!
 
 Access your deactivated model. You will map 5 Indicators.<br />
 
-Let's start with the **Order Received** Milestone Indicators. Under the **Extraction Criteria**,  Click **Open mapped integration to define extraction criteria** 
+Let's start with the **Order Received** Milestone Indicators. Under the **Extraction Criteria**,  Click **Open mapped integration to define extraction criteria**
 
 1. Set the **Country** Indicator Extraction Criteria to **$Country**.<br />
-![indicatorproduct](./images/indicator-product.jpg " "). 
+![indicatorproduct](./images/indicator-product.jpg " ").
 
-2. Set the **Total** Indicator Extraction Criteria to **$Total**. 
+2. Set the **Total** Indicator Extraction Criteria to **$Total**.
 
 3. Set the **Product** Indicator Extraction Criteria to **$Product**.
- 
+
 4. Set the **Quantity** Indicator Extraction Criteria to **$Quantity**. <br />
 
 5. Set the **UnitPrice** Indicator Extraction Criteria to **$UnitPrice**.  
@@ -90,6 +89,7 @@ Now let's map the new Standard milestone and Identifier <br />
 
 ## Task 2: Map Milestone and Identifiers  
 
+Indicators can be mapped to more than one Milestone to an Identifier . Let's map another Milestone to the Order Number
 Map your **Shipped** Milestone **On Exit** event to the **PrepareShipping** activity. <br />
 Now onto the Identifier. Set your **Order Number** Identifier Extraction Criteria for the **Shipped** Milestone to **$OrderNumber**.<br />
 Set your **Order Number** Identifier Extraction Criteria for the **Order Completed** Milestone to **$OrderNumber**.
@@ -117,4 +117,4 @@ More about indicators can be found at [https://docs.oracle.com/en/cloud/paas/int
 ## Acknowledgements
 
 - **Author** - Lucy Cortez, Product Enablement Management - Oracle Integration
-- **Last Updated By/Date** - Lucy Cortez, April 2022
+- **Last Updated By/Date** - Lucy Cortez, October 2022
