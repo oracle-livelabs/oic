@@ -52,7 +52,6 @@ If you just created a new Cloud account following the instructions in Getting St
 | Message Packs |1|
 | Access Token | If this field is displayed, you are creating an instance as a non-federated user. Sign in as a federated user and restart creating an instance.|
 
-	![OCI Federated User Login](./images/provision-oic-instance-1.png)
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as **Active** in the State column and you'll receive an email. You are now ready to access your instance.
 Please note that once Instance is created, an instance is visible only in the region in which it was created
