@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Oracle Integration 3 - Experiential - ERP Cloud Business Events",
+    "workshoptitle": "ERP Cloud Business Events with Oracle Integration 3",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
