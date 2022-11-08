@@ -1,8 +1,10 @@
 # Create Connections
-Before you can build an integration, you have to create the connections to the applications with which you want to share data. Follow these steps to create an ERP Cloud connection.
 
 ## Introduction
 This demo lab will walk you through the steps to create connections for all the services which will used in the ERP Purchase Order Event integration.
+
+Before you can build an integration, you have to create the connections to the applications with which you want to share data. Follow these steps to create an ERP Cloud connection.
+
 
 Estimated Time: 10 minutes
 

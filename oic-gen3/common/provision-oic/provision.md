@@ -1,10 +1,11 @@
 # Provision Oracle Integration 3
 
-> **Note:** This step is required **only** if have have not yet provisioned an Oracle Integration 3 instance.
-
 ## Introduction
 
 This lab walks you through the process of provisioning an instance of Oracle Integration 3, assuming you don't already have one available to you. If you do, you can skip this lab and move on to the next one.
+
+> **Note:** This step is required **only** if have have not yet provisioned an Oracle Integration 3 instance.
+
 
 Estimated Time: 10 minutes
 

@@ -5,7 +5,20 @@ The ERP Cloud Business Event Workshop will cover the recommended steps to comple
 
 This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to the Oracle Autonomous Database. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in Oracle Integration 3.
 
-Estimated workshop time: 1 hour
+Estimated workshop time: 2 hours
+
+### Objectives
+In this workshop, you will learn the following:
+- Create Connections and Integrations in OIC
+- Capture ERP Purchase Order events and orchestrate the data to a target database table
+
+### Prerequisites
+This lab assumes you have the following:
+- Oracle Free Tier, Always Free, Paid or Live Labs Cloud Account
+- Oracle Integration environment
+- Oracle Autonomous Database environment (either ADW or ATP)
+- Oracle ERP Cloud access
+
 
 ## What is Oracle Integration 3
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
@@ -35,18 +48,6 @@ The Oracle Autonomous Data Warehouse Adapter provides the following benefits:
 - Support for the bulk data import operation
 - Support for invocation of stored procedures in the Oracle database.
 - Support for updating or inserting multiple records in a single request.
-
-## Objectives
-In this workshop, you will learn the following:
-- Create Connections and Integrations in OIC
-- Capture ERP Purchase Order events and orchestrate the data to a target database table
-
-## Prerequisites
-This lab assumes you have the following:
-- Oracle Free Tier, Always Free, Paid or Live Labs Cloud Account
-- Oracle Integration environment
-- Oracle Autonomous Database environment (either ADW or ATP)
-- Oracle ERP Cloud access
 
 
 You may now **proceed to the next lab**.
