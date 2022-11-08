@@ -19,7 +19,7 @@
         },
         {
             "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
+            "filename": "../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Provision an Oracle Autonomous Database",
