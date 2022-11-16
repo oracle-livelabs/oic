@@ -30,7 +30,7 @@ This lab assumes you have:
 
 2. Pick any existing SR number from HR Help Service Request page and update the SR number in the UpdateFusion xslt.
 
- ![XSLT update](images/Screenshot1.png)
+ ![XSLT update](images/screenshot1.png)
 
 3. Save and Activate the OIC interface.
 
@@ -38,11 +38,11 @@ This lab assumes you have:
 
  Click **Metadata URL**
 
-  ![Get the endpoint url](images/Screenshot2.png)
+  ![Get the endpoint url](images/screenshot2.png)
 
  Copy Endpoint URL.
 
- ![Get the endpoint url](images/Screenshot3.png)
+ ![Get the endpoint url](images/screenshot3.png)
 
 ## Task 2: JaaS (Jitsi as a Service) configurations
 
@@ -64,9 +64,9 @@ This lab assumes you have:
  | Authorization header  | `Basic <<base64encoded value in the previous step>>`|
  | Event | `ROOM_CREATED`|
 
-![Webhook configuration](images/Screenshot4.png)
+![Webhook configuration](images/screenshot4.png)
 
-![Endpoint url](images/Screenshot5.png)
+![Endpoint url](images/screenshot5.png)
 
 Click **Add endpoint**
 
@@ -74,9 +74,9 @@ Click **Add endpoint**
 
 4. You may notice the OIC instance are created and its triggered from the webhook configuration created in the previous step.
 
-![OIC instances](images/Screenshot6.png)
+![OIC instances](images/screenshot6.png)
 
-![InvestigationExecSummary field](images/Screenshot7.png)
+![InvestigationExecSummary field](images/screenshot7.png)
 
 Now you may see the Investigation Exec Summary field updated with the 8x8 ROOM_CREATED event data against the SR number provided the xslt in the Task1.
 
