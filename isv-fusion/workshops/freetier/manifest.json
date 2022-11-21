@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Get Started with Oracle Integration",
+    "workshoptitle": "ISV Application Integration with Oracle Fusion Apps",
     "help": "livelabs-help_oic_us@oracle.com",
     "tutorials": [
         {
@@ -11,34 +11,19 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Provision an Oracle Integration Instance",
-            "description": "Follow these steps to create a new OCI Integration service instance",
-            "filename": "../../../common/provision-oic/provision.md"
+            "title": "Lab 1: Embed ISV application within Fusion Application Page",
+            "description": "This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page using the application composer.",
+            "filename": "../../../isv-fusion/lab1-embedisvapp/embedisvapp.md"
         },
         {
-            "title": "Lab 2: Enable File Server",
-            "filename": "../../../common/enable-file-server/enable-file-server.md"
+            "title": "Lab 2: Data Transfer from Fusion Application to 8x8 Jitsi (ISV) ",
+            "description": "This lab will walk you through the steps to implement data transfer from Fusion to 8x8 Jitsi video conference platform.",
+            "filename": "../../../isv-fusion/lab2-fusiontoisv/data-fusiontoisv.md""
         },
         {
-            "title": "Lab 3: Provision an Oracle Autonomous Database",
-            "type": "freetier",
-            "filename": "../../../common/adb-provision/adb-provision.md"
-        },
-        {
-            "title": "Lab 4: Setup",
-            "filename": "../../setup/setup.md"
-        },
-        {
-            "title": "Lab 5: Create Connections",
-            "filename": "../../create-connections/create-connections.md"
-        },
-        {
-            "title": "Lab 6: Create Integration flow",
-            "filename": "../../create-flow/create-flow.md"
-        },
-        {
-            "title": "Lab 7: Run end-to-end Integration Flow",
-            "filename": "../../run-demo/run-demo.md"
+            "title": "Lab 3: Data Transfer from 8x8 Jitsi Application to Fusion Application",
+            "description": "This lab will walk you through the steps to implement data transfer from 8x8 Jitsi video conference platform to Fusion application.",
+            "filename": "../../../isv-fusion/lab3-isvtofusion/data-isvtofusion.md"
         },
         {
             "title": "Need Help?",
