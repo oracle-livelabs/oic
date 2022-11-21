@@ -7,7 +7,7 @@ Estimated Time: 30 minutes
 
 ### Objectives
 You will execute the following:
-- JaaS integration code
+- Download the JaaS integration code
 - Create VBCS application with 8x8 video app.
 - Create new sandbox in the Fusion application.
 - ISV integration within the Fusion application using Springboard.
@@ -19,7 +19,7 @@ This lab assumes you have:
 - Basic knowledge on VBCS
 - Basic knowledge on Fusion technicals (sandbox , application composer , etc)
 
-## Task 1: JaaS integration code
+## Task 1: Download the JaaS integration code
 
 1. Go to https://jaas.8x8.vc url in browser and Sign in with trail account created in the previous lab.
 

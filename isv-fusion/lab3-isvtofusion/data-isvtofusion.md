@@ -13,7 +13,7 @@ You will execute the following:
 - Capture the ROOM_CREATED event data in OIC from 8x8 Jitsi platform Webhook configuration.OIC updates the event data in the
   Investigation Exec Summary field in the Fusion application page (HR Help Desk Service request page) through Fusion Cloud ERP
   adapter.
-- Oracle integration cloud implementation
+- The Oracle integration cloud implementation
 - JaaS (Jitsi as a Service) configurations.
 
 ### Prerequisites
@@ -24,7 +24,7 @@ This lab assumes you have:
 - Completed all the previous labs.
 
 
-## Task 1: Oracle Integration Cloud implementation
+## Task 1: The Oracle Integration Cloud implementation
 
 1. Import the JITSIEVENTS_01.00.0000.iar file in the OIC instance.
 
