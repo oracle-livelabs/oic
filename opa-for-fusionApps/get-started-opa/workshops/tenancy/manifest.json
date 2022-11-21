@@ -1,0 +1,40 @@
+{
+    "workshoptitle": "Get Started with Process Automation",
+    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
+                "sample.json":"../../data-load/files/sample.json",
+                "step2.md":"../../data-load/files/step2.md"},
+    "variables": ["../../variables/variables.json",
+                 "../../variables/variables-in-another-file.json"],
+    "help": "livelabs-help-oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Provision a Process Automation Instance",
+            "description": "Follow these steps to create a new OCI Process automation instance",
+            "filename": "../../../common/provision-opa/provision.md"
+        },
+        {
+            "title": "Lab 1: Create Structured Process Application",
+            "description": "Lab to create a process application using structured process",
+            "filename": "../../create-structured-process-app/create-structured-process-app.md"
+        },
+        {
+            "title": "Lab 2: Create a Decision Model",
+            "description": "Lab to create a decision model",
+            "filename": "../../decision/create-decision-model.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
