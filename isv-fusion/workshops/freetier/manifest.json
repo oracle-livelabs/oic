@@ -13,17 +13,17 @@
         {
             "title": "Lab 1: Embed ISV application within Fusion Application Page",
             "description": "This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page using the application composer.",
-            "filename": "../../../lab1-embedisvapp/embedisvapp.md"
+            "filename": "../../lab1-embedisvapp/embedisvapp.md"
         },
         {
             "title": "Lab 2: Data Transfer from Fusion Application to 8x8 Jitsi (ISV) ",
             "description": "This lab will walk you through the steps to implement data transfer from Fusion to 8x8 Jitsi video conference platform.",
-            "filename": "../../../lab2-fusiontoisv/data-fusiontoisv.md""
+            "filename": "../../lab2-fusiontoisv/data-fusiontoisv.md""
         },
         {
             "title": "Lab 3: Data Transfer from 8x8 Jitsi Application to Fusion Application",
             "description": "This lab will walk you through the steps to implement data transfer from 8x8 Jitsi video conference platform to Fusion application.",
-            "filename": "../../../lab3-isvtofusion/data-isvtofusion.md"
+            "filename": "../../lab3-isvtofusion/data-isvtofusion.md"
         },
         {
             "title": "Need Help?",
