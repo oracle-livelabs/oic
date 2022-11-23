@@ -1,72 +1,96 @@
 # Lab 1 : Embed ISV application within Fusion Application Page
 
 ## Introduction
-This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page using the application composer.
+
+This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page.
 
 Estimated Time: 30 minutes
 
 ### Objectives
+
 You will execute the following:
+
 - Download the JaaS integration code
 - Create VBCS application with 8x8 video app.
 - Create new sandbox in the Fusion application.
-- ISV integration within the Fusion application using Springboard.
+- Embed the VBCS application within Fusion application page using Springboard.
+- Embed the VBCS application within Fusion application page using page composer.
 - Embed the VBCS application within Fusion application page using application composer.
 - Launch the 8x8 video app from fusion application page.
 
 ### Prerequisites
+
 This lab assumes you have:
+
 - Basic knowledge on VBCS
-- Basic knowledge on Fusion technicals (sandbox , application composer , etc)
+- Basic knowledge on Oracle Fusion Cloud technical (sandbox , application composer , page composer ,springboard)
 
 ## Task 1: Download the JaaS integration code
 
-1. Go to https://jaas.8x8.vc url in browser and Sign in with trail account created in the previous lab.
+ 1. Go to [JaaS Portal](https://jaas.8x8.vc) and Sign in with trail account that created in the earlier lab.
 
-2. Click on **Integrate meetings iFrame** under **My Video app**.
+ 2. Click on **Integrate meetings iFrame** under **My Video app**.
+ ![Download iframe html](images/screenshot9.png)
 
-![Download iframe html](images/screenshot9.png)
-
-3. Click **Download Integration Code**
-
-  It downloads index.html file and this file will be used in the following lab.
-
+ 3. Click on **Download Integration Code**
+ It downloads index.html file and this file will be used in the following lab.
 
 ## Task 2: Create VBCS application
 
-1. Login to Oracle Visual Builder.
-2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration) ** > **Finish**.
-3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
+ 1. Login to Oracle Visual Builder.
+ 2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration)** > **Finish**.
+ 3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
 
-   ![VBCS Webapplication](images/screenshot1.png)
+   ![VBCS Web application](images/screenshot1.png)
 
 ## Task 3: Add the 8x8 Video app within the VBCS web application
 
-1. Import the **index.html** file into the Resources folder. **Resources (Right Click) ** > **Import**.
+1. Copy the content from **index.html** (downloaded in the task1)  and paste into **launchapp.html** file.
 
-2. Copy the code snippet from main-start file and paste in the main/main-start page code section.
+2. Copy the below code snippet and paste in the main/main-start page code section.
 
+   
+    <details>
+      <summary>*main-start*</summary>
+         ```html
+         <copy>
+        <!-- <div class=”oj-flex”> -->
+    <div class="oj-flex-item" style="padding-top:10px">
+    <div> 
+    <h1 class="oj-flex-item oj-sm-12 oj-md-12"><oj-bind-text
+                                                   value="[[ '8x8 Jitsi Integration Using VBCS ' ]]"></oj-bind-text></h1> 
+    <iframe width=100% height="500" allowtransparency="true" style="background-color:#FFFFFF;border:none" :src="[[ $application.path + 'resources/launchapp.html' ]]"> </iframe>
+    </div> 
+
+
+     </div> 
+
+        </copy>
+         ```
+   </details>
    ![8x8 application within VBCS page](images/screenshot2.png)
 
 3. Go to **isvfusionwebapp** > **Settings** > **Security**
 
     a. Uncheck **Require authenticated access**
+
     b. Select **Allow embedding in any application domain**.
+
     c. Check **Enable implicit grant for Service Connections**.
 
-     ![VBCS Webapplication](images/screenshot10.png)
+       ![VBCS Web application](images/screenshot10.png)
 
-3. Click **Preview**.
+4. Click **Preview**.
 
-4. Stage the application. Click **Hamburger icon (Right top corner)** > **Stage**.
+5. Stage the application. Click **Hamburger icon (Right top corner)** > **Stage**.
 
-5. Publish the application. Click **Hamburger icon (Right top corner)** > **Publish**.
+6. Publish the application. Click **Hamburger icon (Right top corner)** > **Publish**.
 
-6. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
+7. Launch the live application. Click **All Application** > **ISVFusionIntegration** > **Live** > **isvfusionwebapp**.
 
   Please keep the live url handy as it will be used in the following tasks.
 
-## Task 4: ISV integration within the Fusion application using Springboard.
+## Task 4: ISV integration within the Fusion application using Springboard
 
 1. Login to Fusion Application
 
@@ -96,9 +120,7 @@ This lab assumes you have:
 
    ![Springboard Configuration](images/screenshot8.png)
 
-
-## Task 5: Embed the VBCS application within the Fusion application page using application composer.
-
+## Task 5: Embed the VBCS application within the Fusion application page using application composer
 
 1. Login to Fusion Application with Administrator role
 
@@ -112,33 +134,27 @@ This lab assumes you have:
 
 6. Click **Standard Objects** > **Service Request** > **Actions and Links** > **Actions** > **Create**.
 
-  ![Fusion Start Meet link Configuration](images/screenshot3.png)
+   ![Fusion Start Meet link Configuration](images/screenshot3.png)
+   
+   | **Element**        | **Value** |
+   | --- | ----------- |
+   | Display Label | `Start Meet`   |
+   | Type  | `Link`|
+   | Edit Script | `return *use the Live url from the previous task*`|
 
- | **Element**        | **Value** |       
- | --- | ----------- |
- | Display Label | `Start Meet`   |
- | Type  | `Link`|
- | Edit Script | `return *use the Live url from the previous task*`|
-
-    Leave the rest of the values as default and Click **Save**.
+   Leave the rest of the values as default and Click **Save**.
 
 7. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
-
   ![Fusion Page Layout Configuration](images/screenshot4.png)
 
 8. Click **Edit icon**
+   Add Start Meet - Link from Available fields to Selected fields then Click **Save and Close**.
 
-Add Start Meet - Link from Available fields to Selected fields then Click **Save and Close**.
+9. Click **Hamburger Icon >**Help Desk**>**HR Service Request**.
+   You may notice the Start Meet field has been added to the each Service Request Records.
+ ![Start Meet link embedded within Fusion Page](images/screenshot5.png)
 
-9. Click **Hamburger Icon > **Help Desk** > **HR Service Request**.
-
-You may notice the Start Meet field has been added to the each Service Request Records.
-
- ![Start Meet link emdeded within Fusion Page](images/screenshot5.png)
-
-
- ## Task 6: Embed the VBCS application within the Fusion application page using page composer.
-
+## Task 6: Embed the VBCS application within the Fusion application page using page composer
 
  1. Login to Fusion Application with Administrator role
 
@@ -150,7 +166,7 @@ You may notice the Start Meet field has been added to the each Service Request R
 
  5. Go to **Tools** > **Page Composer** then Click **Structure** tab
 
-  ![Page composer](images/screenshot11.png)
+    ![Page composer](images/screenshot11.png)
 
  6. Expand the Page Composer editor in the browser. Select **panelGroupLayout:vertical** tag. (Refer the screenshot below)
 
@@ -177,6 +193,7 @@ You may notice the Start Meet field has been added to the each Service Request R
     ![Page Editor](images/screenshot16.png)
 
     a. Enter "8x8" in the Text field. then Go to **Advanced** tab.
+
     b. Select **auto** for the **Stretch Content** field
 
     ![Page Editor](images/screenshot17.png)
@@ -185,8 +202,7 @@ You may notice the Start Meet field has been added to the each Service Request R
 
 You may now **proceed to the next lab**.
 
-
 ## Acknowledgements
 
-* **Author** - Subburam Mathuraiveeran, Senior Cloud Engineer, Oracle North America Cloud Engineering
-* **Last Updated By/Date** - Subburam Mathuraiveeran, Aug 2022
+- **Author** - Subburam Mathuraiveeran, Senior Cloud Engineer, Oracle North America Cloud Engineering
+- **Last Updated By/Date** - Subburam Mathuraiveeran, Nov 2022

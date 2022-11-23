@@ -2,11 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, we are going to present how an ISV application (8x8 video conferencing service) can be integrated into the Oracle Fusion apps and initiate the video conferencing from the Fusion Application page itself.
-
-1) Embed the video application within Fusion application and initiate the video conferencing. (Technology used : VBCS , Application Composer)
-2) Pass the fusion application data to 8x8 application. (Technology used : VBCS , Application Composer)
-3) Get the data from 8x8 to Fusion application. (Technology used : OIC)
+In this workshop, we are going to present how an ISV application (8x8 video conferencing service) can be integrated into the Oracle Fusion Cloud and initiate the video conferencing from the Fusion Application page itself.
 
 Estimated Time: 30 minutes
 
@@ -14,20 +10,18 @@ Estimated Time: 30 minutes
 
 In this workshop, you will learn how to:
 
-*  Embed the video application within Fusion application and initiate the video conferencing. (Technology used : VBCS ,     Application Composer)
-*  Pass the fusion application data to 8x8 application. (Technology used : VBCS , Application Composer)
-*  Get the data from 8x8 to Fusion application.
+* Different ways of embedding the 8X8 video app within Fusion application and initiate the video conferencing.
+* Pass the fusion application data to 8x8 application.
+* Get the data from 8x8 JaaS platform to Fusion application using webhook.
 
-### What Do You Need?
+### Prerequisites
 
-* Provision of Oracle Cloud Free Tier with OIC/VBCS.
-* An Oracle Fusion Apps instance
-* JaaS trail account .
-  Go to **https://jaas.8x8.vc** url in browser and Sign up for the trail account.
+* Provision of Oracle Cloud Free Tier with Oracle Integration Cloud (OIC).
+* An Oracle Fusion Cloud instance
+* Create JaaS trail account . (Go to [JaaS Sign up](https://jaas.8x8.vc) and Sign up for the trail account).
 * A Chrome browser.
-
 
 ## Acknowledgements
 
 * **Author** - Subburam Mathuraiveeran, Senior Cloud Engineer, Oracle North America Cloud Engineering
-* **Last Updated By/Date** - Subburam Mathuraiveeran, Aug 2022
+* **Last Updated By/Date** - Subburam Mathuraiveeran, Nov 2022
