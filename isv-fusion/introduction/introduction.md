@@ -21,6 +21,8 @@ In this workshop, you will learn how to:
 * Create JaaS trail account . (Go to [JaaS Sign up](https://jaas.8x8.vc) and Sign up for the trail account).
 * A Chrome browser.
 
+You may now **proceed to the next lab**.
+
 ## Acknowledgements
 
 * **Author** - Subburam Mathuraiveeran, Senior Cloud Engineer, Oracle North America Cloud Engineering

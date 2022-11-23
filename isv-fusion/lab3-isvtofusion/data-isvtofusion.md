@@ -29,7 +29,7 @@ This lab assumes you have:
 1. Import the JITSIEVENTS_01.00.0000.iar file in the OIC instance.
 
 2. Pick any existing SR number from HR Help Service Request page and update the SR number in the UpdateFusion xslt.
- ![XSLT update](images/screenshot1.png)
+ ![XSLT update](./images/screenshot1.png)
 
 3. Save and Activate the OIC interface.
 
@@ -37,11 +37,11 @@ This lab assumes you have:
 
  Click **Metadata URL**
 
-  ![Get the endpoint url](images/screenshot2.png)
+  ![Get the endpoint url](./images/screenshot2.png)
 
  Copy Endpoint URL.
 
- ![Get the endpoint url](images/screenshot3.png)
+ ![Get the endpoint url](./images/screenshot3.png)
 
 ## Task 2: JaaS (Jitsi as a Service) configurations
 
@@ -59,17 +59,17 @@ This lab assumes you have:
  | Endpoint URL | `enter the oic url created in the previous step`   |
  | Authorization header  | `Basic <<base64encoded value in the previous step>>`|
  | Event | `ROOM_CREATED`|
-![Webhook configuration](images/screenshot4.png)
-![Endpoint url](images/screenshot5.png)
+![Webhook configuration](./images/screenshot4.png)
+![Endpoint url](./images/screenshot5.png)
 Click **Add endpoint**
 
 5. Launch the 8x8 video app from the HR Service Request Page through Start Meet link and Join the meeting.
 
 6. You may notice the OIC instance are created and its triggered from the webhook configuration created in the previous step.
 
-![OIC instances](images/screenshot6.png)
+![OIC instances](./images/screenshot6.png)
 
-![InvestigationExecSummary field](images/screenshot7.png)
+![InvestigationExecSummary field](./images/screenshot7.png)
 
 Now you may see the Investigation Exec Summary field updated with the 8x8 ROOM_CREATED event data against the SR number provided the xslt in the Task1.
 
