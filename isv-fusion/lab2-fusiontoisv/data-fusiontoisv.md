@@ -35,7 +35,7 @@ This lab assumes you have:
 
   5. Check Pass On URL option.
 
-      ![Variable declaration](images/screenshot1.png)
+      ![Variable declaration](./images/screenshot1.png)
 
   6. Go to **isvfusionwebapp** > **main** > **main-start** > **code**
 
@@ -85,9 +85,9 @@ This lab assumes you have:
 
   9. Launch the 8x8 video app from the HR Service Request Page through Start Meet link.
 
-    ![Select Service Request](images/screenshot2.png)
+    ![Select Service Request](./images/screenshot2.png)
 
-    ![SR number visible in the VBCS](images/screenshot3.png)
+    ![SR number visible in the VBCS](./images/screenshot3.png)
 
 You may now **proceed to the next lab**.
 

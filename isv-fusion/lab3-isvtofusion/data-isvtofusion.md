@@ -26,14 +26,18 @@ This lab assumes you have:
 
 ## Task 1: The Oracle Integration Cloud implementation
 
-1. Import the JITSIEVENTS_01.00.0000.iar file in the OIC instance.
+1. Download the **JITSIEVENTS_01.00.0000.iar** file from below link and    import into the OIC instance.
 
-2. Pick any existing SR number from HR Help Service Request page and update the SR number in the UpdateFusion xslt.
+   [OIC Code](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jyHA4nclWcTaekNIdpKPq3u2gsLb00v_1mmRKDIuOEsp--D6GJWS_tMrqGmb85R2/n/c4u04/b/livelabsfiles/o/labfiles/JITSIEVENTS_01.00.0000.iar).
+
+2. Update the Oracle ERP Cloud adapter connection to point your fusion instance.
+
+3. Pick any existing SR number from HR Help Service Request page and update the SR number in the UpdateFusion xslt.
  ![XSLT update](./images/screenshot1.png)
 
-3. Save and Activate the OIC interface.
+4. Save and Activate the OIC interface.
 
-4. Keep the OIC service url handy and it will be used in the next task.
+5. Keep the OIC service url handy and it will be used in the next task.
 
  Click **Metadata URL**
 
@@ -49,8 +53,8 @@ This lab assumes you have:
 
 2. Go to  [Online Base64 Converter](https://www.base64decode.org/) and Click **Encode**
 
-3. Enter the oic credentials in the below format.
-   username:password
+3. Enter the oic user credentials in the below format.
+   **username:password**  (This user should have ServiceInvoker role assigned)
    Click **Encode**
 
 4. Click **Webhooks** > **Add endpoint**.
