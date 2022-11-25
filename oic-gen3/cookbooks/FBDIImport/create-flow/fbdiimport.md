@@ -69,7 +69,8 @@ A file browser dialog appears.
 ## Task 2: Upload the FBDI file to the FTP Server
 1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
 2. Copy the apinvoiceimport.zip file to the following directory.
-/upload/public_ftp/```<<oic usernumber>>```
+/home/users/```<your-folder-name>```/Output
+
 
 > **Note:** Please create directory if it is not there by following the steps given in the setup lab.
 
@@ -77,7 +78,6 @@ A file browser dialog appears.
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
 3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
-![Select Integration Style](../images/select-integration-style-1.png)
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
@@ -114,7 +114,7 @@ Accept all other default values.
 
 | **Element**        | **Value**   |
 | --- | ----------- |
-| Input Directory         | /home/users/```<<oic usernumber>>```       
+| Input Directory         | /home/users/```<your-folder-name>```/Output |
 | File Name | apinvoiceimport.zip |
 {: title="File Properties"}
 
@@ -241,4 +241,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Oct 2022
+* **Last Updated By/Date** - Subhani Italapuram, Nov 2022

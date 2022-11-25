@@ -13,7 +13,7 @@ Estimated Time: 2 hours
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
 * Enable File Server.
 * Configure File Server and connect with FTP client.
-* Create and configure common connections which are useful for this workshop like File Server, REST and ERP Connection
+* Create and configure common connections which are useful for this workshop like File Server and ERP Connection
 * Learn ERP Cloud Integration Design Patterns and Usecases.
 * Create an Integration flow which reads the file from FTP Server and imports into the ERP Cloud.
 

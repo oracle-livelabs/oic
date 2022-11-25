@@ -11,7 +11,6 @@ Estimated Time: 10 minutes
 In this lab, you will:
 - Create an Oracle FTP Connection
 
-
 ### Prerequisites
 This lab assumes you have:
 - Completed the provisioning of Oracle Integration Instance
