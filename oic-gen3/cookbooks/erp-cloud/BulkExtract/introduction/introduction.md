@@ -2,8 +2,7 @@
 
 ## About this Workshop
 
-
-This workshop shows you how to design and develop File-based Data Integration (FBDI) Import usecase in Oracle Integration 3 with the ERP Cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly import the data into the ERP Cloud in a secured way using various authentication schemes
+This workshop shows you how to design and develop a Bulk Extract Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
 
 Estimated Time: 2 hours
 
@@ -15,8 +14,7 @@ Estimated Time: 2 hours
 * Configure File Server and connect with FTP client.
 * Create and configure common connections which are useful for this workshop like File Server and ERP Connection
 * Learn ERP Cloud Integration Design Patterns and Usecases.
-* Create an Integration flow which reads the file from FTP Server and imports into the ERP Cloud.
-
+* Create an Integration flow which extracts the data from ERP Cloud Oracle Business Intelligence Publisher (BIP) and write the extract to an SFTP server.
 
 ### What Do You Need?
 
@@ -27,8 +25,6 @@ Estimated Time: 2 hours
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
 [First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
-
-### Leverage the ERP Cloud Adapter in Oracle Integration 3
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 
@@ -59,12 +55,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
 * [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/index.html)
-* [Invoke a File-Based Data Import (FBDI) Job](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/invoke-file-based-data-import-fbdi-job.html)
 
 ## Acknowledgements
 
-* **Author** - Kishore Katta, Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Nov 2022
+* **Author** - Kishore Katta & Subhani Italapuram, Product Management, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Dec 07 2022
