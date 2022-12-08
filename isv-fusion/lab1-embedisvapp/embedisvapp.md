@@ -30,7 +30,7 @@ This lab assumes you have:
  1. Go to [JaaS Portal](https://jaas.8x8.vc) and Sign in with trail account that created in the earlier lab.
 
  2. Click on **Integrate meetings iFrame** under **My Video app**.
- ![Download iframe html](./images/screenshot9.png)
+ ![Download iframe html](./images/iframecode.png)
 
  3. Click on **Download Integration Code**
  It downloads index.html file and this file will be used in the following lab.
@@ -41,7 +41,7 @@ This lab assumes you have:
  2. Click **New** > **Create Application** > **Enter Application Name (ISVFusionIntegration)** > **Finish**.
  3. Create Web Application . Click **Web Apps** > **Create Web Application** > **Enter Application Name** > **Create**
 
-   ![VBCS Web application](./images/screenshot1.png)
+   ![VBCS Web application](./images/vbcsapplication.png)
 
 ## Task 3: Add the 8x8 Video app within the VBCS web application
 
@@ -68,7 +68,7 @@ This lab assumes you have:
         </copy>
          ```
    </details>
-   ![8x8 application within VBCS page](./images/screenshot2.png)
+   ![8x8 application within VBCS page](./images/videoapplication.png)
 
 3. Go to **isvfusionwebapp** > **Settings** > **Security**
 
@@ -78,7 +78,7 @@ This lab assumes you have:
 
     c. Check **Enable implicit grant for Service Connections**.
 
-       ![VBCS Web application](./images/screenshot10.png)
+       ![VBCS Web application](./images/vbcssecurity.png)
 
 4. Click **Preview**.
 
@@ -108,17 +108,17 @@ This lab assumes you have:
 
 7. Click **Create** > **Create Group** > Enter the Group Name > **Save and Close**
 
-   ![Springboard Configuration](./images/screenshot6.png)
+   ![Springboard Configuration](./images/springboardconfig.png)
 
 8. Click **Create** > **Create Page Entry**
 
 9. Enter the details as per the screenshot below and Click **Save and Close**
 
-   ![Springboard Configuration](./images/screenshot7.png)
+   ![Springboard Configuration](./images/sbpageentryconfig.png)
 
 10.Now you can launch the 8x8 video app from the Fusion Springboard navigator.
 
-   ![Springboard Configuration](./images/screenshot8.png)
+   ![Springboard Configuration](./images/launchspringboard.png)
 
 ## Task 5: Embed the VBCS application within the Fusion application page using application composer
 
@@ -134,7 +134,7 @@ This lab assumes you have:
 
 6. Click **Standard Objects** > **Service Request** > **Actions and Links** > **Actions** > **Create**.
 
-   ![Fusion Start Meet link Configuration](./images/screenshot3.png)
+   ![Fusion Start Meet link Configuration](./images/startmeeetlink.png)
    
    | **Element**        | **Value** |
    | --- | ----------- |
@@ -145,14 +145,14 @@ This lab assumes you have:
    Leave the rest of the values as default and Click **Save**.
 
 7. Click **Service Request** > **Pages** > **Standard Layout (Under HR Help Desk Landing Page Layout)** > **Actions** > **Duplicate** > **Enter New Layout Name** > **Save and Edit**.
-  ![Fusion Page Layout Configuration](./images/screenshot4.png)
+  ![Fusion Page Layout Configuration](./images/pagelayout.png)
 
 8. Click **Edit icon**
    Add Start Meet - Link from Available fields to Selected fields then Click **Save and Close**.
 
 9. Click **Hamburger Icon >**Help Desk**>**HR Service Request**.
    You may notice the Start Meet field has been added to the each Service Request Records.
- ![Start Meet link embedded within Fusion Page](./images/screenshot5.png)
+ ![Start Meet link embedded within Fusion Page](./images/embedmeetlink.png)
 
 ## Task 6: Embed the VBCS application within the Fusion application page using page composer
 
@@ -166,17 +166,17 @@ This lab assumes you have:
 
  5. Go to **Tools** > **Page Composer** then Click **Structure** tab
 
-    ![Page composer](./images/screenshot11.png)
+    ![Page composer](./images/pagecomposer.png)
 
  6. Expand the Page Composer editor in the browser. Select **panelGroupLayout:vertical** tag. (Refer the screenshot below)
 
     Click **+ icon**
 
-    ![Page Editor](./images/screenshot12.png)
+    ![Page Editor](./images/pagecomposerconfig.png)
 
  7. Click **Components** > **Web Page +Add** then Click **Close**
 
-    ![Page Editor](./images/screenshot13.png)
+    ![Page Editor](./images/addwebpage.png)
 
  8. Right Click on **Web Page** > **Edit** in the Page composer editor
 
@@ -184,19 +184,19 @@ This lab assumes you have:
 
     b. Click **Apply** then **OK**
 
-    ![Page Editor](./images/screenshot14.png)
+    ![Page Editor](./images/pageeditorconfig1.png)
 
-    ![Page Editor](./images/screenshot15.png)
+    ![Page Editor](./images/pageeditorconfig2.png)
 
  9. Right Click on **showDetailFrame: Web Page** > **Edit** in the Page composer editor
 
-    ![Page Editor](./images/screenshot16.png)
+    ![Page Editor](./images/webpagehtml.png)
 
     a. Enter "8x8" in the Text field. then Go to **Advanced** tab.
 
     b. Select **auto** for the **Stretch Content** field
 
-    ![Page Editor](./images/screenshot17.png)
+    ![Page Editor](./images/webpagehtmlproperty.png)
 
     c. Click **Apply** then **OK**
 
