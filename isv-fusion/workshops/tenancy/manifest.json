@@ -1,0 +1,39 @@
+{
+    "workshoptitle": "ISV Application Integration with Oracle Fusion Apps",
+    "help": "livelabs-help_oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first one",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Provision Oracle Integration",
+            "filename": "../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Lab 2: Embed ISV application within Fusion Application Page",
+            "description": "This lab will walk you through the steps to embed ISV 8x8 video conferencing application inside fusion application page using the application composer.",
+            "filename": "../../lab1-embedisvapp/embedisvapp.md"
+        },
+        {
+            "title": "Lab 3: Data Transfer from Fusion Application to 8x8 Jitsi (ISV) ",
+            "description": "This lab will walk you through the steps to implement data transfer from Fusion to 8x8 Jitsi video conference platform.",
+            "filename": "../../lab2-fusiontoisv/data-fusiontoisv.md"
+        },
+        {
+            "title": "Lab 4: Data Transfer from 8x8 Jitsi Application to Fusion Application",
+            "description": "This lab will walk you through the steps to implement data transfer from 8x8 Jitsi video conference platform to Fusion application.",
+            "filename": "../../lab3-isvtofusion/data-isvtofusion.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
