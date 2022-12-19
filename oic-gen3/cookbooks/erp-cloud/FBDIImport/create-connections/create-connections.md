@@ -36,14 +36,14 @@ To access the File Server from an Integration, you will need to create an FTP Co
 | Username                | Your Oracle Integration username                      |
 | Password                | Your Oracle Integration password                      |
 
-5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the *Connection File Server was tested successfully* confirmation message. Click ***Save*** and exit the Connection editor.
+5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection File Server was tested successfully* confirmation message. Click ***Save*** and exit the Connection editor.
 
 
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration FTP Adatper](https://docs.oracle.com/en/cloud/paas/application-integration/ftp-adapter/ftp-adapter-capabilities.html)
+* [Using the FTP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/ftp-adapter/ftp-adapter-capabilities.html)
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
