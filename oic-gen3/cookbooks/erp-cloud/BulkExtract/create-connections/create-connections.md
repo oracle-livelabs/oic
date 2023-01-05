@@ -98,7 +98,8 @@ Keep all other values as default.
 
   ![erpcloud-callback](images/erpcloud-callback-conn.png)
 
-5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud Callback was tested successfully.* confirmation message. Click ***Save*** and exit the Connection editor.
+5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud Callback was tested successfully.* confirmation message.
+6. Click ***Save*** and exit the Connection editor.
 
 
 You may now **proceed to the next lab**.
