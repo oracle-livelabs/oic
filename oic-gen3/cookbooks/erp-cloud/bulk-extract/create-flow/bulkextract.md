@@ -1,4 +1,4 @@
-# ERP Cloud Extracts
+# Bulk Extract Integration Flow
 
 ## Introduction
 
@@ -53,11 +53,11 @@ This lab assumes you have:
     ```
     |
 
-Accept all other default values.
+    Accept all other default values.
 
 5. Click ***Create***.
 6. Click on Horizontal to change the layout to Horizontal
-![Select Horizontal Layout](../images/horizontallayout.png =30%x*)
+    ![Select Horizontal Layout](../images/horizontallayout.png =30%x*)
 
 ## Task 2: Create the Initiate Extract Activity
 
@@ -79,14 +79,14 @@ Accept all other default values.
     - Click ***&gt; (Next Step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![InitiateExtract](../images/initiateextract.png)
+    ![InitiateExtract](../images/initiateextract.png)
 
 ## Task 3: Define the data Mapping
 A map action named InitiateExtract is automatically created. We will define this data mapping.
 1. Select the action **Map InitiateExtract** and click on **...** and click on **Edit**
 2. In the Target section, expand the ***InitiateExtract Request*** element.
     - Right click on **Job Name** and then click on ***Create Target Node***
-![InitiateExtractMapping1](../images/initiate-extract-mapping1.png)
+    ![InitiateExtractMapping1](../images/initiate-extract-mapping1.png)
     - Click on ***Switch to Developer View*** which is there on bottom right corner.
     > **Note:**  If it is already in Developer View then no need to click on this icon. If you find expression editor in the edit mode which means you are in Developer view
 
@@ -117,7 +117,7 @@ A map action named InitiateExtract is automatically created. We will define this
     ```
     <copy>30</copy
     ```
-![initiateextractMapping](../images/initiate-extract-mapping.png)
+    ![initiateextractMapping](../images/initiate-extract-mapping.png)
 
 7. Click on ***Validate***
 A confirmation message appears.
@@ -125,19 +125,19 @@ A confirmation message appears.
 9. Click ***Save*** to persist changes.
 
 ## Task 4: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](../images/error-icon.png =10%x*)
 
-1. Click on the ***(I) Business Identifiers*** menu on the top right.
+2. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](../images/open-business-identifiers.png =20%x*)
 
-2. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
+3. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
 
     ![Assign Business Identifiers](../images/assign-business-identifiers.png =40%x*)
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***&lt; (Go back)*** button.
+4. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section and Click ***Save*** and Click on ***&lt; (Go back)*** button.
 
 ## Task 5: Create the ERP Bulk Extract Callback Integration
 
@@ -157,7 +157,7 @@ Manage business identifiers that enable you to track fields in messages during r
     ```
     |
 
-Accept all other default values.
+    Accept all other default values.
 
 5. Click ***Create***.
 6. Click on Horizontal to change the layout to Horizontal
@@ -179,7 +179,7 @@ Accept all other default values.
 5. From the **Headers** page, keep defaults and Click ***&gt; (Next Step)***
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![callback trigger](../images/callbacktrigger.png)
+    ![callback trigger](../images/callbacktrigger.png)
 
 ## Task 7: Create the Download Activity
 1. Hover over the outgoing arrow for the **BulkExtractCallback** activity and click ***+*** icon.
@@ -191,17 +191,18 @@ The Configure SOAP Endpoint wizard appears.
 4. From the **Operations** page,
     - select ***getDocumentsForFilePrefix*** from the **Operation** list
     - Click ***&gt; (Next Step)***.
-> **Note:**  Be careful to select the correct operation as many of them have similiar names.    
+    > **Note:**  Be careful to select the correct operation as many of them have similiar names.    
 
 5. From the **Headers** page,
     - select ***Accept attachments in response***
     - Click ***&gt; (Next Step)***.
-> **Note:**  The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
+
+    > **Note:**  The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
 If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
 
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![Download File](../images/downloadfile.png)
+    ![Download File](../images/downloadfile.png)
 
 ## Task 8: Define the Data mapping for Download Activity
 A map action named DownloadFile is automatically created. We will define this data mapping.
@@ -210,18 +211,18 @@ A map action named DownloadFile is automatically created. We will define this da
     - Click the **Toggle functions** button located above the Target section toolbar
     - In the Component palette, expand the **String** node.
     - Drag the concat function and drop it on **prefix** element in the Target section.
-![Toggle File](../images/togglefunctions.png)
+    ![Toggle File](../images/togglefunctions.png)
 
-In the Expression window, edit the concat function to use the following parameters:
+    In the Expression window, edit the concat function to use the following parameters:
 
     - "ESS_"
     - //requestId
     - "_BIPReport0"
 
-The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPReport0"*** )
+    The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPReport0"*** )
     - Click **Save** icon in the Expression editor to commit the expression
 
-![prefix element](../images/prefixelement.png)
+    ![prefix element](../images/prefixelement.png)
 
 3. Map the **account** element to the following expression: ***"fin$/payables$/export$"***
     - Right-mouse click on the **account** node and select **Create Target Node**.
@@ -257,7 +258,7 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
     - Click ***&gt; (Next Step)***.
 7. Review the summary and click ***Done***.
 8. Click ***Save*** to persist changes.
-![writeextract2ftp](../images/writeextract2ftp.png)
+    ![writeextract2ftp](../images/writeextract2ftp.png)
 
 ## Task 10: Define the Data mapping for WriteExtract
 
@@ -285,12 +286,12 @@ Manage business identifiers that enable you to track fields in messages during r
 ## Task 12: Activate the ERP Bulk Extract Callback Integration
 1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
 2. On the **Activate Integration** dialog, select ***a tracing level***.
-![tracinglevel](../images/tracinglevel.png)
+    ![tracinglevel](../images/tracinglevel.png)
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-> **Note:** Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
+    > **Note:** Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
 
 
 4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
@@ -364,4 +365,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** -
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2023

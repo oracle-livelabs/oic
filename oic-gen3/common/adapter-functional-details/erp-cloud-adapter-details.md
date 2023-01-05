@@ -20,43 +20,43 @@ This lab assumes you have:
 
 ##	Task	1: Understand ERP Cloud Adapter usage roles
 
-Adapters Identify and Select the pattern of Integration upfront. The adapter wizard provides an intuitive way to select the task of choice by listing out relevant integration artefacts which provide an abstract view to the Integration Developer
+- Adapters Identify and Select the pattern of Integration upfront. The adapter wizard provides an intuitive way to select the task of choice by listing out relevant integration artefacts which provide an abstract view to the Integration Developer
 
 ### **When used as a trigger role**
 
-Adapter Configuration wizard supports the ability to process business events, expose an object interface, subscription to completed FBDI jobs
+- Adapter Configuration wizard supports the ability to process business events, expose an object interface, subscription to completed FBDI jobs
 
-![ERP Cloud Adapter Trigger Role](images/erp-adapter-trigger-role.png)
+    ![ERP Cloud Adapter Trigger Role](images/erp-adapter-trigger-role.png)
 
 ### *Configure Business Events*
 
-Business Event is received as a request that starts the integration. Only events that can be subscribed to are displayed in the Adapter Wizard.
+- Business Event is received as a request that starts the integration. Only events that can be subscribed to are displayed in the Adapter Wizard.
 
-![ERP Cloud Adapter Business Events](images/trigger-business-events.png)
+    ![ERP Cloud Adapter Business Events](images/trigger-business-events.png)
 
-ERP Cloud Adapter Supports Events from various modules such as
+- ERP Cloud Adapter Supports Events from various modules such as
 
-- Financials
-- Inventory Management
-- Maintenance
-- Manufacturing
-- Order Management
-- Product Lifecycle Management
-- Procurement
-- Supply Chain Collaboration and Visibility
-- Project Portfolio Management
+    - Financials
+    - Inventory Management
+    - Maintenance
+    - Manufacturing
+    - Order Management
+    - Product Lifecycle Management
+    - Procurement
+    - Supply Chain Collaboration and Visibility
+    - Project Portfolio Management
 
 ### *Configure Business Objects*
 
-Gives a functional view of the ERP Cloud objects to expose a comprehensive interface
+- Gives a functional view of the ERP Cloud objects to expose a comprehensive interface
 
-![ERP Cloud Adapter Business Objects](images/trigger-business-objects.png)
+    ![ERP Cloud Adapter Business Objects](images/trigger-business-objects.png)
 
 
 ### **When used as a invoke role**
-Adapter Configuration wizard supports the ability to invoke SOAP/REST services, simplify invocation of FBDI jobs, and send import files (FBDI/Non-FBDI) to ERP Cloud
+- Adapter Configuration wizard supports the ability to invoke SOAP/REST services, simplify invocation of FBDI jobs, and send import files (FBDI/Non-FBDI) to ERP Cloud
 
-![ERP Cloud Adapter Webservices](images/invoke-business-services.png)
+    ![ERP Cloud Adapter Webservices](images/invoke-business-services.png)
 
 * ***Query, Create, Update, or Delete Information:*** Provides the standard configuration path for selecting a business object or service. This option displays the standard Operations and Response pages.
 Select to browse by business object or service. There is a one-to-one correspondence between the business object and service. The service acts on the business document. The Adapter supports:
@@ -70,7 +70,7 @@ Select to browse by business object or service. There is a one-to-one correspond
 
 * ***Import Bulk Data into Oracle ERP Cloud:*** Provides a scenario for loading and orchestrating data from a secure FTP location to Oracle ERP Cloud.
 
-Data is loaded into a selected product interface table and then imported into the related main product application tables. A callback notification may also be configured to send when the data import completes. This option also shows a modified Operations page and a unique Response page in the Adapter Endpoint Configuration Wizard for importing data.
+    - Data is loaded into a selected product interface table and then imported into the related main product application tables. A callback notification may also be configured to send when the data import completes. This option also shows a modified Operations page and a unique Response page in the Adapter Endpoint Configuration Wizard for importing data.
 
 * ***Send Files to ERP Cloud:*** Select to upload files (FBDI/NonFBDI) to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
 
@@ -84,4 +84,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
