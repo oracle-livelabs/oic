@@ -30,13 +30,13 @@ This lab assumes you have:
     This opens the Tasks menu.
 
 5. Under the *Orders* section, select **Create Order**.
-  ![Create Purchase Order](images/create-order-action.png)
+   ![Create Purchase Order](images/create-order-action.png)
 
     The *Create Order* dialog is displayed.
 
 6. Enter a valid entry in the *Supplier* field, for example `ABC Consulting`, and select the corresponding supplier in the drop down and also select Requisitioning BU as per Procurement BU field.
 
-> **Tip:** You can also search for valid suppliers using the **Search** icon.
+    > **Tip:** You can also search for valid suppliers using the **Search** icon.
 
 
 7. Click **Create**.
@@ -97,11 +97,11 @@ After the PO is submitted, the initial status becomes *Pending Approval*. The PO
 
 4. Look for your Purchase Order in the list with the PO number displayed in the previous task.
 
-> **Tip:** The last created PO should generally be the top one in the list.
+    > **Tip:** The last created PO should generally be the top one in the list.
 
 5. Validate the PO Status. If it's *Open* then the Business Event has occurred.
 
-> **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
+    > **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
 
 
 ## Task 3: Track message flow triggered by the PO Create Event
@@ -111,11 +111,11 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Document Description* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
-   ![Find the Integration Instance](images/integration-instance-run.png)
+    ![Find the Integration Instance](images/integration-instance-run.png)
 
 3. Click on your **PO Header Id** link to open the corresponding integration instance.
 
-   ![Open the Integration Instance](images/integration-instance-open.png)
+    ![Open the Integration Instance](images/integration-instance-open.png)
 
     The flow ran successfully if it is displayed with a green line.
 
@@ -135,13 +135,13 @@ Follow these steps to view the PO record in the designated DB table.
 
     ![Select Autonomous Database](../setup/images/adb-navigation.png)
 
-> **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
+    > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.
 
     ![Select Autonomous Database](../setup/images/select-adb-instance.png)
 
-> **Note:** Similar steps apply to either Autonomous Data Warehouse or Autonomous Transaction Processing.
+    > **Note:** Similar steps apply to either Autonomous Data Warehouse or Autonomous Transaction Processing.
 
 3. In your ADW Database Details page, click the **Database Actions** button.
 
@@ -149,7 +149,7 @@ Follow these steps to view the PO record in the designated DB table.
 
 4. Sign-in with your database instance's default administrator account, Username = `ADMIN` and click **Next**.
 
-   ![Enter DB username](../setup/images/enter-username.png)
+    ![Enter DB username](../setup/images/enter-username.png)
 
 5.  Enter the **ADMIN** password and click **Sign in**.
 
@@ -166,7 +166,7 @@ Follow these steps to view the PO record in the designated DB table.
     This opens the *ADMIN.PURCHASEORDER* table window.
 
 8. Click on **Data** in the left menu to display the table data. Verify your PO record is available.
-   ![Show PO data](images/show-po-data.png)
+    ![Show PO data](images/show-po-data.png)
 
 
 You have completed the final step of this workshop. Thank you!

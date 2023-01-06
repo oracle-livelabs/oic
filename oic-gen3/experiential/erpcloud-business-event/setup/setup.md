@@ -23,13 +23,13 @@ This lab assumes you have:
 
     ![Select Autonomous Database](images/adb-navigation.png)
 
-> **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
+    > **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.
 
     ![Select Autonomous Database](images/select-adb-instance.png)
 
-> **Note:**  Similar steps apply to either Autonomous Data Warehouse and Autonomous Transaction Processing.
+    > **Note:**  Similar steps apply to either Autonomous Data Warehouse and Autonomous Transaction Processing.
 
 3.  In your Autonomous Database Details page, click the **DB Connection** button.
 
@@ -53,7 +53,7 @@ Follow these steps to create a DB table which will be used as part of this works
 
     ![Click Database Actions](images/click-database-actions.png)
 
-> **Note:**  If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log-in manually.  
+   > **Note:**  If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log-in manually.  
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
@@ -67,7 +67,7 @@ Follow these steps to create a DB table which will be used as part of this works
 
     ![Open SQL](images/open-sql.png)
 
-> **Note:**  If this is the very first time you open the SQL Action, then a click-demo will be displayed. Just hit the **X** button to proceed.
+    > **Note:**  If this is the very first time you open the SQL Action, then a click-demo will be displayed. Just hit the **X** button to proceed.
 
 5. The SQL Worksheet appears. Before you proceed with the SQL Worksheet, copy below code snippet:
     ```

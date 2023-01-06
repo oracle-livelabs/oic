@@ -17,7 +17,7 @@ This labs will explore the ERP Cloud adapter and File Adapter features and lets 
  2. Synchronize account payable invoices into the ERP Cloud
 
   The following diagram shows the runtime interaction between the systems involved in this use case:
-  ![FBDIImport](../images/bulk-import-simple.png)
+    ![FBDIImport](../images/bulk-import-simple.png)
 
 Estimated Time: 30 minutes
 
@@ -43,15 +43,15 @@ This lab assumes you have:
 2. [Download the APTEST.PROPERTIES file](../files/APTEST.PROPERTIES?download=1)
 3. Open GSEPayablesStandardInvoiceImportTemplate.xlsm (If you are using Mac, then you need to download the templates from ERP Cloud documentation which are compatible with Mac)
 
-> **Note:** This spreadsheet contains macros and you might get a security warning when you open the file. Select the option to enable the content.
+    > **Note:** This spreadsheet contains macros and you might get a security warning when you open the file. Select the option to enable the content.
 
 4. Go to the ```AP_INVOICES_INTERFACE``` sheet and update the following fields with unique random numbers:
       - Invoice ID
       - Invoice Number
 
-For example, you can use OIC user number concatenated with the current date.
-Enter the data in each cell, do not copy and paste it. This is to preserve the data type of each column. If you change the data type, this lab will fail.
-You might get a warning message about the macros used in this spreadsheet. Accept the message.
+    For example, you can use OIC user number concatenated with the current date.
+    Enter the data in each cell, do not copy and paste it. This is to preserve the data type of each column. If you change the data type, this lab will fail.
+    You might get a warning message about the macros used in this spreadsheet. Accept the message.
 
 5. Click on ```AP_INVOICE_LINE_INTERFACE``` sheet.
 6. Enter the same invoice IDs that you used in the ```AP_INVOICES_INTERFACE``` sheet. Please do not copy and paste the invoice IDs.
@@ -61,10 +61,10 @@ A file browser dialog appears.
 9. Close the GSEPayablesStandardInvoiceImportTemplate.xlsm file
 10. From File Explorer, copy the APTEST.PROPERTIES file to the apinvoiceimport.zip file.
 
-> **Note:**
-1. zip file should contain ONLY three files: ApInvoiceInterface.csv, ApInvoiceLinesInterface.csv and APTEST.PROPERTIES and all of them in under root folder only, no sub folders.
-2. Failing to copy the APTEST.PROPERTIES file will prevent the import payables job from running.
-3. For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the ```AP_INVOICES_INTERFACE``` sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file
+    > **Note:**
+    1. zip file should contain ONLY three files: ApInvoiceInterface.csv, ApInvoiceLinesInterface.csv and APTEST.PROPERTIES and all of them in under root folder only, no sub folders.
+    2. Failing to copy the APTEST.PROPERTIES file will prevent the import payables job from running.
+    3. For the purpose of this lab we won't change the values for the Business Unit, Supplier Name, Supplier Number, and Supplier Site fields in the ```AP_INVOICES_INTERFACE``` sheet. If you want to change them in the future, make sure that the values you provide match the values in the ERP instance. If you change the business unit or the source, you must also update the properties file
 
 ## Task 2: Upload the FBDI file to the FTP Server
 1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
@@ -72,7 +72,7 @@ A file browser dialog appears.
 /home/users/```<your-folder-name>```/Output
 
 
-> **Note:** Please create directory if it is not there by following the steps given in the setup lab.
+    > **Note:** Please create directory if it is not there by following the steps given in the setup lab.
 
 ## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
@@ -92,7 +92,7 @@ A file browser dialog appears.
     |
     {: title="Create New Integration"}
 
-Accept all other default values.
+    Accept all other default values.
 
 5. Click ***Create***.
 6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
@@ -112,18 +112,18 @@ Accept all other default values.
     - from the **Select a Transfer Mode** option, select ***ASCII***
     - Enter the following values and Click ***&gt; (Next step)***.
 
-| **Element**        | **Value**   |
-| --- | ----------- |
-| Input Directory         | /home/users/```<your-folder-name>```/Output |
-| File Name | apinvoiceimport.zip |
-{: title="File Properties"}
+    | **Element**        | **Value**   |
+    | --- | ----------- |
+    | Input Directory         | /home/users/```<your-folder-name>```/Output |
+    | File Name | apinvoiceimport.zip |
+    {: title="File Properties"}
 
 5. On the **Schema** page,
     - in the **Do you want to specify the structure for the contents of the file** section, select No.
     - Click ***&gt; (Next step)***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
-![ReadFileFromFTP](../images/read-filefromftp.png)
+    ![ReadFileFromFTP](../images/read-filefromftp.png)
 
 ## Task 5: Upload the file to ERP Cloud
 1. Hover over the outgoing arrow for ReadAPInvoicesFileFromFTP and click + icon.
@@ -146,7 +146,7 @@ The Configure Oracle ERP Cloud Endpoint wizard appears.
     - Click ***&gt; (Next step)***.
 8. Review the summary and click ***Done***.
 9. Click ***Save*** to persist changes.
-![UploadFiletoERP](../images/upload-file-to-erp.png)
+    ![UploadFiletoERP](../images/upload-file-to-erp.png)
 
 ## Task 6: Define the data Mapping
 A map action named ImportAPInvoicestoERPCloud is automatically created. We will define this data mapping.
@@ -175,29 +175,29 @@ A map action named ImportAPInvoicestoERPCloud is automatically created. We will 
 
    b. filename
 
-![DataMapping](../images/datamapping.png)
+    ![DataMapping](../images/datamapping.png)
 7. Click on ***Validate***
 A confirmation message appears.
 8. Click ***&lt; (Go back)***
 9. Click ***Save*** to persist changes.
 
 ## Task 7: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](../images/error-icon.png =10%x*)
 
-1. Click on the ***(I) Business Identifiers*** menu on the top right.
+2. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](../images/open-business-identifiers.png =20%x*)
 
-2. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
+3. From the **Source** section, expand ***schedule*** &gt; ***startTime***. Drag the ***startTime*** field to the right side section:
 
     ![Assign Business Identifiers](../images/assign-business-identifiers.png =40%x*)
 
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
-4. Click ***Save***
-5. Click on ***&lt; (Go back)*** button.
+4. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
+5. Click ***Save***
+6. Click on ***&lt; (Go back)*** button.
 
 ## Task 8: Activate the integration
 
@@ -206,7 +206,7 @@ Manage business identifiers that enable you to track fields in messages during r
     ![Click to Activate Integration](../images/click-activate-integration.png)
 
 2. On the **Activate Integration** dialog, select ***a tracing level***, and click ***Activate***.
-![tracinglevel](../images/tracinglevel.png)
+    ![tracinglevel](../images/tracinglevel.png)
 
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
@@ -233,7 +233,7 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/index.html)
 * [Invoke a File-Based Data Import (FBDI) Job](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/invoke-file-based-data-import-fbdi-job.html)
 * [Oracle Fusion Cloud FBDI templates and process](https://docs.oracle.com/en/cloud/saas/financials/22c/oefbf/external-data-integration-services-for-importing-data.html)
 

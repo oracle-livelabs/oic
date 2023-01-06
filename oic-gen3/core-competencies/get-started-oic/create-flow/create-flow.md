@@ -37,12 +37,11 @@ We will start by creating a new integration and adding some basic info.
     | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
     {: title="Create New Integration"}
 
-Accept all other default values.
+    Accept all other default values.
 
 5. Click **Create**.
 6. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
-![horizontallayout](images/horizontallayout.png)
-
+    ![horizontallayout](images/horizontallayout.png)
 
 
 ## Task 2: Define FTP Invoke Activity
@@ -109,7 +108,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
-> **Note:**  The selected order of the columns should be per the input sales_order.csv data
+    > **Note:**  The selected order of the columns should be per the input sales_order.csv data
 
 
 4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
@@ -179,22 +178,22 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 
 ## Task 5: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click the **Business Identifiers icon** on the top right.
+2. Click the **Business Identifiers icon** on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
+3. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
 
     ![Assign Business Identifiers](images/add-business-identifiers.png)
 
-3. Click **Business Identifiers icon** to hide the dialog.
-4. Click on **Save** to apply your changes.
-5. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
-  ![GoBack](images/integration-goback-ftp-adw.png)
+4. Click **Business Identifiers icon** to hide the dialog.
+5. Click on **Save** to apply your changes.
+6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
+    ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
 

@@ -4,13 +4,13 @@
 
 This lab walks you through the steps to get started using the Oracle Autonomous Database (Autonomous Data Warehouse [ADW] and Autonomous Transaction Processing [ATP]) on Oracle Cloud. In this lab, you will provision a new ADW instance.
 
- > **Note:**  While this lab uses ADW, the steps are the same for creating an ATP database.
-
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk through of the lab.
 
 [Provision Autonomous Database Instance](youtube:a6Jm7lYaCWI)
+
+> **Note:**  While this lab uses ADW, the steps are the same for creating an ATP database.
 
 ### Objectives
 
@@ -29,7 +29,7 @@ In this lab, you will:
 
     ![Oracle home page.](./images/oci-navigation.png)
 
-> **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the Quick Actions section of the dashboard
+    > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the Quick Actions section of the dashboard
 
 
 3. The following steps apply similarly to either Autonomous Data Warehouse or Autonomous Transaction Processing. This lab shows provisioning of an Autonomous Data Warehouse database, so click **Oracle Database**, then **Autonomous Data Warehouse**.
@@ -43,7 +43,7 @@ In this lab, you will:
     <if type="freetier">
     ![Check the workload type on the left.](./images/adb-choose.png)
 
-> **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
+    > **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
 
 5. This console shows that no databases yet exist. If there were a long list of databases, you could filter the list by the **State** of the databases (Available, Stopped, Terminated). You can also sort by **Workload Type**. In this example, **Data Warehouse** is the workload type.
 
@@ -100,7 +100,7 @@ In this lab, you will:
 
     ![Choose the remaining parameters.](./images/create-adb-configure.png)
 
-> **Note:** You cannot scale up/down an Always Free autonomous database.
+    > **Note:** You cannot scale up/down an Always Free autonomous database.
 
 
 7. Create administrator credentials:

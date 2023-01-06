@@ -41,7 +41,7 @@ We will start by creating a new integration and adding some basic info.
 
 
 5. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
-![Select Horizontal Layout](images/horizontallayout.png =30%x*)
+    ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
 ## Task 2: Define ERP Purchase Order (PO) Event trigger
 Add ERP PO Event trigger to the empty integration canvas.
@@ -65,10 +65,10 @@ Add ERP PO Event trigger to the empty integration canvas.
     ```
     <copy><xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/">$eventPayload/ns2:result/ns0:Value/ns0:DocumentDescription="demo"</xpathExpr></copy>
     ```
-> **Tip:** If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **DocumentDescription**. For example `<your-initials>-demo`. The value you enter is case sensitive. Write down this value for later use.
+    > **Tip:** If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **DocumentDescription**. For example `<your-initials>-demo`. The value you enter is case sensitive. Write down this value for later use.
     ![ERP Adapter Wizard Request](images/erp-adapter-request.png)
 
-> **Note:** The filter is not required, however it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
+    > **Note:** The filter is not required, however it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 5. Click ***&gt; (Next step)***.
 
@@ -172,22 +172,22 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 
 ## Task 5: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the designer canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the designer canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click on ***Business Identifiers*** which is available on the top right.
+2. Click on ***Business Identifiers*** which is available on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **onEvent** &gt; **getPurchaseOrderResponse** &gt; **result** &gt;  **2nd &lt;sequence&gt;** &gt; expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
+3. From the *Source* section, expand **onEvent** &gt; **getPurchaseOrderResponse** &gt; **result** &gt;  **2nd &lt;sequence&gt;** &gt; expand **Value**. Drag the **POHeaderId**, **OrderNumber** and **DocumentDescription** fields from ERP PO source to the *Drag a trigger field here* section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
 
-3. Click ***Business Identifiers*** again to close the Business Identifiers window.
+4. Click ***Business Identifiers*** again to close the Business Identifiers window.
 
-4. Click ***Save***, followed by ***&lt; (Go back)***.
+5. Click ***Save***, followed by ***&lt; (Go back)***.
 
 ## Task 6: Activate the integration
 

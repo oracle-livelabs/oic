@@ -48,7 +48,7 @@ Create a connection with the Oracle ERP Cloud Adapter.
 6. Click on ***Test*** and wait until you receive a
 confirmation box that the test was successful.
 
-> **Note:**  The first time you run the test, it could take up to 2 minutes for completion.
+    > **Note:**  The first time you run the test, it could take up to 2 minutes for completion.
 
 7. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
