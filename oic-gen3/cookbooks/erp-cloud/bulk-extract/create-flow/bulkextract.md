@@ -15,7 +15,7 @@ This use case includes the following steps:
 The data file can be larger than 10MB. Oracle Integration supports handling large files as an attachment (instead of base64 encoding). We recommend that you use CSV format to reduce the size of the file.
 
  The following diagram shows the interaction between the systems involved in this use case.
-  ![bulk-export](../images/bulk-export-callback.png)
+     ![bulk-export](../images/bulk-export-callback.png)
 
 Estimated Time: 60 minutes
 

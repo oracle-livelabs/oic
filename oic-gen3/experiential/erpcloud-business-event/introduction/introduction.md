@@ -7,6 +7,12 @@ This workshop will showcase the event subscription capabilities to create an App
 
 Estimated workshop time: 2 hours
 
+### What is Oracle Integration 3
+With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
+
+[First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
+
+
 ### Objectives
 In this workshop, you will learn the following:
 - Create Connections and Integrations in OIC
@@ -19,11 +25,6 @@ This lab assumes you have the following:
 - Oracle Autonomous Database environment (either ADW or ATP)
 - Oracle ERP Cloud access
 
-
-## What is Oracle Integration 3
-With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
-
-[First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 ## Leveraging the ERP Adapter in Oracle Integration 3
 The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS applications with Oracle ERP Cloud without having to know about the specific details involved in the integration.

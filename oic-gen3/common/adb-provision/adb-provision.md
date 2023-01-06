@@ -4,13 +4,14 @@
 
 This lab walks you through the steps to get started using the Oracle Autonomous Database (Autonomous Data Warehouse [ADW] and Autonomous Transaction Processing [ATP]) on Oracle Cloud. In this lab, you will provision a new ADW instance.
 
-> **Note:** While this lab uses ADW, the steps are the same for creating an ATP database.
-
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk through of the lab.
 
 [Provision Autonomous Database Instance](youtube:a6Jm7lYaCWI)
+
+> **Note:** While this lab uses ADW, the steps are the same for creating an ATP database.
+
 
 ### Objectives
 
@@ -28,7 +29,7 @@ In this lab, you will:
 2. Once you log in, the cloud services dashboard shows all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
     ![Oracle home page](images/oci-navigation.png)
 
-> **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the __Quick Actions__ section of the dashboard.
+    > **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the __Quick Actions__ section of the dashboard.
 
 
 
@@ -43,18 +44,18 @@ In this lab, you will:
     <if type="freetier">
     ![Check the workload type on the left.](images/adb-choose.png)
 
-> **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
-   </if>
+    > **Note:** Avoid the use of the *ManagedCompartmentforPaaS* compartment, as this is an Oracle default used for Oracle Platform Services.
+    </if>
 
 5. This console shows that no databases yet exist. If there were a long list of databases, you could filter the list by the **State** of the databases (Available, Stopped, Terminated). You can also sort by **Workload Type**. In this example, **Data Warehouse** is the workload type.
 
     ![Autonomous Databases console.](images/adb-no-database.png)
 
-<if type="freetier">
+    <if type="freetier">
 6. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **region** in the top, right hand corner of the page.
 
     ![Select region on the far upper-right corner of the page.](images/adb-select-region.png)
-</if>
+    </if>
 
 ## Task 2: Create an Oracle Autonomous Database instance
 
@@ -101,7 +102,7 @@ In this lab, you will:
 
     ![Choose the remaining parameters.](images/create-adb-configure.png)
 
-> **Note:** You cannot scale up/down an Always Free autonomous database.
+    > **Note:** You cannot scale up/down an Always Free autonomous database.
 
 
 
@@ -125,22 +126,22 @@ In this lab, you will:
 
     ![Choose the network access.](images/create-adb-network-access.png)
 
-<if type="livelabs">
+    <if type="livelabs">
 9. Choose a license type. For this lab, choose **Bring Your Own License (BYOL)**. The two license types are:
-</if>
-<if type="freetier">
+    </if>
+   <if type="freetier">
 9. Choose a license type. For this lab, choose **License Included**. The two license types are:
-</if>
+   </if>
 
     - **Bring Your Own License (BYOL)** - Select this type when your organization has existing database licenses.
     - **License Included** - Select this type when you want to subscribe to new database software licenses and the database cloud service.
 
-<if type="livelabs">
+    <if type="livelabs">
     ![Select Network Access](./images/create-adb-license-type.png " ")
-</if>
-<if type="freetier">
+    </if>
+    <if type="freetier">
     ![Select Network Access](./images/create-adb-license-type.png " ")
-</if>
+    </if>
 
 10. Click **Create Autonomous Database**.
 
@@ -148,12 +149,12 @@ In this lab, you will:
 
 11.  Your instance will begin provisioning. In a few minutes, the state will turn from *Provisioning* to *Available*. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
-<if type="livelabs">
+    <if type="livelabs">
     ![Show Autonomous Database](./adb-available-freetier.png)
-</if>
-<if type="freetier">
+    </if>
+    <if type="freetier">
     ![Show Autonomous Database](images/adb-available-freetier.png)
-</if>
+    </if>
 
 
 Please *proceed to the next lab*.

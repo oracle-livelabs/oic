@@ -48,11 +48,11 @@ Submit an adhoc run of Scheduled Integration Flow
 
     ![Cofirmation Window](images/submit-confirmation.png)
 
-> **Note:**  Alternatively, in the Integration navigation pane, Go to **Home page &gt; Observability &gt; Instances**
+    > **Note:**  Alternatively, in the Integration navigation pane, Go to **Home page &gt; Observability &gt; Instances**
 
 3.  From the *Instances* page, Click on the Integration Flow.
 
-   ![Open the Integration Instance](images/integration-instance-open.png)
+    ![Open the Integration Instance](images/integration-instance-open.png)
 
     The flow ran successfully if it is displayed with a green line.
 
@@ -61,7 +61,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
 5. Click on the **Activity Stream** again to close the activity stream.
 
-  ![Activity Stream](images/activity-stream.png)
+    ![Activity Stream](images/activity-stream.png)
 
 ## Task 3: Verify sales orders records in ADW Table
 Follow these steps to view the sales orders record in the designated DB table.
@@ -70,13 +70,13 @@ Follow these steps to view the sales orders record in the designated DB table.
 
     ![Select Autonomous Database](../setup/images/adb-navigation.png)
 
-> **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
+    > **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.
 
     ![Select Autonomous Database](../setup/images/select-adb-instance.png)
 
-> **Note:**  Similar steps apply to either Autonomous Data Warehouse or Autonomous Transaction Processing.
+    > **Note:**  Similar steps apply to either Autonomous Data Warehouse or Autonomous Transaction Processing.
 
 3. In your ADW Database Details page, click the **Database Actions** button.
 

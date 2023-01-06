@@ -53,7 +53,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
     |Private Key | `<*.pem file>` |
     |Finger Print | `<api-key-finger-print>` |
 
-> **Note:**  The information obtained from the Lab *Setup* will be used to fill in the details to create Connection.
+    > **Note:**  The information obtained from the Lab *Setup* will be used to fill in the details to create Connection.
 
 
 5. Click on **Test**, followed by **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
@@ -61,22 +61,21 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 ## Task 2: Create Connection with File Server
 
 To access the File Server from an Integration, you will need to create an FTP Connection.  
-> **Note:**  You can use an existing connection if one has already been configured for your environment.
 
 1. In the left Navigation pane, click **Design** &gt; **Connections** &gt; click **Create**
 2. Select the **FTP** Adapter and click **Select**.
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**
-> **Note:**  If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
+    > **Note:**  If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
 
 4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
-| Field                   | Value                                                 |
-|-------------------------|-------------------------------------------------------|
-| FTP Server Host Address | From File Server Settings - IP and Port Information   |
-| FPT Server Port         | From File Server Settings - IP and Port Information   |
-| SFTP Connection         | Yes                                                   |
-| Security                | FTP Server Access Policy                              |
-| Username                | Your Oracle Integration username                      |
-| Password                | Your Oracle Integration password                      |
+    | Field                   | Value                                                 |
+    |-------------------------|-------------------------------------------------------|
+    | FTP Server Host Address | From File Server Settings - IP and Port Information   |
+    | FPT Server Port         | From File Server Settings - IP and Port Information   |
+    | SFTP Connection         | Yes                                                   |
+    | Security                | FTP Server Access Policy                              |
+    | Username                | Your Oracle Integration username                      |
+    | Password                | Your Oracle Integration password                      |
 
 5. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
 

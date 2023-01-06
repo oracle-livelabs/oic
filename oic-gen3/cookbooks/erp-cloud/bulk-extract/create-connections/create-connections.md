@@ -72,7 +72,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
 ## Task 3: ERP Cloud Callback Connection
 
-1. [Download the erpcbkinterface-onjobcompletion.wsdl](../files/erpcbkinterface-onjobcompletion.wsdl?download=1)
+1. [Download the erpcbkinterface-onjobcompletion.wsdl](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/erpcbkinterface-onjobcompletion.wsdl)
 2. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
 3. In the *Create Connection* dialog, select the **SOAP** adapter to use for this connection. To find the adapter, enter *soap* in the search field. Click on the highlighted adapter
 4. From the *Create Connection* dialog, enter the following information and click on ***Create***:

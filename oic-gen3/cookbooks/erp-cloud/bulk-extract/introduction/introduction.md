@@ -6,21 +6,6 @@ This workshop shows you how to design and develop a Bulk Extract Usecase in Orac
 
 Estimated Time: 2 hours
 
-### What Will You Learn?
-
-* Creating Free Trial Account
-* Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
-* Enable File Server.
-* Configure File Server and connect with FTP client.
-* Create and configure common connections which are useful for this workshop like File Server and ERP Connection
-* Learn ERP Cloud Integration Design Patterns and Usecases.
-* Create an Integration flow which extracts the data from ERP Cloud Oracle Business Intelligence Publisher (BIP) and write the extract to an SFTP server.
-
-### What Do You Need?
-
-* An Oracle Free Tier or Paid Cloud Account.
-* A Chrome browser.
-
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
@@ -51,6 +36,22 @@ The Oracle ERP Cloud Adapter provides the following key benefits:
 
 [ERP Cloud Integration Patterns](youtube:nKXbh2ZPuMI)
 
+### Objectives
+
+* Creating Free Trial Account
+* Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
+* Enable File Server.
+* Configure File Server and connect with FTP client.
+* Create and configure common connections which are useful for this workshop like File Server and ERP Connection
+* Learn ERP Cloud Integration Design Patterns and Usecases.
+* Create an Integration flow which extracts the data from ERP Cloud Oracle Business Intelligence Publisher (BIP) and write the extract to an SFTP server.
+
+### Prerequisites
+
+* An Oracle Free Tier or Paid Cloud Account.
+* A Chrome browser.
+
+
 You may now **proceed to the next lab**.
 
 ## Learn More
@@ -61,4 +62,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta & Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Dec 07 2022
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2023

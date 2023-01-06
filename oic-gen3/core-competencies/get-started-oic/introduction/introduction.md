@@ -6,23 +6,6 @@ In this workshop, we shall talk about provisioning Oracle Integration 3 instance
 
 Estimated Time: 1 hour 30 minutes
 
-### What Will You Learn?
-
-In this workshop, you will learn how to:
-
-* Provision Oracle Integration 3 in Oracle Cloud Infrastructure
-* How to enable the File Server in Oracle Integration 3 instance.
-* Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
-* Learn several Integrations specific concepts
-* Creating Connections
-* Design a Scheduled Integration Flow
-* Test and Monitor Integration Flow
-
-### What Do You Need?
-
-* An Oracle Free Tier or Paid Cloud Account.
-* A Chrome browser.
-
 ### What is Oracle Integration 3?
 
 Integration is a fundamental part of your digital business development. It involves connecting on-premises applications and cloud applications and services. Oracle Integration makes it easy to connect your applications and automate end-to-end processes such as procure to pay, inquiry to order, and hire to retire.
@@ -40,6 +23,23 @@ Oracle Integration changes all that. It empowers you to:
   - Deliver new business innovations faster by rapidly connecting diverse applications and key business roles.
 
   - Gain 360-degree views across your entire business. Easily monitor and analyze every application, integration, and workflow spanning the business process life cycle.
+
+### Objectives
+
+In this workshop, you will learn how to:
+
+* Provision Oracle Integration 3 in Oracle Cloud Infrastructure
+* How to enable the File Server in Oracle Integration 3 instance.
+* Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
+* Learn several Integrations specific concepts
+* Creating Connections
+* Design a Scheduled Integration Flow
+* Test and Monitor Integration Flow
+
+### Prerequisites
+
+* An Oracle Free Tier or Paid Cloud Account.
+* A Chrome browser.
 
 
 You may now **proceed to the next lab**.
