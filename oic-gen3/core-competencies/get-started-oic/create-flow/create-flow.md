@@ -25,9 +25,7 @@ We will start by creating a new integration and adding some basic info.
 
 1. In the left Navigation pane, click **Design** &gt; **Integrations**.
 2. On the Integrations page, click ***Create***.
-3. On the *Create integration* dialog, select **Scheduled Orchestration**, followed by **Create**.
-
-    ![Select Integration Style](images/select-integration-style.png)
+3. On the *Create integration* dialog, Click on **Scheduled orchestration**
 
 4. In the *Create New Integration* dialog, enter the following information:
 
