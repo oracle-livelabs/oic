@@ -39,8 +39,9 @@ This lab assumes you have:
 
 ## Task 1: Create FBDI file
 
-1. [Download the Invoice Import Template Spreadsheet]( https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/GSEPayablesStandardInvoiceImportTemplate.xlsm)
-2. [Download the APTEST.PROPERTIES file]( https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/APTEST.PROPERTIES)
+1. [Download the Invoice Import Template Spreadsheet](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/GSEPayablesStandardInvoiceImportTemplate.xlsm)
+2. [Download the APTEST.PROPERTIES file](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/APTEST.PROPERTIES)
+
 3. Open GSEPayablesStandardInvoiceImportTemplate.xlsm (If you are using Mac, then you need to download the templates from ERP Cloud documentation which are compatible with Mac)
 
     > **Note:** This spreadsheet contains macros and you might get a security warning when you open the file. Select the option to enable the content.
