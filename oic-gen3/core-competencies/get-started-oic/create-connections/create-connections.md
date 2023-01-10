@@ -24,7 +24,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
 
-2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter and hit **Select**.
+2. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter.
     ![Create ADW connection](images/create-adw-connection.png)
 
 3. In the *Create Connection* dialog, enter the following information and click **Create**
@@ -63,7 +63,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 
 1. In the left Navigation pane, click **Design** &gt; **Connections** &gt; click **Create**
-2. Select the **FTP** Adapter and click **Select**.
+2. Select the **FTP** Adapter.
 3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**
     > **Note:**  If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
 

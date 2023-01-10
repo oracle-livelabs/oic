@@ -39,7 +39,7 @@ This lab assumes you have:
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Scheduled Orchestration***
+3. On the **Integration Style** dialog, select and click on ***Scheduled orchestration***
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
@@ -109,8 +109,9 @@ A map action named InitiateExtract is automatically created. We will define this
     <copy>"92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,#NULL,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,12-19,N,N,300000046975971,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL"</copy
     ```
     - Right click on **Job Options** and then click on ***Create Target Node*** and enter the value given below.
+
     ```
-    <copy>"ExtractFileType=ALL"</copy
+      <copy>"ExtractFileType=ALL"</copy
     ```
     - For **Callback URL**, skip this mapping for now. We will assign a value after we design and activate the callback flow
     - Right click on **Notification Code** and then click on ***Create Target Node*** and enter the value given below.
@@ -143,7 +144,7 @@ A confirmation message appears.
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, click on ***App Driven Orchestration***
+3. On the **Integration Style** dialog, click on ***App Driven orchestration***
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
@@ -198,7 +199,7 @@ The Configure SOAP Endpoint wizard appears.
     - Click ***&gt; (Next Step)***.
 
     > **Note:**  The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
-If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
+    If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
 
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.

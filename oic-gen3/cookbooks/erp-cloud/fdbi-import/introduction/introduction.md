@@ -66,6 +66,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Kishore Katta, Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
+* **Author** - Kishore Katta, Director Product Management, Oracle Integration
+* **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Last Updated By/Date** - Subhani Italapuram, Nov 2022
