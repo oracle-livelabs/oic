@@ -292,6 +292,8 @@ Select *Apply*
 
 **Congratulations!** You have successfully completed this lab.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [Model Decisions](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/model-decisions.html)
