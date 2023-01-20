@@ -640,6 +640,8 @@ g.	After the **Handle Return of Car** is Completed the stage is Complete. The pr
 
 Note: The milestones within the stages are Completed and the progress is shown based on the completion condition when the respective stages are enabled.
 
+**Congratulations!** You have successfully created a Car Rental Application leveraging the concepts of Dynamic Process.
+
 ## Learn More
 
 * [Design Dynamic Proceses](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/design-dynamic-processes.html)
