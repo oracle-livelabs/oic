@@ -622,7 +622,7 @@ c.	Now, the **Rental Car Office** provides the required information and complete
 d.	This fulfills the Activation condition of the **Pickup** stage, and it transitions to the **Active** state.
 -	Subsequently, both activities under this stage become Available.
 - **Customer Desk** activity becomes **Active** because there are no conditions for its Activation
--	**Initiate Car transfer to another station** activity because the Activation condition is fulfilled.
+-	**Initiate Car transfer to another station** activity becomes **Active** because the Activation condition is fulfilled.
 
 The following diagram depicts the current state of the Pickup stage:
 ![Dynamic Process State Illustration Pickup Stage](images/state-transition-illustration-pickup-stage.png)
