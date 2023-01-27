@@ -5,11 +5,11 @@
 
 This lab will walk you through the steps to create connections for all the services which will be used in the Integration Flow.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 In this lab, you will:
-- Create REST connection
+- Create REST connection using REST adapter
 - Create ERP Cloud External Report Service connection using SOAP adapter
 
     > **Note:**  You can use an existing connection if one has already been configured for your environment.
@@ -19,11 +19,11 @@ This lab assumes you have:
 - Completed all the previous labs
 
 
-##	Task	1: Create Connection using REST adapter
+##	Task	1: Create REST Connection using REST adapter
 Create a connection with the REST Adapter.
 
 1. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
-2. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter `REST` in the search field. Click on the highlighted adapter.
+2. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter *REST* in the search field. Click on the highlighted adapter.
 3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
     | **Field**        | **Value**          |       
@@ -44,12 +44,12 @@ Create a connection with the REST Adapter.
 6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
 
-## Task 1: ERP Cloud External Report Service Connection
+## Task 2: Create ERP Cloud External Report Service Connection using SOAP Adapter
 
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
-2. In the *Create Connection* dialog, select the **SOAP** adapter to use for this connection. To find the adapter, enter *FTP* in the search field. Click on the highlighted adapter
+2. In the *Create Connection* dialog, select the **SOAP** adapter to use for this connection. To find the adapter, enter *SOAP* in the search field. Click on the highlighted adapter
 3. From the *Create Connection* dialog, enter the following information and click on ***Create***:
 
     > **Note:**  If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
@@ -71,7 +71,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
     |Username | Enter ***Enter ERP Cloud password received from the instructor*** |
 
 
-5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud Integration Service was tested successfully.* confirmation message. Click ***Save*** and exit the Connection editor.
+5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud External Report Service was tested successfully.* confirmation message. Click ***Save*** and exit the Connection editor.
 
 You may now **proceed to the next lab**.
 
@@ -82,4 +82,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Dec 2022
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2023

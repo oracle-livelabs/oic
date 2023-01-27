@@ -4,7 +4,9 @@
 
 This workshop shows you how to use Oracle Integration 3 with Oracle ERP Business Intelligence Publish (BIP) report. Out of the box, SOAP adapter helps an Integration developer to quickly consume BIP Report in a secured way using various authentication schemes.
 
-Estimated Time: 1 hour
+The user creates a report in Oracle ERP Cloud and uploads it to a shared folder. Oracle Integration 3 connects to the ERP BIP service, pulls the report, decodes the response, applies the required transformations and writes it into the REST client.
+
+Estimated Time: 1 hour 20 minutes
 
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
@@ -62,6 +64,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Kishore Katta, Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, July 2022
+* **Author** - Subhani Italapuram, Product Management, Oracle Integration
+* **Contributors** - Kishore Katta, Product Management, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
