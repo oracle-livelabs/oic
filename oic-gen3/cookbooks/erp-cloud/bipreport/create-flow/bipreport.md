@@ -1,4 +1,4 @@
-# ERP Cloud BIP Report lab
+# BIP Report Integration Flow
 
 ## Introduction
 
