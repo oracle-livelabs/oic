@@ -138,10 +138,8 @@ A map action named GetBIPReport is automatically created. We will define this da
 
 
 ## Task 5: Write the file
-1. [Download the artifacts](files/opaque_schema.xsd?download=1) and extract it in your local folders. It should contain two files
-opaque_schema.xsd and GLCCReport.csv
+1. [Download the artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/BIPReportArtifacts.zip) and extract the zip file in your local folders. It should contain two files opaque_schema.xsd and GLCCReport.csv
 
-[Download the opaque_schema.xsd](files/opaque_schema.xsd?download=1)
 2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
@@ -174,26 +172,25 @@ A map action named StageFileWrite is automatically created. We will define this 
 7. Click ***Save*** to persist changes.
 
 ## Task 7: Read the file from Stage
-1. [Download the GLCCReport.csv](files/GLCCReport.csv?download=1)
-2. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
+1. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
-3. On the **Basic Info** page,
+2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
     - Click ***&gt; (Next step)***.
-4. On the **Configure Operation** page,
+3. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Read Entire File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
     - for the **Specify the Directory** element, select ***"/tmp"***
     - Click ***&gt; (Next step)***.
-5. On the **Schema Options** page,
+4. On the **Schema Options** page,
       - Click ***&gt; (Next step)***.
-6. On the **Format Definition** page,
+5. On the **Format Definition** page,
       - click ***Drag and Drop*** and select the ***GLCCReport.csv*** you downloaded
       - for the **Enter Record Name**, enter ***Ledger***
       - for the **Enter Record Name**, enter ***LedgerSet***
       - Click ***&gt; (Next step)***.
-7. Review the summary and click ***Done***
-8. Click ***Save*** to persist changes
+6. Review the summary and click ***Done***
+7. Click ***Save*** to persist changes
     ![ReadFileFromStage](../images/readfilefromstage.png)
 
 ## Task 8: Define the Data Mapping
