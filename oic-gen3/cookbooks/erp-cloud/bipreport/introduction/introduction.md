@@ -60,7 +60,6 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
 
 ## Acknowledgements
 
