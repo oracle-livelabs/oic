@@ -154,7 +154,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
       - select ***XML Schema (XSD) document***
       - Click ***&gt; (Next step)***.
 6. On the **Format Definition** page,
-      - click ***Drag and Drop*** and select the ***opaque_schema.xsd*** you downloaded
+      - click ***Drag and Drop*** and select the ***opaque_schema.xsd*** which you have downloaded
       - Click ***&gt; (Next step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
@@ -185,7 +185,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 4. On the **Schema Options** page,
       - Click ***&gt; (Next step)***.
 5. On the **Format Definition** page,
-      - click ***Drag and Drop*** and select the ***GLCCReport.csv*** you downloaded
+      - click ***Drag and Drop*** and select the ***GLCCReport.csv*** which you have downloaded
       - for the **Enter Record Name**, enter ***Ledger***
       - for the **Enter Record Name**, enter ***LedgerSet***
       - Click ***&gt; (Next step)***.
@@ -254,8 +254,8 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Using the Oracle SOAP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/soap-adapter/understand-soap-adapter.html)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/understand-rest-adapter.html)
+* [Using the SOAP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/soap-adapter/index.html)
+* [Using the REST Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/index.html)
 
 ## Acknowledgements
 
