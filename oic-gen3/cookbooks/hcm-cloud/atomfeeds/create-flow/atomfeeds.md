@@ -33,8 +33,8 @@ This lab assumes you have:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
-    |Name | directory-synchronization |
-    |Description | This integration shows how to use of Oracle Integration 3 with Oracle HCM REST and ATOM services to provide information to an identity management system hosted by a customer |
+    |Name | Directory Synchronization |
+    |Description | This integration shows you how to use the HCM Cloud adapter with the REST adapter to generate a file for Identity Management. |
 
     Accept all other default values.
 
@@ -42,10 +42,54 @@ This lab assumes you have:
 6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
 ## Task 2: Configure the Schedule action
+1. Select **Schedule** action and click on **...** and click on **Edit**
+2. Click on **+** icon, enter the parameter name as ***ATOMLastRunDateTime*** and enter the default value as ***2023-02-01T00:00:00.000Z***
+3. Click ***Save*** to apply changes and click on main canvas so that child window disappers.
+
 ## Take 3: Schedule the Next ATOM Polling
+Schedule the current ATOM polling to the current date and time. The next time the integration runs, this will be the ATOMLastRunDateTime variable.
+1. Click **Actions** icon which is there on the right side of the screen and from the Actions section, drag ***Assign*** to the Integration canvas, and place it after the **Schedule** activity.
+    The Configure assign dialog appears
+2. Click on **+** icon, Select **String**, In the **Name** field, enter ***assignCurrentTimeStamp***, In the **Variable** field, enter ***assignCurrentTimeStamp***, In the **Value** field(click on **switch to developer view** icon if, required), enter expression as ***concat(substring-before(/ics:schedule/ics:startTime,"."),".000Z")***
+    ![assignts](../images/assignts.png)
+3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+
 ## Take 4: Access the HCM Cloud ATOM Feed
+Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
+1. Hover over the outgoing arrow for the **assignCurrentTimeStamp** activity and click **+** icon
+2. Search for **HCM Cloud** and select it.
+3. On the **Basic Info** page,
+    - for the **What do you want to call your endpoint?** element, enter ***getNewHireATOMFeed***
+    - Click ***&gt; (Next step)***.
+4. On the **Actions** page,
+    - select ***Subscribe to Updates (via ATOM Feed)***
+    - Click ***&gt; (Next step)***.
+5. On the **Operations** page,
+      - from the **Select an ATOM Feed** list, select ***Employee New Hire***
+      - Scroll down, From the **Max entries to process** list, select ***250***
+> **Note:**  This ensures that most customers have all their new hires appear in the ATOM Feed response.
+
+7. Click ***&gt; (Next step)*** and Review the summary and click ***Done***
+8. Click ***Save*** to persist changes
+
 ## Take 5: Define the Data Mapping
+A Map action named **Map getNewHireATOMFeed** is automatically created. We'll define this data mapping.
+1. Select the **Map getNewHireATOMFeed action** and click on **...** and click on **Edit**
+2. In the **Target** section, expand **ApplicationPullParameter**
+3. Map the **ATOMLastRunDateTime** field in the Sources section, to the **Updated Min** field in the Target section.
+   To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
+4. Click on Validate
+5. Click ***&lt; (Go back)***
+6. Click ***Save*** to persist changes
+
+
 ## Take 6: Count the New Hires
+The ATOM feed doesn't return the total number of new hires, so we'll configure an assign action to calculate the number of new hires.
+1. Click **Actions** icon which is there on the right side of the screen and from the Actions section, drag ***Assign*** to the Integration canvas, and place it after the **getNewHireATOMFeed** activity
+2. Click on **+** icon, Select **String**, In the **Name** field, enter ***countOfNewHires***, In the **Variable** field, enter ***countOfNewHires_assignment_1***, In the **Value** field(click on **switch to developer view** icon if, required), drag ***EmployeeNewHireFeed_Update*** function to the Count function.
+    ![assignts](../images/assignts.png)
+3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+
 ## Take 7: Check for New Records
 ## Take 8: Define the IF conditional flow
 ## Take 9: Define the Otherwise Flow

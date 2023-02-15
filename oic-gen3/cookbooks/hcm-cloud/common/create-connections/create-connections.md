@@ -43,10 +43,9 @@ To access the File Server from an Integration, you will need to create an FTP Co
 ##	Task	2: Create a connection with HCM Cloud Adapter
 Create a connection with the Oracle ERP Cloud Adapter.
 
-1. Show the left Navigation menu, and click ***Design*** &gt; ***Connections***.
-2. Click ***Create***.
-3. In the *Create Connection* dialog, select the ***Oracle HCM Cloud*** adapter to use for this connection. To find the adapter, enter `hcm` in the search field. Click on the highlighted adapter.
-4. In the *Create Connection* dialog, enter the following information and click on ***Create***:
+1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
+2. In the *Create Connection* dialog, select the ***Oracle HCM Cloud*** adapter to use for this connection. To find the adapter, enter `hcm` in the search field. Click on the highlighted adapter.
+3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
@@ -55,20 +54,18 @@ Create a connection with the Oracle ERP Cloud Adapter.
 
     Keep all other values as default.
 
-5. In the *Oracle HCM Cloud Connection* dialog, enter the following information:
+4. In the *Oracle HCM Cloud Connection* dialog, enter the following information:
 
     | **Field**  | **Values** |
     |---|---|
     |HCM Cloud Host | `your-hcm-host-name` |
     |Security Policy | **Username Password Token**|
-    |Username | `<hcm-username>`|
+    |Username | `fin_impl`|
     |Password | `<hcm-password>`|
 
+5. Click on ***Test*** and wait until you receive a confirmation box that the test was successful.
 
-6. Click on ***Test*** and wait until you receive a
-confirmation box that the test was successful.
-
-7. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
+6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
 You may now **proceed to the next lab**.
 
