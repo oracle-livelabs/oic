@@ -22,19 +22,23 @@
             "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
-            "title": "Lab 2: Configure Connections",
-            "filename": "../../create-connections/create-connections.md"
+            "title": "Lab 2: Enable File Server",
+            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
         },
         {
-            "title": "Lab 3: Introduction to Design Patterns",
-            "filename": "../../../../../common/intro-design-patterns/intro-to-design-patterns.md"
+            "title": "Lab 3: Setup",
+            "filename": "../../../../../common/setup/setup.md"
         },
         {
-            "title": "Lab 4: Functional Details of the HCM Cloud Adapter",
-            "filename": "../../../../../common/adapter-functional-details/hcm-cloud-adapter-details.md"
+            "title": "Lab 4: Configure HCM Cloud for Oracle Integration 3",
+            "filename": "../../../common/configure-hcmcloud-for-oic/configure-hcmcloud-for-oic.md"
         },
         {
-          "title": "Lab 5: AtomFeeds",
+            "title": "Lab 5: Configure Common Connections",
+            "filename": "../../../common/create-connections/create-connections.md"
+        },
+        {
+          "title": "Lab 6: AtomFeeds",
           "filename": "../../create-flow/atomfeeds.md"
         },
         {

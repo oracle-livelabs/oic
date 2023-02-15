@@ -1,17 +1,13 @@
-# BIP Report Integration Flow
+# AtomFeeds Integration Flow
 
 ## Introduction
 
 This lab walks you through the steps to create Integration flow.
 
-This use case describes how to use Oracle Integration with Oracle ERP Business Intelligence Publish(BIP) report.
-   - User creates a GL BIP report in ERP Cloud
-   - OIC consumes the report using External Report Service
-   - OIC enriches the response
-   - OIC sends the response to the client.
+This use case explores how to use of Oracle Integration with Oracle HCM REST and ATOM services to provide information to an identity management system hosted by a customer
 
  The following diagram shows the interaction between the systems involved in this use case.
-    ![FBDIImport](../images/bip-report-stage-file.png)
+    ![directory-synchronization](../images/directory-synchronization.png)
 
 Estimated Time: 30 minutes
 
@@ -19,9 +15,7 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-* Connect to ERP Cloud to extract BIP report
-* Understand how to extract BIP report using External Report Service from Oracle Integration.
-
+* Connect to HCM Cloud to extract new hire information and push it to the downstream application.
 
 ### Prerequisites
 
@@ -30,88 +24,43 @@ This lab assumes you have:
 * All previous labs successfully completed.
 
 
-## Task 1: Create the Short BIP Report Integration
+## Task 1: Create the Directory Synchronization Integration
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select ***App driven orchestration***, followed by ***Create***
+3. On the **Integration Style** dialog, select ***Scheduled orchestration***, followed by ***Create***
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
-    |Name | Short BIP Report |
-    |Description | This integration shows you how to connect to the ERP BIP service, pull a report, decode the response, and return the report results |
+    |Name | directory-synchronization |
+    |Description | This integration shows how to use of Oracle Integration 3 with Oracle HCM REST and ATOM services to provide information to an identity management system hosted by a customer |
 
     Accept all other default values.
 
 5. Click ***Create***.
-6. Click on Horizontal to change the layout to Horizontal
+6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
-## Task 2: Create the REST Trigger
+## Task 2: Configure the Schedule action
+## Take 3: Schedule the Next ATOM Polling
+## Take 4: Access the HCM Cloud ATOM Feed
+## Take 5: Define the Data Mapping
+## Take 6: Count the New Hires
+## Take 7: Check for New Records
+## Take 8: Define the IF conditional flow
+## Take 9: Define the Otherwise Flow
+## Take 10: Process the Records
+## Take 11: Write New Records to Stage
+## Take 12: Define the Data Mapping
+## Take 13: Assign the File Reference
+## Take 14: Upload the File to the FTP Server
+## Take 15: Define the Data Mapping
+## Take 16: Save the Last Run Date
+## Take 17: Define the Tracking Fields
+## Take 18: Activate the Integration
+## Take 19: Run the Integration
+## Take 20: Verify the File Was Uploaded to the FTP
 
-1. Search for the **REST Interface** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
-2. On the **Basic Info** page,
-     - for the **What do you want to call your endpoint?** element, enter ***ShortBIPReport***
-     - for the **What does this endpoint do?** element, enter ***This endpoint defines the REST interface.***
-     - Click ***&gt; (Next step)***.
-3. From the **Resource Configuration** page,
-    - for the **What does this operation do?** element, enter ***Retrieves ledgers from the ERP system.***
-    - for the **What is the endpoint's relative resource URI?**, enter ***/BIP***
-    - for the **What action do you want to perform on the endpoint?**, enter ***GET***
-    - Select ***Add and review parameters for this endpoint*** checkbox
-    - Select ***Configure this endpoint to receive the response*** checkbox
-    - Click ***&gt; (Next step)***.
-4. From the **Request Parameters** page, in the **Specify Query Parameter section**, click ***Add***
-A new row appears.
-    - Enter ***LedgerName*** in the **Name** column and select ***string*** from the **Date Type** column
-    - Click ***Add***, Enter ***ReportAbsolutePath*** in the **Name** column and select ***string*** from the **Date Type** column
-    - Click ***&gt; (Next step)***.
-
-5. On the **Response** Page
-    - Select the **response payload format** to ***JSON Sample***
-    - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-    - Provide the below JSON and Click ***Ok***
-
-        ```
-        <copy>
-        [
-        {
-          "LEDGERNAME" : "US Primary Ledger",
-          "SEGMENT3" : 31,
-          "SEGMENT4" : 21,
-          "FIN_CATEGORY" : "FREIGHT"
-        },
-        {
-          "LEDGERNAME" : "US Primary Ledger",
-          "SEGMENT3" : 31,
-          "SEGMENT4" : 21,
-          "FIN_CATEGORY" : "FREIGHT"
-        }
-        ]
-        </copy>
-        ```
-    - In the **What is the media-type of Response Body?** Select ***JSON***, It is select by Default. If not, you will have to select it explicitly.
-
-6. Click ***&gt; (Next step)***
-7. Review the summary and click ***Done***.
-8. Click ***Save*** to persist changes.
-
-
-## Task 3: Get the BIP report
-1. Hover over the outgoing arrow for the ShortBIPReport activity (after first activity) and Click the ***+*** sign in the integration canvas.
-Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
-2. On the **Basic Info** page,
-    - for the **What do you want to call your endpoint?** element, enter ***GetBIPReport***
-    - Click ***&gt; (Next step)***.
-3. On the **Operations** page,
-    - for the **Select Operation list** element, enter ***runReport***
-    - Click ***&gt; (Next step)***.    
-3. On the **Headers** page,
-    - Click ***&gt; (Next step)***.    
-4. Review the summary and click ***Done***
-5. Click ***Save*** to persist changes
-6. If required, click on Zoom out/in to view the complete flow.
-    ![GetBIPReport](../images/getbipreport.png)
 
 ## Task 4: Define the Data Mapping
 A map action named GetBIPReport is automatically created. We will define this data mapping.
@@ -254,8 +203,7 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Using the SOAP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/soap-adapter/index.html)
-* [Using the REST Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/index.html)
+* [Using the Oracle HCM Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/hcm-adapter/index.html)
 
 ## Acknowledgements
 
