@@ -6,7 +6,7 @@ To use the Oracle HCM Cloud Adapter in an integration, you must assign specific 
 > **Note:** This Lab is required **only** if your Oracle HCM environment is not yet configured to work with Oracle Integration 3
 
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 * Create a custom Integration role

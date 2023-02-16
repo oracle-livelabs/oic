@@ -4,25 +4,25 @@
 
 This lab walks you through the steps to create Integration flow.
 
-This use case explores how to use of Oracle Integration with Oracle HCM REST and ATOM services to provide information to an identity management system hosted by a customer
+This use case explores how to use of Oracle Integration 3 with Oracle HCM REST and ATOM services to provide information to an identity management system hosted by a customer
 
  The following diagram shows the interaction between the systems involved in this use case.
     ![directory-synchronization](../images/directory-synchronization.png)
 
-Estimated Time: 30 minutes
+Estimated Time: 50 minutes
 
 ### Objectives
 
 In this lab, you will:
 
 * Connect to HCM Cloud to extract new hire information and push it to the downstream application.
+* You would be using HCL Cloud adapter, FTP adapter and Stage File action
 
 ### Prerequisites
 
 This lab assumes you have:
 
 * All previous labs successfully completed.
-
 
 ## Task 1: Create the Directory Synchronization Integration
 
@@ -52,9 +52,10 @@ Schedule the current ATOM polling to the current date and time. The next time th
     The Configure assign dialog appears
 2. In the **Name** field, enter ***assignCurrentTimeStamp***, Click on **+** icon, Select **String**,
 In the **Variable** field, enter ***ts***, In the **Value** field (click on **switch to developer view** icon if, required), enter expression as ***fn:concat(fn:substring-before(/ics:schedule/ics:startTime, "."), ".000Z")***
-    ![assignts](../images/assign.png)
 
-> **Note:**  Expression given above might not work as is, you might need to build such expression and drag and drop the components from the functions pallet and variables.
+    > **Note:**  Expression given above might not work as is, you might need to build such expression and drag and drop the components from the functions pallet and variables. For this, you need to drag concat function, substring-before and then startTime from left side to Value text field which is under configuration section.
+
+    ![assignts](../images/assign.png)
 
 3. Click on ***Apply***, Click ***Save*** to apply changes and click on main canvas so that child window disappers
 
@@ -71,7 +72,7 @@ Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
 5. On the **Operations** page,
       - from the **Select an ATOM Feed** list, select ***Employee New Hire***
       - Scroll down, From the **Max entries to process** list, select ***250***
-> **Note:**  This ensures that most customers have all their new hires appear in the ATOM Feed response.
+    > **Note:**  This ensures that most customers have all their new hires appear in the ATOM Feed response.
 
 7. Click ***&gt; (Next step)*** and Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
@@ -79,7 +80,7 @@ Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
 ## Take 5: Define the Data Mapping
 A Map action named **Map getNewHireATOMFeed** is automatically created. We'll define this data mapping.
 1. Select the **Map getNewHireATOMFeed action** and click on **...** and click on **Edit**
-2. In the **Target** section, expand **ApplicationPullParameter**
+2. In the **Target** section, expand **Application Pull Parameter**
 3. Map the **ATOMLastRunDateTime** field in the Sources section, to the **Updated Min** field in the Target section.
    To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
 4. Click on ***Validate***
@@ -90,9 +91,14 @@ A Map action named **Map getNewHireATOMFeed** is automatically created. We'll de
 ## Take 6: Count the New Hires
 The ATOM feed doesn't return the total number of new hires, so we'll configure an assign action to calculate the number of new hires.
 1. Click **Actions** icon which is there on the right side of the screen and from the **Actions** section, drag ***Assign*** to the Integration canvas, and place it after the **Invoke getNewHireATOMFeed** activity
-2. In the **Name** field, enter ***newHiresCount***, Click on **+** icon, Select **String**, In the **Variable** field, enter ***countOfNewHires***, In the **Value** field (click on **switch to developer view** icon if, required), drag ***EmployeeNewHireFeed_Update*** function to the Count function, it should look like **count($getNewHireATOMFeed/ns17:EmployeeNewHireFeedResponse/ns17:EmployeeNewHireFeed_Update)**
+
+2. In the **Name** field, enter ***newHiresCount***, Click on **+** icon, Select **String**, In the **Variable** field, enter ***countOfNewHires***. In the **Value** field (click on **switch to developer view** icon if, required), drag and drop ***count*** function from the functions palette and then drag ***EmployeeNewHireFeed__Update*** inside the Count function. It should look like ***count($getNewHireATOMFeed/ns17:EmployeeNewHireFeedResponse/ns17:EmployeeNewHireFeed_Update)***
+
     ![newhirescount](../images/newhirescount.png)
 3. Click on ***Apply***, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+4. Use fit to page option for a complete view of the integration flow.
+    ![fittopage](../images/fittopage.png)
+4. Until now, your Integration flow should look like the below screenshot.
     ![integrationflow1](../images/integrationflow1.png)
 
 ## Take 7: Check for New Records
@@ -259,7 +265,7 @@ Refresh your page after few seconds.
 The track instance page appears. The Integration state should be processing or successful.
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
 
-## Task 12: Congratulations
+## Task 20: Congratulations
 Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
 
 
