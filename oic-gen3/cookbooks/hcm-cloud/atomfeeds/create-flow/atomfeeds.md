@@ -34,7 +34,7 @@ This lab assumes you have:
     | **Element**          | **Value**          |       
     | --- | ----------- |
     |Name | Directory Synchronization |
-    |Description | This integration shows you how to use the HCM Cloud adapter with the REST adapter to generate a file for Identity Management. |
+    |Description | This integration shows you how to use the HCM Cloud adapter with the FTP adapter to generate a file for Identity Management. |
 
     Accept all other default values.
 
@@ -43,16 +43,20 @@ This lab assumes you have:
 
 ## Task 2: Configure the Schedule action
 1. Select **Schedule** action and click on **...** and click on **Edit**
-2. Click on **+** icon, enter the parameter name as ***ATOMLastRunDateTime*** and enter the default value as ***2023-02-01T00:00:00.000Z***
+2. Click on **+** icon, enter the parameter name as ***ATOMLastRunDateTime*** and enter the default value as ***2022-02-01T00:00:00.000Z***
 3. Click ***Save*** to apply changes and click on main canvas so that child window disappers.
 
 ## Take 3: Schedule the Next ATOM Polling
 Schedule the current ATOM polling to the current date and time. The next time the integration runs, this will be the ATOMLastRunDateTime variable.
-1. Click **Actions** icon which is there on the right side of the screen and from the Actions section, drag ***Assign*** to the Integration canvas, and place it after the **Schedule** activity.
+1. Click **Actions** icon which is there on the right side of the screen and from the **Actions** section, drag ***Assign*** to the Integration canvas, and place it after the **Schedule** activity.
     The Configure assign dialog appears
-2. Click on **+** icon, Select **String**, In the **Name** field, enter ***assignCurrentTimeStamp***, In the **Variable** field, enter ***assignCurrentTimeStamp***, In the **Value** field(click on **switch to developer view** icon if, required), enter expression as ***concat(substring-before(/ics:schedule/ics:startTime,"."),".000Z")***
-    ![assignts](../images/assignts.png)
-3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+2. In the **Name** field, enter ***assignCurrentTimeStamp***, Click on **+** icon, Select **String**,
+In the **Variable** field, enter ***ts***, In the **Value** field (click on **switch to developer view** icon if, required), enter expression as ***fn:concat(fn:substring-before(/ics:schedule/ics:startTime, "."), ".000Z")***
+    ![assignts](../images/assign.png)
+
+> **Note:**  Expression given above might not work as is, you might need to build such expression and drag and drop the components from the functions pallet and variables.
+
+3. Click on ***Apply***, Click ***Save*** to apply changes and click on main canvas so that child window disappers
 
 ## Take 4: Access the HCM Cloud ATOM Feed
 Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
@@ -78,160 +82,177 @@ A Map action named **Map getNewHireATOMFeed** is automatically created. We'll de
 2. In the **Target** section, expand **ApplicationPullParameter**
 3. Map the **ATOMLastRunDateTime** field in the Sources section, to the **Updated Min** field in the Target section.
    To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
-4. Click on Validate
+4. Click on ***Validate***
 5. Click ***&lt; (Go back)***
 6. Click ***Save*** to persist changes
 
 
 ## Take 6: Count the New Hires
 The ATOM feed doesn't return the total number of new hires, so we'll configure an assign action to calculate the number of new hires.
-1. Click **Actions** icon which is there on the right side of the screen and from the Actions section, drag ***Assign*** to the Integration canvas, and place it after the **getNewHireATOMFeed** activity
-2. Click on **+** icon, Select **String**, In the **Name** field, enter ***countOfNewHires***, In the **Variable** field, enter ***countOfNewHires_assignment_1***, In the **Value** field(click on **switch to developer view** icon if, required), drag ***EmployeeNewHireFeed_Update*** function to the Count function.
-    ![assignts](../images/assignts.png)
-3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+1. Click **Actions** icon which is there on the right side of the screen and from the **Actions** section, drag ***Assign*** to the Integration canvas, and place it after the **Invoke getNewHireATOMFeed** activity
+2. In the **Name** field, enter ***newHiresCount***, Click on **+** icon, Select **String**, In the **Variable** field, enter ***countOfNewHires***, In the **Value** field (click on **switch to developer view** icon if, required), drag ***EmployeeNewHireFeed_Update*** function to the Count function, it should look like **count($getNewHireATOMFeed/ns17:EmployeeNewHireFeedResponse/ns17:EmployeeNewHireFeed_Update)**
+    ![newhirescount](../images/newhirescount.png)
+3. Click on ***Apply***, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+    ![integrationflow1](../images/integrationflow1.png)
 
 ## Take 7: Check for New Records
+Let's check if the ATOM feed returned new records, and define what to do next.
+1. Click **Actions** icon and from the **Logic** section, drag ***Switch*** to the Integration canvas and place it after the **newHiresCount** activity.
+    Two flow branches appear in the flow:
+    - Undefined: this branch checks the countOfNewHires. If the expression evaluates to true, the instance follows the flow in this branch.
+    - Otherwise: the instance follows this branch when the routing expression for the initial branch resolves to false.
+
+
 ## Take 8: Define the IF conditional flow
+1. Select Undefined, click on **...** and click on **Edit**, The Expression Builder appears.
+2. Define an expression to check if the ATOM feed contains any new hires:
+    - In the Expression Name field, enter **no new hires**.
+    - In the Source section, select $countOfNewHires.
+        The $countOfNewHires variable appears in the first part of the expression, and a green check mark appears next to the variable
+    - In the New Condition box, enter ***0.0*** in the field after the equal operator.
+3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+    ![nonew-hires](../images/nonew-hires.png)
+4. Click **Actions** icon and from the **End** section, drag ***Stop*** to the Integration canvas and place it after the **IF no new hires** activity.
+    This lets the integration complete if there aren't any new hires.
+
 ## Take 9: Define the Otherwise Flow
+1. Click **Actions** icon and from the **Actions** section, drag ***Assign*** to the Integration canvas and place it after the **Otherwise** activity.
+    The Create Action dialog appears.
+    This assign activity creates a temporary variable to store the file reference of a stage file activity.
+2. In the **Name** field, enter ***StageFileRef***, Click on **+** icon, Select **String**, In the **Variable** field, enter ***tempStageFileRef***, In the **Value** field(click on **switch to developer view** icon if, required), enter expression as ***""***
+3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+
 ## Take 10: Process the Records
+Let's iterate over the new hires that you got from the ATOM feed in a JSON file, and retrieve the record for each new hire using the HCM Cloud REST service.
+1. Click **Actions** icon and from the **Logic** section, drag ***For Each*** to the Integration canvas and place it after the **StageFileRef** activity
+    The Create Action dialog appears.
+2. In the **Name** field, enter ***ForEachEntry***
+3. From **Sources** section, Expand **$getNewHireATOMFeed**, expand **EmployeeNewHireFeedResponse** and Select **EmployeeNewHireFeed_Update**, drag and drop on **Repeating Element** section
+4. Enter ***CurEntry*** as a **Current element name**
+4. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+    ![foreach](../images/foreach.png)
+
+
 ## Take 11: Write New Records to Stage
-## Take 12: Define the Data Mapping
-## Take 13: Assign the File Reference
-## Take 14: Upload the File to the FTP Server
-## Take 15: Define the Data Mapping
-## Take 16: Save the Last Run Date
-## Take 17: Define the Tracking Fields
-## Take 18: Activate the Integration
-## Take 19: Run the Integration
-## Take 20: Verify the File Was Uploaded to the FTP
-
-
-## Task 4: Define the Data Mapping
-A map action named GetBIPReport is automatically created. We will define this data mapping.
-1. Select the action **Map GetBIPReport** and click on **...** and click on **Edit**
-2. In the Source section, expand **ShortBIPReport** and then expand **Query Parameters**
-3. In the Target section, expand the **GetBIPReport Request**, expand **Body**, expand **runReport**, expand **reportRequest**.
-    - Map the ***Report Absolute Path*** field from the source section to the ***reportAbsolutePath*** of target section.
-    - In the Target section, expand the **parameterNameValues** and expand **item**
-    - Right-mouse click on the **name** node and select **Create Target Node**.
-    - Click on ***Switch to Developer View*** which is there on bottom right corner. (Note: If it is already in Developer View then no need to click on this icon)
-    - Enter the literal value ***"LedgerName"***
-    - Click ***Save*** icon in the Expression editor to commit the data.
-    - In the Target section, expand **values** which is under **parameterNameValues**
-    - Map the ***Ledger Name*** field in the Sources section, to the ***item*** field located under **values** in the Target section
-    - Search for **sizeOfDataChunkDownload** in the Target section.
-    - Right-mouse click on the **sizeOfDataChunkDownload** node and select **Create Target Node**.
-    - Enter ***-1*** and click on ***Save***
-    - Click on ***Validate***
-    A confirmation message appears.
-    - Click ***&lt; (Go back)***
-    - Click ***Save*** to persist changes.
-
-    ![MapGetBIPReport](../images/map-getbipreport.png)
-
-
-## Task 5: Write the file
-1. [Download the artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/BIPReportArtifacts.zip) and extract the zip file in your local folders. It should contain two files opaque_schema.xsd and GLCCReport.csv
-
-2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
+Let's write each new record to a stage file.
+1. Download the newEmployeeFile.csv file.
+1. [Download the newEmployeeFile.csv](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/newEmployeeFile.csv)
+2. Click the ***+*** sign which is inside the for loop.
+    Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
-    - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
+    - for the **What do you want to call your endpoint?** element, enter ***WriteRecordToStage***
     - Click ***&gt; (Next step)***.
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Write File***
-    - for the **Specify the File Name** element, select ***"temp.csv"***
+    - for the **Specify the File Name** element, enter ***"newCandidateRecord.csv"***
     - for the **Specify the Output Directory** element, select ***"/tmp"***
+    - Select **Append to Existing File**
     - Click ***&gt; (Next step)***.
 5. On the **Schema Options** page,
-      - select ***XML Schema (XSD) document***
-      - Click ***&gt; (Next step)***.
+    - Click ***&gt; (Next step)***.
 6. On the **Format Definition** page,
-      - click ***Drag and Drop*** and select the ***opaque_schema.xsd*** which you have downloaded
-      - Click ***&gt; (Next step)***.
+    - click ***Drag and Drop*** and select the ***newEmployeeFile.csv*** which you have downloaded
+    - for the **Enter the Record Name** field, enter ***User***.
+    - for the **Enter the Recordset Name** field, enter ***NewUser***.
+    - Click ***&gt; (Next step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
-    ![StageFileWrite](../images/stagefilewrite.png)
-
-## Task 6: Define the Data Mapping
-A map action named StageFileWrite is automatically created. We will define this data mapping.
-1. Select the action **Map StageFileWrite** and click on **...** and click on **Edit**
-2. In the Source section, expand **GetBIPReport Response**, expand **runReportResponse**, expand **runReportReturn**
-3. In the Target section, expand the **StageFileWrite Response**
-4. Map the ***reportBytes*** from the source section to the ***Opaque Element*** of target section.
-5. Click on ***Validate***
-  - A confirmation message appears.
-6. Click ***&lt; (Go back)***
-7. Click ***Save*** to persist changes.
-
-## Task 7: Read the file from Stage
-1. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
-2. On the **Basic Info** page,
-    - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
-    - Click ***&gt; (Next step)***.
-3. On the **Configure Operation** page,
-    - for the **Choose Stage File Operation** element, select ***Read Entire File***
-    - for the **Specify the File Name** element, select ***"temp.csv"***
-    - for the **Specify the Directory** element, select ***"/tmp"***
-    - Click ***&gt; (Next step)***.
-4. On the **Schema Options** page,
-      - Click ***&gt; (Next step)***.
-5. On the **Format Definition** page,
-      - click ***Drag and Drop*** and select the ***GLCCReport.csv*** which you have downloaded
-      - for the **Enter Record Name**, enter ***Ledger***
-      - for the **Enter Record Name**, enter ***LedgerSet***
-      - Click ***&gt; (Next step)***.
-6. Review the summary and click ***Done***
-7. Click ***Save*** to persist changes
-    ![ReadFileFromStage](../images/readfilefromstage.png)
-
-## Task 8: Define the Data Mapping
-1. Select the action **Map ShortBIPReport** and click on **...** and click on **Edit**
-2. In the Source section, expand **ReadFileFromStage Response**, expand **Read Response**, expand **Ledger Set**
-3. In the Target section, expand the **ShortBIPReport Response**, expand **Response Wrapper**
-   - Map the ***Ledger*** from the source section to the ***Top Level Array*** of target section.
-   - In the Source section, expand **Ledger**, in the Target section, expand the **Top Level Array**
-   - Map the following fields from the Sources section to the fields in the Target section
-  | **Field**        | **Value**|       
-  | --- | ----------- |
-  | LEDGERNAME         | LEDGERNAME|
-  | SEGMENT3         | SEGMENT3|
-  | SEGMENT4         | SEGMENT4|
-  | FIN CATEGORY         | FIN CATEGORY|
-
-  - Click on ***Validate***.
-     - A confirmation message appears.
-  - Click ***&lt; (Go back)***
-  - Click ***Save*** to persist changes.
 
 
+## Take 12: Define the Data Mapping
+A Map action named **Map WriteRecordToStage** is automatically created. We'll define this data mapping.
+1. Select the **Map WriteRecordToStage** action, click on **...** and click on **Edit**
+    The Data Mapping page appears.
+2. In the Sources section, expand **CurEntry**, then **EmployeeNewHireFeed_Update**, and then **EmployeeNewHireFeed_Context**
+3. In the Target section, expand **New User**, and then **User**.
+4. Map the following fields in the Sources section to the fields with the same name in the Target section:
 
-## Task 9: Define Tracking Fields
+    - PrimaryPhoneNumber
+    - PersonId
+    - PersonName
+    - EffectiveStartDate
+    - EffectiveDate
+    - WorkerType
+    - PeriodType
+    - PersonNumber
+    - WorkEmail
+To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
+
+    ![records-stage-map](../images/records-stage-map.png)
+
+5. Click ***Validate***, Click ***&lt; (Go back)*** and Click ***Save*** to persist changes
+
+## Take 13: Assign the File Reference
+1. Click **Actions** icon and from the **Actions** section, drag ***Assign*** to the Integration canvas and place it after the **Stage File WriteRecordToStage** activity.
+    The Create Action dialog appears.
+    This assign activity creates a temporary variable to store the file reference of a stage file activity.
+2. In the **Name** field, enter ***assignStageFileRef***, Click on **+** icon, Select **String**, In the **Variable** field, select ***tempStageFileRef*** from the drop down.
+3. In the Source section, expend **$WriteRecordToStage**, expand **WriteResponse**, expand **WriteResponse**, expand **ICSFile** drag and drop **FileReference** in the **Value** field
+    ![assign-file-reference](../images/assign-file-reference.png)
+
+4. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+
+
+## Take 14: Upload the File to the FTP Server
+
+1. Hover over the outgoing arrow after the **ForEachEntry** activity and click **+** icon.
+2. In the Search field, begin typing **File Server** to find your connection
+3. Select the connection named **File Server**.
+The Configure Oracle Adapter Endpoint Configuration Wizard appears.
+4. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***WriteStageFileToFTP***
+     - Click ***&gt; (Next Step)***.
+5. From the **Operations** page,
+    - select ***Write File*** from the **Select Operation** list
+    - select ***ASCII*** for the **Select A Transfer Mode**
+    - Enter ***/home/users/```<<your oic usernumber>>```/Output*** in the **Output Directory** field
+    - Enter ***newCandidateRecord%yyyyMMddHHmmss%.csv.*** in the **File Name Pattern** field
+        - This pattern will append the year, month, date, and time to the prefix newCandidateRecord. For example, if you wrote the file on Feb 16th 2023 at 04:21:00 P.M., the file name would be newCandidateRecord20230216042100.csv
+    - Click ***&gt; (Next Step)***.  
+6. From the **Schema** page,
+    - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
+    - Click ***&gt; (Next Step)***.
+7. Review the summary and click ***Done***.
+8. Click ***Save*** to persist changes.
+    ![writestagefile2ftp](../images/writestagefile2ftp.png)
+
+
+## Take 15: Define the Data Mapping
+A Map action named Map WriteStageFileToFTP is automatically created. We'll define this data mapping.
+1. Select the **Map WriteStageFileToFTP** action, click on **...** and click on **Edit**
+    The Data Mapping page appears.
+2. In the Target section, expand **ICSFile**.
+3. Map the **tempStageFileRef** field in the Sources section, to the **File Reference** field in the Target section.
+4. Click ***Validate***, Click ***&lt; (Go back)*** and Click ***Save*** to persist changes
+
+## Take 16: Save the Last Run Date
+The last step in the integration is to store the date and time you polled the ATOM feed. The next time this integration runs, it will use this date and time to avoid retrieving duplicated results.
+1. Click **Actions** icon and from the **Actions** section, drag ***Assign*** to the Integration canvas and outside of the **Switch** activity, before the **Stop** activity.
+2. In the **Name** field, enter ***assignATOMLRD***, Click on **+** icon, Select **String**, In the **Variable** field, select ***ATOMLastRunDateTime*** from the drop down, In the **Value** column, select **ts** from the drop down.
+3. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
+
+## Task 17: Define Tracking Fields
 
 Manage business identifiers that enable you to track fields in messages during runtime.
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
-2. From the **Source** section, expand ***execute*** &gt; ***QueryParameters***. Drag the ***LEDGERNAME*** field to the right side section:
+2. From the **Source** section, expand ***execute***. Drag the ***startTime*** field to the right side section:
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click ***Save***.
-    ![completeShortBIPReport](../images/complete-shortbipreport.png)
 5. Click on ***&lt; (Go back)*** button.
 
+    ![integrationflowfinal](../images/integrationflowfinal.png)
 
-## Task 10: Activate the Integration
-1. On the **Integrations** page, click on the ***Activate*** icon of **Short BIP Report** Integration.
+## Task 18: Activate the Integration
+1. On the **Integrations** page, click on the ***Activate*** icon of **Directory Synchronization** Integration.
 2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Task 11: Run the Integration
+## Task 19: Run the Integration
 Refresh your page after few seconds.
-1. Select **Short BIP Report**,  Click on **...(Actions)** menu and Click on ***Run***
-2. Configure the URI parameters:
-  - for **ReportAbsolutePath**, enter ***/Custom/Financials/GLCCReport.xdo***
-  - for **LedgerName**, enter ***US Primary Ledger***
+1. Select **Directory Synchronization**,  Click on **...(Actions)** menu and Click on ***Run***
 3. Click ***Run*** (in the upper right of the page).
 4. Look at the Response section to verify the BIP report results and verify the Status is 200 OK
 5. Click the link which appears on top to track the instance.
@@ -253,4 +274,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** -
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2023

@@ -9,7 +9,7 @@ Estimated Time: 10 minutes
 
 ### Objectives
 In this lab, you will:
-- Create a connection with File Server
+- Create a connection with FTP Server
 - Create a connection with HCM Cloud Adapter
 
     > **Note:**  You can use an existing connection if one has already been configured for your environment.
@@ -19,7 +19,7 @@ This lab assumes you have:
 - Completed all the previous labs
 
 
-## Task 1: Create a connection with File Server
+## Task 1: Create a connection with FTP Server
 
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 
