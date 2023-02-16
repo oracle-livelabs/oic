@@ -195,7 +195,6 @@ To map an element, select the element from the Sources section, then while click
 2. In the **Name** field, enter ***assignStageFileRef***, Click on **+** icon, Select **String**, In the **Variable** field, select ***tempStageFileRef*** from the drop down.
 3. In the Source section, expend **$WriteRecordToStage**, expand **WriteResponse**, expand **WriteResponse**, expand **ICSFile** drag and drop **FileReference** in the **Value** field
     ![assign-file-reference](../images/assign-file-reference.png)
-
 4. Click on Apply, Click ***Save*** to apply changes and click on main canvas so that child window disappers
 
 
@@ -266,7 +265,7 @@ The track instance page appears. The Integration state should be processing or s
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
 
 ## Task 20: Congratulations
-Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
+Congratulations! You have used HCL Cloud adapter to get the ATOM feeds and called FTP server to write the data into the File Server.
 
 
 You may now **proceed to the next lab**.
