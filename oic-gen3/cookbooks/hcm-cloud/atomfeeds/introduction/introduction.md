@@ -55,7 +55,8 @@ The Oracle HCM Cloud Adapter provides the following benefits:
 
 ###	Video Preview
 
-[ERP Cloud Integration Patterns](https://videohub.oracle.com/media/HCM%20Cloud%20Integration%20Patterns/1_43t43y77)
+[HCM Cloud Integration Patterns](https://videohub.oracle.com/media/HCM%20Cloud%20Integration%20Patterns/1_43t43y77)
+[HCM Cloud Atom Feed Pattern](https://videohub.oracle.com/media/HCM%20Cloud%20Atom%20Feed%20Pattern/1_pe1llsce)
 
 You may now **proceed to the next lab**.
 
