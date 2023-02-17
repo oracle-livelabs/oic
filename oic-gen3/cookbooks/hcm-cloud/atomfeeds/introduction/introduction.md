@@ -28,7 +28,7 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-## Leverage the HCM Cloud Adapter in Oracle Integration 3
+## Task 1: Leverage the HCM Cloud Adapter in Oracle Integration 3
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, Oracle HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 
