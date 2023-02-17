@@ -82,7 +82,7 @@ You may now **proceed to the next lab**.
 
 
 ## Learn More
-* [Using the Oracle HCM Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/hcm-adapter/index.html)
+* [Prerequisites for using the Oracle HCM Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/hcm-adapter/prerequisites-creating-connection.html#GUID-F2FB3123-1413-4101-BB66-500215959084)
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
