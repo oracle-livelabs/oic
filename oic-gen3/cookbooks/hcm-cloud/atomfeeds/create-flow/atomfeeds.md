@@ -96,17 +96,16 @@ The ATOM feed doesn't return the total number of new hires, so we'll configure a
 
     ![newhirescount](../images/newhirescount.png)
 3. Click on ***Apply***, Click ***Save*** to apply changes and click on main canvas so that child window disappers
-4. Use fit to page option for a complete view of the integration flow.
-    ![fittopage](../images/fittopage.png)
-4. Until now, your Integration flow should look like the below screenshot.
-    ![integrationflow1](../images/integrationflow1.png)
 
-## Take 7: Check for New Records
+## Take 7: Add Switch activity to check for New Records
 Let's check if the ATOM feed returned new records, and define what to do next.
 1. Click **Actions** icon and from the **Logic** section, drag ***Switch*** to the Integration canvas and place it after the **newHiresCount** activity.
     Two flow branches appear in the flow:
     - Undefined: this branch checks the countOfNewHires. If the expression evaluates to true, the instance follows the flow in this branch.
     - Otherwise: the instance follows this branch when the routing expression for the initial branch resolves to false.
+
+2. Use fit to page option for a complete view of the integration flow.
+    ![fittopage](../images/fittopage.png)
 
 
 ## Take 8: Define the IF conditional flow
@@ -158,8 +157,8 @@ Let's write each new record to a stage file.
     - Click ***&gt; (Next step)***.
 6. On the **Format Definition** page,
     - click ***Drag and Drop*** and select the ***newEmployeeFile.csv*** which you have downloaded
-    - for the **Enter the Record Name** field, enter ***User***.
-    - for the **Enter the Recordset Name** field, enter ***NewUser***.
+    - for the **Enter the Record Name** field, enter ***User***
+    - for the **Enter the Recordset Name** field, enter ***NewUser***
     - Click ***&gt; (Next step)***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
@@ -169,20 +168,20 @@ Let's write each new record to a stage file.
 A Map action named **Map WriteRecordToStage** is automatically created. We'll define this data mapping.
 1. Select the **Map WriteRecordToStage** action, click on **...** and click on **Edit**
     The Data Mapping page appears.
-2. In the Sources section, expand **CurEntry**, then **EmployeeNewHireFeed_Update**, and then **EmployeeNewHireFeed_Context**
+2. In the Sources section, expand **CurEntry**, then **Employee New Hire Feed Update**, and then **Employee New Hire Feed Context**
 3. In the Target section, expand **New User**, and then **User**.
 4. Map the following fields in the Sources section to the fields with the same name in the Target section:
 
-    - PrimaryPhoneNumber
+    - Primary Phone Number
     - PersonId
-    - PersonName
-    - EffectiveStartDate
-    - EffectiveDate
-    - WorkerType
-    - PeriodType
-    - PersonNumber
-    - WorkEmail
-To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
+    - Person Name
+    - Effective Start Date
+    - Effective Date
+    - Worker Type
+    - Period Type
+    - Person Number
+    - Work Email
+        - To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
 
     ![records-stage-map](../images/records-stage-map.png)
 
@@ -225,7 +224,6 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 ## Take 15: Define the Data Mapping
 A Map action named Map WriteStageFileToFTP is automatically created. We'll define this data mapping.
 1. Select the **Map WriteStageFileToFTP** action, click on **...** and click on **Edit**
-    The Data Mapping page appears.
 2. In the Target section, expand **ICSFile**.
 3. Map the **tempStageFileRef** field in the Sources section, to the **File Reference** field in the Target section.
 4. Click ***Validate***, Click ***&lt; (Go back)*** and Click ***Save*** to persist changes
@@ -257,7 +255,8 @@ Manage business identifiers that enable you to track fields in messages during r
 
 ## Task 19: Run the Integration
 Refresh your page after few seconds.
-1. Select **Directory Synchronization**,  Click on **...(Actions)** menu and Click on ***Run***
+1. Refresh the page.
+2. Select **Directory Synchronization**,  Click on **...(Actions)** menu and Click on ***Run***
 3. Click ***Run*** (in the upper right of the page).
 4. Look at the Response section to verify the BIP report results and verify the Status is 200 OK
 5. Click the link which appears on top to track the instance.
@@ -265,7 +264,7 @@ The track instance page appears. The Integration state should be processing or s
 OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
 
 ## Task 20: Congratulations
-Congratulations! You have used HCL Cloud adapter to get the ATOM feeds and called FTP server to write the data into the File Server.
+Congratulations! You have used HCM Cloud adapter to get the ATOM feeds and called FTP server to write the data into the File Server.
 
 
 You may now **proceed to the next lab**.
