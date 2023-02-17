@@ -2,7 +2,9 @@
 
 ## About this Workshop
 
-This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the HCM cloud. Out of the box, The Oracle HCM Cloud Adapter enables you to create an integration with Oracle Human Capital Management (HCM) Cloud applications. You select business objects that an integration receives from Oracle HCM Cloud as a request and as a response.
+This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the HCM cloud. Out of the box, The Oracle HCM Cloud Adapter enables you to create an integration with Oracle Human Capital Management (HCM) Cloud applications.
+In this workshop, you would be experiencing ATOM Feeds feature which is available in the HCM cloud to extract the feeds and you would be leveraging HCM Cloud and FTP Adapters of Oracle Integration 3 to implement this usecase.
+HCM Atom feeds provide notifications of Oracle Fusion Human Capital Management (HCM) events. When an event occurs in Oracle Fusion HCM, the corresponding Atom feed is delivered automatically to the Atom server. The feed contains details of the REST resource on which the event occurred. Subscribers who consume these Atom feeds use the REST resources to retrieve additional information about the resource
 
 
 Estimated Time: 2 hours
@@ -13,6 +15,7 @@ In this workshop, you will learn how to:
 
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
 * Configure HCM Cloud Adapter.
+* Configure FTP Adapter
 * Create a Real-Time Synchronization scenario using ATOM feeds
 
 
