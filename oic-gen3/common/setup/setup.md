@@ -28,7 +28,7 @@ Configure File Server settings. This is required as you are using Embedded File 
 4. Select **Users** from left Navigation pane, search for your User Name and click on Configure.
     ![Navigation to Users](images/enableuseronfileserver.png)
 5. Click on **Switch to enable** and click on **Save**.
-    ![Enable User](images/enableuseronfileserver1.png =50%x30%)
+    ![Enable User](images/enableuseronfileserver1.png)
 6. Select **Folders** from left Navigation pane.
     ![Navigation to Folders](images/file-server-files1.png)
 7. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.
