@@ -201,7 +201,7 @@ Stop | Stop | The end of the integration.
 
 4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
-5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/<username>/Output**. Click *Next*.
+5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/&lt;username&gt;/Output**. Click *Next*.
 The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
 6.  Click *Next*. Review the summary and click *Done*.
@@ -360,7 +360,7 @@ You need Identity Domain Administrator or Application Administrator credentials 
 **Invoke OIC3 Factory API using access token**
 
 1.  Open another tab in Postman and enter the factory REST API to Clone the Integration.
-    Provide Verb as POST and endpoint: https://design.integration.<region>.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;
+    Provide Verb as POST and endpoint: https://design.integration.&lt;region&gt;.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;
     >**Note:** Refer OIC Console url for integrationInstance Name
 
 2.  Under the **Authorization** tab
