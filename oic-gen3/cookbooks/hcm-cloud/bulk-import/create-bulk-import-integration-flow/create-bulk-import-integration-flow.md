@@ -55,18 +55,18 @@ The NXSD schema defines the structure of the output file (fields) and the format
 3.  Locate the **schema** element at the beginning of the file.
 
 This element defines the global schema attributes. You must include a similar **schema** element in the NXSD schemas you build for HDL objects. You will need to change the object names.
-  ```
-  <schema xmlns="http://www.w3.org/2001/XMLSchema"
-          xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
-          xmlns:tns="http://supoc.oracle.com/WorkerData"
-          targetNamespace="http://supoc.oracle.com/WorkerData"
-          elementFormDefault="qualified"
-          attributeFormDefault="unqualified"
-          nxsd:stream="chars"
-          nxsd:version="NXSD"
-          nxsd:encoding="UTF8"
-          nxsd:encodeLineTerminators="false">
-  ```
+        ```
+        <schema xmlns="http://www.w3.org/2001/XMLSchema"
+                xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+                xmlns:tns="http://supoc.oracle.com/WorkerData"
+                targetNamespace="http://supoc.oracle.com/WorkerData"
+                elementFormDefault="qualified"
+                attributeFormDefault="unqualified"
+                nxsd:stream="chars"
+                nxsd:version="NXSD"
+                nxsd:encoding="UTF8"
+                nxsd:encodeLineTerminators="false">
+        ```
 
 4.   Locate the **WorkerData** element.
 This element defines the set of objects and child objects required to load this business object to the HCM Data Loader.
@@ -77,94 +77,94 @@ The following elements are specified for each of the objects in the NXSD schema:
 - **Object** element: inserts a **MERGE** line in the **DAT** file.
   For example: **Worker**
 The format for the lines is specified in the **nxsd:startsWidth** attribute with the values **METADATA** for the object label and **MERGE** for the object.
-  ```
-  <element name="WorkerData">
-      <complexType>
-          <choice maxOccurs="unbounded" minOccurs="0">
-               <element ref="tns:WorkerLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|Worker|" />
-               <element ref="tns:Worker" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|Worker|" />
-               <element ref="tns:PersonLegislativeDataLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonLegislativeData|" />
-               <element ref="tns:PersonLegislativeData" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonLegislativeData|" />
-               <element ref="tns:PersonNameLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonName|" />
-               <element ref="tns:PersonName" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonName|" />
-               <element ref="tns:PersonEmailLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonEmail|" />
-               <element ref="tns:PersonEmail" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonEmail|" />
-               <element ref="tns:PersonAddressLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonAddress|" />
-               <element ref="tns:PersonAddress" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonAddress|" />
-               <element ref="tns:PersonPhoneLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonPhone|" />
-               <element ref="tns:PersonPhone" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonPhone|" />
-               <element ref="tns:PersonNationalIdentifierLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonNationalIdentifier|" />
-               <element ref="tns:PersonNationalIdentifier" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonNationalIdentifier|" />
-               <element ref="tns:WorkRelationshipLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|WorkRelationship|" />
-               <element ref="tns:WorkRelationship" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|WorkRelationship|" />
-               <element ref="tns:WorkTermsLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|WorkTerms|" />
-               <element ref="tns:WorkTerms" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|WorkTerms|" />
-               <element ref="tns:AssignmentLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|Assignment|" />
-               <element ref="tns:Assignment" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|Assignment|" />
-          </choice>
-      </complexType>
-  </element>
-  ```
+        ```
+        <element name="WorkerData">
+            <complexType>
+                <choice maxOccurs="unbounded" minOccurs="0">
+                     <element ref="tns:WorkerLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|Worker|" />
+                     <element ref="tns:Worker" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|Worker|" />
+                     <element ref="tns:PersonLegislativeDataLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonLegislativeData|" />
+                     <element ref="tns:PersonLegislativeData" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonLegislativeData|" />
+                     <element ref="tns:PersonNameLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonName|" />
+                     <element ref="tns:PersonName" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonName|" />
+                     <element ref="tns:PersonEmailLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonEmail|" />
+                     <element ref="tns:PersonEmail" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonEmail|" />
+                     <element ref="tns:PersonAddressLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonAddress|" />
+                     <element ref="tns:PersonAddress" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonAddress|" />
+                     <element ref="tns:PersonPhoneLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonPhone|" />
+                     <element ref="tns:PersonPhone" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonPhone|" />
+                     <element ref="tns:PersonNationalIdentifierLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|PersonNationalIdentifier|" />
+                     <element ref="tns:PersonNationalIdentifier" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|PersonNationalIdentifier|" />
+                     <element ref="tns:WorkRelationshipLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|WorkRelationship|" />
+                     <element ref="tns:WorkRelationship" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|WorkRelationship|" />
+                     <element ref="tns:WorkTermsLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|WorkTerms|" />
+                     <element ref="tns:WorkTerms" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|WorkTerms|" />
+                     <element ref="tns:AssignmentLabel" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="METADATA|Assignment|" />
+                     <element ref="tns:Assignment" minOccurs="0" maxOccurs="unbounded" nxsd:startsWith="MERGE|Assignment|" />
+                </choice>
+            </complexType>
+        </element>
+        ```
 5.  Find the **WokerLabel** element.
 This element adds the name of the fields to the **METADATA** line. Each object requires its corresponding label element.
-  ```
-  <element name="WorkerLabel">
-      <complexType>
-          <sequence>
-              <element name="EffectiveStartDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="EffectiveEndDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="StartDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="CategoryCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="ActionCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="DateOfBirthLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemOwnerLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemIdLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="ApplicantNumberLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
-          </sequence>
-      </complexType>
-  </element>
-  ```
+        ```
+        <element name="WorkerLabel">
+            <complexType>
+                <sequence>
+                    <element name="EffectiveStartDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="EffectiveEndDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="StartDateLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="CategoryCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="ActionCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="DateOfBirthLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemOwnerLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemIdLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="ApplicantNumberLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+                </sequence>
+            </complexType>
+        </element>
+        ```
 
 6.  Locate the **Worker** element.
 This element defines the fields required by the HCM Data Loader **Worker** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
-  ```
-  <element name="Worker">
-      <complexType>
-          <sequence>
-              <element name="EffectiveStartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="EffectiveEndDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="StartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="CategoryCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="ActionCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="DateOfBirth" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemOwner" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="ApplicantNumber" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
-          </sequence>
-      </complexType>
-  </element>
-  ```
+        ```
+        <element name="Worker">
+            <complexType>
+                <sequence>
+                    <element name="EffectiveStartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="EffectiveEndDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="StartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="CategoryCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="ActionCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="DateOfBirth" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemOwner" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="ApplicantNumber" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+                </sequence>
+            </complexType>
+        </element>
+        ```
 
 7.  Locate the **PersonName** element
 This element defines the fields required by HCM Data Loader **Person** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
-  ```
-  <element name="PersonName">
-      <complexType>
-          <sequence>
-              <element name="PersonIdSourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="EffectiveStartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="EffectiveEndDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="LegislationCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="NameType" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="FirstName" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="MiddleNames" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="LastName" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemOwner" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
-              <element name="SourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
-          </sequence>
-      </complexType>
-  </element>
-  ```
+        ```
+        <element name="PersonName">
+            <complexType>
+                <sequence>
+                    <element name="PersonIdSourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="EffectiveStartDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="EffectiveEndDate" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="LegislationCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="NameType" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="FirstName" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="MiddleNames" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="LastName" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemOwner" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+                    <element name="SourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+                </sequence>
+            </complexType>
+        </element>
+        ```
 
 ## Take 3: Understand the Integration
 
@@ -197,11 +197,11 @@ Stop | Stop | The end of the integration.
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
-3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/<username>/Output**
+3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/&lt;username&gt;/Output**
 
 4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
-5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/<username>/Output**. Click *Next*.
+5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/&lt;username&gt;/Output**. Click *Next*.
 The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
 6.  Click *Next*. Review the summary and click *Done*.
@@ -277,11 +277,11 @@ Once integration flow is completed Click on the Integration instance primary ide
 
 The flow for your instance appears. The flow is colored in green to indicate that it ran successfully.
 
-![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
+  ![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
 
 Click on the Activity Stream and expand **Invoke ImportLoadedData** activity. Make a note of the **Request Id** in the response received from HDL Job.
 
-![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
+  ![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
 
 ## Take 10: Verify the Data in HCM
 
@@ -360,8 +360,8 @@ You need Identity Domain Administrator or Application Administrator credentials 
 **Invoke OIC3 Factory API using access token**
 
 1.  Open another tab in Postman and enter the factory REST API to Clone the Integration.
-    Provide Verb as POST and endpoint: https://design.integration.<region>.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=<integration_instance>
-    >>Note: Refer OIC Console url for integrationInstance Name
+    Provide Verb as POST and endpoint: https://design.integration.&lt;region&gt;.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;
+    >**Note:** Refer OIC Console url for integrationInstance Name
 
 2.  Under the **Authorization** tab
     - Select Type = Bearer token
@@ -389,6 +389,6 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 ## Acknowledgements
 
-* **Author** - Kishore, Director Product Management, Oracle Integration
+* **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Feb, 2023
+* **Last Updated By/Date** - Kishore Katta, Feb 2023
