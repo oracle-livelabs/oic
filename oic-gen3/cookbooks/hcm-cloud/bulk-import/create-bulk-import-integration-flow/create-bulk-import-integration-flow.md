@@ -197,7 +197,7 @@ Stop | Stop | The end of the integration.
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
-3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/<username>/Output**
+3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/&lt;username&gt;/Output**
 
 4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
@@ -277,11 +277,11 @@ Once integration flow is completed Click on the Integration instance primary ide
 
 The flow for your instance appears. The flow is colored in green to indicate that it ran successfully.
 
-![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
+  ![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
 
 Click on the Activity Stream and expand **Invoke ImportLoadedData** activity. Make a note of the **Request Id** in the response received from HDL Job.
 
-![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
+  ![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
 
 ## Take 10: Verify the Data in HCM
 
@@ -360,8 +360,8 @@ You need Identity Domain Administrator or Application Administrator credentials 
 **Invoke OIC3 Factory API using access token**
 
 1.  Open another tab in Postman and enter the factory REST API to Clone the Integration.
-    Provide Verb as POST and endpoint: https://design.integration.<region>.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=<integration_instance>
-    >>Note: Refer OIC Console url for integrationInstance Name
+    Provide Verb as POST and endpoint: https://design.integration.<region>.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;
+    >**Note:** Refer OIC Console url for integrationInstance Name
 
 2.  Under the **Authorization** tab
     - Select Type = Bearer token
