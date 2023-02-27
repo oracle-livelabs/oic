@@ -2,11 +2,10 @@
 
 ## About this Workshop
 
-This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the HCM cloud. Out of the box, The Oracle HCM Cloud Adapter enables you to create an integration with Oracle Human Capital Management (HCM) Cloud applications.
-In this workshop, you would be experiencing ATOM Feeds feature which is available in the HCM cloud to extract the feeds and you would be leveraging HCM Cloud and FTP Adapters of Oracle Integration 3 to implement this usecase.
-HCM Atom feeds provide notifications of Oracle Fusion Human Capital Management (HCM) events. When an event occurs in Oracle Fusion HCM, the corresponding Atom feed is delivered automatically to the Atom server. The feed contains details of the REST resource on which the event occurred. Subscribers who consume these Atom feeds use the REST resources to retrieve additional information about the resource.
+This workshop explores the use of Oracle Integration 3 HCM Cloud Adapter capabilities to load new hires data from third party source, generate HCM Data Loader compatible file and import Pending Workers into HCM Cloud.
 
-Estimated Time: 2 hours
+
+Estimated Time: 60 minutes
 
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
@@ -18,9 +17,9 @@ With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud an
 In this workshop, you will learn how to:
 
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
-* Configure HCM Cloud Adapter.
-* Configure FTP Adapter
-* Create a Real-Time Synchronization scenario using ATOM feeds
+* Configure HCM Cloud Adapter to import bulk data.
+* Configure FTP Adapter to read XML file
+* Transform XML data to Pending Workers DAT file
 
 
 ### Prerequisites
@@ -28,7 +27,7 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-## Leverage the HCM Cloud Adapter in Oracle Integration 3
+## Task 1: Leverage the HCM Cloud Adapter in Oracle Integration 3
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, Oracle HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 
@@ -60,7 +59,7 @@ The Oracle HCM Cloud Adapter provides the following benefits:
 ###	Video Preview
 
 * [HCM Cloud Integration Patterns](https://videohub.oracle.com/media/HCM%20Cloud%20Integration%20Patterns/1_43t43y77)
-* [HCM Cloud Atom Feed Pattern](https://videohub.oracle.com/media/HCM%20Cloud%20Atom%20Feed%20Pattern/1_pe1llsce)
+* [HCM Cloud Import Bulk Data Pattern](https://videohub.oracle.com/media/HCM+Cloud+Bulk+Import+Pattern/1_v8ljf8ds)
 
 You may now **proceed to the next lab**.
 
@@ -71,6 +70,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Contributors** - Kishore Katta, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Feb 2023
+* **Author** - Kishore Katta, Product Management, Oracle Integration
+* **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
+* **Last Updated By/Date** - Kishore Katta, Feb 2023
