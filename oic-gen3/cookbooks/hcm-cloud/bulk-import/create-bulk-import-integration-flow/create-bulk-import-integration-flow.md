@@ -2,11 +2,13 @@
 
 ## Introduction
 
+Pending Workers are imported to HCM in bulk using HCM Data Loader (HDL). In this use case, a new hires extract has been pseudo generated as a structured XML file to simulate generic external system export. Extracted file has been sent to the FTP server.
+
+OIC 3 will trigger a scheduled integration to retrieve this file. Data from the file is imported into a structured schema. Using OIC 3 mapping capabilities the data is transformed into HCM Data Loader compatible file format with native schema definition and subsequently zipped, sent to UCM, and imported using HDL.
+
 This lab walks you through the steps to create Integration flow.
 
-This use case explores how to use Oracle Integration with Oracle HCM Cloud to Import Bulk data in HDL (HCM Data Loader) format. If you combine this with native schema formatting for output file definition, you can produce output files in any desired format.
-
- The following diagram shows the interaction between the systems involved in this use case.
+The following diagram shows the interaction between the systems involved in this use case.
     ![Pending Worker Import](images/pending-worker-import.png)
 
 Estimated Time: 40 minutes

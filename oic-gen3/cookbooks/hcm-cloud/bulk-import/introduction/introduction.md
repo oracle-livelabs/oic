@@ -2,8 +2,7 @@
 
 ## About this Workshop
 
-This workshop explores the use of Oracle Integration 3 HCM Cloud Adapter capabilities to load new hires data from third party source, generate HCM Data Loader compatible file and import Pending Workers into HCM Cloud.
-
+HCM customers who use different sources of recruiting new talent require an ability to import Pending Workers using data from multiple external systems. In this workshop we will explore how to use Oracle Integration 3 to pick up any structured data file containing new hires and how to generate the input file that can be loaded into HCM.
 
 Estimated Time: 60 minutes
 
