@@ -31,9 +31,9 @@ This lab assumes you have:
 
     > **Note:**  Similar steps apply to either Autonomous Data Warehouse and Autonomous Transaction Processing.
 
-3.  In your Autonomous Database Details page, click the **DB Connection** button.
+3.  In your Autonomous Database Details page, click the **Database Connection** button.
 
-    ![Click Database Connection](images/click-database-connection.png)
+
 
 4. In the displayed *Database Connection* dialog, click **Download Wallet**.
 
@@ -51,7 +51,6 @@ Follow these steps to create a DB table which will be used as part of this works
 
 1.  If you are not already logged in to SQL Worksheet, in your ADW Database Details page, click the **Database Actions** button.
 
-    ![Click Database Actions](images/click-database-actions.png)
 
    > **Note:**  If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log-in manually.  
 
