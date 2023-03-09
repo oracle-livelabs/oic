@@ -34,7 +34,11 @@
             "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-          "title": "Lab 5: BIP Report",
+            "title": "Lab 5: Configure BIP Report",
+            "filename": "../../setup/setup.md"
+        },
+        {
+          "title": "Lab 6: BIP Report",
           "filename": "../../create-flow/bipreport.md"
         },
         {
