@@ -1,4 +1,4 @@
-# Create and Configure Connections
+# Create Connections
 
 ## Introduction
 
@@ -11,14 +11,13 @@ Estimated Time: 15 minutes
 In this lab, you will:
 - Create an Oracle FTP Connection using FTP adapter
 - Create ERP Cloud Integration Service connection using SOAP adapter
-- Create ERP Cloud Callaback connection using SOAP adapter
+- Create ERP Cloud Callback connection using SOAP adapter
 
     > **Note:**  You can use an existing connection if one has already been configured for your environment.
 
 ### Prerequisites
 This lab assumes you have:
 - Completed all the previous labs
-
 
 ## Task 1: File Server Connection
 
@@ -63,8 +62,8 @@ To access the File Server from an Integration, you will need to create an FTP Co
     |---|---|
     |WSDL URL | enter ***https://ERPCloudHost/fscmService/ErpIntegrationService?wsdl*** |
     |Security Policy | select ***Username Password Token*** |
-    |Username | Enter ***Enter ERP Cloud username received from the instructor*** |
-    |Username | Enter ***Enter ERP Cloud password received from the instructor*** |
+    |Username | Enter ***Enter ERP Cloud username*** |
+    |Password | Enter ***Enter ERP Cloud password*** |
 
 
 5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud Integration Service was tested successfully.* confirmation message. Click ***Save*** and exit the Connection editor.
@@ -90,8 +89,8 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
     | **Field**  | **Values** |
     |---|---|
-    |WSDL URL | upload ***the erpcbkinterface-onjobcompletion.wsdl*** |
-    |Security Policy | select ***Security Assertion Markup Language(SAMPL)*** |
+    |WSDL URL | upload the ***erpcbkinterface-onjobcompletion.wsdl*** |
+    |Security Policy | select ***Security Assertion Markup Language(SAML)*** |
 
     ![erpcloud-callback](images/erpcloud-callback-conn.png)
 
@@ -108,4 +107,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
+* **Last Updated By/Date** - Subhani Italapuram, Kishore Katta March 2023

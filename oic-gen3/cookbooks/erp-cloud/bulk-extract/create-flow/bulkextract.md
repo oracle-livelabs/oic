@@ -2,20 +2,18 @@
 
 ## Introduction
 
-This lab walks you through the steps to create Integration flow.
+This lab walks you through the steps to create a Bulk Extract Integration flow integrating with Oracle ERP Cloud.
 
-This use case explores the use of Oracle Integration to extract data from Oracle Business Intelligence Publisher (BIP).
+This use case explores the use of Oracle Integration to extract large data sets from Oracle in an asynchronous fashion leveraging a callback mechanism.
 
 This use case includes the following steps:
 
-* Get the most recent list of approved invoices.
-* Extract the most recent payment data and update other applications to reflect new payments.
-* Deliver the report to UCM or SFTP or trigger a report using ERP integration service
-
-The data file can be larger than 10MB. Oracle Integration supports handling large files as an attachment (instead of base64 encoding). We recommend that you use CSV format to reduce the size of the file.
+* Initiate Payables Transactions Process
+* Listen to the callback message delivered from ERP cloud
+* Finally, download the extract from UCM and deliver the data set to an SFTP location
 
  The following diagram shows the interaction between the systems involved in this use case.
-     ![bulk-export](../images/bulk-export-callback.png)
+     ![Bulk Extract Integration Architecture](../images/bulk-export-callback.png)
 
 Estimated Time: 60 minutes
 
@@ -24,8 +22,7 @@ Estimated Time: 60 minutes
 In this lab, you will:
 
 * Connect to ERP Cloud to extract the bulk data
-* Understand how to bulk export the data from the Oracle ERP cloud leveraging out of the box ERP cloud
-  adapter capabilities
+* Understand how to extract bulk data from the Oracle ERP cloud in an asynchronous fashion leveraging ERP cloud adapter capabilities
 
 
 ### Prerequisites
@@ -33,7 +30,6 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-
 
 ## Task 1: Create the ERP Bulk Extract Integration
 
@@ -322,7 +318,6 @@ Manage business identifiers that enable you to track fields in messages during r
 ## Task 14: Activate the ERP Bulk Extract Integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
-    ![Click to Activate Integration](../images/click-activate-integration.png)
 2. On the **Activate Integration** dialog, select **a tracing level** as ***Audit***.
 3. Click ***Activate***.
 
@@ -366,4 +361,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
+* **Last Updated By/Date** - Kishore Katta, March 2023
