@@ -176,7 +176,7 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
 
     Complete the mapping as below, right click on ***Query***, click on **Create target node** and click on **Switch to developer view** and copy and paste   ***concat("BusinessUnitName=",)*** and drag and drop **BusinessUnit** from the Source after **comma**  
     ![mapbu1](images/mapbu1.png =30%x30%)
-    ![mapbu1](images/DeveloperView.png =50%x50%)
+    ![mapbu1](images/developer-view.png =50%x50%)
 
     | **Source**      | **Target**  |
     | --- | ----------- |
