@@ -361,7 +361,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 ### *Define the Otherwise conditional flow*
 
-1.  Select ***Actions*** and drag ***Fault Return*** Activity after ***Map createInvoice*** activity. This activity returns a Custom Fault
+1.  Select ***Actions*** and drag ***Fault Return*** Activity after ***Otherwise*** activity. This activity returns a Custom Fault
 
 2.  Select the ***Map createInvoice*** to configure Fault details.
 
@@ -376,7 +376,8 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
     > **Note:**  If the Target element is greyed out, Select the target node and Right Click "Create Target Node" which brings up the Expression Editor
 
-
+    Your final Integration Flow should look as below
+    ![Final Integration Flow](images/final-integration-flow.png)
 
 4.  Select ***Validate*** and click on ***&lt; (Go back)***
 
@@ -396,7 +397,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 Your final Integration Flow should look as below
 
-    ![Final Integration Flow](images\final-integration-flow.png)
+    ![Final Integration Flow](images/final-integration-flow.png)
 
 
 5. On the Integration canvas, click ***Save***, followed by ***&lt; (Go back)***.
@@ -509,6 +510,8 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
   1.  Create Otherwise condition for Supplier and Supplier Site to return fault payload accordingly
 
+  The final integration changes for the bonus lab section will be per below
+  ![Final Integration Flow with Bonus](images/final-integration-flow-bonus.png)
 
 **Congratulations!** You have learnt how to invoke ERP Cloud REST API with the Out of the box adapter capabilities. ERP Cloud Adapter abstracts the API/Services/Business Objects and provides an intuitive interface which Simplifies the task to perform Real-Time Synchronization.
 
