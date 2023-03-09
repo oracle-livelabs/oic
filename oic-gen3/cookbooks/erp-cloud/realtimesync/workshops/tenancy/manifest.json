@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "ERP Cloud Real Time Synchronization with Oracle Integration 3",
+    "workshoptitle": "Oracle Integration 3 - Cookbook - ERP Cloud Real Time Synchronization",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
