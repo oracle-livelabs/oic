@@ -395,11 +395,6 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 4. Click ***(I)***
 
-Your final Integration Flow should look as below
-
-    ![Final Integration Flow](images/final-integration-flow.png)
-
-
 5. On the Integration canvas, click ***Save***, followed by ***&lt; (Go back)***.
 
 
