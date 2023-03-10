@@ -166,7 +166,7 @@ This element defines the fields required by HCM Data Loader **Person** object. T
         </element>
         ```
 
-## Take 3: Understand the Integration
+## task 3: Understand the Integration
 
 From the list of Integrations page *click* the integration named **Import Pending Worker**
 The following integration flow appears:
@@ -191,7 +191,7 @@ ImportLoadData | Stop | Uploads the file to HCM Cloud using the UCM ContentId
 Stop | Stop | The end of the integration.
 {: title="HDL Import Integration Flow Activities"}
 
-## Take 4: Edit the ReadFileFromFTP Activity
+## Task 4: Edit the ReadFileFromFTP Activity
 
 1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
 
@@ -209,7 +209,7 @@ The FTP Adapter closes and the **Update Configuration?** dialog appears.
 
 7.  Click *Update*
 
-## Take 5: Understand the Data Mapping
+## Task 5: Understand the Data Mapping
 
 1.  Select the **Map To WriteFile** activity.
 
@@ -226,7 +226,7 @@ The FTP Adapter closes and the **Update Configuration?** dialog appears.
 
 3.  Click *Go Back*
 
-## Take 6: Edit the Zip File Action
+## Task 6: Edit the Zip File Action
 
 1.  Select the **Zip File** Activity. Click *Edit*
 
@@ -237,7 +237,7 @@ The FTP Adapter closes and the **Update Configuration?** dialog appears.
 4.  Click *Next* and Review the summary and Click *Done*
     The FTP Adapter closes and the Update Configuration? dialog appears. Click *Update* and Select *Save*
 
-## Take 7: Define the Tracking Fields
+## Task 7: Define the Tracking Fields
 
 Tracking fields specify a unique value to monitor your integration instance.
 
@@ -249,7 +249,7 @@ Tracking fields specify a unique value to monitor your integration instance.
 
 3.  On the Integration canvas, click *Save*, and then click *Go Back*
 
-## Take 8: Activate the Integration Flow
+## Task 8: Activate the Integration Flow
 
 1. On the **Integrations** page, click on the *Activate* icon of **Import Pending Workers** Integration.
 
@@ -259,7 +259,7 @@ Tracking fields specify a unique value to monitor your integration instance.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
-## Take 9: Run the Integration Flow
+## Task 9: Run the Integration Flow
 
 Refresh your page after few seconds.
 1. Select **Import Pending Workers**,  Click on **...(Actions)** menu and Click on *Run*
@@ -283,7 +283,7 @@ Click on the Activity Stream and expand **Invoke ImportLoadedData** activity. Ma
 
   ![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
 
-## Take 10: Verify the Data in HCM
+## Task 10: Verify the Data in HCM
 
 1.  Sign in to HCM Cloud with the credentials used for HCM Cloud connection.
 
