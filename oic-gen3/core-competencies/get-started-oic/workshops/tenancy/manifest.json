@@ -23,7 +23,7 @@
         },
         {
             "title": "Lab 2: Enable File Server",
-            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+            "filename": "../../../../common/enable-file-server/enable-file-server.md"
         },
         {
             "title": "Lab 3: Provision an Oracle Autonomous Database",
