@@ -166,7 +166,7 @@ This element defines the fields required by HCM Data Loader **Person** object. T
         </element>
         ```
 
-## task 3: Understand the Integration
+## Task 3: Understand the Integration
 
 From the list of Integrations page *click* the integration named **Import Pending Worker**
 The following integration flow appears:
