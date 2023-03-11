@@ -4,7 +4,7 @@
 
 The ERP Cloud Business Event Workshop will cover the recommended steps to complete an end-to-end use case based on ERP Cloud Business Events in OCI Integration (OIC). This workshop will leverage the Oracle ERP Cloud Adapter, which enables you to create an integration with Oracle Enterprise Resource Planning (ERP) applications. One of the key differentiators of this adapter is support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Cloud.
 
-This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to a file on a remote FTP server using orchestration with OCI Integration. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in OAI.
+This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to a file on a remote FTP server using orchestration with OIC. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in OIC.
 
 Estimated workshop time: 2 hours
 
