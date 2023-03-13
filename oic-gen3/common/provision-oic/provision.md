@@ -11,7 +11,7 @@ Estimated Time: 10 minutes
 In this lab, you will:
 * Provision Integration Instance
 
-    > **Note:** This lab is required **only** if have have not yet provisioned an Oracle Integration 3 instance.
+    > **Note:** This lab is required **only** if have not yet provisioned an Oracle Integration 3 instance.
 
 ### Prerequisites
 
@@ -38,14 +38,16 @@ If you just created a new Cloud account following the instructions in Getting St
 
     ![OCI Compartments](./images/compartment-expand.png)
 
-5. Click the **Create** button.
+    > *Note:* Do NOT create your instance in the root or ManagedCompartmentForPaaS compartment
+
+5. Click ***Create*** .
 
 6. Enter the following details, and click ***Create***
     | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
     | --- | --- |
     | Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
-    | Version|Lists Version available in this tenancy. Select "Oracle Integration 3"|
-    | Consumption Model|Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (Universal Credits)|
+    | Version| Lists Version available in this tenancy. Select "Oracle Integration 3"|
+    | Consumption Model| Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (Universal Credits)|
     | Edition|Enterprise|
     | Shape|Development|
     | License Type |Select - Subscribe to a new Oracle Integration License|

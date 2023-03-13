@@ -19,11 +19,11 @@
         },
         {
             "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
+            "filename": "../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Enable File Server",
-            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+            "filename": "../../../../common/enable-file-server/enable-file-server.md"
         },
         {
             "title": "Lab 3: Provision an Oracle Autonomous Database",

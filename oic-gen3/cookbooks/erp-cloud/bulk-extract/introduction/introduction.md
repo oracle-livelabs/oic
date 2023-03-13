@@ -4,12 +4,12 @@
 
 This workshop shows you how to design and develop a Bulk Extract Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
 
-Estimated Time: 2 hours
+Estimated Time: 120 minutes
 
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
-[First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
+[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 

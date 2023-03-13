@@ -10,7 +10,7 @@ Estimated workshop time: 2 hours
 ### What is Oracle Integration 3
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
-[First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
+[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 
 ### Objectives
@@ -20,9 +20,7 @@ In this workshop, you will learn the following:
 
 ### Prerequisites
 This lab assumes you have the following:
-- Oracle Free Tier, Always Free, Paid or Live Labs Cloud Account
-- Oracle Integration environment
-- Oracle Autonomous Database environment (either ADW or ATP)
+- Oracle Cloud Account with credits to provision services.
 - Oracle ERP Cloud access
 
 

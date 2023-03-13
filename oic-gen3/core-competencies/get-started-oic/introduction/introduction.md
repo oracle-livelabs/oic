@@ -10,7 +10,7 @@ Estimated Time: 1 hour 30 minutes
 
 Integration is a fundamental part of your digital business development. It involves connecting on-premises applications and cloud applications and services. Oracle Integration makes it easy to connect your applications and automate end-to-end processes such as procure to pay, inquiry to order, and hire to retire.
 
-[First Glimse - Oracle Integration 3](youtube:yW3TEBWkFbg)
+[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 Critical business processes, such as those related to human capital management (HCM), customer experience (CX), and enterprise resource planning (ERP), are frequently slow and inflexible. For example, a multi-step process such as Lead to Opportunity to Quote to Order can involve four or more applications and require human exception management at every step of the process. In this scenario, the lack of integration between departments as well as the delays caused by human-based problem resolution can result in lost revenue, frustrated customers, and high costs.
 

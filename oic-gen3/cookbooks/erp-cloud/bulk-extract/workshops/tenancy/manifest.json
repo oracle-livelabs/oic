@@ -30,7 +30,7 @@
             "filename": "../../../../../common/setup/setup.md"
         },
         {
-            "title": "Lab 4: Configure Common Connections",
+            "title": "Lab 4: Configure Certificates and Connections",
             "filename": "../../create-connections/create-connections.md"
         },
         {
@@ -46,11 +46,15 @@
             "filename": "../../../../../common/configure-erp-cloud-connection/configure-erp-connection.md"
         },
         {
-            "title": "Lab 8: Functional Details of the ERP Cloud Adapter",
+            "title": "Lab 8: Configure Certificates",
             "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-          "title": "Lab 9: Bulk Extract",
+            "title": "Lab 9: Functional Details of the ERP Cloud Adapter",
+            "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
+        },
+        {
+          "title": "Lab 10: Bulk Extract",
           "filename": "../../create-flow/bulkextract.md"
         },
         {

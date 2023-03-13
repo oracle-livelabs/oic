@@ -78,7 +78,7 @@ A file browser dialog appears.
 ## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select ***Scheduled Orchestration***, followed by ***Create***
+3. On the **Integration Style** dialog, select and click on ***Scheduled orchestration***
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
@@ -127,7 +127,7 @@ A file browser dialog appears.
     ![ReadFileFromFTP](../images/read-filefromftp.png)
 
 ## Task 5: Upload the file to ERP Cloud
-1. Hover over the outgoing arrow for ReadAPInvoicesFileFromFTP and click + icon.
+1. Hover over the outgoing arrow for **Invoke ReadAPInvoicesFileFromFTP** and click + icon.
 2. Begin typing ERP in the Search field to find the connection to your ERP Cloud.
 3. Select the connection which you have created in the previous labs.
 The Configure Oracle ERP Cloud Endpoint wizard appears.

@@ -33,7 +33,7 @@ This lab assumes you have
     |---|---|
     |Role Name | `<your-role-name>` |
     |Role Code | `<your-role-code>` |
-    |Role Category | (Default) |
+    |Role Category | select **HCM - Job Roles** |
     |    
 
 5. Click **Next**.
