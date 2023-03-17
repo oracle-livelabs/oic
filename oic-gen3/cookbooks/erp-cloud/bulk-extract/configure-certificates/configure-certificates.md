@@ -40,7 +40,7 @@ The Oracle ERP cloud certificates must be imported in OIC to authenticate SAML a
 
 2.  Login into IDCS and Navigate to ***Oracle Cloud Services*** and Search for the OIC instance which is provisioned. Select the instance and navigate to ***Application Roles*** tab.
 
-3.  In the *Service User** role, Go to the *Action* menu Select ***Assign User*** and select the Integration User created.
+3.  In the ***Service User*** role, Go to the ***Action*** menu Select ***Assign User*** and select the Integration User created.
 
 You may now **proceed to the next lab**.
 
