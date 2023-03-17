@@ -28,7 +28,7 @@ The Oracle ERP cloud certificates must be imported in OIC to authenticate SAML a
 2.  You need to import the above 2 certificates in OIC 3 as a message protection certificate.
 
 3.  Navigate to OIC 3 console ***Home &gt; Settings &gt; Certificates***. Select
-***Create*** provide an alias name of choice and *Type* as ***SAML (Authentication and Authorization)*** and cho0se cloudca certificate to *Upload*
+***Create*** provide an alias name of choice and *Type* as ***SAML (Authentication and Authorization)*** and choose cloudca certificate to *Upload*
 
 4.  Similarly, upload orakey certificate with a different alias name
 
