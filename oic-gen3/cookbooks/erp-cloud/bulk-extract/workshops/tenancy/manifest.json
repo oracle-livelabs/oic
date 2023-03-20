@@ -47,7 +47,7 @@
         },
         {
             "title": "Lab 8: Configure Certificates",
-            "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
+            "filename": "../../configure-certificates/configure-certificates.md"
         },
         {
             "title": "Lab 9: Functional Details of the ERP Cloud Adapter",
