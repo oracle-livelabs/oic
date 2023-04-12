@@ -216,7 +216,7 @@ A map action named DownloadFile is automatically created. We will define this da
     - //requestId
     - "_BIPReport0"
 
-    The complete expression should read: concat ( ***"ESS__", //requestId, "_BIPReport0"*** )
+    The complete expression should read: ***concat ( ```"ESS_", //requestId, "_BIPReport0"```*** )
     - Click **Save** icon in the Expression editor to commit the expression
 
     ![prefix element](../images/prefixelement.png)

@@ -50,7 +50,7 @@ The NXSD schema defines the structure of the output file (fields) and the format
 
 1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
 
-2.  Open the file *allpersons.xsd* in a text editor.
+2.  Open the file *worker-hdl.nxsd* in a text editor.
 
 3.  Locate the **schema** element at the beginning of the file.
 
@@ -176,7 +176,6 @@ This table briefly describes the different activities in the integration. For mo
 **Step** | **Type** | **Description**
 :---:|:---:|:---:
 Schedule | Schedule | Start of the integration. This step is read-only.                             
-Map to ReadFileFromFTP | Map | Maps the data to read the file from the FTP server.                             
 **ReadFileFromFTP** | **FTP Adapter: Download File** |Reads the file from an FTP server. **In this lab, you will edit this step to specify the FTP directory where you uploaded the file.**                            
 ReadFile | Stage File: Read | Reads the file retrieved from the FTP server and loads the data to a schema. This step is read-only.                        
 Map to WriteFile | Map | Maps and transforms the data to generate the HCM Data Loader file.This step is read-only.                             

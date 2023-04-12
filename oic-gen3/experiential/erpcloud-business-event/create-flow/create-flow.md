@@ -1,4 +1,4 @@
-# Create Integration flow
+# Create an Integration flow
 
 ## Introduction
 This demo lab will walk you through the steps to create an end-to-end integration of receiving ERP Purchase Order events and persisting the data in an ADW Table.

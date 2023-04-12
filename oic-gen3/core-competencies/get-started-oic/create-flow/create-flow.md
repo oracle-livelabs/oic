@@ -1,4 +1,4 @@
-# Create Integration flow
+# Create an Integration flow
 
 ## Introduction
 This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous (ADW) Table.
@@ -6,7 +6,7 @@ This lab will walk you through the steps to create an end-to-end integration of 
 Estimated Time: 15 minutes
 
 ### Objectives
-You will execute the following:
+In this lab, you will execute the following:
 - Initiate a Scheduled integration flow
 - Configure FTP Adapter
 - Add the ADW invoke activity
@@ -98,7 +98,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | Select Bucket | **bucket-demo** (Select the Object Storage bucket that was created in previous lab)  |
-    | Delete file from object store after operation completion | **Un Check** |
+    | Delete file from object store after operation completion | **Deselect** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
     | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
@@ -106,7 +106,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
-    > **Note:**  The selected order of the columns should be per the input sales_order.csv data
+    > **Note:** The order of the columns should match the input sales_order.csv data
 
 
 4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
@@ -117,7 +117,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | Delimeter | **Comma** |
+    | Delimiter | **Comma** |
     | Skip Headers | **1** |
     {: title="Data format"}
 
@@ -195,11 +195,11 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 ## Task 6: Activate the integration
 
-1. On the *Integrations* page, click on the **Activate** icon.
+1. On the *Integrations* page, however over the integration you created, and click the **Activate** icon
 
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the *Activate Integration* dialog, select **Debug** as tracing level.
+2. In the *Activate Integration* dialog, select **Debug** as tracing level.
 
 3. Click **Activate**.
 

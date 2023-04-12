@@ -33,7 +33,7 @@ This lab assumes you have:
     </copy>
     ```
 
-2.  Connect with File Server using any FTP Client example: FileZilla. Place the *sales_orders.csv* file in the folder **/home/users/`<your-folder-name>`/Output**
+2.  Connect to the File Server. Copy sales_orders.csv from your desktop to a folder on the File Server that you specified in Lab 6, Task 2 as the Input Directory.
 
 ## Task 2: Run the Scheduled Integration Flow
 

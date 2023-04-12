@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to create Integration flow.
+This lab walks you through the steps to create an Integration flow.
 
 This use case describes how to use Oracle Integration with Oracle ERP Business Intelligence Publish(BIP) report.
    - User creates a GL BIP report in ERP Cloud
