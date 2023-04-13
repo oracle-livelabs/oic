@@ -68,7 +68,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
     |WSDL URL | enter ***https://ERPCloudHost/xmlpserver/services/ExternalReportWSSService?WSDL*** |
     |Security Policy | select ***Basic Authentication*** |
     |Username | Enter ***Enter ERP Cloud username received from the instructor*** |
-    |Username | Enter ***Enter ERP Cloud password received from the instructor*** |
+    |Password | Enter ***Enter ERP Cloud password received from the instructor*** |
 
 
 5. Confirm your Connection by clicking ***Test***, then ***Validate & Test***. You should see the *Connection ERP Cloud External Report Service was tested successfully.* confirmation message. Click ***Save*** and exit the Connection editor.
