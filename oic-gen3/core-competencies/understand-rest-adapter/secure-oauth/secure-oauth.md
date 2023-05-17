@@ -14,6 +14,7 @@ In this lab, you will:
 ### Prerequisites
 This lab assumes you have:
 - Completed all previous labs successfully
+- Any REST Client ex. POSTMAN
 
 
 ## Task 1: Configure a Confidential Application in IDCS
