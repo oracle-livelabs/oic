@@ -196,7 +196,6 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 ## Task 6: Activate the integration
 
 1. On the *Integrations* page, hover over the integration you created, and click the **Activate** icon
-
     ![Click to Activate Integration](images/click-activate-integration.png)
 
 2. In the *Activate Integration* dialog, select **Debug** as tracing level.
