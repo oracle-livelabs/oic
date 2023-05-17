@@ -97,7 +97,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | Select Bucket | **bucket-demo** (Select the Object Storage bucket that was created in previous lab)  |
+    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
     | Delete file from object store after operation completion | **Deselect** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
@@ -195,8 +195,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 ## Task 6: Activate the integration
 
-1. On the *Integrations* page, however over the integration you created, and click the **Activate** icon
-
+1. On the *Integrations* page, hover over the integration you created, and click the **Activate** icon
     ![Click to Activate Integration](images/click-activate-integration.png)
 
 2. In the *Activate Integration* dialog, select **Debug** as tracing level.
