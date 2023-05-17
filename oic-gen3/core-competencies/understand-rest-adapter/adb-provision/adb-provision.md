@@ -72,7 +72,6 @@ In this lab, you will:
     | Compartment | (Defaut) | |
     | Display Name | `OICDemo` | Enter a memorable name for the database for display purposes |
     | Database Name | `OICDEMO` | Use letters and numbers only, starting with a letter. Maximum length is 14 characters. |
-    |
 
 
 4. Choose a workload type. Select the workload type for your database from the choices:
@@ -153,7 +152,7 @@ In this lab, you will:
 </if>
 
 
-Please *proceed to the next lab*.
+You may now *proceed to the next lab*.
 
 ## Learn more
 
