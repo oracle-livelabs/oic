@@ -72,7 +72,7 @@ This lab assumes you have:
 4. From the *Request Parameters* page, in the *Specify Query Parameter section*, click **Add**. A new row appears.
     - Enter **customer_id** in the *Name* column and select **string** from the *Date Type* column
     - Click **&gt; (Next step)**.
-    ![Query Parameter Page](images/rest-adapter-query-parameter-page)
+    ![Query Parameter Page](images/rest-adapter-query-parameter-page.png)
 
 5. On the **Response** Page
     - Select the *response payload format* to **JSON Sample**
