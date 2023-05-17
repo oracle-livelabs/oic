@@ -97,7 +97,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | Select Bucket | **bucket-demo** (Select the Object Storage bucket that was created in previous lab)  |
+    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
     | Delete file from object store after operation completion | **Deselect** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
