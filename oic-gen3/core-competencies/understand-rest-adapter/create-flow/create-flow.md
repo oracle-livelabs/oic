@@ -180,7 +180,7 @@ A map action named getCustomer is automatically created. We will define this dat
 6. Click **Save** to persist changes
 
 7. Integration flow designed so far
-    ![Get Orders](images/create-integration-getcustomer.png)
+    ![Get Orders](images/create-integration-getOrders.png)
 
 ## Task 6: Define the Data Mapping for Get Orders
 A map action named getOrdersForCustomer is automatically created. We will define this data mapping.
