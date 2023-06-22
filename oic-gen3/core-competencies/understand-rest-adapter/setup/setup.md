@@ -97,39 +97,41 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     ```
     <copy>
     BEGIN
-      ORDS.DEFINE_MODULE(
-        p_module_name    => 'inventory.v1',
-        p_base_path      => '/inventory/v1/',
-        p_items_per_page =>  10,
-        p_status         => 'PUBLISHED',
-        p_comments       => 'Sample Inventory Module');      
-      ORDS.DEFINE_TEMPLATE(
+    ORDS.DEFINE_TEMPLATE(
         p_module_name    => 'inventory.v1',
         p_pattern        => 'customer',
+        p_priority       => 0,
+        p_etag_type      => 'HASH',
         p_etag_query     => NULL,
         p_comments       => 'Customers Resource');
-      ORDS.DEFINE_HANDLER(
+    ORDS.DEFINE_HANDLER(
         p_module_name    => 'inventory.v1',
         p_pattern        => 'customer',
         p_method         => 'GET',
-        p_source_type    => 'ords.source_type_query_one_row',
+        p_source_type    => 'json/query;type=single',
         p_items_per_page =>  0,
+        p_mimes_allowed  => '',
         p_comments       => 'Get Customer',
         p_source         =>
-        'SELECT customer_id, cust_name, city,grade FROM CUSTOMER where customer_id = :p_customer_id'
-        );
-      ORDS.DEFINE_TEMPLATE(
+  'SELECT customer_id, cust_name, city,grade FROM CUSTOMER where customer_id = :p_customer_id'
+        );    
+    ORDS.DEFINE_TEMPLATE(
         p_module_name    => 'inventory.v1',
         p_pattern        => 'order',
+        p_priority       => 0,
+        p_etag_type      => 'HASH',
+        p_etag_query     => NULL,
         p_comments       => 'Orders Resource');
-      ORDS.DEFINE_HANDLER(
+    ORDS.DEFINE_HANDLER(
         p_module_name    => 'inventory.v1',
         p_pattern        => 'order',
         p_method         => 'GET',
-        p_source_type    => 'ords.source_type_collection_feed',
+        p_source_type    => 'json/collection',
+        p_items_per_page =>  0,
+        p_mimes_allowed  => '',
         p_comments       => 'Get orders',
         p_source         =>
-      'SELECT ord_no,purchase_amt,item_desc,ord_date,salesman_id FROM ORDERS where customer_id= :p_customer_id'
+  'SELECT ord_no,purchase_amt,item_desc,ord_date,salesman_id FROM ORDERS where customer_id= :p_customer_id'
         );
       COMMIT;
     END;
