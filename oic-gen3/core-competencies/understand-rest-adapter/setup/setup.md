@@ -77,7 +77,7 @@ Similarly, copy  and run the below script to create **Order** table
 
 In the SQL Worksheet execute below set of script to create ORDS service.
 1.  Enable ORDS for the Schema. If your schema name is different modify the
-    p_schema and p_url_mapping_pattern values accordingly.
+    p\_schema and p\_url\_mapping\_pattern values accordingly.
     ```
     <copy>
     BEGIN
@@ -97,6 +97,12 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     ```
     <copy>
     BEGIN
+    ORDS.DEFINE_MODULE(
+        p_module_name    => 'inventory.v1',
+        p_base_path      => '/inventory/v1/',
+        p_items_per_page =>  10,
+        p_status         => 'PUBLISHED',
+        p_comments       => 'Sample Inventory Module');
     ORDS.DEFINE_TEMPLATE(
         p_module_name    => 'inventory.v1',
         p_pattern        => 'customer',
@@ -170,7 +176,7 @@ In the SQL Worksheet execute below set of script to create ORDS service.
 
 ## Task 4: Create a new client and associate Privilege(s)
 1.  Now that we have our rest services secured, we need to create a *Client* and associate the client with one or more  
-    privileges. We are going to create a client called *inventory_partner_company* which is going to consume the Customer and Order API to get real time customer information and orders for a specific customer.
+    privileges. We are going to create a client called *inventory\_partner\_company* which is going to consume the Customer and Order API to get real time customer information and orders for a specific customer.
 
     ```
     <copy>
