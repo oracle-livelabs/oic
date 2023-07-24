@@ -34,7 +34,7 @@ This lab assumes you have:
 ##	Task 1: Create the PO Event Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, Click on ***App Driven orchestration***.
+3. On the **Integration Style** dialog, Click on ***Application***.
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       

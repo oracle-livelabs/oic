@@ -28,7 +28,7 @@ This lab assumes you have:
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Scheduled orchestration***.
+3. On the **Integration Style** dialog, select and click on ***Schedule***.
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
