@@ -1,0 +1,54 @@
+{
+    "workshoptitle": "Oracle Integration 3 - ERP Cloud B2B Integration with Trading Partners",
+    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
+                "sample.json":"../../data-load/files/sample.json",
+                "step2.md":"../../data-load/files/step2.md"},
+    "variables": ["../../variables/variables.json",
+                 "../../variables/variables-in-another-file.json"],
+    "help": "livelabs-help-oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description":"Introduction to the Lab Usecase",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Provision Oracle Integration 3",
+            "filename": "../../../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Lab 2: Enable and Configure File Server",
+            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+        },
+        {
+            "title": "Lab 3: Enable Oracle Process Automaton (OPA)",
+            "filename": "../../../../opa-for-fusionApps/common/provision-opa/provision.md"
+        },
+        {
+            "title": "Lab 4: Create OIC Integration Flow",
+            "filename": "../../create-integration-flow/create-integration-flow.md"
+        },
+        {
+            "title": "Lab 5: Create OPA Process Application",
+            "filename": "../../create-opa-flow/create-opa-flow.md"
+        },
+        {
+            "title": "Lab 6: Provision and Setup Oracle Digital Assistant(ODA)",
+            "filename": "../../provision-setup-oda/provision-setup-oda.md"
+        },
+        {
+            "title": "Lab 7: Create ODA Conversation Flow",
+            "filename": "../../create-oda-flow/create-oda-flow.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
