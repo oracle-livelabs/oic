@@ -224,7 +224,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 16.	In the Response Body Definition select Business Type as **POType** which was created in the previous step
     		Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
-        ![resource-PO](images/resource-PO.png)
+        ![resource-PO](images/resource-po.png)
 
 17. Click on *+* icon to add a new resource.
 
@@ -295,49 +295,90 @@ Now that we have created the two roles - User and Approver, let’s create a pro
  -	When the form is selected (click away from a control), Form and Presentation tabs appear.
  -	When a control is selected, General and Styling tabs for that control appear.
 
-## Task 5: Design a web form
+## Task 6: Design a web form
 
 1. Open the *AttachLOCForm* form if it is not opened.
 2. Choose an *Select* field from the right palette and Drag-and-Drop on to the designer.
 3. Click on Toggle Properties if you don't find the Properties Pane on the left side.
-![ToggleProperties Field](images/ToggleProperties.png)
+![ToggleProperties Field](images/toggleproperties.png)
 4. Change the field name to **SelectOrderNumber** and the label to **Select Order Number** . See the automatic binding.
-![SelectOrderNumber Field Properties](images/SelectOrderNumber-properties.png)
+![SelectOrderNumber Field Properties](images/selectordernumber-properties.png)
 5. Scroll down in the Properties Pane. Select *Connector* as an **Options Source**
 6.	Select the *Connector*, *Resource* and *Operation* with the proper values of the REST connector you have created.
 ![connector-properties Properties](images/connector-properties.png)
 
 7.	Fill in the Option List as indicated here below, with the value *response.items*. For the **Label** Binding and
 		**Value** Binding, choose the *orderNumber* and *id* fields accordingly.
-![OptionList Properties](images/OptionList-properties.png)
+![OptionList Properties](images/optionlist-properties.png)
 
 8. Drag-and-Drop *Divider* component which is available under Advanced section from the right palette
 9. Click on *Load more..* on the components palette, can find it on right bottom of the page under components palette.
 10. Drag-and-Drop *POType* component after the *Divider*
 11. select **POType** on the designer and change the label to **PO Header Details** in the properties palette. Check *Hide* option
-![WebFormPOType](images/WebFormPOType.png)
+![WebFormPOType](images/webformpotype.png)
 12. Put all the elements in the order given below as per the screenshot if possible.
-![POHeaderElements](images/POHeaderElements.png)
+![POHeaderElements](images/poheaderelements.png)
 13. Select an element **id** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
+![idReadOnly](images/idreadOnly.png)
 14. Remove **LOCId** from the *PO Header Details* section.
 15. Drag-and-Drop *Select* from the components palette and change the name to **locId**, label as **Letter of credit Id**
 16. Click on **Add** in the *Data* section, enter name as **locID** and click on **Create**
-![locIdDataElement](images/locIdDataElement.png)
+![locIdDataElement](images/lociddataelement.png)
 17. Select an element **locId**, go to Properties, enter or select binding as **locId**
 18. Scroll down further for the same element and enter the below values.
 
 | Option Names | Option Values |
 | --- | --- |
 | Big Bankers | 1 |
-| High Yielders| 2 |
+| High Yielders | 2 |
 | Brain Trust Capital | 3 |
 | Awesome Banking | 4 |
 {: title="LOC Ids"}
 19. Select an element **orderNumber** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
+
 20. Select each and every element after *orderNumber* and mark it as **Read Only**
 
+## Task 7: Add dynamic controls to fields via Events
 
+Use events to introduce dynamic behaviours into your web forms, and combine them with actions, conditions, functions, and REST connector calls.
+
+For example, you can introduce the following behaviours into your forms:
+
+-	Populate data in a control field based on another control field in the form. For example, a *Select Order Number*  field will impact the *PO Header Details* section.
+-	Make a REST call on demand, store the call’s response, and use response data in an event action or condition.
+
+1. Select an element *SelectOrderNumber*, go to Properties section and scroll down until you see the *Events* section. Click on **Add**
+![selectOrderEvent](images/selectorderevent.png)
+2. Enter **OnChange** as an event Name and select **OnChange** as an event.
+![selectOrderOnChangeEvent](images/selectOrderonchangeevent.png)
+3. Click on **Edit Pencil Icon** link
+![eventedit](images/eventedit.png)
+4. Click on **Connector** and select or enter the values as per the screenshot given below and click on **OK** which is at the bottom right corner.
+![OnChangeConnectorDefinition](images/Onchangeconnectordefinition.png)
+5. Again, Click on **Edit Pencil Icon** link
+6. Click on **Action** and define the values as per the screenshot given below for the element **id**.
+![idAction](images/idaction.png)
+7. Repeat the step 6 for all the elements given below, except *Letter of credit id* element for which pre defined data is populated and click on **OK** after completing actions for all the elements.
+- id
+- orderNumber
+- pOHeaderId
+- orderAmount
+- soldToLegalEntity
+- procurementBUId
+- procurementBusinessUnit
+- supplier
+- supplierId
+- createdDate
+- createdBy
+- lastUpdateDate
+- lastUpdateBy
+POHeaderActions
+![poheaderactions](images/poheaderactions.png)
+8. Again, Click on **Edit Pencil Icon** link
+9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
+![showpotype object](images/showpotype.png)
 You may now **proceed to the next lab**.
+10. Please click on **Attach LOC Application** to go back to the process application and again open the form and make sure that all the actions are stored.
 
 ## Learn More
 
