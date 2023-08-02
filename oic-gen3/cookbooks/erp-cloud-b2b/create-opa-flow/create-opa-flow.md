@@ -377,8 +377,62 @@ POHeaderActions
 8. Again, Click on **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
 ![showpotype object](images/showpotype.png)
+10. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the form and make sure that all the actions are stored.
+
+## Task 8: Create a Structured Process
+
+1.	Click the **Attach LOC Application 1.0** breadcrumb to go to your application’s main page.
+
+2.	From the top of the page, click *Add*.
+
+3.	In the Add component pane, expand **Processes**, and click *Structured*.
+		![Structured Process](images/structured-process.png)
+
+4.	Enter *Initiate PO LOC Update Process* in the **Title** field.
+
+5.	Click *Create*. A confirmation message shows that the process was created.
+
+Notice how the process is listed on the page and the Processes tab shows 1.
+
+6.	Select the process to open it.
+
+The structured process editor opens. Start and end elements are already positioned on the flow for you. There are two swimlanes and the BPMN elements palette is on the right side.
+
+7. Select the *Start* element activity and rename it to **Update PO**
+
+![Process Editor](images/process-editor.png)
+
+8.	Select the *End event* activity and rename it to **Completed**
+
+9.	Select the first swimlane containing the start and end element by clicking the bar on the left of the canvas. Click the *edit* icon to open the **Properties** pane. In the Properties pane, select *Process User* in the **Role** drop-down field.
+
+![Edit Swimlane](images/edit-swimlane.png)
+Note that the swimlane’s name changes to *Process User*.
+
+10.	Similarly, edit the second swimlane and select *Process Approver*
+
+11.	In the BPMN elements palette, expand the **Human** category and drag an *Approve* task to the second swimlane. Adjust the process flow so that the **Approve** task is the second element in the flow. Rename it to *Approve Change Order*
+
+12.	In the BPMN elements palette, expand the **Gateway** category and drag an *Exclusive* Gateway Activity to the second swimlane next to the **Approve Change Order**. Rename the **Gateway** activity to *Approved?*
+
+13.	In the BPMN elements palette, expand the **Human** category and drag a *Submit* task to the first swimlane. Rename it to *Resubmit*.
+
+14.	Select the *Approved?* Gateway activity. Using the connector (arrow icon) Connect one of the branches to the **Resubmit** task.
+15. Delete the arrow which is connected to *Completed* activity.
+16. Select the *Resubmit* activity and connect with **Approve Change Order** activity
+17. Select the *Approve Change Order* activity and connect with **Approved?** activity
+18. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
+19. Move *Completed* activity from first swimlane to the second swimlane after the *Change Order ERP PO Proxy* activity.
+20. Select the *Approved?* activity and connect with **Approve Change Order** activity
+21. Select the *Approve Change Order* activity and connect with **Completed** activity
+22. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
+23. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
+![Structured Process Without Implementation](images/structured-process-without-implementation.png)
+24. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
+
+## Task 9: Implement the process
+
 You may now **proceed to the next lab**.
-10. Please click on **Attach LOC Application** to go back to the process application and again open the form and make sure that all the actions are stored.
 
 ## Learn More
 
