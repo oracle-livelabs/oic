@@ -83,7 +83,7 @@ If the link disappeared, select the My Applications tab to filter the list to sh
 Opening a process application displays its components page. Components are design elements of your application, and they’re listed as tabs near the top of the components page.
 
 1.	From the **Components** tabs, click *UIs*.
-![Components Tab](images/components-tab.png)
+    ![Components Tab](images/components-tab.png)
 
 Notice that a 0 appears for each component, since you haven’t created any yet.
 
@@ -126,7 +126,7 @@ Let’s create the two roles.
 
 6.	In the **Application Permission Level** options, leave *Use* selected.
 
-![Create Roles](images/create-roles.png)
+    ![Create Roles](images/create-roles.png)
 
 This allows your user to start an application request in Workspace.
 
@@ -147,7 +147,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 3. Select the *Change Order ERP PO Proxy* from the list and click on *Create*. If you don't see the integration listed, then please create the integration first and activate it and come back here.
 
-## Task 4: Create a Connector to the VBCS Application
+## Task 5: Create a Connector to the VBCS Application
 
 1.	From the top of the page, click *Add.*
 
@@ -156,11 +156,11 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 3. Enter the name as *LOCAppConnector* and Base URL as *Copy it from the VBCS application*  and click on *Create*.
 4. Click the *Open now* link.
 5. Click on *+* icon to add a new resource.
-![new resource](images/new-resource.png)
+   ![new resource](images/new-resource.png)
 6. Enter *PO* as a name and enter *PO* under resource Path
 7. Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a 	
 		*GET*, with the name **getPO**
-		![Connector Add Operation Get PO](images/connector-add-operation-get-po.png)
+     ![Connector Add Operation Get PO](images/connector-add-operation-get-po.png)
 8.	Select the operation created which will transition to the operation specific configuration. You
 		will configure Request and Response message
 
@@ -271,7 +271,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
         		Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
 
 
-## Task 5: Create a web form
+## Task 6: Create a web form
 
 - Use forms for human interaction to:
     - Define what users see when they initiate your process application
@@ -288,42 +288,42 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 4.	Click *Create*, then click the *Open now* link.
 
 - If you missed the Open now link, click the *expand* arrow next to the **AttachLOCForm** at the top, then click the *UIs* tab, and select the new form.
-![Web Form Designer](images/web-form-designer.png)
+   ![Web Form Designer](images/web-form-designer.png)
 - Notice the following:
  -	The palettes in the right pane. You have many more control types and options to choose from.
  -	The tabs in the left Properties pane. Notice how they change depending on what is selected in the main canvas.
  -	When the form is selected (click away from a control), Form and Presentation tabs appear.
  -	When a control is selected, General and Styling tabs for that control appear.
 
-## Task 6: Design a web form
+## Task 7: Design a web form
 
 1. Open the *AttachLOCForm* form if it is not opened.
 2. Choose an *Select* field from the right palette and Drag-and-Drop on to the designer.
 3. Click on Toggle Properties if you don't find the Properties Pane on the left side.
-![ToggleProperties Field](images/toggleproperties.png)
+   ![ToggleProperties Field](images/toggleproperties.png)
 4. Change the field name to **SelectOrderNumber** and the label to **Select Order Number** . See the automatic binding.
-![SelectOrderNumber Field Properties](images/selectordernumber-properties.png)
+   ![SelectOrderNumber Field Properties](images/selectordernumber-properties.png)
 5. Scroll down in the Properties Pane. Select *Connector* as an **Options Source**
-6.	Select the *Connector*, *Resource* and *Operation* with the proper values of the REST connector you have created.
-![connector-properties Properties](images/connector-properties.png)
+6. Select the *Connector*, *Resource* and *Operation* with the proper values of the REST connector you have created.
+   ![connector-properties Properties](images/connector-properties.png)
 
 7.	Fill in the Option List as indicated here below, with the value *response.items*. For the **Label** Binding and
 		**Value** Binding, choose the *orderNumber* and *id* fields accordingly.
-![OptionList Properties](images/optionlist-properties.png)
+    ![OptionList Properties](images/optionlist-properties.png)
 
 8. Drag-and-Drop *Divider* component which is available under Advanced section from the right palette
 9. Click on *Load more..* on the components palette, can find it on right bottom of the page under components palette.
 10. Drag-and-Drop *POType* component after the *Divider*
 11. select **POType** on the designer and change the label to **PO Header Details** in the properties palette. Check *Hide* option
-![WebFormPOType](images/webformpotype.png)
+   ![WebFormPOType](images/webformpotype.png)
 12. Put all the elements in the order given below as per the screenshot if possible.
-![POHeaderElements](images/poheaderelements.png)
+   ![POHeaderElements](images/poheaderelements.png)
 13. Select an element **id** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
-![idReadOnly](images/idreadOnly.png)
+   ![idReadOnly](images/idreadOnly.png)
 14. Remove **LOCId** from the *PO Header Details* section.
 15. Drag-and-Drop *Select* from the components palette and change the name to **locId**, label as **Letter of credit Id**
 16. Click on **Add** in the *Data* section, enter name as **locID** and click on **Create**
-![locIdDataElement](images/lociddataelement.png)
+   ![locIdDataElement](images/lociddataelement.png)
 17. Select an element **locId**, go to Properties, enter or select binding as **locId**
 18. Scroll down further for the same element and enter the below values.
 
@@ -338,7 +338,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 20. Select each and every element after *orderNumber* and mark it as **Read Only**
 
-## Task 7: Add dynamic controls to fields via Events
+## Task 8: Add dynamic controls to fields via Events
 
 Use events to introduce dynamic behaviours into your web forms, and combine them with actions, conditions, functions, and REST connector calls.
 
@@ -348,16 +348,16 @@ For example, you can introduce the following behaviours into your forms:
 -	Make a REST call on demand, store the call’s response, and use response data in an event action or condition.
 
 1. Select an element *SelectOrderNumber*, go to Properties section and scroll down until you see the *Events* section. Click on **Add**
-![selectOrderEvent](images/selectorderevent.png)
+   ![selectOrderEvent](images/selectorderevent.png)
 2. Enter **OnChange** as an event Name and select **OnChange** as an event.
-![selectOrderOnChangeEvent](images/selectOrderonchangeevent.png)
+   ![selectOrderOnChangeEvent](images/selectOrderonchangeevent.png)
 3. Click on **Edit Pencil Icon** link
-![eventedit](images/eventedit.png)
+   ![eventedit](images/eventedit.png)
 4. Click on **Connector** and select or enter the values as per the screenshot given below and click on **OK** which is at the bottom right corner.
-![OnChangeConnectorDefinition](images/Onchangeconnectordefinition.png)
+   ![OnChangeConnectorDefinition](images/Onchangeconnectordefinition.png)
 5. Again, Click on **Edit Pencil Icon** link
 6. Click on **Action** and define the values as per the screenshot given below for the element **id**.
-![idAction](images/idaction.png)
+   ![idAction](images/idaction.png)
 7. Repeat the step 6 for all the elements given below, except *Letter of credit id* element for which pre defined data is populated and click on **OK** after completing actions for all the elements.
 - id
 - orderNumber
@@ -373,13 +373,13 @@ For example, you can introduce the following behaviours into your forms:
 - lastUpdateDate
 - lastUpdateBy
 POHeaderActions
-![poheaderactions](images/poheaderactions.png)
+   ![poheaderactions](images/poheaderactions.png)
 8. Again, Click on **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
-![showpotype object](images/showpotype.png)
+   ![showpotype object](images/showpotype.png)
 10. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the form and make sure that all the actions are stored.
 
-## Task 8: Create a Structured Process
+## Task 9: Create a Structured Process
 
 1.	Click the **Attach LOC Application 1.0** breadcrumb to go to your application’s main page.
 
@@ -400,14 +400,14 @@ The structured process editor opens. Start and end elements are already position
 
 7. Select the *Start* element activity and rename it to **Update PO**
 
-![Process Editor](images/process-editor.png)
+   ![Process Editor](images/process-editor.png)
 
 8.	Select the *End event* activity and rename it to **Completed**
 
 9.	Select the first swimlane containing the start and end element by clicking the bar on the left of the canvas. Click the *edit* icon to open the **Properties** pane. In the Properties pane, select *Process User* in the **Role** drop-down field.
 
-![Edit Swimlane](images/edit-swimlane.png)
-Note that the swimlane’s name changes to *Process User*.
+   ![Edit Swimlane](images/edit-swimlane.png)
+> **Note:**  Note that the swimlane’s name changes to *Process User*.
 
 10.	Similarly, edit the second swimlane and select *Process Approver*
 
@@ -422,15 +422,72 @@ Note that the swimlane’s name changes to *Process User*.
 16. Select the *Resubmit* activity and connect with **Approve Change Order** activity
 17. Select the *Approve Change Order* activity and connect with **Approved?** activity
 18. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
-19. Move *Completed* activity from first swimlane to the second swimlane after the *Change Order ERP PO Proxy* activity.
+19. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
 20. Select the *Approved?* activity and connect with **Approve Change Order** activity
 21. Select the *Approve Change Order* activity and connect with **Completed** activity
 22. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
 23. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
-![Structured Process Without Implementation](images/structured-process-without-implementation.png)
+    ![Structured Process Without Implementation](images/structured-process-without-implementation.png)
+24. Select *Change Order ERP PO Proxy* activity and rename it as *invoke change order*
 24. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 
-## Task 9: Implement the process
+## Task 10: Implement the process
+1. Navigate to **Initiate PO LOC Update Process**
+
+2. Select *Update PO*. Click on the *Hamburger* icon and Select *Open Properties*
+
+   ![Update PO Implementation](images/update-po-impl.png)
+
+3. In the properties pane configure per below
+
+| Property Name | Value |
+| --- | --- |
+| Assignee | Any user with Use Permission  |
+| Title| Update PO with LOC |
+| UI | AttachLOCForm |
+| Presentation | Default Presentation |
+{: title="Update PO Task Properties"}
+
+4.	Open the properties of **Approve Change Order** task. Configure the Properties per below
+
+| Property Name | Value |
+| --- | --- |
+| Policy | Any Single Assignee |
+| Select Participants| Current Lane Participants |
+| Title | Approve Change Order Request |
+| UI | AttachLOCForm |
+| Presentation |  AttachLOCForm  |
+| Action | APPROVE,REJECT |
+| Priority | Normal |
+{: title="Approve Change Order Task Properties"}
+
+5.	Open the properties of **Resubmit** task. Configure the Properties per below
+
+| Property Name | Value |
+| --- | --- |
+| Select Participants| Current Lane Participants |
+| Title | Resubmit Change Order |
+| UI | AttachLOCForm |
+| Presentation | Default Presentation |
+| Action | SUBMIT |
+| Priority | Normal |
+{: title="Resubmit Task Properties"}
+
+6.	Select the connector from **Approved?** to **invoke change order**. In the properties pane Configure **Name** as *Yes* and define other values as per the screenshot given below.
+   ![Edit Gateway Yes](images/edit-gateway-yes.png)
+7.	Select the connector from **Approved?** to **Resubmit** which is the conditional path. In the properties pane Configure **Name** as *More Information Required*
+Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditional Flow*
+   ![Edit Gateway Reject](images/edit-gateway-reject.png)
+8. 	Open the properties of **invoke change order** task. Select *Resource* as **/PO_PROXY** and *Operation* as **POST**
+   ![invoke change order impl](images/invoke-change-order-impl.png)
+9. Click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
+## Task 9: Define data objects
+## Task 10: Configure Data Association
+## Task 11: Activate a Version of the Application
+## Task 12:	Test and Run the Application in Workspace
+###	Start an Application Instance
+###	Complete an Assigned Task
+### Track Your Process
 
 You may now **proceed to the next lab**.
 
