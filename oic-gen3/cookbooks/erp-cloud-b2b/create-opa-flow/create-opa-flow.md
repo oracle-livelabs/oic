@@ -483,6 +483,47 @@ Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditiona
 9. Click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 ## Task 9: Define data objects
 ## Task 10: Configure Data Association
+
+Data association refers to the flow of data within a process. Use the Data Association editor to define input and output for flow elements that need them.
+
+A data association involves a source and a target, where the source provides a value or an expression to be assigned to the target. An approval human task, for example, needs both input and output data association.
+On the input side, it needs data input into the activity (referred to as its payload).
+
+On the output side, after the activity has just finished, it needs output from the activity to data objects, to store results for use elsewhere in the process.
+
+1.	In the **Initiate PO LOC Update Process** Select **Approve Change Order** task , Click on *hamburger* icon and Select *Open Data Association*
+
+  ![Approve Change Order Data Association](images/approve-change-order-da.png)
+
+The left pane displays source objects (Data Objects) in an expandable tree. The right pane displays the payload, or entry parameters the activity needs to perform its function
+
+2. Expand **Input > attachLOCFormArgs > pOType** from the left pane and Expand **input > attachLOCForm > pOType** from the right pane.
+3. From the left pane, hold and drag **createdBy** and drop it in the input field titled **New Association**
+4. From the right pane, hold and drag **createdBy** and drop it in the input field titled **New Association**
+  ![Approve Change Order Data mapping](images/approve-co-data-mapping.png)
+5. Repeat the above steps for all the elements given below. And in between, click on Apply to reflect the changes and come back to the same screen and continue with the mappings.
+- creationDate, id, lastUpdateDate, lastUpdatedBy, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
+  ![Approve Change Order Data mapping1](images/approve-co-data-mapping1.png)
+6. Click on *Apply* and again comeback to the mappings screen.
+7. Expand **Input > attachLOCFormArgs** from the left pane and Expand **input > attachLOCForm** from the right pane.
+8. From the left pane, hold and drag **locId** and drop it in the input field titled **New Association**
+9. From the right pane, hold and drag **locId** and drop it in the input field titled **New Association**
+  ![Approve Change Order Data mapping2](images/approve-co-data-mapping2.png)
+10. Click on *Apply*
+
+11. Select **invoke change order** task and Click on *Open Data Association*.
+12. Expand **Input > attachLOCFormArgs > pOType** from the left pane and Expand **input > body > pOType** from the right pane.
+13. Complete mappings for all the elements given below.
+- id, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
+  ![Invoke Change Order Data mapping](images/invoke-co-data-mapping.png)
+14. Click on *Apply* and again comeback to the mappings screen.
+
+15. Expand **Input > attachLOCFormArgs** from the left pane and Expand **input > body** from the right pane.
+16. From the right pane, hold and drag **LOCId** and drop it in the input field titled **New Association**
+17. From the left pane, hold and drag **locId** and drop it in the input field titled **New Association** and convert it to the number by adding int(),can refer the screenshot given below.
+  ![Invoke Change Order Data mapping1](images/invoke-co-data-mapping1.png)
+18. Click on *Apply*
+
 ## Task 11: Activate a Version of the Application
 ## Task 12:	Test and Run the Application in Workspace
 ###	Start an Application Instance
