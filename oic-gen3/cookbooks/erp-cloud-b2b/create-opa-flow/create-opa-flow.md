@@ -2,23 +2,10 @@
 
 ## About this Workshop
 
-This introduction covers the complete "parent" workshop. Use this text to set up the story for the workshop. Be engaging - what will the learner get from spending their time on this workshop?
+This lab shows you how to create a process application from scratch in Process Automation using a Structured Process.
 
-Estimated Workshop Time: -- hours -- minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+Estimated Time: 90 minutes
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
-
-  [](youtube:zNKxJjkq0Pw)
-
-### Objectives
-
-*List objectives for the workshop*
-
-In this workshop, you will learn how to:
-* Provision
-* Setup
-* Load
-* Query
 
 ### Background
 
@@ -36,20 +23,20 @@ Process applications that you create from scratch in Designer can consist of one
 
 ### Objectives
 
-In this lab, you will:
-* Create a Travel Application using a Structured Process
-* Design a Web-Form based User Interface
-* Use Connectors to integrate with external REST service
-*	Model a decision and formulate multiple conditions
+In this workshop, you will learn how to:
+* Create a process Application
 * Create roles
-* Use workspace to work on assigned Tasks
+* Create a connector to an Integration and also to the VBCS application using REST service.
+* Create a web form, design the form, add dynamic controls.
+* Create Structured Process.
+* Activate the process application.
+* Test and run the application in Workspace.
 
 ### Prerequisites
-You will need access to a Process Automation instance. Note that it is useful to have multiple credentials for testing purposes.
 
-1.	Enter the web address for Process Automation. Ask your administrator if you don’t have it.
+1.	Integration flow called *Change Order ERP PO Proxy* and should be active and running.
 
-2.	Complete the User Name and Password fields, and click Sign In.
+2.	VBCS application called *LOCAppTestOPA* and should be active and running.
 
 The main page for Process Designer appears, listing any existing process applications.
 
@@ -154,7 +141,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 2.	In the **Add component pane**, expand *Connectors*, and click *REST API*.
 
 3. Enter the name as *LOCAppConnector* and Base URL as *Copy it from the VBCS application*  and click on *Create*.
-4. Click the *Open now* link.
+4. Click the *Open now* link OR click on the connector to open it.
 5. Click on *+* icon to add a new resource.
    ![new resource](images/new-resource.png)
 6. Enter *PO* as a name and enter *PO* under resource Path
@@ -191,10 +178,9 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 10. Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
 		![Connector Add Resource Get PO Response Type](images/connector-add-resource-get-po-response-type.png)
 
-11.	In the Response Body Definition select Business Type as **POResponseType** which was created in the previous step
+11.	Close the child windows if, any and In the Response Body Definition select Business Type as **POResponseType** which was created in the previous step
 		Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API    
-12. Again, add one more **operation** by clicking the *+ Operation* on the right, for your resource. Make it a 	
-    		*GET*, with the name **getPOById** and enter *{PO_ID}* under resource Path
+12. Again, add one more **operation** by clicking the *+ Operation* on the right, for your resource. Make it a *GET*
 
 13. Select the operation created which will transition to the operation specific configuration. You
     		will configure all the parameters.
@@ -222,19 +208,18 @@ Now that we have created the two roles - User and Approver, let’s create a pro
     ```
 15. Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
 
-16.	In the Response Body Definition select Business Type as **POType** which was created in the previous step
-    		Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
-        ![resource-PO](images/resource-po.png)
+16.	Close the child windows if, any and In the Response Body Definition select Business Type as **POType** which was created in the previous step
+    Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
+      ![resource-PO](images/resource-po.png)
 
 17. Click on *+* icon to add a new resource.
 
-18. Enter *LOCS* as a name and enter */LOC* under resource Path
-19. Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a 	
-        		*GET*, with the name **getLOCS**
+18. Enter *LOCS* as a name and enter *LOC* under resource Path
+19. Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a *GET*
 20.	Select the operation created which will transition to the operation specific configuration. You
         		will configure Request and Response message
 
-21. Click on the *Response*. In the **Body Definition** section, Click the *JSON Sample* sign to define the response.
+21. Enter the name as **getLOCS** and Click on the *Response*. In the **Body Definition** section, Click the *JSON Sample* sign to define the response.
             Select *From Sample*, Enter Type Name as *LOCSType* and and copy paste the below json in the Sample section. Please remove the existing content if any.
 
     ```
@@ -287,13 +272,14 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 4.	Click *Create*, then click the *Open now* link.
 
-- If you missed the Open now link, click the *expand* arrow next to the **AttachLOCForm** at the top, then click the *UIs* tab, and select the new form.
-   ![Web Form Designer](images/web-form-designer.png)
+- If you missed the Open now link, Click on the **AttachLOCForm**
 - Notice the following:
- -	The palettes in the right pane. You have many more control types and options to choose from.
- -	The tabs in the left Properties pane. Notice how they change depending on what is selected in the main canvas.
- -	When the form is selected (click away from a control), Form and Presentation tabs appear.
- -	When a control is selected, General and Styling tabs for that control appear.
+    -	The palettes in the right pane. You have many more control types and options to choose from.
+    -	The tabs in the left Properties pane. Notice how they change depending on what is selected in the main canvas.
+    -	When the form is selected (click away from a control), Form and Presentation tabs appear.
+    -	When a control is selected, General and Styling tabs for that control appear.
+
+  ![Web Form Designer](images/web-form-designer.png)
 
 ## Task 7: Design a web form
 
@@ -313,19 +299,22 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 8. Drag-and-Drop *Divider* component which is available under Advanced section from the right palette
 9. Click on *Load more..* on the components palette, can find it on right bottom of the page under components palette.
-10. Drag-and-Drop *POType* component after the *Divider*
+10. Drag-and-Drop *POType* component after the *Divider*. If you don't find, search for *POType*
 11. select **POType** on the designer and change the label to **PO Header Details** in the properties palette. Check *Hide* option
    ![WebFormPOType](images/webformpotype.png)
-12. Put all the elements in the order given below as per the screenshot if possible.
+12. Put all the elements in the order given below as per the screenshot if possible. OR Put two elements per row so that you will have a better view.
    ![POHeaderElements](images/poheaderelements.png)
 13. Select an element **id** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
    ![idReadOnly](images/idreadOnly.png)
 14. Remove **LOCId** from the *PO Header Details* section.
 15. Drag-and-Drop *Select* from the components palette and change the name to **locId**, label as **Letter of credit Id**
-16. Click on **Add** in the *Data* section, enter name as **locID** and click on **Create**
+
+> **Note:** Steps 16 is not required if *locId* element is created in the *Data* section already.
+
+16. Click on **Add** in the *Data* section, enter name as **locId** and click on **Create**
    ![locIdDataElement](images/lociddataelement.png)
-17. Select an element **locId**, go to Properties, enter or select binding as **locId**
-18. Scroll down further for the same element and enter the below values.
+17. Select an element **Letter of credit Id**, go to Properties, enter or select binding as **locId**
+18. Scroll down further for the same element, remove the default values and enter the below values.
 
 | Option Names | Option Values |
 | --- | --- |
@@ -336,7 +325,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 {: title="LOC Ids"}
 19. Select an element **orderNumber** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
 
-20. Select each and every element after *orderNumber* and mark it as **Read Only**
+20. Select each and every element except *Letter of credit Id* and mark it as **Read Only** under the *PO Header Details* section
 
 ## Task 8: Add dynamic controls to fields via Events
 
@@ -525,10 +514,80 @@ The left pane displays source objects (Data Objects) in an expandable tree. The 
 18. Click on *Apply*
 
 ## Task 11: Activate a Version of the Application
+Activating an application moves its metadata from design time (Designer) to runtime (Workspace), where it can be run in production capacity.
+
+Before you activate, note the following about Snapshots and Versions:
+-	When you activate, you specify the snapshot to use. A snapshot just refers to the application’s design-time metadata at a point in time. Save as many snapshots as you want so you can return to one if needed.
+-	Create an application version as often as you want.
+
+So far your implementation artifacts should be per below
+
+![Application Artifacts Milestone-1](images/application-artifacts-milestone-1.png)
+
+1.	Click *Activate* on the top right corner.
+		The Activate version pane appears. Notice that the version tag you specified at creation is shown (1.0).
+
+2.	Leave the **Make it default** field selected.
+		An application always has a default version. In Workspace, users can choose to see all versions or the default only.		
+
+3.	Click *Activate*.
+		You’re informed that a snapshot of the application is being taken, followed by a message that the application is activated.
+		![Activate Artifacts Success Milestone-1](images/activate-artifacts-success-milestone-1.png)
+4.	Click *Test in Workspace*.
+
 ## Task 12:	Test and Run the Application in Workspace
+
+Use the Workspace environment to run, test, monitor, troubleshoot, or administer process applications. The options you see depend on your assigned role.
+
+Before you begin, get familiar with the options in the Workspace navigation menu.
+-	**Workspace**: Returns to the runtime home page.
+-	**Start Requests**: Lists applications you have permission to start.
+-	**My Tasks**: Lists tasks assigned to you or a group you’re part of.
+-	**Tracking**: Lists structured and dynamic processes you can track.
+-	**Administration**: Lists tasks that users with administrative permissions can perform, such as 	
+  managing roles, notifications, and credentials. Displays to users assigned an administrator role only.
+
 ###	Start an Application Instance
+In this case, pretend you are an end user who wants to request for Travel. Each time the application is started, a process instance is created.
+
+1.	From the **Start Requests** page, select the *Attach LOC Application*.
+  	The card’s banner lists the application identifier, and its process and start event titles appear below.
+  	![workspace-list-of-apps](images/workspace-list-of-apps.png)
+  	The *Travel Request* form you created appears, with the first presentation shown.
+  	![workspace-submit-travel-request](images/workspace-submit-travel-request.png)
+
+2.	Complete the form and click *Submit*.
+  	The fields each show an asterisk, indicating that they’re required. If you enter an invalid address in the Email field, an error alerts you.
+  	A message confirms that an instance was created. The start event for the process is complete.
+
+3.	Optionally, repeat these steps to select the application and create a few more instances.
+
 ###	Complete an Assigned Task
-### Track Your Process
+
+Now put yourself in the role of an approver - in this case, an *Process Approver* who gets assigned a task when a **Process User** makes a Travel Request.
+
+1.	Choose *Workspace* from the options menu.
+		The Workspace page lists tasks available to you and start requests below.
+
+2.	Click the *Team Tasks* tab.
+		You see tasks assigned with the title and process name you specified. Because they can be assigned to any user assigned to the role, you’ll need to claim a task to complete it.
+		![Workspace Approve Task](images/workspace-approve-task.png)
+
+3.	From the Actions column for a task, choose *Claim*. Click *Claim* in the Claim
+		Task pane that appears.
+		Click the *My Tasks* tab and your claimed Travel Request approval task now appears.
+
+4.	Select the **Approver to review request** approval task to open it.
+		The Travel Request form you created is displayed, with the Mangers View presentation shown this time.
+		![Workspace Approver View](images/workspace-approver-view.png)
+
+5.	Notice that the fields that are removed for **Managers View**.
+		Expand Comments, enter a comment, and click Post.
+		Click *APPROVE* or *REJECT*.
+
+A message confirms that the task was approved or rejected. The approval human task is complete.
+You return to the My Tasks page. The task you just completed is no longer listed.
+
 
 You may now **proceed to the next lab**.
 
@@ -538,6 +597,7 @@ You may now **proceed to the next lab**.
 * [Design Forms and User Interfaces](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/design-forms-and-user-interfaces.html)
 * [Explore Workspace](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/explore-workspace.html)
 *	[Work with Connectors](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/work-connectors.html)
+*	[Work with Integrations](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/work-integrations.html#GUID-7DCA4E96-D577-4DE1-AB82-F074361DE9B4)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
