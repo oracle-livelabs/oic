@@ -158,7 +158,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
     ```
     <copy>{
     "items": [{
-        "lastUpdatedBy": "kishore.x.katta@oracle.com",
+        "lastUpdatedBy": "john.doe@example.com",
         "orderNumber": "US165561",
         "supplierId": "300000047414679",
         "lastUpdateDate": "2023-02-23T04:21:31+00:00",
@@ -167,7 +167,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
         "lOCId": 3,
         "soldToLegalEntity": "US1 Legal Entity",
         "orderAmount": 1.1,
-        "createdBy": "kishore.x.katta@oracle.com",
+        "createdBy": "john.doe@example.com",
         "procurementBUId": "300000046987012",
         "supplier": "Dell Inc.",
         "procurementBusinessUnit": "US1 Business Unit",
@@ -190,7 +190,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
     ```
     <copy>{
-    "lastUpdatedBy": "kishore.x.katta@oracle.com",
+    "lastUpdatedBy": "john.doe@example.com",
     "orderNumber": "US165094",
     "supplierId": "300000047414679",
     "lastUpdateDate": "2022-07-03T13:41:00+00:00",
@@ -199,7 +199,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
     "lOCId": 5,
     "soldToLegalEntity": "US1 Legal Entity",
     "orderAmount": 1.1,
-    "createdBy": "kishore.x.katta@oracle.com",
+    "createdBy": "john.doe@example.com",
     "procurementBUId": "300000046987012",
     "supplier": "Dell Inc.",
     "procurementBusinessUnit": "US1 Business Unit",
@@ -225,11 +225,11 @@ Now that we have created the two roles - User and Approver, let’s create a pro
     ```
     <copy>{
     "items": [{
-        "lastUpdatedBy": "kishore.x.katta@oracle.com",
+        "lastUpdatedBy": "john.doe@example.com",
         "lOCType": "Type1",
         "lOCBank": "ABC Bank",
         "lOCAmount": 10000,
-        "createdBy": "kishore.x.katta@oracle.com",
+        "createdBy": "john.doe@example.com",
         "lOCOpeningDate": "2019-01-01",
         "lastUpdateDate": "2022-04-29T08:26:12+00:00",
         "lOCExpiry": "2023-02-01",
@@ -237,11 +237,11 @@ Now that we have created the two roles - User and Approver, let’s create a pro
         "creationDate": "2019-01-12T11:55:39+00:00",
         "lOCStatus": "Active"
     }, {
-        "lastUpdatedBy": "kishore.x.katta@oracle.com",
+        "lastUpdatedBy": "john.doe@example.com",
         "lOCType": "Type2",
         "lOCBank": "XYZ Bank",
         "lOCAmount": 20000,
-        "createdBy": "kishore.x.katta@oracle.com",
+        "createdBy": "john.doe@example.com",
         "lOCOpeningDate": "2019-01-01",
         "lastUpdateDate": "2022-01-19T19:54:18+00:00",
         "lOCExpiry": "2023-01-01",
@@ -348,7 +348,7 @@ For example, you can introduce the following behaviours into your forms:
 6. Click on **Action** and define the values as per the screenshot given below for the element **id**.
    ![idAction](images/idaction.png)
 7. Repeat the step 6 for all the elements given below, except *Letter of credit id* element for which pre defined data is populated and click on **OK** after completing actions for all the elements.
-- id
+
 - orderNumber
 - pOHeaderId
 - orderAmount
@@ -361,8 +361,8 @@ For example, you can introduce the following behaviours into your forms:
 - createdBy
 - lastUpdateDate
 - lastUpdateBy
-POHeaderActions
-   ![poheaderactions](images/poheaderactions.png)
+
+   ![POHeaderActions](images/poheaderactions.png)
 8. Again, Click on **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
    ![showpotype object](images/showpotype.png)
@@ -407,18 +407,23 @@ The structured process editor opens. Start and end elements are already position
 13.	In the BPMN elements palette, expand the **Human** category and drag a *Submit* task to the first swimlane. Rename it to *Resubmit*.
 
 14.	Select the *Approved?* Gateway activity. Using the connector (arrow icon) Connect one of the branches to the **Resubmit** task.
-15. Delete the arrow which is connected to *Completed* activity.
-16. Select the *Resubmit* activity and connect with **Approve Change Order** activity
-17. Select the *Approve Change Order* activity and connect with **Approved?** activity
-18. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
-19. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
-20. Select the *Approved?* activity and connect with **Approve Change Order** activity
-21. Select the *Approve Change Order* activity and connect with **Completed** activity
-22. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
-23. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
+15. Delete the arrow which is connected to *Completed* activity from *Resubmit* activity.
+
+16. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
+
+17. Select the *Resubmit* activity and connect with **Approve Change Order** activity
+18. Select the *Approve Change Order* activity and connect with **Approved?** activity
+19. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
+20. Select *Change Order ERP PO Proxy* activity and rename it as *invoke change order*
+
+21. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
+22. Select the *Approved* activity and connect with **invoke change order** activity
+23. Select the *invoke change order* activity and connect with **Completed** activity
+
+24. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
     ![Structured Process Without Implementation](images/structured-process-without-implementation.png)
-24. Select *Change Order ERP PO Proxy* activity and rename it as *invoke change order*
-24. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
+
+25. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 
 ## Task 10: Implement the process
 1. Navigate to **Initiate PO LOC Update Process**
