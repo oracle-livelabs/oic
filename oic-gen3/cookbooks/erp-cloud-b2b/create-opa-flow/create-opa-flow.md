@@ -414,14 +414,15 @@ The structured process editor opens. Start and end elements are already position
 17. Select the *Resubmit* activity and connect with **Approve Change Order** activity
 18. Select the *Approve Change Order* activity and connect with **Approved?** activity
 19. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
-20. Select *Change Order ERP PO Proxy* activity and rename it as *invoke change order*
 
-21. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
-22. Select the *Approved* activity and connect with **invoke change order** activity
-23. Select the *invoke change order* activity and connect with **Completed** activity
 
-24. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
+20. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
+21. Select the *Approved* activity and connect with **invoke change order** activity
+22. Select the *invoke change order* activity and connect with **Completed** activity
+
+23. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
     ![Structured Process Without Implementation](images/structured-process-without-implementation.png)
+24. Select *Change Order ERP PO Proxy* activity and rename it as *invoke change order*
 
 25. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 
