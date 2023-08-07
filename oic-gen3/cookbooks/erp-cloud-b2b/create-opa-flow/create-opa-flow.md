@@ -556,35 +556,36 @@ Before you begin, get familiar with the options in the Workspace navigation menu
 ###	Start an Application Instance
 In this case, pretend you are an end user who wants to request for Travel. Each time the application is started, a process instance is created.
 
-1.	From the **Start Requests** page, select the *Attach LOC Application*.
+1. From the **Start Requests** page, select the *Attach LOC Application*.
   	The card’s banner lists the application identifier, and its process and start event titles appear below.
   	![workspace-list-of-apps](images/workspace-list-of-apps.png)
-  	The *Travel Request* form you created appears, with the first presentation shown.
-  	![workspace-submit-travel-request](images/workspace-submit-travel-request.png)
+2. The *AttachLOCForm* you created appears, with the first presentation shown and Select the Order Number from the list.
+		![test-selectordernumber](images/test-selectordernumber.png)
 
-2.	Complete the form and click *Submit*.
-  	The fields each show an asterisk, indicating that they’re required. If you enter an invalid address in the Email field, an error alerts you.
+3. Upon selection of the Order Number from the list, form displays *PO Header Details* section
+	![test-poheaderdetails](images/test-poheaderdetails.png)
+4. Select the *Letter of credit* from the list and click *Submit*.
+	![workspace-submit-the-request](images/workspace-submit-the-request.png)
   	A message confirms that an instance was created. The start event for the process is complete.
-
-3.	Optionally, repeat these steps to select the application and create a few more instances.
+5.	Optionally, repeat these steps to select the application and create a few more instances.
 
 ###	Complete an Assigned Task
 
-Now put yourself in the role of an approver - in this case, an *Process Approver* who gets assigned a task when a **Process User** makes a Travel Request.
+Now put yourself in the role of an approver - in this case, an *Process Approver* who gets assigned a task when a **Process User** submits the *letter of credit* for the *purchase order*.
 
 1.	Choose *Workspace* from the options menu.
 		The Workspace page lists tasks available to you and start requests below.
 
 2.	Click the *Team Tasks* tab.
 		You see tasks assigned with the title and process name you specified. Because they can be assigned to any user assigned to the role, you’ll need to claim a task to complete it.
-		![Workspace Approve Task](images/workspace-approve-task.png)
+		![Workspace claim Task](images/workspace-claim-task.png)
 
 3.	From the Actions column for a task, choose *Claim*. Click *Claim* in the Claim
 		Task pane that appears.
-		Click the *My Tasks* tab and your claimed Travel Request approval task now appears.
+		Click the *My Tasks* tab and your claimed *change order request* approval task now appears.
 
-4.	Select the **Approver to review request** approval task to open it.
-		The Travel Request form you created is displayed, with the Mangers View presentation shown this time.
+4.	Select the task to open it.
+		The AttachLOCForm you created is displayed, with the Mangers View presentation shown this time.
 		![Workspace Approver View](images/workspace-approver-view.png)
 
 5.	Notice that the fields that are removed for **Managers View**.
