@@ -476,8 +476,8 @@ Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditiona
 8. 	Open the properties of **invoke change order** task. Select *Resource* as **/PO_PROXY** and *Operation* as **POST**
    ![invoke change order impl](images/invoke-change-order-impl.png)
 9. Click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
-## Task 9: Define data objects
-## Task 10: Configure Data Association
+
+## Task 11: Configure Data Association
 
 Data association refers to the flow of data within a process. Use the Data Association editor to define input and output for flow elements that need them.
 
@@ -519,7 +519,7 @@ The left pane displays source objects (Data Objects) in an expandable tree. The 
   ![Invoke Change Order Data mapping1](images/invoke-co-data-mapping1.png)
 18. Click on *Apply*
 
-## Task 11: Activate a Version of the Application
+## Task 12: Activate a Version of the Application
 Activating an application moves its metadata from design time (Designer) to runtime (Workspace), where it can be run in production capacity.
 
 Before you activate, note the following about Snapshots and Versions:
@@ -541,7 +541,7 @@ So far your implementation artifacts should be per below
 		![Activate Artifacts Success Milestone-1](images/activate-artifacts-success-milestone-1.png)
 4.	Click *Test in Workspace*.
 
-## Task 12:	Test and Run the Application in Workspace
+## Task 13:	Test and Run the Application in Workspace
 
 Use the Workspace environment to run, test, monitor, troubleshoot, or administer process applications. The options you see depend on your assigned role.
 
@@ -588,7 +588,7 @@ Now put yourself in the role of an approver - in this case, an *Process Approver
 		The AttachLOCForm you created is displayed, with the Mangers View presentation shown this time.
 		![Workspace Approver View](images/workspace-approver-view.png)
 
-5.	Notice that the fields that are removed for **Managers View**.
+5.	Notice that some of the fields that are removed for **Managers View** and all the fields are *ReadOnly* including *Letter of credit id*
 		Expand Comments, enter a comment, and click Post.
 		Click *APPROVE* or *REJECT*.
 
