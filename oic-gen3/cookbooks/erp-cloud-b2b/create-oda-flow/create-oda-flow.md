@@ -426,6 +426,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer
-* **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - August 2023
+* **Last Updated By/Date** - Subhani Italapuram, August 2023

@@ -165,7 +165,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
    Click on *Import*.
    Select the imported VB application. This will open the VB designer console.
 
-4. From the left side Menu select *Business Objects**. Click on *PO* Business object from the list objects.
+4. From the left side Menu select *Business Objects*. Click on *PO* Business object from the list objects.
     ![Select PO Object](images/select-po-object.png)
 
 5.  On the Right side page, Select *Endpoints* tab. Click on **create\_po** endpoint.

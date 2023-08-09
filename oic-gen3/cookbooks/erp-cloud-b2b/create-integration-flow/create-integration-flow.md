@@ -8,16 +8,17 @@ Estimated Time: 45 minutes
 
 ### Objectives
 
-In this lab, you will learn to integrate with ERP Cloud and several B2B concepts to build the heart of the Usecase.
+In this lab, you will learn to integrate with ERP Cloud and explore several B2B concepts to build the heart of the usecase.
 
 * B2B Documents and Schemas.
 * Host and Trading Partner Configuration.
 * Integrations used for Message processing.
 * Agreements & Transports for Communication.
 * EDI translation
-* Subscribe to Business Events
+* Subscribe to ERP Cloud Business Events
 * Parallel action
-* Call local integration
+* Invoke local integration
+* Create pub/sub integrations using Events service
 
 ### Prerequisites
 

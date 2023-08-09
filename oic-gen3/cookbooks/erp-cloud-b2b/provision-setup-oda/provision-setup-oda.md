@@ -1,4 +1,4 @@
--# Provision Oracle Digital Assistant
+# Provision Oracle Digital Assistant
 
 ## Introduction
 Oracle Digital Assistant is a platform that allows enterprises to create and deploy digital assistants for their users. With Oracle Digital Assistant, you create:
@@ -35,7 +35,7 @@ In this lab, you will:
 - This lab assumes you have logged into your to Oracle Cloud account.
 
 
-## Prerequisite: Set up the OIC service account
+## Task 1: Set up the OIC service account
    1. Login into the Oracle Cloud Account and click on the ![hamburger](images/hamburger.png) and select the **Identity & Security**
 
    ![identity-security](images/identity-security.png)
@@ -79,7 +79,7 @@ In this lab, you will:
 
 A welcome email with details to activate your account will be recieved, which helps in activating the account and set the password of your choice. You can now proceed to the Tasks in this lab.
 
-## Task 1: Create a Digital Assistant instance
+## Task 2: Create a Digital Assistant instance
 
 Create a Digital Assistant instance to start working with bots. You can find advance set up steps on the [official documentation](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/order-service-and-provision-instance.html#GUID-7E4F1CE5-FB40-45DF-B0F0-949289F5E184).
 
@@ -127,7 +127,7 @@ You will have the **root compartment** selected, or pick the one you want.
 
   ![oda-dashboard](images/oda-5-new2.png)
 
-## Task 2:  Setup your Digital Assistant
+## Task 3:  Setup your Digital Assistant
 
 1. Click on the ![hamburger](images/hamburger.png) to open the side menu.
     - Click on the **Settings** in the side menu, in the submenu click on the **API Services**
@@ -144,7 +144,7 @@ You will have the **root compartment** selected, or pick the one you want.
          - **Endpoint**: *Sample URL Given below*
          - **Method**: GET
 
-> **Note:** https://oic-host/ic/api/integration/v2/flows/rest/project/CLOUD_CONFERENCE_PROJECT/PURCHASE_ORDER_PROXY_SERVICE/1.0/purchaseOrderDetails/{orderNumber}
+> **Note:** https://&lt;oic\_host&gt;/ic/api/integration/v1/flows/rest/PURCHASE_ORDER_DETAILS_PROXY/1.0/purchaseOrderDetails/{orderNumber}
 
   ![create-rest-service](images/create-rest-service.png)
 
@@ -172,11 +172,13 @@ You can always **Watch Videos** on the **Learn** section at the bottom and explo
 
 Make sure you look around and feel familiar with the menus.
 
-
 You may now **proceed to the next lab**.
+
+## Learn More
+
+* [Provision ODA](https://docs.oracle.com/en-us/iaas/digital-assistant/doc/order-service-and-provision-instance.html)
+
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer
-* **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - August 2023
+* **Last Updated By/Date** - Subhani Italapuram, Kishore Katta, August 2023
