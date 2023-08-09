@@ -1,5 +1,4 @@
-# Create Oracle Digital Assistant
-
+-# Provision Oracle Digital Assistant
 
 ## Introduction
 Oracle Digital Assistant is a platform that allows enterprises to create and deploy digital assistants for their users. With Oracle Digital Assistant, you create:
@@ -25,6 +24,8 @@ Both intents and entities are common **Natural Language Processing (NLP)** conce
 
 - **Channels**: Digital assistants and skills aren’t apps that you download from an app marketplace, like iTunes. Instead, users access them through messaging platforms or through client messaging apps. Channels, which are platform-specific configurations, allow this access. A single digital assistant or skill can have several channels configured for it so that it can run on different services simultaneously
 
+Estimated Time: 15 minutes
+
 **Objectives**
 In this lab, you will:
 
@@ -35,124 +36,121 @@ In this lab, you will:
 
 
 ## Prerequisite: Set up the OIC service account
-   1. Login into the Oracle Cloud Account and click on the ![hamburger](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/hamburger.png) and select the **Identity & Security** 
+   1. Login into the Oracle Cloud Account and click on the ![hamburger](images/hamburger.png) and select the **Identity & Security**
 
-   ![identity_security](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/identity_security.png)
+   ![identity-security](images/identity-security.png)
 
    2. Then click on **Federation**
-    ![federation](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/federation.png)
+    ![federation](images/federation.png)
 
    3. Then click on **OracleIDentityCloudService**  and click on the url that ends with "/adminconsole" (https://<identitydomain>/ui/v1/adminconsole)
-    ![identityurl](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/identityurl.png)
+    ![identityurl](images/identityurl.png)
 
-   4. Click on the hamburger icon ![hamburger](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/hamburger.png) and then click on the **Users**
+   4. Click on the hamburger icon ![hamburger](images/hamburger.png) and then click on the **Users**
 
-   ![clickUsers](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/click_users.png)
+   ![clickUsers](images/click-users.png)
 
    5. click on the **+ Add** button
 
-   ![clickonaddbutton](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/clickonaddbutton.png)
+   ![clickonaddbutton](images/clickonaddbutton.png)
 
    6. Enter all the details as below and click the Finish button.
 
-   ![invokerdetails](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/invokeruserdetails.png)
+   ![invokerdetails](images/invokeruserdetails.png)
 
-   
+
   7. click on the side menu and select **Oracle Cloud Services** and in the search tab type **oic**
 
-     ![oracle_cloud_services](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oracle_cloud_services.png)
- 
- 8. Click on the **oic** and then **Application Roles** 
+     ![oracle-cloud-services](images/oracle-cloud-services.png)
 
-    ![select_application_roles](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/select_application_roles.png)
+ 8. Click on the **oic** and then **Application Roles**
+
+    ![select-application-roles](images/select-application-roles.png)
 
 9. In the **Application Roles**, select the **Service Invoker** on the same tile click on the hamburger icon on extreme right and select the **Assign Users** menu option.
 
-   ![service_invoker_assign_user](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/service_invoker_assign_user.png)
+   ![service-invoker-assign-user](images/service-invoker-assign-user.png)
 
-10. click on the check box with OIC 3 Invoker details and click on ![okbutton](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/ok_button.png) button.
+10. click on the check box with OIC 3 Invoker details and click on ![okbutton](images/ok-button.png) button.
 
-![oic_detail](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oic_detail.png)
+  ![oic-detail](images/oic-detail.png)
 
 A welcome email with details to activate your account will be recieved, which helps in activating the account and set the password of your choice. You can now proceed to the Tasks in this lab.
 
 ## Task 1: Create a Digital Assistant instance
 
-**Create** a Digital Assistant instance to start working with bots. You can find advance set up steps on the [official documentation](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/order-service-and-provision-instance.html#GUID-7E4F1CE5-FB40-45DF-B0F0-949289F5E184).
+Create a Digital Assistant instance to start working with bots. You can find advance set up steps on the [official documentation](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/order-service-and-provision-instance.html#GUID-7E4F1CE5-FB40-45DF-B0F0-949289F5E184).
 
-1. Go to the **Menu, Analytics & AI ** and click on ** Digital Assistant**:
+1. Go to the **Menu, Analytics & AI** and click on **Digital Assistant**:
 
-  ![oda_1_1](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda_1_1.png)
+  ![oda-1-1](images/oda-1-1.png)
 
 2. Click on Create **Digital Assistant Instance** button:
 You will have the **root compartment** selected, or pick the one you want.
 
-   ![oda_2](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda_2.png)
+   ![oda-2](images/oda-2.png)
 
-3. Fill the information as in the next image. **Development** edition is perfect for this workshop and develop new **Digital Assistant** systems until you want to move to production. Finally click "**Create**" bottom:
+3. Fill the information as in the next image. *Development* edition is perfect for this workshop and develop new *Digital Assistant* systems until you want to move to production. Finally click **Create** bottom:
 
-         - **Name**: ODA
-         - **Description**: My Oracle Digital Assistant
-         - **Shape**: Development
-    
-![oda_3](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda_3.png)  
+         - Name : ODA
+         - Description : My Oracle Digital Assistant
+         - Shape : Development
 
-4. Wait for the instance to be "**Active**". The creation process will take a few minutes. Once the instance is **Active**, then on the instance menu, click on "**Service Console**":
+  ![oda-3](images/oda-3.png)  
 
-![oda_4](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda_4.png)  
+4. Wait for the instance to be *Active*. The creation process will take a few minutes. Once the instance is *Active*, then on the instance menu, click on **Service Console**:
 
-
-5. If you see your **Oracle Cloud Account** in the next screen, **clik on it**, otherwise follow the next steps to Sign in with a different user account.
-
-![oda_dashboard](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oracle_cloud_account_oda_dashboard.png)
-
-6. You will have to **Log-in** again with your **Account name, User ** and **Password**. Follow this step, just if you are Sign in with a different user account.
-
-Ensure you are on the right **Tenancy** or **Account** and click **Continue**.
-
-![oda_login](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda-login-1-new.png)
+  ![oda-4](images/oda-4.png)  
 
 
-If not, click on **Change Tenant**, type your **Account Name** or **Tenancy** and click **Continue**.
+5. If you see your *Oracle Cloud Account* in the next screen, *clik on it*, otherwise follow the next steps to Sign in with a different user account.
 
-![oda_tenancy](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda-tenancy-1.png)
+  ![oda-dashboard](images/oracle-cloud-account-oda-dashboard.png)
 
-![oda_tenancy2](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda-tenancy-2.png)
+6. You will have to *Log-in* again with your **Account name, User** and **Password**. Follow this step, just if you are Sign in with a different user account. Ensure you are on the right *Tenancy* or *Account* and click **Continue**.
 
+    ![oda-login](images/oda-login-1-new.png)
+
+    - If not, click on **Change Tenant**, type your **Account Name** or **Tenancy** and click **Continue**.
+
+      ![oda-tenancy](images/oda-tenancy-1.png)
+
+      ![oda-tenancy2](images/oda-tenancy-2.png)
 
 7. Provide your **Username, Password** and click **Sign In** to visit **Oracle Digital Assistant Home** page.
 
-![oda_login_new](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda-login-2-new.png)
+  ![oda-login-new](images/oda-login-2-new.png)
 
 8. You will be on the Oracle Digital Assistant **Dashboard** where you can start building your bots.
 
-![oda_dashboard](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/oda_5_new2.png)
+  ![oda-dashboard](images/oda-5-new2.png)
 
 ## Task 2:  Setup your Digital Assistant
 
-1. Click on the ![hamburger](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/hamburger.png) to open the side menu.
-Click on the **Settings** in the side menu, in the submenu click on the **API Services**
-
- ![select_api_services](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/select_api_services.png)
+1. Click on the ![hamburger](images/hamburger.png) to open the side menu.
+    - Click on the **Settings** in the side menu, in the submenu click on the **API Services**
+      ![select-api-services](images/select-api-services.png)
 
 2. Click on the **+ Add REST Service** button.
 
- ![add_rest_service](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/add_rest_service.png)
+      ![add-rest-service](images/add-rest-service.png)
 
 3. Enter the following details in the window that opens up and hit the **Create** button.
 
     - **General Information**:
          - **Name** : ERP _ PO _ API
-         - **Endpoint**: https://oic3demo-oicpm-px.integration.us-phoenix-1.ocp.oraclecloud.com/ic/api/integration/v2/flows/rest/project/CLOUD_CONFERENCE_PROJECT/PURCHASE_ORDER_PROXY_SERVICE/1.0/purchaseOrderDetails/{orderNumber}
+         - **Endpoint**: *Sample URL Given below*
          - **Method**: GET
-           
-![create_rest_service](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/create_rest_service.png)
 
-4. select the **Authentication Type** as **Basic Authentication** from the dropdown and enter the service account **User Name/Password** as "oic3.invoker/Welcome123!@#" and click on the **+** icon  besdies the  **Parameters** to add parameter values.
+> **Note:** https://oic-host/ic/api/integration/v2/flows/rest/project/CLOUD_CONFERENCE_PROJECT/PURCHASE_ORDER_PROXY_SERVICE/1.0/purchaseOrderDetails/{orderNumber}
 
-![rest_service_details](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/rest_service_details.png)
+  ![create-rest-service](images/create-rest-service.png)
 
-5. Enter the following as parameters as shown below and select the ![right_icon](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/right_icon.png) to save the values. Then click on the **Test Request** button  ![test_request](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/test_request.png) to make sure the api is returning status as 200.
+4. select the **Authentication Type** as **Basic Authentication** from the dropdown and enter the service account **User Name/Password** as "oic3.invoker/Welcome123!@#" and click on the **+** icon  besides the  **Parameters** to add parameter values.
+
+  ![rest-service-details](images/rest-service-details.png)
+
+5. Enter the following as parameters as shown below and select the ![right-icon](images/right-icon.png) to save the values. Then click on the **Test Request** button  ![test-request](images/test-request.png) to make sure the api is returning status as 200.
 
 - **Parameter 1**:
     - **Key** : orderNumber
@@ -164,17 +162,19 @@ Click on the **Settings** in the side menu, in the submenu click on the **API Se
     - **Value**: US1 Legal Entity
     - **Type**: Query
 
-![parameter_values](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/parameter_values.png)
+  ![parameter-values](images/parameter-values.png)
 
-![success](/oic-gen3/cookbooks/erp-cloud-b2b/provision-setup-oda/images/success.png)
+  ![success](images/success.png)
 
 You can always **Watch Videos** on the **Learn** section at the bottom and explore the documentation of Oracle Digital Assistant by following the links on the dashboard.
 
 Make sure you look around and feel familiar with the menus.
 
 
-you may now proceed to the next lab
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer
+* **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
+* **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Last Updated By/Date** - August 2023

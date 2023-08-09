@@ -1,6 +1,6 @@
-# Introduction
+# Create OPA Flow
 
-## About this Workshop
+## Introduction
 
 This lab shows you how to create a process application from scratch in Process Automation using a Structured Process.
 
