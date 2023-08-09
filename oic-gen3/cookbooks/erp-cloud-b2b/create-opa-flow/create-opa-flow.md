@@ -140,7 +140,9 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 2.	In the **Add component pane**, expand *Connectors*, and click *REST API*.
 
-3. Enter the name as *LOCAppConnector* and Base URL as *Copy it from the VBCS application*  and click on *Create*.
+3. Enter the name as *LOCAppConnector* and Base URL as *TBD* and remove */PO* from the URL  and click on *Create*.
+> **Note:**URL Should look like https://oic-vbcs-host/ic/builder/design/LOCAppTestOPA/1.0/resources/data
+
 4. Click the *Open now* link OR click on the connector to open it.
 5. Click on *+* icon to add a new resource.
    ![new resource](images/new-resource.png)
