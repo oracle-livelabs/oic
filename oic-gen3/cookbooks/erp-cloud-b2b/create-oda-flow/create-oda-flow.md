@@ -45,15 +45,14 @@ In this workshop, you will create a skill that can be used for interactions with
 
       ![create-skill](images/create-skill.png)
 
-Here's a reference of details entered in the window above, after entering details please click the **Create**  button highlighted in the screenshot below:
+Here's a reference of details entered in the window above, after entering details please click the **Create**  button
 
-  ![create-skill-details](images/create-skill-details.png)
 
 you have successfully created a skill now you can proceed to the next task
 
 ## Task 2: Create Intents
 
-1. After creating a skill, the designer will open on the Intents ![intents icon](images/left-nav-intents.png) page. Click on the **+ Add Intent** button and create your first Intent. Lets call this intent as Greetings.
+1. After creating a skill, the designer will open on the Intents ![intents icon](images/left-nav-intents.png) page. Click on the **+ Intent** button and create your first Intent. Lets call this intent as Greetings.
 
 2. Select and copy all of the example sentences below to your clipboard:
 
@@ -90,6 +89,14 @@ you have successfully created a skill now you can proceed to the next task
 
 
 5. Repeat the above steps for another Intent by naming the intent as  **Purchase Order** and add the below list of utterences to that particular intent and click on the **Create** button as shown below:
+      - how to know the status of my purchase order
+      - I would like to know the status of my order
+      - Order Status
+      - please help me know the status of my purchase order
+      - status of my order
+      - status of my purchase
+      - what is the status of my order
+      - what is the status of my purchase order
 
        ![purchase-order-intent](images/purchase-order-intent.png)
 

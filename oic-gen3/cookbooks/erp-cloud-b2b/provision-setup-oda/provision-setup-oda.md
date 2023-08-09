@@ -148,7 +148,7 @@ You will have the **root compartment** selected, or pick the one you want.
 
   ![create-rest-service](images/create-rest-service.png)
 
-4. select the **Authentication Type** as **Basic Authentication** from the dropdown and enter the service account **User Name/Password** as "oic3.invoker/Welcome123!@#" and click on the **+** icon  besides the  **Parameters** to add parameter values.
+4. select the **Authentication Type** as **Basic Authentication** from the dropdown and enter the service account **User Name/Password** and click on the **+** icon  besides the  **Parameters** to add parameter values.
 
   ![rest-service-details](images/rest-service-details.png)
 
