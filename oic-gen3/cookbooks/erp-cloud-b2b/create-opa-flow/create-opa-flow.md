@@ -140,8 +140,8 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 2.	In the **Add component pane**, expand *Connectors*, and click *REST API*.
 
-3. Enter the name as *LOCAppConnector* and Base URL as *TBD* and remove */PO* from the URL  and click on *Create*.
-> **Note:**URL Should look like https://oic-vbcs-host/ic/builder/design/LOCAppTestOPA/1.0/resources/data
+3. Enter the name as *LOCAppConnector* and Base URL as *You should have copied the URL from the Lab2 > Task 6 > Step 6* and remove */PO* from the URL  and click on *Create*.
+> **Note:**Here is the Sample URL https://oic-vbcs-host/ic/builder/design/LOCAppTestOPA/1.0/resources/data
 
 4. Click the *Open now* link OR click on the connector to open it.
 5. Click on *+* icon to add a new resource.
@@ -364,7 +364,7 @@ For example, you can introduce the following behaviours into your forms:
 - lastUpdateDate
 - lastUpdateBy
 
-   ![POHeaderActions](images/poheaderactions.png)
+   ![POHeaderActions](images/poheader-actions.png)
 8. Again, Click on **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
    ![showpotype object](images/showpotype.png)
