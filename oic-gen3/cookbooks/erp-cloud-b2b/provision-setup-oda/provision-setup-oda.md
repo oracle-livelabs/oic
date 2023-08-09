@@ -43,8 +43,10 @@ In this lab, you will:
    2. Then click on **Federation**
     ![federation](images/federation.png)
 
-   3. Then click on **OracleIDentityCloudService**  and click on the url that ends with "/adminconsole" (https://<identitydomain>/ui/v1/adminconsole)
-    ![identityurl](images/identityurl.png)
+   3. Then click on **OracleIDentityCloudService**  and click on the url that ends with "/adminconsole"
+> **Note:** https://identitydomain/ui/v1/adminconsole)
+
+  ![identityurl](images/identityurl.png)
 
    4. Click on the hamburger icon ![hamburger](images/hamburger.png) and then click on the **Users**
 

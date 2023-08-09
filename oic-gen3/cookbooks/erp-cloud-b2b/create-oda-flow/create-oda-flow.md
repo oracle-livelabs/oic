@@ -403,7 +403,7 @@ In this section we will just test the happy path scenario of the conversation di
 
      ![conversation-tester-hi](images/conversation-tester-hi.png)
 
-  4.  Then enter the sentence **"Purchase Order Status"** and hit enter, you should see the bot asking for you to enter the "Order Number " as below:
+  4.  Then enter the sentence **Purchase Order Status** and hit enter, you should see the bot asking for you to enter the "Order Number " as below:
 
      ![conversation-po](images/conversation-po.png)
 
