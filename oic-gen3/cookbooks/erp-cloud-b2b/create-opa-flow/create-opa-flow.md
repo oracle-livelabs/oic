@@ -2,43 +2,55 @@
 
 ## Introduction
 
-This lab shows you how to create a process application from scratch in Process Automation using a Structured Process.
+In this lab, we will guide you through every step of crafting this intelligent workflow using Oracle Process Automation. You will learn how to design, configure, and implement a workflow that not only accommodates changes to Purchase Orders but also incorporates a user-friendly web form for attaching Letter of Credit details. This integration of data and process simplifies the approval journey and ensures that the right stakeholders are involved at the right time
 
-Estimated Time: 90 minutes
-
+Estimated Time: 60 minutes
 
 ### Background
 
-Process applications that you create from scratch in Designer can consist of one or more of the following application components:
+**Essential Elements of Oracle Process Applications**
 
--	Processes are a sequence of tasks or activities that result in a well-defined outcome. Business Process Model and Notation (BPMN) elements within the process define the flow and behavior of the application.
+Before diving into the tutorial's core content, it's crucial to grasp the fundamental parts that make up Oracle Process Applications. These elements collaborate to construct robust applications tailored to specific business requirements. Here's a quick overview of each component:
 
-- Web Forms define the interface that your application users see in Workspace. You can create web forms from the ground up or you can base them on an existing data structure.
+1. **Processes:** Processes are the organized steps that guide your application towards specific outcomes. These steps, defined using Business Process Model and Notation (BPMN), outline the flow and behavior of your application. Think of them as the logical sequence of tasks, decisions, and interactions needed to achieve your business goals.
 
-- Business Types represent real-world concepts or objects, such as a ticket, a request, or an employee. You use business types to create the data structures that are required in your application.
+2. **Web Forms:** Web Forms are the user interfaces of your application presented in Oracle Workspace. They capture user input and streamline interactions. You can create these forms from scratch or derive them from existing data structures, providing an intuitive way for users to input information.
 
-- Decisions are containers for if/then rules and decision tables that use the same input and output data objects. A decision exposes these data objects as a reusable service that multiple business processes can invoke.
+3. **Business Types:** Business Types model real-world concepts, like customers, orders, or products. They structure your application's data and ensure it aligns with your business processes. Business Types enable consistent data capture and management.
 
-- Connectors define how a business process connects to external REST services.
+4. **Decisions:** Decisions add intelligence to your application. They contain rules and decision tables that automate choices based on input and output data. These rules allow you to define logic, making your application's behavior smart and efficient.
+
+5. **Connectors:** Connectors are the communication links between your application and external REST services. They enable your processes to exchange data seamlessly with external systems, expanding your application's reach and capabilities.
+
+In this tutorial, we'll primarily focus on the "Processes" component, specifically creating a Purchase Order change order workflow. By understanding these core elements, you'll be better prepared to grasp how they come together to form the dynamic workflow we're about to build. So, let's jump into the tutorial and explore Oracle Process Applications, where these elements synergize to enhance efficiency, collaboration, and intelligent decision-making.
 
 ### Objectives
 
-In this workshop, you will learn how to:
-* Create a process Application
-* Create roles
-* Create a connector to an Integration and also to the VBCS application using REST service.
-* Create a web form, design the form, add dynamic controls.
-* Create Structured Process.
-* Activate the process application.
-* Test and run the application in Workspace.
+In this hands-on workshop, you'll master the following skills:
+
+1. **Build Approval Workflows:** Learn to create a streamlined workflow for End Users to submit change orders efficiently. Understand the process's flow, from submission to approval.
+
+2. **Role Management:** Dive into role creation and assignment. Explore how to define roles and assign them to users for distinct responsibilities in the approval process.
+
+3. **Connector Creation:** Understand the creation of connectors that link your application to external systems. Create connections to an Integration and VBCS application using REST services.
+
+4. **Web Form Development:** Discover the art of crafting web forms. Design user-friendly interfaces for data submission. Explore adding dynamic controls to enhance user experience.
+
+5. **Process Activation:** Master the activation of your process application. Witness the process come to life and stand ready for real-world utilization.
+
+6. **Change Order Initiation:** Learn how to kickstart a change order, initiating a dynamic sequence that attaches crucial letter of credit information.
+
+7. **Testing and Deployment:** Put your application to the test in Oracle Workspace. Understand the end-to-end experience as you run your application, ensuring its readiness for practical use.
+
+By the end of this workshop, you'll have a firm grip on these essential skills, enabling you to create efficient workflows, design user interfaces, integrate applications, and ensure seamless application functionality. So, let's embark on this learning journey and unlock the power of Oracle Process Applications!
 
 ### Prerequisites
 
-1.	Integration flow called *Change Order ERP PO Proxy* and should be active and running.
+1.	**Active Integration Flow** - Change Order ERP PO Proxy: Make sure you have an integration flow named Change Order ERP PO Proxy. It should be not only created but also active and running. This integration flow plays a pivotal role in facilitating seamless communication between your process application and the ERP system.
 
-2.	VBCS application called *LOCAppTestOPA* and should be active and running.
+2.	VBCS application *LOCAppTestOPA* should be **Imported** in VBCS
 
-The main page for Process Designer appears, listing any existing process applications.
+Navigate to the Process Designer before you get started.
 
 ## Task 1: Create a Process Application in Designer
 
@@ -112,15 +124,13 @@ Let’s create the two roles.
 -	Select the user. The user gets listed on the page.
 
 6.	In the **Application Permission Level** options, leave *Use* selected.
-
-    ![Create Roles](images/create-roles.png)
-
+![Create Roles](images/create-roles.png)
 This allows your user to start an application request in Workspace.
 
 7.	Repeat steps 1 - 4 to create the second role, only this time enter its name as *Process Approver* in the **Title** field
 
 8.	Repeat step 5 to assign a user for the **Process Approver** role.
-		In a real life scenario, multiple users are selected to complete different tasks in an application. But to keep this example simple, we’ll use the same user.
+In a real life scenario, multiple users are selected to complete different tasks in an application. But to keep this example simple, we’ll use the same user.
 
 9.	In the **Application Permission Level** options, leave *Use* selected. This allows your user to update (in this case, Approve or Reject) a task in Workspace.
 
@@ -141,7 +151,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 2.	In the **Add component pane**, expand *Connectors*, and click *REST API*.
 
 3. Enter the name as *LOCAppConnector* and Base URL as *You should have copied the URL from the Lab2 > Task 6 > Step 6* and remove */PO* from the URL  and click on *Create*.
-> **Note:**Here is the Sample URL https://oic-vbcs-host/ic/builder/design/LOCAppTestOPA/1.0/resources/data
+> **Note:**Here is the Sample URL https://&lt;oic-vbcs-host&gt;/ic/builder/design/LOCAppTestOPA/1.0/resources/data
 
 4. Click the *Open now* link OR click on the connector to open it.
 5. Click on *+* icon to add a new resource.
@@ -154,7 +164,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 		will configure Request and Response message
 
 9. Click on the *Response* (there is nothing to add to the request, as we have no
-    parameters to pass). In the **Body Definition** section, Click the *JSON Sample* sign to define the response.
+    parameters to pass). In the **Body Definition** section, Click the *+ JSON Sample*sign to define the response.
     Select *From Sample*, Enter Type Name as *POResponseType* and and copy paste the below json in the Sample section. Please remove the existing content if any.
 
     ```
@@ -186,9 +196,7 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 
 13. Select the operation created which will transition to the operation specific configuration. You
     		will configure all the parameters.
-14. Enter the name as **getPOById** and enter *{PO_ID}* under Path,
-    Click on the *Response*. In the **Body Definition** section, Click the *JSON Sample* sign to define the response.
-    Select *From Sample*, Enter Type Name as *POType* and and copy paste the below json in the Sample section. Please remove the existing content if any.
+14. Enter the name as **getPOById** and enter *{PO_ID}* under Path, Click on the *Response*. In the **Body Definition** section, Click the *JSON Sample* sign to define the response. Select *From Sample*, Enter Type Name as *POType* and and copy paste the below json in the Sample section. Please remove the existing content if any.
 
     ```
     <copy>{
@@ -302,20 +310,20 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 8. Drag-and-Drop *Divider* component which is available under Advanced section from the right palette
 9. Click on *Load more..* on the components palette, can find it on right bottom of the page under components palette.
 10. Drag-and-Drop *POType* component after the *Divider*. If you don't find, search for *POType*
-11. select **POType** on the designer and change the label to **PO Header Details** in the properties palette. Check *Hide* option
-   ![WebFormPOType](images/webformpotype.png)
+11. Select **POType** on the designer and change the label to **PO Header Details** in the properties palette. Check *Hide* option
+   ![WebForm POType](images/webformpotype.png)
 12. Put all the elements in the order given below as per the screenshot if possible. OR Put two elements per row so that you will have a better view.
-   ![POHeaderElements](images/poheaderelements.png)
-13. Select an element **id** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
-   ![idReadOnly](images/idreadOnly.png)
+   ![POHeader Elements](images/poheaderelements.png)
+13. Select the **id** text field under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
+   ![ID ReadOnly](images/idreadOnly.png)
 14. Remove **LOCId** from the *PO Header Details* section.
-15. Drag-and-Drop *Select* from the components palette and change the name to **locId**, label as **Letter of credit Id**
+15. Drag-and-Drop *Select* component from the components palette and change the name to **locId**, label as **Letter of credit Id**
 
 > **Note:** Steps 16 is not required if *locId* element is created in the *Data* section already.
 
 16. Click on **Add** in the *Data* section, enter name as **locId** and click on **Create**
    ![locIdDataElement](images/lociddataelement.png)
-17. Select an element **Letter of credit Id**, go to Properties, enter or select binding as **locId**
+17. Select the field **Letter of credit Id**, go to Properties, enter or select binding as **locId**
 18. Scroll down further for the same element, remove the default values and enter the below values.
 
 | Option Names | Option Values |
@@ -325,9 +333,9 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 | Brain Trust Capital | 3 |
 | Awesome Banking | 4 |
 {: title="LOC Ids"}
-19. Select an element **orderNumber** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
+19. Select the field **orderNumber** under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
 
-20. Select each and every element except *Letter of credit Id* and mark it as **Read Only** under the *PO Header Details* section
+20. Mark all the fields under the **PO Header Details** section as **Read Only** excepting to  *Letter of credit Id* field.
 
 ## Task 8: Add dynamic controls to fields via Events
 
@@ -338,7 +346,7 @@ For example, you can introduce the following behaviours into your forms:
 -	Populate data in a control field based on another control field in the form. For example, a *Select Order Number*  field will impact the *PO Header Details* section.
 -	Make a REST call on demand, store the call’s response, and use response data in an event action or condition.
 
-1. Select an element *SelectOrderNumber*, go to Properties section and scroll down until you see the *Events* section. Click on **Add**
+1. Select the field *SelectOrderNumber*, go to Properties section and scroll down until you see the *Events* section. Click on **Add**
    ![selectOrderEvent](images/selectorderevent.png)
 2. Enter **OnChange** as an event Name and select **OnChange** as an event.
    ![selectOrderOnChangeEvent](images/selectOrderonchangeevent.png)
@@ -368,7 +376,7 @@ For example, you can introduce the following behaviours into your forms:
 8. Again, Click on **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
    ![showpotype object](images/showpotype.png)
-10. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the form and make sure that all the actions are stored.
+10. Select the **Attach LOC Application 1.0** application to go back to the process application and again open the form and make sure that all the actions are stored.
 
 ## Task 9: Create a Structured Process
 
@@ -383,11 +391,9 @@ For example, you can introduce the following behaviours into your forms:
 
 5.	Click *Create*. A confirmation message shows that the process was created.
 
-Notice how the process is listed on the page and the Processes tab shows 1.
-
 6.	Select the process to open it.
 
-The structured process editor opens. Start and end elements are already positioned on the flow for you. There are two swimlanes and the BPMN elements palette is on the right side.
+The structured process editor opens. **Start** and **end** elements are already positioned on the flow for you. There are two swimlanes and the BPMN elements palette is on the right side.
 
 7. Select the *Start* element activity and rename it to **Update PO**
 
