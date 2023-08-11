@@ -447,7 +447,7 @@ The structured process editor opens. **Start** and **end** elements are already 
 | Select Participants| Current Lane Participants |
 | Title | Approve Change Order Request |
 | UI | AttachLOCForm |
-| Presentation |  AttachLOCForm  |
+| Presentation |  ApproverLOCForm  |
 | Action | APPROVE,REJECT |
 | Priority | Normal |
 {: title="Approve Change Order Task Properties"}
