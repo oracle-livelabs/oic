@@ -350,19 +350,26 @@ For example, you can introduce the following behaviours into your forms:
 ## Task 9: Create Presentations to the forms
 We can now have the same form appearing differently to a different role which is convenient when some particular users do not need to see the form in the same way as others. In our case, we will create a **ApproverLOCForm** presentation that will show fewer fields, and it will be used for Manager approval task.
 
-1.	Navigate to **AttachLOCForm**
+1. Navigate to **AttachLOCForm**
 
-2.	From the main form properties pane, scroll down to **Presentation** section and add a presentation by clicking on *Add*.
+2. From the main form properties pane, scroll down to **Presentation** section and add a presentation by clicking on *Add*.
 
-3.	In the **Select Presentation Type** select *Clone* and click on *Select*
-	![Select Presentation Type](images/select-presentation-type-1.png)
+3. In the **Select Presentation Type** select *Customize* and click on *Select*
+	 ![Select Presentation Type](images/select-presentation-type-1.png)
 
-4.	Give it a name such as *ApproverLOCForm* and a description. Click *Create*
-	![Approvers View](images/approvers-view.png)
+4. Give it a name such as *ApproverLOCForm* and a description. Click *Create*
+	 ![Approvers View](images/approvers-view.png)
 
-5.	Make this presentation more synthetic by hiding *Select Order Number* field
-	![Approvers view Order Number](images/approvers-view-ordernumber.png)
-6. When you preview the form, it should look more or less like this (no obligation , you can do what you want):
+5. Click on *Customize*
+	 ![Customize Form](images/customize-form.png)
+6. Click on **hide** for *Select Order Number* and for *Divider* and click on **hidden** for *PO Header Details*
+	 ![hide fields](images/hide-fields.png)
+7. You should see the resultant screen as per the screenshot given below.
+	 ![hide fields1](images/hide-fields1.png)
+8. Select **PO Header Details** from the left side, click on **hide** and click on **mark readonly** for *Letter of credit id*
+	 ![hide fields2](images/hide-fields2.png)
+
+9. When you preview the form, it should look more or less like this (no obligation , you can do what you want):
 	![Approvers view Preview](images/approvers-view-preview.png)
 
 
