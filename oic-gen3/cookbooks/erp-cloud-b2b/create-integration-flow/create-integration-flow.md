@@ -524,7 +524,7 @@ Add ERP PO Event trigger to the empty integration canvas.
     | Source | Target |
     | --- | --- |
     | "/upload/users/B2BTPDELLOut" | Component Schema Request Wrapper > Directory |
-    | Order.edi | Component Schema Request Wrapper > Filename |
+    | "Order.edi" | Component Schema Request Wrapper > Filename |
     | B2B Message Reference | Component Schema Request Wrapper > Messages > B2B Message Reference |
     | Trading Partner Name | Component Schema Request Wrapper > Trading Parnter |
     | Connectivity Properties Code | Connectivity Properties > Localintegration > code |
