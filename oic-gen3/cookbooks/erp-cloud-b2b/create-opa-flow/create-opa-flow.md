@@ -222,48 +222,17 @@ Now that we have created the two roles - User and Approver, let’s create a pro
     Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
       ![resource-PO](images/resource-po.png)
 
-17. Click on *+* icon to add a new resource.
+### Configure Security Type
 
-18. Enter *LOCS* as a name and enter *LOC* under resource Path
-19. Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a *GET*
-20.	Select the operation created which will transition to the operation specific configuration. You
-        		will configure Request and Response message
+1.	In the extreme Right pane select *Security*
+		![Connector Security](images/connector-security.png)
 
-21. Enter the name as **getLOCS** and Click on the *Response*. In the **Body Definition** section, Click the *JSON Sample* sign to define the response.
-            Select *From Sample*, Enter Type Name as *LOCSType* and and copy paste the below json in the Sample section. Please remove the existing content if any.
+2.	Select *Edit* next to **No Security Defined**
 
-    ```
-    <copy>{
-    "items": [{
-        "lastUpdatedBy": "john.doe@example.com",
-        "lOCType": "Type1",
-        "lOCBank": "ABC Bank",
-        "lOCAmount": 10000,
-        "createdBy": "john.doe@example.com",
-        "lOCOpeningDate": "2019-01-01",
-        "lastUpdateDate": "2022-04-29T08:26:12+00:00",
-        "lOCExpiry": "2023-02-01",
-        "id": 1,
-        "creationDate": "2019-01-12T11:55:39+00:00",
-        "lOCStatus": "Active"
-    }, {
-        "lastUpdatedBy": "john.doe@example.com",
-        "lOCType": "Type2",
-        "lOCBank": "XYZ Bank",
-        "lOCAmount": 20000,
-        "createdBy": "john.doe@example.com",
-        "lOCOpeningDate": "2019-01-01",
-        "lastUpdateDate": "2022-01-19T19:54:18+00:00",
-        "lOCExpiry": "2023-01-01",
-        "id": 2,
-        "creationDate": "2019-01-12T11:55:39+00:00",
-        "lOCStatus": "Active"
-    }]
-    }</copy>
-    ```
-22. Select *Next*. A JSON Schema is created based on the structure provided. Finally, Click *Create*
-23.	In the Response Body Definition select Business Type as **LOCSType** which was created in the previous step
-        		Select *Apply*. Your **GET** operation is now configured to get POs from an external REST API
+3.	Select Security Type as **Basic Auth**. Provide Username as **your oic username** and Password as **your oic password**
+		![Connector BA](images/connector-security-ba.png)
+
+4.	Click on *Save*
 
 
 ## Task 6: Create a web form
@@ -378,7 +347,26 @@ For example, you can introduce the following behaviours into your forms:
    ![showpotype object](images/showpotype.png)
 10. Select the **Attach LOC Application 1.0** application to go back to the process application and again open the form and make sure that all the actions are stored.
 
-## Task 9: Create a Structured Process
+## Task 9: Create Presentations to the forms
+We can now have the same form appearing differently to a different role which is convenient when some particular users do not need to see the form in the same way as others. In our case, we will create a **ApproverLOCForm** presentation that will show fewer fields, and it will be used for Manager approval task.
+
+1.	Navigate to **AttachLOCForm**
+
+2.	From the main form properties pane, scroll down to **Presentation** section and add a presentation by clicking on *Add*.
+
+3.	In the **Select Presentation Type** select *Clone* and click on *Select*
+	![Select Presentation Type](images/select-presentation-type-1.png)
+
+4.	Give it a name such as *ApproverLOCForm* and a description. Click *Create*
+	![Approvers View](images/approvers-view.png)
+
+5.	Make this presentation more synthetic by hiding *Select Order Number* field
+	![Approvers view Order Number](images/approvers-view-ordernumber.png)
+6. When you preview the form, it should look more or less like this (no obligation , you can do what you want):
+	![Approvers view Preview](images/approvers-view-preview.png)
+
+
+## Task 10: Create a Structured Process
 
 1.	Click the **Attach LOC Application 1.0** breadcrumb to go to your application’s main page.
 
@@ -434,7 +422,7 @@ The structured process editor opens. **Start** and **end** elements are already 
 
 25. Please click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 
-## Task 10: Implement the process
+## Task 11: Implement the process
 1. Navigate to **Initiate PO LOC Update Process**
 
 2. Select *Update PO*. Click on the *Hamburger* icon and Select *Open Properties*
@@ -485,7 +473,7 @@ Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditiona
    ![invoke change order impl](images/invoke-change-order-impl.png)
 9. Click on **Attach LOC Application 1.0** to go back to the process application and again open the process and make sure that all the activities are stored.
 
-## Task 11: Configure Data Association
+## Task 12: Configure Data Association
 
 Data association refers to the flow of data within a process. Use the Data Association editor to define input and output for flow elements that need them.
 
@@ -527,7 +515,7 @@ The left pane displays source objects (Data Objects) in an expandable tree. The 
   ![Invoke Change Order Data mapping1](images/invoke-co-data-mapping1.png)
 18. Click on *Apply*
 
-## Task 12: Activate a Version of the Application
+## Task 13: Activate a Version of the Application
 Activating an application moves its metadata from design time (Designer) to runtime (Workspace), where it can be run in production capacity.
 
 Before you activate, note the following about Snapshots and Versions:
@@ -549,7 +537,7 @@ So far your implementation artifacts should be per below
 		![Activate Artifacts Success Milestone-1](images/activate-artifacts-success-milestone-1.png)
 4.	Click *Test in Workspace*.
 
-## Task 13:	Test and Run the Application in Workspace
+## Task 14:	Test and Run the Application in Workspace
 
 Use the Workspace environment to run, test, monitor, troubleshoot, or administer process applications. The options you see depend on your assigned role.
 
