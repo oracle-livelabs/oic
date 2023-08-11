@@ -4,6 +4,9 @@
 
 This tutorial introduces Oracle Integration Cloud (OIC) capabilities through a step-by-step scenario. When a user creates a Purchase Order (PO) in ERP Cloud, a real-time PO event is generated. Oracle Integration captures this event and transforms the relevant data, pushing it to a custom table in Visual Builder Cloud Service (VBCS). The B2B component within Oracle Integration translates the PO payload into an EDI 850 document using the X12 Business Protocol, which is then delivered to a Trading Partner via FTP based on the Trading Partner agreement. Additionally, an approval workflow is initiated by an ERP Process user who selects the order and attaches Letter of Credit (LOC) information via a web form. Once approved, the PO record in ERP Cloud is updated with the LOC details for cross-referencing. Furthermore, OIC facilitates seamless interaction: Oracle Digital Assistant (ODA) initiates a conversation, requesting an Order Number, then connects with Integration to retrieve Order details and presents them to the user.
 
+Here is the high level architecture reference of the tutorial
+![Usecase-Architecture](images/architecture.png)
+
 Estimated Workshop Time: 3 hours 20 minutes
 
 [Introduction to Live Lab Usecase](youtube:yW3TEBWkFbg)
