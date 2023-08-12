@@ -441,9 +441,24 @@ In this section we will just test the happy path scenario of the conversation di
 
     ![conversationend-part2](images/conversationend-part2.png)
 
-By completing this, you have effectively concluded the lab. We hope this has proven to be beneficial.
+**Congratulations** on successfully completing the Oracle Digital Assistant (ODA) tutorial, where we explored its impact on Purchase Order (PO) management. Let's summarize the key takeaways:
 
-You may now **proceed to the next lab**.
+1. **Effortless Conversations:** Through ODA integration, you've enabled intuitive interactions. Users can effortlessly engage in natural language conversations to inquire about PO details and statuses.
+
+2. **Enhanced User Engagement:** ODA has elevated user engagement by simplifying access to critical information, making the user experience more streamlined and engaging.
+
+3. **Real-Time Insights:** ODA offers instant access to real-time PO updates, aiding data-driven decisions and timely actions.
+
+4. **User-Centric Design:** The integration enhances user experience by allowing users to bypass complex navigation and interact naturally with the application.
+
+5. **Unified Workflow:** Your integrated solution seamlessly combines initiating change orders, querying details, and monitoring progress in one unified application.
+
+6. **Future Potential:** This tutorial offers a glimpse of ODA's potential; there are numerous opportunities for its integration into various business processes.
+
+As you move forward, the insights gained here will empower you to optimize PO management. Oracle Digital Assistant's capabilities have the potential to reshape how your organization interacts with applications and processes. By implementing these features effectively, you can drive efficiency and informed decision-making. Thank you for joining us on this journey. The possibilities are vast; embrace ODA's capabilities to propel your organization toward a future marked by enhanced productivity and meaningful interactions.
+
+## Learn More
+* [Learn Oracle Digital Assistant]https://docs.oracle.com/en-us/iaas/digital-assistant/index.html
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer

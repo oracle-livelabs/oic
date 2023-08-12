@@ -598,6 +598,21 @@ Now put yourself in the role of an approver - in this case, an *Process Approver
 A message confirms that the task was approved or rejected. The approval human task is complete.
 You return to the My Tasks page. The task you just completed is no longer listed.
 
+**Conclusion: Transforming Purchase Order Management with Oracle Process Automation**
+
+**Congratulations!** You've successfully journeyed through the intricacies of Oracle Process Automation (OPA) and its application within the context of our dynamic Purchase Order (PO) change order use case. As we conclude this tutorial, let's reflect on the transformative power of OPA and the strides you've taken in streamlining, automating, and enhancing your PO management processes.
+
+Through this tutorial, you've achieved several significant milestones:
+
+1. **Efficient Workflow Creation:** You've learned how to architect and create an intelligent workflow for handling PO change orders. Your understanding of processes, approvals, and seamless data integration has laid the foundation for efficient business operations.
+
+2. **User-Friendly Web Forms:** With your newfound expertise in designing web forms and incorporating dynamic controls, you've empowered users to submit change orders effortlessly and attach crucial Letter of Credit (LOC) information, promoting accurate data collection.
+
+3. **Seamless Integration:** The creation of connectors has bridged the gap between your application and external REST services, facilitating smooth data exchange and expanding the scope of your PO management ecosystem.
+
+Remember, this tutorial only scratches the surface of what Oracle Process Automation has to offer. Explore further, experiment with more complex scenarios, and leverage the full spectrum of OPA capabilities to address diverse business challenges.
+
+Thank you for embarking on this enlightening journey with us. You are now poised to embrace the future of process automation, armed with the tools to optimize, innovate, and excel in the ever-evolving realm of business operations.
 
 You may now **proceed to the next lab**.
 
@@ -611,4 +626,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Contributors** - Subhani Italapuram (Oracle Integration, Product Management)
 * **Last Updated By/Date** - Kishore Katta, August 2022

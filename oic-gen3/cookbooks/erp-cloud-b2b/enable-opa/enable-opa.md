@@ -103,6 +103,8 @@ The available IDCS application roles are displayed.
 
 **Congratulations!** You have successfully enabled OPA in Oracle Integration and able to access the designer console.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [Enable OPA in Oracle Integration](https://docs.oracle.com/en/cloud/paas/process-automation/admin-process-automation/enable-process-automation-oracle-integration-3.html)

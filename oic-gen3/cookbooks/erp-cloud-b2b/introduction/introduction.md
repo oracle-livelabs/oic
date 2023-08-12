@@ -32,6 +32,8 @@ This lab assumes you have the following:
 * Oracle Cloud Account with credits to provision services.
 * Oracle ERP Cloud access
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [Oracle Integration Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
