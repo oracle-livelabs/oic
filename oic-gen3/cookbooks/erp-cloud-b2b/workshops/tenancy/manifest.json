@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Oracle Integration 3 - ERP Cloud B2B Integration with Trading Partners",
+    "workshoptitle": "Oracle Integration 3 - Automate ERP Cloud and B2B Integration with Trading Partners",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
@@ -19,15 +19,15 @@
         },
         {
             "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
+            "filename": "../../../../common/provision-oic/provision.md"
         },
         {
-            "title": "Lab 2: Enable and Configure File Server",
-            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+            "title": "Lab 2: Enable File Server and setup connections",
+            "filename": "../../connection-setup-fileserver/connection-setup-fileserver.md"
         },
         {
             "title": "Lab 3: Enable Oracle Process Automaton (OPA)",
-            "filename": "../../../../opa-for-fusionApps/common/provision-opa/provision.md"
+            "filename": "../../enable-opa/enable-opa.md"
         },
         {
             "title": "Lab 4: Create OIC Integration Flow",
