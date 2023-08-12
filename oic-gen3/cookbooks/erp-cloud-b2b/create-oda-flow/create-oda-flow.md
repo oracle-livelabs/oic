@@ -458,7 +458,7 @@ In this section we will just test the happy path scenario of the conversation di
 As you move forward, the insights gained here will empower you to optimize PO management. Oracle Digital Assistant's capabilities have the potential to reshape how your organization interacts with applications and processes. By implementing these features effectively, you can drive efficiency and informed decision-making. Thank you for joining us on this journey. The possibilities are vast; embrace ODA's capabilities to propel your organization toward a future marked by enhanced productivity and meaningful interactions.
 
 ## Learn More
-* [Learn Oracle Digital Assistant]https://docs.oracle.com/en-us/iaas/digital-assistant/index.html
+* [Learn Oracle Digital Assistant](https://docs.oracle.com/en-us/iaas/digital-assistant/index.html)
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer
