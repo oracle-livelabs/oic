@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to create an integration flow which subscribes to a ERP Cloud Purchase Order(PO) business event. The payload of the purchase order is translated to EDI X12 850 document and will be sent over to a Trading Partner. You will also create extended logic to synchronize the PO to a Visual Builder application.
 
-Estimated Time: 45 minutes
+Estimated Time: 60 minutes
 
 ### Objectives
 

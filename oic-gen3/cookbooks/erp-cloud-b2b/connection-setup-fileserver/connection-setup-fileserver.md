@@ -4,7 +4,7 @@
 
 This lab walks you through the process of enabling the Oracle Integration 3 File Server. By default, the File Server is not enabled, but is required for this workshop. Also, you will be setting up required connections for designing your integration flow in the later lab exercises.
 
-Estimated Time: 5 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
