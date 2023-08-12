@@ -50,7 +50,7 @@ Similar to Oracle Integration B2B, your external trading partner will have a B2B
 
 Once the setup is completed on both the ends (and tested), then the two parties - your company and the external trading partner, are ready to send and receive documents.
 
-![Trading Partners](./images/gettingStarted-TradingPartners.png)
+![Trading Partners](images/gettingstarted-tradingpartners.png)
 
 *VAN Providers*
 
@@ -66,7 +66,7 @@ Let us walk through a typical B2B message received from an external trading part
 
 The picture below shows how an Inbound message is processed through two integrations.
 
-![B2B Inbound message Integration pattern](./images/gettingStarted-InboundProcessing.png)
+![B2B Inbound message Integration pattern](images/gettingstarted-inboundprocessing.png)
 
 In the two-integration flow patterns, the **B2B Integration for Receiving Messages** performs these steps:
 
@@ -86,7 +86,7 @@ The **Backend Integration** performs these steps:
 Let us walk through a typical B2B message being sent to an external trading partner, called an Outbound Message.
 
 The picture below shows how an Outbound message is processed through two integrations.
-![B2B Outbound message Integration pattern](./images/gettingStarted-OutboundProcessing.png)
+![B2B Outbound message Integration pattern](images/gettingstarted-outboundprocessing.png)
 
 In the two-integration flow patterns, the **Backend Integration** performs these steps:
 
@@ -107,7 +107,7 @@ Currently, AS2 and FTP (includes SFTP) are supported protocols for B2B Trading P
 
 You define a Transport for a B2B trading partner from the **Trading Partner** **Transports and Agreements** configuration. Here's a sample screenshot for a trading partner with one AS2 and one FTP transport.
 
-![Trading Partner Transport configuration](./images/gettingStarted-TransportsOfComm.png)
+![Trading Partner Transport configuration](images/gettingstarted-transportsofcomm.png)
 
 **FTP**
 
@@ -145,9 +145,9 @@ An Agreement has the following purposes:
 4. Define rules for routing of documents - for example, when receiving documents, an Inbound Agreement defines which Backend Integration to route a document to, based on its type. While sending documents, an Outbound Agreement defines which B2B Sending Integration to hand-over a specific document to for delivery to a trading partner.
 
 Below are example screenshots of two Inbound and two Outbound Agreements defined for a trading partner:
-![Example B2B Inbound Agreement](./images/gettingStarted-InboundAgreement.png)
+![Example B2B Inbound Agreement](images/gettingstarted-inboundagreement.png)
 
-![Example B2B Outbound Agreement](./images/gettingStarted-OutboundAgreement.png)
+![Example B2B Outbound Agreement](images/gettingstarted-outboundagreement.png)
 
 *B2B Documents and Schemas*
 
@@ -171,7 +171,7 @@ As messages flow through the B2B Integrations for Receiving and Sending, each In
 The persisted B2B messages can be accessed from the **Home** page and clicking *Monitoring*, then *B2B Tracking*.
 
 The sample screenshot below shows the B2B Tracking page.
-![B2B Tracking](./images/gettingStarted-TrackMessages.png)
+![B2B Tracking](images/gettingstarted-trackmessages.png)
 
 **Business Messages**
 
@@ -185,7 +185,7 @@ An alternate low-level technical view of B2B messages is the Wire Messages. In t
 
 In the case where you receive an inbound message containing batched transaction, in this view, you will only see one row corresponding to the actual batch message that was received.
 
-![B2B Messages](./images/gettingStarted-WireMessages.png)
+![B2B Messages](images/getting-started-wiremessages.png)
 
 *Demystify the Concepts*
 
@@ -193,7 +193,7 @@ In the case where you receive an inbound message containing batched transaction,
 
 ACME Corp sends an X12 850 Purchase Order EDI document to Trading Partner Dell Inc through, by using FTP. ACME Corp had configured Oracle Integration B2B message exchange agreement to send Purchase Order EDI document to External Trading Partner.
 
-![B2B Outbound Purchase Order Use Case](./images/demystifying-concepts.png)
+![B2B Outbound Purchase Order Use Case](images/demystifying-concepts.png)
 
 * Acme Corp (Manufacturer of goods) an Oracle Integration Customer is the Host company.
 * Dell Inc (Supplier of goods) is the Trading Partner.
@@ -202,7 +202,7 @@ ACME Corp sends an X12 850 Purchase Order EDI document to Trading Partner Dell I
 * Acme Corp Sends the Purchase Order and Receives an 997 Acknowledgement from Trading Partner which is the Agreement configured for Outbound processing.
 
 **Relationship between Trading Partner and Agreements**
-![Trade Partner Agreements FLow](./images/relationshipTP-Agreements.png)
+![Trade Partner Agreements FLow](images/relationshiptp-agreements.png)
 
 ##  Task 2: Create a new B2B Schema and Document
 
@@ -223,8 +223,8 @@ You can create a new B2B Schema based on a standard Document type.
 | Document Type     | 850 (Purchase Order)                                  |
 
 5. Click *Create*, then *Save*, then exit the PurchaseOrderSchema page.  
-![Create New B2B Schema](images/poSchema4010-1.png)
-![Purchase Order Schema](images/poSchema-Structure-1.png)
+![Create New B2B Schema](images/poschema4010-1.png)
+![Purchase Order Schema](images/poschema-structure-1.png)
 
 The following diagram shows a schematic structure of X12 envelopes.
 ![X12 Envelope](images/x12_env_structure-1.png)
@@ -248,9 +248,9 @@ You can create a new B2B Document based on a standard document type.
 | Document Type     | 850 (Purchase Order)      |
 
 4. Click *Create*.  
-![Create New B2B Document](images/poDocument4010-1.png)
+![Create New B2B Document](images/podocument4010-1.png)
 5. The Document page for your new B2B Document is displayed. The **Document Schema** field is set to **Standard** by default. Change the **Document Schema** to *PurchaseOrderSchema* which you created in the last task.  
-![Select a custom Schema](images/poDocument4010-Customize-1.png)
+![Select a custom Schema](images/podocument4010-customize-1.png)
 6. Click *Save* and exit the PurchaseOrder4010Document page.
 
 ##  Task 3: Configure the Host Profile
@@ -332,7 +332,7 @@ Understand the Identifiers that we will use.
 | Application Partner ID       | Dell Inc. |
 
 4. Click *Save* after every addition.  
-![B2B Identifiers](images/tpm-tp-B2BIdentifiers-1.png)
+![B2B Identifiers](images/tpm-tp-b2bIdentifiers-1.png)
 
 *Define Transports*
 
@@ -394,7 +394,7 @@ This section describes creating and managing Agreements. You define one or more 
 | Configure Agreement Settings       | Uncheck Enable Validations    |
 | Configure Agreement Settings       | Uncheck Functional Ack Required |
 
-![Outbound Agreement](images/tpm-tp-Agreement-Out-1.png)
+![Outbound Agreement](images/tpm-tp-agreement-out-1.png)
 
 4.  Click the *Action* menu on the **OutAgreement** Outbound Agreement to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment. Exit the Dell Inc Trading Partner page.
 
