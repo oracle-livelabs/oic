@@ -306,18 +306,17 @@ button, make sure to check the box "**Open created flow afterwards**".
   ![add-switch-component](images/add-switch-component.png)
 
 27. Select the **determineIfValuePresent** In the **Component** tab under the **Expression** editor add the below free marker expression.
-
 ```
 <copy>
 ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('success','failure')}
 </copy>
-```            
-![free-marker-expression](images/free-marker-expression.png)
+```
+            
+  ![free-marker-expression](images/free-marker-expression.png)
 
 28. Go to the **Transition** tab , under the **Next Transition** section select the **Add State** from the dropdown.
 
  ![next-transition](images/next-transition.png)
-
 
 29. when the **Add State** opens up, select the **Send Message** template and name it as **outputFailure** and hit the **Insert** button.
 
