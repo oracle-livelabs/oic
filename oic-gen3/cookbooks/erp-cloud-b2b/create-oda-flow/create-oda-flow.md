@@ -58,26 +58,30 @@ you have successfully created a skill now you can proceed to the next task
 
 2. Select and copy all of the example sentences below to your clipboard:
 
-- Hello there! How's it going?
-- Hey! Can you help?
-- Hi there! New user here.
-- Hello! What's your function?
-- Hi there! I'm lost.
-- Hey, any guidance available?
-- Hello! Need assistance please.
-- Hi there! What's possible here?
-- Hey! How does this work?
-- Hi there! Who are you?
-- Hello! Where do I start?
-- Hi there! What can I do?
-- Hey! I'm a bit confused.
-- Hello! Can you explain?
-- Hi there! Any tips?
-- Hi
-- Hello
-- Hello good morning!
-- Hello there, how are you?
-- Hi, how are you?
+```
+<copy>
+Hello there! How's it going?
+Hey! Can you help?
+Hi there! New user here.
+Hello! What's your function?
+Hi there! I'm lost.
+Hey, any guidance available?
+Hello! Need assistance please.
+Hi there! What's possible here?
+Hey! How does this work?
+Hi there! Who are you?
+Hello! Where do I start?
+Hi there! What can I do?
+Hey! I'm a bit confused.
+Hello! Can you explain?
+Hi there! Any tips?
+Hi
+Hello
+Hello good morning!
+Hello there, how are you?
+Hi, how are you?
+</copy>
+```
 
 3. Add them to the Utterences to Add section, click on the Advanced input mode and paste all the above sentences here.
      ![adding-utterences](images/add-utterences.png)
@@ -87,14 +91,18 @@ you have successfully created a skill now you can proceed to the next task
 
 5. Repeat the above steps for another Intent by naming the intent as  **Purchase Order** and add the below list of utterences to that particular intent and click on the **Create** button as shown below:
 
-- how to know the status of my purchase order
-- I would like to know the status of my order
-- Order Status
-- please help me know the status of my purchase order
-- status of my order
-- status of my purchase
-- what is the status of my order
-- what is the status of my purchase order
+```
+<copy>
+how to know the status of my purchase order
+I would like to know the status of my order
+Order Status
+please help me know the status of my purchase order
+status of my order
+status of my purchase
+what is the status of my order
+what is the status of my purchase order
+</copy>
+```
 
        ![purchase-order-intent](images/purchase-order-intent.png)
 
@@ -135,11 +143,11 @@ We will create Two conversation dialogues.
 
 6. Then a side window opens up with the properties of the template to fill, under the **Component** tab , Please add the below text:
 
-        ```
-          <copy>
-           Hello ${profile.firstName}, Welcome to the Purchase Order Assistant! How can I assist you today?   
-         </copy>
-       ```
+```
+<copy>
+Hello ${profile.firstName}, Welcome to the Purchase Order Assistant! How can I assist you today?   
+</copy>
+```
 
 
 **Create the Purchase Order conversation dialogue flow:**
@@ -323,17 +331,21 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 32. In the **apiResponse** pane, under the **Component** tab , copy the below message and paste it.
 
-            The Status is "${PurchaseOrderDetails.value.responsePayload.status}"
+```
+<copy>
+The Status is "${PurchaseOrderDetails.value.responsePayload.status}"
 
-            Please find the Order details below:
+Please find the Order details below:
 
-            Order Number:  "${PurchaseOrderDetails.value.responsePayload.ordernumber}"
-            Description:   "${PurchaseOrderDetails.value.responsePayload.description}"
-            Supplier:   "${PurchaseOrderDetails.value.responsePayload.supplier}"
-            Creation Date:   "${PurchaseOrderDetails.value.responsePayload.creationDate}"
-            Total Amount :   "${PurchaseOrderDetails.value.responsePayload.totalAmount}"
-            Sold to Legal Entity:   "${PurchaseOrderDetails.value.responsePayload.sold_to_legal_entity}"
-            Letter of Credit Id:   "${PurchaseOrderDetails.value.responsePayload.locId}"
+Order Number:  "${PurchaseOrderDetails.value.responsePayload.ordernumber}"
+Description:   "${PurchaseOrderDetails.value.responsePayload.description}"
+Supplier:   "${PurchaseOrderDetails.value.responsePayload.supplier}"
+Creation Date:   "${PurchaseOrderDetails.value.responsePayload.creationDate}"
+Total Amount :   "${PurchaseOrderDetails.value.responsePayload.totalAmount}"
+Sold to Legal Entity:   "${PurchaseOrderDetails.value.responsePayload.sold_to_legal_entity}"
+Letter of Credit Id:   "${PurchaseOrderDetails.value.responsePayload.locId}"
+</copy>
+```
 
 33. After this, click on the **Transitions** tab , under the **Next Transition** , click on **add state** and navigate towards the **resetVariables** template, name it as **resetVariables** and hit then **Insert** button.
 
