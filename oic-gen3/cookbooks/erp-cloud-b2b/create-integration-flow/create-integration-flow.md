@@ -228,7 +228,7 @@ You can create a new B2B Schema based on a standard Document type.
 ![Purchase Order Schema](images/poschema-structure-1.png)
 
 The following diagram shows a schematic structure of X12 envelopes.
-![X12 Envelope](images/x12_env_structure-1.png)
+![X12 Envelope](images/x12-env-structure-1.png)
 
 Refer to the [EDI X12 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/edi-x12.html) to understand more details about the X12 structure.
 
