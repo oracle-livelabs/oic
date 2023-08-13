@@ -104,7 +104,7 @@ what is the status of my purchase order
 </copy>
 ```
 
-       ![purchase-order-intent](images/purchase-order-intent.png)
+![purchase-order-intent](images/purchase-order-intent.png)
 
 6. Train your Intents , by clicking on the **Train** on the right side of the page, click **Train Tm** and Submit. wait  for the training to complete, this may take few minutes.
 
@@ -307,7 +307,11 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 27. Select the **determineIfValuePresent** In the **Component** tab under the **Expression** editor add the below free marker expression.
 
-             ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('success','failure')}            
+```
+<copy>
+${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('success','failure')}
+</copy>
+```            
 
     ![free-marker-expression](images/free-marker-expression.png)
 
@@ -392,7 +396,11 @@ The above code is a **YAML** code make sure the indentation matches with the scr
 
 37. under the **Action** section, add **Action Name** as **No** and in the **Transition To** select **add state** and select the **Send Message** template and name it as **ThankYouMessage**. Go to the **Component** tab is opened copy the below message and paste it in the editor.
 
-          Thank you for your time. It was a pleasure to assist you. Please feel free to reach out any time you need more assistance with your Purchase Order, until then, Goodbye and takecare!
+```
+<copy>
+Thank you for your time. It was a pleasure to assist you. Please feel free to reach out any time you need more assistance with your Purchase Order, until then, Goodbye and takecare!
+</copy>
+```
 
   ![askanotherordernumber-noaction](images/askanotherordernumber-noaction.png)
 
