@@ -312,8 +312,7 @@ button, make sure to check the box "**Open created flow afterwards**".
 ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('success','failure')}
 </copy>
 ```            
-
-    ![free-marker-expression](images/free-marker-expression.png)
+![free-marker-expression](images/free-marker-expression.png)
 
 28. Go to the **Transition** tab , under the **Next Transition** section select the **Add State** from the dropdown.
 
