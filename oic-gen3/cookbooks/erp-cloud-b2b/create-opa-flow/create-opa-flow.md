@@ -1,4 +1,4 @@
-# Create OPA Flow
+# Create OPA Process Application
 
 ## Introduction
 
@@ -284,14 +284,14 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 12. Put all the elements in the order given below as per the screenshot if possible. OR Put two elements per row so that you will have a better view.
    ![POHeader Elements](images/poheaderelements.png)
 13. Select the **id** text field under *PO Header Details* section, scroll down in the Properties palette, check **Read Only** option
-   ![ID ReadOnly](images/idreadOnly.png)
+   ![ID Read Only](images/idreadonly.png)
 14. Remove **LOCId** from the *PO Header Details* section.
 15. Drag-and-Drop *Select* component from the components palette and change the name to **locId**, label as **Letter of credit Id**
 
 > **Note:** Steps 16 is not required if *locId* element is created in the *Data* section already.
 
 16. Click on **Add** in the *Data* section, enter name as **locId** and click on **Create**
-   ![locIdDataElement](images/lociddataelement.png)
+   ![LOCID Data Element](images/lociddataelement.png)
 17. Select the field **Letter of credit Id**, go to Properties, enter or select binding as **locId**
 18. Scroll down further for the same element, remove the default values and enter the below values.
 
@@ -316,13 +316,13 @@ For example, you can introduce the following behaviours into your forms:
 -	Make a REST call on demand, store the call’s response, and use response data in an event action or condition.
 
 1. Select the field *SelectOrderNumber*, go to Properties section and scroll down until you see the *Events* section. Click on **Add**
-   ![selectOrderEvent](images/selectorderevent.png)
+   ![Select Order Event Add](images/selectorderevent.png)
 2. Enter **OnChange** as an event Name and select **OnChange** as an event.
-   ![selectOrderOnChangeEvent](images/selectOrderonchangeevent.png)
+   ![Select Order OnChange Event](images/selectorderonchangeevent.png)
 3. Click on **Edit Pencil Icon** link
    ![eventedit](images/eventedit.png)
 4. Click on **Connector** and select or enter the values as per the screenshot given below and click on **OK** which is at the bottom right corner.
-   ![OnChangeConnectorDefinition](images/Onchangeconnectordefinition.png)
+   ![On Change Connector Definition](images/onchangeconnectordefinition.png)
 5. Again, Click on **Edit Pencil Icon** link
 6. Click on **Action** and define the values as per the screenshot given below for the element **id**.
    ![idAction](images/idaction.png)

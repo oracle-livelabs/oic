@@ -683,16 +683,11 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 ```
 5.  *Edit* the  **Map PUBLISHPODETAILS** activity and define mapping per below.
 Expand the ***Source*** node:
-
-```
-POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value
-```
+**POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value**
 
 Expand the ***Target*** node:
+**PUBLISHPODETAILS > Request Wrapper**
 
-```
-PUBLISHPODETAILS > Request Wrapper
-```
 
 | **Source** *(POEvent Request)*        | **Target** *(PUBLISHPODETAILS)* |
 | --- | ----------- |
