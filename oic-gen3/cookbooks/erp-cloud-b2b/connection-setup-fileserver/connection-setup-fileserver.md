@@ -123,6 +123,7 @@ Select *Import and Configure*. This will open the *Configuration Editor*
     |Security Policy | **Username Password Token**|
     |Username | `<erp-username>`|
     |Password | `<erp-password>`|
+    {: title="ERP Cloud Connection Properties"}
 
     Finally,*Save* the connection
 
@@ -149,6 +150,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
   | Security                | FTP Server Access Policy                              |
   | Username                | Your Oracle Integration username                      |
   | Password                | Your Oracle Integration password                      |
+  {: title="FTP Connection Properties"}
 
 5. Confirm your Connection by clicking *Test*. You should see a confirmation message. Click *Save* and exit the Connection editor.
 
@@ -188,6 +190,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
     | Username                | Your Oracle Integration username                      |
     | Password                | Your Oracle Integration password                      |
     | Access Type            | Public Gateway |
+    {: title="Visual Builder Rest connection properties"}
 
 3.  Click on *Test* connection and wait for the confirmation message.
 

@@ -221,6 +221,7 @@ You can create a new B2B Schema based on a standard Document type.
 | Document Standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12) |
 | Document Version  | 4010                                                  |
 | Document Type     | 850 (Purchase Order)                                  |
+{: title="Schema Properties"}
 
 5. Click *Create*, then *Save*, then exit the PurchaseOrderSchema page.  
 ![Create New B2B Schema](images/poschema4010-1.png)
@@ -246,6 +247,7 @@ You can create a new B2B Document based on a standard document type.
 | Document Standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12 ) |
 | Document Version  | 4010                      |
 | Document Type     | 850 (Purchase Order)      |
+{: title="Document Properties"}
 
 4. Click *Create*.  
 ![Create New B2B Document](images/podocument4010-1.png)
@@ -270,6 +272,7 @@ For this lab you will add the following Identifiers.
 | EDI Interchange ID Qualifier | Mandatory for X12 and optional for EDIFACT. This identifier is used as the Interchange Sender ID Qualifier field of the interchange envelope of the EDI payload. It's a code to indicate the category of the value specified in the EDI Interchange ID (for example, DUNS number, IATA number, and so on).For an outbound message, this value is inserted as the Interchange Sender ID Qualifier. For an inbound message, the value (from the host profile) is not used. |
 | EDI Group ID                 | Mandatory for X12 and optional for EDIFACT. For an outbound X12 message, this value is inserted in the GS segment as the Application Sender's Code. For an inbound message, the value from the host profile is not used. |
 | EDI Group ID Qualifier       | Only used for EDIFACT. In that, it is also optional. It's a code to indicate the category of the value specified in the EDI Group ID (for example, DUNS number, IATA number, and so on). |
+{: title="Host Profile Identifier Description"}
 
 *Create the Host Profile*
 
@@ -287,6 +290,7 @@ Note: This is typically a one-time activity that you perform before adding your 
 | EDI Interchange ID Qualifier | ZZ         |
 | EDI Group ID                 | Acme       |
 | EDI Group ID Qualifier       | 01         |
+{: title="Host Profile Identifiers"}
 
 5. Click *Save*.
 
@@ -317,6 +321,7 @@ Understand the Identifiers that we will use.
 |EDI Group ID                 | This is mandatory for X12 and optional for EDIFACT. <ul><li>For an outbound X12 message, this value is inserted in the GS segment as the Application Receiver's Code</li><li>For an inbound message, this value is used only in case the EDI Interchange ID, on its own, is not enough to uniquely identify a trading partner</li></ul> |
 | EDI Group ID Qualifier       | It is a code to indicate the category of the value specified in the EDI Group ID (for example, DUNS number, IATA number, and so on).Only used for an outbound message, to insert as EDI Group ID Qualifier, if specified|01|
 |Application Partner ID|Optionally used as an alternate way to specify which trading partner to which to route an outbound message. |
+{: title="B2B Identifiers description"}
 
 1. Click the *B2B Identifiers* tab.
 
@@ -330,6 +335,7 @@ Understand the Identifiers that we will use.
 | EDI Group ID                 | Dell Inc. |
 | EDI Group ID Qualifier       | 01        |
 | Application Partner ID       | Dell Inc. |
+{: title="B2B Identifiers"}
 
 4. Click *Save* after every addition.  
 ![B2B Identifiers](images/tpm-tp-b2bIdentifiers-1.png)
@@ -355,6 +361,7 @@ Each Transport is listed with its Name, Direction/Type, Status, and Last Updated
 | Output Directory             | Any FTP directory ex: /upload/users/B2BTPDELLOut|
 | Output File Name             | Order-%SEQ%.edi|
 | Integration Name Prefix      | Dell |
+{: title="Transport and Agreement Properties"}
 
 *B2B Integrations*
 
@@ -362,15 +369,15 @@ You will notice two Integrations are created automatically when a Transport is c
 
 - B2B Integration for receiving messages (Dell FTP Receive).
 - B2B Integration for sending messages (Dell FTP Send).
-![Send Receive Integrations](images\tpm-tp-send-receive-integrations.png)
+![Send Receive Integrations](images/tpm-tp-send-receive-integrations.png)
 
 Deploy the Transport Integrations.
 
 1.  Click the *Actions* menu on the **FTP** Transport to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment.  
-![Deploy Transport Integrations](images\tpm-tp-Transport-1.png)
+![Deploy Transport Integrations](images/tpm-tp-transport-1.png)
 
 2.  Starting at the Oracle Integration **Home** page, select *Design*, then *Integrations* again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
-![Dell FTP Transport Integrations](images\tpm-tp-Transport-2.png)
+![Dell FTP Transport Integrations](images/tpm-tp-transport-2.png)
 
 ##  Task 5: Create Agreements
 
@@ -393,6 +400,7 @@ This section describes creating and managing Agreements. You define one or more 
 | Select a Transport                 | FTP                         |
 | Configure Agreement Settings       | Uncheck Enable Validations    |
 | Configure Agreement Settings       | Uncheck Functional Ack Required |
+{: title="Outbound Agreement Properties"}
 
 ![Outbound Agreement](images/tpm-tp-agreement-out-1.png)
 
@@ -436,7 +444,7 @@ Add ERP PO Event trigger to the empty integration canvas.
     | Define the purpose of the trigger         | Receive Business Events raised within ERP Cloud       |
     | Business Event for Subscription  | **Purchase Order Event** |
     | Filter Expr for Purchase Order Event | [see code snippet below] |
-    |
+    {: title="Request Page Configuration"}
 
     ```
     <copy>
@@ -508,6 +516,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 | Purchase Order Line > Unit of Measure Code | PO103: Unit or Basis for Measurement Code  |
 | Purchase Order Line > Price | PO104: Unit Price |
 | Supplier | EDI-Generate Request > Translate Input > Application Partner ID |
+{: title="EDI Elements Mapping"}
 
 6. Add a *Switch* action after the **B2B EDI-Generate** activity
     - For the **Route1** branch, Enter the Expression Name as **Success or Warning**
@@ -529,6 +538,7 @@ Add ERP PO Event trigger to the empty integration canvas.
     | Trading Partner Name | Component Schema Request Wrapper > Trading Parnter |
     | Connectivity Properties Code | Connectivity Properties > Localintegration > code |
     | Connectivity Properties Version | Connectivity Properties > Localintegration > version |
+    {: title="Trading Partner Integration properties"}
 
     - Click on *Validate* and Click on *Close* and *Save* your Integration flow
     - In Otherwise route: Add *Logger* Activity. Enter name as **Log-Error**. Provide logger message by concatenating **Translation Status** and **Validation Error Report** values from **$EDI-Generate > Translate Output** variables. Note that the namespaces may vary if you copy paste the below expression. Below is just for your reference.
@@ -594,6 +604,7 @@ The **Edit Document (Purchase Order)** page is displayed. In the **Additional In
   | Quantity | Enter a valid number, eg. *1* |
   | UOM | *Ea* (Default) |
   | Base Price | Enter a valid number, eg. *1.0*|
+  {: title="Create PO Details"}
 
 10. Click ***Submit*** to initiate the Purchase Order processing.
 After submitting the Purchase Order, a confirmation message will appear with the PO number. Make a note of the **PO Number**
@@ -693,6 +704,7 @@ PUBLISHPODETAILS > Request Wrapper
 | Supplier Id | Supplier Id |
 | Supplier | Supplier |
 | Ordered Amount | Order Amount |
+{: title="Publish PO Request Interface Details"}
 
 *Validate* and *Save* your Integration.
 
@@ -717,6 +729,7 @@ PUBLISHPODETAILS > Request Wrapper
 | What action do you want to perform on the endpoint? | POST |
 | Configure a request payload for this endpoint | Select the check box |
 | Configure this endpoint to receive the response | Select the check box |
+{: title="Visual Builder Endpoint Details"}
 
 5.  On the **Request** page configure the following values:
 - From the **Select the request payload format** list, select JSON Sample.
