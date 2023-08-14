@@ -34,7 +34,7 @@ This lab assumes you have:
 ##	Task 1: Create the Invoice Validation Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, click on ***App Driven orchestration***.
+3. On the **Integration Style** dialog, click on ***Application***.
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
