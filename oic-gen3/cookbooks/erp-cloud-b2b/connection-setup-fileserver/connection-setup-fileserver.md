@@ -55,7 +55,7 @@ This lab assumes you have:
 
 8.  When prompted, click *Enable* to confirm you want to enable Visual Builder. Once complete, the OIC instance status changes back to green with Active Status.
 
-[Enabling Visual Builder](https://docs.oracle.com/en/cloud/paas/application-integration/visual-admin/administering-visual-builder1.html)
+Additional Instructions Refer [Enabling Visual Builder](https://docs.oracle.com/en/cloud/paas/application-integration/visual-admin/administering-visual-builder1.html)
 
 ## Task 2: Configure File Server
 
