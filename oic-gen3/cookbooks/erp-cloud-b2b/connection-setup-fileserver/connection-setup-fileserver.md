@@ -22,7 +22,7 @@ This lab assumes you have:
 
 * Successfully provisioned Oracle Integration 3 Instance and able to access the home page.
 
-## Task 1: Enable File Server
+## Task 1: Enable File Server & Visual Builder
 
 - An administrator must enable File Server before an organization can start using it with their Oracle Integration instance. Enabling File Server is a one-time action in the Oracle Cloud Infrastructure Console
 
@@ -50,9 +50,16 @@ This lab assumes you have:
 
     ![File Server Enabled](images/file-server-enablement3.png)
 
+7.  Similarly, Click the **Enable** link for Visual Builder on the Integration Instance Information tab
+    ![Enable VB](images/enable-visual-builder.png)
+
+8.  When prompted, click *Enable* to confirm you want to enable Visual Builder. Once complete, the OIC instance status changes back to green with Active Status.
+
+[Enabling Visual Builder](https://docs.oracle.com/en/cloud/paas/application-integration/visual-admin/administering-visual-builder1.html)
+
 ## Task 2: Configure File Server
 
-Configure File Server settings. This is required as you are using Embedded File Serve of Oracle Integration and using File Server as a target application in your integration flow.
+Configure File Server settings. This is required as you are using Embedded File Server of Oracle Integration and using File Server as a target application in your integration flow.
 
 1. Starting at the Oracle Integration **Home** page, select *Settings*, then *File Server* from the left Navigation pane.
 
@@ -144,8 +151,8 @@ To access the File Server from an Integration, you will need to create an FTP Co
 4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
   | Field                   | Value                                                 |
   |-------------------------|-------------------------------------------------------|
-  | FTP Server Host Address | From File Server Settings - IP and Port Information   |
-  | FPT Server Port         | From File Server Settings - IP and Port Information   |
+  | FTP Server Host Address | From File Server Settings - IP Information   |
+  | FPT Server Port         | From File Server Settings - Port Information   |
   | SFTP Connection         | Yes                                                   |
   | Security                | FTP Server Access Policy                              |
   | Username                | Your Oracle Integration username                      |
@@ -173,7 +180,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 5.  On the Right side page, Select *Endpoints* tab. Click on **create\_po** endpoint.
     ![Select PO Endpoint](images/po-endpoint-1.png)
 
-6.  In the **Endpoints** page select *Test* tab. Copy the endpoint url and make a note of it. We will use this url when creating a REST connection.
+6.  In the **Endpoints** tab select *Test* tab. Copy the endpoint url and make a note of it. We will use this url when creating a REST connection.
     ![Copy Endpoint URL](images/copy-po-endpoint-url.png)
 
 ### Create REST Adapter Connection in OIC pointing to VB endpoint
@@ -184,7 +191,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
-    | Connection Type         | REST API Base URL   |
+    | Connection Type         | REST API Base URL ex: (https://oic-vbcs-xxx-vb-xxx.builder.us-phoenix-1.ocp.oraclecloud.com)   |
     | Connection Type         | Visual builder hostname noted earlier from PO endpoint (only host information)   |
     | Security Policy         | Basic Authentication                             |
     | Username                | Your Oracle Integration username                      |
