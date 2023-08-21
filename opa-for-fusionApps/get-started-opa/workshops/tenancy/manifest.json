@@ -5,7 +5,7 @@
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help_oic_us@oracle.com",
+    "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -23,13 +23,18 @@
         },
         {
             "title": "Lab 1: Create Structured Process Application",
-            "description": "Lab to create a process application using structured process",
+            "description": "Lab to create a process application using Structured Process",
             "filename": "../../create-structured-process-app/create-structured-process-app.md"
         },
         {
             "title": "Lab 2: Create a Decision Model",
             "description": "Lab to create a decision model",
             "filename": "../../decision/create-decision-model.md"
+        },
+        {
+            "title": "Lab 3: Create a Dynamic Process Application",
+            "description": "Lab to create a process application using Dynamic Process",
+            "filename": "../../create-dynamic-process-app/create-dynamic-process-app.md"
         },
         {
             "title": "Need Help?",

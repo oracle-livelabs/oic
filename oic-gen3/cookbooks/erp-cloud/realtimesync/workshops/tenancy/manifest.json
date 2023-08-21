@@ -1,11 +1,11 @@
 {
-    "workshoptitle": "ERP Cloud Real Time Synchronization with Oracle Integration 3",
+    "workshoptitle": "Oracle Integration 3 - Cookbook - ERP Cloud Real Time Synchronization",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help_oic_us@oracle.com",
+    "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",

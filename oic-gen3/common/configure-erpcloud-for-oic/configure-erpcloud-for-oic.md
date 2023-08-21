@@ -1,9 +1,10 @@
 # Configure ERP Cloud for Oracle Integration 3
 
-> **Note:** This Lab is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration 3
-
 ## Introduction
 In this lab you will assign a custom role to an integration service user. This user account will be specified when creating an Oracle ERP Cloud Adapter connection in Oracle Integration 3.
+
+> **Note:** This Lab is required **only** if your Oracle ERP environment is not yet configured to work with Oracle Integration 3
+
 
 Estimated Time: 10 minutes
 
@@ -83,8 +84,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 * [Prerequisites for Creating an ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/prerequisites-creating-connection.html#GUID-FEA17A38-60BF-482D-99CD-31DA9E6C9E77)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3
-](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/oracle-erp-cloud-adapter-capabilities.html#GUID-5ED9E9D5-66F4-4EAA-87D7-75BD405C1E07)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/index.html)
 
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration

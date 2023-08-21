@@ -6,7 +6,12 @@ This workshop shows you how to design and develop a Real time Synchronization Us
 
 Estimated Time: 2 hours
 
-### What Will You Learn?
+### What is Oracle Integration 3?
+With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
+
+[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
+
+### Objectives
 
 In this workshop, you will learn how to:
 
@@ -19,17 +24,13 @@ In this workshop, you will learn how to:
 * Create a Real-Time Synchronization scenario using Business Events.
 * Use Business Object to Integrate with ERP Cloud.
 
-### What Do You Need?
+### Prerequisites
 
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-### What is Oracle Integration 3?
-With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
-[First Glimse - Oracle Integration 3](https://www.youtube.com/watch?v=yW3TEBWkFbg)
-
-### Leverage the ERP Cloud Adapter in Oracle Integration 3
+## Leverage the ERP Cloud Adapter in Oracle Integration 3
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 
@@ -59,11 +60,11 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/integration-cloud/erp-adapter)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/index.html)
 
 ## Acknowledgements
 
-* **Author** - Kishore Katta, Product Management, Oracle Integration
-* **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
+* **Author** - Kishore Katta, Director Product Management, Oracle Integration
+* **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Last Updated By/Date** - Subhani Italapuram, Sep 2022

@@ -20,7 +20,7 @@ This lab assumes you have:
 * All previous labs successfully completed.
 * Completed [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
 
-##	Task	1: B2B Integration Action Trading Partner Mode
+## Task	1: B2B Integration Action Trading Partner Mode
 
 The function of the B2B Integration Action is to work with schemas that adhere to B2B standards like X12. The B2B Integration Action works for both Inbound and Outbound messages. The B2B Integration Action supports a Standalone mode and a B2B Trading Partner mode. This section describes the operations of the B2B Trading Partner mode.
 
@@ -30,7 +30,7 @@ The B2B Integration Action can be added to an Integration flow from the Integrat
 
 The operations available in the B2B Integration Action depend on whether you are processing and Inbound or Outbound message. When using the automatically generated Transport Integrations, you will only need to use some of these operations (**highlighted** below). The other operations are used by the automatically generated Transport Integrations or if you want to created your own custom Transport Integrations.
 
-### *Inbound*
+### Inbound
 
 For an Inbound message scenario, the Backend Integration would receive an EDI payload (X12 or EDIFACT type documents) which would already have gone through a Translate operation in the Transport Integration. From here the Backend Integration would use the Fetch Message operation create a B2B canonical XML format which can then be mapped to the backend application format like ERP Cloud, NetSuite, etc.
 ![Translate Inbound EDI](images/b2baction-inbound-2.png)

@@ -5,7 +5,7 @@
                 "step2.md":"../../data-load/files/step2.md"},
     "variables": ["../../variables/variables.json",
                  "../../variables/variables-in-another-file.json"],
-    "help": "livelabs-help_oic_us@oracle.com",
+    "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -19,11 +19,11 @@
         },
         {
             "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
+            "filename": "../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Enable File Server",
-            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+            "filename": "../../../../common/enable-file-server/enable-file-server.md"
         },
         {
             "title": "Lab 3: Provision an Oracle Autonomous Database",
@@ -39,7 +39,7 @@
             "filename": "../../create-connections/create-connections.md"
         },
         {
-            "title": "Lab 6: Create Integration flow",
+            "title": "Lab 6: Create an Integration flow",
             "filename": "../../create-flow/create-flow.md"
         },
         {

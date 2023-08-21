@@ -12,7 +12,7 @@ validates the data on the fly and creates a Payables Invoice in ERP Cloud. As pa
 3.  Your integration receives the request, validates various data elements and finally creates an Invoice in ERP Cloud
 
     The following diagram shows the runtime interaction between the systems involved in this use case:
-      ![Create Invoice Architecture](images/create-invoice-architecture.png)
+    ![Create Invoice Architecture](images/create-invoice-architecture.png)
 
 Estimated Time: 20 minutes
 
@@ -34,8 +34,7 @@ This lab assumes you have:
 ##	Task 1: Create the Invoice Validation Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
-![Select Integration Style](images/select-integration-style-1.png)
+3. On the **Integration Style** dialog, click on ***Application***.
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
@@ -48,7 +47,7 @@ This lab assumes you have:
 
 5. Click ***Create***
 
-> **Note:** If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
+    > **Note:** If you get an error that the identifier already exists, change the Integration Name by suffixing username or so and remember this name for later use in the workshop.
 
 6. Optional, Select Layout to ***Horizontal*** and Click ***Save*** to apply changes.
 
@@ -102,7 +101,7 @@ The Configure REST Endpoint wizard appears.
       "Description" : "Line 2 Description",
       "ProrateAcrossAllItemsFlag" : true
     } ]
-  }
+    }
     </copy>
     ```
     - In the **What is the media-type of Request Body?** Select ***JSON*** (By default, this option is selected if not, you need to select)
@@ -113,25 +112,25 @@ The Configure REST Endpoint wizard appears.
       - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
       - Provide the below JSON and Click ***Ok*** (Scroll down to see the Ok button)
 
-      ```
-      <copy>
-            {
-        "InvoiceId" : 300000245076423,
-        "InvoiceNumber" : "XX_INV_ABC_0002",
-        "InvoiceCurrency" : "USD",
-        "PaymentCurrency" : "USD",
-        "InvoiceAmount" : 2500,
-        "InvoiceDate" : "2021-01-01",
-        "BusinessUnit" : "US1 Business Unit",
-        "Supplier" : "ABC Consulting",
-        "SupplierNumber" : "1288",
-        "SupplierSite" : "ABC US1",
-        "InvoiceGroup" : null,
-        "AccountingDate" : "2021-01-01",
-        "Description" : "Invoice Created using OIC"
-      }
-      </copy>
-      ```
+    ```
+    <copy>
+    {
+      "InvoiceId" : 300000245076423,
+      "InvoiceNumber" : "XX_INV_ABC_0002",
+      "InvoiceCurrency" : "USD",
+      "PaymentCurrency" : "USD",
+      "InvoiceAmount" : 2500,
+      "InvoiceDate" : "2021-01-01",
+      "BusinessUnit" : "US1 Business Unit",
+      "Supplier" : "ABC Consulting",
+      "SupplierNumber" : "1288",
+      "SupplierSite" : "ABC US1",
+      "InvoiceGroup" : null,
+      "AccountingDate" : "2021-01-01",
+      "Description" : "Invoice Created using OIC"
+    }
+    </copy>
+    ```
       - In the **What is the media-type of Response Body?** Select ***JSON***(By default, this option is selected if not, you need to select)
       - Select ***&gt; (Next step)*** and Click ***Done*** on Summary page.
       - Click ***Save*** to apply changes.
@@ -177,16 +176,16 @@ A Map action named Map to validateBusinessUnit is automatically created. We'll d
 
     Complete the mapping as below, right click on ***Query***, click on **Create target node** and click on **Switch to developer view** and copy and paste   ***concat("BusinessUnitName=",)*** and drag and drop **BusinessUnit** from the Source after **comma**  
     ![mapbu1](images/mapbu1.png =30%x30%)
-    ![mapbu1](images/DeveloperView.png =50%x50%)
+    ![mapbu1](images/developer-view.png =50%x50%)
 
     | **Source**      | **Target**  |
     | --- | ----------- |
     | concat("BusinessUnitName=", /nssrcmpr:execute/nssrcdfl:request-wrapper/nssrcdfl:BusinessUnit) | Query |
 
-![MapValidateBusinessUnit](images/map-validate-bu.png)
+    ![MapValidateBusinessUnit](images/map-validate-bu.png)
 
-> **Note:**  The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
-You can drag functions from the Component section, expand Functions, and then expand String Category
+    > **Note:**  The xpath expression namespace might vary. So, always drag the element which will capture the correct namespace.
+    You can drag functions from the Component section, expand Functions, and then expand String Category
 
 
 4.  Click the ***Tick Mark*** in the expression editor. Click ***Validate***. A message confirming the expression is valid appears. Click ***&lt; (Go back)*** and ***Save*** the Integration Flow.
@@ -198,9 +197,9 @@ Let's check if the Business Unit sent in the Request payload is Valid or not.
 
 1.  Click ***Actions*** icon and from the **Collection** section, drag ***Switch*** to the **Integration** Canvas and place it after the **validateBusinessUnit** activity.
 
-Two flow branches appear in the flow:
-  - Undefined: this branch checks the **count of items**. If the expression evaluates to true, the instance follows the flow in this branch.
-  - the instance follows this branch when the routing expression for the initial branch resolves to false. We will configure a fault return if the Business Unit is Invalid.
+    Two flow branches appear in the flow:
+    - Undefined: this branch checks the **count of items**. If the expression evaluates to true, the instance follows the flow in this branch.
+    - the instance follows this branch when the routing expression for the initial branch resolves to false. We will configure a fault return if the Business Unit is Invalid.
 
 ### *Define the IF conditional flow*
 
@@ -216,7 +215,7 @@ Two flow branches appear in the flow:
     - Click on **Switch to Developer View** and Formulate the expression as count($validateBusinessUnit/nsmpr5:getAllResponse/nsmpr5:items). This returns # of items nodes
 
 4.  In the **New Condition** box, enter ***1.0*** in the field after the equal operator
-![Route1](images/switch-route-1.png)
+    ![Route1](images/switch-route-1.png)
 
 5.  Click ***Route 1***.
 
@@ -241,10 +240,12 @@ Two flow branches appear in the flow:
     - for **Child Resource** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box.
     - click ***&gt; (Next step)***
     - In the **Select Flexfield contexts**, Do not Select anything and Click ***&gt; (Next step)***
-![createinvoicesummary](images/createinvoicesummary.png)
+
+    ![createinvoicesummary](images/createinvoicesummary.png)
+
 6.  In the **Summary** page Select ***Done***
 
-![createERPInvoice](images/create-erp-invoice.png)
+    ![createERPInvoice](images/create-erp-invoice.png)
 7. Click ***Save*** to persist changes.
 
 ### *Define the Mapping Map to createERPInvoice*
@@ -287,7 +288,7 @@ A Map action named Map createERPInvoice is automatically created. We'll define t
     | Invoice Lines > Prorate Across All Items Flag | Invoice Lines > Prorate Across All Item Lines |
 
 
-> **Note:**  You can easily find a Source or Target Element by using the Search functionality
+    > **Note:**  You can easily find a Source or Target Element by using the Search functionality
 
 
 4.  Click ***Validate***. A message confirming the expression is valid appears. Click on ***&lt; (Go back)*** and ***Save*** the Integration Flow.
@@ -360,7 +361,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 ### *Define the Otherwise conditional flow*
 
-1.  Select ***Actions*** and drag ***Fault Return*** Activity after ***Map createInvoice*** activity. This activity returns a Custom Fault
+1.  Select ***Actions*** and drag ***Fault Return*** Activity after ***Otherwise*** activity. This activity returns a Custom Fault
 
 2.  Select the ***Map createInvoice*** to configure Fault details.
 
@@ -373,41 +374,37 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
     | "400" | Error Code |
 
 
-> **Note:**  If the Target element is greyed out, Select the target node and Right Click "Create Target Node" which brings up the Expression Editor
+    > **Note:**  If the Target element is greyed out, Select the target node and Right Click "Create Target Node" which brings up the Expression Editor
 
-
+    Your final Integration Flow should look as below
+    ![Final Integration Flow](images/final-integration-flow.png)
 
 4.  Select ***Validate*** and click on ***&lt; (Go back)***
 
 ## Task 6: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
 
-1. Click the ***(I)***  on the top right
+2. Click the ***(I)***  on the top right
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the **Source** section, expand ***execute &gt; request-wrapper***, Drag the ***InvoiceNumber*** , ***BusinessUnit*** and ***InvoiceDate***  fields from Source to the *Business Identifier Field* section:
+3. From the **Source** section, expand ***execute &gt; request-wrapper***, Drag the ***InvoiceNumber*** , ***BusinessUnit*** and ***InvoiceDate***  fields from Source to the *Business Identifier Field* section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
-3. Click ***(I)***
+4. Click ***(I)***
 
-Your final Integration Flow should look as below
-
-  ![Final Integration Flow](images\final-integration-flow.png)
-
-
-4. On the Integration canvas, click ***Save***, followed by ***&lt; (Go back)***.
+5. On the Integration canvas, click ***Save***, followed by ***&lt; (Go back)***.
 
 
 ## Task 7: Activate the integration
 
 1. On the **Integrations** page, click on the ***Activate*** icon.
 
-On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
+2. On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
 
-    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
+- The activation will be completed in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
 ## Task 8: Formulate Request Payload to Create Invoice
 
@@ -471,11 +468,11 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
   3.  Click on ***Run***. Observe the **Response** payload returned.
 
-      ![Activity Stream](images/activity-stream.png)
+    ![Activity Stream](images/activity-stream.png)
 
   4.  Select the Instance Id and View the Integration flow
 
-      ![Activity Stream Success](images/acitivity-stream-success.png)
+    ![Activity Stream Success](images/acitivity-stream-success.png)
 
   5.  Modify the **Request Payload** with an Invalid Business Unit and Test the Integration Flow. Observe
       the Custom Fault Payload returned and the **Otherwise** condition is executed.
@@ -508,6 +505,8 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
   1.  Create Otherwise condition for Supplier and Supplier Site to return fault payload accordingly
 
+  The final integration changes for the bonus lab section will be per below
+  ![Final Integration Flow with Bonus](images/final-integration-flow-bonus.png)
 
 **Congratulations!** You have learnt how to invoke ERP Cloud REST API with the Out of the box adapter capabilities. ERP Cloud Adapter abstracts the API/Services/Business Objects and provides an intuitive interface which Simplifies the task to perform Real-Time Synchronization.
 

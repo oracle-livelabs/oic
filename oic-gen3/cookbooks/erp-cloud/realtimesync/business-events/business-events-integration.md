@@ -13,7 +13,7 @@ push the relevant event information to downstream systems. As part of the lab yo
     into the File Server.
 
     The following diagram shows the runtime interaction between the systems involved in this use case:
-      ![POEvent](images/po-real-time-sync-1.png)
+    ![POEvent](images/po-real-time-sync-1.png)
 
 Estimated Time: 30 minutes
 
@@ -34,8 +34,7 @@ This lab assumes you have:
 ##	Task 1: Create the PO Event Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select ***App Driven Orchestration***, followed by ***Create***
-![Select Integration Style](images/select-integration-style-1.png)
+3. On the **Integration Style** dialog, Click on ***Application***.
 4. In the **Create New Integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
@@ -74,25 +73,24 @@ Add ERP PO Event trigger to the empty integration canvas.
     <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/">$eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable"</xpathExpr></copy>
     ```
 
-> **Tip:** If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
-
-
-> **Note:** The filter is not required, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
+    > **Tip:**
+    1. If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
+    2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 6. Click ***&gt; (Next step)***.
 7. On the **Summary** page, click ***Done***.
 8. Click ***Save*** to persist changes.
 9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
-![Select Horizontal Layout](images/horizontallayout.png =30%x*)
+    ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
 ## Task 3: Add the FTP Adapter as invoke activity
 Add the FTP Adapter invoke to the integration canvas.
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the **File Server** Connection created in the previous lab.
 This invokes the FTP adapter Configuration Wizard.
 2. On the **Basic Info** page, select the following values and click ***&gt; (Next step)***.
-  | **Element**        | **Value**          |       
-  | --- | ----------- |
-  | What do you want to call your endpoint? | `Write2FTP`       |
+    | **Element**        | **Value**          |       
+    | --- | ----------- |
+    | What do you want to call your endpoint? | `Write2FTP`       |
 
 3. On the **Operation** page, select the following values and click ***&gt; (Next step)***.
 
@@ -108,19 +106,19 @@ This invokes the FTP adapter Configuration Wizard.
     - select the ***Sample JSON document*** from the drop-down.
     - Copy the below json content into a file and save it on to your desktop. Name it as ***PurchaseOrder.json***
 
-```
-<copy>
-  {
-    "poHeaderId":"US164985",
-    "orderNumber":"300000245105090",
-    "procurementBUId":"300000046987012",
-    "procurementBusinessUnit":"US1 Business Unit",
-    "supplierId":"300000047414679",
-    "supplier":"Dell Inc.",
-    "soldToLegalEntity":"US1 Legal Entity"
-  }
-</copy>
-```
+    ```
+    <copy>
+    {
+      "poHeaderId":"US164985",
+      "orderNumber":"300000245105090",
+      "procurementBUId":"300000046987012",
+      "procurementBusinessUnit":"US1 Business Unit",
+      "supplierId":"300000047414679",
+      "supplier":"Dell Inc.",
+      "soldToLegalEntity":"US1 Legal Entity"
+    }
+    </copy>
+    ```
 4. Click ***&gt; (Next step)***.
 6. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
 7. Click ***&gt; (Next step)*** and Review the **Summary** page and click on ***Done***
@@ -132,7 +130,7 @@ Use the mapper to drag fields from the source structure (POEvent)  to the target
 When we added the FTP invoke to the integration, a map icon was automatically added.
 
 1. Hover your cursor over the **Map Write2FTP** Mapper icon, click on **...** and then select ***Edit***.
-   ![Edit ERP-FTP Mapper](images/mapper-edit-erp-ftp.png)
+    ![Edit ERP-FTP Mapper](images/mapper-edit-erp-ftp.png)
 
 2. Use the mapper to drag element nodes in the source ERP Cloud structure to element nodes in the target FTP structure.
 
@@ -160,8 +158,7 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
     | supplierId | Supplier Id |
     | supplier | Supplier |
 
-
-   ![Completed Mapping](images/mapper-completed-erp-ftp-1.png)
+    ![Completed Mapping](images/mapper-completed-erp-ftp-1.png)
 
 3. Click ***Validate***, then wait for the confirmation message **Map to Write2FTP successfully validated.**
 
@@ -169,20 +166,20 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 
 5. Click ***Save*** to persist changes.
 ## Task 5: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click on the ***(I) Business Identifiers*** menu on the top right.
+2. Click on the ***(I) Business Identifiers*** menu on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the **Source** section, expand ***getPurchaseOrderResponse*** &gt; ***result***, click on 2nd sequence, expand ***Value***. Drag the ***PO Header Id*** and ***Order Number***  fields to the right side section:
+3. From the **Source** section, expand ***getPurchaseOrderResponse*** &gt; ***result***, click on 2nd sequence, expand ***Value***. Drag the ***PO Header Id*** and ***Order Number***  fields to the right side section:
 
     ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
 
-3. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***&lt; (Go back)*** button.
+4. Click on the ***(I) Business Identifiers*** menu on the top right and Click ***Save*** and Click on ***&lt; (Go back)*** button.
 
 
 ## Task 6: Activate the integration
@@ -192,9 +189,9 @@ Manage business identifiers that enable you to track fields in messages during r
     ![Click to Activate Integration](images/click-activate-integration.png)
 
 2. On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
-![tracinglevel](images/tracinglevel.png)
+    ![tracinglevel](images/tracinglevel.png)
 
-The activation will complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
+    The activation will complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
 
 ## Task 7: Create Purchase Order in ERP Cloud
 Access your ERP Cloud environment.
@@ -206,18 +203,18 @@ Access your ERP Cloud environment.
 3. Click ***Purchase Orders***.
 
 4. In the **Overview** section, click the ***Tasks*** button on the right.
-       ![Tasks in Overview section](images/overview-tasks.png)
+    ![Tasks in Overview section](images/overview-tasks.png)
 
-        This opens the Tasks menu.
+    This opens the Tasks menu.
 
 5. Under the **Orders** section, select ***Create Order***.
-      ![Create Order](images/create-order-action.png)
+    ![Create Order](images/create-order-action.png)
 
-  The **Create Order** dialog is displayed.
+    The **Create Order** dialog is displayed.
 
 6. Select **Requisitioning BU** as **Procurement BU** and Enter a valid entry in the **Supplier** field, for example, `Dell Inc`, and select the corresponding supplier in the dropdown.
 
-  **Tip:** You can also search for valid suppliers using the **Search** icon.
+    > **Tip:** You can also search for valid suppliers using the **Search** icon.
 
 7. Click ***Create***.
 
@@ -239,7 +236,7 @@ Access your ERP Cloud environment.
 
 10. Click ***Submit*** to initiate the Purchase Order processing.
 
-    After submitting the Purchase Order, a confirmation message should appear with the PO number. Make a note of the **PO number**
+      After submitting the Purchase Order, a confirmation message should appear with the PO number. Make a note of the **PO number**
 
 
 ## Task 8: Validate Purchase Order status
@@ -255,11 +252,11 @@ Access your ERP Cloud environment.
 
 4. Look for your Purchase Order in the list with the PO number displayed in the previous task.
 
-   **Tip:** The last created PO should generally be the top one in the list.
+    > **Tip:** The last created PO should generally be the top one in the list.
 
 5. Validate the PO Status. If it's **Open** then the Business Event has occurred.
 
-> **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
+    > **Note:** If PO has another Status, such as *Pending Approval*, then wait a couple of minutes and keep refreshing the page until the desired PO Status appears.
 
 
 ## Task 9: Track message flow triggered by the PO Create Event
@@ -269,13 +266,13 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
-      ![Find the Integration Instance](images/integration-instance-run.png)
+    ![Find the Integration Instance](images/integration-instance-run.png)
 
 3. Click on your ***POHeaderId*** link to open the corresponding integration instance.
 
-      The flow ran successfully if it is displayed with a green line.
+    The flow ran successfully if it is displayed with a green line.
 
-      ![Completed integration flow](images/completed-integration-flow.png)
+    ![Completed integration flow](images/completed-integration-flow.png)
 
 4. In the Activity Steam window, click on the different ***Message*** links to review the flow of request and response messages.
 
@@ -288,7 +285,7 @@ Follow these steps to view the file in the FTP Server
 
 1. In the Integration navigation pane, click ***Home*** &gt; ***Settings*** &gt; ***File Server*** &gt; ***Folders*** &gt; ***home*** &gt; ***users*** &gt; ***Select your username*** &gt; ***Output*** &gt; You should see the **PO%.json** file.
 
-> **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
+    > **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
 
 **Congratulations!** You have learnt how to subscribe to ERP Cloud Business Events by configuring the Out of the box ERP Cloud adapter. The Adapter abstracts the Business Events experience and provides an intuitive interface to select from the Catalog which greatly simplifies the task to perform Real-Time Synchronization.
 
