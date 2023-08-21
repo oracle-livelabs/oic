@@ -599,7 +599,7 @@ The **Edit Document (Purchase Order)** page is displayed. In the **Additional In
   | **Field**        | **Value**          |       
   | --- | ----------- |
   | Type | *Goods* |
-  | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable <your-initials>*|
+  | Description | Enter the description For example: *Lan Cable <your-initials>*|
   | Category Name | search for *Computer Supplies* and then select it |
   | Quantity | Enter a valid number, eg. *1* |
   | UOM | *Ea* (Default) |
