@@ -448,12 +448,13 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     ```
     <copy>
-    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/" xmlns:ns6="http://xmlns.oracle.com/apps/prc/po/viewDocument/publicFlex/purchasingDocumentHeader/">$eventPayload/ns2:result/ns0:Value/ns0:HeaderFlexfield/ns6:locId="null"</xpathExpr>
+    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/" xmlns:ns6="http://xmlns.oracle.com/apps/prc/po/viewDocument/publicFlex/purchasingDocumentHeader/">($eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable B2BXX") and ($eventPayload/ns2:result/ns0:Value/ns0:HeaderFlexfield/ns6:locId="null")</xpathExpr>
     </copy>
     ```
 
     > **Tip:**
-    Please note that the filter is not mandatory, however, in the later part of the scenario we would be updating the PO. PO Business Event fires for create and update scenarios. Hence, by providing some control value we can avoid the integration to be triggered for second time which is not required in our usecase.
+    1. If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
+    2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 6. Click *&gt; (Next step)*.
 7. On the **Summary** page, click *Done*.
@@ -599,14 +600,14 @@ The **Edit Document (Purchase Order)** page is displayed. In the **Additional In
   | **Field**        | **Value**          |       
   | --- | ----------- |
   | Type | *Goods* |
-  | Description | Enter the description For example: *Lan Cable <your-initials>*|
-  | Category Name | search for *Computer Supplies* and then select it |
+  | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable &lt;your-initials&gt;*|
+  | Category Name | Search for *Computer Supplies* and then select it |
   | Quantity | Enter a valid number, eg. *1* |
   | UOM | *Ea* (Default) |
   | Base Price | Enter a valid number, eg. *1.0*|
   {: title="Create PO Details"}
 
-10. Click ***Submit*** to initiate the Purchase Order processing.
+10. Click *Submit* to initiate the Purchase Order processing.
 After submitting the Purchase Order, a confirmation message will appear with the PO number. Make a note of the **PO Number**
 
 ##  Task 11: Validate Purchase Order status
@@ -634,22 +635,37 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 2.  Find the corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
-3. Click on your ***POHeaderId*** link to open the corresponding integration instance.
+3. Click on your *POHeaderId* link to open the corresponding integration instance.
 The flow ran successfully if it is displayed with a green line.
 ![Partially Completed integration flow](images/milestone1-completed-integration-flow.png)
 
-4.  In the Activity Steam window, click on the different *Message* links to review the flow of request and response messages.
+4.  In the Activity Stream window, click on the different *Message* links to review the flow of request and response messages.
 
-6.  Click ***&lt; (Go back)*** button after reviewing the Activity Stream.
+5.  Click *&lt; (Go back)* button after reviewing the Activity Stream.
 
-7.  Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
+6.  Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
 
-8.  Click on the *View* icon and inspect **Message Logs, Payload**
+7.  Click on the *View* icon and inspect **Message Logs, Payload**
 
-9.  Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
+8.  Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
 ![Wire Messages](images/observability-wire-messages.png)
 
-10.  If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
+9.  (Optional) If you have FTP Client installed on your machine, you can login using the FTP details that you have noted down in the previous lab and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
+
+    Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
+
+    Navigate to OCI console and click on *Cloud Shell* from the drop-down menu. Refer Lab2 - Task 2 on how to connect to the cloud shell.
+    ![Select Cloud Shell](images/select-cloud-shell.png)
+
+    After connecting to the SFTP server, at the SFTP prompt provide **cd B2BTPDELLOut** and list the files by providing **ls** command. This time we see an edi file is created.
+
+    To download the EDI file created by the B2B component perform a *get &lt;filename&gt;*
+
+    Refer below screenshot for command reference.
+    ![Cloud Shell Connect](images/cloud-shell-connect.png)
+
+    Once the file is downloaded it will be available in Cloud Shell storage. To download the file to local drive Select *Cloud Shell Menu* and click on *Download*
+    ![Cloud Shell File Download](images/cloud-shell-download-file.png)
 
 In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
@@ -682,10 +698,10 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 </copy>
 ```
 5.  *Edit* the  **Map PUBLISHPODETAILS** activity and define mapping per below.
-Expand the ***Source*** node:
+Expand the *Source* node:
 **POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value**
 
-Expand the ***Target*** node:
+Expand the *Target* node:
 **PUBLISHPODETAILS > Request Wrapper**
 
 
@@ -796,9 +812,9 @@ This opens the Tasks menu.
 6. Search for the **Purchase Order Number** that was noted earlier. Select the Order. From **Actions** select *Edit*.
 
 7. Provide some description in the **Description** field. Its a mandatory field for change order. Leave the default and click *Submit*. Select *OK* on the confirmation dialog. Click *Done*.
+![Change Order Description](images/change-order-description.png)
 
 8. Navigate to *Manage Orders* tab and wait for the status to be *Open*. A small **Information** icon appears next to the status, which indicates its in process. Wait for the icon to disappear.
-![Change Order Description](images/change-order-description.png)
 
 9. Navigate to OIC console Observability and verify that the 3 integrations are successfully Completed.
 - LL ERPPO Backend B2B integrations

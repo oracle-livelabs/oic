@@ -99,10 +99,21 @@ To access files on the File Server you will need to use an FTP Client. You will 
 * Your Oracle Integration username.
 * Your Oracle Integration password.
 
-1. To obtain the File Server IP Address and Port, select **Settings** from the left Navigation pane. The IP and Port are located in the *IP and Port Information* section of the *Settings* page.
+1.  Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
 
-2. Using your FTP Client choice, connect to the File Server using the SFTP - SSH File Transfer Protocol.  
-If the permissions are configured correctly, you should be able to list, read, and write files on the *B2BTPDELLOut* folder.
+2.  Navigate to OCI console and click on *Cloud Shell* from the drop-down menu. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
+![Select Cloud Shell](images/select-cloud-shell.png)
+
+This displays the Cloud Shell in a "drawer" at the bottom of the console
+
+3.  Enter the below command to connect with the file server
+    **sftp -P sftp-port oic-username@sftp-host**
+
+    Replace the sftp-port, oic-username and sftp-host with the information noted in the previous lab (Lab 2- Task 2). When prompted for the password provide your oic credentials.
+
+4.  At the SFTP prompt provide **cd B2BTPDELLOut** and list the files **ls**. Currently, no files are listed.
+
+![Cloud Shell Connect Test](images/cloud-shell-connect-test.png)
 
 ## Task 4: Import supporting lab artifacts
 
