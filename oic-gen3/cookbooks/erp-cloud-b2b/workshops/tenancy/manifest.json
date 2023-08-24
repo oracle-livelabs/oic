@@ -26,12 +26,12 @@
             "filename": "../../connection-setup-fileserver/connection-setup-fileserver.md"
         },
         {
-            "title": "Lab 3: Enable Oracle Process Automaton (OPA)",
-            "filename": "../../enable-opa/enable-opa.md"
+            "title": "Lab 3: Create OIC Integration Flow",
+            "filename": "../../create-integration-flow/create-integration-flow.md"
         },
         {
-            "title": "Lab 4: Create OIC Integration Flow",
-            "filename": "../../create-integration-flow/create-integration-flow.md"
+            "title": "Lab 4: Enable Oracle Process Automaton (OPA)",
+            "filename": "../../enable-opa/enable-opa.md"
         },
         {
             "title": "Lab 5: Create OPA Process Application",
