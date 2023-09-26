@@ -1,4 +1,4 @@
-# Create Integration flow
+# Create an Integration flow
 
 ## Introduction
 This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous (ADW) Table.
@@ -6,7 +6,7 @@ This lab will walk you through the steps to create an end-to-end integration of 
 Estimated Time: 15 minutes
 
 ### Objectives
-You will execute the following:
+In this lab, you will execute the following:
 - Initiate a Scheduled integration flow
 - Configure FTP Adapter
 - Add the ADW invoke activity
@@ -25,9 +25,7 @@ We will start by creating a new integration and adding some basic info.
 
 1. In the left Navigation pane, click **Design** &gt; **Integrations**.
 2. On the Integrations page, click ***Create***.
-3. On the *Create integration* dialog, select **Scheduled Orchestration**, followed by **Create**.
-
-    ![Select Integration Style](images/select-integration-style.png)
+3. On the *Create integration* dialog, Click on **Schedule**
 
 4. In the *Create New Integration* dialog, enter the following information:
 
@@ -37,12 +35,11 @@ We will start by creating a new integration and adding some basic info.
     | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
     {: title="Create New Integration"}
 
-Accept all other default values.
+    Accept all other default values.
 
 5. Click **Create**.
 6. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
-![horizontallayout](images/horizontallayout.png)
-
+    ![horizontallayout](images/horizontallayout.png)
 
 
 ## Task 2: Define FTP Invoke Activity
@@ -100,8 +97,8 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | Select Bucket | **bucket-demo** (Select the Object Storage bucket that was created in previous lab)  |
-    | Delete file from object store after operation completion | **Un Check** |
+    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
+    | Delete file from object store after operation completion | **Deselect** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
     | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
@@ -109,7 +106,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
-> **Note:**  The selected order of the columns should be per the input sales_order.csv data
+    > **Note:** The order of the columns should match the input sales_order.csv data
 
 
 4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
@@ -120,7 +117,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
-    | Delimeter | **Comma** |
+    | Delimiter | **Comma** |
     | Skip Headers | **1** |
     {: title="Data format"}
 
@@ -179,30 +176,29 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 
 ## Task 5: Define Tracking Fields
-Manage business identifiers that enable you to track fields in messages during runtime.
+1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-> **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
+    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click the **Business Identifiers icon** on the top right.
+2. Click the **Business Identifiers icon** on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
+3. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
 
     ![Assign Business Identifiers](images/add-business-identifiers.png)
 
-3. Click **Business Identifiers icon** to hide the dialog.
-4. Click on **Save** to apply your changes.
-5. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
-  ![GoBack](images/integration-goback-ftp-adw.png)
+4. Click **Business Identifiers icon** to hide the dialog.
+5. Click on **Save** to apply your changes.
+6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
+    ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
 
-1. On the *Integrations* page, click on the **Activate** icon.
-
+1. On the *Integrations* page, hover over the integration you created, and click the **Activate** icon
     ![Click to Activate Integration](images/click-activate-integration.png)
 
-2. On the *Activate Integration* dialog, select **Debug** as tracing level.
+2. In the *Activate Integration* dialog, select **Debug** as tracing level.
 
 3. Click **Activate**.
 
