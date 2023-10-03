@@ -28,8 +28,8 @@ This lab assumes you have:
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Schedule***.
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, select and click on ***Schedule***.
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -208,8 +208,8 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 5. From the **Operations** page,
     - select ***Write File*** from the **Select Operation** list
     - select ***ASCII*** for the **Select A Transfer Mode**
-    - Enter ***/home/users/```<<your oic username>>```/Output*** in the **Output Directory** field
-    - Enter ***newCandidateRecord%yyyyMMddHHmmss%.csv.*** in the **File Name Pattern** field
+    - Enter ***/upload/users/```<<your oic usernumber>>```*** in the **Output Directory** field
+    - Enter ***newCandidateRecord%yyyyMMddHHmmss%.csv*** in the **File Name Pattern** field
         - This pattern will append the year, month, date, and time to the prefix newCandidateRecord. For example, if you wrote the file on Feb 16th 2023 at 04:21:00 P.M., the file name would be newCandidateRecord20230216042100.csv
     - Click ***&gt; (Next Step)***.  
 6. From the **Schema** page,

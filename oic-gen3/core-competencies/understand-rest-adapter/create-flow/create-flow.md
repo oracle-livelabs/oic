@@ -35,9 +35,9 @@ This lab assumes you have:
 
 2. On the *Integrations page*, click **Create**.
 
-3. On the *Integration Style* dialog, select and click on **Application driven orchestration**.
+3. On the *Create integration* dialog, select and click on **Application**.
 
-4. In the *Create New Integration* dialog, enter the following information:
+4. In the *Create integration* dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |

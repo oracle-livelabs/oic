@@ -24,16 +24,16 @@ We will start by creating a new integration and adding some basic info.
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the Integrations page, click ***Create***.
-3. On the *Integration Style* dialog, Click on ***Application***.
+3. On the *Create integration* dialog, Click on ***Application***.
 
-4. In the *Create New Integration* dialog, enter the following information and Click ***Create***.
+4. In the *Create integration* dialog, enter the following information and Click ***Create***.
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | Name         | `LLERPEventDemo`       |
     | Description  | `ERP Event integration for LiveLabs demo` |
     |
-    {: title="Create New Integration"}
+    {: title="Create integration"}
 
     Accept all other default values.
 

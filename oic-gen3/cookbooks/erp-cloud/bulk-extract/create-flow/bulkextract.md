@@ -35,8 +35,8 @@ This lab assumes you have:
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Schedule***
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, select and click on ***Schedule***
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -140,8 +140,8 @@ A confirmation message appears.
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, click on ***Application***
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, click on ***Application***
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -247,7 +247,7 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
      - Click ***&gt; (Next Step)***.
 5. From the **Operations** page,
     - select ***Write File*** from the **Select Operation** list
-    - Enter ***/home/users/```<<your oic usernumber>>```/Output*** in the **Output Directory** field
+    - Enter ***/upload/users/```<<your oic usernumber>>```*** in the **Output Directory** field
     - Enter ***PayablesExtract.xml*** in the **File Name Pattern** field
     - Click ***&gt; (Next Step)***.  
 6. From the **Schema** page,

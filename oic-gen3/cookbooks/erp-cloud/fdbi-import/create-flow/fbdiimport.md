@@ -70,7 +70,7 @@ A file browser dialog appears.
 ## Task 2: Upload the FBDI file to the FTP Server
 1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
 2. Copy the apinvoiceimport.zip file to the following directory.
-/home/users/```<your-folder-name>```/Output
+/upload/users/```<<your oic usernumber>>```
 
 
     > **Note:** Please create directory if it is not there by following the steps given in the setup lab.
@@ -78,8 +78,8 @@ A file browser dialog appears.
 ## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Schedule***
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, select and click on ***Schedule***
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -91,7 +91,7 @@ A file browser dialog appears.
     <copy>This integration demonstrates the use of OIC’s ERP Cloud Adapter with the FTP adapter to retrieve an AP Invoices file, import it to the ERP Cloud.</copy
     ```
     |
-    {: title="Create New Integration"}
+    {: title="Create integration"}
 
     Accept all other default values.
 
@@ -115,7 +115,7 @@ A file browser dialog appears.
 
     | **Element**        | **Value**   |
     | --- | ----------- |
-    | Input Directory         | /home/users/```<your-folder-name>```/Output |
+    | Input Directory         | /upload/users/```<<your oic usernumber>>``` |
     | File Name | apinvoiceimport.zip |
     {: title="File Properties"}
 

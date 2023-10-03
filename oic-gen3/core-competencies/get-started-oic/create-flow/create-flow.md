@@ -27,13 +27,13 @@ We will start by creating a new integration and adding some basic info.
 2. On the Integrations page, click ***Create***.
 3. On the *Create integration* dialog, Click on **Schedule**
 
-4. In the *Create New Integration* dialog, enter the following information:
+4. In the *Create integration* dialog, enter the following information:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | Name         | `LL Insert Sales Orders to ADW`       |
     | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
-    {: title="Create New Integration"}
+    {: title="Create integration"}
 
     Accept all other default values.
 
@@ -59,7 +59,7 @@ Add FTP Invoke to integration canvas.
     | --- | ----------- |
     | Select Operation        | **Download File**       |
     | Select a Transfer Mode  | **Binary** |
-    | Input Directory | **/home/users/`<your-folder-name>`/Output** |
+    | Input Directory | ***/upload/users/```<<your oic usernumber>>```*** |
     | File Name | **sales_orders.csv** |
     | Download Directory | **/tmp/stage** |
     {: title="File Server Operations"}

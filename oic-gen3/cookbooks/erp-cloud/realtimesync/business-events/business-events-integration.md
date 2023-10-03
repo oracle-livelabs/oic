@@ -34,8 +34,8 @@ This lab assumes you have:
 ##	Task 1: Create the PO Event Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, Click on ***Application***.
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, Click on ***Application***.
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -97,7 +97,7 @@ This invokes the FTP adapter Configuration Wizard.
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | Select Operation | Write File  |
-    | Output Directory | /home/users/***your username***/Output  |
+    | Output Directory | /upload/users/```<<your oic usernumber>>```  |
     | File Name Pattern | PO%SEQ%.json  |
 
     Leave the rest as default.

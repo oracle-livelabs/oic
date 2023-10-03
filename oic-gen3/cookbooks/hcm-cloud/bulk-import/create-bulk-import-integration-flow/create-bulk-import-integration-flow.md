@@ -196,11 +196,11 @@ Stop | Stop | The end of the integration.
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
-3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/&lt;username&gt;/Output**
+3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory ***/upload/users/```<<your oic usernumber>>```***
 
 4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
-5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/&lt;username&gt;/Output**. Click *Next*.
+5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter ***/upload/users/```<<your oic usernumber>>```***. Click *Next*.
 The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
 6.  Click *Next*. Review the summary and click *Done*.
