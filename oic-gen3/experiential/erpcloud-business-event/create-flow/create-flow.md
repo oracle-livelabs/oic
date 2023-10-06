@@ -48,7 +48,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 2. On the Basic Info page, for *What do you want to call your endpoint?* element, enter `ERP_POEvent`.
 
-3. Click ***&gt; (Next step)***.
+3. Click ***Continue***.
 
 4. On the Request page, select the following values:
 
@@ -68,7 +68,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     > **Note:** The filter is not required, however it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-5. Click ***&gt; (Next step)***.
+5. Click ***Continue***.
 
 6. On the Summary page, click ***Done***.
 
@@ -96,7 +96,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     |
     {: title="ADW Basic Information"}
 
-3. Click ***&gt; (Next step)***.
+3. Click ***Continue***.
 
 4. On the Table Operation page, select the following values:
 
@@ -112,9 +112,9 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table1.png)
 
-5. Click on **Import Tables**, wait and press ***&gt; (Next step)***.
+5. Click on **Import Tables**, wait and press ***Continue***.
 
-6. When the *Select the parent database table* element appears, click ***&gt; (Next step)***.
+6. When the *Select the parent database table* element appears, click ***Continue***.
 
 7. On the Summary page, click ***Done***.
 

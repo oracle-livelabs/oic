@@ -53,19 +53,19 @@ This lab assumes you have:
 2. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***ShortBIPReport***
      - for the **What does this endpoint do?** element, enter ***This endpoint defines the REST interface.***
-     - Click ***&gt; (Next step)***.
+     - Click ***Continue***.
 3. From the **Resource Configuration** page,
     - for the **What does this operation do?** element, enter ***Retrieves ledgers from the ERP system.***
     - for the **What is the endpoint's relative resource URI?**, enter ***/BIP***
     - for the **What action do you want to perform on the endpoint?**, enter ***GET***
     - Select ***Add and review parameters for this endpoint*** checkbox
     - Select ***Configure this endpoint to receive the response*** checkbox
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 4. From the **Request Parameters** page, in the **Specify Query Parameter section**, click ***Add***
 A new row appears.
     - Enter ***LedgerName*** in the **Name** column and select ***string*** from the **Date Type** column
     - Click ***Add***, Enter ***ReportAbsolutePath*** in the **Name** column and select ***string*** from the **Date Type** column
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 
 5. On the **Response** Page
     - Select the **response payload format** to ***JSON Sample***
@@ -92,7 +92,7 @@ A new row appears.
         ```
     - In the **What is the media-type of Response Body?** Select ***JSON***, It is select by Default. If not, you will have to select it explicitly.
 
-6. Click ***&gt; (Next step)***
+6. Click ***Continue***
 7. Review the summary and click ***Done***.
 8. Click ***Save*** to persist changes.
 
@@ -102,12 +102,12 @@ A new row appears.
 Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***GetBIPReport***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 3. On the **Operations** page,
     - for the **Select Operation list** element, enter ***runReport***
-    - Click ***&gt; (Next step)***.    
+    - Click ***Continue***.    
 3. On the **Headers** page,
-    - Click ***&gt; (Next step)***.    
+    - Click ***Continue***.    
 4. Review the summary and click ***Done***
 5. Click ***Save*** to persist changes
 6. If required, click on Zoom out/in to view the complete flow.
@@ -144,18 +144,18 @@ A map action named GetBIPReport is automatically created. We will define this da
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Write File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
     - for the **Specify the Output Directory** element, select ***"/tmp"***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 5. On the **Schema Options** page,
       - select ***XML Schema (XSD) document***
-      - Click ***&gt; (Next step)***.
+      - Click ***Continue***.
 6. On the **Format Definition** page,
       - click ***Drag and Drop*** and select the ***opaque_schema.xsd*** which you have downloaded
-      - Click ***&gt; (Next step)***.
+      - Click ***Continue***.
 7. Review the summary and click ***Done***
 8. Click ***Save*** to persist changes
     ![StageFileWrite](../images/stagefilewrite.png)
@@ -176,19 +176,19 @@ A map action named StageFileWrite is automatically created. We will define this 
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 3. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Read Entire File***
     - for the **Specify the File Name** element, select ***"temp.csv"***
     - for the **Specify the Directory** element, select ***"/tmp"***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 4. On the **Schema Options** page,
-      - Click ***&gt; (Next step)***.
+      - Click ***Continue***.
 5. On the **Format Definition** page,
       - click ***Drag and Drop*** and select the ***GLCCReport.csv*** which you have downloaded
       - for the **Enter Record Name**, enter ***Ledger***
       - for the **Enter Record Name**, enter ***LedgerSet***
-      - Click ***&gt; (Next step)***.
+      - Click ***Continue***.
 6. Review the summary and click ***Done***
 7. Click ***Save*** to persist changes
     ![ReadFileFromStage](../images/readfilefromstage.png)

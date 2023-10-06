@@ -51,7 +51,7 @@ Add FTP Invoke to integration canvas.
 
 3. On the *Basic Info* page,
     - for *What do you want to call the endpoint?* element, enter **downloadSalesOrders**. Leave the rest as defaults.
-    - Click **&gt; (Next Step)**
+    - Click **Continue**
 
 4. On the *Operations* page, Select the following values:
 
@@ -66,7 +66,7 @@ Add FTP Invoke to integration canvas.
 
     ![FTP Invoke Operations Page](images/ftp-invoke-operations-page.png)
 
-    - Click **&gt; (Next Step)**
+    - Click **Continue**
 
 5. On the *Summary* page, review the configuration and click **Done**.
 
@@ -91,7 +91,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
     {: title="ADW Basic Info"}
 
-    - Click **&gt; (Next Step)**
+    - Click **Continue**
 
 3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
 
@@ -125,7 +125,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     Leave the rest of the values as default and Select **Ok**.
 
-5. Click **&gt; (Next Step)**
+5. Click **Continue**
 
 6. On the Summary page, review the configuration and click **Done**.
 

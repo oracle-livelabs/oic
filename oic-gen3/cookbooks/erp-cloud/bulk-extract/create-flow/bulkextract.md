@@ -64,15 +64,15 @@ This lab assumes you have:
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***InitiateExtract***
      - for the **What does this endpoint do?** element, enter ***This endpoint starts the extraction of payable transactions***
-     - Click ***&gt; (Next Step)***.
+     - Click ***Continue***.
 4. From the **Actions** page,
     - select ***Query, Create, Update or Delete Information*** option
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
 4. From the **Operations** page,
     - select ***Services*** from the **Browse by** list
     - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
     - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
     ![InitiateExtract](../images/initiateextract.png)
@@ -166,14 +166,14 @@ A confirmation message appears.
 2. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***BulkExtractCallback***
      - for the **What does this endpoint do?** element, enter ***This endpoint defines an ERP Cloud callback.***
-     - Click ***&gt; (Next Step)***.
+     - Click ***Continue***.
 3. From the **Operations** page,
     - select ***onJobCompletion*** from the **Selected Operation**
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
 4. From the **Callback Operations** page,
     - select ***No Response*** (It is a Default option. If not, select No Response)
-    - Click ***&gt; (Next Step)***.
-5. From the **Headers** page, keep defaults and Click ***&gt; (Next Step)***
+    - Click ***Continue***.
+5. From the **Headers** page, keep defaults and Click ***Continue***
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
     ![callback trigger](../images/callbacktrigger.png)
@@ -184,15 +184,15 @@ A confirmation message appears.
 The Configure SOAP Endpoint wizard appears.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***DownloadFile***
-     - Click ***&gt; (Next Step)***.
+     - Click ***Continue***.
 4. From the **Operations** page,
     - select ***getDocumentsForFilePrefix*** from the **Operation** list
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
     > **Note:**  Be careful to select the correct operation as many of them have similiar names.    
 
 5. From the **Headers** page,
     - select ***Accept attachments in response***
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
 
     > **Note:**  The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
     If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
@@ -244,15 +244,15 @@ A map action named DownloadFile is automatically created. We will define this da
 The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***WriteExtract***
-     - Click ***&gt; (Next Step)***.
+     - Click ***Continue***.
 5. From the **Operations** page,
     - select ***Write File*** from the **Select Operation** list
     - Enter ***/upload/users/```<<your oic usernumber>>```*** in the **Output Directory** field
     - Enter ***PayablesExtract.xml*** in the **File Name Pattern** field
-    - Click ***&gt; (Next Step)***.  
+    - Click ***Continue***.  
 6. From the **Schema** page,
     - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
-    - Click ***&gt; (Next Step)***.
+    - Click ***Continue***.
 7. Review the summary and click ***Done***.
 8. Click ***Save*** to persist changes.
     ![writeextract2ftp](../images/writeextract2ftp.png)

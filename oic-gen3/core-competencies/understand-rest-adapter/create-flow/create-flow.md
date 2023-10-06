@@ -59,7 +59,7 @@ This lab assumes you have:
 2. On the *Basic Info* page,
      - for the *What do you want to call your endpoint?* element, enter **getCustomerOrders**
      - for the *What does this endpoint do?* element, enter *This endpoint defines the REST interface to get customer orders.*
-     - Click **&gt; (Next step)**.
+     - Click **Continue**.
 
 3. In the *Resource Configuration** page,
     - for the *What does this operation do?* element, enter **get orders for customers.**
@@ -67,11 +67,11 @@ This lab assumes you have:
     - for the *What action do you want to perform on the endpoint?*, select **GET**
     - Select *Add and review parameters for this endpoint* checkbox
     - Select *Configure this endpoint to receive the response* checkbox
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
 
 4. From the *Request Parameters* page, in the *Specify Query Parameter section*, click **Add**. A new row appears.
     - Enter **customer_id** in the *Name* column and select **string** from the *Date Type* column
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
     ![Query Parameter Page](images/rest-adapter-query-parameter-page.png)
 
 5. On the **Response** Page
@@ -110,7 +110,7 @@ This lab assumes you have:
         ```
     - In the **What is the media-type of Response Body?** Select **JSON**
 
-6. Click **&gt; (Next step)***
+6. Click **Continue***
 
 7. Review the summary and click **Done**.
 
@@ -126,16 +126,16 @@ Search for the *REST Inventory OAS* connection which was created in the previous
 
 3. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* element, enter **getCustomer**
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
 
 3. On the *Operations* page,
     - for the *Operation Selection* Resource, select  **/customer** and for *Verbs* select **GET**
       Note: The endpoints are automatically listed. REST adapter supports discovery of resources from Open API catalog url configured in the connection.
-    - Click **&gt; (Next step)**.    
+    - Click **Continue**.    
 
 4. On the **Request Parameters** page,
     - Shuttle the *p\_customer\_id* field from *Available Query parameters* to *Selected Query Parameters*
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
 
 5. Review the summary and click **Done**
 
@@ -164,16 +164,16 @@ A map action named getCustomer is automatically created. We will define this dat
 
 3. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* element, enter **getOrdersForCustomer**
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
 
 3. On the *Operations* page,
     - for the *Operation Selection* Resource, select  **/order** and for *Verbs* select **GET**
       Note: The endpoints are automatically listed. REST adapter supports the discovery of resources from Open API catalog url configured in the connection.
-    - Click **&gt; (Next step)**.    
+    - Click **Continue**.    
 
 4. On the **Request Parameters** page,
     - Shuttle the *p\_customer\_id* field from *Available Query parameters* to *Selected Query Parameters*
-    - Click **&gt; (Next step)**.
+    - Click **Continue**.
 
 5. Review the summary and click **Done**
 

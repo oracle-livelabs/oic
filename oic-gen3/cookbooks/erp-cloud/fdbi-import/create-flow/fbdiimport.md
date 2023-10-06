@@ -107,11 +107,11 @@ A file browser dialog appears.
 3. On the Basic Info page,
      - for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***
      - for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***
-     - Click ***&gt; (Next step)***.
+     - Click ***Continue***.
 4. From the **Operations** page,
     - select ***Read a File*** as an Operation
     - from the **Select a Transfer Mode** option, select ***ASCII***
-    - Enter the following values and Click ***&gt; (Next step)***.
+    - Enter the following values and Click ***Continue***.
 
     | **Element**        | **Value**   |
     | --- | ----------- |
@@ -121,7 +121,7 @@ A file browser dialog appears.
 
 5. On the **Schema** page,
     - in the **Do you want to specify the structure for the contents of the file** section, select No.
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 6. Review the summary and click ***Done***.
 7. Click ***Save*** to persist changes.
     ![ReadFileFromFTP](../images/read-filefromftp.png)
@@ -134,17 +134,17 @@ The Configure Oracle ERP Cloud Endpoint wizard appears.
 4. On the Basic Info page,
     - In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
     - In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 5. On the Actions page,
     - select ***Import Bulk Data into Oracle ERP Cloud***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 6. On the Operations page,
     - select ***Import Payables Invoices*** (Search for it)
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 7. On the Response page, select the following options:
     - From the **Notification Mode** list, select ***Email & Bell Notification***
     - From the **Occurrence** list, select ***Send in any case***.
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 8. Review the summary and click ***Done***.
 9. Click ***Save*** to persist changes.
     ![UploadFiletoERP](../images/upload-file-to-erp.png)
