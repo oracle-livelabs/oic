@@ -70,7 +70,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 5. Click ***Continue***.
 
-6. On the Summary page, click ***Done***.
+6. On the Summary page, click ***Finish***.
 
     ![ERP Adapter Wizard Summary](images/erp-adapter-summary.png)
 
@@ -116,7 +116,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 6. When the *Select the parent database table* element appears, click ***Continue***.
 
-7. On the Summary page, click ***Done***.
+7. On the Summary page, click ***Finish***.
 
     ![Summary in ADW Wizard](images/adw-wizard-summary.png)
 

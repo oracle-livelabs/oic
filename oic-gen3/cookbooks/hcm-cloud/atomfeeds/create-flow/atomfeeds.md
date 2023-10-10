@@ -74,7 +74,7 @@ Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
       - Scroll down, From the **Max entries to process** list, select ***250***
     > **Note:**  This ensures that most customers have all their new hires appear in the ATOM Feed response.
 
-7. Click ***Continue*** and Review the summary and click ***Done***
+7. Click ***Continue*** and Review the summary and click ***Finish***
 8. Click ***Save*** to persist changes
 
 ## Task 5: Define the Data Mapping
@@ -159,7 +159,7 @@ Let's write each new record to a stage file.
     - for the **Enter the Record Name** field, enter ***User***
     - for the **Enter the Recordset Name** field, enter ***NewUser***
     - Click ***Continue***.
-7. Review the summary and click ***Done***
+7. Review the summary and click ***Finish***
 8. Click ***Save*** to persist changes
 
 
@@ -215,7 +215,7 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 6. From the **Schema** page,
     - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
     - Click ***Continue***.
-7. Review the summary and click ***Done***.
+7. Review the summary and click ***Finish***.
 8. Click ***Save*** to persist changes.
     ![writestagefile2ftp](../images/writestagefile2ftp.png)
 

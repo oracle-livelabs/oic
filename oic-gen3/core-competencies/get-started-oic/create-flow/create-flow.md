@@ -68,7 +68,7 @@ Add FTP Invoke to integration canvas.
 
     - Click **Continue**
 
-5. On the *Summary* page, review the configuration and click **Done**.
+5. On the *Summary* page, review the configuration and click **Finish**.
 
 6. Click on **Save** to apply your changes.
 
@@ -127,7 +127,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 5. Click **Continue**
 
-6. On the Summary page, review the configuration and click **Done**.
+6. On the Summary page, review the configuration and click **Finish**.
 
     ![Summary in ADW Wizard](images/adw-wizard-summary.png)
 

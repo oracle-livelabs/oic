@@ -112,7 +112,7 @@ This lab assumes you have:
 
 6. Click **Continue***
 
-7. Review the summary and click **Done**.
+7. Review the summary and click **Finish**.
 
 8. Click **Save** to persist changes.
 
@@ -137,7 +137,7 @@ Search for the *REST Inventory OAS* connection which was created in the previous
     - Shuttle the *p\_customer\_id* field from *Available Query parameters* to *Selected Query Parameters*
     - Click **Continue**.
 
-5. Review the summary and click **Done**
+5. Review the summary and click **Finish**
 
 6. Click **Save** to persist changes
 
@@ -175,7 +175,7 @@ A map action named getCustomer is automatically created. We will define this dat
     - Shuttle the *p\_customer\_id* field from *Available Query parameters* to *Selected Query Parameters*
     - Click **Continue**.
 
-5. Review the summary and click **Done**
+5. Review the summary and click **Finish**
 
 6. Click **Save** to persist changes
 

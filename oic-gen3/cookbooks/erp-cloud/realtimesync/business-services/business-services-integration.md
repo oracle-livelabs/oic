@@ -132,7 +132,7 @@ The Configure REST Endpoint wizard appears.
     </copy>
     ```
       - In the **What is the media-type of Response Body?** Select ***JSON***(By default, this option is selected if not, you need to select)
-      - Select ***Continue*** and Click ***Done*** on Summary page.
+      - Select ***Continue*** and Click ***Finish*** on Summary page.
       - Click ***Save*** to apply changes.
 
 ## Task 3: Configure Validate Business Unit
@@ -150,7 +150,7 @@ The Configure REST Endpoint wizard appears.
     - for **Select a Business Resource**, search for ***FinBusinessUnitsLOV*** and select
     - **Select the operation** as ***getAll*** and click ***Continue***
 
-7.  On the **Summary** page, Select ***Done***
+7.  On the **Summary** page, Select ***Finish***
 
 ## Task 4: Define the Data Mapping (validateBusinessUnit)
 
@@ -243,7 +243,7 @@ Let's check if the Business Unit sent in the Request payload is Valid or not.
 
     ![createinvoicesummary](images/createinvoicesummary.png)
 
-6.  In the **Summary** page Select ***Done***
+6.  In the **Summary** page Select ***Finish***
 
     ![createERPInvoice](images/create-erp-invoice.png)
 7. Click ***Save*** to persist changes.

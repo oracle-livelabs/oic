@@ -73,7 +73,7 @@ This lab assumes you have:
     - In the **Select a Service** field, enter ***ERPIntegrationService*** and select it from the list
     - If required, scroll down the page(not the previous component), from **Select the Operation to perform on the Business Service** list, select ***Export Bulk Data***
     - Click ***Continue***.
-6. Review the summary and click ***Done***.
+6. Review the summary and click ***Finish***.
 7. Click ***Save*** to persist changes.
     ![InitiateExtract](../images/initiateextract.png)
 
@@ -174,7 +174,7 @@ A confirmation message appears.
     - select ***No Response*** (It is a Default option. If not, select No Response)
     - Click ***Continue***.
 5. From the **Headers** page, keep defaults and Click ***Continue***
-6. Review the summary and click ***Done***.
+6. Review the summary and click ***Finish***.
 7. Click ***Save*** to persist changes.
     ![callback trigger](../images/callbacktrigger.png)
 
@@ -197,7 +197,7 @@ The Configure SOAP Endpoint wizard appears.
     > **Note:**  The SOAP adapter allows rich capability to accept content as an attachment, instead of base64-encoded data.
     If you don't see this option, it is likely you selected the wrong operation. Click Back and verify you have the correct operation.
 
-6. Review the summary and click ***Done***.
+6. Review the summary and click ***Finish***.
 7. Click ***Save*** to persist changes.
     ![Download File](../images/downloadfile.png)
 
@@ -253,7 +253,7 @@ The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 6. From the **Schema** page,
     - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
     - Click ***Continue***.
-7. Review the summary and click ***Done***.
+7. Review the summary and click ***Finish***.
 8. Click ***Save*** to persist changes.
     ![writeextract2ftp](../images/writeextract2ftp.png)
 

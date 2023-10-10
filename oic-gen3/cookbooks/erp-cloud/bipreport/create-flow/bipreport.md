@@ -70,7 +70,7 @@ A new row appears.
 5. On the **Response** Page
     - Select the **response payload format** to ***JSON Sample***
     - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-    - Provide the below JSON and Click ***Ok***
+    - Provide the below JSON and Click ***Continue***
 
         ```
         <copy>
@@ -93,7 +93,7 @@ A new row appears.
     - In the **What is the media-type of Response Body?** Select ***JSON***, It is select by Default. If not, you will have to select it explicitly.
 
 6. Click ***Continue***
-7. Review the summary and click ***Done***.
+7. Review the summary and click ***Finish***.
 8. Click ***Save*** to persist changes.
 
 
@@ -108,7 +108,7 @@ Search for the **ERP Cloud External Report Service** connection which you have c
     - Click ***Continue***.    
 3. On the **Headers** page,
     - Click ***Continue***.    
-4. Review the summary and click ***Done***
+4. Review the summary and click ***Finish***
 5. Click ***Save*** to persist changes
 6. If required, click on Zoom out/in to view the complete flow.
     ![GetBIPReport](../images/getbipreport.png)
@@ -156,7 +156,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
 6. On the **Format Definition** page,
       - click ***Drag and Drop*** and select the ***opaque_schema.xsd*** which you have downloaded
       - Click ***Continue***.
-7. Review the summary and click ***Done***
+7. Review the summary and click ***Finish***
 8. Click ***Save*** to persist changes
     ![StageFileWrite](../images/stagefilewrite.png)
 
@@ -189,7 +189,7 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
       - for the **Enter Record Name**, enter ***Ledger***
       - for the **Enter Record Name**, enter ***LedgerSet***
       - Click ***Continue***.
-6. Review the summary and click ***Done***
+6. Review the summary and click ***Finish***
 7. Click ***Save*** to persist changes
     ![ReadFileFromStage](../images/readfilefromstage.png)
 
