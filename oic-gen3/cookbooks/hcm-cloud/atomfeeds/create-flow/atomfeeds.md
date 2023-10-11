@@ -28,8 +28,8 @@ This lab assumes you have:
 
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Schedule***.
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, select and click on ***Schedule***.
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -65,16 +65,16 @@ Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.
 2. Search for **HCM Cloud** and select it.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***getNewHireATOMFeed***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 4. On the **Actions** page,
     - select ***Subscribe to Updates (via ATOM Feed)***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 5. On the **Operations** page,
       - from the **Select an ATOM Feed** list, select ***Employee New Hire***
       - Scroll down, From the **Max entries to process** list, select ***250***
     > **Note:**  This ensures that most customers have all their new hires appear in the ATOM Feed response.
 
-7. Click ***&gt; (Next step)*** and Review the summary and click ***Done***
+7. Click ***Continue*** and Review the summary and click ***Finish***
 8. Click ***Save*** to persist changes
 
 ## Task 5: Define the Data Mapping
@@ -145,21 +145,21 @@ Let's write each new record to a stage file.
     Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***WriteRecordToStage***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 4. On the **Configure Operation** page,
     - for the **Choose Stage File Operation** element, select ***Write File***
     - for the **Specify the File Name** element, enter ***"newCandidateRecord.csv"***
     - for the **Specify the Output Directory** element, select ***"/tmp"***
     - Select **Append to Existing File**
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 5. On the **Schema Options** page,
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 6. On the **Format Definition** page,
     - click ***Drag and Drop*** and select the ***newEmployeeFile.csv*** which you have downloaded
     - for the **Enter the Record Name** field, enter ***User***
     - for the **Enter the Recordset Name** field, enter ***NewUser***
-    - Click ***&gt; (Next step)***.
-7. Review the summary and click ***Done***
+    - Click ***Continue***.
+7. Review the summary and click ***Finish***
 8. Click ***Save*** to persist changes
 
 
@@ -204,18 +204,18 @@ A Map action named **Map WriteRecordToStage** is automatically created. We'll de
 The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***WriteStageFileToFTP***
-     - Click ***&gt; (Next Step)***.
+     - Click ***Continue***.
 5. From the **Operations** page,
     - select ***Write File*** from the **Select Operation** list
     - select ***ASCII*** for the **Select A Transfer Mode**
-    - Enter ***/home/users/```<<your oic username>>```/Output*** in the **Output Directory** field
-    - Enter ***newCandidateRecord%yyyyMMddHHmmss%.csv.*** in the **File Name Pattern** field
+    - Enter ***/upload/users/```<<your oic usernumber>>```*** in the **Output Directory** field
+    - Enter ***newCandidateRecord%yyyyMMddHHmmss%.csv*** in the **File Name Pattern** field
         - This pattern will append the year, month, date, and time to the prefix newCandidateRecord. For example, if you wrote the file on Feb 16th 2023 at 04:21:00 P.M., the file name would be newCandidateRecord20230216042100.csv
-    - Click ***&gt; (Next Step)***.  
+    - Click ***Continue***.  
 6. From the **Schema** page,
     - select ***No*** to the **Do you want to specify the structure for the contents of the file?**
-    - Click ***&gt; (Next Step)***.
-7. Review the summary and click ***Done***.
+    - Click ***Continue***.
+7. Review the summary and click ***Finish***.
 8. Click ***Save*** to persist changes.
     ![writestagefile2ftp](../images/writestagefile2ftp.png)
 
@@ -276,4 +276,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, March 2023
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2023

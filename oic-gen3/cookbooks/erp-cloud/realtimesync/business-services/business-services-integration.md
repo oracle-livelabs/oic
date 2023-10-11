@@ -34,8 +34,8 @@ This lab assumes you have:
 ##	Task 1: Create the Invoice Validation Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, click on ***Application***.
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, click on ***Application***.
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -62,7 +62,7 @@ The Configure REST Endpoint wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?**, enter ***createInvoice***
      - for the **What does this endpoint do?**, enter ***This endpoint defines the REST interface***
-     - Click ***&gt; (Next step)***
+     - Click ***Continue***
 
 5.  On the Resource Configuration page,
     - for the **What does this operation do?**, enter ***Creates Invoice in ERP Cloud***
@@ -70,12 +70,12 @@ The Configure REST Endpoint wizard appears.
     - for the **What action do you want to perform on the endpoint?:**, enter select ***POST***
     - Select ***Configure request payload for this endpoint***
     - Select ***Configure this endpoint to receive the response***
-    - Click ***&gt; (Next step)***
+    - Click ***Continue***
 
 6. On the **Request** Page
     - Select the **Request Payload Format** to ***JSON Sample***
     - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-    - Provide the below JSON and Click ***Ok*** (Scroll down to see the Ok button)
+    - Provide the below JSON and Click ***Continue*** (Scroll down to see the Ok button)
 
     ```
     <copy>
@@ -105,12 +105,12 @@ The Configure REST Endpoint wizard appears.
     </copy>
     ```
     - In the **What is the media-type of Request Body?** Select ***JSON*** (By default, this option is selected if not, you need to select)
-    - Select ***&gt; (Next step)***
+    - Select ***Continue***
 
 7. On the **Response** Page,
       - Select the **Request Payload Format** to ***JSON Sample***
       - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-      - Provide the below JSON and Click ***Ok*** (Scroll down to see the Ok button)
+      - Provide the below JSON and Click ***Continue*** (Scroll down to see the Ok button)
 
     ```
     <copy>
@@ -132,7 +132,7 @@ The Configure REST Endpoint wizard appears.
     </copy>
     ```
       - In the **What is the media-type of Response Body?** Select ***JSON***(By default, this option is selected if not, you need to select)
-      - Select ***&gt; (Next step)*** and Click ***Done*** on Summary page.
+      - Select ***Continue*** and Click ***Finish*** on Summary page.
       - Click ***Save*** to apply changes.
 
 ## Task 3: Configure Validate Business Unit
@@ -140,17 +140,17 @@ The Configure REST Endpoint wizard appears.
 
 2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page, name your endpoint ***validateBusinessUnit***. Click ***&gt; (Next step)***
+3.  In the **Basic Info** page, name your endpoint ***validateBusinessUnit***. Click ***Continue***
 
-5.  In the **Actions** page, Select ***Query,Create,Update or Delete Information***. Click ***&gt; (Next step)***
+5.  In the **Actions** page, Select ***Query,Create,Update or Delete Information***. Click ***Continue***
 
 6.  On the **Operations** page,
     - In the **Browse by** list of values, Select ***Business (REST) Resources***
     - for **Select a Service Application**, Select ***fscmRestApp***
     - for **Select a Business Resource**, search for ***FinBusinessUnitsLOV*** and select
-    - **Select the operation** as ***getAll*** and click ***&gt; (Next step)***
+    - **Select the operation** as ***getAll*** and click ***Continue***
 
-7.  On the **Summary** page, Select ***Done***
+7.  On the **Summary** page, Select ***Finish***
 
 ## Task 4: Define the Data Mapping (validateBusinessUnit)
 
@@ -227,23 +227,23 @@ Let's check if the Business Unit sent in the Request payload is Valid or not.
 
 2.  Begin typing ***ERP Cloud*** Service in the Search field and Select the ERP Cloud Connection
 
-3.  In the **Basic Info** page name your endpoint ***createERPInvoice*** and click ***&gt; (Next step)***
+3.  In the **Basic Info** page name your endpoint ***createERPInvoice*** and click ***Continue***
 
-4.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***&gt; (Next step)***
+4.  In the **Actions** page Select ***Query,Create,Update or Delete Information***. Click ***Continue***
 
 5.  In the **Operations** page
     - In the **Browse by** list of values, Select ***Business (REST) Resources***
     - for **Select a Service Application**, Select ***fscmRestApp***
     - for **Select a Business Resource**, search for ***Invoices*** and Select it
     - for **Select the operation**, select ***create***
-    - click ***&gt; (Next step)***
+    - click ***Continue***
     - for **Child Resource** Select ***invoiceLines*** and Move to the **Your Selected Child Resource(s)** box.
-    - click ***&gt; (Next step)***
-    - In the **Select Flexfield contexts**, Do not Select anything and Click ***&gt; (Next step)***
+    - click ***Continue***
+    - In the **Select Flexfield contexts**, Do not Select anything and Click ***Continue***
 
     ![createinvoicesummary](images/createinvoicesummary.png)
 
-6.  In the **Summary** page Select ***Done***
+6.  In the **Summary** page Select ***Finish***
 
     ![createERPInvoice](images/create-erp-invoice.png)
 7. Click ***Save*** to persist changes.
