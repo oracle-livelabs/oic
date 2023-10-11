@@ -458,7 +458,7 @@ Add ERP PO Event trigger to the empty integration canvas.
     2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
 6. Click *Continue*.
-7. On the **Summary** page, click *Done*.
+7. On the **Summary** page, click *Finish*.
 8. Click *Save* to persist changes.
 9. Optional, Select Layout to *Horizontal* and click *Save* to apply changes.
     ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
