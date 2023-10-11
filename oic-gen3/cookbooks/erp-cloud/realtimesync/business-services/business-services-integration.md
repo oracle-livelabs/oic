@@ -75,7 +75,7 @@ The Configure REST Endpoint wizard appears.
 6. On the **Request** Page
     - Select the **Request Payload Format** to ***JSON Sample***
     - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-    - Provide the below JSON and Click ***Ok*** (Scroll down to see the Ok button)
+    - Provide the below JSON and Click ***Continue*** (Scroll down to see the Ok button)
 
     ```
     <copy>
@@ -110,7 +110,7 @@ The Configure REST Endpoint wizard appears.
 7. On the **Response** Page,
       - Select the **Request Payload Format** to ***JSON Sample***
       - Click the ***&lt&lt&ltinline&gt&gt&gt*** link.
-      - Provide the below JSON and Click ***Ok*** (Scroll down to see the Ok button)
+      - Provide the below JSON and Click ***Continue*** (Scroll down to see the Ok button)
 
     ```
     <copy>

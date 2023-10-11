@@ -77,7 +77,7 @@ This lab assumes you have:
 5. On the **Response** Page
     - Select the *response payload format* to **JSON Sample**
     - Click the **&lt&lt&ltinline&gt&gt&gt** link.
-    - Provide the below JSON and Click **OK**
+    - Provide the below JSON and Click **Continue**
 
         ```
         <copy>
