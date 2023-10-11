@@ -122,7 +122,7 @@ A file browser dialog appears.
 5. On the **Schema** page,
     - in the **Do you want to specify the structure for the contents of the file** section, select No.
     - Click ***Continue***.
-6. Review the summary and click ***Done***.
+6. Review the summary and click ***Finish***.
 7. Click ***Save*** to persist changes.
     ![ReadFileFromFTP](../images/read-filefromftp.png)
 
@@ -145,7 +145,7 @@ The Configure Oracle ERP Cloud Endpoint wizard appears.
     - From the **Notification Mode** list, select ***Email & Bell Notification***
     - From the **Occurrence** list, select ***Send in any case***.
     - Click ***Continue***.
-8. Review the summary and click ***Done***.
+8. Review the summary and click ***Finish***.
 9. Click ***Save*** to persist changes.
     ![UploadFiletoERP](../images/upload-file-to-erp.png)
 
