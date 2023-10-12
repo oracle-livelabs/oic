@@ -1,0 +1,40 @@
+{
+    "workshoptitle": "Enhancing HCM Journeys with Oracle Process Automation",
+    "help": "livelabs-help-oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Create an OPA Application (Design)",
+            "description": "Lab to create a process application using Structured Process",
+            "filename": "../../create-opa-app/create-opa-app.md"
+        },
+        {
+            "title": "Lab 2: Create a REST API Connector",
+            "description": "Lab to setup and configure HCM Journey Booster",
+            "filename": "../../create-api-connector/create-api-connector.md"
+        },
+        {
+            "title": "Lab 3: Create a Structured Process",
+            "description": "Lab to create a structured process to be used with HCM Journeys",
+            "filename": "../../create-structured-process/create-structured-process.md"
+        },
+        {
+            "title": "Lab 4: Create a new HCM Cloud Journey",
+            "description": "Lab to setup and configure HCM Journey Booster",
+            "filename": "../../create-hcm-journey/create-hcm-journey.md"
+        },
+        {
+            "title": "Lab 5: Assign HCM Journey to Employee",
+            "description": "Walks through the end user experience for the employee actor in the runtime interaction with the HCM Journey Booster experience",
+            "filename": "../../assign-journey/assign-journey.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
