@@ -32,7 +32,7 @@ This will open the Configure Checklist Integration page listing any existing int
 
 |Field|	Type |	Value |
 |--|	-- |	-- |
-|Integration Category|	Drop down	|Process Automation|
+|Integration Category|	Drop down	|OPA|
 |Integration Type|	Drop down |	Structured process|
 |Integration Code	|Text entry|	LLUniformSelection|
 |Application Name	|Drop down|	LLEmployeeUniformRequest|
@@ -122,5 +122,5 @@ You may now **proceed to the next lab**.
 * [Integrate With OPA In Journeys](https://docs.oracle.com/en/cloud/saas/human-resources/23d/faijh/integrate-with-oracle-process-automation-in-journeys.html#u30010752)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Author** - Kishore Katta, Product Management, Oracle Integration & OCI Process Automation
 * **Last Updated By/Date** - Kishore Katta, October 2023

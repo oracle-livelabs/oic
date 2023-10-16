@@ -1,10 +1,14 @@
 {
-    "workshoptitle": "Enhancing HCM Journeys with Oracle Process Automation",
+    "workshoptitle": "Enhancing HCM Cloud Journeys with OCI  Process Automation",
     "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
             "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "../../get-started/get-started.md"
         },
         {
             "title": "Lab 1: Create an OPA Application (Design)",

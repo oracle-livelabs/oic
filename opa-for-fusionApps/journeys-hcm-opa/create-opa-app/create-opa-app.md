@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab shows you how to create a  employee uniform request application from scratch in Process Automation using a Structured Process.
+This lab shows you how to create a  employee uniform request application from scratch in OPA using a Structured Process.
 
 Estimated Time: 10 minutes
 
@@ -27,7 +27,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-Access to an Oracle Cloud Infrastructure Process Automation instance in conjunction with a subscription to a Fusion-based Oracle Cloud Applications service
+Access to an OCI Process Automation instance in conjunction with a subscription to a Fusion-based Oracle Cloud Applications service
 
 ## Task 1: Create a Process Application in Designer
 
@@ -35,7 +35,7 @@ A process application is a container for key components: processes, forms, conne
 
 ![List process applications](images/list-process-applications.png)
 
-1.	Login into Process Automation design time environment. Open the **Process Applications** page.
+1.	Login into OPA design time environment. Open the **Process Applications** page.
 
 2.	Click *Create*. The **Create Application** side pane opens.
 
@@ -63,5 +63,5 @@ You may now **proceed to the next lab**.
 *	[Work with Connectors](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/work-connectors.html)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Author** - Kishore Katta, Product Management, Oracle Integration & OCI Process Automation
 * **Last Updated By/Date** - Kishore Katta, October 2023

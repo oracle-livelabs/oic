@@ -14,7 +14,7 @@ A structured process contains a start event, an end event, and possibly other fl
 
 Note: BPMN is an industry standard notation for defining business processes. OPA supports BPMN 2.0.
 
-Estimated Time: 30 minutes
+Estimated Time: 45 minutes
 
 ### Objectives
 
@@ -61,6 +61,7 @@ Once the Message event type has been set, it is necessary to define the Argument
 ![Start Event Properties](images/start-event-properties.png)
 
 4.  For each of the values in the following table add a **Name** and **Type** corresponding **Argument Definition**
+These input parameters will be sent by HCM Journeys whenever a process task is invoked and hence we need to add them as arguments.
 
 | Argument Name |	Type	|
 | --- | --- |
@@ -145,6 +146,7 @@ Next the values that need to execute the call to HCM will be mapped.
 | "PersonId="+do_PersonId | input.q|
 | "workRelationships.assignments,names,emails" |	input.expand |
 {: title="getWorkerDetails Input Mapping"}
+
 ![Get Workers Input Mapping](images/getworkers-input-mapping.png)
 Next the values returned from HCM will be mapped to Data Objects.
 
@@ -294,9 +296,15 @@ Roles are assigned to swimlanes and determine who or what in your business organ
 
 4.  In the accompanying text box enter the username of the individual who will be responsible for approval uniform requests. This individual will need to be in IDCS, though they do not necessarily have to be present in the HCM Cloud. This allows for the flexibility of assign no HCM users to be involved in the Submission and Approval tasks within OPA
 
-5.  Select the **Application Permission Level** to **Use**
+5.  Select the **Application Permission Level** to **Manage**
 
-## Task 15: Assign Swinlanes to the Process (employee)
+## Task 15: Edit the Process User Role
+
+1.  Select *Roles* and edit **Process User** role
+
+2.  In the **Search** by drop down, select fa_hcm_journey_admin and whoever in the Fusion Applications will kickoff the proceess
+
+## Task 16: Assign Swinlanes to the Process User Role
 
 1.  Navigate to the Uniform Selection Process page.
 
@@ -312,7 +320,7 @@ Roles are assigned to swimlanes and determine who or what in your business organ
 6.  Repeat the above steps for Approver role.
 ![Configure All Swimlane Role](images/configure-all-swimlane-roles.png)
 
-## Task 16: Add a new Human Submit task (Submit Uniform Request)
+## Task 17: Add a new Human Submit task (Submit Uniform Request)
 
 You can use human tasks to model user interaction with the application. Human tasks enable you to display a form for the user to view or complete, and click an action to perform.
 
@@ -346,6 +354,7 @@ The first task to be built will be related to the submission of the employee uni
 10. Enter in the Create Expression text box enter the following value.
     IdentityService.getUserId("do_UserName")
 ![Add Submit Task](images/submit-task-add-assign.png)
+
 This allows the process at runtime to assign this specific task to the employee identified from the original Journeys task in HCM. This means no other employees will be able to see this specific task other than the OPA Administrator who was assigned as well to the Employee Swimlane.
 
 11. Enter a **Title** value under End User Display e.g. Select Uniform
@@ -353,7 +362,7 @@ This allows the process at runtime to assign this specific task to the employee 
 12. Select the UI form previously built e.g. Select Uniform
 ![Configure Submit Task Web Form](images/submit-task-configure-web-form.png)
 
-## Task 17: Notifying a user of an assign task
+## Task 18: Notifying a user of an assign task
 
 Keep your users informed about their task assignments and the progress of a process. You can easily configure notification emails for human tasks and create templates for those notifications.
 
@@ -362,7 +371,7 @@ Keep your users informed about their task assignments and the progress of a proc
 2.  Uncheck the *Disable Notifications*
 ![Submit Task Disable Notifications](images/submit-task-disable-notification.png)
 
-## Task 18: Complete Data Association
+## Task 19: Complete Data Association
 To capture the output of the form, the user selected values need to be mapped to the Data Objects defined earlier.
 
 To get started:
@@ -383,7 +392,7 @@ To get started:
 
 3.  Select *Apply*
 
-## Task 19: Create UI Web Form Approve Uniform Request
+## Task 20: Create UI Web Form Approve Uniform Request
 
 1.  On the **Process** page, Click *Add*
 
@@ -414,12 +423,12 @@ To get started:
 The completed Web Form should look similar to the following.
 ![Web Form Uniform Approval](images/web-form-uniform-approval.png)
 
-## Task 19: Add a new Human Approve task (Approve Uniform Request)
+## Task 21: Add a new Human Approve task (Approve Uniform Request)
 Next the newly created Webform UI needs to be associated with a Human task.
 
 1.  On the Process tab, open the right hand menu to reveal the **Elements Palette**.
 
-2.  Expand the Human menu item to display the previously the available tasks.
+2.  Expand the Human menu item to display the previously available tasks.
 ![Approve Human Task Palette](images/approve-humantask-select.png)
 
 3.  Drag and drop the *Approve* task after the **Select Uniform** task
@@ -438,14 +447,14 @@ Next the newly created Webform UI needs to be associated with a Human task.
 9.  Select the **UI form** previously built e.g. UniformApproval
 ![Uniform Approval Properties](images/uniform-approval-properties.png)
 
-## Task 20: Notifying a user of an assign task
+## Task 22: Notifying a user of an assign task
 Keep your users informed about their task assignments and the progress of a process. You can easily configure notification emails for human tasks and create templates for those notifications.
 
-1.  Select *bell* icon to open the Notifications tab on the Approve Unform Request task properties.
+1.  Select *bell* icon to open the Notifications tab on the *Approve Unform Request* task properties.
 
 2.  Uncheck the Disable Notifications
 
-## Task 21: Complete Data Association
+## Task 23: Complete Data Association
 To capture the output of the form, the user selected values need to be mapped to the Data Objects defined earlier.
 
 1.  On the **Approve Uniform Request** task, select the *Open Data Association*
@@ -464,7 +473,24 @@ To capture the output of the form, the user selected values need to be mapped to
 
 3.  Select *Apply*
 
-## Task 22: Add System Notification (Confirmation Email)
+## Task 24: Add a Gateway element (Arpproved?)
+
+1.  On the Process tab, open the right hand menu to reveal the **Elements Palette**.
+
+2.  Expand the **Gateway** category, drag and drop the *Exclusive* Gateway activity after the **Approve Uniform** activity
+
+3.  Rename the **Gateway** to *Approved?*
+
+4.  Select the **Approved?** Gateway activity. Using the connector (arrow icon) Connect one of the branches to the *Select Uniform** task. Notice a line on the branch connecting to **End event** activity. This indicates the default route and the other branch connected to **Select Uniform** activity is a conditional route.
+
+5.  Select the connector from **Approved?** to **End event** which is the default path. In the properties pane Configure **Name** as *Yes*
+
+6.  Select the connector from **Approved?** to **Select Uniform** which is the conditional path. In the properties pane Configure **Name** as *More Information Required*
+
+Define the condition taskOutcomeDataObject=="REJECT" and mark as Conditional Flow
+![Gateway No Condition Path](images/approved-no-gateway.png)
+
+## Task 25: Add System Notification (Confirmation Email)
 The final task is to add an email notification for the communication of the Approved Uniform Request to the uniform supplier. The notification task is used generate and send notifications. The notify task, which is similar to the service task, uses a predefined service to perform notifications. You use expressions to determine which users receive the notifications generated by the notify task. Currently, email is the only type of notification supported in Process. This type of notification sends an email to the users you specify.
 
 1.  On the Process tab, open the right hand menu to reveal the **Elements Palette**.
@@ -473,13 +499,13 @@ The final task is to add an email notification for the communication of the Appr
 
 3.  Select the *Notify* task
 
-4.  Drag and drop the Notify task after the **Approve Uniform Request** task
+4.  Drag and drop the Notify task after the **Approve?** Gateway Element on the **Yes** connector path
 
 5.  Drag the newly added Notify task down the canvas into the Process User swimlane
 
 6.  On the **Properties tab**, change the name to **Confirmation Email**.
 
-7.  Under **Sen an e-email** in the **To** section , select the *Expressions* tab. Configure the expression by using **do_Username**
+7.  Under **Send an e-email** in the **To** section , select the *Expressions* tab. Configure the expression by using **do_Username**
 ![Notification To Address](images/notification-task-to-address.png)
 
 8.  Provide **Subject** as **Approval for New Employee Uniform**
@@ -487,9 +513,9 @@ The final task is to add an email notification for the communication of the Appr
 9.  In the Body section provide **Congratulations!!! We are happy to notify you that your request for a uniform has been approved. It will get couriered to your mailing address.**
 
 You final process should look similar to below without any warnings.
-![Final Process](images/final-process.png)
+![Final Process](images/final-process-updated.png)
 
-## Task 23: Activate an OPA Application
+## Task 26: Activate an OPA Application
 If you have administrator privileges, then you can activate applications to a production or testing environment from the Manage Active Applications page in design time.
 
 1.  In the **Navigation** pane, click *Activate*
@@ -508,5 +534,5 @@ You may now **proceed to the next lab**.
 *	[Work with Connectors](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/work-connectors.html)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Author** - Kishore Katta, Product Management, Oracle Integration & OCI Process Automation
 * **Last Updated By/Date** - Kishore Katta, October 2023

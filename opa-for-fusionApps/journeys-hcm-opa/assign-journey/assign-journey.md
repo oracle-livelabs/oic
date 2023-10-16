@@ -25,7 +25,7 @@ On the *Explore* tab of HCM Journeys in the search entry box, enter **Uniform**.
 
 ![Select Uniform Journey](images/select-uniform-journey.png)
 
-2.  Assign the Journey to the logged in user by the Add to My Journeys add New Journey Icon
+2.  Assign the Journey to self (for test purposes) or assign  to intended/target user by the **Add to My Journeys** add New Journey Icon
 ![Assign Journey](images/assign-journey.png)
 
 3.  Navigate to the My Journeys tab
@@ -60,5 +60,5 @@ An approval notification is sent to the individual in the organization responsib
 ## Learn More
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Author** - Kishore Katta, Product Management, Oracle Integration & OCI Process Automation
 * **Last Updated By/Date** - Kishore Katta, October 2023

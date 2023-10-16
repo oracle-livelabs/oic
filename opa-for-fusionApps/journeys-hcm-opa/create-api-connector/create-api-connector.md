@@ -784,5 +784,5 @@ You may now **proceed to the next lab**.
 *	[Work with Connectors](https://docs.oracle.com/en/cloud/paas/process-automation/user-process-automation/work-connectors.html)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
+* **Author** - Kishore Katta, Product Management, Oracle Integration & OCI Process Automation
 * **Last Updated By/Date** - Kishore Katta, October 2023
