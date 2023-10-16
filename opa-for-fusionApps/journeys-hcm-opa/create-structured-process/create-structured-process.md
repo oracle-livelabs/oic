@@ -320,7 +320,7 @@ Roles are assigned to swimlanes and determine who or what in your business organ
 6.  Repeat the above steps for Approver role.
 ![Configure All Swimlane Role](images/configure-all-swimlane-roles.png)
 
-## Task 17: Add a new Human Submit task (Submit Uniform Request)
+## Task 17: Add a new Human Submit task (Select Uniform Request)
 
 You can use human tasks to model user interaction with the application. Human tasks enable you to display a form for the user to view or complete, and click an action to perform.
 
@@ -473,7 +473,7 @@ To capture the output of the form, the user selected values need to be mapped to
 
 3.  Select *Apply*
 
-## Task 24: Add a Gateway element (Arpproved?)
+## Task 24: Add a Gateway element (Approved?)
 
 1.  On the Process tab, open the right hand menu to reveal the **Elements Palette**.
 
