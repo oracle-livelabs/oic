@@ -182,7 +182,7 @@ Next the Process will make a call to HCM Cloud to retrieve user account informat
 6.  Select the resource to be **userAccounts**
 
 7.  Select the Operation to be **getUserAccounts**
-![Get UserAccounts Element Properties](images/getUserAccounts-properties.png)
+![Get UserAccounts Element Properties](images/get-useraccounts-properties.png)
 
 ## Task 9: Complete Data Association – getUserName (Request)
 As before, in order to execute the **getUserAccount** REST call, the **personId** will be used as an input as the query value in the request body.
@@ -222,7 +222,7 @@ In this usecase a Web Form will be used to capture the details of the Uniform re
 2.  Click *Add*
 
 3.  Select *UIs*
-![Create UI Web Form Menu](images/createUIWebForm-menu.png)
+![Create UI Web Form Menu](images/create-ui-webform-menu.png)
 
 4.  Select *Web Form* and complete the following fields:
 
