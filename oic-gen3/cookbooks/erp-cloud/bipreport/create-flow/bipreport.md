@@ -138,7 +138,7 @@ A map action named GetBIPReport is automatically created. We will define this da
 
 
 ## Task 5: Write the file
-1. [Download the artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/BIPReportArtifacts.zip) and extract the zip file in your local folders. It should contain two files opaque_schema.xsd and GLCCReport.csv
+1. [Download the artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/63HDL8xxxbcwydv2taZ3G0Kxy1rgZuuCighKn_D4vvyouKpiVRmzb5Tbjs68rNsc/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud/BIPReportArtifacts.zip) and extract the zip file in your local folders. It should contain two files opaque_schema.xsd and GLCCReport.csv
 
 2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
