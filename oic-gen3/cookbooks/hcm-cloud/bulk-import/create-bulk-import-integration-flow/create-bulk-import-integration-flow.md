@@ -27,7 +27,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
+* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
 
 
 ## Task 1: Import Pending Worker Integration Flow
@@ -35,7 +35,7 @@ This lab assumes you have:
 
 2.  On the **Integrations page**, click ***Import***.
 
-3.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
+3.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
 
 4.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
 
@@ -48,7 +48,7 @@ Use the NXSD native schema to generate a DAT file compatible with the HCM Data L
 
 The NXSD schema defines the structure of the output file (fields) and the formatting of the data.
 
-1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
+1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
 
 2.  Open the file *worker-hdl.nxsd* in a text editor.
 
@@ -192,7 +192,7 @@ Stop | Stop | The end of the integration.
 
 ## Task 4: Edit the ReadFileFromFTP Activity
 
-1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
+1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
