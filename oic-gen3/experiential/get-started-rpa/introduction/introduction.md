@@ -4,9 +4,11 @@
 
 Estimated Time: 1 hour 30 minutes
 
+
 ### What is Robotic Process Automation?
 
-### What is RPA in Oracle Integration?
+
+### About RPA in Oracle Integration?
 
 ### Objectives
 
