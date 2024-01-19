@@ -60,4 +60,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Oct 2022
+* **Last Updated By/Date** - Ravi Chablani, Jan 2024
