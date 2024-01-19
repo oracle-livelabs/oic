@@ -19,14 +19,6 @@ RPA is available as a first-class feature in Oracle Integration 3 (OIC3). It pro
 
 ### Terminology
 
-| Tables        | Are           |
-| ------------- |:-------------:|
-| **col 3 is**  | right-aligned |
-| col 2 is      | *centered*    |
-| zebra stripes | ~~are neat~~  |
-
-
-
 | Term          | Definition    |
 | ------------- |---------------|
 | *RPA*  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes these automations by interacting with the software systems through the user interface in the same way as human users.|
@@ -34,9 +26,6 @@ RPA is available as a first-class feature in Oracle Integration 3 (OIC3). It pro
 | *Robot Flow* | An orchestration of Robot Activities for the purpose of automating all or a portion of an interaction with a Client Application. |
 
 
-
-| **RPA**  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes these automations by interacting with the software systems through the user interface in the same way as human users.|
-| 
 
 ### Objectives
 
