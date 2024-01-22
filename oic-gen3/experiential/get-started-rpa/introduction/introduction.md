@@ -18,14 +18,14 @@ RPA use cases are generally categorized by how the robots used – attended or u
 RPA is available as a first-class feature in Oracle Integration 3 (OIC3). It provides a ubiquitous, low skill, and non-disruptive mechanism to connect to and operate on data sources. These data sources are interfaces that a user can interact with from their desktop. OIC-RPA provides a framework to connect to applications and data sources via a web browser interface.
 
 ### Terminology
-
 | Term          | Definition    |
 | ------------- |---------------|
-| *RPA*  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes these automations by interacting with the software systems through the user interface in the same way as human users.|
+| *RPA*  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes these automations by interacting with the software systems through the user interface in the same way as human users. |
 | *Robot Project* | An organizational construct for managing the artifacts to perform a defined RPA automation. Project artifacts may include Flows, Flow Activities, Configurations, and Events. |
 | *Robot Flow* | An orchestration of Robot Activities for the purpose of automating all or a portion of an interaction with a Client Application. |
-
-
+|*RPA Adapter*| A Connectivity Service Adapter designed to discover, configure, and invoke Robot Automations. |
+| *Robot Agent* | Communication channel between Robot Runtime and UI plane. |
+|
 
 ### Objectives
 
