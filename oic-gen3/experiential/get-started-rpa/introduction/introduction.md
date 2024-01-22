@@ -25,7 +25,7 @@ RPA is available as a first-class feature in Oracle Integration 3 (OIC3). It pro
 | *Robot Flow* | An orchestration of Robot Activities for the purpose of automating all or a portion of an interaction with a Client Application. |
 |*RPA Adapter*| A Connectivity Service Adapter designed to discover, configure, and invoke Robot Automations. |
 | *Robot Agent* | Communication channel between Robot Runtime and UI plane. |
-|
+
 
 ### Objectives
 
