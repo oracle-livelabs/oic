@@ -17,8 +17,8 @@ In this workshop, you will learn how to:
 
 ### Prerequisites
 
-* An Oracle Free Tier or Paid Cloud Account.
-* A Chrome browser.
+* An Oracle Free Tier or Paid Cloud Account
+* A Chrome browser
 
 ## Learn More
 
