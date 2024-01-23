@@ -10,9 +10,9 @@ Estimated Time: 1 hour 30 minutes
 
 In this workshop, you will learn how to:
 
+* Learn Oracle Integration 3 concepts of Projects and Robots
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure
-* Learn Oracle Integration 3 concepts of Project and RPA
-* Setup RPA Environment
+* Setup Robot Environment
 * Build, Test, and Deploy a Robot
 
 ### Prerequisites
