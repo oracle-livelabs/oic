@@ -11,5 +11,6 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
+
 * An Oracle Cloud account
-* All previous labs successfully completed
+* Successfully completed all previous labs

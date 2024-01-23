@@ -1,12 +1,12 @@
-# Get Started
+# Concepts
 
 ## Introduction
 
-Robots and integrations help you achieve the same business goals using different technologies. A robot performs UI-based automation, whereas an integration performs API-based automation. You can build both robots and integrations using Oracle Integration. 
+Robots and integrations help you achieve the same business goals using different technologies. A robot performs UI-based automation, whereas an integration performs API-based automation. You can build both robots and integrations using Oracle Integration.
 
 ## Robot Concepts
 
-### About Robotic Process Automation
+### Robotic Process Automation
 
  Robotic Process Automation (RPA) is a technology that allows for automation of mundane, tedious, rule based, error-prone, repetitive tasks that a large segment of an enterprise workforce has to deal with. As opposed to other flavors of Integration or Process/Task automation such as API or DB connector based integration/automation, RPA technology allows for creation of automation (robots) that simulates user actions on the application's user interface. For legacy system where APIs are not available or for systems where APIs are not accessible to the integrator, RPA is often the only automation solution.
 
@@ -24,15 +24,14 @@ RPA is available as a first-class feature in Oracle Integration 3 (OIC3). It pro
 
 | Term          | Definition    |
 | ------------- |---------------|
-| *RPA*  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes these automations by interacting with the software systems through the user interface in the same way as human users. |
+| *RPA*  | A service that automates repetitive manual tasks involving humans  interacting with software systems. RPA accomplishes this automation by interacting with the software systems through the user interface in the same way as human users. |
 | *Robot Project* | An organizational construct for managing the artifacts to perform a defined RPA automation. Project artifacts may include Flows, Flow Activities, Configurations, and Events. |
 | *Robot Flow* | An orchestration of Robot Activities for the purpose of automating all or a portion of an interaction with a Client Application. |
-|*RPA Adapter*| A Connectivity Service Adapter designed to discover, configure, and invoke Robot Automations. |
+|*RPA Adapter*| A Connectivity Service Adapter designed to discover, configure, and invoke robot automation. |
 | *Robot Agent* | Communication channel between Robot Runtime and UI plane. |
 
 ## Integration Concepts
 
-### About Projects
+### Projects
 
 ### Connections
-
