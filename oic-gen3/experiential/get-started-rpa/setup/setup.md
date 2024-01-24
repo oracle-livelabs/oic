@@ -33,7 +33,8 @@ You will download the Robot Agent from the Oracle Integration 3 console, then pr
 
 2. On the top right corner of the window, click on **Download**. Then, select **Robot Agent**. 
 ![Download the Robot Agent install](./images/download-robot-agent.png ' ')
-You should receive a confirmation about the agent getting downloaded. 
+
+    You should receive a confirmation about the agent getting downloaded. 
 
 3. Once the download has completed, navigate to the designated folder on your local machine to obtain the agent installation file. The default location is typically the **Downloads** folder.
 
