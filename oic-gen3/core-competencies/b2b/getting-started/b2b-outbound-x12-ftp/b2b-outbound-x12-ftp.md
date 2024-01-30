@@ -5,8 +5,6 @@
 ACME Corp sends an 850 Purchase Order EDI document to Trading Partner Dell Inc. ACME Corp had configured OIC B2B message exchange agreement to send Purchase Order EDI document to External Trading Partner.
 
 This integration takes the input as XML from a Rest Client. In a real world use case you would have the XML originating from a Source System like ERP Cloud or NetSuite. A Backend App Integration transforms XML into EDI X12 format using EDI Translate functionality and sends the EDI document to B2B Integration to send across to External Trading Partner (Dell Inc)
-
-
 ![B2B Outbound Processing High Level Architecture](images/b2b-outbound1.png)
 
 High level steps of the Integration:
@@ -26,7 +24,7 @@ Estimated Time: 60 minutes
 ### Objectives
 
 In this lab, you will create a basic integration flow to process the EDI document and send it to the Trading partner.
-* Create an App Driven Integration flow to receive an XML document
+* Create an Application driven Integration flow to receive an XML document
 * Configure EDI Translate Action to convert XML to EDI X12 format
 * Define relevant mappings to send an Outbound Message
 * Monitor Business Messages, Backend Integration and Trading partners.
@@ -57,7 +55,7 @@ Note: This integration flow uses REST for simplicity. You can substitute the RES
     <copy>PO Backend</copy>
     ```
 
-4. Click on **Create** and Change Layout to **Horizontal**
+4. Click on **Save** and Change Layout to **Horizontal**
 
 ## Task 2: Configure the REST Adapter Trigger Connection
 On the integration canvas, click the ***start node*** and select ***REST Interface*** as the trigger connection.
@@ -67,7 +65,6 @@ The Adapter Endpoint Configuration Wizard opens
      - for the **What do you want to call your endpoint?** element, enter ***Receive-App-Msg***
      - Click ***Continue***.
 2. From the **Resource Configuration** page,
-    - for the **What does this operation do?** element, enter ***ss***
     - for the **What is the endpoint's relative resource URI?**, enter ***/outbound***
     - for the **What action do you want to perform on the endpoint?**, enter ***POST***
     - Select ***Configure a request payload for this endpoint*** checkbox
@@ -75,19 +72,15 @@ The Adapter Endpoint Configuration Wizard opens
     - Click ***Continue***
     ![REST Endpont Wizard diagram](images/rest-wizard.png)
 3. From the **Request Parameters** page.
-- Select ***XML Schema*** in the **Select the request payload** format field.
-- Click on ***Drag and Drop*** and upload the file **AcmePurchaseOrder.xsd** from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp** and click on ***Continue***
-![Request diagram](images/rest-wizard-request.png)
-
+    - Select ***XML Schema*** in the **Select the request payload** format field.
+    - Click on ***Drag and Drop*** and upload the file **AcmePurchaseOrder.xsd** from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp** and click on ***Continue***
+    ![Request diagram](images/rest-wizard-request.png)
 4. On the **Response** Page
-- Select ***XML Schema*** in the response payload format field
-- Click on ***Drag and Drop*** and upload the file **PurchaseOrderResult.xsd** from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**
-- Click ***Continue***, and on the Summary page, click ***Done*** to complete the REST Adapter configuration.
-![Response diagram](images/rest-wizard-response.png)
-5. Click ***Continue***
-6. Review the summary and click ***Finish***.
-7. Click ***Save*** to persist changes.
-
+    - Select ***XML Schema*** in the response payload format field
+    - Click on ***Drag and Drop*** and upload the file **PurchaseOrderResult.xsd** from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**
+    - Click ***Continue***, and on the Summary page, click ***Finish*** to complete the REST Adapter configuration.
+    ![Response diagram](images/rest-wizard-response.png)
+    - Click ***Save*** to persist changes.
 
 ## Task 3: Configure the EDI Translate Action
 Add an EDI translate action to the flow to translate XML document to an EDI document
@@ -99,8 +92,8 @@ The **Configure B2B Action** wizard opens
     ![ediAction diagram](images/edi-action.png)
     - Select ***Select the B2B message direction this integration will handle*** as **Outbound** and click **Continue**
     - Select ***Document Definition*** as **PurchaseOrder4010Document** (You must have created this as part of B2B activities) and click on ***Continue***
-    - Review the ***Summary page***, click on ***Finish*** to complete the configuration and click on ***Save*** to save your integration flow.
-
+    - Review the ***Summary page***, click on ***Finish*** to complete the configuration.
+    - Click ***Save*** to persist changes.
 
 ## Task 4: Configure Mapping Actions
 Configure data mappings for the EDI-Generate action and Receive-App-Msg action in order to successfully parse the incoming XML message and translate it to EDI message.
@@ -109,62 +102,58 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 2. Click on ***Developer*** mode
    ![Devmode diagram](images/devmode.png)
 3. From Source, expand the ***root element***, expand ***AcmePurchaseOrder*** and From Target, expand the ***root element***, expand ***TranslateInput***, expand ***edi-xml-document***, expand ***transaction-data*** and **map** all the mandatory elements given below.
+> **Note**: You can search for the element to find it quickly
 
 | Source | Target |
 | --- | --- |
 | “00” | BEG01 |
 | “NE” | BEG02 |
-| orderNumber | BEG03 |
-| drag and drop format-DateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
+| Order Number | BEG03 |
+| drag and drop format-dateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
 |  count (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:lineItems )  | CTT01 |
-| totalAmount | CTT02 |
+| Total Amount | CTT02 |
 | “2L” | CUR01 |
-| currencyCode | CUR02 |
-| currencyConversionRate | CUR03 |
-| lineItems | Loop-PO1 |
-| lineItems > SKU | PO101 |
-| lineItems > Quantity | PO102 |
-| lineItems > unitOfMeasure | PO103 |
-| lineItems > price | PO104 |
-| tradingPartnerId | Application Partner ID(This element is there under TranslateInput Node) |
-
-Once you are done with the validation, test it and results should look like the screenshot given below.
-   ![mapperTest diagram](images/mapper-test.png)
+| Currency Code | CUR02 |
+| Currency Conversion Rate | CUR03 |
+| Line Items | Loop-PO1 |
+| Line Items > SKU | PO101 |
+| Line Items > Quantity | PO102 |
+| Line Items > Unit Of Measure | PO103 |
+| Line Items > Price | PO104 |
+| Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
 
 4. Click on ***Validate***
   - A confirmation message appears.
 5. Click ***&lt; (Go back)***
 6. Click ***Save*** to persist changes.
 
-
-
 ## Task 5: Switch action after EDI-Generate activity
 1. Add a ***Switch*** action after the **EDI-Generate** activity
     - For the **Route 1**, Enter the Expression Name as **Success or Warning** and click on **Apply**
-    - Then search for **translation-status** element under *Input sources* and drag and drop in the right side as per the screenshot given below and define value as **"Success"**
+    - Then search for **translation-status** element under *Input sources* (or look at the screenshot given below to find out the element) and drag and drop in the right side as per the screenshot given below and define value as **"Success"**
     - Click on ***Main canvas*** and Click ***Save*** to persist changes.
     ![Route1](images/switch-route1.png)
 
     - In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
     - Select **POST** operation and Click on ***Continue***. Click on ***Finish*** and ***Save*** your integration flow
       ![callTP](images/call-tp.png)
-    - Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate > executeResponse > TranslateOutput**
+    - Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate Response > executeResponse > Translate Output**
 | Source | Target |
 | --- | --- |
-| B2B Message Reference | components.schemas.request-wrapper>messages>b2b-message-reference |
-| trading-partner | components.schemas.request-wrapper>trading-partner |
-| connectivity-properties-code | Connectivity Properties>Localintegration>code |
-| connectivity-properties-version | Connectivity Properties>Localintegration>version |
+| B2B Message Reference | Components Schemas Request Wrapper > Messages > B2B Message Reference |
+| Trading Partner Name | Components Schemas Request Wrapper > Trading Partner |
+| Connectivity Properties Code | Connectivity Properties > Localintegration > Integration Code |
+| Connectivity Properties Version | Connectivity Properties > Localintegration > Integration Version |
 
     - Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
     - In Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
 
-    $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error to Code
-    AND
-    $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error-report to Reason
-    ![mappings diagram](images/throw-new-fault.png)
+      $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error to Code
+      AND
+      $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error-report to Reason
+      ![mappings diagram](images/throw-new-fault.png)
     - Click on ***Main canvas*** and Click ***Save*** to persist changes.
-    ![switchAction diagram](images/switch-action.png)
+      ![switchAction diagram](images/switch-action.png)
 
 ## Task 6: After Switch activity
 1. Edit ***Map Receive-App-Msg*** activity.
@@ -201,7 +190,7 @@ Manage business identifiers that enable you to track fields in messages during r
   ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
-5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/subhani/B2BWorkshop/B2BTPDELLOut**
+5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/```<<your oic usernumber>>```/B2BWorkshop/B2BTPDELLOut**
 6. In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
 This feature will very much useful when we have more than one trading partner. We just define the trading partner on the user interface, integrations will be created automatically and files will be processed with the existing Backend Integration.
