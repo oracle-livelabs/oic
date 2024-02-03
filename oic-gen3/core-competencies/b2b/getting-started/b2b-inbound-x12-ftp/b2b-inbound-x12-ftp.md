@@ -28,13 +28,13 @@ In this lab, you will:
 
 > **Note** : This Lab assumes you have already completed [Defining Host Profile](../workshops/freetier/?lab=b2b-trading-partner-manager#Task1:ConfiguretheHostProfile) and [Create Trading Partners] (../workshops/freetier/?lab=b2b-trading-partner-manager#Task2:CreateTradingPartners)
 
-> **Note**: [Download Lab Artifacts](../workshops/freetier/?lab=setup#Task5:DownloadLabArtifacts) if, not done in previous sections
+> **Note**: [Download Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BoaluNGQEwbsB8_mv5JWSB5TI4FSMwRCkfyNdDwC8KXKgqYGmcHVSUIUS3E0dB-9/n/oicpm/b/oiclivelabs/o/oic3/b2b/b2b-getting-started.zip) if, not done in previous sections
 
 ### *Create B2B Document*
 
-1.	Navigate to **Menu > B2B > B2B Documents**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Save***
+1.	Navigate to **Home > B2B > Documents**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Save***
 
-![inbound-b2b-810-invoice-document](images/inbound-b2b-810-invoice-document.png)
+![inbound-b2b-810-invoice-document](images/invoice-document.png)
 
 ### *Verify Host Profile*
 
@@ -58,20 +58,20 @@ In this lab, you will:
 
 ### *Configure Transport & Inbound Agreements*
 
-1.	Click ***Transports & Agreements*** tab. In the Transports section, edit the **FTP** Transport and Configure per below and Save.
+1.	Click ***Transports & Agreements*** tab. In the Transports section, edit the **FTP** Transport and Configure per below and **Save**.
 
 |     Name                                    |     FTP                                 |
 |---------------------------------------------|-----------------------------------------|
 |     Type                                    |     FTP                                 |
 |     Trading   partner's connection          |     FTP Connection (File Server)    |
-|     Input   Directory                       |     /B2BWorkshop/B2BTPDELLIn            |
+|     Input   Directory                       |     **/upload/users/```<<your oic usernumber>>```/B2BWorkshop/B2BTPDELLIn**           |
 |     Input File                              |     Invoice-%SEQ%.edi     							|
-|     Output   Directory                      |     /B2BWorkshop/B2BTPDELLOut           |
+|     Output   Directory                      |     **/upload/users/```<<your oic usernumber>>```/B2BWorkshop/B2BTPDELLOut**         |
 |     Output   File Name                      |     Out997-%SEQ%.edi      							|
 
 2.	Select ***Action Menu*** and ***Redeploy*** if already Deployed
 
-![Activate Integration](images/inbound-ftp-redeploy.png)
+![Activate Integration](images/ftp-redeploy.png)
 
 **Check Point:** Go to the Integrations page and note that both integrations are activated
 
@@ -82,7 +82,7 @@ In this lab, you will:
 | Name                         | InAgreement                                            |
 | Select a Document            | Invoice Document 810 4030                              |
 | Select a Backend Integration | <We Will configure this later. Leave blank for now>    |
-| Configure Agreement Settings | Select  - Enable Validations - Generate Functional Ack |
+| Configure Agreement Settings | Select  - Enable Validations - Generate functional acknowledgement |
 
 The backend integration is yet to be defined. So, we will deploy the Inbound Agreement after creating the Backend Integration Flow
 
@@ -92,48 +92,54 @@ The backend integration is yet to be defined. So, we will deploy the Inbound Agr
 
 Let's create a basic, Inbound backend integration flow that receives an XML document through a REST request, converts  EDI X12 format to B2B XML Canonical Message, and logs a few elements in the Invoice EDI document.
 
-1.	In the navigation pane, click ***Integrations***
-2.	On the **Integrations** page, click ***Create***
-3.	Select ***App Driven Orchestration*** as the style to use. The Create New Integration dialog is displayed. Enter **Process Inbound Vendor Invoices** as a Name of the integration and then click ***Create***.
-4.	Change Layout to Horizontal
+1. In the **Navigation pane**, click ***Integrations***
+2. On the **Integrations page**, click ***Create***
+3. Select **Application** as the style to use.
 
+    enter the Name of the integration per the value given below and then click on ***Create***
+    ```
+    <copy>Process Inbound Vendor Invoices</copy>
+    ```
+4. Click on **Save** and Change Layout to **Horizontal**
 
 ## Task 2: Configure the REST Adapter Trigger Connection
 
-On the integration canvas, click the start node and select **Sample REST Endpoint Interface** as the trigger connection.
+On the integration canvas, click the ***start node*** and select ***REST Interface*** as the trigger connection.
+The Adapter Endpoint Configuration Wizard opens
 
-The Adapter Endpoint Configuration Wizard opens.
-1.	On the **Basic Info** page, enter the following details
-	-	In the What do you want to call your endpoint? field, enter **Receive-Vendor-Invoice-Msg**
-	-	Enter **/** as the endpoint's relative resource URI.
-	-	Select ***POST*** as the action to perform on the endpoint.
-	-	Select **configure request for this endpoint** only and click on ***Next***
+1. On the **Basic Info** page,
+     - for the **What do you want to call your endpoint?** element, enter ***Receive-Vendor-Invoice-Msg***
+     - Click ***Continue***.
+2. From the **Resource Configuration** page,
+    - for the **What is the endpoint's relative resource URI?**, enter ***/***
+    - for the **What action do you want to perform on the endpoint?**, enter ***POST***
+    - Select ***Configure a request payload for this endpoint*** checkbox
+    - Click ***Continue***
+    ![inbound-integration-restadapter-step1](images/restadapter-config.png)
+3. From the **Request Parameters** page.
+    - Select ***JSON Sample*** in the **Select the request payload** format field and provide the below json sample selecting **inline**, click ***Continue***, click ***Finish*** to complete the REST Adapter configuration.
+			```
+			<copy>
+						{
+					  "type" : "PO",
+					  "id" : "12345",
+					  "direction" : "INBOUND",
+					  "trading-partner" : "Acme",
+					  "document-definition" : "PO_850",
+					  "connectivity-properties-code" : "BACKENDINTG",
+					  "connectivity-properties-version" : "01.00.0000",
+					  "message" : [ {
+					    "b2b-message-reference" : "0AC400D117503A8246000000347849EB"
+					  }, {
+					    "b2b-message-reference" : "0AC400D117503A8246000000347849EA"
+					  } ]
+					}
+			</copy>
+			```
 
-		![inbound-integration-restadapter-step1](images/inbound-beintegration-restadapter-1.png)
+    - Click ***Save*** to persist changes.
 
-2.	On the **Request** page:
-	-	Select ***JSON Sample*** in the **Select the request payload format** field and provide the below json sample selecting **inline** . Click ***Next***
 
-		```
-		<copy>
-					{
-				  "type" : "PO",
-				  "id" : "12345",
-				  "direction" : "INBOUND",
-				  "trading-partner" : "Acme",
-				  "document-definition" : "PO_850",
-				  "connectivity-properties-code" : "BACKENDINTG",
-				  "connectivity-properties-version" : "01.00.0000",
-				  "message" : [ {
-				    "b2b-message-reference" : "0AC400D117503A8246000000347849EB"
-				  }, {
-				    "b2b-message-reference" : "0AC400D117503A8246000000347849EA"
-				  } ]
-				}
-		</copy>
-		```
-		![inbound-integration-restadapter-step2](images/inbound-beintegration-restadapter-2.png)
-		-	On the Summary page select ***Done***. ***Save*** your integration flow
 ##	Task 3: Configure For-Each Action
 
 Add a ***For Each*** Action. In the Create Action configure per below and Select ***Create***
