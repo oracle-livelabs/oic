@@ -141,8 +141,8 @@ The Adapter Endpoint Configuration Wizard opens
 
 
 ##	Task 3: Configure For-Each Action
-
-Add a ***For Each*** Action. In the Create Action configure per below and Select ***Create***
+1. Add ***For Each*** Action. Enter the details given below in the configure screen
+2. Click on ***Main canvas*** and Click ***Save*** to persist changes.
 
 |     Field Name                    |    Value            |
 |-----------------------------|---------------------------------------------|
@@ -150,46 +150,40 @@ Add a ***For Each*** Action. In the Create Action configure per below and Select
 |     Repeating Element       |     Drag and drop ‘message’ repeating element from the path execute   > request-wrapper    |
 |     Current Element Name    |     B2B-Doc-Message	|
 
-![For-Each-Activity-1](images/inbound-beintegration-foreach-1.png)
+![For-Each-Activity-1](images/foreach-1.png)
 
 ## Task 4: Configure Current Message as Tracking Variable
 
-1.	Add an ***Assign*** activity within the **For Each** and name it as **Assign-Current-Msg**
-2.	Select the ***+*** action and configure **tracking\_var\_2** (select the variable from the drop-down list)
-3.	In the **Value** field Select the Pencil icon and provide **b2b-message-reference** from **B2B-Doc-Msg > message**. Select ***Validate*** and ***Close***.
+1. Add an ***Assign*** activity within the **For Each** and name it as **Assign-Current-Msg**
+2. Select the ***+*** action and configure **tracking\_var\_2** (select the variable from the drop-down list)
+3. In the **Value** field and drag and drop **b2b-message-reference** from **B2B-Doc-Message > message**.
+4. Click on ***Main canvas*** and Click ***Save*** to persist changes.
 
-![For-Each-Activity-2](images/inbound-beintegration-foreach-2.png)
+![For-Each-Activity-2](images/foreach-2.png)
 
 ## Task 5:	Configure the B2B Translate Action
 
-Add a **B2B action** to the flow to translate EDI document to an XML document
-1.	On the right side of the canvas, click ***Actions***, drag ***B2B***, and drop it after the **Assign-Current-Msg** element.
-The Configure B2B Action wizard opens.
-2.	On the **Basic Info** page, enter **Fetch-Message** as the name for the action and select the mode ***B2B Trading Partner mode***, and click ***Next***.
-![inbound-beintegration-translate-1](images/inbound-beintegration-translate-1.png)
-3.	Select the B2B message direction ***Inbound*** and choose the Operation ***FetchMessage*** and click ***Next***.
+1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the **Assign-Current-Msg** element.
+The **Configure B2B Action** wizard opens
+2. On the **Basic Info** page
+    - for the **What do you want to call this B2B action?** element, enter ***Fetch-Message***
+    - select a mode as ***B2B Trading Partner mode***, and click **Continue**
+    - Select ***Select the B2B message direction this integration will handle*** as **Inbound** and choose the Operation ***FetchMessage*** and click **Continue**
+    - Select ***Document Definition*** as **Invoice Document 810 4030** (You must have created this as part of B2B activities) and click on ***Continue***
+    - Review the ***Summary page***, click on ***Finish*** to complete the configuration.
+    - Click ***Save*** to persist changes.
 
-![inbound-beintegration-translate-2](images/inbound-beintegration-translate-2.png)
-
-**Knowledge Point**: This operation retrieves an already processed B2B business message from the Oracle Integration persistence store. It outputs the B2B canonical XML format for a business message, given b2b-message-reference as input. The canonical XML format is represented by the edi-xml-document element. It is accessible inside an inbound backend integration. You use the mapper to transform it into a backend application format.
-
-4.	Select ***Document Definition*** as **Invoice Document 810 4030** and click on ***Next***.
->Note: Invoice Document 810 4030 is created based on Standard 810 4030 document
-
-![inbound-beintegration-translate-3](images/inbound-beintegration-translate-3.png)
-
-5.	On the **Summary page**, click ***Done*** to complete the configuration and ***save*** your integration flow.
-Note that the corresponding mapping element is automatically added to the integration flow
-
-![inbound-beintegration-1](images/inbound-beintegration-1.png)
 
 ##	Task 6:	Configure Mapping Actions
 
 1.	Configure data mappings for the **Fetch-Message** action and **B2B-Doc-Message** element to pass B2B EDI message.
 
-![inbound-beintegration-2](images/inbound-beintegration-2.png)
+![inbound-beintegration-2](images/inbound-integration-2.png)
 
-2.	Click ***Validate*** and then ***Close***.Save your integration flow.
+2.	Click ***Validate***
+3. Click ***&lt; (Go back)***
+4. Click ***Save*** to persist changes.
+
 
 ##	Task 7:	Configure Log Activity to print Invoice Details from EDI Message
 
@@ -204,7 +198,7 @@ concat( "Received an Invoice:", BIG02, ", for the Purchase Order: ", BIG04, ". T
 
 Note: It is easy to search for any field element by selecting the Source Message elements. Search for BIG02,BIG04,TDS01 from $Fetch-Message Element and formulate the above concat expression.
 
-![Inbound-beintegration-3](images/inbound-beintegration-3.png)
+![Inbound-beintegration-3](images/inbound-integration-3.png)
 ***Validate*** and ***Close*** the Expression  Builder.
 Save your Integration Flow.
 ##	Task	8:	Add Tracking Identifiers for Integration Tracking

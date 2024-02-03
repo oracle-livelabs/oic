@@ -84,7 +84,7 @@ The Adapter Endpoint Configuration Wizard opens
 
 ## Task 3: Configure the EDI Translate Action
 Add an EDI translate action to the flow to translate XML document to an EDI document
-1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B action*** on the designer after the first **Receive-App-Msg** element.
+1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the first **Receive-App-Msg** element.
 The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     - for the **What do you want to call this B2B action?** element, enter ***EDI-Generate***
