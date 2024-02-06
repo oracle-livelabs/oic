@@ -223,7 +223,7 @@ OR you can also track by clicking on ***Design***, ***Observability*** and ***In
 ## Task 10: Verify the Bulk Import
 Wait 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
-2. Click on Navigator Menu(On top lift corner), Click on Payables, click Invoices and Click on the search in the Details panel located below the User menu.
+2. Click on Navigator Menu(On top left corner), Click on Payables, click Invoices and Click on the search in the Details panel located below the User menu.
 3. Enter the invoice number and click search.
 The invoice should appear in the search results.
 4. Congratulations! You have finished your integration flow.

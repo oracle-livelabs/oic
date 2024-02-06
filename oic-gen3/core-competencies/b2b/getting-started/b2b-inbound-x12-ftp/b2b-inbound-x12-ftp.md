@@ -144,13 +144,13 @@ The Adapter Endpoint Configuration Wizard opens
 1. Add ***For Each*** Action. Enter the details given below in the configure screen
 2. Click on ***Main canvas*** and Click ***Save*** to persist changes.
 
-|     Field Name                    |    Value            |
-|-----------------------------|---------------------------------------------|
-|     Name                    |     Each-B2B-Doc                                                                         |
-|     Repeating Element       |     Drag and drop ‘message’ repeating element from the path execute   > request-wrapper    |
-|     Current Element Name    |     B2B-Doc-Message	|
+   |     Field Name                    |    Value            |
+   |-----------------------------|---------------------------------------------|
+   |     Name                    |     Each-B2B-Doc                                                                         |
+   |     Repeating Element       |     Drag and drop ‘message’ repeating element from the path execute   > request-wrapper    |
+   |     Current Element Name    |     B2B-Doc-Message	|
 
-![For-Each-Activity-1](images/foreach-1.png)
+   ![For-Each-Activity-1](images/foreach-1.png)
 
 ## Task 4: Configure Current Message as Tracking Variable
 
@@ -158,8 +158,7 @@ The Adapter Endpoint Configuration Wizard opens
 2. Select the ***+*** action and configure **tracking\_var\_2** (select the variable from the drop-down list)
 3. In the **Value** field and drag and drop **b2b-message-reference** from **B2B-Doc-Message > message**.
 4. Click on ***Main canvas*** and Click ***Save*** to persist changes.
-
-![For-Each-Activity-2](images/foreach-2.png)
+    ![For-Each-Activity-2](images/foreach-2.png)
 
 ## Task 5:	Configure the B2B Translate Action
 
@@ -167,7 +166,7 @@ The Adapter Endpoint Configuration Wizard opens
 The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     - for the **What do you want to call this B2B action?** element, enter ***Fetch-Message***
-    - select a mode as ***B2B Trading Partner mode***, and click **Continue**
+    - select a mode as ***B2B Trading Partner mode***, and click ***Continue***.
     - Select ***Select the B2B message direction this integration will handle*** as **Inbound** and choose the Operation ***FetchMessage*** and click **Continue**
     - Select ***Document Definition*** as **Invoice Document 810 4030** (You must have created this as part of B2B activities) and click on ***Continue***
     - Review the ***Summary page***, click on ***Finish*** to complete the configuration.
@@ -177,46 +176,46 @@ The **Configure B2B Action** wizard opens
 ##	Task 6:	Configure Mapping Actions
 
 1.	Configure data mappings for the **Fetch-Message** action and **B2B-Doc-Message** element to pass B2B EDI message.
-
-![inbound-beintegration-2](images/inbound-integration-2.png)
-
-2.	Click ***Validate***
-3. Click ***&lt; (Go back)***
+    ![b2bmapping](images/b2bmapping.png)
+2. Click ***Validate*** and Click ***&lt; (Go back)***
 4. Click ***Save*** to persist changes.
 
 
 ##	Task 7:	Configure Log Activity to print Invoice Details from EDI Message
 
 **Knowledge Point**: The Fetch-Message Response (B2B Action) provides you with a B2B canonical XML from which to map. Its edi-xml-document is the key element that contains the canonical form of the inbound EDI document.
-1.	Add a ***Logger*** activity and name the Action as **Log-Invoice-Message**
-2.	Select Log option as **When Trace is Enabled**
+1.	Drag and drop a ***Logger*** activity after **B2B Fetch-Message** and name the Action as **Log-Invoice-Message**
+2.	Select Log option as **When tracing level is set to Audit**
 3.	Select the ***Pencil*** to open the Expression Builder to log 3 fields namely, Invoice Number, Purchase Order Number and Invoice Amount.
 4.	Drag and drop a **concat** function from String functions category
 5.	Construct the concat message as below:
+    - concat( "Received an Invoice:", BIG02, ", for the Purchase Order: ", BIG04, ". The invoice amount is: ", integer( TDS01) div 100.0, "")
+    > Note: It is easy to search for any field element by selecting the Source Message elements. Search for BIG02,BIG04,TDS01 from $Fetch-Message Element and formulate the above concat expression.
 
-concat( "Received an Invoice:", BIG02, ", for the Purchase Order: ", BIG04, ". The invoice amount is: ", integer( TDS01) div 100.0, "")
+    ![log-activity](images/log-activity.png)
 
-Note: It is easy to search for any field element by selecting the Source Message elements. Search for BIG02,BIG04,TDS01 from $Fetch-Message Element and formulate the above concat expression.
 
-![Inbound-beintegration-3](images/inbound-integration-3.png)
-***Validate*** and ***Close*** the Expression  Builder.
-Save your Integration Flow.
+6. Click on ***Main canvas*** and Click ***Save*** to persist changes.
+7. Final integration flow should look like the below diagram.
+    ![finalflow diagram](images/finalflow.png)
+
+
 ##	Task	8:	Add Tracking Identifiers for Integration Tracking
 
-Add **trading partner** as one of the tracking field from the execute > Request-Wrapper
+  - Add **trading partner** as one of the tracking field from the execute > Request-Wrapper
 
 ##	Task	9: Activate the Integration
 
-Check for errors, save, and activate the integration flow.
-1.	On the **Integrations** page, click on the ***Activate*** button against your integration.
-2.	In the Activate Integration dialog, Select ***Enable Tracing*** and ***Include Payload*** options. Click ***Activate***
+1. On the **Integrations** page, click on the ***Activate*** icon of **PO Backend** Integration.
+2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
+3. Click ***Activate***.
 
-## Task 10:	Deploy Inbound Agreement
+## Task 10:	Go to B2B, Trading Partners and Deploy Inbound Agreement
 1.	Navigate to **Trading Partner (Dell Inc)**. Select ***Transport and Agreements*** tab. Edit ***Inbound Agreement*** and select the Backend Integration **Process Inbound Vendor Invoices**.  (Alternatively You can copy the identifier and version which you can find from the respective Integration details.  After pasting the Identifier and the version should look like. PROCESS\_INBOUND\_VENDOR\_INVOICES|01.00.0000)
 
-![inbound-agreement-deploy](images/inbound-agreement-deploy.png)
+   ![inbound-agreement-deploy](images/inbound-agreement-deploy.png)
 
-From the **Action** Menu deploy the **Inbound Agreement**
+2. From the **Action** Menu, deploy the **Inbound Agreement**
 
 > Note: Deploy Transport and Transport agreements. You can deploy in any sequence and if you modify anything, you can just deploy the corresponding section. For example, if you modify outbound transport agreement then you can deploy (or redeploy) only outbound transport agreement
 
@@ -230,25 +229,21 @@ We will Import and Activate an Integration Flow which Simulates a Supplier (Dell
 
 1.	Navigate to **Integrations** page. Select the **OutboundEDI-XTP-Dell-Inc** integration flow. Select ***Run*** and click on ***Test*** which will open an Integration Test Console
 
-Let's use Oracle Integration Test Console to simulate a 810 Invoice EDI message from **Dell Inc** Supplier.
-
-2.	From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Copy the **DellIncInvoice.xml** data and paste it in the body of the request console. Before Selecting Test modify the below elements in the supplied XML payload
+  - Let's use Oracle Integration Test Console to simulate a 810 Invoice EDI message from **Dell Inc** Supplier.
+  - From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Copy the **DellIncInvoice.xml** data and paste it in the body of the request console. Before Selecting Test modify the below elements in the supplied XML payload
 
 	-	InvoiceNumber – ex: XX-INV-DE-0299 (where 'XX' is any numeric for uniqueness)
-	-	XTP\_FTP\_DIR - /B2BWorkshop/B2BTPDELLIn
+	-	XTP\_FTP\_DIR - /upload/users/subhani/B2BWorkshop/B2BTPDELLIn
 	-	XTP\_FTP\_FILENAME - Invoice-1.edi (Note: The file pattern should be similar to the configuration in the **Dell Inc** Trading Partner Setup for **FTP** Transport Input File value
 	-	You should see a response which is base64encoded
 	![inobound-test-1](images/inbound-test-1.png)
-
 	-	Copy paste the base64 encoded data in any online base64 decoder we should see an Invoice EDI message. Here is the representational invoice equivalent to EDI message
-
 	![inbound-test-2](images/inbound-test-2.png)
+	-	Navigate to the **Home > Settings > File Server > Folders** and check the  **/upload/users/subhani/B2BWorkshop/B2BTPDELLIn** directory. You should see an edi file (Invoice-XX.edi ) generated by the external Trading Partner
 
-	-	Navigate to the **Menu > Settings > File Server > Files** and check the  **/B2BWorkshop/B2BTPDELLIn** directory. You should see an edi file (Invoice-XX.edi ) generated by the external Trading Partner
-
-2.	Navigate to **Integrations** page. Search for the B2B Integration – **Dell Inc FTP Receive** integration flow and Click on ***Run*** and ***Submit Now***
-	-	Navigate to the **File server** and check the  /B2BWorkshop/B2BTPDELLIn directory. You should see an edi file is moved to **/B2BWorkshop/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
-	-	Now, Check the **/B2BWorkshop/B2BTPDELLOut** folder and we should see a 997 Functional Ack generated
+2.	Navigate to **Integrations** page. Search for the B2B Integration – **Dell FTP Receive** integration flow and Click on ***Run*** and click on ***Run*** again
+	-	Navigate to the **File server** and check the  /upload/users/subhani/B2BWorkshop/B2BTPDELLIn directory. You should see an edi file is moved to **/upload/users/subhani/B2BWorkshop/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
+	-	Now, Check the **/upload/users/subhani/B2BWorkshop/B2BTPDELLOut** folder and we should see a 997 Functional Ack generated
 
 	Here is the representational format of Functional Acknowledgement which is generated.
 
@@ -256,7 +251,7 @@ Let's use Oracle Integration Test Console to simulate a 810 Invoice EDI message 
 
 	**Knowledge Point**: A separate Functional Ack will be generated for every Transaction set
 
-3.	Navigate to **Menu > Monitoring >B2B Tracking** page. You should see 2 Business Messages under the Business Messages Tab for your specific Trading Partner.
+3. Navigate to ***Home***, ***Observability*** and ***B2B tracking*** page. You should see 2 Business Messages under the Business Messages Tab for your specific Trading Partner.
 
 	Tip:  Select the **Filter** to search based on Trading Partner Name
 
@@ -273,7 +268,7 @@ Let's use Oracle Integration Test Console to simulate a 810 Invoice EDI message 
 
 	![View Wire Messages](images/inbound-test-6.png)
 
-5.	Navigate to **Menu > Monitoring > Integrations > Dashboards**. Select Activity Stream from **View**
+5.	Navigate to ***Home***, ***Observability, Integrations, Dashboards***. Select Activity Stream from **View**
 
 	![View Integration Progress](images/inbound-test-7.png)
 
