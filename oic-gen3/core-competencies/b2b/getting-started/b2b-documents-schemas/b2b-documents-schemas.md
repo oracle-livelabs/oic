@@ -126,12 +126,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [B2B Documents & Schemas](https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-b2b/b2b-documents-and-b2b-schemas.html)
-
-* [Generate Implementation Guide](https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-b2b/generate-implementation-guide.html#GUID-04ED2504-39C4-4885-8A69-CEDDCA614308)
+* [Generate Implementation Guide](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/introduction-b2b-oracle-integration.html#GUID-11EFFD48-3E63-4C60-8771-DE789FF90909)
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** -  Subhani Italapuram, Oracle Integration Product Management
+* **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Oracle Integration team, December 2021

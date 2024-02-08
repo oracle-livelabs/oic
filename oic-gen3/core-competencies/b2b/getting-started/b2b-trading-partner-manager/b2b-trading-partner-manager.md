@@ -75,7 +75,7 @@ Refer to [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) lab for mo
 You can add ways to contact the trading partner, such as their name, email, phone number, or short message service (SMS) number. You can select from the predefined Contact Types or enter your own custom Contact Type. Use this information to contact individuals offline, as needed. Contacts are currently provided only for reference and are not used in Oracle Integration B2B.
 
 1. Click the ***Contacts*** tab. Select **Contact Type** as ***Email***. Enter your email id in the **Value** column and click ***Save***  
-![Contacts](images/tpm-tp-contact-1.png)
+  ![Contacts](images/tpm-tp-contact-1.png)
 
 ### *Define B2B Identifiers*
 
@@ -103,7 +103,7 @@ Understand the Identifiers that we will use.
 | Application Partner ID       | Dell Inc. |
 
 4. Click ***Save***.  
-![B2B Identifiers](images/tpm-tp-B2BIdentifiers-1.png)
+  ![B2B Identifiers](images/tpm-tp-B2BIdentifiers-1.png)
 
 ### *Define Transports*
 
@@ -137,9 +137,10 @@ Two Integrations are created automatically when a Transport is created. These In
 Deploy the Transport Integrations.
 
 1. Click the ***Action*** menu on the **FTP** Transport to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment.  
-![Deploy Transport Integrations](images\tpm-tp-Transport-1.png)
+  ![Deploy Transport Integrations](images\tpm-tp-Transport-1.png)
 2. Starting at the Oracle Integration **Home** page, select ***Integrations***, then ***Integrations*** again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
-![Dell FTP Transport Integrations](images\tpm-tp-Transport-2.png)
+  ![Dell FTP Transport Integrations](images\tpm-tp-Transport-2.png)
+
 
 ## Task 3: Create Agreements
 
@@ -173,10 +174,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration B2B in Trading Partner Mode](https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-b2b/b2b-oracle-integration-intrading-partner-mode.html)
+* [Oracle Integration 3 B2B in Trading Partner Mode](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/b2b-oracle-integration-intrading-partner-mode.html#GUID-A8B10BDB-462C-49C3-9710-833FA11AE8BA)
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** -  Subhani Italapuram, Oracle Integration Product Management
+* **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Oracle Integration team, December 2021

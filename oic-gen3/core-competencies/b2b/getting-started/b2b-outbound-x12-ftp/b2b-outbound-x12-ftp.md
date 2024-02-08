@@ -190,7 +190,7 @@ Manage business identifiers that enable you to track fields in messages during r
   ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
-5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/```<<your oic usernumber>>```/B2BWorkshop/B2BTPDELLOut**
+5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/B2BWorkshop/B2BTPDELLOut**
 6. In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
 This feature will very much useful when we have more than one trading partner. We just define the trading partner on the user interface, integrations will be created automatically and files will be processed with the existing Backend Integration.
@@ -237,10 +237,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle B2B Documentation](https://docs.oracle.com/en/cloud/paas/integration-cloud/btob.html)
-* [What's New](https://docs.oracle.com/en/cloud/paas/integration-cloud/whats-new/index.html)
+* [Develop flows in Oracle Integration B2B](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/introduction-b2b-oracle-integration.html#GUID-11EFFD48-3E63-4C60-8771-DE789FF90909)
+* [What's New](https://docs.oracle.com/en/cloud/paas/application-integration/whats-new/#GUID-53597C32-075F-4AEB-90DD-D8F8DBBEBD4D)
 
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Contributors** -  Kishore Katta, Oracle Integration Product Management
+* **Contributors** -  Kishore Katta, Technical Director, Oracle Integration Product Management

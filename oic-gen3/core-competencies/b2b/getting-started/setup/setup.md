@@ -29,31 +29,28 @@ Configure File Server settings.
 
 1. Starting at the Oracle Integration **Home** page, select ***Settings***, then ***File Server*** from the left Navigation pane.
 2. Select ***Settings*** from left Navigation pane to open the File Server Settings page and review the File Server status and configurations.
-![File Server Settings page](images/file-server-settings.png)
+  ![File Server Settings page](images/file-server-settings.png)
 **Note**: Ensure the **Authentication Type** is set to ***Password or Key***.
-3. Select ***Files*** from left Navigation pane.
-![Navigation to Files](images/file-server-files1.png)
+3. Select ***Folders*** from left Navigation pane.
+  ![Navigation to Files](images/file-server-files1.png)
 4. From the top right click ***Create*** and create a Folder named ***B2BWorkshop***.
-![Create Folder](images/file-server-files2.png)
+  ![Create Folder](images/file-server-files2.png)
 5. Select the ***B2BWorkshop*** Folder and create two additional Folders named ***B2BTPDELLIn*** and ***B2BTPDELLOut***.
-![Workshop Folder structure](images/file-server-files3.png)
+  ![Workshop Folder structure](images/file-server-files3.png)
 **Note**: You will be using the above Folder structure in next labs.
 6. Select ***Users*** from left Navigation pane. Find and select the user you are currently logged in as.  
 If your user has not yet been configured to use File Server, click ***Select*** to configure your user.  
 Otherwise, click ***Edit Configuration*** for your user.
 7. Configure your user as follows:
     * Select **Home Folder Type** as ***Custom***.
-    * Select **Home Folder** as ***B2BWorkshop***.
-![User configuration](images/user-permissions2.png)
-8. Click the ***X*** icon to close the Property pane. Expand your User Details and notice that **Home Folder Permissions** are not yet provided.
-![User Details](images/user-details.png)
-![Home Folder Permissions](images/user-permissions3.png)
-9. Select ***Files*** from left Navigation pane. Click ***Permissions*** on the **B2BWorkshop** folder.
-![Select Folder Permissions](images/user-permissions4.png)
+    * Select **Home Folder** as ***B2BWorkshop***, click on ***Save*** and click on ***Close***
+    ![User configuration](images/user-permissions2.png)
+9. Select ***Folders*** from left Navigation pane. Click ***Permissions*** on the **B2BWorkshop** folder.
+  ![Select Folder Permissions](images/user-permissions4.png)
 10. Click ***Add Permissions*** and select your user. Click ***Add***.
-![Add user to Folder permissions](images/user-permissions5.png)
+  ![Add user to Folder permissions](images/user-permissions5.png)
 11. Select ***All*** and ***Propagate to subfolders***. All of the permission check boxes should be checked. Click ***Save*** and exit the Permissions page.
-![Folder permissions](images/user-permissions6.png)
+  ![Folder permissions](images/user-permissions6.png)
 
 ## Task 2: Connect to File Server with FTP Client
 
@@ -66,44 +63,56 @@ To access files on the File Server you will need to use an FTP Client. You will 
 
 1. To obtain the File Server IP Address and Port, select **Settings** from left Navigation pane. The IP and Port are located in the **IP and Port Information** section of the **Settings** page.
 2. Using your FTP Client choice, connect to the File Server using the SFTP - SSH File Transfer Protocol.  
-![Example FTP Client configuration](images/user-permissions7.png)
+  ![Example FTP Client configuration](images/user-permissions7.png)
 A example configuration using FileZilla FTP Client.  
 If the permissions are configured correctly, you should be able to list, read, and write files on the **B2BWorkshop**, **B2BTPDELLIn**, and **B2BTPDELLOut** Folders.
-![Example FTP Client directory listing](images/user-permissions8.png)
+  ![Example FTP Client directory listing](images/user-permissions8.png)
 
-## Task 3: Creating Connection with File Server
+## Task 3: Create Connection with File Server
 
-To access the File Server from an Integration, you will need to create an FTP Connection.  
-**Note**: You can use an existing connection if one has already been configured for your environment.
+  To access the File Server from an Integration, you will need to create an FTP Connection.  
 
-1. Starting at the Oracle Integration **Home** page, select ***Integrations***, then ***Connections*** from the left Navigation pane.
-2. Click ***Create***, then select the ***FTP*** Adapter and click ***Select***.
-3. From the **Create Connection** dialog, **Name** your connection ***File Server*** and leave the rest of the configurations as defaulted. Click ***Create***.  
-**Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
-4. Enter the following configurations in the **FTP Connection** with the information you previously gathered from the File Server Settings page.  
-| Field                   | Value                                                 |
-|-------------------------|-------------------------------------------------------|
-| FTP Server Host Address | From File Server Settings - IP and Port Information   |
-| FPT Server Port         | From File Server Settings - IP and Port Information   |
-| SFTP Connection         | Yes                                                   |
-| Security                | FTP Server Access Policy                              |
-| Username                | Your Oracle Integration username                      |
-| Password                | Your Oracle Integration password                      |
+  1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
+  2. In the *Create Connection* dialog, select the **FTP** adapter to use for this connection. To find the adapter, enter FTP in the search field. Click on the highlighted adapter
+  3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click ***Create***.  
+      > **Note:**  If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
 
-5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the **Connection File Server was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
+  4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
+      | Field                   | Value                                                 |
+      |-------------------------|-------------------------------------------------------|
+      | FTP Server Host Address | From File Server Settings - IP and Port Information   |
+      | FPT Server Port         | From File Server Settings - IP and Port Information   |
+      | SFTP Connection         | Yes                                                   |
+      | Security                | FTP Server Access Policy                              |
+      | Username                | Your Oracle Integration username                      |
+      | Password                | Your Oracle Integration password                      |
 
-## Task 4: Creating Connection with REST Adapter
+  5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the *Connection File Server was tested successfully* confirmation message. Click ***Save*** and exit the Connection editor.
 
-To expose your B2B integrations as an API, you will need to create a REST Connection.  
-**Note**: You can use an existing connection if one has already been configured for your environment.
+## Task	4: Create Connection using REST adapter
+  Create a connection with the REST Adapter.
 
-1. If you are not already on the Connections page, starting at the Oracle Integration Home page, select ***Integrations***, then ***Connections*** from the left Navigation pane.
-2. Click ***Create***, then select the ***REST*** Adapter and click ***Select***.
-3. From the **Create Connection** dialog, **Name** your connection ***REST Interface***. Set the **Role** to ***Trigger*** and leave the rest of the configurations as defaulted. Click ***Create***.  
-**Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
-4. Set the **Security Policy** to ***OAuth 2.0 Or Basic Authentication***.  
-![REST Connection configuration](images/rest-interface.png)
-5. Confirm your Connection by clicking ***Test***. You should see the **Connection REST Interface was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
+  1. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
+  2. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter `REST` in the search field. Click on the highlighted adapter.
+  3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
+
+      | **Field**        | **Value**          |       
+      | --- | ----------- |
+      | Name         | REST Interface     |
+      | Role         | Trigger       |
+      | Description  | REST Interface Connection for OIC LiveLabs |
+
+      Keep all other values as default.
+
+  4. In the *Configuration* page, enter the following information:
+
+      | **Field**  | **Values** |
+      |---|---|
+      |Security Policy | OAuth 2.0 Or Basic Authentication |
+
+  5. Click on ***Test***  and wait until you receive a confirmation box that the test was successful.
+  6. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
+
 
 ## Task 5: Download Lab Artifacts
 
@@ -113,11 +122,11 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [File Server](https://docs.oracle.com/en/cloud/paas/integration-cloud/file-server/file-server-overview.html)
-* [About Connections](https://docs.oracle.com/en/cloud/paas/integration-cloud/integrations-user/integration-cloud-service-concepts.html#GUID-DDA9C4B9-BCB0-4F4D-BA51-44FB610AEA1C)
+* [Using the FTP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/ftp-adapter/ftp-adapter-capabilities.html)
+* [Using the REST Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/index.html)
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** - Subhani Italapuram, Oracle Integration Product Management
+* **Contributors** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Oracle Integration team, December 2021

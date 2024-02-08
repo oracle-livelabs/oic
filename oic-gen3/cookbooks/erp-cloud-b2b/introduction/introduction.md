@@ -36,8 +36,8 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Oracle Integration Blogs](https://blogs.oracle.com/integration/)
+* [Oracle Integration 3 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Oracle Integration 3 Blogs](https://blogs.oracle.com/integration/)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management

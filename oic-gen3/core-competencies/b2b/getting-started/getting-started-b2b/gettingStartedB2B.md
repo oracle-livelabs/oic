@@ -205,10 +205,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration B2B](https://docs.oracle.com/en/cloud/paas/integration-cloud/btob.html)
-* [Oracle Integration Blogs](https://blogs.oracle.com/integration/)
+* [Oracle Integration 3 B2B](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/introduction-b2b-oracle-integration.html#GUID-11EFFD48-3E63-4C60-8771-DE789FF90909)
+* [Oracle Integration 3 Blogs](https://blogs.oracle.com/integration/)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** -  Subhani Italapuram, Oracle Integration Product Management
+* **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Oracle Integration team, December 2021
