@@ -1,4 +1,4 @@
-# Create Project
+# Create a Project
 
 ## Introduction
 
@@ -11,7 +11,6 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Create a Project
-- 
 
 ### Prerequisites
 This lab assumes you have:
