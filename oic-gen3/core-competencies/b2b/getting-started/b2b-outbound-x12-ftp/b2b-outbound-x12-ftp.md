@@ -33,7 +33,7 @@ In this lab, you will create a basic integration flow to process the EDI documen
 
 
 ### Prerequisites
-> **Note** : This Lab assumes you have completed all the previous labs. Importantly, [Lab5:B2B Schemas and Documents](../workshops/freetier/?lab=b2b-documents-schemas) & [Lab6: B2B Trading Partner Manager](../workshops/freetier/?lab=b2b-trading-partner-manager)
+> **Note** : This Lab assumes you have completed all the previous labs. Importantly, [Lab5:B2B Schemas and Documents](../workshops/tenancy/?lab=b2b-documents-schemas) & [Lab6: B2B Trading Partner Manager](../workshops/tenancy/?lab=b2b-trading-partner-manager)
 
 > **Note**: [Download Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BoaluNGQEwbsB8_mv5JWSB5TI4FSMwRCkfyNdDwC8KXKgqYGmcHVSUIUS3E0dB-9/n/oicpm/b/oiclivelabs/o/oic3/b2b/b2b-getting-started.zip) if, not done in previous sections
 
@@ -210,9 +210,9 @@ Tip:  Select the Filter to search based on Trading Partner Name
 In this exercise, you would be creating a new trading partner(US Gas and Electric) and pre-requisites required for integrating with this trading partner.
 1. Create two folders **B2BTPUSGEIn** and **B2BTPUSGEOut** under B2BWorkshop folder in the File Server and provide permissions.
 
-Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/freetier/?lab=setup#Task1:ConfigureFileServer)
+Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/tenancy/?lab=setup#Task1:ConfigureFileServer)
 
-2. Create a trading partner and corresponding agreements with the details given below. You can refer [Lab: B2B Trading Partner Manager-Task2 and Task3](../workshops/freetier/?lab=b2b-trading-partner-manager)
+2. Create a trading partner and corresponding agreements with the details given below. You can refer [Lab: B2B Trading Partner Manager-Task2 and Task3](../workshops/tenancy/?lab=b2b-trading-partner-manager)
 
 | Identifier Name | Identifier Value |
 | --- | --- |
@@ -230,7 +230,7 @@ Follow the instructions from Step5 to Step9 given under [Setup the Environment](
 3. ***Deploy*** the **Transport and Agreements** if not deployed.
 4. Copy&Paste the payload from **USGEPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**)
 5. Go back to Integrations and test using the new trading partner as you did for DellInc
-[Refer previous task "Test the integration"](../workshops/freetier/?lab=b2b-outbound-x12-ftp#Task9:Testtheintegration)
+[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:Testtheintegration)
 6. Monitor the trading partner and backend integrations.
 
 You may now **proceed to the next lab**.

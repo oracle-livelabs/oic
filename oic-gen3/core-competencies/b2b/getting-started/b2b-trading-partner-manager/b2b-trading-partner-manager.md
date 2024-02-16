@@ -20,7 +20,7 @@ In this lab, you will learn:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Completed [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
+* Completed [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
 
 ## Task 1: Configure the Host Profile
 
@@ -65,7 +65,7 @@ Note: If you change the Host Identifier value used in a deployed Agreement, the 
 
 You can create and manage Trading Partners. A Trading Partner is the external business entity with which your company interacts to send or receive business documents, such as orders and invoices, in electronic form.
 
-Refer to [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) lab for more information on Trading Partners.
+Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) lab for more information on Trading Partners.
 
 1. In the left navigation pane, click ***Trading Partners***
 2. Click ***Create***. Enter the Trading Partner **Name** as ***Dell Inc*** and an optional description. The **Identifier** field is automatically populated with a unique Trading Partner identifier. Click ***Create***.
@@ -122,7 +122,7 @@ Note: The AS2 and FTP transport protocols are currently supported.
 |------------------------------|------------------------------|
 | Name                         | FTP                          |
 | Type                         | FTP                          |
-| Trading Partner's Connection | Select the FTP Connection you previously created (File Server). Refer to [Creating Connection with File Server](../workshops/freetier/?lab=setup#Task4:CreatingConnectionwithFileServer) for more information.|
+| Trading Partner's Connection | Select the FTP Connection you previously created (File Server). Refer to [Creating Connection with File Server](../workshops/tenancy/?lab=setup#Task4:CreatingConnectionwithFileServer) for more information.|
 | Output Directory             | /B2BWorkshop/B2BTPDELLOut    |
 | Output File Name             | Order-%SEQ%.edi              |
 | Integration Name Prefix      | Dell                         |
@@ -146,7 +146,7 @@ Deploy the Transport Integrations.
 
 This section describes creating and managing Agreements. You define one or more Agreements for a B2B Trading Partner with an intent to send or receive only certain types of business documents to or from that Trading Partner.
 
-Refer to [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) lab for more information on Agreements.
+Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) lab for more information on Agreements.
 
 ### *Define Outbound Agreement*
 

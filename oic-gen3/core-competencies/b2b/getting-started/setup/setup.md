@@ -1,4 +1,4 @@
-# Setup Workshop Prerequisites
+# Setup
 
 ## Introduction
 

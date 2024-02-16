@@ -26,7 +26,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-> **Note** : This Lab assumes you have already completed [Defining Host Profile](../workshops/freetier/?lab=b2b-trading-partner-manager#Task1:ConfiguretheHostProfile) and [Create Trading Partners] (../workshops/freetier/?lab=b2b-trading-partner-manager#Task2:CreateTradingPartners)
+> **Note** : This Lab assumes you have already completed [Defining Host Profile](../workshops/tenancy/?lab=b2b-trading-partner-manager#Task1:ConfiguretheHostProfile) and [Create Trading Partners] (../workshops/tenancy/?lab=b2b-trading-partner-manager#Task2:CreateTradingPartners)
 
 > **Note**: [Download Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BoaluNGQEwbsB8_mv5JWSB5TI4FSMwRCkfyNdDwC8KXKgqYGmcHVSUIUS3E0dB-9/n/oicpm/b/oiclivelabs/o/oic3/b2b/b2b-getting-started.zip) if, not done in previous sections
 

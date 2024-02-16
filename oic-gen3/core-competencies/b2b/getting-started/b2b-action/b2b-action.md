@@ -18,7 +18,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Completed [B2B Concepts](../workshops/freetier/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
+* Completed [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
 
 ## Task	1: B2B Integration Action Trading Partner Mode
 

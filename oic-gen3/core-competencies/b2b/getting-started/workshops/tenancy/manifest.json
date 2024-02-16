@@ -13,15 +13,15 @@
             "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Provision Oracle Integration",
+            "title": "Lab 1: Provision Oracle Integration 3",
             "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
             "title": "Lab 2: Enable File Server",
-            "filename": "../../../../common/provision-oic/provision.md"
+            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
         },
         {
-            "title": "Lab 3: Setup Workshop Prerequisites",
+            "title": "Lab 3: Setup",
             "filename": "../../setup/setup.md"
         },
         {

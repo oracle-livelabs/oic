@@ -22,7 +22,7 @@ In this lab, you will learn several B2B concepts which will be implemented in th
 
 This lab assumes you have:
 
-* An Oracle account and Oracle Integration Instance provisioned.
+* An Oracle account and Oracle Integration 3 Instance provisioned.
 * All Pre-requisite setup is done.
 
 ##	Task	1: Learn Concepts and Understand Navigation
@@ -41,9 +41,9 @@ When you send electronic documents to an external trading partner, some B2B Iden
 
 A Trading Partner is an external business entity that your company interacts with, and sends or receives business transactions, such as orders and invoices, in electronic form.
 
-**Trading Partners** is the where you register your external trading partners and enter information on their behalf. Note that your trading partners cannot access these pages in your Oracle Integration instance. Therefore, as the B2B system administrator, you gather information from your external trading partners, and enter that information in Trading Partner configurations.
+**Trading Partners** is the where you register your external trading partners and enter information on their behalf. Note that your trading partners cannot access these pages in your Oracle Integration 3 instance. Therefore, as the B2B system administrator, you gather information from your external trading partners, and enter that information in Trading Partner configurations.
 
-Similar to Oracle Integration B2B, your external trading partner will have a B2B application of their own, and they will collect some information about your company, and enter that information into their B2B application.
+Similar to Oracle Integration 3 B2B, your external trading partner will have a B2B application of their own, and they will collect some information about your company, and enter that information into their B2B application.
 
 Once the setup is completed on both the ends (and tested), then the two parties - your company and the external trading partner, are ready to send and receive documents.
 
@@ -55,7 +55,7 @@ In some cases, you don't directly communicate with your external trading partner
 
 ### *Integrations Used For B2B Processing*
 
-The processing of B2B messages happens through Integrations. Oracle Integration B2B uses a two-integration design pattern for better modularity, described below.
+The processing of B2B messages happens through Integrations. Oracle Integration 3 B2B uses a two-integration design pattern for better modularity, described below.
 
 #### Inbound
 
@@ -100,7 +100,7 @@ The **B2B Integration for Sending Messages** performs these steps:
 
 Transports are configuration objects that represent a concrete communication channel to a trading partner, using a specific protocol such as AS2 or FTP. You add one or more transports to a trading partner in order to send or receive business documents from them.
 
-Currently, AS2 and FTP (includes SFTP) are supported protocols for B2B Trading Partner mode. If you wish to use another protocol adapter in Oracle Integration with B2B, you can do so only using the Standalone mode.
+Currently, AS2 and FTP (includes SFTP) are supported protocols for B2B Trading Partner mode. If you wish to use another protocol adapter in Oracle Integration 3 with B2B, you can do so only using the Standalone mode.
 
 You define a Transport for a B2B trading partner from the **Trading Partner** **Transports and Agreements** configuration. Here's a sample screenshot for a trading partner with one AS2 and one FTP transport.
 
@@ -116,19 +116,19 @@ One important aspect of an FTP transport is that the receiving side polls the In
 
 #### AS2
 
-AS2, an abbreviation for Applicability Statement 2, is an HTTP based protocol designed for B2B by adding a comprehensive set of data security features around data confidentiality, data integrity/authenticity, and non-repudiation. The AS2 specification is covered by [RFC 4130](https://datatracker.ietf.org/doc/html/rfc4130). Oracle Integration B2B supports AS2 1.0 and 1.1 versions.
+AS2, an abbreviation for Applicability Statement 2, is an HTTP based protocol designed for B2B by adding a comprehensive set of data security features around data confidentiality, data integrity/authenticity, and non-repudiation. The AS2 specification is covered by [RFC 4130](https://datatracker.ietf.org/doc/html/rfc4130). Oracle Integration 3 B2B supports AS2 1.0 and 1.1 versions.
 
 An AS2 transport offers configuration options specific to AS2 that work in conjunction with the AS2 Connection and the Certificate management.
 
 For example, if you wish to sign and encrypt the outbound messages:
 
-1. You use Oracle Integration Certificate management, accessed from the **Home** page and clicking ***Settings***, then ***Certificates***, to upload your certificates.
+1. You use Oracle Integration 3 Certificate management, accessed from the **Home** page and clicking ***Settings***, then ***Certificates***, to upload your certificates.
 2. You enter the signing and encryption certificate alias in the AS2 Connection selected in the AS2 Transport.
 3. You select an encryption and signing algorithms in the AS2 Transport configuration.
 
 The simplest AS2 communication uses no encryption, no signing, and no compression. If you are learning about AS2, you can start simple and add the security layers later.
 
-In AS2 there is a concept of an electronic read receipt, officially termed as MDN (Message Disposition Notification). It is a transport level acknowledgment used as a confirmation that the other party has received your message intact. Oracle Integration B2B generates and consumes MDN messages (when enabled), and correlates them to the original transmissions. A B2B Message Tracking page, described later, allows you to view the AS2 messages and the MDN acknowledgments.
+In AS2 there is a concept of an electronic read receipt, officially termed as MDN (Message Disposition Notification). It is a transport level acknowledgment used as a confirmation that the other party has received your message intact. Oracle Integration 3 B2B generates and consumes MDN messages (when enabled), and correlates them to the original transmissions. A B2B Message Tracking page, described later, allows you to view the AS2 messages and the MDN acknowledgments.
 
 ### *Agreements*
 
@@ -188,14 +188,14 @@ In the case where you receive an inbound message containing batched transaction,
 
 #### Use Case
 
-ACME Corp sends an X12 850 Purchase Order EDI document to Trading Partner Dell Inc through, by using FTP. ACME Corp had configured Oracle Integration B2B message exchange agreement to send Purchase Order EDI document to External Trading Partner.
+ACME Corp sends an X12 850 Purchase Order EDI document to Trading Partner Dell Inc through, by using FTP. ACME Corp had configured Oracle Integration 3 B2B message exchange agreement to send Purchase Order EDI document to External Trading Partner.
 
 ![B2B Outbound Purchase Order Use Case](./images/demystifying-concepts.png)
 
-* Acme Corp (Manufacturer of goods) an Oracle Integration Customer is the Host company.
+* Acme Corp (Manufacturer of goods) an Oracle Integration 3 Customer is the Host company.
 * Dell Inc (Supplier of goods) is the Trading Partner.
 * Host Company ERP Cloud Application Creates a purchase order. A Backend Integration in OIC translates the Purchase order to EDI X12 Structure.
-*	Oracle Integration B2B transports the Purchase Order to Trading Partner through, by using agreed upon Communication Protocol which is FTP.
+*	Oracle Integration 3 B2B transports the Purchase Order to Trading Partner through, by using agreed upon Communication Protocol which is FTP.
 * Acme Corp Sends the Purchase Order and Receives an 997 Acknowledgement from Trading Partner which is the Agreement configured for Outbound processing.
 
 **Relationship between Trading Partner and Agreements**
