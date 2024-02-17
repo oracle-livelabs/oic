@@ -81,13 +81,13 @@ This lab assumes you have:
 
    Understand the Identifiers that we will use.
 
-    | Identifier Type              | Purpose |
-    | ---                          | --- |
-    | EDI Interchange ID           | Mandatory for all EDI data formats. This identifier is used as either the Interchange Sender or Receiver ID field of the interchange envelope. For an outbound message, this value is inserted as the Interchange Receiver ID. <ul><li>For an inbound message, this identifier is used as the Interchange Sender ID to identity a trading partner as a sender of a message</li><li>For an inbound message, this identifier is used as the Interchange Sender ID to identity a trading partner as a sender of a message.</li></ul> |
-    | EDI Interchange ID Qualifier | Mandatory for X12 and optional for EDIFACT. It is a code to indicate the category of the value specified in the EDI Interchange ID (for example, DUNS number, IATA number, and so on). For an outbound message, this value is inserted as the Interchange Receiver ID Qualifier.|
-    |EDI Group ID                 | This is mandatory for X12 and optional for EDIFACT. <ul><li>For an outbound X12 message, this value is inserted in the GS segment as the Application Receiver's Code</li><li>For an inbound message, this value is used only in case the EDI Interchange ID, on its own, is not enough to uniquely identify a trading partner</li></ul> |
-    | EDI Group ID Qualifier       | It is a code to indicate the category of the value specified in the EDI Group ID (for example, DUNS number, IATA number, and so on).Only used for an outbound message, to insert as EDI Group ID Qualifier, if specified|01|
-    |Application Partner ID|Optionally used as an alternate way to specify which trading partner to which to route an outbound message. |
+      | Identifier Type              | Purpose |
+      | ---                          | --- |
+      | EDI Interchange ID           | Mandatory for all EDI data formats. This identifier is used as either the Interchange Sender or Receiver ID field of the interchange envelope. For an outbound message, this value is inserted as the Interchange Receiver ID. <ul><li>For an inbound message, this identifier is used as the Interchange Sender ID to identity a trading partner as a sender of a message</li><li>For an inbound message, this identifier is used as the Interchange Sender ID to identity a trading partner as a sender of a message.</li></ul> |
+      | EDI Interchange ID Qualifier | Mandatory for X12 and optional for EDIFACT. It is a code to indicate the category of the value specified in the EDI Interchange ID (for example, DUNS number, IATA number, and so on). For an outbound message, this value is inserted as the Interchange Receiver ID Qualifier.|
+      |EDI Group ID                 | This is mandatory for X12 and optional for EDIFACT. <ul><li>For an outbound X12 message, this value is inserted in the GS segment as the Application Receiver's Code</li><li>For an inbound message, this value is used only in case the EDI Interchange ID, on its own, is not enough to uniquely identify a trading partner</li></ul> |
+      | EDI Group ID Qualifier       | It is a code to indicate the category of the value specified in the EDI Group ID (for example, DUNS number, IATA number, and so on).Only used for an outbound message, to insert as EDI Group ID Qualifier, if specified|01|
+      |Application Partner ID|Optionally used as an alternate way to specify which trading partner to which to route an outbound message. |
 
     - Click the ***B2B Identifiers*** tab.
     - Select an Identifier or, if none are defined, click **Add Identifiers** ***+***.
@@ -122,7 +122,7 @@ This lab assumes you have:
     * Failed.
 
     - Click the ***Transports & Agreements*** tab. In the **Transports** section, click ***+*** to add a new Transport. Enter the details as per the below and click ***Add***.  
-> **Note** : The AS2 and FTP transport protocols are currently supported.  
+
 
       | Field                         | Description                 |
       |------------------------------|------------------------------|
@@ -132,6 +132,8 @@ This lab assumes you have:
       | Output Directory             | /B2BWorkshop/B2BTPDELLOut    |
       | Output File Name             | Order-%SEQ%.edi              |
       | Integration Name Prefix      | Dell                         |
+
+> **Note** : The AS2 and FTP transport protocols are currently supported.  
 
 4. B2B Integrations
 
