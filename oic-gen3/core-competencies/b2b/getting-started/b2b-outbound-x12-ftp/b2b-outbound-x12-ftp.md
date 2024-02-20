@@ -41,7 +41,7 @@ In this lab, you will create a basic integration flow to process the EDI documen
 
 Let's create a basic, outbound integration flow that receives an XML document through a REST request, converts it to EDI X12 format, and invokes corresponding trading partner.
 
-Note: This integration flow uses REST for simplicity. You can substitute the REST Adapter trigger connection with any other adapter, such as the FTP Adapter, NetSuite Adapter, ERP Cloud Adapter, available in Oracle Integration
+> **Note**: This integration flow uses REST for simplicity. You can substitute the REST Adapter trigger connection with any other adapter, such as the FTP Adapter, NetSuite Adapter, ERP Cloud Adapter, available in Oracle Integration
 
 
 1. In the **Navigation pane**, click ***Integrations***
@@ -55,7 +55,7 @@ Note: This integration flow uses REST for simplicity. You can substitute the RES
     <copy>PO Backend</copy>
     ```
 
-4. Click on **Save** and Change Layout to **Horizontal**
+4. Change Layout to **Horizontal** and Click on **Save**.
 
 ## Task 2: Configure the REST Adapter Trigger Connection
 On the integration canvas, click the ***start node*** and select ***REST Interface*** as the trigger connection.

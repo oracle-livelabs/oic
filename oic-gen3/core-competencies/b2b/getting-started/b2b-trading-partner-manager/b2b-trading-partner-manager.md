@@ -91,7 +91,7 @@ This lab assumes you have:
 
     - Click the ***B2B Identifiers*** tab.
     - Select an Identifier or, if none are defined, click **Add Identifiers** ***+***.
-    - Create the following Identifiers:  
+    - Create the following Identifiers and also add control numbers as per the table given below.  
           | Identifier Type              | Value     |
           | ---                          | ---       |
           | EDI Interchange ID           | Dell Inc. |
@@ -100,7 +100,7 @@ This lab assumes you have:
           | EDI Group ID Qualifier       | 01        |
           | Application Partner ID       | Dell Inc. |
 
-      - Add control numbers as per the table given below.
+      - Control Numbers
           | Identifier Type       | Value|
           | ---                   | ---  |
           | Interchange           | 2    |
