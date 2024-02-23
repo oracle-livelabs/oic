@@ -327,22 +327,20 @@ For example, you can introduce the following behaviours into your forms:
 6. Click on **Action** and define the values as per the screenshot given below for the element **id**.
    ![idAction](images/idaction.png)
 7. Repeat the step 6 for all the elements given below, except *Letter of credit id* element for which pre defined data is populated and click on **OK** after completing actions for all the elements.
-
-- orderNumber
-- pOHeaderId
-- orderAmount
-- soldToLegalEntity
-- procurementBUId
-- procurementBusinessUnit
-- supplier
-- supplierId
-- createdDate
-- createdBy
-- lastUpdateDate
-- lastUpdateBy
-
+	- orderNumber
+	- pOHeaderId
+	- orderAmount
+	- soldToLegalEntity
+	- procurementBUId
+	- procurementBusinessUnit
+	- supplier
+	- supplierId
+	- createdDate
+	- createdBy
+	- lastUpdateDate
+	- lastUpdateBy
    ![POHeaderActions](images/poheader-actions.png)
-8. Again, Click on **Edit Pencil Icon** link
+8. Again, Click on *On Change* event **Edit Pencil Icon** link
 9. Click on **Action** and define the values as per the screenshot given below and click on **OK**
    ![showpotype object](images/showpotype.png)
 10. Select the **Attach LOC Application 1.0** application to go back to the process application and again open the form and make sure that all the actions are stored.
@@ -404,8 +402,10 @@ The structured process editor opens. **Start** and **end** elements are already 
 10.	Similarly, edit the second swimlane and select *Process Approver*
 
 11.	In the BPMN elements palette, expand the **Human** category and drag an *Approve* task to the second swimlane. Adjust the process flow so that the **Approve** task is the second element in the flow. Rename it to *Approve Change Order*
+		![Add Approve Activity](images/add-approve-activity.png)
 
 12.	In the BPMN elements palette, expand the **Gateway** category and drag an *Exclusive* Gateway Activity to the second swimlane next to the **Approve Change Order**. Rename the **Gateway** activity to *Approved?*
+		![Add Gateway Activity](images/add-gateway-activity.png)
 
 13.	In the BPMN elements palette, expand the **Human** category and drag a *Submit* task to the first swimlane. Rename it to *Resubmit*.
 
@@ -415,12 +415,15 @@ The structured process editor opens. **Start** and **end** elements are already 
 16. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
 
 17. Select the *Resubmit* activity and connect with **Approve Change Order** activity
+
 18. Select the *Approve Change Order* activity and connect with **Approved?** activity
+
 19. In the BPMN elements palette, expand the **Integrations** category and drag an *Change Order ERP PO Proxy* activity to the second swimlane and put it after *Approved?* task.
 
-
 20. Move *Completed* activity from first swimlane to the second swimlane after the *invoke change order* activity.
-21. Select the *Approved* activity and connect with **invoke change order** activity
+
+21. Select the *Approved* activity and connect with **Change Order ERP PO Proxy** activity
+
 22. Select the *invoke change order* activity and connect with **Completed** activity
 
 23. Click on the **Show/Hide Grid** option to show the Grid and arrange all the activities as per the screenshot given below.
@@ -627,4 +630,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
 * **Contributors** - Subhani Italapuram (Oracle Integration, Product Management)
-* **Last Updated By/Date** - Kishore Katta, August 2022
+* **Last Updated By/Date** - Kishore Katta, September 2022

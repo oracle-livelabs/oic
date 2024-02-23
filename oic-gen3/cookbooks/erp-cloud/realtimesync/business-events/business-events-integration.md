@@ -34,8 +34,8 @@ This lab assumes you have:
 ##	Task 1: Create the PO Event Integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, Click on ***Application***.
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, Click on ***Application***.
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -57,7 +57,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***POEvent***
-     - Click ***&gt; (Next step)***.
+     - Click ***Continue***.
 
 4. On the **Request** page, select the following values:
 
@@ -77,8 +77,8 @@ Add ERP PO Event trigger to the empty integration canvas.
     1. If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
     2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***&gt; (Next step)***.
-7. On the **Summary** page, click ***Done***.
+6. Click ***Continue***.
+7. On the **Summary** page, click ***Finish***.
 8. Click ***Save*** to persist changes.
 9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
     ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
@@ -87,17 +87,17 @@ Add ERP PO Event trigger to the empty integration canvas.
 Add the FTP Adapter invoke to the integration canvas.
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the **File Server** Connection created in the previous lab.
 This invokes the FTP adapter Configuration Wizard.
-2. On the **Basic Info** page, select the following values and click ***&gt; (Next step)***.
+2. On the **Basic Info** page, select the following values and click ***Continue***.
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | What do you want to call your endpoint? | `Write2FTP`       |
 
-3. On the **Operation** page, select the following values and click ***&gt; (Next step)***.
+3. On the **Operation** page, select the following values and click ***Continue***.
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | Select Operation | Write File  |
-    | Output Directory | /home/users/***your username***/Output  |
+    | Output Directory | /upload/users/```<<your oic usernumber>>```  |
     | File Name Pattern | PO%SEQ%.json  |
 
     Leave the rest as default.
@@ -119,9 +119,9 @@ This invokes the FTP adapter Configuration Wizard.
     }
     </copy>
     ```
-4. Click ***&gt; (Next step)***.
+4. Click ***Continue***.
 6. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
-7. Click ***&gt; (Next step)*** and Review the **Summary** page and click on ***Done***
+7. Click ***Continue*** and Review the **Summary** page and click on ***Finish***
 8. Click on ***Save***
 
 ## Task 4: Map data between ERP trigger and FTP invoke

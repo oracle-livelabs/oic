@@ -108,7 +108,7 @@ Follow these steps to view the sales orders record in the designated DB table.
 Verify sales orders file archived in OCI Object storage
 
 1.  Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
-    ![Select Object Storage](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-buckets.png)
+    ![Select Object Storage](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
 2.  Select the **Compartment** and Click on the Bucket example: *bucket-demo* created earlier.
 

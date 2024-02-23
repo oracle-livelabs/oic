@@ -27,7 +27,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
+* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
 
 
 ## Task 1: Import Pending Worker Integration Flow
@@ -35,7 +35,7 @@ This lab assumes you have:
 
 2.  On the **Integrations page**, click ***Import***.
 
-3.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
+3.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
 
 4.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
 
@@ -48,7 +48,7 @@ Use the NXSD native schema to generate a DAT file compatible with the HCM Data L
 
 The NXSD schema defines the structure of the output file (fields) and the formatting of the data.
 
-1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
+1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
 
 2.  Open the file *worker-hdl.nxsd* in a text editor.
 
@@ -192,21 +192,19 @@ Stop | Stop | The end of the integration.
 
 ## Task 4: Edit the ReadFileFromFTP Activity
 
-1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/DbyNqi_TZoc1xqIyYIwGUX4L4eWDRx-AE1lkuB3RLygz7yilHT86D5MnojTckjxZ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
+1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
-3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory **/home/users/&lt;username&gt;/Output**
+3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory ***/upload/users/```<<your oic usernumber>>```***
 
 4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
-5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter **/home/users/&lt;username&gt;/Output**. Click *Next*.
+5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter ***/upload/users/```<<your oic usernumber>>```***. Click *Next*.
 The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
-6.  Click *Next*. Review the summary and click *Done*.
-The FTP Adapter closes and the **Update Configuration?** dialog appears.
+6.  Click *Next*. Review the summary and click *Finish*.
 
-7.  Click *Update*
 
 ## Task 5: Understand the Data Mapping
 
@@ -223,7 +221,7 @@ The FTP Adapter closes and the **Update Configuration?** dialog appears.
     This data mapping is a representation of the **Worker.dat** file.
 ![Map Worker Data File](images/map-write-worker-data.png)
 
-3.  Click *Go Back*
+3.  Click *Go back*
 
 ## Task 6: Edit the Zip File Action
 
@@ -233,8 +231,8 @@ The FTP Adapter closes and the **Update Configuration?** dialog appears.
 
 3.  In the **Specify File Name** Value box edit the expression to change the file name if required. This will help you identify your file in UCM and the HCM DataLoader
 
-4.  Click *Next* and Review the summary and Click *Done*
-    The FTP Adapter closes and the Update Configuration? dialog appears. Click *Update* and Select *Save*
+4.  Click *Next* and Review the summary and Click *Finish*
+
 
 ## Task 7: Define the Tracking Fields
 
@@ -246,7 +244,7 @@ Tracking fields specify a unique value to monitor your integration instance.
 
 2.  From the **Source** section, select *startTime*. Drag and drop the in the **Business identifier field** expression box under tracking_var_1.
 
-3.  On the Integration canvas, click *Save*, and then click *Go Back*
+3.  On the Integration canvas, click on main canvas(designer page),  click *Save*, and then click *Go back*
 
 ## Task 8: Activate the Integration Flow
 
@@ -390,4 +388,4 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, Feb 2023
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2023

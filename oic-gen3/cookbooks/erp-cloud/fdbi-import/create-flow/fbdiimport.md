@@ -39,8 +39,8 @@ This lab assumes you have:
 
 ## Task 1: Create FBDI file
 
-1. [Download the Invoice Import Template Spreadsheet](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/GSEPayablesStandardInvoiceImportTemplate.xlsm)
-2. [Download the APTEST.PROPERTIES file](https://objectstorage.us-ashburn-1.oraclecloud.com/p/yjZGTqJrT6oFrcwctmagBUyk8NtlbVxvhq8Fpo-f0OlVL24IgrT-_AXF-SS8E7Vo/n/c4u04/b/livelabsfiles/o/oic-library/APTEST.PROPERTIES)
+1. [Download the Invoice Import Template Spreadsheet](https://objectstorage.us-phoenix-1.oraclecloud.com/p/sxW1T9NtCqTcShsoT9DaNjfevGMfdAhjiM6JANkCzfAxgis9deO35thw2kxssihF/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud/GSEPayablesStandardInvoiceImportTemplate.xlsm)
+2. [Download the APTEST.PROPERTIES file](https://objectstorage.us-phoenix-1.oraclecloud.com/p/f7qoTTTmQxno5JCwy4eWLjUc6ulF9aXi_VMVg7Q38QJv5-mxP5_5V01D8Jw4SdLK/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud/APTEST.PROPERTIES)
 
 3. Open GSEPayablesStandardInvoiceImportTemplate.xlsm (If you are using Mac, then you need to download the templates from ERP Cloud documentation which are compatible with Mac)
 
@@ -70,7 +70,7 @@ A file browser dialog appears.
 ## Task 2: Upload the FBDI file to the FTP Server
 1. Login to the FTP Server using your favourite FTP Client (Could be FileZilla, WinSCP..)
 2. Copy the apinvoiceimport.zip file to the following directory.
-/home/users/```<your-folder-name>```/Output
+/upload/users/```<<your oic usernumber>>```
 
 
     > **Note:** Please create directory if it is not there by following the steps given in the setup lab.
@@ -78,8 +78,8 @@ A file browser dialog appears.
 ## Task 3: Create the Invoice Bulk Import to ERP integration
 1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 2. On the **Integrations page**, click ***Create***.
-3. On the **Integration Style** dialog, select and click on ***Schedule***
-4. In the **Create New Integration** dialog, enter the following information:
+3. On the **Create integration** dialog, select and click on ***Schedule***
+4. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -91,7 +91,7 @@ A file browser dialog appears.
     <copy>This integration demonstrates the use of OIC’s ERP Cloud Adapter with the FTP adapter to retrieve an AP Invoices file, import it to the ERP Cloud.</copy
     ```
     |
-    {: title="Create New Integration"}
+    {: title="Create integration"}
 
     Accept all other default values.
 
@@ -107,22 +107,22 @@ A file browser dialog appears.
 3. On the Basic Info page,
      - for the **What do you want to call your endpoint?** element, enter ***ReadAPInvoicesFileFromFTP***
      - for the **What does this endpoint do?** element, enter ***Retrieves the AP Invoices that comply with FBDI from an FTP location.***
-     - Click ***&gt; (Next step)***.
+     - Click ***Continue***.
 4. From the **Operations** page,
     - select ***Read a File*** as an Operation
     - from the **Select a Transfer Mode** option, select ***ASCII***
-    - Enter the following values and Click ***&gt; (Next step)***.
+    - Enter the following values and Click ***Continue***.
 
     | **Element**        | **Value**   |
     | --- | ----------- |
-    | Input Directory         | /home/users/```<your-folder-name>```/Output |
+    | Input Directory         | /upload/users/```<<your oic usernumber>>``` |
     | File Name | apinvoiceimport.zip |
     {: title="File Properties"}
 
 5. On the **Schema** page,
     - in the **Do you want to specify the structure for the contents of the file** section, select No.
-    - Click ***&gt; (Next step)***.
-6. Review the summary and click ***Done***.
+    - Click ***Continue***.
+6. Review the summary and click ***Finish***.
 7. Click ***Save*** to persist changes.
     ![ReadFileFromFTP](../images/read-filefromftp.png)
 
@@ -134,18 +134,18 @@ The Configure Oracle ERP Cloud Endpoint wizard appears.
 4. On the Basic Info page,
     - In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
     - In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 5. On the Actions page,
     - select ***Import Bulk Data into Oracle ERP Cloud***
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 6. On the Operations page,
     - select ***Import Payables Invoices*** (Search for it)
-    - Click ***&gt; (Next step)***.
+    - Click ***Continue***.
 7. On the Response page, select the following options:
     - From the **Notification Mode** list, select ***Email & Bell Notification***
     - From the **Occurrence** list, select ***Send in any case***.
-    - Click ***&gt; (Next step)***.
-8. Review the summary and click ***Done***.
+    - Click ***Continue***.
+8. Review the summary and click ***Finish***.
 9. Click ***Save*** to persist changes.
     ![UploadFiletoERP](../images/upload-file-to-erp.png)
 

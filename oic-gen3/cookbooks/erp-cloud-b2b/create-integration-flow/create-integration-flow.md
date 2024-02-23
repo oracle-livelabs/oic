@@ -28,7 +28,7 @@ This lab assumes you have:
 
 ##  Task 1: Learn B2B Concepts and Understand Navigation
 
-This is an optional learning task. You may skip this Task if you are aware of the B2B concepts.
+**This is an optional learning task. You may skip this Task if you are aware of the B2B concepts. This section is purely provided to give some basic understanding of B2B concepts**
 
 *Host Company*
 
@@ -429,13 +429,14 @@ Let's create a basic, outbound integration flow that subscribes to PO event, con
 
 Add ERP PO Event trigger to the empty integration canvas.
 
-1. Click the *+* sign in the integration canvas.
+1. In the Designer canvas hover over the *Start* and Click the *+* sign in the integration canvas.
+![Start End Empty Canvas](images/start-end-canvas.png)
 
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter *POEvent*
-     - Click *&gt; (Next step)*.
+     - Click *Continue*.
 
 4. On the **Request** page, select the following values:
 
@@ -448,15 +449,16 @@ Add ERP PO Event trigger to the empty integration canvas.
 
     ```
     <copy>
-    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/" xmlns:ns6="http://xmlns.oracle.com/apps/prc/po/viewDocument/publicFlex/purchasingDocumentHeader/">$eventPayload/ns2:result/ns0:Value/ns0:HeaderFlexfield/ns6:locId="null"</xpathExpr>
+    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/" xmlns:ns6="http://xmlns.oracle.com/apps/prc/po/viewDocument/publicFlex/purchasingDocumentHeader/">($eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable B2BXX") and ($eventPayload/ns2:result/ns0:Value/ns0:HeaderFlexfield/ns6:locId="null")</xpathExpr>
     </copy>
     ```
 
-    > **Tip:**
-    Please note that the filter is not mandatory, however, in the later part of the scenario we would be updating the PO. PO Business Event fires for create and update scenarios. Hence, by providing some control value we can avoid the integration to be triggered for second time which is not required in our usecase.
+    > **Note:**
+    1. If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable B2B<your-initials>`. The value you enter is case sensitive. Write down this value for later use.
+    2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click *&gt; (Next step)*.
-7. On the **Summary** page, click *Done*.
+6. Click *Continue*.
+7. On the **Summary** page, click *Finish*.
 8. Click *Save* to persist changes.
 9. Optional, Select Layout to *Horizontal* and click *Save* to apply changes.
     ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
@@ -464,27 +466,26 @@ Add ERP PO Event trigger to the empty integration canvas.
 ##  Task 8: Construct 850 EDI Document and send to Trading Partner
 
 1.  On the designer after the **POEvent** element click on *+* sign. A list of actions and invokes are available for adding to your integration is displayed. Under the actions Select *B2B* action. The **Configure B2B Action** wizard opens
-    - On the **Basic Info** page, enter the **name** per the value given below for the action and select a mode as *B2B Trading Partner mode*, and click **Next**
+    - On the **Basic Info** page, enter the **name** per the value given below for the action and select a mode as *B2B Trading Partner mode*, and click *Continue*
 
     ```
     <copy>EDI-Generate</copy>
     ```
-    ![Basic Info Step](images/b2b-outbound5.png)
-    - Select *Operation* as **Outbound** and option *Translate* (Translates OIC message to EDI message)
+    ![Basic Info Step](images/b2b-outbound5.png). Select *Continue*
+    - Select *Operation* as **Outbound** and option *Translate* (Translates OIC message to outbound EDI message)
     ![Select Operation step](images/b2b-outbound6.png)
-    - Select *Document Definition* as **Purchase Order** (You must have created this as part of previous lab) and click on *Next*
+    - Select *Document Definition* as **Purchase Order** (You must have created this as part of previous lab) and click on *Continue*
     ![Document Definition step](images/b2b-outbound7.png)
-    - Review the *Summary page*, click on *Done* to complete the configuration and click on *Save* to save your integration flow. Click on ***RESET*** if required for a better view of your integration flow.
+    - Review the *Summary page*, click on *Finish* to complete the configuration and click on *Save* to save your integration flow. Click on ***RESET*** if required for a better view of your integration flow.
     Note that the corresponding mapping element is automatically added to the integration flow
     ![Integration Flow B2B](images/b2b-outbound8.png)
 
 2.  On the designer canvas, hover your cursor after the *B2B* activity and click on *+* sign. Select *Parallel action* from **Actions**. A Parallel action is added to the canvas.
 
-**Knowledge Point:** The Parallel action in OIC allows you to define branches to run two or more actions in parallel. This can be useful when you need to perform several time-consuming and independent tasks at the same time. For example, you could use a Parallel action to:
-
-- Subscribe to an event from a source system and then send the event to multiple downstream systems in parallel.
-- Process a batch of records in parallel, using different processing logic for each record.
-- Invoke multiple web services in parallel, to improve performance.
+  **Knowledge Point:** The Parallel action in OIC allows you to define branches to run two or more actions in parallel. This can be useful when you need to perform several time-consuming and independent tasks at the same time. For example, you could use a Parallel action to:
+    - Subscribe to an event from a source system and then send the event to multiple downstream systems in parallel.
+    - Process a batch of records in parallel, using different processing logic for each record.
+    - Invoke multiple web services in parallel, to improve performance.
 
 3.  *Edit* **Branch 1**. Provide a name **Send PO to Supplier Trading Partner**. Similarly, name the **Branch 2** as **Sync downstream app**.
 
@@ -497,15 +498,17 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 5.  Configure data mappings for the EDI-Generate action and PO event action in order to successfully parse the incoming XML message and translate it to EDI message.
 - Click the *Map to EDI-Generate* activity and select *Edit*
-- From Source, expand the *POEvent Request* element. On the Target side, expand the *EDI-Generate Request* > *TranslateInput* > *Edi XML Document* > *Transaction Data* > *BEG: Beginning Segment for Purchase Order*. **Map** all the mandatory elements per below. Search for the element on the source and target structure to find it easily.
+- From Source, expand the *POEvent Request* element. On the Target side, expand the *EDI-Generate Request* > *TranslateInput* > *Edi XML Document* > *Transaction Data* > *BEG: Beginning Segment for Purchase Order*. **Map** all the mandatory elements per below. Some values provided in the double quotes are hardcoded as required for the usecase but in real world scenario these values will need to be derived dynamically.
 
+**Search for the element on the source and target structure to find it easily. You may use below video as reference**
+[PO to EDI 850 Mapping Activity](videohub:1_1eyf2363)
 | Source | Target |
 | --- | --- |
 | "00" | BEG01: Transaciton Set Purpose Code|
 | "NE" | BEG02: Purchase Order Type Code |
 | Order Number | BEG03: Purchase Order Number |
-| drag and drop format-DateTime function from the Components>Functions>String onto the BEG05 and create an expression as below: xp20:format-dateTime (/nssrcmpr:onEvent/inp1:getPurchaseOrderResponse/inp1:result/ns25:Value/ns25:OrderDate,"[Y0001][M01][D01]") Validate you expression by clicking on the **Tick** mark in the expression editor| BEG05: Date |
-|  count of po line items count(/nssrcmpr:onEvent/inp1:getPurchaseOrderResponse/inp1:result/ns25:Value/ns25:PurchaseOrderLine)  | Loop-CTT > CTT: Transaction Totals > CTT01: Number of Line Items |
+| drag and drop format-DateTime function from the Components>Functions>String onto the BEG05 and construct an expression as follows: xp20:format-dateTime (/nssrcmpr:onEvent/inp1:getPurchaseOrderResponse/inp1:result/ns25:Value/ns25:OrderDate,"[Y0001][M01][D01]") Validate you expression by clicking on the **Tick** mark in the expression editor| BEG05: Date |
+|  Use a count function to get the po line items. Construct an expression as follows: count(/nssrcmpr:onEvent/inp1:getPurchaseOrderResponse/inp1:result/ns25:Value/ns25:PurchaseOrderLine)  | Loop-CTT > CTT: Transaction Totals > CTT01: Number of Line Items |
 | Total Amount | CTT02: Hash Total |
 | "2L" | CUR01:Entity Identifier Code |
 | Currency Code | CUR02: Currency Code |
@@ -516,9 +519,12 @@ Add ERP PO Event trigger to the empty integration canvas.
 | Purchase Order Line > Unit of Measure Code | PO103: Unit or Basis for Measurement Code  |
 | Purchase Order Line > Price | PO104: Unit Price |
 | Supplier | EDI-Generate Request > Translate Input > Application Partner ID |
-{: title="EDI Elements Mapping"}
+{: title="PO to EDI 850 Elements Mapping"}
+
+Click on *Validate* to check for any errors or so. Navigate back to the designer canvas
 
 6. Add a *Switch* action after the **B2B EDI-Generate** activity
+![Add Switch Activity](images/add-switch-activity.png)
     - For the **Route1** branch, Enter the Expression Name as **Success or Warning**
     - Configure the following expression under Expression section. Expand *EDI-Generate* > *executeResponse* > *TranslateOutput* > *translation-status*.
     - Drag and drop into the element *translation-status* into the **Value** box.
@@ -526,8 +532,8 @@ Add ERP PO Event trigger to the empty integration canvas.
     - In the second **Value** provide a static Value **"Success"**
       ![Success Warning Expression](images/b2b-outbound11.png)
     - This expression indicates that if **TranslateOutput > translation-status** has a value of **Success**, then take this route. This is referred to as the success route
-    - Click on *Validate* and Click on *Close* and Save your integration flow
-    - In the success route: Add *Integration* Action. Enter name as **callTradingPartner** and select **DELL FTP Send** Integration and click on *Next*. Select **POST** operation and click *Next*. Finally, Select *Done* and *Save* your integration flow
+    - Click outside the expression editor and *Save* your integration flow
+    - In the success route: Add *Integration* Action. Enter name as **callTradingPartner** and select **DELL FTP Send** Integration and click on *Continue*. Select **POST** operation and click *Next*. Finally, Select *Finish* and *Save* your integration flow
     - *Edit* the **Map to callTradingPartner**. From Source, expand **EDI-Generate Response > executeResponse > TranslateOutput**
 
     | Source | Target |
@@ -541,11 +547,17 @@ Add ERP PO Event trigger to the empty integration canvas.
     {: title="Trading Partner Integration properties"}
 
     - Click on *Validate* and Click on *Close* and *Save* your Integration flow
-    - In Otherwise route: Add *Logger* Activity. Enter name as **Log-Error**. Provide logger message by concatenating **Translation Status** and **Validation Error Report** values from **$EDI-Generate > Translate Output** variables. Note that the namespaces may vary if you copy paste the below expression. Below is just for your reference.
+
+    **In Otherwise route:**
+    - Add *Logger* Activity.
+    - Enter name as **Log-Error**.
+    - Provide logger message by concatenating **Translation Status** and **Validation Error Report** values from **$EDI-Generate > execute Response > Translate Output** variables.  When creating an expression **switch to developer view** and start constructing your expression. Note that the namespaces may vary if you copy paste the below expression. Below is just for your reference.
+
     concat("Translation Error::",$EDI-Generate/ns31:executeResponse/ns33:TranslateOutput/ns33:translation-status,$EDI-Generate/ns31:executeResponse/ns33:TranslateOutput/ns33:validation-error-report)
-    - *Validate* and Close. *Save* your integration flow.
+    ![Integration Flow Error Branch Condition](images/switch-error-branch-condition.png)
+    - *Validate* and Navigate back to the designer canvas. *Save* your integration flow.
     ![Integration Flow after Route1](images/b2b-outbound12.png)
-    - After **Branch 2** add a *logger* action and add any log message.
+    - After **Branch 2** add a *logger* action and add any log message in single quotes.
 
 Congratulations! You have reached a significant milestone in this design. You may test the partial flow to check if everything works fine and resume the design in further tasks.
 
@@ -568,7 +580,7 @@ Congratulations! You have reached a significant milestone in this design. You ma
 
 The activation will complete in a few seconds. If activation is successful, the status of the integration changes to **Active**.
 
-## Task 10: Create Purchase Order in ERP Cloud
+## Task 10: Test the Integration Flow
 Access your ERP Cloud environment.
 
 1. Login with a user may.gee or equivalent having the correct roles and privileges to create a PO.
@@ -585,7 +597,8 @@ This opens the Tasks menu.
    ![Create Order](images/create-order-action.png)
 The **Create Order** dialog is displayed.
 
-6. Select **Requisitioning BU** as **Procurement BU** and Enter *Dell Inc.* in the **Supplier** field and select the corresponding supplier in the dropdown.
+6. Select **Requisitioning BU** and **Procurement BU** as *US1 Business Unit* and Enter *Dell Inc.* in the **Supplier** field and select the corresponding supplier in the dropdown. Rest of the fields should be populated automatically.
+    ![Create PO Initial Screen](images/create-po-initial-screen.png)
 
 > **Tip:** You can also search for valid suppliers using the **Search** icon.
 
@@ -599,14 +612,14 @@ The **Edit Document (Purchase Order)** page is displayed. In the **Additional In
   | **Field**        | **Value**          |       
   | --- | ----------- |
   | Type | *Goods* |
-  | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable <your-initials>*|
-  | Category Name | search for *Computer Supplies* and then select it |
+  | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable B2B&lt;your-initials&gt;*|
+  | Category Name | Search for *Computer Supplies* and then select it |
   | Quantity | Enter a valid number, eg. *1* |
   | UOM | *Ea* (Default) |
   | Base Price | Enter a valid number, eg. *1.0*|
   {: title="Create PO Details"}
 
-10. Click ***Submit*** to initiate the Purchase Order processing.
+10. Click *Submit* to initiate the Purchase Order processing.
 After submitting the Purchase Order, a confirmation message will appear with the PO number. Make a note of the **PO Number**
 
 ##  Task 11: Validate Purchase Order status
@@ -634,22 +647,37 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 2.  Find the corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
-3. Click on your ***POHeaderId*** link to open the corresponding integration instance.
+3. Click on your *POHeaderId* link to open the corresponding integration instance.
 The flow ran successfully if it is displayed with a green line.
 ![Partially Completed integration flow](images/milestone1-completed-integration-flow.png)
 
-4.  In the Activity Steam window, click on the different *Message* links to review the flow of request and response messages.
+4.  In the Activity Stream window, click on the different *Message* links to review the flow of request and response messages.
 
-6.  Click ***&lt; (Go back)*** button after reviewing the Activity Stream.
+5.  Click *&lt; (Go back)* button after reviewing the Activity Stream.
 
-7.  Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
+6.  Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
 
-8.  Click on the *View* icon and inspect **Message Logs, Payload**
+7.  Click on the *View* icon and inspect **Message Logs, Payload**
 
-9.  Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
+8.  Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
 ![Wire Messages](images/observability-wire-messages.png)
 
-10.  If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
+9.  (Optional) If you have FTP Client installed on your machine, you can login using the FTP details that you have noted down in the previous lab and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
+
+    Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
+
+    Navigate to OCI console and click on *Cloud Shell* from the drop-down menu. Refer Lab2 - Task 2 on how to connect to the cloud shell.
+    ![Select Cloud Shell](images/select-cloud-shell.png)
+
+    After connecting to the SFTP server, at the SFTP prompt provide **cd B2BTPDELLOut** and list the files by providing **ls** command. This time we see an edi file is created.
+
+    To download the EDI file created by the B2B component perform a *get &lt;filename&gt;*
+
+    Refer below screenshot for command reference.
+    ![Cloud Shell Connect](images/cloud-shell-connect.png)
+
+    Once the file is downloaded it will be available in Cloud Shell storage. To download the file to local drive Select *Cloud Shell Menu* and click on *Download*
+    ![Cloud Shell File Download](images/cloud-shell-download-file.png)
 
 In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
@@ -682,10 +710,10 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 </copy>
 ```
 5.  *Edit* the  **Map PUBLISHPODETAILS** activity and define mapping per below.
-Expand the ***Source*** node:
+Expand the *Source* node:
 **POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value**
 
-Expand the ***Target*** node:
+Expand the *Target* node:
 **PUBLISHPODETAILS > Request Wrapper**
 
 
@@ -796,9 +824,9 @@ This opens the Tasks menu.
 6. Search for the **Purchase Order Number** that was noted earlier. Select the Order. From **Actions** select *Edit*.
 
 7. Provide some description in the **Description** field. Its a mandatory field for change order. Leave the default and click *Submit*. Select *OK* on the confirmation dialog. Click *Done*.
+![Change Order Description](images/change-order-description.png)
 
 8. Navigate to *Manage Orders* tab and wait for the status to be *Open*. A small **Information** icon appears next to the status, which indicates its in process. Wait for the icon to disappear.
-![Change Order Description](images/change-order-description.png)
 
 9. Navigate to OIC console Observability and verify that the 3 integrations are successfully Completed.
 - LL ERPPO Backend B2B integrations
