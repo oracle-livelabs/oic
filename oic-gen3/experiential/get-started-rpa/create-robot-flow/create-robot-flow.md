@@ -118,6 +118,9 @@ Build the robot flow by adding actions using the recorder.
 
 4. On the **RPA Smart Recording** panel, click on **Begin Recording**.
 
+---
+    We will now click on field elements to generate associated Actions in the robot flow.
+
 5. Hover the mouse over the **User ID** field until it lights-up green, and click it.
 ![Select browser tab](images/robot-designer_smart-record_select-user-id.png " ")
 
