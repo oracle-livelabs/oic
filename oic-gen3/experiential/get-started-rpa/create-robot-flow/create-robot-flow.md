@@ -111,9 +111,11 @@ Build the robot flow by adding actions using the recorder.
 
     ![ERP Cloud login](images/robot-designer_erp-login.png " ")
 
-2. Return to the browser tab running the robot designer. Select the **Open Application** action. This will enable the record button. ![Record button enabled](images/robot-designer_record-button.png " ").
+2. Return to the browser tab running the robot designer. Select the **Open Application** action. This will enable the record button. ![Record button enabled](images/robot-designer_record-button.png " ")
 
-3. On the **Smart Record** panel, click **Select browser tab to target**. ![Select browser tab](images/robot-designer_smart-record_select-browser.png " ")
+3. On the **Smart Record** panel, click **Select browser tab to target**. 
+
+    ![Select browser tab](images/robot-designer_smart-record_select-browser.png " ")
 
     This starts the recorder on the ERP Cloud login page.
 
