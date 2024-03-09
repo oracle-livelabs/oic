@@ -65,6 +65,7 @@ The trigger defines the interface for the robot, including the input (incoming r
 This action tells the robot to open a web browser and navigate to the Oracle ERP Cloud sign-in page. We will define a Robot Connection, based on a Robot Connection Type, containing the URL and credentials to the ERP Cloud login page.
 
 1. Double-click on the **Open Application** action.
+
     ![Select robot connections button](images/robot-designer_open-browser_edit.png " ")
 
 2. In the **Open Browser** panel, enter a **Name** and **Description** for the action.
