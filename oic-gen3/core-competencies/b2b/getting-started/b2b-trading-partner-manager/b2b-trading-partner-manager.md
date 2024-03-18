@@ -91,7 +91,15 @@ This lab assumes you have:
 
     - Click the ***B2B Identifiers*** tab.
     - Select an Identifier or, if none are defined, click **Add Identifiers** ***+***.
-    - Create the following Identifiers and also add control numbers as per the table given below.  
+    - Add control numbers as per the table given below and Create the following Identifiers.  
+    - Control Numbers
+        | Identifier Type       | Value|
+        | ---                   | ---  |
+        | Interchange           | 2    |
+        | Group                 | 1002 |
+        | Transaction           | 1002 |
+
+    - Identifiers
           | Identifier Type              | Value     |
           | ---                          | ---       |
           | EDI Interchange ID           | Dell Inc. |
@@ -100,12 +108,6 @@ This lab assumes you have:
           | EDI Group ID Qualifier       | 01        |
           | Application Partner ID       | Dell Inc. |
 
-      - Control Numbers
-          | Identifier Type       | Value|
-          | ---                   | ---  |
-          | Interchange           | 2    |
-          | Group                 | 1002 |
-          | Transaction           | 1002 |
 
       - Click ***Save***.  
           ![B2B Identifiers](images/tpm-tp-B2BIdentifiers-1.png)
@@ -170,7 +172,7 @@ Two Integrations are created automatically when a Transport is created. These In
     | Select Host Identifiers            | <ul><li>EDI Interchange ID </li><li>EDI Interchange ID Qualifier</li><li>EDI Group ID Qualifier</li><li>EDI Group ID</li></ul> |
     | Select a Transport                 | FTP                         |
     | Configure Agreement Settings       | Check Enable Validations    |
-    | Configure Agreement Settings       | Uncheck Functional Ack Required |
+    | Configure Agreement Settings       | Uncheck Functional acknowledgment required |
 
     ![Outbound Agreement](images/tpm-tp-Agreement-Out-1.png)
 
