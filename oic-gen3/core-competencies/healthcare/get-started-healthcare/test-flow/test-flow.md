@@ -27,7 +27,7 @@ Note: Make sure the Message Receiver and Sender is Open. Receiver is listening t
 
 ![HL7 Inspector Sender Receiver Open](images/hl7-inspector-receive-send-open.png)
 
-1.  Open the HL7 Inspector, Select **File** &gt; **File Open** and browse the 2500_ADT_A08_Barry_White_v2.5.hl7 from the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts in **hl7 messages** folder. In the **Import Options** window leave the defaults and Click *OK*.
+1.  Open the HL7 Inspector, Select **File** &gt; **File Open** and browse the 2500\_ADT\_A08\_Barry\_White\_v2.5.hl7 from the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts in **hl7 messages** folder. In the **Import Options** window leave the defaults and Click *OK*.
 
 ![Hl7 Inspector Open Message](images/hl7-inspector-receive-send-hl7-message.png)
 
