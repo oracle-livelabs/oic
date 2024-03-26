@@ -17,19 +17,19 @@
             "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
-            "title": "Lab 3: Setup Prerequisites",
+            "title": "Lab 2: Setup Prerequisites",
             "filename": "../../setup/setup.md"
         },
         {
-            "title": "Lab 4: Create Connections",
+            "title": "Lab 3: Create Connections",
             "filename": "../../create-connections/create-connections.md"
         },
         {
-            "title": "Lab 5: Create an Integration flow",
+            "title": "Lab 4: Create an Integration flow",
             "filename": "../../create-flow/create-flow.md"
         },
         {
-            "title": "Lab 6: Test end to end flow",
+            "title": "Lab 5: Test end to end flow",
             "filename": "../../test-flow/test-flow.md"
         },
         {
