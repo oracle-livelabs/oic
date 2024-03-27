@@ -110,7 +110,7 @@ This lab assumes you have:
 
 
       - Click ***Save***.  
-          ![B2B Identifiers](images/tpm-tp-B2BIdentifiers-1.png)
+          ![B2B Identifiers](images/tpm-tp-b2bidentifiers-1.png)
 
 3. Define Transports
 
@@ -147,9 +147,9 @@ Two Integrations are created automatically when a Transport is created. These In
 1. Deploy the Transport Integrations.
 
   - Click the ***Action*** menu on the **FTP** Transport to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment.  
-  ![Deploy Transport Integrations](images\tpm-tp-Transport-1.png)
+  ![Deploy Transport Integrations](images\tpm-tp-transport-1.png)
   - Starting at the Oracle Integration **Home** page, select ***Integrations***, then ***Integrations*** again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
-  ![Dell FTP Transport Integrations](images\tpm-tp-Transport-2.png)
+  ![Dell FTP Transport Integrations](images\tpm-tp-transport-2.png)
 
 
 ## Task 3: Create Agreements
@@ -174,7 +174,7 @@ Two Integrations are created automatically when a Transport is created. These In
     | Configure Agreement Settings       | Check Enable Validations    |
     | Configure Agreement Settings       | Uncheck Functional acknowledgment required |
 
-    ![Outbound Agreement](images/tpm-tp-Agreement-Out-1.png)
+    ![Outbound Agreement](images/tpm-tp-agreement-out-1.png)
 
     - Click the ***Action*** menu on the **OutAgreement** Outbound Agreement to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment. Exit the Dell Inc Trading Partner page.
 
