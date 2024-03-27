@@ -41,7 +41,7 @@ You can create a new B2B Schema based on a standard Document type.
 
 5. Click ***Create***, then ***Save***, then exit the PurchaseOrderSchema page.  
   ![Create New B2B Schema](images/poschema4010-1.png)
-  ![Purchase Order Schema](images/poschema-Structure-1.png)
+  ![Purchase Order Schema](images/poschema-structure-1.png)
 
   The following diagram shows a schematic structure of X12 envelopes.
     ![X12 Envelope](images/x12_env_structure-1.png)
