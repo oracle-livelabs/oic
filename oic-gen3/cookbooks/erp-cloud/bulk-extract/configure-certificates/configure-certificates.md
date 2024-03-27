@@ -45,11 +45,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Uploading Certificates](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/upload-ssl-certificate.html)
-* [Setup Users for cloud accounts that use Identity Domains](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/henosis-setting-users-groups-and-policies-cloud-accounts-that-use-identity-domains.html)
-* [Setup Users for cloud accounts that do no use Identity Domains](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/setting-users-groups-and-policies-cloud-accounts-that-do-not-use-identity-domains.html)
-* [Using the SOAP Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/soap-adapter/index.html)
-* [Oracle Integration Roles](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/oracle-integration-roles.html)
+* [Oracle Integration Adapters](https://docs.oracle.com/en/cloud/paas/application-integration/find-adapters.html)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration

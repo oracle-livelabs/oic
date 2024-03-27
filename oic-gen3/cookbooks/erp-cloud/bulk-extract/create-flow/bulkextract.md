@@ -339,7 +339,7 @@ OR you can also track by clicking on ***Home***, ***Observability*** and ***Inst
 ## Task 16: Verify
 Wait 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
-2. Click on Navigator Menu(On top lift corner), select Tools tab, click Scheduled Processes.
+2. Click on Navigator Menu(On top left corner), select Tools tab, click Scheduled Processes.
 3. Expand Search and search for the Process Id returned from your integration.
 4. Click the process to open and verify that the Payables transaction job completed successfully.
 5. Using an FTP client of your choice, log in to the File server
