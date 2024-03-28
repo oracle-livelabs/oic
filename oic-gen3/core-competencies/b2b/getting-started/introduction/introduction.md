@@ -29,9 +29,9 @@ Oracle Integration 3 B2B represents a collective set of features inside Oracle I
 * Adapters to support B2B protocols such as AS2 and FTP. See [Transport Protocols Supported in Oracle Integration 3 B2B](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/transport-protocols-supported-oracle-b2b.html#GUID-A200BA30-65F0-486A-BBBA-BAA1D84D131A).
 * Actions you place within your integrations for EDI processing. See [Business Protocols Supported in Oracle Integration 3 B2B](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/business-protocols-supported-oracle-b2b.html#GUID-CBAF3DC2-0A64-4AC4-BD2D-4F940223DC9A).
 
-##	Task	1: Take a look at this B2B Overview Video
+## Task 1: Take a look at this B2B Overview Video
 
-[B2B Overview Video](youtube:hpDwmLCdpsY)
+[B2B Overview Video](https://videohub.oracle.com/media/B2B%20in%20Oracle%20Integration%203/1_l80kjw3v/214384793)
 
 ### What Will You Learn?
 
@@ -58,5 +58,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Contributors** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
+* **Last Updated By/Date** - Oracle Integration team, Mar 2024
