@@ -191,7 +191,7 @@ Manage business identifiers that enable you to track fields in messages during r
   ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
-5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/B2BWorkshop/B2BTPDELLOut**
+5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/B2BTPDELLOut**
 6. In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
 This feature will very much useful when we have more than one trading partner. We just define the trading partner on the user interface, integrations will be created automatically and files will be processed with the existing Backend Integration.
@@ -222,8 +222,8 @@ Follow the instructions from Step5 to Step9 given under [Setup the Environment](
 |EDI Group ID|02|
 |EDI Group ID Qualifier|US Gas and Electric|
 |Application Partner ID|US Gas and Electric|
-|Input Directory|/B2BWorkshop/B2BTPUSGEIn|
-|Output Directory|/B2BWorkshop/B2BTPUSGEOut|
+|Input Directory|/B2BTPUSGEIn|
+|Output Directory|/B2BTPUSGEOut|
 |Output File Name|Order-%SEQ%.edi|
 |Integration name prefix|USGE|
 3. ***Deploy*** the **Transport and Agreements** if not deployed.

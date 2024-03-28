@@ -28,22 +28,24 @@ This lab assumes you have:
 Configure File Server settings.
 
 1. Starting at the Oracle Integration **Home** page, select ***Settings***, then ***File Server*** from the left Navigation pane.
-2. Select ***Settings*** from left Navigation pane to open the File Server Settings page and review the File Server status and configurations.
+2. Select ***Settings*** from left Navigation pane to open the File Server Settings page and review the File Server status and configurations.Make a note of IP and port number by expanding the General tab.
   ![File Server Settings page](images/file-server-settings.png)
 **Note**: Ensure the **Authentication Type** is set to ***Password or Key***.
-3. Select ***Folders*** from left Navigation pane.
+3. Select Users from left Navigation pane, search for your User Name and click on Configure.
+![Configure user](images/configureuser.png)
+4. Click on Switch to enable and click on Save.
+5. Select ***Folders*** from left Navigation pane.
   ![Navigation to Files](images/file-server-files1.png)
-4. From the top right click ***Create*** and create a Folder named ***B2BWorkshop***.
-  ![Create Folder](images/file-server-files2.png)
-5. Select the ***B2BWorkshop*** Folder and create two additional Folders named ***B2BTPDELLIn*** and ***B2BTPDELLOut***.
-  ![Workshop Folder structure](images/file-server-files3.png)
+6. Click *Create* to create a folder named **upload** and then click on upload folder and again click on Create button to create a new folder named **users**, then enter into the users folder and hit the create button to create the folder named ***B2BWorkshop***. Your final folder structure should look as follows **upload &gt; users &gt; B2BWorkshop**
+7. Select the ***B2BWorkshop*** Folder and create two additional Folders named ***B2BTPDELLIn*** and ***B2BTPDELLOut***.
+  ![Workshop Folder structure](images/file-server-files2.png)
 **Note**: You will be using the above Folder structure in next labs.
-6. Select ***Users*** from left Navigation pane. Find and select the user you are currently logged in as.  
+8. Select ***Users*** from left Navigation pane. Find and select the user you are currently logged in as.  
 If your user has not yet been configured to use File Server, click ***Select*** to configure your user.  
 Otherwise, click ***Edit Configuration*** for your user.
-7. Configure your user as follows:
+9. Configure your user as follows:
     * Select **Home Folder Type** as ***Custom***.
-    * Select **Home Folder** as ***B2BWorkshop***, click on ***Save*** and click on ***Close***
+    * Select **Home Folder** as ***upload &gt; users &gt; B2BWorkshop***, click on ***Save*** and click on ***Close***
     ![User configuration](images/user-permissions2.png)
 9. Select ***Folders*** from left Navigation pane. Click ***Permissions*** on the **B2BWorkshop** folder.
   ![Select Folder Permissions](images/user-permissions4.png)

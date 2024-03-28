@@ -131,7 +131,7 @@ This lab assumes you have:
       | Name                         | FTP                          |
       | Type                         | FTP                          |
       | Trading Partner's Connection | Select the FTP Connection you previously created (File Server). Refer to [Creating Connection with File Server](../workshops/tenancy/?lab=setup#Task4:CreatingConnectionwithFileServer) for more information.|
-      | Output Directory             | /B2BWorkshop/B2BTPDELLOut    |
+      | Output Directory             | /B2BTPDELLOut    |
       | Output File Name             | Order-%SEQ%.edi              |
       | Integration Name Prefix      | Dell                         |
 
