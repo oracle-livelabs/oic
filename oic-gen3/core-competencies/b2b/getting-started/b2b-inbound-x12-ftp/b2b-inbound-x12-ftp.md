@@ -63,9 +63,9 @@ In this lab, you will:
 |---------------------------------------------|-----------------------------------------|
 |     Type                                    |     FTP                                 |
 |     Trading   partner's connection          |     FTP Connection (File Server)    |
-|     Input   Directory                       |     **/B2BWorkshop/B2BTPDELLIn**           |
+|     Input   Directory                       |     **/B2BTPDELLIn**           |
 |     Input File                              |     Invoice-%SEQ%.edi            |
-|     Output   Directory                      |     **/B2BWorkshop/B2BTPDELLOut**         |
+|     Output   Directory                      |     **/B2BTPDELLOut**         |
 |     Output   File Name                      |     Out997-%SEQ%.edi             |
 
 2.Select ***Action Menu*** and ***Redeploy*** if already Deployed
@@ -231,7 +231,7 @@ We will Import and Activate an Integration Flow which Simulates a Supplier (Dell
     * From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Copy the **DellIncInvoice.xml** data and paste it in the body of the request console. Before Selecting Test modify the below elements in the supplied XML payload
 
     * InvoiceNumber – ex: XX-INV-DE-0299 (where 'XX' is any numeric for uniqueness)
-    * XTP\_FTP\_DIR - /B2BWorkshop/B2BTPDELLIn
+    * XTP\_FTP\_DIR - /B2BTPDELLIn
     * XTP\_FTP\_FILENAME - Invoice-1.edi (Note: The file pattern should be similar to the configuration  in the **Dell Inc** Trading Partner Setup for **FTP** Transport Input File value
     * You should see a response which is base64encoded
         ![inobound-test-1](images/inbound-test-1.png)
@@ -241,8 +241,8 @@ We will Import and Activate an Integration Flow which Simulates a Supplier (Dell
 
 2. Navigate to **Integrations** page. Search for the B2B Integration – **Dell FTP Receive** integration flow and Click on ***Run*** and click on ***Run*** again
 
-    * Navigate to the **File server** and check the  /B2BWorkshop/B2BTPDELLIn directory. You should see an edi file is moved to **/B2BWorkshop/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
-    * Now, Check the **/B2BWorkshop/B2BTPDELLOut** folder and we should see a 997 Functional Ack generated
+    * Navigate to the **File server** and check the  /B2BWorkshop/B2BTPDELLIn directory. You should see an edi file is moved to **/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
+    * Now, Check the **/B2BTPDELLOut** folder and we should see a 997 Functional Ack generated
 
     Here is the representational format of Functional Acknowledgement which is generated.
 
