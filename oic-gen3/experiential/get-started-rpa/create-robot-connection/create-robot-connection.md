@@ -14,7 +14,8 @@ Specify the service URL and login credentials in a robot connection.
 
 3. On the **Create robot connection** panel, select the Default connection type **Oracle RPA Web Login**.
 
-    ![Create robot flow panel](images/create-robot-connection_select-type.png " ").
+    | ![Create robot flow panel](images/create-robot-connection_select-type.png " ") |
+    |-|
 
 4. In the **Create robot connection - Oracle RPA web login** panel, fill in the following fields:
     | **Field** | **Required** | **Value** |
