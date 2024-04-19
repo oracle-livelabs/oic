@@ -15,6 +15,20 @@ In this workshop, you will learn how to:
 * Setup Robot Environment
 * Build, Test, and Deploy a Robot
 
+
+///
+Flow:
+Create project
+robot conn
+
+env group
+add env (with agent)
+
+now add env to group
+assign env pool 
+
+///
+
 ### Prerequisites
 
 * An Oracle Free Tier or Paid Cloud Account

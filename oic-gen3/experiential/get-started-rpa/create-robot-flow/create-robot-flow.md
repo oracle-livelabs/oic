@@ -35,7 +35,7 @@ When you create a robot, you define its trigger and the actions that the robot p
 
 4. Click **Create**.
 
-Robot Designer will appear. The flow includes an Open Application action that is undefined.
+The Robot Designer will appear, with a default flow which includes an Open Application action.
 ![Robot Designer Canvas](images/robot-designer_after-create.png " ")
 
 ## Task 2: Specify the trigger
