@@ -25,7 +25,6 @@ Specify the service URL and login credentials in a robot connection.
     | URL         | Yes | Enter your ERP Cloud login URL. Please follow this format: <br>`https://<your-erp-cloud-hostname>/fscmUI/faces/FuseWelcome?fndThemeName=Vision_Default`  |
     | Username    | Yes  | Enter a valid ERP username.|
     | Password    | Yes  | Enter a valid ERP password for the selected user. |
-    | | | |
 
     ![Create robot flow panel](images/create-robot-connection_configured.png " ")
 
