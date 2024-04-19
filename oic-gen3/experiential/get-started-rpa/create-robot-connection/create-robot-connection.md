@@ -26,7 +26,8 @@ Specify the service URL and login credentials in a robot connection.
     | Username    | Yes  | Enter a valid ERP username.|
     | Password    | Yes  | Enter a valid ERP password for the selected user. |
 
-    ![Create robot flow panel](images/create-robot-connection_configured.png " ")
+    | ![Create robot flow panel](images/create-robot-connection_configured.png " ") |
+    |-|
 
 5. Click **Create**.
 
