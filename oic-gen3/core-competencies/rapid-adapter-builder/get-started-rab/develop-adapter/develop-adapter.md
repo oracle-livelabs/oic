@@ -28,7 +28,7 @@ This lab assumes you have successfully completed all previous lab sections
 
 ## Task 1: Import and test the Postman Collection
 
-1.  [Download](TBD) the lab artifacts and unzip in you local directory.
+1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/gv0J-Iza_p0uU8Cct_XwRupcPO1tnNivFkJP0UJp_eB9S52_JWdJJi4W8rD2zjQi/n/oicpm/b/oiclivelabs/o/oic3/get-started-rab/lab-artifacts-rab.zip) the lab artifacts and unzip in you local directory.
 
 2.  Open the Postman application and sign in with your account.
 
