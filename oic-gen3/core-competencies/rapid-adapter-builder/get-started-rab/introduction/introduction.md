@@ -19,6 +19,10 @@ By the end of this tutorial, you will have a custom ACME Order Management adapte
 
 Estimated Time: 2 hours 15 minutes
 
+Watch the video below for a quick overview of Rapid Adapter Builder
+
+[Overview of Rapid Adapter Builder](youtube:CpYIruWdRlI)
+
 ### Objectives
 
 **End to End flow of developing OIC Adapter using Rapid Adapter Builder**
