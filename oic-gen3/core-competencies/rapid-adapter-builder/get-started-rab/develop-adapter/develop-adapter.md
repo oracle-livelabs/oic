@@ -227,7 +227,7 @@ A code snippet is added in the Connection section with **BASIC_AUTH** security p
 
 3.  In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Task 4**. However, we want the test connection flow to use the baseURL specified by the user when configuring the ACME adapter connection instead of a concrete url. Construct a uri as below to get the **baseURL** value dynamically.
 
-Note: We can use .connectionProperties.<property-name> configured in the Connection Properties section.
+Note: We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
 ```
 <copy>
   "${.connectionProperties.baseURL +\"/customers\"}"
@@ -260,7 +260,7 @@ Provide the above copied snippet in the **uri** value
 | CreateANewOrderFlowAction | "${.connectionProperties.baseURL +\"/orders\"}"       |
 | UpdateAnOrderFlowAction | "${.connectionProperties.baseURL +\"/orders\"}"      |
 | CancelOrderFlowAction | "${.connectionProperties.baseURL+\"/orders\"}"      |
-| GetItemsForOrderFlowAction | "${.connectionProperties.baseURL+\"/order_items/{p\_order\_id\"}"     |
+| GetItemsForOrderFlowAction | "${.connectionProperties.baseURL+\"/order\_items/{p\_order\_id\"}"     |
 | CreateANewOrderItemFlowAction |"${.connectionProperties.baseURL +\"/order\_items\"}"     |
 | UpdateAnOrderItemFlowAction | "${.connectionProperties.baseURL +\"/order\_items\"}"     |
 | DeleteAnOrderItemFlowAction | "${.connectionProperties.baseURL +\"/order\_items\"}"      |
@@ -278,7 +278,7 @@ Before you publish the adapter to Oracle Integration, you must validate the adap
 
 2.  Click the **definitions** directory listing to expand it.
 
-3.  Rihgt click the adapter definition document (main.add.json) and the click *RAB: Validate*.
+3.  Right click the adapter definition document (main.add.json) and then click *RAB: Validate*.
 
 4.  In the output console at the bottom you should see confirmation message, indicates that your adapter definition document is valid and ready to be published.
 
