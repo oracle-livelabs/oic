@@ -24,6 +24,12 @@
             "filename": "../../create-project/create-project.md"
         },
         {
+            "title": "Create Robot Flow",
+            "description": "Create Robot Flow",
+            "type": "livelabs",
+            "filename": "../../create-robot-flow/create-robot-flow.md"
+        },
+        {
           "title": "Need Help?",
           "description": "Need Help lab at the end of workshop.",
           "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
