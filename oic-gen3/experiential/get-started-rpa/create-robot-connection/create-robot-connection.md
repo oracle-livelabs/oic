@@ -2,9 +2,15 @@
 
 ## Introduction
 
-This lab will walk you through the steps to create a Robot Connection. A Robot Connection lets you store sensitive data, such as sign-in credentials, outside a robot for easier maintenance.
+This lab will walk you through the steps to create a Robot Connection. A robot connection specifies the information that a robot needs to connect to an application. A typical connection specifies the URL and security credentials which the robot can use to login to an application.
 
-## Task 1: Create a connection to ERP Cloud
+### Objectives
+
+In this lab, you will:
+
+* Create a connection to an Oracle ERP Cloud environment
+
+## Task 1: Create a connection to Oracle ERP Cloud
 
 Specify the service URL and login credentials in a robot connection.
 

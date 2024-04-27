@@ -24,6 +24,12 @@
             "filename": "../../create-project/create-project.md"
         },
         {
+            "title": "Create Robot Connection",
+            "description": "Create Robot Connection",
+            "type": "livelabs",
+            "filename": "../../create-robot-connection/create-robot-connection.md"
+        },
+        {
             "title": "Create Robot Flow",
             "description": "Create Robot Flow",
             "type": "livelabs",

@@ -1,18 +1,22 @@
-## Create Robot Flow
+# Create Robot Flow
+
+## Introduction
+
+This lab walks you through the steps to create a end-to-end robot flow. When you create a robot flow, you define its trigger and the actions that the robot performs.
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a Robot
+* Create a Robot flow
 * Add Robot Actions
 
 ### Prerequisites
 
 This lab assumes you have:
 
-* Completed the Robot Connections
-* A Chrome browser
+* Completed the Robot Connection
+* Access to run and manage a Chrome browser
 
 ## Task 1: Create a Robot
 
