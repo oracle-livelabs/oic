@@ -8,7 +8,9 @@ This lab walks you through the steps to create a end-to-end robot flow. When you
 
 In this lab, you will:
 
-* Create a Robot flow
+* Create a Robot
+* Specify Input and Output Triggers
+* Install the Robot Designer Extension
 * Add Robot Actions
 
 ### Prerequisites
@@ -16,7 +18,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * Completed the Robot Connection
-* Access to run and manage a Chrome browser
+* Chrome Browser with manage permission
 
 ## Task 1: Create a Robot
 
@@ -44,7 +46,7 @@ When you create a robot, you define its trigger and the actions that the robot p
 The Robot Designer will appear, with a default flow which includes an Open Application action.
 ![Robot Designer Canvas](images/robot-designer_after-create.png " ")
 
-## Task 2: Specify the trigger
+## Task 2: Specify Input and Output Triggers
 
 The trigger defines the interface for the robot, including the input (incoming request) and the output (outgoing response). For this lab, we will provide a purchase order number as input, and capture the supplier name as output.
 
@@ -87,9 +89,9 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 6. Click **OK** when done, then **Save**.
 
-## Task 4: Install the Robot Recorder
+## Task 4: Install the Robot Designer Extension
 
-The robot recorder is a Google Chrome browser plugin that is used to build robot flows. This extension must be installed to continue with this workshop.
+The **Oracle Robot Designer Extension** is a Chrome browser plugin that is used to target and record robot actions. This extension must be installed to continue with this workshop.
 
 1. From the Robot designer, click on the red **Update** button
 
@@ -149,18 +151,23 @@ Start the robot flow by adding the Login action.
 
     ![Robot design Targeting](images/robot-designer_targeting-on.png "")
 
-8. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name. Wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
+8. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name. 
+    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
 
     The Targeting maps the `User ID` UI element value to the **Username locator** field in the robot.
 
-    ![Robot input username locator select](images/robot-designer_smart-record_username-locator_mapped.png "")
+    ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
 
 9. Repeat the previous steps for the following fields:
 
     * **Password locator**: Select the `password` UI element.
     * **Submit locator**: Select the `Sign In` button that the robot clicks to sign in to the Oracle Fusion application.
+
+    Your current (incomplete) flow should look as follows:
+
+    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
 
 10. Click **OK**.
 
@@ -189,7 +196,7 @@ Start the robot flow by adding the Login action.
 
 
 
-## Task 5: Add Robot Login Action using the Record option
+## Task 6: Add Robot Actions using the Record option
 
 Build the robot flow by adding actions using the recorder.
 
@@ -248,7 +255,7 @@ Build the robot flow by adding actions using the recorder.
     > 1. The operation is added as action to the robot flow.
     > 2. The browser performs the actual UI operation.
 
-## Task 5: Add Robot ERP Actions using the Record option
+## Task 7: Add Robot ERP Actions using the Record option
 
 Continue the robot flow by adding actions from ERP Cloud using the recorder. After sign-in in the previous task, you should now be on the ERP Cloud landing page.
 
