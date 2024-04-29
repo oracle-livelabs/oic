@@ -116,7 +116,7 @@ Start the robot flow by adding the Login action.
 
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
-7. Install the Browser Extension
+7. Follow these steps to install the Browser Extension:
 
     * Click on the **Download browser extension** button and wait for the download to complete.
     * Navigate to the location of the downloaded ZIP file, such as your **Downloads** folder.
@@ -125,9 +125,11 @@ Start the robot flow by adding the Login action.
     * On the **Extensions** page, select **Load unpacked**.
     * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
 
-    This loads the Robot Extension in your Chrome browser. Close this tab and return to the Robot flow.
+    This loads the Robot Extension in your Chrome browser.
 
     ![Loaded Robot extension](images/robot-extension_loaded.png " ")
+
+    Close this tab and return to the Robot flow. Click **Save**, reopen the project and **double-click** on the **Login** action.
 
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
@@ -153,7 +155,7 @@ Start the robot flow by adding the Login action.
 
     Your current (incomplete) flow should look as follows:
 
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
+    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=70%")
 
 11. Click **OK**.
 
