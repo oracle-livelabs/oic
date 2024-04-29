@@ -175,7 +175,7 @@ Start the robot flow by adding the Login action.
 
     ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
 
-9. Repeat the previous steps for the following fields:
+10. Repeat the previous steps for the following fields:
 
     * **Password locator**: Select the `password` UI element.
     * **Submit locator**: Select the `Sign In` button that the robot clicks to sign in to the Oracle Fusion application.
@@ -184,14 +184,12 @@ Start the robot flow by adding the Login action.
 
     ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
 
-10. Click **OK**.
+11. Click **OK**.
 
-11. Above the Robot canvas, click **Save**.
+12. Above the Robot canvas, click **Save**.
 
-
-
-
-
+-
+-
 
     This adds an action `Enter "User ID" Text` to the robot flow.
 
@@ -203,13 +201,9 @@ Start the robot flow by adding the Login action.
 
     This starts the recorder on the ERP Cloud login page.
 
-6. On the **RPA Smart Recording** panel, click on **Begin Recording**.
+13. On the **RPA Smart Recording** panel, click on **Begin Recording**.
 
     We will now select field elements to generate associated Actions in the robot flow.
-
-7. 
-
-
 
 ## Task 6: Add Robot Actions using the Record option
 
