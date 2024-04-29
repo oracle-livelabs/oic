@@ -161,26 +161,9 @@ Start the robot flow by adding the Login action.
 
 12. Above the Robot canvas, click **Save**.
 
--
--
-
-    This adds an action `Enter "User ID" Text` to the robot flow.
-
-    > **Note:** When using the recorder, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
-
-    Next we set the **Value** field by mapping the **Username** input variable.
-
- **Target a page element** panel, check **Create target** option and select `Sign In`.
-
-    This starts the recorder on the ERP Cloud login page.
-
-13. On the **RPA Smart Recording** panel, click on **Begin Recording**.
-
-    We will now select field elements to generate associated Actions in the robot flow.
-
 ## Task 5: Add Robot Actions using the Record option
 
-Build the robot flow by adding actions using the recorder.
+Build the rest of the robot flow by adding actions using the recorder. Here we will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
 1. Open a new browser window and navigate to the login page of ERP Cloud. This is the URL value which was set in the web login panel.
 
