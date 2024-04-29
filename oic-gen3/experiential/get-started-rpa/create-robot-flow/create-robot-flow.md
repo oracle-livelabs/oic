@@ -129,7 +129,7 @@ Start the robot flow by adding the Login action.
 
     ![Loaded Robot extension](images/robot-extension_loaded.png " ")
 
-    Close this tab and return to the Robot flow. Click **Save**, reopen the project and return to **Step 6**.
+    Close this tab and return to the Robot flow. Click **Save**, reopen the project and return to the previous step.
 
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
@@ -155,7 +155,7 @@ Start the robot flow by adding the Login action.
 
     Your current (incomplete) flow should look as follows:
 
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=70%")
+    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=50%")
 
 11. Click **OK**.
 
