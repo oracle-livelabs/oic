@@ -130,8 +130,7 @@ Start the robot flow by adding the Login action.
 
     The **Login** action appears on the canvas.
 
-3. On the **Login** panel, within the **Username** field, select **Robot connections**
-![Select robot connections](images/robot-connections-button.png "=20x*"). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
+3. On the **Login** panel, within the **Username** field, select **Robot connections** ![Select robot connections](images/robot-connections-button.png "=20x*"). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
 ![Assign username](images/robot-designer_login_assign-username.png "")
 
 4. Repeat these steps by dragging the `password` parameter to the **Password** field.
