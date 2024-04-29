@@ -155,7 +155,7 @@ Start the robot flow by adding the Login action.
 
     Your current (incomplete) flow should look as follows:
 
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=50%")
+    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=50%x")
 
 11. Click **OK**.
 
