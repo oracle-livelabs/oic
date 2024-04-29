@@ -36,10 +36,8 @@ When you create a robot, you define its trigger and the actions that the robot p
     | Version       | Yes | Keep as default: `1.00.00` |
     | Description   | No  | Provide additional information about the robot.|
     | Keywords      | No  | Enter text that people might use to search for the robot. |
-    ||
 
-    | ![Create robot flow panel](images/create-robot-add.png " ") |
-    |-|
+    ![Create robot flow panel](images/create-robot-add.png " ")
 
 4. Click **Create**.
 
@@ -50,7 +48,7 @@ The Robot Designer will appear, with a default flow which includes an Open Appli
 
 The trigger defines the interface for the robot, including the input (incoming request) and the output (outgoing response). For this lab, we will provide a purchase order number as input, and capture the supplier name as output.
 
-1. Select ![Create robot flow panel](images/click-to-edit-trigger-button-small.png " ") **(Click to edit trigger)**
+1. Select ![Create robot flow panel](images/click-to-edit-trigger-button-small.png "=30x") **(Click to edit trigger)**
 
     The trigger panel will appear on the screen.
 
@@ -72,8 +70,7 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 1. Double-click on the **Open Application** action.
 
-    | ![Select robot connections button](images/robot-designer_open-browser_edit.png " ") |
-    |-|
+    ![Select robot connections button](images/robot-designer_open-browser_edit.png " ")
 
 2. In the **Open Browser** panel, keep the default values for **Name** and **Description**.
 
