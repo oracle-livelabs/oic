@@ -89,34 +89,7 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 6. Click **OK** when done, then **Save**.
 
-## Task 4: Install the Robot Designer Extension
-
-The **Oracle Robot Designer Extension** is a Chrome browser plugin that is used to target and record robot actions. This extension must be installed to continue with this workshop.
-
-1. From the Robot designer, click on the red **Update** button
-
-2. Click the button **Download browser extension**.
-    ![Click extension Update button](images/robot-designer_update-browser-extension.png " ")
-
-    The extension file (ZIP) is downloaded to the default downloads folder.
-
-3. Navigate to the location where the ZIP file downloaded, such as your **Downloads** folder.
-
-4. Extract the ZIP file in the same folder.
-
-5. In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
-
-6. On the Google Chrome Extensions page, select **Load unpacked**.
-
-7. Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
-
-    This loads the Robot Extension in your Chrome browser.
-
-    ![Show loaded Robot Extension in Chrome browser](images/robot-designer_loaded-browser-extension.png)
-
-After installing the browser extension, we can start adding robot actions.
-
-## Task 5: Add Login Action
+## Task 4: Add Login Action
 
 Start the robot flow by adding the Login action.
 
@@ -142,7 +115,7 @@ Start the robot flow by adding the Login action.
 
 6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
 
-    > The rest of the workshop requires the Robot Designer Extension. If you see below message, then complete the installation before proceeding to the next step.
+    > The rest of the workshop requires the Robot Designer Extension. If you see below message, then complete the installation before proceeding to the next step. After installing the browser extension, we can start adding robot actions.
 
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
@@ -206,7 +179,7 @@ Start the robot flow by adding the Login action.
 
     We will now select field elements to generate associated Actions in the robot flow.
 
-## Task 6: Add Robot Actions using the Record option
+## Task 5: Add Robot Actions using the Record option
 
 Build the robot flow by adding actions using the recorder.
 
@@ -265,7 +238,7 @@ Build the robot flow by adding actions using the recorder.
     > 1. The operation is added as action to the robot flow.
     > 2. The browser performs the actual UI operation.
 
-## Task 7: Add Robot ERP Actions using the Record option
+## Task 6: Add Robot ERP Actions using the Record option
 
 Continue the robot flow by adding actions from ERP Cloud using the recorder. After sign-in in the previous task, you should now be on the ERP Cloud landing page.
 
