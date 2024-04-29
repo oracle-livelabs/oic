@@ -142,12 +142,13 @@ Start the robot flow by adding the Login action.
 
 6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
 
-    > The rest of the workshop requires the Robot Designer Extension. If you see below message, then complete the installation. Otherwise skip the next step.
+    > The rest of the workshop requires the Robot Designer Extension. If you see below message, then complete the installation before proceeding to the next step.
+
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
 7. Install the Browser Extension
 
-    * Click on the **Download browser extension** button and wait for the download to complete. 
+    * Click on the **Download browser extension** button and wait for the download to complete.
     * Navigate to the location of the downloaded ZIP file, such as your **Downloads** folder.
     * Extract the ZIP file in the same folder.
     * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
@@ -166,7 +167,7 @@ Start the robot flow by adding the Login action.
 
     ![Robot design Targeting](images/robot-designer_targeting-on.png "")
 
-9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name. 
+9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name.
     > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
