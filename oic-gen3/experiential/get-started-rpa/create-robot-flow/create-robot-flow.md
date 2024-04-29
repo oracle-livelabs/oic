@@ -36,7 +36,7 @@ When you create a robot, you define its trigger and the actions that the robot p
     | Version       | Yes | Keep as default: `1.00.00` |
     | Description   | No  | Provide additional information about the robot.|
     | Keywords      | No  | Enter text that people might use to search for the robot. |
-    | | | |
+    ||
 
     | ![Create robot flow panel](images/create-robot-add.png " ") |
     |-|
