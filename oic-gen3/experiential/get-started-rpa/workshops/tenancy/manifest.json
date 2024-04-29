@@ -18,19 +18,19 @@
             "filename": "../../concepts/concepts.md"
         },
         {
-            "title": "Create Project",
+            "title": "Lab 1: Create Project",
             "description": "Create a Project to group all the robot flow assets",
             "type": "livelabs",
             "filename": "../../create-project/create-project.md"
         },
         {
-            "title": "Create Robot Connection",
+            "title": "Lab 2: Create Robot Connection",
             "description": "Create Robot Connection",
             "type": "livelabs",
             "filename": "../../create-robot-connection/create-robot-connection.md"
         },
         {
-            "title": "Create Robot Flow",
+            "title": "Lab 3: Create Robot Flow",
             "description": "Create Robot Flow",
             "type": "livelabs",
             "filename": "../../create-robot-flow/create-robot-flow.md"
