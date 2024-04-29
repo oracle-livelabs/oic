@@ -48,7 +48,7 @@ The Robot Designer will appear, with a default flow which includes an Open Appli
 
 The trigger defines the interface for the robot, including the input (incoming request) and the output (outgoing response). For this lab, we will provide a purchase order number as input, and capture the supplier name as output.
 
-1. Select ![Create robot flow panel](images/click-to-edit-trigger-button-small.png "=30x") **(Click to edit trigger)**
+1. Select ![Create robot flow panel](images/click-to-edit-trigger-button-small.png " ") **(Click to edit trigger)**
 
     The trigger panel will appear on the screen.
 
