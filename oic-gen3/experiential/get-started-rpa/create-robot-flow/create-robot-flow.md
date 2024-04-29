@@ -129,7 +129,7 @@ Start the robot flow by adding the Login action.
 
     ![Loaded Robot extension](images/robot-extension_loaded.png " ")
 
-    Close this tab and return to the Robot flow. Click **Save**, reopen the project and **double-click** on the **Login** action.
+    Close this tab and return to the Robot flow. Click **Save**, reopen the project and return to **Step 6**.
 
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
