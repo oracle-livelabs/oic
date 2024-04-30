@@ -84,12 +84,14 @@ You must start the robot agent from the computer on which it is installed. If a 
 
 3. To run the command:
 
-    * On Mac/Linux: Open the **Terminal** app, and navigate to the location of the unzipped folder.  
+    * On Linux/MacOS: Open the **Terminal** app, and navigate to the location of the unzipped folder.  
     * On Windows: Right-click on the unzipped folder and select **Open in Terminal**
 
 4. Run the following command in the terminal:
 
-    `java -jar orpa-agent-x.x.xx.jar`
+    ```java
+    java -jar orpa-agent-x.x.xx.jar
+    ```
 
     Replace x.x.xx with the actual version number (e.g. `0.1.77`)
 
