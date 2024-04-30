@@ -87,13 +87,13 @@ You must start the robot agent from the computer on which it is installed. If a 
     * On Mac/Linux: Open the **Terminal** app, and navigate to the location of the unzipped folder.  
     * On Windows: Right-click on the unzipped folder and select **Open in Terminal**
 
-4. Run the following command in the **Terminal**:
+4. Run the following command in the terminal:
 
     `java -jar orpa-agent-x.x.xx.jar`
 
     Replace x.x.xx with the actual version number (e.g. `0.1.77`)
 
-5. The robot agent is running successfully when you see below message:
+5. The robot agent is running successfully when you see below message in the terminal:
 
     `INFO  - Requesting messages from ControlRoom`
 
