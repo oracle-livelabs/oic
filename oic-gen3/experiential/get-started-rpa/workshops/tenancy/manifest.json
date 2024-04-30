@@ -42,13 +42,7 @@
             "filename": "../../setup-robot-environment/setup-robot-environment.md"
         },
         {
-            "title": "Lab 5: Setup Robot Environment",
-            "description": "Setup Robot Environment",
-            "type": "livelabs",
-            "filename": "../../setup-robot-environment/setup-robot-environment.md"
-        },
-        {
-            "title": "Lab 6: Run Demo",
+            "title": "Lab 5: Run Demo",
             "description": "Run Demo",
             "type": "livelabs",
             "filename": "../../run-demo/run-demo.md"
