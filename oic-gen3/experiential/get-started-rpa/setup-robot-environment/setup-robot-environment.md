@@ -1,4 +1,4 @@
-# Create Environment Pool
+# Setup Robot Environment
 
 ## Introduction
 
@@ -52,14 +52,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 3. Follow the **Installation Instructions** on the Java Downloads page.
 
-## Task 2: Obtain OCI access details
-
-Configure connection security between the robot and designated OIC instance. This includes obtaining the security credentials from the tenancy and designated OIC instance. The gathered information will be required in the next task.
-
-1. Start from the Application Integration From the OCI console, navigate to 
-
-
-## Task 3: Download and Install the Robot Agent
+## Task 2: Download and Configure the Robot Agent
 
 The Robot Agent must be downloaded and installed on your local host. The agent is downloaded from the Oracle Integration 3 console. During installation, you associate the agent with the OIC 3 instance where the robot flow will be built and run.
 
@@ -75,13 +68,36 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 
 4. Choose a folder where you would like to move the downloaded ```.zip```. From there, unzip the RPA agent file.
 
-5. Open the ```InstallerProfile.cfg``` file located in the agent folder using a text editor (e.g. Notepad, Sublime, etc).
+5. Open the ```InstallerProfile.cfg``` file located in the agent folder using a text editor (e.g. Notepad, Sublime, etc) and enter a value for the **DISPLAY_NAME** attribute without spaces. For example, `DISPLAY_NAME=LiveLabs-RobotAgent`
 
+    Keep all other values as default.
 
+6. **Save** and **Close** the configuration file.
 
-## Task 3: Run Robot Agent
+## Task 3: Start Robot Agent
 
+You must start the robot agent from the computer on which it is installed. If a robot agent isn't running, the agent can't run any robots.
 
+1. Return to the unzipped RPA Agent folder.
 
+2. Locate the `.jar` file and note the version number. It should be in the following format: `orpa-agent-x.x.xx.jar`
 
+3. To run the command:
 
+    * On Mac/Linux: Open the **Terminal** app, and navigate to the location of the unzipped folder.  
+    * On Windows: Right-click on the unzipped folder and select **Open in Terminal**
+
+4. Run the following command in the **Terminal**:
+
+    `java -jar orpa-agent-x.x.xx.jar`
+
+    Replace x.x.xx with the actual version number (e.g. `0.1.77`)
+
+5. The robot agent is running successfully when you see below message:
+
+    `INFO  - Requesting messages from ControlRoom`
+
+## Acknowledgements
+
+* **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
+* **Last Updated By/Date** - Ravi Chablani, April 2024

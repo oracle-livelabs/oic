@@ -4,7 +4,7 @@
 
 This workshop will enable you to create an end-to-end RPA flow with Oracle Integration 3. The steps will include setting up the RPA environment and service connections, creating the robot integration flows, followed by executing and monitoring test runs.
 
-Estimated Time: 1 hour 30 minutes
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 

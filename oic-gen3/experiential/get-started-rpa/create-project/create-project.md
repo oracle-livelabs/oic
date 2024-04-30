@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to create a Project to hold all the required Robot and Integration assets, such as connections and flows.
 
-Estimated Time: 15 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 

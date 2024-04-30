@@ -4,6 +4,8 @@
 
 This lab walks you through the steps to create a end-to-end robot flow. When you create a robot flow, you define its trigger and the actions that the robot performs.
 
+Estimated Lab Time: 45 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -263,10 +265,11 @@ Continue the robot flow by adding actions from ERP Cloud using the recorder. Aft
 12. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
 
 13. For the selected robot, click on **...** and select **Add Environment Pool**.
+![Add Environment Pool](images/robot-designer_add-environment-pool-reference.png "")
 
-14. In the **Add Environment pool**, select the existing environment pool and click **Add**.
+14. On the **Add Environment pool**, click on **Add**.
 
-    ![Smart Recording stop button](images/environment-pool_add.png " ")
+    ![Add Environment Pool to Robot Flow](images/environment-pool_add.png " ")
 
     The status of your robot should change to **Configured**.
 

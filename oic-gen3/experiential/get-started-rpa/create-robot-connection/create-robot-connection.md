@@ -4,6 +4,8 @@
 
 This lab will walk you through the steps to create a Robot Connection. A robot connection specifies the information that a robot needs to connect to an application. A typical connection specifies the URL and security credentials which the robot can use to login to an application.
 
+Estimated Lab Time: 10 minutes
+
 ### Objectives
 
 In this lab, you will:
