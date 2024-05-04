@@ -625,7 +625,7 @@ Download and install the VS Code extension for Rapid Adapter Builder.
 
 1.  On Visual Studio Marketplace, visit Oracle's [page](https://marketplace.visualstudio.com/publishers/Oracle)
 
-2.  Find and click the **Oracle Integration Cloud Rapid Adapter Builder** tile. The Details page opens.
+2.  Find and click the **Oracle Integration Rapid Adapter Builder** tile. The Details page opens.
 
 3.  Click **Install**. The extension file opens in VS Code.
 

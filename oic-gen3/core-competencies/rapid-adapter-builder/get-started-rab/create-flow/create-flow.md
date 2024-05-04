@@ -233,7 +233,7 @@ OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and 
 
 ## Task 9: Congratulations 🎉
 
-Congratulations on successfully completing the **Get Started with Rapid Adapter Builder** Live Lab! You've taken an important step in expanding your Oracle Integration Cloud skills by learning how to build custom adapters for applications exposing RESTful APIs.
+Congratulations on successfully completing the **Get Started with Rapid Adapter Builder** Live Lab! You've taken an important step in expanding your Oracle Integration skills by learning how to build custom adapters for applications exposing RESTful APIs.
 
 Through this hands-on workshop, you gained valuable experience with the Rapid Adapter Builder and its Visual Studio Code extension. Here are the key learnings you can takeaway:
 
@@ -244,7 +244,7 @@ Through this hands-on workshop, you gained valuable experience with the Rapid Ad
 - Generating initial ADDs from Postman collections or OpenAPI specifications
 - Customizing the adapter definition metadata to tailor the adapter's behavior
 - Validating ADDs to ensure they are error-free before publishing
-- Registering and publishing custom adapters to Oracle Integration Cloud instances
+- Registering and publishing custom adapters to Oracle Integration instances
 - Verifying the successful deployment of published custom adapters
 
 With this knowledge, you are now equipped to efficiently create adapters that allow Oracle Integration to connect to a wider range of applications and services based on their REST APIs. This enhances OIC's integration capabilities, simplifying connectivity while reducing development overheads.
