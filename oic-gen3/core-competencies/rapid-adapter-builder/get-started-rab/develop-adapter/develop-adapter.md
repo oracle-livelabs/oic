@@ -28,7 +28,7 @@ This lab assumes you have successfully completed all previous lab sections
 
 ## Task 1: Import and test the Postman Collection
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/gv0J-Iza_p0uU8Cct_XwRupcPO1tnNivFkJP0UJp_eB9S52_JWdJJi4W8rD2zjQi/n/oicpm/b/oiclivelabs/o/oic3/get-started-rab/lab-artifacts-rab.zip) the lab artifacts and unzip in you local directory.
+1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/gv0J-Iza_p0uU8Cct_XwRupcPO1tnNivFkJP0UJp_eB9S52_JWdJJi4W8rD2zjQi/n/oicpm/b/oiclivelabs/o/oic3/get-started-rab/lab-artifacts-rab.zip) the lab artifacts and unzip in your local directory.
 
 2.  Open the Postman application and sign in with your account.
 
@@ -61,7 +61,7 @@ This lab assumes you have successfully completed all previous lab sections
     - api: You can save all OpenAPI files in this folder.
     - definitions: The extension creates a default adapter definition document, main.add.json, in this folder. You can overwrite the default document with the data from a Postman collection or an OpenAPI file. Additionally, all the other adapter definition documents you generate are saved in this folder. The file names of all adapter definition documents are appended with .add.json.
     - misc: You can save all Postman collections in this folder. Ensure that the file names of all Postman collections are appended with .postman_collection.json.
-    - logo.svg: A default logo file for your adapter is created under the root folder. You can replace this file with the required image.
+    - logo.svg: A default logo file for your adapter is created under the root folder. You can replace this file with the required image. The logo should be of svg format only.
 
 5.  Open postman collection that you downloaded earlier using any text editor. Navigate to the **variable** section which is almost at the end of the file. Provide the ORDS url in the value property.
 
@@ -134,7 +134,7 @@ Sample of Info section
 ***schemas section***: The VS Code extension for Rapid Adapter Builder generates schemas for requests and responses when you convert a Postman collection to an adapter definition document. This information appears in the schemas section of the document. You can update this information as needed for your requirements.
 
 The JSON schemas define the structure of the input and output payloads. Schemas can reference other definitions in the adapter definition document. Generally, you don't need to update the schemas. However, if necessary, you can edit the schemas to:
-- Remove certain fields that may not be necessary for your adapter.
+- Remove or add certain fields that are required for your adapter.
 - Remove nesting and have a flat list.
 - Change the response format. For example, an API may return a time stamp as a UNIX epoch. You can transform the value into a human-readable format by editing the schema.
 
@@ -144,7 +144,7 @@ Sample of Schemas section
 
 ![Sample Schemas Section](images/add-schema-section-sample.png)
 
-***connection section***: The VS Code extension for Rapid Adapter Builder collects connection and security information about the application's APIs when you convert a Postman collection or an OpenAPI document into an adapter definition document. This information appears in the connection section. You can update this information and add new connection definitions as needed, according to your requirements.
+***connection section***: The VS Code extension for Rapid Adapter Builder collects connection and security information about the application's APIs provided in the Postman Collection when you convert the convert into an adapter definition document. This information appears in the connection section. You can update this information and add new connection definitions as needed, according to your requirements.
 
 When designing your adapter, you specify the connection models that the adapter supports. Provide this information in the connection section of the adapter definition document. An integration developer must specify this information when creating a connection that is based upon the adapter.
 
@@ -189,8 +189,8 @@ The flows section of the adapter definition document defines the runtime and des
 
 **Runtime examples**
   - Invoke APIs.
-  - Start preprocessing activities, like transforming a JSON payload to an avro string.
-  - Perform post processing, like transforming the avro-encoded data to a JSON key value.
+  - Start preprocessing activities, like transforming a JSON payload to an binary encoded avro data.
+  - Perform post processing, like transforming the binary encoded avro data to a JSON key value.
   - Conditionally execute an actions
 
 Sample of Flow Section

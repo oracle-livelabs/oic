@@ -6,7 +6,7 @@ This lab walks you through the steps to create an Integration flow.
 
 This use case describes how to use Oracle Integration to consume **Acme OM App** adapter which connects with **ACME Order Management Application**
    - ACME OM App exposes Customers and Orders API
-   - OIC consumes the Acme OM App Adapter get a Customer Orders given a customer\_id.
+   - OIC consumes the **Acme OM App Adapter** to get a **Customer Order** given a customer\_id.
    - OIC captures the response and sends order details to the client
 
  The following diagram shows the interaction between the systems involved in this use case.

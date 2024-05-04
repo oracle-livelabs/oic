@@ -6,13 +6,13 @@ The Rapid Adapter Builder in Oracle Integration (OIC) allows you to quickly buil
 
 An adapter provides an interface to connect an OIC integration flow with a specific application's APIs. Oracle Integration Cloud has a growing library of pre-built adapters for many popular applications. However, when there is no existing Oracle adapter for an application you need to integrate with, the Rapid Adapter Builder enables you to build a custom adapter tailored to that application's APIs.
 
-The Rapid Adapter Builder is provided as a Visual Studio Code extension that guides you through generating the metadata definition of an adapter based on an application's Postman API collection or OpenAPI specification. You can then customize and publish this adapter definition as a functional adapter within your OIC instance.
+The Rapid Adapter Builder is provided as a Visual Studio Code extension that guides you through generating the metadata definition of an adapter based on an application's Postman API collection or OpenAPI specification. You can then customize and publish this adapter definition document as a functional adapter within your OIC instance.
 
 In this tutorial, you will use the Rapid Adapter Builder's Visual Studio Code extension to build an adapter for the ACME Order Management application's REST APIs. The key steps include:
 
-- Obtaining the ACME Order Management APIs (Postman collection or OpenAPI spec)
-- Generating the adapter definition from the APIs
-- Customizing the adapter definition as needed
+- Obtaining the ACME Order Management APIs (Postman collection)
+- Generating the adapter definition document from the APIs
+- Customizing the adapter definition document as needed
 - Validating and publishing the adapter to your OIC instance
 
 By the end of this tutorial, you will have a custom ACME Order Management adapter published in your Oracle Integration Cloud instance, ready to be leveraged in integration flows for connecting to the ACME Order Management application.
@@ -41,7 +41,7 @@ By completing this tutorial, you will be able to:
 * Create a sample Integration flow using the published adapter
 * Understand how to incrementally update an existing custom adapter (Optional)
 
-By accomplishing these objectives, you will gain hands-on experience using the Rapid Adapter Builder to create custom adapters for applications exposing RESTful APIs. This will expand your ability to integrate Oracle Integration with a wider range of cloud applications and services.
+By accomplishing these objectives, you will gain hands-on experience using the Rapid Adapter Builder to create custom adapters for applications exposing RESTful APIs. This will expand your ability to integrate Oracle Integration with a wider range of cloud applications and on premise applications.
 
 ### Prerequisites
 
