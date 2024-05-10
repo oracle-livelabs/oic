@@ -10,6 +10,11 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-* Provide a valid request payload
-* Trigger a robot flow which will complete a set of instructions and return a response.
+* Provide a valid request payload to start the robot flow
+* Observe the completion of instructions by the robot
 
+This lab assumes you have:
+
+* All previous labs successfully completed
+
+## Task 1: 

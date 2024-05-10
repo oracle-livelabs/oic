@@ -133,6 +133,8 @@ Start the robot flow by adding the Login action.
 
     Close this tab and return to the Robot flow. Click **Save**, reopen the project and return to the previous step.
 
+    > **Note**: If the browser does not load the extension, then save all your works and restart the browser windows. Complete login, navigate to the Robot flow and open the action.
+
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
     ![Robot input username locator select](images/robot-input_username-locator_select.png)
