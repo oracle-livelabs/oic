@@ -109,8 +109,8 @@ Start the robot flow by adding the Login action.
 
     Next, we will specify input details for Username and Password actions.
 
-5. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. Here's an example environment URL:
-`https://eeho.fa.us2.oraclecloud.com/fscmUI/faces/FuseWelcome`
+5. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. For example, to access Oracle Cloud ERP, your login URL pattern will be:
+`https://<Fusion-domain>.fa.<data-center>.oraclecloud.com/fscmUI/faces/FuseWelcome`
 
 6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
 
@@ -133,7 +133,7 @@ Start the robot flow by adding the Login action.
 
     Close this tab and return to the Robot flow. Click **Save**, reopen the project and return to the previous step.
 
-    > **Note**: If the browser does not load the extension, then save all your works and restart the browser windows. Complete login, navigate to the Robot flow and open the action.
+    > **Note**: If the browser does not load the extension, then save all your work and restart the browser window. Next, navigate to the Robot flow and reopen the Login action.
 
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
@@ -169,9 +169,11 @@ Start the robot flow by adding the Login action.
 
 Build the rest of the robot flow by adding actions using the recorder. Here we will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open a new browser window and navigate to the login page of ERP Cloud. This is the URL value which was set in the web login panel.
+1. Open a new browser window and navigate to the login page of ERP Cloud. Enter the login credentials and click **Sign In**.
 
-    ![ERP Cloud login](images/robot-designer_erp-login.png " ")
+    ![ERP Cloud login](images/erp-cloud_login.png " ")
+
+    We will start the robot flow recording after the login screen.
 
 2. Return to the browser tab running the robot designer. Select the **Open Application** action (don't double-click). Selecting the actions enables the record button. ![Record button enabled](images/robot-designer_record-button.png " ")
 
