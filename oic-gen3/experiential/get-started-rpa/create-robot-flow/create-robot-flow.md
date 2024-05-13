@@ -175,9 +175,9 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 
     We will start the robot flow recording after the login screen.
 
-2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button. ![Record button enabled](images/robot-designer_record-button.png " ")
+2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button.
 
-3. Click the **Record after the selected option** button to start recording after the selected **Login** action.
+3. Click the **Record after the selected option** button to start recording after the selected **Login** action.  ![Record button enabled](images/robot-designer_record-button.png " ")
 
 4. On the **Smart Record** panel, click **Select browser tab to target** drop-down.
 
@@ -191,13 +191,14 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 
     We will now select field elements to generate associated Actions in the robot flow.
 
-7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the procurement element.
+7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab.
 
     > **Note:** When clicking a UI button or link in recorder mode, the following events occur:
         > 1. The operation is added as action to the robot flow.
         > 2. The browser performs the actual UI operation.
 
-8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the purchase orders element.
+8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen.
+    ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png " ")
 
 9. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
@@ -223,7 +224,8 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 14. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
     * Name: `Click "Get supplier name"`
     * Action: Get Text
-    * Save To: Select ![Select Flow button](images/action-details_po-number_flow-button.png " ") **(Flow Input/Output)**, switch to **Output** and double-click on **SupplierName**.
+    * Save To: **Output** ![Select Flow button](images/action-details_supplier_select-button.png " ") and double-click on **SupplierName**.
+    ![Select Flow button](images/action-details_supplier_assign.png " ")
 
 15. Click **Save**.
 
@@ -236,7 +238,7 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 19. For the selected robot, click on **...** and select **Add Environment Pool**.
 ![Add Environment Pool](images/robot-designer_add-environment-pool-reference.png "")
 
-20. On the **Add Environment pool**, click on **Add**.
+20. On the **Add Environment pool**, select the designated environment pool and click **Add**.
 
     ![Add Environment Pool to Robot Flow](images/environment-pool_add.png " ")
 
@@ -247,4 +249,4 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, March 2024
+* **Last Updated By/Date** - Ravi Chablani, May 2024
