@@ -114,7 +114,7 @@ Start the robot flow by adding the Login action.
 
 6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
 
-    > The rest of the workshop requires the Robot Designer Extension. If you see below message, then complete the installation before proceeding to the next step. After installing the browser extension, we can start adding robot actions.
+    > The rest of the workshop requires the Robot Designer Extension to create targets. A target identifies the HTML element that a robot interacts with. If you see below message, then complete the extension installation before proceeding to the next step. After installing the browser extension, we can start creating targets when adding actions to a robot.
 
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
@@ -148,7 +148,7 @@ Start the robot flow by adding the Login action.
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
 
-    The Targeting maps the `User ID` UI element value to the **Username locator** field in the robot.
+    The Targeting will map the `User ID` UI element value to the **Username locator** field in the robot.
 
     ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
 
@@ -157,7 +157,7 @@ Start the robot flow by adding the Login action.
     * **Password locator**: Select the `password` UI element.
     * **Submit locator**: Select the `Sign In` button that the robot clicks to sign in to the Oracle Fusion application.
 
-    Your current (incomplete) flow should look as follows:
+    Your intermediate flow should look as follows:
 
     ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=50%x")
 
@@ -165,85 +165,50 @@ Start the robot flow by adding the Login action.
 
 12. Above the Robot canvas, click **Save**.
 
-## Task 5: Add Robot Actions using the Record option
+## Task 5: Add Robot ERP Actions using the Record option
 
-Build the rest of the robot flow by adding actions using the recorder. Here we will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
+Build the rest of the robot flow by adding actions using the Recorder. Here we will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open a new browser window and navigate to the login page of ERP Cloud. Enter the login credentials and click **Sign In**.
+1. Open the other browser window where the credentials were entered in the previous task. Click **Sign In** to proceed to the next screen in ERP Cloud.
 
     ![ERP Cloud login](images/erp-cloud_login.png " ")
 
     We will start the robot flow recording after the login screen.
 
-2. Return to the browser tab running the robot designer. Select the **Open Application** action (don't double-click). Selecting the actions enables the record button. ![Record button enabled](images/robot-designer_record-button.png " ")
+2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button. ![Record button enabled](images/robot-designer_record-button.png " ")
 
-3. On the **Smart Record** panel, click **Select browser tab to target**.
+3. Click the **Record after the selected option** button to start recording after the selected **Login** action.
+
+4. On the **Smart Record** panel, click **Select browser tab to target** drop-down.
+
+5. Select the window title which coincides with the ERP Cloud tab.
 
     ![Select browser tab](images/robot-designer_smart-record_select-browser.png " ")
 
-    This starts the recorder on the ERP Cloud login page.
+    This starts the recorder on the ERP Cloud landing page.
 
-4. On the **RPA Smart Recording** panel, click on **Begin Recording**.
+6. On the **RPA Smart Recording** panel, click on **Begin Recording**.
 
     We will now select field elements to generate associated Actions in the robot flow.
 
-5. Hover the mouse over the **User ID** field until it lights-up green, and select it.
-![Select browser tab](images/robot-designer_smart-record_select-user-id.png " ")
+7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the procurement element.
 
-    This adds an action `Enter "User ID" Text` to the robot flow.
+    > **Note:** When clicking a UI button or link in recorder mode, the following events occur:
+        > 1. The operation is added as action to the robot flow.
+        > 2. The browser performs the actual UI operation.
 
-    > **Note:** When using the recorder, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
+8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the purchase orders element.
 
-    Next we set the **Value** field by mapping the **Username** input variable.
-
-6. On the **Action Details** panel, within the **Value** field, select the **Robot connections** icon ![Select robot connections button](images/robot-connections-button.png " "). On the **Robot connections** side panel, expand the created robot connection and drag the **username** parameter to the **Value** field.
-
-7. For the **Test value** field, enter a valid EPR username. For example `calvin.roth`.
-
-8. Click **Save**.
-
-    > **Note:** We add valid test values to allow the login to work and move to the next screen in the browser.
-
-9. Next, hover the mouse over the **Password** field until it lights-up green, and select it.
-
-10. Map the robot connection **password** parameter to the **Value** field.
-
-11. For the **Test value** field, enter a valid ERP password.
-
-12. Click **Save**.
-
-13. Next, hover the mouse over the **Sign In** button until it lights-up green, and select it.
-
-14. On the **Action Details** panel, keep all values as default and click **Save**.
-
-15. Return to the browser tab running the robot designer. Click **Save** in the robot designer.
-
-    Your current (incomplete) flow should look as follows:
-
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
-
-> **Note:** When clicking a button or link in recorder mode, the following events occur:
-    > 1. The operation is added as action to the robot flow.
-    > 2. The browser performs the actual UI operation.
-
-## Task 6: Add Robot ERP Actions using the Record option
-
-Continue the robot flow by adding actions from ERP Cloud using the recorder. After sign-in in the previous task, you should now be on the ERP Cloud landing page.
-
-1. From the top menu in ERP Cloud, click on **Procurement** when the icon changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the procurement element.
-
-2. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the purchase orders element.
-
-3. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
+9. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
 
-4. On the side panel, go to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action and move to the Manage Orders page.
+10. On the side panel, go to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action and move to the Manage Orders page.
 
     Next, we will search for a specific Purchase Order by providing an order number.
 
-5. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
+11. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
     * Name: `Enter "PO number" Text`
     * Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png " ") **(Flow Input/Output)** and select the **Input** property **PONumber**. Double-click the property to have it mapped to the **Value** field.
@@ -251,33 +216,33 @@ Continue the robot flow by adding actions from ERP Cloud using the recorder. Aft
 
     ![PO Number action details](images/action-details_po-number.png " ")
 
-6. Click **Save**.
+12. Click **Save**.
 
-7. Click on **Search** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
+13. Click on **Search** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
 
-8. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
+14. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
     * Name: `Click "Get supplier name"`
     * Action: Get Text
     * Save To: Select ![Select Flow button](images/action-details_po-number_flow-button.png " ") **(Flow Input/Output)**, switch to **Output** and double-click on **SupplierName**.
 
-9. Click **Save**.
+15. Click **Save**.
 
-10. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png " ") **(Stop recording)** to end the recording.
+16. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png " ") **(Stop recording)** to end the recording.
 
-11. In the **Robot Designer**, click on **Save**.
+17. In the **Robot Designer**, click on **Save**.
 
-12. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
+18. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
 
-13. For the selected robot, click on **...** and select **Add Environment Pool**.
+19. For the selected robot, click on **...** and select **Add Environment Pool**.
 ![Add Environment Pool](images/robot-designer_add-environment-pool-reference.png "")
 
-14. On the **Add Environment pool**, click on **Add**.
+20. On the **Add Environment pool**, click on **Add**.
 
     ![Add Environment Pool to Robot Flow](images/environment-pool_add.png " ")
 
     The status of your robot should change to **Configured**.
 
-15. For the selected robot, click on **...** and select **Activate**.
+21. For the selected robot, click on **...** and select **Activate**.
 
 ## Acknowledgements
 
