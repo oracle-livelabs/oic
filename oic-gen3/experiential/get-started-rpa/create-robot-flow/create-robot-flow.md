@@ -224,8 +224,8 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 14. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
     * Name: `Click "Get supplier name"`
     * Action: Get Text
-    * Save To: ![Select Flow button](images/action-details_supplier_select-button.png " ") (**Output**) and double-click on **SupplierName**.
-    ![Select Flow button](images/action-details_supplier_assign.png " ")
+    * Save To: ![Select Flow button](images/action-details_output_flow-button.png " ") (**Output**) and double-click on **SupplierName**.
+    ![Select Flow button](images/action-details_output_assign-supplier.png " ")
 
 15. Click **Save**.
 
