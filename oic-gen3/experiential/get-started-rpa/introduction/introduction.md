@@ -15,20 +15,6 @@ In this workshop, you will learn how to:
 * Setup Robot Environment
 * Build, Test, and Deploy a Robot
 
-
-///
-Flow:
-Create project
-robot conn
-
-env group
-add env (with agent)
-
-now add env to group
-assign env pool 
-
-///
-
 ### Prerequisites
 
 * An Oracle Free Tier or Paid Cloud Account
@@ -36,9 +22,9 @@ assign env pool
 
 ## Learn More
 
-* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Get Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, Jan 2024
+* **Last Updated By/Date** - Ravi Chablani, March 2024

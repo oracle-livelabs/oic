@@ -28,4 +28,9 @@ This lab assumes you have:
 
 3. Click **Run** on the top-right side of the screen.
 
-    You should start seeing new activities in the terminal. 
+    You should start seeing new activities in the terminal.
+
+## Acknowledgements
+
+* **Author** - Ravi Chablani, Product Management - Oracle Integration
+* **Last Updated By/Date** - Ravi Chablani, May 2024
