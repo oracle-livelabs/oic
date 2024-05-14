@@ -28,7 +28,13 @@ This lab assumes you have:
 
 3. Click **Run** on the top-right side of the screen.
 
-    You should start seeing new activities in the terminal.
+You should start seeing the following activities in the terminal:
+
+    ```
+    INFO  - Launching robot instance e0ccb43d-4af4-4aeb-81ec-a5f76d95bc48
+    INFO  - Requesting messages from ControlRoom
+    ```
+After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
 ## Acknowledgements
 
