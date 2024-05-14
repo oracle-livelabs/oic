@@ -198,7 +198,7 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
         > 2. The browser performs the actual UI operation.
 
 8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen.
-    ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png " ")
+    ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png "=50%x*")
 
 9. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
