@@ -36,6 +36,25 @@ You should start seeing the following activities in the terminal:
     ```
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
+## Task 2: Validate Robot Flow Status
+
+Let's monitor the robot flow.
+
+1. From the **Configure and run** screen, click on the link under **Instance ID**.
+
+    The Robot instances tab appears and is filtered to show only the instance ID that you selected. Just after the start of the robot flow, the instance will have **Status** ``Pending``.
+
+2. The robot will start a new browser session to perform the UI tasks. Wait until the robot completes the flow, the click the (**Refresh**) button until the status changes to ``Succeeded``.
+
+3. Hover over the completed instance and move the mouse to the right of the screen. Click on the (**View details) button.
+
+    This opens the **Activity Stream** for the selected instance. 
+
+
+
+
+
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
