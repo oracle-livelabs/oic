@@ -235,21 +235,29 @@ Build the rest of the robot flow by adding actions using the Recorder. Here we w
 
     We will add a Log action to capture the output value of the robot flow.
 
-18. Click on the Robot action panel, and drag the Log action at the tail end of the flow.
+18. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
 ![Add Log action](images/robot-designer_add-log-action.png "")
 
-19. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
+19. On the **Log** panel, hover over the **Message** field, click **...** (More options), and select **Output**. This assigns the output value to the log message.
+![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
 
-20. For the selected robot, click on **...** and select **Add Environment Pool**.
+20. Drag the ```SupplierName``` property to **Message** field.
+![Drag Supplier property](images/robot-designer_log-action_assign-supplier.png "")
+
+21. Click **OK**, then **Save**.
+
+22. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
+
+23. For the selected robot, click on **...** and select **Add Environment Pool**.
 ![Add Environment Pool](images/robot-designer_add-environment-pool-reference.png "")
 
-21. On the **Add Environment pool**, select the designated environment pool and click **Add**.
+24. On the **Add Environment pool**, select the designated environment pool and click **Add**.
 
     ![Add Environment Pool to Robot Flow](images/environment-pool_add.png " ")
 
     The status of your robot should change to **Configured**.
 
-22. For the selected robot, click on **...** and select **Activate**.
+25. For the selected robot, click on **...** and select **Activate**.
 
 ## Acknowledgements
 
