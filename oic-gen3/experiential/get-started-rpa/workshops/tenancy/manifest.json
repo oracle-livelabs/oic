@@ -51,8 +51,8 @@
             "filename": "../../test-robot/test-robot.md"
         },
         {
-            "title": "Lab 7: Add Integration",
-            "description": "Add Integration",
+            "title": "Lab 7: Add an Integration",
+            "description": "Add an Integration",
             "type": "livelabs",
             "filename": "../../add-integration/add-integration.md"
         },

@@ -2,18 +2,29 @@
 
 ## About this Workshop
 
-This workshop will enable you to create an end-to-end RPA flow with Oracle Integration 3. The steps will include setting up the RPA environment and service connections, creating the robot integration flows, followed by executing and monitoring test runs.
+This workshop will enable you to build a Robot with Oracle Integration 3. The steps will include setting up the robot environment and connections, creating the robot and integration, followed by running and testing a robot.
 
 Estimated Workshop Time: 2 hours
+
+### Why Use Robots in Oracle Integration?
+
+Robots and integrations help you achieve the same business goals using different technologies. A robot performs UI-based automation, whereas an integration performs API-based automation. You can build both robots and integrations using Oracle Integration 3, enabling organizations to automate efficiently and effectively using one complete platform.
+
+Robots enable organizations to unify their automation work and strategies, which can eliminate any automation silos.
+
+Having robots as part of Oracle Integration let's you gain the efficiencies of automation along with the controls to guarantee good corporate governance. Corporate teams can automate their business processes with only minimal involvement from IT, while a designated team maintains operational excellence by providing oversight. Essentially, you reduce risk by managing the entire lifecycle of all automation assets in one place.
+
+Oracle Integration offers unified observability of all assets with robust monitoring tools, including dashboards, proactive email notifications, and detailed troubleshooting pages.
+
+Business can build flexible and future-proof solutions using Oracle Integration. Use Robots when the underlying service only support a UI-interface. You create an integration that calls the robot and then move on to your next automation work. If you need the replace the UI-based implementation with an API-based interface, then you make an update without impacting the larger business process. 
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Learn Oracle Integration 3 concepts of Projects and Robots
+* Learn about the benefits of using Robots in Oracle Integration 3
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure
-* Setup Robot Environment
-* Build, Test, and Deploy a Robot
+* Build, Test and Monitor a Robot and its Integration
 
 ### Prerequisites
 
@@ -27,4 +38,4 @@ In this workshop, you will learn how to:
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, March 2024
+* **Last Updated By/Date** - Ravi Chablani, June 2024
