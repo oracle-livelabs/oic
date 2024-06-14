@@ -51,10 +51,10 @@
             "filename": "../../setup-robot-environment/setup-robot-environment.md"
         },
         {
-            "title": "Lab 6: Run Demo",
-            "description": "Run Demo",
+            "title": "Lab 6: Test Robot",
+            "description": "Test Robot",
             "type": "livelabs",
-            "filename": "../../run-demo/run-demo.md"
+            "filename": "../../test-robot/test-robot.md"
         },
         {
           "title": "Need Help?",
