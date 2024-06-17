@@ -39,7 +39,6 @@ This lab assumes you have:
     | --- | ----------- |
     | Name | Provide a meaningful name for your project. For example `Robot Flow Lab` |
     | Anyone can edit, view, and monitor | Select this option to allow anyone to edit, view, and monitor resources in the project. Don't select this option if you want to restrict access to editing, viewing, and monitoring resources in this project. |
-    | | |
 
 5. Click **Create**.
 
