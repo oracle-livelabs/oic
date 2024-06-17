@@ -21,44 +21,44 @@
             "filename": "../../../../common/provision-oic/provision.md"
         },
         {
-            "title": "Lab 2: Create Project",
+            "title": "Lab 2: Create a Project",
             "description": "Create a Project to group all the robot flow assets",
             "type": "livelabs",
             "filename": "../../create-project/create-project.md"
         },
         {
-            "title": "Lab 3: Create Robot Connection",
-            "description": "Create Robot Connection",
+            "title": "Lab 3: Create a Robot Connection",
+            "description": "Specify how a robot connects to an application",
             "type": "livelabs",
             "filename": "../../create-robot-connection/create-robot-connection.md"
         },
         {
-            "title": "Lab 4: Create Robot ",
-            "description": "Create Robot",
+            "title": "Lab 4: Create a Robot ",
+            "description": "Create a Robot",
             "type": "livelabs",
             "filename": "../../create-robot/create-robot.md"
         },
         {
-            "title": "Lab 5: Setup Robot Environment",
-            "description": "Setup Robot Environment",
+            "title": "Lab 5: Setup a Robot Environment",
+            "description": "Setup a robot environment",
             "type": "livelabs",
             "filename": "../../setup-robot-environment/setup-robot-environment.md"
         },
         {
-            "title": "Lab 6: Test Robot",
-            "description": "Test Robot",
+            "title": "Lab 6: Test a Robot",
+            "description": "Test a robot in its environment",
             "type": "livelabs",
             "filename": "../../test-robot/test-robot.md"
         },
         {
             "title": "Lab 7: Add an Integration",
-            "description": "Add an Integration",
+            "description": "Add an integration that calls a robot",
             "type": "livelabs",
             "filename": "../../add-integration/add-integration.md"
         },
         {
-            "title": "Lab 8: Run Integration",
-            "description": "Run Integration",
+            "title": "Lab 8: Run an Integration",
+            "description": "Run an integration that calls a robot",
             "type": "livelabs",
             "filename": "../../run-integration/run-integration.md"
         },
