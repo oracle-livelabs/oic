@@ -16,7 +16,7 @@ Projects provide convenient deployment and unified observability, allowing pre-d
 
 In this lab, you will:
 
-- Create a Project to hold the Robot and Integration assets
+- Create a project to hold the robot and integration assets
 
 ### Prerequisites
 
