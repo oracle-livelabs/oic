@@ -1,4 +1,4 @@
-# Create Project
+# Create a Project
 
 ## Introduction
 
