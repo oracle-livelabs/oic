@@ -6,16 +6,23 @@ This lab walks you through the steps to create a Project to hold all the require
 
 Estimated Lab Time: 5 minutes
 
+### About Projects
+
+Projects are the hubs of all your automation work and the place to go when you want to design automation solutions, including integrations and robots. Each project can focus on a specific business objective, where select users are given access to project assets. Users who are on different teams and who have different skill-sets can collaborate on designated projects to meet their team objectives.
+
+Projects provide convenient deployment and unified observability, allowing pre-defined teams to work together to build, deploy, and monitor integrations and robots.
+
 ### Objectives
 
 In this lab, you will:
 
-- Create a Project
+- Create a Project to hold all the robot and integration assets
 
 ### Prerequisites
-This lab assumes you have:
-- Completed the Setup lab
 
+This lab assumes you have:
+
+- Completed the Oracle Integration provisioning lab
 
 ## Task 1: Create a Project
 
@@ -38,8 +45,11 @@ This lab assumes you have:
 
 Your new project page is displayed. You can now add integrations, connections, and robot flows to the project.
 
+## Learn More
+
+- [Get Started with Projects](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/release-management.html) in *Using Integrations in Oracle Integration 3*
+
 ## Acknowledgements
 
-- **Author** - <Name, Title, Group>
-- **Contributors** -  <Name, Group> -- optional
-- **Last Updated By/Date** - <Name, Group, Month Year>
+- **Author** - Ravi Chablani, Product Management - Oracle Integration
+- **Last Updated By/Date** - Ravi Chablani, June 2024
