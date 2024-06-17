@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to create a Project to hold all the relevant Robot and Integration assets, such as connections and flows.
+This lab walks you through the steps to create a Project to hold all the relevant Integration and Robot assets, such as connections and flows.
 
 Estimated Lab Time: 5 minutes
 
@@ -16,7 +16,7 @@ Projects provide convenient deployment and unified observability, allowing pre-d
 
 In this lab, you will:
 
-- Create a project to hold the robot and integration assets
+- Create a project to hold the integration and robot assets
 
 ### Prerequisites
 
@@ -43,7 +43,7 @@ This lab assumes you have:
 
 5. Click **Create**.
 
-Your new project page is displayed. You can now add integrations, connections, and robot flows to the project.
+    The new project page is displayed. You can now create and manage integrations and robots from the project.
 
 ## Learn More
 
