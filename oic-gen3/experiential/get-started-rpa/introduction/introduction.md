@@ -33,6 +33,7 @@ In this workshop, you will:
 
 ## Learn More
 
+* [Using Robots in Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/robotic-automation/index.html)
 * [Get Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 ## Acknowledgements
