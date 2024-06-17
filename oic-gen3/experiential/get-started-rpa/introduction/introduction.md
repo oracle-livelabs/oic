@@ -16,11 +16,11 @@ Having robots as part of Oracle Integration let's you gain the efficiencies of a
 
 Oracle Integration offers unified observability of all assets with robust monitoring tools, including dashboards, proactive email notifications, and detailed troubleshooting pages.
 
-Business can build flexible and future-proof solutions using Oracle Integration. Use Robots when the underlying service only support a UI-interface. You create an integration that calls the robot and then move on to your next automation work. If you need the replace the UI-based implementation with an API-based interface, then you make an update without impacting the larger business process. 
+Businesses can build flexible and future-proof solutions using Oracle Integration. Use Robots when the underlying service only support a UI-interface. You create an integration that calls a robot and then moves on to the next automation work. When the time comes to replace the UI-based implementation with an API-based interface, you can make an update without impacting the larger business process.
 
 ### Objectives
 
-In this workshop, you will learn how to:
+In this workshop, you will:
 
 * Learn about the benefits of using Robots in Oracle Integration 3
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure
