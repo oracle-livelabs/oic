@@ -52,5 +52,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
-* **Contributors** - Harris Quereshi (App Integration Specialist), Stanislav Tanev (OPA Product Management)
+* **Contributors** - Harris Qureshi (App Integration Specialist), Stanislav Tanev (OPA Product Management)
 * **Last Updated By/Date** - Kishore Katta, July 2023
