@@ -285,7 +285,7 @@ Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From
 - In the **Basic Info** page, configure the operation per below and click *Continue*
 | **Field Name** | **Value** |
 |----------------|-----------|
-| What do you want to call your endpoint? | CreateInvoice |
+| What do you want to call your endpoint? | CreateInvoiceAndLines |
 | What operation do you want to perform | Select **Perform an Operation on a Table** |
 | What operation do you want to perform on Table? | Insert |
 {: title="ATP Adapter Wizard Basic Info Properties"}
@@ -296,66 +296,36 @@ Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From
 |----------------|-----------|
 | Schema | ADMIN |
 | Table Type | Select **TABLE** and click on *Search* |
-| Selected Pane | From the Available Pane Select **INVOICE** TABLE and shuttle to the **Selected** pane |
-{: title="Configure Opertaion on Table Page Properties"}
+| Selected Pane | From the Available Pane Select **INVOICE** and **INVOICE_LINES** TABLE and shuttle to the **Selected** pane |
+{: title="Configure Operation on Table Page Properties"}
 
 ![Select DB Table](images/select-db-table.png)
 
 Click on *Continue*. Finally, *Finish* the wizard. An Invoke action and Map activity is added in the Integration flow.
 
-***Edit Map Activity - CreateInvoice***
+***Edit Map Activity - CreateInvoiceAndLines***
 
-1.  Edit the Map Activity **CreateInvoice**
+1.  Edit the Map Activity **CreateInvoiceAndLines**
 
-2.  Perform the mapping as per below. On the Source side Expand **InvoiceEvent Request &gt; Request Wrapper &gt; Invoice &gt; Fields**. On the Target side Expand **Create Invoice Request &gt; Invoice**.
+2.  Perform the mapping as per below. On the Source side Expand **InvoiceEvent Request &gt; Request Wrapper &gt; Invoice &gt; Fields**. On the Target side Expand **CreateInvoiceAndLinea Request &gt; Invoice**.
 
-Perform one to one Map of the following fields: Billing Address, Billing Address Recipient, Invoice Date, Invoice Id, Invoice Total, Payment Term, Shipping Cost,Sub Total, Total Tax, Vendor Name. Use the screenshot for reference.
+Perform one to one Map of the following fields per the table below
+| **Source** | **Target** |
+|----------------|-----------|
+| Billing Address | billingaddress |
+| Billing Address Recipient | billingaddressrecipient |
+| Invoice Date | invoicedate |
+| Invoice Id | invoiceid |
+| Invoice Total | invoicetotal |
+| Vendor Name | vendorname |
+| Items | InvoiceLinesCollection > InvoiceLines |
+| Items > Quantity | InvoiceLinesCollection > InvoiceLines > quantity |
+| Items > Unit Price | InvoiceLinesCollection > InvoiceLines > unitprice |
+| Items > Amount | InvoiceLinesCollection > InvoiceLines > amount |
+| Items > Description | InvoiceLinesCollection > InvoiceLines > name |
+{: title="Configure Invoice and Lines Mapping"}
 
 ![Map Save Invoice Details](images/map-save-invoice-details.png)
-
-Click on *Validate* and Navigate back to the Integration Flow canvas
-
-***Add DB Action to Save Invoice Lines***
-
-Invoke Insert operation to Save Invoice Lines
-
-Hover cursor next to **CreateInvoice** DB Invoke activity and Click on *+* sign. From the list of **Invoke** connections choose *AI Demo ATP DB Connection*
-- In the **Basic Info** page, configure the operation per below and click *Continue*
-| **Field Name** | **Value** |
-|----------------|-----------|
-| What do you want to call your endpoint? | CreateInvoiceLines |
-| What operation do you want to perform | Select **Perform an Operation on a Table** |
-| What operation do you want to perform on Table? | Insert |
-{: title="ATP Adapter Wizard Basic Info Properties"}
-
-- In the **Configure Operation On Table** page, select the database tables as per below
-
-| **Field Name** | **Value** |
-|----------------|-----------|
-| Schema | ADMIN |
-| Table Type | Select **TABLE** and click on *Search* |
-| Selected Pane | From the Available Pane Select **INVOICE\_LINES** TABLE and shuttle to the **Selected** pane |
-{: title="Configure Operation on Table Page Properties"}
-
-![Select DB Table](images/select-invoice-products-db-table.png)
-
-Scroll down to **Advanced Options** and Select *Edit*. In the **Advanced Options** dialog select sequence *INVOICE_LINES_SEQ*
-
-![Select DB Table](images/select-invoice-products-db-table-seq.png)
-
-Click on *Continue* and finally, *Finish* the wizard.
-
-***Edit Map Activity - CreateInvoiceLines***
-
-1.  Edit the Map Activity **CreateInvoiceLines**
-
-2.  Perform the mapping as per below. On the Source side Expand **INVOICEEVENT Request &gt; Request Wrapper &gt; Invoice &gt; Fields**. On the Target side Expand **CreateInvoiceLines Request &gt; Invoice Lines**.
-
-3.  Map the **Items** array element on the source side to the **InvoiceLines** array on the target side. This will create a for-each automatically. Since we will have multiple invoice lines to be inserted.
-
-4.  Perform one to one Map of the following fields: Invoice Id, Amount, Name, Quantity, Unit Price. Use the screenshot for reference.
-
-![Map Save Invoice Details](images/map-save-invoice-products.png)
 
 Click on *Validate* and Navigate back to the Integration Flow canvas. Save the Integration Flow.
 
