@@ -148,7 +148,7 @@ Start the robot by adding the Login action.
     ![Robot design Targeting](images/robot-designer_targeting-on.png "")
 
 9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name.
-    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element.
+    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
 
@@ -195,11 +195,11 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     We will now select field elements to generate associated Actions in the robot.
 
+    > **Note**: When recording actions, the recorder can start from any point in time. However, for this task we will record following the Login step.
+
 7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab.
 
-    > **Note:** When clicking a UI button or link in recorder mode, the following events occur:
-        > 1. The operation is added as action to the robot.
-        > 2. The browser performs the actual UI operation.
+    > **Note:** When recording or when targeting a field, hover your cursor over a UI element and note the shading that appears. While the the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Click the element before it turns green will result in a regular UI interaction.
 
 8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen.
     ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png "=50%x*")
@@ -208,6 +208,8 @@ While building the rest of the robot, you'll record the actions that the robot c
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
+
+   > **Note:** While adding the Task action, the field in the UI will close. Click on **Tasks** again before the field turns green, as this will result in a regular interaction and move to the next screen.
 
 10. On the side panel, go to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action and move to the Manage Orders page.
 
