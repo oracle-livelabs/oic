@@ -201,17 +201,21 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![Click Procurement target elements](images/robot-designer_smart-record_click-procurement.png " ")
 
-8. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab. If your element value is not `A`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Procurement** target element again.
+8. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab. If your element value is not `A`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Procurement** target element again while using the recorder.
 
     ![Procurement action details](images/robot-designer_smart-record_procurement-action-details.png " ")
 
     > **Note:** When recording or targeting a field, hover your cursor over a UI element and note the shading that appears. While the the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Clicking the element before it turns green will result in a regular UI interaction.
 
-9. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen.
+9. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. 
 
-    ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png "=50%x*")
+    ![Select Purchase Orders tile](images/robot-designer_smart-record_click-purchase-orders.png "=50%x*")
 
-9. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
+10. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen. If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Purchase Orders** target element again while using the recorder.
+
+    ![Purchase Orders action details](images/robot-designer_smart-record_purchase-orders-action-details.png " ")
+
+11. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
