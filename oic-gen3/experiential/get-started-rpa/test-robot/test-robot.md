@@ -2,22 +2,85 @@
 
 ## Introduction
 
-This demo lab will walk you through the steps to run the Robot which will enter a given Purchase Order in Oracle ERP Cloud and fetch the supplier name from the User Interface, and return that value as response of the flow.
+This demo lab will walk you through the steps to associate the robot with an environment pool, activate the robot, and then test the robot.
 
 Estimated Time: 10 minutes
+
+### Robot Environments
+
+To test a robot on its environment, you must create an environment pool, add computers to the environment pool, and associate the robot with the environment pool.
+
+* An Environment is a computer, machine or VM where a robot runs.
+* An environment pool is a computer or set of computers that specific robots can run on.
 
 ### Objectives
 
 In this lab, you will:
 
-* Provide a valid request payload to start the robot flow
-* Observe the completion of instructions by the robot
+* Prepare the Robot Environment
+* Activate the Robot
+* Test the Robot in its Environment
 
 This lab assumes you have:
 
 * All previous labs successfully completed
 
-## Task 1: Run Flow
+## Task 1: Create Environment Pool
+
+Create an Environment Pool and assign you local computer to it.
+
+1. In the navigation pane, select **Projects**.
+
+2. Open the LiveLabs project.
+
+3. In the **Environment Pools** box, select **Add** or **+**.
+
+    > **Note**: **Add** button appears if you have no environment pools. The **+** button appears if you have at least one environment pool.
+
+    The **Create environment pool** panel appears.
+
+4. Fill in the **Name** field, such as `LiveLabs-EnvPool`.
+
+5. Select **Create**.
+
+6. In the **Environment Pools** box, point to the environment pool you just created, click **... (Action)** icon, and select **Add environment**.
+
+    The Add environment panel appears.
+
+7. From the list of options, select the environment matching your machine to add to the environment pool.
+
+    > **Note**: An environment appears in the list only if you've installed the robot agent on it and the robot agent is currently running.
+
+8. Select **Add**.
+
+    The Environment pools' box lists the number of environments that are associated with the pool in the **environments** button. To view the associated environments, click the button.
+
+## Task 2: Associate Robot with Environment Pool
+
+To run a robot on a real-world environment, you must first associate the robot with an environment pool.
+
+1. For the LiveLabs robot, click on **... (Action)** icon and select **Add environment pool**.
+![Add Environment Pool](images/robot_assign-environment-pool.png "")
+
+2. On the **Add Environment pool**, select the designated environment pool and click **Add**.
+
+    ![Add Environment Pool to Robot](images/environment-pool_add.png " ")
+
+## Task 3: Activate the Robot
+
+Activate a robot to be able to test and run it.
+
+1. In the **Robots** box, ensure that the robot's state is **Configured**.
+
+2. In the **Robots** box, point to the Configured robot, select **... (Actions)**, and select **Activate**.
+
+    A Confirmation pop-up appears, and the state changes to `Activation in progress`.
+
+3. Within a minute or two, the robot's state should change to **Active**. Keep hitting the Refresh button until the state changes to the desired value.
+
+## Task 3: Test the Robot in its Environment
+
+Provide a valid request payload to start the robot. The robot will then enter the specified Purchase Order in Oracle ERP Cloud and fetch the supplier name from the User Interface, and return that value as response in the flow.
 
 1. On the Project overview, navigate to the robot flow and click on **...**, then select **Run**.
 
@@ -36,7 +99,7 @@ You should start seeing the following activities in the terminal:
     ```
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
-## Task 2: Validate Robot Flow Status
+## Task 4: Validate Robot Flow Status
 
 Let's monitor the robot flow.
 
@@ -48,7 +111,7 @@ Let's monitor the robot flow.
 
 3. Hover over the completed instance and move the mouse to the right of the screen. Click on the (**View details) button.
 
-    This opens the **Activity Stream** for the selected instance. 
+    This opens the **Activity Stream** for the selected instance.
 
 
 

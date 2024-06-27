@@ -17,9 +17,8 @@ Estimated Lab Time: 15 minutes
 In this lab, you will:
 
 * Install JAVA Runtime (optional)
-* Obtain Robot Connectivity details
-* Download and Install the Robot Agent
-* Run the Robot Agent
+* Install and configure the Robot Agent
+* Start the Robot Agent
 
 ### Prerequisites
 
@@ -52,9 +51,9 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 3. Follow the **Installation Instructions** on the Java Downloads page.
 
-## Task 2: Download and Configure the Robot Agent
+## Task 2: Install and configure the Robot Agent
 
-The Robot Agent must be downloaded and installed on your local host. The agent is downloaded from the Oracle Integration 3 console. During installation, you associate the agent with the OIC 3 instance where the robot flow will be built and run.
+The Robot Agent must be downloaded and installed on your local host. The agent is downloaded from the Oracle Integration 3 console. During installation, you associate the agent with the OIC 3 instance where the robot will be built and run.
 
 1. In the left Navigation pane, click **Design**, followed by **Agents**.
 
@@ -74,7 +73,7 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 
 6. **Save** and **Close** the configuration file.
 
-## Task 3: Start Robot Agent
+## Task 3: Start the Robot Agent
 
 You must start the robot agent from the computer on which it is installed. If a robot agent isn't running, the agent can't run any robots.
 
@@ -102,4 +101,4 @@ You must start the robot agent from the computer on which it is installed. If a 
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, April 2024
+* **Last Updated By/Date** - Ravi Chablani, June 2024

@@ -114,30 +114,30 @@ Start the robot by adding the Login action.
 
 6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
 
-    > The rest of the workshop requires the Robot Designer Extension. This extension is used for Targeting and Recording, which allow you to harness the power of control and power of the low-code capabilities.
+    > **Note**: The rest of the workshop requires the **Robot Designer Extension** on your Chrome browser. This extension is used for Targeting and Recording, which allows you to harness the power of control and power of the low-code capabilities. This extension must be installed in order to build robots.
 
-    The extension allows you to create targets, which identify the HTML elements that a robot interacts with. If you see below message, then complete the extension installation before proceeding to the next step. After installing the browser extension, we can start creating targets when adding actions to a robot.
+7. If you see below message while following the previous step, then complete the extension installation. After installing the browser extension, we can start creating targets when adding actions to a robot.
 
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
-7. Follow these steps to install the Browser Extension:
+    Follow these steps to install the Browser Extension:
 
     * Click on the **Download browser extension** button and wait for the download to complete.
     * Navigate to the location of the downloaded ZIP file, such as your **Downloads** folder.
-    * Move the ZIP file to a dedicated local folder such as ```Users\<user>\RPA\plugin```
-    * Extract the ZIP file in the RPA-plugin folder.
+    * Move the ZIP file to a local folder of your choice, such as ```Users\<user>\RPA\plugin```
+    * Extract the ZIP file to the designated plugin folder.
     * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
     * Make sure you are in **Developer mode** using the slider on the top right corner.
     * On the **Extensions** page, select **Load unpacked**.
     * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
 
-    This loads the Robot Extension in your Chrome browser.
+    This installs the Robot Extension in your Chrome browser.
 
     ![Loaded Robot extension](images/robot-extension_loaded.png " ")
 
-    Close this tab and return to the Robot. Click **Save**, reopen the project and return to the previous step.
+    Close the **Extensions** tab and return to the Robot. Click **Save**, reopen the project and return to the previous step.
 
-    > **Note**: If the browser does not load the extension, then save all your work and restart the browser window. Next, navigate to the Robot and reopen the Login action.
+    > **Note**: If the extension fails to load, then save all your work and restart the browser window. Next, navigate to the Robot and reopen the **Login** action.
 
 8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
 
@@ -173,7 +173,7 @@ Start the robot by adding the Login action.
 
 While building the rest of the robot, you'll record the actions that the robot completes using the recorder, all while harnessing the power of control and power of the low-code capabilities. We will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open the other browser window where the credentials were entered in the previous task. Click **Sign In** to proceed to the next screen in ERP Cloud.
+1. Open the browser window where the credentials were entered in the previous task. Click **Sign In** to proceed to the next screen in ERP Cloud.
 
     ![ERP Cloud login](images/erp-cloud_login.png " ")
 
@@ -195,11 +195,11 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     We will now select field elements to generate associated Actions in the robot.
 
-    > **Note**: When recording actions, the recorder can start from any point in time. However, for this task we will record following the Login step.
+    > **Note**: When recording actions, the recorder can start from any point in time. However, for this task we will record after the Login operation.
 
 7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab.
 
-    > **Note:** When recording or when targeting a field, hover your cursor over a UI element and note the shading that appears. While the the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Click the element before it turns green will result in a regular UI interaction.
+    > **Note:** When recording or targeting a field, hover your cursor over a UI element and note the shading that appears. While the the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Clicking the element before it turns green will result in a regular UI interaction.
 
 8. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen.
     ![Select Purchase Orders tile](images/robot-designer_smart-record_select-purchase-orders-tile.png "=50%x*")
@@ -209,15 +209,16 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
 
-   > **Note:** While adding the Task action, the field in the UI will close. Click on **Tasks** again before the field turns green, as this will result in a regular interaction and move to the next screen.
+   > **Note:** While adding the **Task** action, the side panel will typically close. Click on **Tasks** again before the field turns green, as this will result in a regular interaction and move to the next screen.
 
 10. On the side panel, go to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action and move to the Manage Orders page.
 
-    Next, we will search for a specific Purchase Order by providing an order number.
+    Next, we will search for a specific Purchase Order by providing an order number. Make sure to obtain a valid Purchase Order number before proceeding to the next step.
 
 11. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
     * Name: `Enter "PO number" Text`
+    * Target name: Add something descriptive without spaces (such as `"Enter_po_number"`)
     * Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png " ") **(Flow Input/Output)** and select the **Input** property **PONumber**. Double-click the property to have it mapped to the **Value** field.
     * Test value: Enter a valid `PO Number` which will be used in the search query to pull an actual purchase order. Example: `US164712`
 
@@ -254,12 +255,9 @@ While building the rest of the robot, you'll record the actions that the robot c
 
 22. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
 
-23. For the selected robot, click on **...** and select **Add Environment Pool**.
-![Add Environment Pool](images/robot-designer_add-environment-pool-reference.png "")
 
-24. On the **Add Environment pool**, select the designated environment pool and click **Add**.
 
-    ![Add Environment Pool to Robot](images/environment-pool_add.png " ")
+
 
     The status of your robot should change to **Configured**.
 
