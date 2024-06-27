@@ -163,7 +163,7 @@ Start the robot by adding the Login action.
 
     Your intermediate Login action panel should look as follows:
 
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png "=40%x")
+    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
 
 11. Click **OK**.
 
