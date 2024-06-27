@@ -1,8 +1,8 @@
-# Run end-to-end demo
+# Test Robot
 
 ## Introduction
 
-This demo lab will walk you through the steps to associate the robot with an environment pool, activate the robot, and then test the robot.
+This demo lab will walk you through the steps to associate the robot with an environment pool, activate the robot, and then run the robot.
 
 Estimated Time: 10 minutes
 
@@ -19,7 +19,7 @@ In this lab, you will:
 
 * Prepare the Robot Environment
 * Activate the Robot
-* Test the Robot in its Environment
+* Run the Robot in its Environment
 
 This lab assumes you have:
 
@@ -78,7 +78,7 @@ Activate a robot to be able to test and run it.
 
 3. Within a minute or two, the robot's state should change to **Active**. Keep hitting the Refresh button until the state changes to the desired value.
 
-## Task 3: Test the Robot in its Environment
+## Task 3: Run the Robot in its Environment
 
 Provide a valid request payload to start the robot. The robot will then enter the specified Purchase Order in Oracle ERP Cloud and fetch the supplier name from the User Interface, and return that value as response in the flow.
 
