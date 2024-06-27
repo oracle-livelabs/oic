@@ -139,7 +139,7 @@ Start the robot by adding the Login action.
 
     > **Note**: If the extension fails to load, then save all your work and restart the browser window. Next, navigate to the Robot and reopen the **Login** action.
 
-8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page. The title will be `Sign In`.
+8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page with title `Sign In`, and click **Go**.
 
     ![Robot input username locator select](images/robot-input_username-locator_select.png)
 
