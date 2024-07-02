@@ -220,13 +220,19 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
 
-   > **Note:** While adding the **Task** action, the side panel will typically close. Click on **Tasks** again before the field turns green, as this will result in a regular interaction and move to the next screen.
+    If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
 
-10. On the side panel, go to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action and move to the Manage Orders page.
+12. On the side panel, navigate to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
+
+    While adding the **Manage Orders** action, the side panel will typically close. This prevents the page from moving to the next screen. We will momentarily pause the recording.
+
+13. Select **Pause** one the Smart Recording panel, click on **Tasks** icon, then select **Manage Orders** again. The screen will move to the **Manage Orders** overview screen.
+
+    ![Pause Smart Recording](images/robot-designer_smart-record_pause.png "" )
 
     Next, we will search for a specific Purchase Order by providing an order number. Make sure to obtain a valid Purchase Order number before proceeding to the next step.
 
-11. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
+13. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
     * Name: `Enter "PO number" Text`
     * Target name: Add something descriptive without spaces (such as `"Enter_po_number"`)
