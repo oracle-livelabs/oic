@@ -102,8 +102,8 @@ Start the robot by adding the Login action.
 
     The **Login** action appears on the canvas.
 
-3. On the **Login** panel, within the **Username** field, select **Robot connections** ![Select robot connections](images/robot-connections-button.png " "). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
-![Assign username](images/robot-designer_login_assign-username.png "")
+3. On the **Login** panel, within the **Username** field, select **Robot connections** ![Select robot connections](images/robot-connections-button.png). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
+![Assign username](images/robot-designer_login_assign-username.png " ")
 
 4. Repeat these steps by dragging the `password` parameter to the **Password** field.
 
@@ -232,11 +232,13 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     Next, we will search for a specific Purchase Order by providing an order number. Make sure to obtain a valid Purchase Order number before proceeding to the next step.
 
+    > **Note**: This PO number will also be used when testing the robot.
+
 14. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
     * Name: `Enter "PO number" Text`
     * Target name: Add something descriptive without spaces (such as `"Enter_po_number"`)
-    * Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png " ") **(Flow Input/Output)** and select the **Input** property **PONumber**. Double-click the property to have it mapped to the **Value** field.
+    * Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png) **(Flow Input/Output)** and select the **Input** property **PONumber**. Double-click the property to have it mapped to the **Value** field.
     * Test value: Enter a valid `PO Number` which will be used in the search query to pull an actual purchase order. Example: `US164712`
 
     ![PO Number action details](images/action-details_po-number.png " ")
@@ -274,7 +276,7 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     The status of your robot should be **Draft**.
 
-    ![List Draft Robot](images/projects_list-draft-robot.png)
+    ![List Draft Robot](images/projects_robot-draft.png)
 
 ## Acknowledgements
 

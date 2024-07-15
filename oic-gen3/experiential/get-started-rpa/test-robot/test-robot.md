@@ -74,15 +74,15 @@ To run a robot on a real-world environment, you must first associate the robot w
 
 Activate a robot to be able to test and run it.
 
-1. In the **Robots** box, ensure that the robot's state is **Configured**.
+1. In the **Robots** box, point to the Configured robot, select **...** (**Actions**), and click **Activate**.
 
-2. In the **Robots** box, point to the Configured robot, select **... (Actions)**, and select **Activate**.
+    ![Activate Robot](images/projects_robot-activate.png)
 
     A Confirmation pop-up appears, and the state changes to `Activation in progress`.
 
-3. Within a minute or two, the robot's state should change to **Active**. Keep hitting the Refresh button until the state changes to the desired value.
+2. Within a minute or two, the robot's state should change to **Active**. Keep hitting the ![Refresh Button](images/projects_refresh-button.png) (**Refresh**) button until the state changes.
 
-## Task 3: Run the Robot in its Environment
+## Task 4: Run the Robot in its Environment
 
 Provide a valid request payload to start the robot. The robot will then enter the specified Purchase Order in Oracle ERP Cloud and fetch the supplier name from the User Interface, and return that value as response in the flow.
 
@@ -103,7 +103,7 @@ You should start seeing the following activities in the terminal:
     ```
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
-## Task 4: Validate Robot Flow Status
+## Task 5: Validate Robot Flow Status
 
 Let's monitor the robot flow.
 
@@ -116,11 +116,6 @@ Let's monitor the robot flow.
 3. Hover over the completed instance and move the mouse to the right of the screen. Click on the (**View details) button.
 
     This opens the **Activity Stream** for the selected instance.
-
-
-
-
-
 
 ## Acknowledgements
 
