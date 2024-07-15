@@ -76,7 +76,7 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 2. In the **Open Browser** panel, keep the default values for **Name** and **Description**.
 
-3. We will assign the target URL dynamically using a Robot Connection. On the **Input** tab, select within the **URL** field and click on the **Robot connections** icon ![Select robot connections button](images/robot-connections-button.png " ").
+3. We will assign the target URL dynamically using a Robot Connection. On the **Input** tab, select within the **URL** field and click on the **Robot connections** icon ![Select robot connections button](images/robot-connections-button.png).
 
     The **Robot connections** side panel will appear, with the previously created robot connection.
 
