@@ -232,7 +232,7 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     Next, we will search for a specific Purchase Order by providing an order number. Make sure to obtain a valid Purchase Order number before proceeding to the next step.
 
-13. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
+14. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
     * Name: `Enter "PO number" Text`
     * Target name: Add something descriptive without spaces (such as `"Enter_po_number"`)
@@ -241,44 +241,42 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![PO Number action details](images/action-details_po-number.png " ")
 
-12. Click **Save**.
-
-13. Click on **Search** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
-
-14. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
-    * Name: `Click "Get supplier name"`
-    * Action: Get Text
-    * Save To: ![Select Flow button](images/action-details_output_flow-button.png " ") (**Output**) and double-click on **SupplierName**.
-    ![Select Flow button](images/action-details_output_assign-supplier.png " ")
-
 15. Click **Save**.
 
-16. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png " ") **(Stop recording)** to end the recording.
+16. Click on **Search** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
 
-17. In the **Robot Designer**, click on **Save**.
+17. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
+    * Name: `Click "Get supplier name"`
+    * Action: Get Text
+    * Save To: ![Select Flow button](images/action-details_output_flow-button.png) (**Output**) and double-click on **SupplierName**.
+    ![Select Flow button](images/action-details_output_assign-supplier.png " ")
+
+18. Click **Save**.
+
+19. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png " ") **(Stop recording)** to end the recording.
+
+20. In the **Robot Designer**, click on **Save**.
 
     We will add a Log action to capture the output value of the robot.
 
-18. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
+21. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
 ![Add Log action](images/robot-designer_add-log-action.png "")
 
-19. On the **Log** panel, hover over the **Message** field, click **...** (More options), and select **Output**. This assigns the output value to the log message.
+22. On the **Log** panel, hover over the **Message** field, click **...** (More options), and select **Output**. This assigns the output value to the log message.
 ![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
 
-20. Drag the ```SupplierName``` property to **Message** field.
+23. Drag the ```SupplierName``` property to **Message** field.
 ![Drag Supplier property](images/robot-designer_log-action_assign-supplier.png "")
 
-21. Click **OK**, then **Save**.
+24. Click **OK**, then **Save**.
 
 22. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
 
-
-
-
-
     The status of your robot should change to **Configured**.
 
-25. For the selected robot, click on **...** and select **Activate**.
+    ![List Draft Robot](images/projects_list-draft-robot.png)
+
+23. For the selected robot, click on **...** and select **Activate**.
 
 ## Acknowledgements
 
