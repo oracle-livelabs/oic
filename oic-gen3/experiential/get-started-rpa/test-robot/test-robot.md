@@ -60,11 +60,15 @@ Create an Environment Pool and assign you local computer to it.
 To run a robot on a real-world environment, you must first associate the robot with an environment pool.
 
 1. For the LiveLabs robot, click on **... (Action)** icon and select **Add environment pool**.
-![Add Environment Pool](images/robot_assign-environment-pool.png "")
+![Add Environment Pool](images/robot_add-environment-pool.png "")
 
 2. On the **Add Environment pool**, select the designated environment pool and click **Add**.
 
     ![Add Environment Pool to Robot](images/environment-pool_add.png " ")
+
+   The status of your robot should change to **Configured**.
+
+    ![Configured Robot](images/projects_robot-configured.png)
 
 ## Task 3: Activate the Robot
 
