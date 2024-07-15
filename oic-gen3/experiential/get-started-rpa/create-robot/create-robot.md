@@ -76,7 +76,7 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 2. In the **Open Browser** panel, keep the default values for **Name** and **Description**.
 
-3. We will assign the target URL dynamically using a Robot Connection. On the **Input** tab, select within the **URL** field and click on the **Robot connections** icon ![Select robot connections button](images/robot-connections-button.png).
+3. We will assign the target URL dynamically using a Robot Connection. On the **Input** tab, select within the **URL** field and click on the ![Select robot connections button](images/robot-connections-button.png) (**Robot connections**) icon.
 
     The **Robot connections** side panel will appear, with the previously created robot connection.
 
@@ -270,13 +270,11 @@ While building the rest of the robot, you'll record the actions that the robot c
 
 24. Click **OK**, then **Save**.
 
-22. Close the robot designer by clicking on the **< (Go back)** button on the top left of the screen.
+25. Close the robot designer by clicking on the **<** (**Go back**) button on the top left of the screen.
 
-    The status of your robot should change to **Configured**.
+    The status of your robot should be **Draft**.
 
     ![List Draft Robot](images/projects_list-draft-robot.png)
-
-23. For the selected robot, click on **...** and select **Activate**.
 
 ## Acknowledgements
 
