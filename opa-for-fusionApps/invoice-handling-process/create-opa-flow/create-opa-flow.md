@@ -176,9 +176,9 @@ Now that we have created a role which does both - Initiator and Approver, let’
 
 This control exposes pre-trained Key-Value extraction models provided by the OCI Document Understanding (ODU) service to perform text extraction on documents such as passports, driver's licenses, receipts, and invoices. By leveraging these pre-trained models, OPA customers can instantly use document extraction capabilities without needing prior knowledge of the ODU service or training their own custom models. This capability is native to our service, so process designers can use it without acquiring new SKUs or setting up service-level connections!
 
-	1.	An area where users can upload their document.
-	2.	An optional section which will show an image preview of the uploaded document.
-	3.	An optional section which will hold the extracted data from the uploaded document.
+-	An area where users can upload their document.
+-	An optional section which will show an image preview of the uploaded document.
+-	An optional section which will hold the extracted data from the uploaded document.
 
 3.	Click on Toggle Properties if you don't find the Properties Pane on the left side.
 
