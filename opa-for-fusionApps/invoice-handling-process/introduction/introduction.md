@@ -19,7 +19,6 @@ Here is the high level architecture reference of the tutorial
 
 Estimated Time: 2 hours 45 minutes
 
-[Introduction to Live Lab Usecase](TBD)
 
 ### Objectives
 
