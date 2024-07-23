@@ -102,7 +102,7 @@ Start the robot by adding the Login action.
 
     The **Login** action appears on the canvas.
 
-3. On the **Login** panel, within the **Username** field, select **Robot connections** ![Select robot connections](images/robot-connections-button.png). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
+3. On the **Login** panel, within the **Username** field, select ![Select robot connections](images/robot-connections-button.png) (**Robot connections**). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
 ![Assign username](images/robot-designer_login_assign-username.png " ")
 
 4. Repeat these steps by dragging the `password` parameter to the **Password** field.
@@ -185,7 +185,7 @@ While building the rest of the robot, you'll record the actions that the robot c
 
 4. On the **Smart Record** panel, click **Select browser tab to target** drop-down.
 
-5. Select the window title which coincides with the ERP Cloud tab.
+5. Select the window title which coincides with the Oracle ERP Cloud tab.
 
     ![Select browser tab](images/robot-designer_smart-record_select-browser.png " ")
 
@@ -205,9 +205,9 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![Procurement action details](images/robot-designer_smart-record_procurement-action-details.png " ")
 
-    > **Note:** When recording or targeting a field, hover your cursor over a UI element and note the shading that appears. While the the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Clicking the element before it turns green will result in a regular UI interaction.
+    > **Note:** When recording or targeting a field, hover your cursor over a UI element and note the shading that appears. While the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Clicking the element before it turns green will result in a regular UI interaction.
 
-9. Click on **Purchase Orders** when the complete tile is shaded and changed to a target. 
+9. Click on **Purchase Orders** when the complete tile is shaded and changed to a target.
 
     ![Select Purchase Orders tile](images/robot-designer_smart-record_click-purchase-orders.png "=50%x*")
 
@@ -216,23 +216,28 @@ While building the rest of the robot, you'll record the actions that the robot c
     ![Purchase Orders action details](images/robot-designer_smart-record_purchase-orders-action-details.png " ")
 
 11. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
+
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
     In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
 
+    ![Tasks action details](images/robot-designer_smart-record_tasks-action-details.png " ")
+
     If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
 
-12. On the side panel, navigate to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
+12. On the side panel, hover to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
 
-    While adding the **Manage Orders** action, the side panel will typically close. This prevents the page from moving to the next screen. We will momentarily pause the recording.
+     > **Note**: When we are ready to test the robot, a valid Purchase Order number will be required as input. In the next steps, we will momentarily pause the recording and search for a valid Purchase Order before continuing with recording consequent actions.
 
-13. Select **Pause** one the Smart Recording panel, click on **Tasks** icon, then select **Manage Orders** again. The screen will move to the **Manage Orders** overview screen.
+13. Click the **Pause** button on the Smart Recording panel.
 
     ![Pause Smart Recording](images/robot-designer_smart-record_pause.png "" )
 
-    Next, we will search for a specific Purchase Order by providing an order number. Make sure to obtain a valid Purchase Order number before proceeding to the next step.
+14. Click the **Tasks** icon again, then select **Manage Orders**. This will display the Manage Orders overview screen.
 
-    > **Note**: This PO number will also be used when testing the robot.
+15. Click **Search** and wait until you see a list of existing purchase orders.
+
+16. Note down any of the purchase order numbers
 
 14. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
 
