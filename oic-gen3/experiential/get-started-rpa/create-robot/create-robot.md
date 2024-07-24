@@ -294,7 +294,7 @@ While building the rest of the robot, you'll record the actions that the robot c
     We will add a Log action to capture the output value of the robot.
 
 32. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
-![Add Log action](images/robot-designer_add-log-action.png "")
+![Add Log action](images/robot-designer_add-log-action.png " ")
 
 33. On the **Log** panel, hover over the **Message** field, click **...** (**More options**), and select **Output**. This assigns the output value to the log message.
 ![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
