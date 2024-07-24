@@ -50,18 +50,18 @@
             "type": "livelabs",
             "filename": "../../test-robot/test-robot.md"
         },
-#        {
-#            "title": "Lab 7: Add an Integration",
-#            "description": "Add an integration that calls a robot",
-#            "type": "livelabs",
-#            "filename": "../../add-integration/add-integration.md"
-#        },
-#        {
-#            "title": "Lab 8: Run an Integration",
-#            "description": "Run an integration that calls a robot",
-#            "type": "livelabs",
-#            "filename": "../../run-integration/run-integration.md"
-#        },
+        {
+            "title": "Lab 7: Add an Integration",
+            "description": "Add an integration that calls a robot",
+            "type": "livelabs",
+            "filename": "../../add-integration/add-integration.md"
+        },
+        {
+            "title": "Lab 8: Run an Integration",
+            "description": "Run an integration that calls a robot",
+            "type": "livelabs",
+            "filename": "../../run-integration/run-integration.md"
+        },
         {
           "title": "Need Help?",
           "description": "Need Help lab at the end of workshop.",
