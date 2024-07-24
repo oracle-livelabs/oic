@@ -23,7 +23,7 @@ This lab assumes you have:
 ## Task 1: Create Integration
 
 
-## Task 2: Run Integration to Call Robot
+## Task 2: Run Integration to Call the Robot
 
 
 ## Acknowledgements
