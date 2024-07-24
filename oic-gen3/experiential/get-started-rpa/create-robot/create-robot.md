@@ -219,65 +219,92 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
-    In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Tasks"` action and display a side panel.
+12. In the **Action Details**, if your Element value is `IMG`, then click **Save** to add the `Click "Tasks"` action. If you see a different element value, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
 
     ![Tasks action details](images/robot-designer_smart-record_tasks-action-details.png " ")
 
-    If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
+13. On the Tasks side panel, hover to the **Orders** section and click on **Manage Orders** when the icon changes to a target.
 
-12. On the side panel, hover to the **Orders** section and click on **Manage Orders** when the icon changes to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
+    ![Manage Orders action details](images/robot-designer_smart-record_click-manage-orders.png " ")
+
+14. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
 
      > **Note**: When we are ready to test the robot, a valid Purchase Order number will be required as input. In the next steps, we will momentarily pause the recording and search for a valid Purchase Order before continuing with recording consequent actions.
 
-13. Click the **Pause** button on the Smart Recording panel.
+15. Click the **Pause** button on the Smart Recording panel.
 
     ![Pause Smart Recording](images/robot-designer_smart-record_pause.png "" )
 
-14. Click the **Tasks** icon again, then select **Manage Orders**. This will display the Manage Orders overview screen.
+16. Click the **Tasks** icon again, then select **Manage Orders**. This will display the Manage Orders overview screen.
 
-15. Click **Search** and wait until you see a list of existing purchase orders.
+17. Click **Search** and wait until you see a list of existing purchase orders.
 
-16. Note down any of the purchase order numbers
+18. Choose one of the purchase orders with a listed `Supplier Name`, and make a note of the order number.
 
-14. Move to the **Order** field and select the UI element when the icon changes to a target. Enter the following values in the **Action Details**.
+19. Click **Done** on the top right corner to close the **Manage Orders** screen.
 
-    * Name: `Enter "PO number" Text`
-    * Target name: Add something descriptive without spaces (such as `"Enter_po_number"`)
-    * Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png) **(Flow Input/Output)** and select the **Input** property **PONumber**. Double-click the property to have it mapped to the **Value** field.
-    * Test value: Enter a valid `PO Number` which will be used in the search query to pull an actual purchase order. Example: `US164712`
+20. Once again click on the **Tasks** icon, and select **Manage Orders** to display the Manage Orders overview screen.
+
+21. Click the **Resume** button on the Smart Recording panel to commence recording of UI actions.
+
+    ![Resume Smart Recording](images/robot-designer_smart-record_resume.png " " )
+
+22. Move to the **Order** field and click the textbox element when the icon changes to a target.
+
+    ![Click Order textbox](images/robot-designer_smart-record_click-order-field.png " ")
+
+23. Change the following values in the **Action Details**.
+
+    1. Name: `Enter "PO number" Text`
+    2. Target name: Add something descriptive without spaces (such as `Enter_po_number`)
+    3. Value: In the field, click ![Select Flow button](images/action-details_po-number_flow-button.png) (**Flow Input/Output**) and select the **Input** property **PONumber**.
+    4. Double-click the **PONumber** property to have it mapped to the **Value** field.
+    5. Test value: Enter the previously captured `PO Number` in the **Test Value** textbox, which will be used in the search query to pull an actual purchase order. Example: `US164712`
 
     ![PO Number action details](images/action-details_po-number.png " ")
 
-15. Click **Save**.
+24. Click **Save**.
 
-16. Click on **Search** when the complete tile is shaded and changed to a target. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
+25. Click on **Search** when the complete tile is shaded and changed to a target.
 
-17. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target. Enter the following values in the **Action Details**.
-    * Name: `Click "Get supplier name"`
-    * Action: Get Text
-    * Save To: ![Select Flow button](images/action-details_output_flow-button.png) (**Output**) and double-click on **SupplierName**.
+    ![Click Search button](images/robot-designer_smart-record_click-search.png " ")
+
+26. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
+
+27. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target.
+
+    ![Click Supplier cell](images/robot-designer_smart-record_click-supplier.png " ")
+
+28. In the **Action Details**, if your Element value is not `TD`, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click on the **Supplier** value again while using the recorder. When the Element value is `TD`, then proceed with the following changes:
+
+    1. Action: `Get Text`
+    2. Name: `Click "Get supplier name"`
+    3. Target name: Add something descriptive without spaces (such as `Get_supplier_name`)
+    4. Save To: In the field, click ![Select Flow button](images/action-details_output_flow-button.png) (**Output**)
+    5. Double-click the **SupplierName** property to have it mapped to the **Save to** field.
+
     ![Select Flow button](images/action-details_output_assign-supplier.png " ")
 
-18. Click **Save**.
+29. Click **Save**.
 
-19. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png " ") **(Stop recording)** to end the recording.
+30. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png) **(Stop recording)** to end the recording.
 
-20. In the **Robot Designer**, click on **Save**.
+31. In the **Robot Designer**, click on **Save**.
 
     We will add a Log action to capture the output value of the robot.
 
-21. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
+32. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
 ![Add Log action](images/robot-designer_add-log-action.png "")
 
-22. On the **Log** panel, hover over the **Message** field, click **...** (More options), and select **Output**. This assigns the output value to the log message.
+33. On the **Log** panel, hover over the **Message** field, click **...** (**More options**), and select **Output**. This assigns the output value to the log message.
 ![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
 
-23. Drag the ```SupplierName``` property to **Message** field.
+34. Drag the `SupplierName` property to **Message** field.
 ![Drag Supplier property](images/robot-designer_log-action_assign-supplier.png "")
 
-24. Click **OK**, then **Save**.
+35. Click **OK**, then **Save**.
 
-25. Close the robot designer by clicking on the **<** (**Go back**) button on the top left of the screen.
+36. Close the robot designer by clicking on the **<** (**Go back**) button on the top left of the screen.
 
     The status of your robot should be **Draft**.
 
