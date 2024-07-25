@@ -45,7 +45,7 @@ When you create a robot, you define its trigger and the actions that the robot p
 
 4. Click **Create**.
 
-The Robot Designer will appear, with a default robot which includes an Open Application action.
+The Robot Designer will appear, with a default robot which includes an **Open Application** action.
 ![Robot Designer Canvas](images/robot-designer_after-create.png " ")
 
 ## Task 2: Specify Input and Output Triggers
@@ -114,11 +114,11 @@ Start the robot by adding the Login action.
 5. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. For example, to access Oracle Cloud ERP, your login URL pattern will be:
 `https://<Fusion-domain>.fa.<data-center>.oraclecloud.com/fscmUI/faces/FuseWelcome`
 
-6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select **Target a page element** ![Target a page element button](images/robot-taget-page-button.png).
+6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select ![Target a page element button](images/robot-taget-page-button.png) (**Target a page element**).
 
     > **Note**: The rest of the workshop requires the **Robot Designer Extension** on your Chrome browser. This extension is used for Targeting and Recording, which allows you to harness the power of control and power of the low-code capabilities. This extension must be installed in order to build robots.
 
-7. If you see below message while following the previous step, then complete the extension installation. After installing the browser extension, we can start creating targets when adding actions to a robot.
+7. If you see below message while following the previous step, then complete the extension installation. After installing the browser extension, you can start creating targets when adding actions to a robot.
 
     ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
 
@@ -129,7 +129,7 @@ Start the robot by adding the Login action.
     * Move the ZIP file to a local folder of your choice, such as ```Users\<user>\RPA\plugin```
     * Extract the ZIP file to the designated plugin folder.
     * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
-    * Make sure you are in **Developer mode** using the slider on the top right corner.
+    * Make sure you are in **Developer mode** using the slider on the top right corner. ![Chrome Developer Mode](images/chrome_enable-developer-mode.png)
     * On the **Extensions** page, select **Load unpacked**.
     * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
 
