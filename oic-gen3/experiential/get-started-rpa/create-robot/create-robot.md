@@ -129,7 +129,8 @@ Start the robot by adding the Login action.
     * Move the ZIP file to a local folder of your choice, such as ```Users\<user>\RPA\plugin```
     * Extract the ZIP file to the designated plugin folder.
     * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
-    * Make sure you are in **Developer mode** using the slider on the top right corner. ![Chrome Developer Mode](images/chrome_enable-developer-mode.png)
+    * Enable **Developer mode** using the slider on the top right corner. 
+    ![Chrome Developer Mode](images/chrome_enable-developer-mode.png)
     * On the **Extensions** page, select **Load unpacked**.
     * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
 
