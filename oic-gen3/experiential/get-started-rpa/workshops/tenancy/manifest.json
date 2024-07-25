@@ -45,14 +45,14 @@
             "filename": "../../setup-robot-environment/setup-robot-environment.md"
         },
         {
-            "title": "Lab 6: Test a Robot",
-            "description": "Test a robot in its environment",
+            "title": "Lab 6: Test the Robot",
+            "description": "Test the robot in its environment",
             "type": "livelabs",
             "filename": "../../test-robot/test-robot.md"
         },
         {
-            "title": "Lab 7: Create and Test an Integration",
-            "description": "Create and test an integration that calls a robot",
+            "title": "Lab 7: Create and Test the Integration",
+            "description": "Create and test the integration that calls a robot",
             "type": "livelabs",
             "filename": "../../create-test-integration/create-test-integration.md"
         },
