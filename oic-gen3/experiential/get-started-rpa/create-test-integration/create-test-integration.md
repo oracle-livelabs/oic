@@ -66,9 +66,36 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     The designer with Robot action will be displayed.
 
-      ![Show robot action](images/integration_show-robot-action.png " ")
+    ![Show robot action](images/integration_show-robot-action.png " ")
 
-10. Click **Save**.
+10. On the Integration canvas, hover to the right and click on the ![Actions button](images/actions-button.png) (**Actions**) button.
+
+11. Under the **Actions** section, look for **Assign**.
+
+    ![Select Assign action](images/actions-menu_select-assign.png)
+
+12. Drag the **Assign** action over to the integration, and add it below the Robot process.
+
+    ![Add Assign action](images/integration_add-assign-action.png)
+
+13. In the **Configure assign** panel, take the following steps:
+
+    1. Change **Name** to `Response`
+    2. Click **+** to add a variable
+    3. Select Datatype **String**
+
+    ![Configure Assign action](images/assign-action_configure.png " ")
+
+14. With the side panel displayed, take the following steps:
+
+    1. Change **Variable** to <copy>`vSupplierName`<copy>
+    2. On **Input sources** tab, expand **$CallRobot > RPAFlowResponse > ResponseWrapper** and drag `SupplierName` to the **Value** textbox on the right.
+
+    ![Configure Assign variable](images/assign-action_configure-variable.png " ")
+
+15. Click **Save** to close the panel.
+
+16. On the integration canvas, click **Save**.
 
 ## Task 2: Add Scheduled parameters
 
@@ -147,6 +174,16 @@ Once the integration is `Active`, we can run it on-demand.
 3. Click **Run** to initiate the integration run.
 
 ## Task 7: Validate Integration Run Status
+
+After clicking **Run** to start the integration, a side panel of **Activity stream** will appear. Here we will observe the status of the integration run.
+
+1. After the robot run has completed, click the ![Refresh Button](images/refresh-button.png) (**Refresh**) button until you seen the message `Processing completed successfully`
+
+    ![Activity Stream run completed](images/activity-stream_run-completed.png " ")
+
+2. Expand the **Invoke CallRobot** activity to verify the rob run.
+
+3. Expand the 
 
 You have successfully completed this lab.
 
