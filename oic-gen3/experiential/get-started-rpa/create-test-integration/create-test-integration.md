@@ -1,4 +1,4 @@
-# Create and Test an Integration
+# Create and Test the Integration
 
 ## Introduction
 
@@ -16,6 +16,7 @@ In this lab, you will:
 * Configure Business Identifiers
 * Activate the integration
 * Run Integration to call the robot
+* Observe Integration Run
 
 ### Prerequisites
 
@@ -145,7 +146,7 @@ Once the integration is `Active`, we can run it on-demand.
 
 3. Click **Run** to initiate the integration run.
 
-## Observe Integration Run
+## Task 7: Observe Integration Run
 
 ## Acknowledgements
 
