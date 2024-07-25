@@ -88,7 +88,7 @@ Provide a valid request payload to start the robot. The robot will then enter th
 
 1. On the Project overview, navigate to the robot flow and click on **...**, then select **Run**.
 
-2. In the **Input** tab, fill in a valid purchase order number as a value of attribute **PONumber**.
+2. In the **Input** tab, fill in the previously obtained purchase order number as a value of attribute **PONumber**.
 
     Input with sample purchase order number:
     ![Select Purchase Orders tile](images/robot-run_input-payload.png " ")
@@ -97,10 +97,9 @@ Provide a valid request payload to start the robot. The robot will then enter th
 
 You should start seeing the following activities in the terminal:
 
-    ```
-    INFO  - Launching robot instance e0ccb43d-4af4-4aeb-81ec-a5f76d95bc48
-    INFO  - Requesting messages from ControlRoom
-    ```
+    INFO - Launching robot instance e0ccb43d-4af4-4aeb-81ec-a5f76d95bc48
+    INFO - Requesting messages from ControlRoom
+
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
 ## Task 5: Validate Robot Flow Status

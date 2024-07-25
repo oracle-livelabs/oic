@@ -12,9 +12,10 @@ In this lab, you will:
 
 * Create a scheduled integration which invokes the robot and passes input values
 * Add Scheduled parameters which capture the requested PO number
-* Add Mapper activity to call the robot
+* Add Mapper activity
+* Configure Business Identifiers
 * Activate the integration
-* Run an end-to-end test cycle
+* Run Integration to call the robot
 
 ### Prerequisites
 
@@ -24,7 +25,7 @@ This lab assumes you have:
 * Successfully tested the robot in its environment
 * All previous labs successfully completed
 
-## Task 1: Create Integration
+## Task 1: Create Scheduled Integration
 
 Create a scheduled integration that will invoke the robot and pass input parameters.
 
@@ -84,16 +85,67 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
 5. Click **Save**.
 
-## Task 3: Add Mapper activity to call the robot
+## Task 3: Add Mapper activity
 
 1. Double-click the **Map** activity.
 
     ![Double-click map activity](images/integration_click-mapper-activity.png " ")
 
-2. In the Map Editor, move to the **Target** side and click on the ![Mapper left arrow button](images/mapper_arrow-button.png) (**left arrow**) next to the `Request Mapper`.
+2. In the Map Editor, move to the **Target** side and click on the ![Mapper left arrow button](images/mapper_arrow-button.png) (**left arrow**) next to the `Request Wrapper`.
 
-## Task 4: Run Integration to Call the Robot
+    The `PO Number` field should be visible on the Target side.
 
+3. Drag the `PONumber` field from the Sources side to the `PO Number` field on the Target side.
+
+    ![Mapping of PONumber](images/mapper_ponumber-mapping.png " ")
+
+    This completes the mapping activities.
+
+4. Click **Validate** and wait for the confirmation message `Map to CallRobot successfully validated`.
+
+5. Close the mapper by clicking on the ![Go back button](images/go-back-button.png) (**Go Back**) button on the top-left corner of the screen.
+
+6. Click **Save**.
+
+## Task 4: Configure Business Identifiers
+
+1. Click on the ![Business Identifiers](images/integration_business-identifiers-button.png) (**Business Identifiers**) button.
+
+2. Drag the `$PONumber` from Sources to the first **Business identifier field**.
+
+    ![Assign Business Identifiers](images/business-identifiers_assign.png)
+
+3. Click **Save** to close the **Business Identifiers** panel.
+
+4. Click **Save** on the integration canvas.
+
+5. Close the canvas by clicking on the ![Go back button](images/go-back-button.png) (**Go Back**) button on the top-left corner of the screen.
+
+    Under the **Integrations** box, you will find the integration with status `Configured`.
+
+## Task 5: Activate the integration
+
+1. On the right side of the integration, click on **...** (**Options**), then select **Activate**.
+
+    ![Activate Integration](images/activate-integration.png " ")
+
+2. In the **Activate integration** panel, select **Debug** tracing level and click **Activate**.
+
+    After a few seconds, the integration status will change from `Activation in progress` to `Active`. You can manually refresh the screen to see the status change.
+
+## Task 6: Run Integration to call the robot
+
+Once the integration is `Active`, we can run it on-demand.
+
+1. On the right side of the integration, click on **...** (**Options**), then select **Run**.
+
+2. On the **Configure and run** panel, enter the previously obtained PO Number under the **Current Value** field. Keep all other values as default. 
+
+    ![Configure and run parameters](images/configure-run_parameters.png " ")
+
+3. Click **Run** to initiate the integration run.
+
+## Observe Integration Run
 
 ## Acknowledgements
 
