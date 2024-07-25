@@ -12,7 +12,7 @@ In this lab, you will:
 
 * Create a scheduled integration which invokes the robot and passes input values
 * Add Scheduled parameters which capture the requested PO number
-* Add Mapper activity
+* Configure Mapper activity
 * Configure Business Identifiers
 * Activate the integration
 * Run Integration to call the robot
@@ -113,7 +113,7 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
 5. Click **Save**.
 
-## Task 3: Add Mapper activity
+## Task 3: Configure Mapper activity
 
 1. Double-click the **Map** activity.
 
