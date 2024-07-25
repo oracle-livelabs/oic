@@ -80,7 +80,7 @@ Activate a robot to be able to test and run it.
 
     A Confirmation pop-up appears, and the state changes to `Activation in progress`.
 
-2. Within a minute or two, the robot's state should change to **Active**. Keep hitting the ![Refresh Button](images/projects_refresh-button.png) (**Refresh**) button until the state changes.
+2. Within a minute or two, the robot's state should change to **Active**. Keep hitting the ![Refresh Button](images/refresh-button.png) (**Refresh**) button until the state changes.
 
 ## Task 4: Run the Robot in its Environment
 
