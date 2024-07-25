@@ -54,6 +54,9 @@ Specify the service URL and login credentials in a robot connection.
 
 5. Click **Create**.
 
+You have successfully completed this lab.
+
 ## Acknowledgements
+
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
 * **Last Updated By/Date** - Ravi Chablani, June 2024

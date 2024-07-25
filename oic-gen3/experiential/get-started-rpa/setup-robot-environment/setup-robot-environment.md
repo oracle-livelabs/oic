@@ -98,6 +98,8 @@ You must start the robot agent from the computer on which it is installed. If a 
 
     `INFO  - Requesting messages from ControlRoom`
 
+You have successfully completed this lab.
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration

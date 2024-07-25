@@ -97,7 +97,7 @@ Provide a valid request payload to start the robot. The robot will then enter th
 
 You should start seeing the following activities in the terminal:
 
-    INFO - Launching robot instance e0ccb43d-4af4-4aeb-81ec-a5f76d95bc48
+    INFO - Launching robot instance <guid>
     INFO - Requesting messages from ControlRoom
 
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
@@ -115,6 +115,10 @@ Let's observe the robot run.
 3. Hover over the completed instance and move the mouse to the right of the screen. Click on the ![View Details button](images/instance_view-details-button.png) (**View details**) button.
 
     This opens the **Activity Stream** for the selected instance.
+
+You have successfully completed this lab. Testing the robot in its environment is helpful to validate all the correct actions are performed. This is valuable for debugging purposes, however a real-world scenario will generally involve a separate integration invoking the robot. We will proceed to build this integration in the next lab.
+
+You have successfully completed this lab.
 
 ## Acknowledgements
 

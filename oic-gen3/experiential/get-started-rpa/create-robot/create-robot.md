@@ -310,6 +310,8 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![List Draft Robot](images/projects_robot-draft.png)
 
+You have successfully completed this lab.
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration

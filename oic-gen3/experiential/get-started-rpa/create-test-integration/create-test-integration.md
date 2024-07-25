@@ -148,6 +148,8 @@ Once the integration is `Active`, we can run it on-demand.
 
 ## Task 7: Validate Integration Run Status
 
+You have successfully completed this lab.
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration

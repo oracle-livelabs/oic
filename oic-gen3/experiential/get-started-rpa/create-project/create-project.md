@@ -44,6 +44,8 @@ This lab assumes you have:
 
     The new project page is displayed. You can now create and manage integrations and robots from the project.
 
+You have successfully completed this lab.
+
 ## Learn More
 
 - [Get Started with Projects](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/release-management.html) in *Using Integrations in Oracle Integration 3*
