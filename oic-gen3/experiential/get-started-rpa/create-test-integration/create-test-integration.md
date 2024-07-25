@@ -180,7 +180,9 @@ After clicking **Run** to start the integration, a side panel of **Activity stre
 
     ![Activity Stream robot invoke call](images/activity-stream_invoke-robot-call.png " ")
 
-3. Expand the 
+3. Expand the **Message received by Assignment Response** activity to verify the returned supplier name of the provided PO number (see sample supplier name).
+
+    ![Supplier name response](images/activity-stream_supplier-name-response.png " ")
 
 You have successfully completed this lab.
 
