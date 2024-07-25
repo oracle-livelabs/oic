@@ -102,9 +102,9 @@ You should start seeing the following activities in the terminal:
 
 After this message, the robot will bring up the assigned browser window and start the flow. During this time, wait until the robot completes all the steps.
 
-## Task 5: Validate Robot Flow Status
+## Task 5: Validate Robot Run Status
 
-Let's monitor the robot flow.
+Let's observe the robot run.
 
 1. From the **Configure and run** screen, click on the link under **Instance ID**.
 
@@ -112,7 +112,7 @@ Let's monitor the robot flow.
 
 2. The robot will start a new browser session to perform the UI tasks. Wait until the robot completes the flow, the click the (**Refresh**) button until the status changes to ``Succeeded``.
 
-3. Hover over the completed instance and move the mouse to the right of the screen. Click on the (**View details) button.
+3. Hover over the completed instance and move the mouse to the right of the screen. Click on the ![View Details button](images/instance_view-details-button.png) (**View details**) button.
 
     This opens the **Activity Stream** for the selected instance.
 
