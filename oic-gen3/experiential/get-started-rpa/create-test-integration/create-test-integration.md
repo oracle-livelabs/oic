@@ -68,34 +68,29 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     ![Show robot action](images/integration_show-robot-action.png " ")
 
-10. On the Integration canvas, hover to the right and click on the ![Actions button](images/actions-button.png) (**Actions**) button.
+10. Move below the **Robot process** activity and click on the **+** button.
 
-11. Under the **Actions** section, look for **Assign**.
+    ![Add activity below Robot call](images/integration_add-activity-below-robot.png " ")
 
-    ![Select Assign action](images/actions-menu_select-assign.png)
-
-12. Drag the **Assign** action over to the integration, and add it below the Robot process.
-
-    ![Add Assign action](images/integration_add-assign-action.png)
-
-13. In the **Configure assign** panel, take the following steps:
+11. In the **Configure assign** panel, take the following steps:
 
     1. Change **Name** to `Response`
-    2. Click **+** to add a variable
-    3. Select Datatype **String**
+    2. Click on the **Apply** button to save name change
+    3. Click **+** to add a variable
+    4. Select Datatype **String**
 
     ![Configure Assign action](images/assign-action_configure.png " ")
 
-14. With the side panel displayed, take the following steps:
+12. With the side panel displayed, take the following steps:
 
     1. Change **Variable** to <copy>`vSupplierName`<copy>
     2. On **Input sources** tab, expand **$CallRobot > RPAFlowResponse > ResponseWrapper** and drag `SupplierName` to the **Value** textbox on the right.
 
     ![Configure Assign variable](images/assign-action_configure-variable.png " ")
 
-15. Click **Save** to close the panel.
+13. Click **Save** to close the panel.
 
-16. On the integration canvas, click **Save**.
+14. On the integration canvas, click **Save**.
 
 ## Task 2: Add Scheduled parameters
 
@@ -167,7 +162,7 @@ Once the integration is `Active`, we can run it on-demand.
 
 1. On the right side of the integration, click on **...** (**Options**), then select **Run**.
 
-2. On the **Configure and run** panel, enter the previously obtained PO Number under the **Current Value** field. Keep all other values as default. 
+2. On the **Configure and run** panel, enter the previously obtained PO Number under the **Current Value** field (see sample value). Keep all other values as default.
 
     ![Configure and run parameters](images/configure-run_parameters.png " ")
 
@@ -177,11 +172,13 @@ Once the integration is `Active`, we can run it on-demand.
 
 After clicking **Run** to start the integration, a side panel of **Activity stream** will appear. Here we will observe the status of the integration run.
 
-1. After the robot run has completed, click the ![Refresh Button](images/refresh-button.png) (**Refresh**) button until you seen the message `Processing completed successfully`
+1. After the robot run has completed, move to the **Activity stream** panel and click the ![Refresh Button](images/refresh-button.png) (**Refresh**) button until you see the message `Processing completed successfully`.
 
     ![Activity Stream run completed](images/activity-stream_run-completed.png " ")
 
-2. Expand the **Invoke CallRobot** activity to verify the rob run.
+2. Expand the **Invoke CallRobot** activity to verify the robot run.
+
+    ![Activity Stream robot invoke call](images/activity-stream_invoke-robot-call.png " ")
 
 3. Expand the 
 
