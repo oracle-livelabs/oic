@@ -30,6 +30,8 @@ When you create a robot, you define its trigger and the actions that the robot p
 
 2. On the right side of the page, go to the **Robots** box and click **+ (Add)**.
 
+    ![Add Robot](images/projects_add-robot.png "")
+
 3. In the **Create robot** panel, fill in the following fields:
     | **Field** | **Required** | **Value** |
     | --- | ----------- | ----------- |
