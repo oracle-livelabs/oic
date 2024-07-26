@@ -83,7 +83,7 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
 12. With the side panel displayed, take the following steps:
 
-    1. Change **Variable** to <copy>vSupplierName</copy>
+    1. Change **Variable** to ```vSupplierName```
     2. On **Input sources** tab, expand **$CallRobot > RPAFlowResponse > ResponseWrapper** and drag `SupplierName` to the **Value** textbox on the right.
 
     ![Configure Assign variable](images/assign-action_configure-variable.png " ")
