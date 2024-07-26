@@ -867,7 +867,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration B2B](https://docs.oracle.com/en/cloud/paas/application-integration/btob.html)
+* [Oracle Integration 3 B2B](https://docs.oracle.com/en/cloud/paas/application-integration/btob.html)
 
 ## Acknowledgements
 

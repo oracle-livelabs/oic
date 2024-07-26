@@ -81,14 +81,14 @@ To access the File Server from an Integration, you will need to create an FTP Co
 3. From the **Create Connection** dialog, **Name** your connection ***File Server*** and leave the rest of the configurations as defaulted. Click ***Create***.  
 **Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
 4. Enter the following configurations in the **FTP Connection** with the information you previously gathered from the File Server Settings page.  
-| Field                   | Value                                                 |
-|-------------------------|-------------------------------------------------------|
-| FTP Server Host Address | From File Server Settings - IP and Port Information   |
-| FPT Server Port         | From File Server Settings - IP and Port Information   |
-| SFTP Connection         | Yes                                                   |
-| Security                | FTP Server Access Policy                              |
-| Username                | Your Oracle Integration username                      |
-| Password                | Your Oracle Integration password                      |
+| Field                   | Value                                               |
+| ----------------------- | --------------------------------------------------- |
+| FTP Server Host Address | From File Server Settings - IP and Port Information |
+| FPT Server Port         | From File Server Settings - IP and Port Information |
+| SFTP Connection         | Yes                                                 |
+| Security                | FTP Server Access Policy                            |
+| Username                | Your Oracle Integration username                    |
+| Password                | Your Oracle Integration password                    |
 
 5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the **Connection File Server was tested successfully** confirmation message. Click ***Save*** and exit the Connection editor.
 
@@ -107,7 +107,7 @@ To expose your B2B integrations as an API, you will need to create a REST Connec
 
 ## Task 5: Download Lab Artifacts
 
-[Download the lab artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/b2b-getting-started.zip) and unzip in a folder **b2b-getting-started**
+[Download the lab artifacts](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/b2b-getting-started.zip) and unzip in a folder **b2b-getting-started**
 
 You may now **proceed to the next lab**.
 
