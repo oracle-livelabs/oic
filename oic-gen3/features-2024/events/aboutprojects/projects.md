@@ -10,8 +10,9 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Understand concepts of a project.
+- Understand about the projects.
 - Understand how project helps you.
+- Restrictions
 
 ### Prerequisites
 
@@ -52,28 +53,10 @@ With everything at your fingertips, you'll build faster. And, with easy updates 
     In a project, you can design, manage, and monitor integrations in B2B standalone mode. Use an AS2 Adapter connection as a trigger or an invoke connection, or use an FTP Adapter connection as an invoke connection. Track the processing of B2B messages as integration instances during runtime in the project.
 
 ## Restrictions
-Be aware of the restrictions for projects.
 
-Contents of a project
-
-- You can create a maximum of 100 integrations, 50 project deployments, 20 connections, 50 lookups, and 20 JavaScript libraries in a project.
-
-- To stay within the project deployment limit, delete old versions periodically. If you need to keep older versions for auditing purposes, you can export the project deployments and archive them using your organization's archiving tools, such as a source control system.
-
-- Lookups and JavaScript libraries are visible and usable only in a single project.
-
-- Your uncluttered view shows you only the assets in which you are interested.
-
-- Similarly, assets created in standalone integrations or integrations in packages are not visible or usable in a project.
-
-- You can use certificates, which are defined globally, from any project.
-
-## Security and other restrictions
-- You cannot invoke one project from another project.
-- You cannot migrate a package of integrations to a project.
-- You cannot add an OCI object storage action to an integration in a project.
-- You cannot clone individual JavaScript libraries within a project.
-- You cannot design an integration in B2B trading partner mode in a project. If you import an integration in B2B trading partner mode into a project, it fails during runtime.
+- [Restrictions](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/manage-project.html#GUID-A26A0ABD-9F80-4E6F-B34D-B7B51E5F43B6__DEF)
+- [Contents of a project](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/restrictions-projects.html)
+- [Security and other restrictions](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/restrictions-projects.html)
 
 You may now **proceed to the next lab**.
 
@@ -87,4 +70,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, July 2024
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2024

@@ -24,7 +24,7 @@ In this workshop, you will learn how to:
 * Creating Free Trial Account
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
 * Learn project and events management in Oracle Integration 3.
-* Create a project, create connection, create an event based integration flow and create an application integration flow to publish the message and create two event based integration flows as subscribers.
+* Create a project, create connection, create an event based integration flow and create an application based integration flow to publish the message and create two event based integration flows as subscribers.
 
 ### Prerequisites
 

@@ -39,7 +39,7 @@ This lab assumes you have:
     | Description | Provide a meaningful description so that others can understand the project.|
     | Anyone can edit, view, and monitor |1. Select this option to allow anyone to edit, view, and monitor resources in the project. You can always restrict access at a later time.2.Don't select this option if you want to restrict access to editing, viewing, and monitoring resources in this project.After project creation, you can select the specific groups and users to which to provide access|
 
-Your new project page is displayed. You can now add integrations, connections, lookups, and JavaScript
+    Your new project page is displayed. You can now add integrations, connections, lookups, and JavaScript
 libraries to the project.
     ![projectevents](../images/projectevents.png)
 
@@ -48,7 +48,9 @@ libraries to the project.
 Create a connection with the REST Adapter.
 
 1. In the left Navigation pane, click ***Projects***, click the project name or click ![edit-icon](../images/ico-edit.png)
-2. In the **Connections** section, click **Add** to create a new connection.
+
+    You can please skip step1 if you are already on the edit project page.
+2. In the **Connections** section, click ***Add*** to create a new connection.
 3. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter *REST* in the search field. Click on the highlighted adapter.
 4. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
@@ -59,15 +61,14 @@ Create a connection with the REST Adapter.
     | Description  | REST Interface Connection for OIC LiveLabs |
     | Share with other projects | You can enable this option if you want to share this connection with other projects |
 
-    Keep all other values as default.
-
+    Keep all other values as default.  
 5. In the *Configuration* page, enter the following information:
 
     | **Field**  | **Values** |
     |---|---|
     |Security Policy | OAuth 2.0 Or Basic Authentication |
 
-6. OR You can also use shared connection if connection was create in some other project and shared with other projects.
+6. OR You can also use shared connection if connection was created in some other project and shared with other projects.
 7. Click on ***Test***  and wait until you receive a confirmation box that the test was successful.
 8. Click ***Save*** and wait for the confirmation box. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
@@ -76,14 +77,16 @@ Create a connection with the REST Adapter.
 You can create events that you publish in an integration and subscribe to in another integration. The contents of the event must be in JSON or XML schema format.
 
 1. In the left Navigation pane, click ***Projects***, click the project name or click ![edit-icon](../images/ico-edit.png)
-2. Scroll down to the **Events** section at the bottom, In the **Events** section, click **Add** to create an event.
-The Define new event panel opens.
-3. Enter a name ***Patient Moved**** and optional description, then click ***Continue***.
-The Define event structure panel opens.
+
+    You can please skip step1 if you are already on the edit project page.
+2. Scroll down to the **Events** section at the bottom, In the **Events** section, click ***Add*** to create an event.
+    The Define new event panel opens.
+3. Enter a name ***Patient Moved*** and optional description, then click ***Continue***.
+    The Define event structure panel opens.
 4. From the **Structure type** list, select an option:
     * Select JSON Sample to upload a JSON file or drag and drop a JSON file into the box, then click Create. You can also manually edit the JSON sample provided below to create your file contents.
-    Provide the below JSON and Click ***Create***
     * OR Select XML Schema to upload an XML schema file or drag and drop an XML schema file into the box, then click Create.
+    * For this lab, provide the below JSON and Click ***Create***
 
     ```
     <copy>
@@ -95,17 +98,18 @@ The Define event structure panel opens.
     </copy>
     ```
 
-The event is displayed on the Events page
+    The event is displayed on the Events page and the event is available for publishing in an integration
     ![eventcreated](../images/eventcreated.png)
-The event is available for publishing in an integration
 
 ## Task 4: Create an Integration to publish the data
 
 You can create an integration that publishes an event. Running the publishing integration enables subscribing integrations to subscribe to this event. This section provides an example of how to create a publishing integration.
 
 1. In the left Navigation pane, click ***Projects***, click the project name or click ![edit-icon](../images/ico-edit.png)
-2. In the **Integrations** section, click **Add** to create an event.
-The Define new event panel opens.
+
+    You can please skip step1 if you are already on the edit project page.
+2. In the **Integrations** section, click ***Add*** to create an event.
+The Add integration panel opens.
 3. On the **Add integration** dialog, click on ***Create***.
 4. On the **Create integration** dialog, click on ***Application***.
 5. In the **Create integration** dialog, enter the following information
@@ -145,7 +149,7 @@ A new row appears.
 ## Task 6: Publish the data to an event
 
 1. Hover over the outgoing arrow for the **PublishPatientData** activity (after first activity) and Click the ***+*** sign in the integration canvas.
-Search for the **Publish event** connection which you have created in the previous Task and click on it. This invokes the Publish event configuration Wizard.
+Search for the **Publish event** action and click on it. This invokes the Publish event configuration Wizard.
 2. Select the event which you have created in the previous tasks and click on ***Choose***
     ![publisheventaction](../images/publisheventaction.png)
 
@@ -181,37 +185,14 @@ Manage business identifiers that enable you to track fields in messages during r
     ![completePublishPatientData](../images/complete-publishpatientdata.png)
 5. Click on ***&lt; (Go back)*** button.
 
-## Task 9: Activate the Integration
+## Task 9: Subscribe to Events in an Integration : Subscriber1
 
-1. On the **Integrations** page, click on the ***...*** icon of **PublishPatientData** Integration and click on the ***Activate***
-2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
-3. Click ***Activate***.
-
-    The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
-
-## Task 10: Run the Integration - Come back to this task again
-
-Refresh your page after few seconds.
-
-1. Select **PublishPatientData**,  Click on **...(Actions)** menu and Click on ***Run***
-2. Configure the URI parameters:
-
-    * for **PatientId**, enter ***123***
-    * for **FromDept**, enter ***456***
-    * for **ToDept**, enter ***789***
-
-3. Click ***Run*** (in the upper right of the page).
-4. Look at the Response section to verify the BIP report results and verify the Status is 200 OK
-5. Click the link which appears on top to track the instance.
-The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
-
-## Task 11: Subscribe to Events in an Integration : Subscriber1
 You can create an integration that subscribes to published events. The subscribing integration event is triggered when the integration publishing the event is run. Multiple integrations can subscribe to the same published event. This section provides an example of how to create a subscription integration.
 
 1. In the left Navigation pane, click ***Projects***, click the project name or click ![edit-icon](../images/ico-edit.png)
+
+    You can please skip step1 if you are already on the edit project page.
 2. In the **Integrations** section, click **Add** to create an integration flow.
-The Define new event panel opens.
 3. On the **Add integration** dialog, click on ***Create***.
 4. On the **Create integration** dialog, click on ***Event***.
 5. In the **Create integration** dialog, enter the following information
@@ -230,17 +211,17 @@ The Define new event panel opens.
     | **Element**          | **Value**          |
     | --- | ----------- |
     |To | **your email id** |
-    |From | **noreply@oracle.com** |
+    |From | **<noreply@oracle.com>** |
     |Subject | **from OIC Subscriber1** |
     |Body | **Hi,This email is from Oracle Integration 3 events feature...Patient {vPatientId} has been moved from {vFromDept} to {vToDept}..Have a nice day!!!** |
     |Parameter **vPatientId** | **drag and drop patiendId from Sources-->request-wrapper** |
-    |Parameter **vToDept** | **drag and drop fromDept from Sources-->request-wrapper** |
-    |Parameter **vFromDept** | **drag and drop toDept from Sources-->request-wrapper** |
+    |Parameter **vFromDept** | **drag and drop fromDept from Sources-->request-wrapper** |
+    |Parameter **vToDept** | **drag and drop toDept from Sources-->request-wrapper** |
 
     ![Notification](../images/notification.png)
-    > **Note:** Please put all the strings of email parameters in the double quotes
+    > **Note:** Please put all the strings in the double quotes
 
-## Task 12: Define Tracking Fields
+## Task 10: Define Tracking Fields
 
 Manage business identifiers that enable you to track fields in messages during runtime.
 
@@ -251,21 +232,22 @@ Manage business identifiers that enable you to track fields in messages during r
     ![SubscribeToPatientData1](../images/subscribetopatientdata1.png)
 5. Click on ***&lt; (Go back)*** button.
 
-## Task 13: Subscribe to Events in an Integration : Subscriber2
+## Task 11: Subscribe to Events in an Integration : Subscriber2
 
 You can create an integration that subscribes to published events. The subscribing integration event is triggered when the integration publishing the event is run. Multiple integrations can subscribe to the same published event. This section provides an example of how to create a subscription integration.
 
 1. On the **Integrations** page, click on the ***...*** icon of **SubscribeToPatientData1** Integration and click on the ***Clone*** and name it as **SubscribeToPatientData2**
 2. On the **Integrations** page, click on the ***...*** icon of **SubscribeToPatientData2** Integration and click on the ***Edit***
 3. Select the action **Notifcation** and click on **...** and click on **Edit**
-4. Modify **Subject" to ***from OIC Subscriber2***
+4. Modify **Subject** to ***from OIC Subscriber2***
 5. Click ***Save***.
 6. Click on ***&lt; (Go back)*** button.
 7. Your project should look like the screenshot given below.
 ![allintegrations-in-project](../images/allintegrations-in-project.png)
 
-## Task 14: Congratulations
-Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
+## Task 12: Congratulations
+
+Congratulations! You have created a connection, event and three integration flows, one is for publishing the data and other two are subscribers.
 
 You may now **proceed to the next lab**.
 
@@ -274,8 +256,10 @@ You may now **proceed to the next lab**.
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 * [Using the REST Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/rest-adapter/index.html)
 
+* [Create Integrations to Publish and Subscribe to Events](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/create-integrations-publish-and-subscribe-events.html)
+
 ## Acknowledgements
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** -
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2024
