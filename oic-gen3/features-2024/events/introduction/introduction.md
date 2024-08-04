@@ -23,6 +23,7 @@ In this workshop, you will learn how to:
 
 * Creating Free Trial Account
 * Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
+* Learn about publish subscribe pattern
 * Learn project and events management in Oracle Integration 3.
 * Create a project, create connection, create an event based integration flow and create an application based integration flow to publish the message and create two event based integration flows as subscribers.
 
@@ -33,10 +34,11 @@ In this workshop, you will learn how to:
 
 ## Pub/Sub (Publisher/subscriber) architecture
 
-* Pub/Sub (or Publish/Subscribe) is an architectural design pattern used in distributed systems for asynchronous communication between different components or services. Although Publish/Subscribe is based on earlier design patterns like message queuing and event brokers, it is more flexible and scalable. The key to this is the fact that Pub/Sub enables the movement of messages between different components of the system without the components being aware of each other’s identity (they are decoupled). 
+* Pub/Sub (or Publish/Subscribe) is an architectural design pattern used in distributed systems for asynchronous communication between different components or services. Although Publish/Subscribe is based on earlier design patterns like message queuing and event brokers, it is more flexible and scalable. The key to this is the fact that Pub/Sub enables the movement of messages between different components of the system without the components being aware of each other’s identity (they are decoupled).
 
 * Pub/Sub provides a framework for exchanging messages between publishers (components that create and send messages) and subscribers (components that receive and consume messages). Note that publishers don’t send messages to specific subscribers in a point-to-point manner. Instead, an intermediary is used - a Pub/Sub message broker, which groups messages into entities called events.
 
+    ![architecture](../images/architecture.png)
     ![publisher](../images/publisher.png)
     ![subscriber](../images/subscriber.png)
 
