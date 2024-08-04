@@ -31,6 +31,47 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
+## Pub/Sub (Publisher/subscriber) architecture
+
+* Pub/Sub (or Publish/Subscribe) is an architectural design pattern used in distributed systems for asynchronous communication between different components or services. Although Publish/Subscribe is based on earlier design patterns like message queuing and event brokers, it is more flexible and scalable. The key to this is the fact that Pub/Sub enables the movement of messages between different components of the system without the components being aware of each other’s identity (they are decoupled). 
+
+* Pub/Sub provides a framework for exchanging messages between publishers (components that create and send messages) and subscribers (components that receive and consume messages). Note that publishers don’t send messages to specific subscribers in a point-to-point manner. Instead, an intermediary is used - a Pub/Sub message broker, which groups messages into entities called events.
+
+    ![publisher](../images/publisher.png)
+    ![subscriber](../images/subscriber.png)
+
+## Benefits of the Pub/Sub model
+
+* The Pub/Sub pattern brings many benefits to the table, including but not limited to:
+* Loose coupling between components, making your system more modular and flexible.
+* High scalability (in theory, Pub/Sub allows any number of  publishers to communicate with any number of subscribers).
+* Language-agnostic and protocol-agnostic, which makes it straightforward and fast to integrate Pub/Sub into your tech stack.
+* Asynchronous, event-driven communication that’s ideal for realtime, low-latency app
+
+## When should you use the Pub/Sub pattern?
+
+* Pub/Sub’s loose coupling, asynchronous nature, and inherent scalability make it an excellent solution for distributed systems with a high and fluctuating number of publishers and subscribers. You can use Pub/Sub for many different purposes, such as:
+* Sending event notifications.
+* Distributed caching.
+* Distributed logging.
+* Working with multiple data sources.
+* Broadcasting updates (one-to-many messaging).
+* Building responsive, low-latency end-user experiences like live chat and multiplayer collaboration functionality.
+
+## Situations where Pub/Sub is a bad choice
+
+Every design pattern has limitations and trade-offs. There are scenarios where Pub/Sub is the wrong choice:
+
+* Overkill for simpler systems. Pub/Sub is an overkill for simple systems which are unlikely to scale up. If you’re operating systems where elastic scaling is not required and where static scaling will suffice, think twice before using Pub/Sub. Similarly, if your system only needs to communicate with a few other components or services, using Pub/Sub might be excessive.
+
+* Not suitable for media streaming. Audio and video streaming have nuanced requirements for smooth rendering on the user’s end. Synchronous point-to-point communication between the two endpoints is the best solution for media streaming. Pub/Sub is not suitable for carrying VoIP or video telephony traffic over the Internet.
+
+* Inappropriate for periodic/background tasks. Pub/Sub is an asynchronous method of sending information. Therefore, it is not suitable for systems that run as periodic background tasks, like cron jobs which are triggered over a particular time period.
+
+* Non-event-driven systems. Pub/Sub is typically used in event-driven systems, where components react to changes in the system state. If your system is not event-driven, but instead follows a more traditional request/response or batch processing model, Pub/Sub might not be the best choice.
+
+* Synchronous communication: Pub/Sub is designed for asynchronous communication, where the publisher doesn't wait for a response from the subscriber. If you need a synchronous request-response communication pattern, you should consider using something else instead of Pub/Sub.
+
 ## Event Design Life Cycle
 
 The publish and subscribe feature enables you to decouple producers and subscribers. This decoupling enables you to define an event and start building your subscriber for the event before the event is published. You can create an event type (can be a producer, subscriber, or someone else). Creating an event type defines a contract, meaning that there's a contract to produce and subscribe.
