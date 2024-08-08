@@ -32,13 +32,18 @@ Specify the service URL and login credentials in a robot connection.
 
 1. In the navigation pane, select **Projects** and then click on the project created in the previous lab.
 
-2. On the right side of the page, go to the **Robot connections** box and click **+ (Add)**.
+    The project page is displayed with the **Integration** category selected.
+    ![Projects Overview](images/projects_assets-overview.png "")
 
-3. On the **Create robot connection** panel, select the Default connection type **Oracle RPA web login**.
+2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
+
+3. On the right side of the page, go to the **Robot connections** box and click **Add**.
+
+4. On the **Create robot connection** panel, select the Default connection type **Oracle RPA web login**.
 
     ![Create robot flow panel](images/create-robot-connection_select-type.png " ")
 
-4. In the **Create robot connection - Oracle RPA web login** panel, fill in the following fields:
+5. In the **Create robot connection - Oracle RPA web login** panel, fill in the following fields:
     | **Field**           | **Required** | **Value** |
     | ------------------- | ----------- | ----------- |
     | Name                | Yes | Enter a name for the login page. <br> For example: `LiveLabs ERP Cloud` |
@@ -52,7 +57,7 @@ Specify the service URL and login credentials in a robot connection.
 
     ![Create robot flow panel](images/create-robot-connection_configured.png " ")
 
-5. Click **Create**.
+6. Click **Create**.
 
 You have successfully completed this lab.
 

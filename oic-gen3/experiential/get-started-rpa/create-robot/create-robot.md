@@ -28,8 +28,6 @@ When you create a robot, you define its trigger and the actions that the robot p
 
 1. In the navigation pane, select **Projects** and then click on the project created in the previous lab.
 
-    The project page is displayed with **Integration** category selected.
-
 2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
 
 3. Go to the **Robots** box and click **Add**.
