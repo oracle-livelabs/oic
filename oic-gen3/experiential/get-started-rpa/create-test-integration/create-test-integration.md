@@ -46,7 +46,7 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     ![Enter integration name](images/add-integration_enter-name.png " ")
 
-    The Integration Designer will appear, with a default integration.
+    The Integration designer will appear, with a default integration.
 
 6. However the mouse just below the **Schedule** activity and click on the **+** button.
 
