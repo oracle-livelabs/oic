@@ -60,7 +60,7 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 2. On the top right corner of the window, click on **Download**. Then, select **Robot Agent**.
 ![Download Robot Agent](./images/download-robot-agent.png ' ')
 
-    You should receive a confirmation about the agent getting downloaded.
+    You should receive a confirmation about the agent getting downloaded. This could take a couple of minutes.
     ![Download Robot Agent notification](./images/download-robot-agent-notification.png ' ')
 
 3. Once the download has completed, navigate to the designated folder on your local machine to obtain the agent installation file ```rpa_agent.zip```. The default location is typically the **Downloads** folder.

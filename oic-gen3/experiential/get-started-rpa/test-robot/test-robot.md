@@ -39,7 +39,7 @@ Create an Environment Pool and assign you local computer to it.
 
     The **Create environment pool** panel appears.
 
-4. Fill in the **Name** field, such as `LiveLabs-EnvPool`.
+4. Fill in the **Name** field, such as `LiveLabs EnvPool`.
 
 5. Select **Create**.
 
