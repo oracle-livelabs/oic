@@ -26,13 +26,15 @@ This lab assumes you have:
 
 When you create a robot, you define its trigger and the actions that the robot performs.
 
-1. In the navigation pane, select **Projects** and then click on the project created in the previous lab.
+1. In the navigation pane, select **Projects** and then click on the project created for this lab.
 
 2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
 
-3. Go to the **Robots** box and click **Add**.
+3. On the **Robot** category section, go to the **Robots** box and click **Add** or **+**.
 
     ![Add Robot](images/projects_add-robot.png "")
+
+    > **Note**: The **Add** button appears if you have no robots. The **+** button appears if you have at least one robot.
 
 4. In the **Create robot** panel, fill in the following fields:
     | **Field** | **Required** | **Value** |

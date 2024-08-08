@@ -30,14 +30,16 @@ In this lab, you will:
 
 Specify the service URL and login credentials in a robot connection.
 
-1. In the navigation pane, select **Projects** and then click on the project created in the previous lab.
+1. In the navigation pane, select **Projects** and then click on the project created for this lab.
 
     The project page is displayed with the **Integration** category selected.
     ![Projects Overview](images/projects_assets-overview.png "")
 
 2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
 
-3. On the **Robot** category section, go to the **Robot connections** box and click **Add**.
+3. On the **Robot** category section, go to the **Robot connections** box and click **Add** or **+**.
+
+    > **Note**: The **Add** button appears if you have no robot connections. The **+** button appears if you have at least one robot connection.
 
 4. On the **Create robot connection** panel, select the Default connection type **Oracle RPA web login**.
 
