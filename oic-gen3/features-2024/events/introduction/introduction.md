@@ -32,7 +32,7 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-## Pub/Sub (Publisher/subscriber) architecture
+## Task 1:  Pub/Sub (Publisher/subscriber) architecture
 
 * Pub/Sub (or Publish/Subscribe) is an architectural design pattern used in distributed systems for asynchronous communication between different components or services. Although Publish/Subscribe is based on earlier design patterns like message queuing and event brokers, it is more flexible and scalable. The key to this is the fact that Pub/Sub enables the movement of messages between different components of the system without the components being aware of each other’s identity (they are decoupled).
 
@@ -42,7 +42,7 @@ In this workshop, you will learn how to:
     ![publisher](../images/publisher.png)
     ![subscriber](../images/subscriber.png)
 
-## Benefits of the Pub/Sub model
+## Task 2:  Benefits of the Pub/Sub model
 
 * The Pub/Sub pattern brings many benefits to the table, including but not limited to:
 * Loose coupling between components, making your system more modular and flexible.
@@ -50,7 +50,7 @@ In this workshop, you will learn how to:
 * Language-agnostic and protocol-agnostic, which makes it straightforward and fast to integrate Pub/Sub into your tech stack.
 * Asynchronous, event-driven communication that’s ideal for realtime, low-latency app
 
-## When should you use the Pub/Sub pattern?
+## Task 3: When should you use the Pub/Sub pattern?
 
 * Pub/Sub’s loose coupling, asynchronous nature, and inherent scalability make it an excellent solution for distributed systems with a high and fluctuating number of publishers and subscribers. You can use Pub/Sub for many different purposes, such as:
 * Sending event notifications.
@@ -60,7 +60,7 @@ In this workshop, you will learn how to:
 * Broadcasting updates (one-to-many messaging).
 * Building responsive, low-latency end-user experiences like live chat and multiplayer collaboration functionality.
 
-## Situations where Pub/Sub is a bad choice
+## Task 4: Situations where Pub/Sub is a bad choice
 
 Every design pattern has limitations and trade-offs. There are scenarios where Pub/Sub is the wrong choice:
 
@@ -74,7 +74,7 @@ Every design pattern has limitations and trade-offs. There are scenarios where P
 
 * Synchronous communication: Pub/Sub is designed for asynchronous communication, where the publisher doesn't wait for a response from the subscriber. If you need a synchronous request-response communication pattern, you should consider using something else instead of Pub/Sub.
 
-## Event Design Life Cycle
+## Task 5: Event Design Life Cycle
 
 The publish and subscribe feature enables you to decouple producers and subscribers. This decoupling enables you to define an event and start building your subscriber for the event before the event is published. You can create an event type (can be a producer, subscriber, or someone else). Creating an event type defines a contract, meaning that there's a contract to produce and subscribe.
 
@@ -84,7 +84,7 @@ The event design life cycle consists of three high-level steps. These steps are 
 2. Create an event publishing integration
 3. Create an event subscription integration
 
-## Restrictions
+## Task 6: Restrictions
 
 A maximum of 50 integrations can subscribe to events per service instance.
 
