@@ -20,11 +20,11 @@ This lab assumes you have:
 
 - Completed all the previous labs
 
-## About the projects
+## Task 1: About the projects
 
-You can design, manage, and monitor integrations from a single, self-contained workspace known as a project. This eliminates the need to navigate to other parts of the Oracle Integration user interface (which is required with standalone integrations or integrations in packages).
+1. You can design, manage, and monitor integrations from a single, self-contained workspace known as a project. This eliminates the need to navigate to other parts of the Oracle Integration user interface (which is required with standalone integrations or integrations in packages).
 
-## How project helps you
+## Task 2: How project helps you
 
 With everything at your fingertips, you'll build faster. And, with easy updates to integrations based on accelerators, you'll future-proof your prebuilt integrations. Finally, deploy quickly and with confidence using project deployments. Keep reading to learn more.
 
@@ -52,7 +52,7 @@ With everything at your fingertips, you'll build faster. And, with easy updates 
 
     In a project, you can design, manage, and monitor integrations in B2B standalone mode. Use an AS2 Adapter connection as a trigger or an invoke connection, or use an FTP Adapter connection as an invoke connection. Track the processing of B2B messages as integration instances during runtime in the project.
 
-## Restrictions
+## Task 3: Restrictions
 
 - [Restrictions](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/manage-project.html#GUID-A26A0ABD-9F80-4E6F-B34D-B7B51E5F43B6__DEF)
 - [Contents of a project](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/restrictions-projects.html)
