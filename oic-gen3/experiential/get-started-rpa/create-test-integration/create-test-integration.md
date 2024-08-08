@@ -68,13 +68,15 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     The designer with Robot action will be displayed.
 
-    ![Show robot action](images/integration_show-robot-action.png " ")
+    ![Show integration with robot action](images/integration_show-robot-action.png " ")
 
 11. Move below the **Robot process** activity and click on the **+** button.
 
     ![Add activity below Robot call](images/integration_add-activity-below-robot.png " ")
 
-12. In the **Configure assign** panel, take the following steps:
+12. Select the **Assign** action.
+
+13. In the **Configure assign** panel, take the following steps:
 
     1. Change **Name** to `Response`
     2. Click on the **Apply** button to save name change
@@ -83,16 +85,16 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     ![Configure Assign action](images/assign-action_configure.png " ")
 
-13. With the side panel displayed, take the following steps:
+14. With the side panel displayed, take the following steps:
 
     1. Change **Variable** to ```vSupplierName```
     2. On **Input sources** tab, expand **$CallRobot > RPAFlowResponse > ResponseWrapper** and drag `SupplierName` to the **Value** textbox on the right.
 
     ![Configure Assign variable](images/assign-action_configure-variable.png " ")
 
-14. Click **Save** to close the panel.
+15. Click **Save** to close the panel.
 
-15. On the integration canvas, click **Save**.
+16. On the integration canvas, click **Save**.
 
 ## Task 2: Add Scheduled parameters
 
