@@ -152,19 +152,20 @@ Start the robot by adding the Login action.
 
     ![Robot design Targeting](images/robot-designer_targeting-on.png "")
 
-9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name.
-    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
+9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name and click on that field when the icon changes to a target (color turns green).
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
 
     The Targeting will map the `User ID` UI element value to the **Username locator** field in the robot.
 
+    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
+
     ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
 
 10. Repeat the previous steps for the following fields:
 
-    * **Password locator**: Select the `password` UI element.
-    * **Submit locator**: Select the `Sign In` button that the robot clicks to sign in to the Oracle Fusion application.
+    * **Password locator**: Select the `password` UI element after it turns green.
+    * **Submit locator**: Select the `Sign In` button after it turns green. The robot will click this button to sign in to the Oracle Fusion application.
 
     Your intermediate Login action panel should look as follows:
 
@@ -178,11 +179,11 @@ Start the robot by adding the Login action.
 
 While building the rest of the robot, you'll record the actions that the robot completes using the recorder, all while harnessing the power of control and power of the low-code capabilities. We will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open the browser window where the credentials were entered in the previous task. Click **Sign In** to proceed to the next screen in ERP Cloud.
+1. Open the browser window with the Oracle Cloud ERP login page. Enter the provided credentials and click **Sign In** to proceed to the ERP Cloud landing page.
 
     ![ERP Cloud login](images/erp-cloud_login.png " ")
 
-    We will start the robot recording after the login screen.
+    We will start the robot recording after the login action.
 
 2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button.
 
