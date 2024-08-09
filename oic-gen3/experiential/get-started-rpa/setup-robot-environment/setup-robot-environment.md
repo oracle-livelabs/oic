@@ -97,7 +97,7 @@ You must start the robot agent from the computer on which it is installed. If a 
 5. The robot agent is running successfully when you see below message in the terminal:
 
     ```java
-    INFO  - Requesting messages from ControlRoom`
+    INFO  - Requesting messages from ControlRoom
     ```
 
 You have successfully completed this lab.
