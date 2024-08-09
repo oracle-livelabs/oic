@@ -33,7 +33,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 1. Verify if a JRE is pre-installed on the host machine by running the below command.
 
-    For Linux and macOS, run this command in the **Terminal**. 
+    For Linux and macOS, run this command in the **Terminal**.
 
     For Windows, run this command in the **Command Prompt (CMD)**.
 
@@ -47,7 +47,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 2. If there is no JRE listed in the response, then one needs to be installed. Follow this link to download the latest JRE the applies to your system platform (Linux, macOS or Windows) and processor:
 
-    https://www.oracle.com/java/technologies/downloads
+    <https://www.oracle.com/java/technologies/downloads>
 
 3. Follow the **Installation Instructions** on the Java Downloads page.
 
