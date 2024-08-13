@@ -29,17 +29,17 @@ This lab assumes you have:
 
 Create an Environment Pool and assign you local computer to it.
 
-1. In the navigation pane, select **Projects**.
+1. In the navigation pane, select **Projects** and then click on the project created for this lab.
 
-2. Open the LiveLabs project.
+2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
 
-3. In the **Environment Pools** box, select **Add** or **+**.
+3. On the **Robot** category section, go to the **Environment Pools** box and click **Add** or **+**.
 
-    > **Note**: **Add** button appears if you have no environment pools. The **+** button appears if you have at least one environment pool.
+    > **Note**: The **Add** button appears if you have no environment pools. The **+** button appears if you have at least one environment pool.
 
     The **Create environment pool** panel appears.
 
-4. Fill in the **Name** field, such as `LiveLabs-EnvPool`.
+4. Fill in the **Name** field, such as `LiveLabs EnvPool`.
 
 5. Select **Create**.
 
