@@ -26,13 +26,17 @@ This lab assumes you have:
 
 When you create a robot, you define its trigger and the actions that the robot performs.
 
-1. In the navigation pane, select **Projects** and then click on the project created in the previous lab.
+1. In the navigation pane, select **Projects** and then click on the project created for this lab.
 
-2. On the right side of the page, go to the **Robots** box and click **+ (Add)**.
+2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
+
+3. On the **Robot** category section, go to the **Robots** box and click **Add** or **+**.
 
     ![Add Robot](images/projects_add-robot.png "")
 
-3. In the **Create robot** panel, fill in the following fields:
+    > **Note**: The **Add** button appears if you have no robots. The **+** button appears if you have at least one robot.
+
+4. In the **Create robot** panel, fill in the following fields:
     | **Field** | **Required** | **Value** |
     | --- | ----------- | ----------- |
     | Name          | Yes | Enter a name for the robot connection type For example: `LiveLabs Robot`       |
@@ -43,7 +47,7 @@ When you create a robot, you define its trigger and the actions that the robot p
 
     ![Create robot panel](images/create-robot-add.png " ")
 
-4. Click **Create**.
+5. Click **Create**.
 
 The Robot Designer will appear, with a default robot which includes an **Open Application** action.
 ![Robot Designer Canvas](images/robot-designer_after-create.png " ")
@@ -129,7 +133,7 @@ Start the robot by adding the Login action.
     * Move the ZIP file to a local folder of your choice, such as ```Users\<user>\RPA\plugin```
     * Extract the ZIP file to the designated plugin folder.
     * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
-    * Enable **Developer mode** using the slider on the top right corner. 
+    * Enable **Developer mode** using the slider on the top right corner.
     ![Chrome Developer Mode](images/chrome_enable-developer-mode.png)
     * On the **Extensions** page, select **Load unpacked**.
     * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
@@ -150,19 +154,20 @@ Start the robot by adding the Login action.
 
     ![Robot design Targeting](images/robot-designer_targeting-on.png "")
 
-9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name.
-    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
+9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name and click on that field when the icon changes to a target (color turns green).
 
     ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
 
     The Targeting will map the `User ID` UI element value to the **Username locator** field in the robot.
 
+    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
+
     ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
 
 10. Repeat the previous steps for the following fields:
 
-    * **Password locator**: Select the `password` UI element.
-    * **Submit locator**: Select the `Sign In` button that the robot clicks to sign in to the Oracle Fusion application.
+    * **Password locator**: Select the `password` UI element after it turns green.
+    * **Submit locator**: Select the `Sign In` button after it turns green. The robot will click this button to sign in to the Oracle Fusion application.
 
     Your intermediate Login action panel should look as follows:
 
@@ -176,11 +181,11 @@ Start the robot by adding the Login action.
 
 While building the rest of the robot, you'll record the actions that the robot completes using the recorder, all while harnessing the power of control and power of the low-code capabilities. We will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open the browser window where the credentials were entered in the previous task. Click **Sign In** to proceed to the next screen in ERP Cloud.
+1. Open the browser window with the Oracle Cloud ERP login page. Enter the provided credentials and click **Sign In** to proceed to the ERP Cloud landing page.
 
     ![ERP Cloud login](images/erp-cloud_login.png " ")
 
-    We will start the robot recording after the login screen.
+    We will start the robot recording after the login action.
 
 2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button.
 
@@ -200,7 +205,7 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     > **Note**: When recording actions, the recorder can start from any point in time. However, for this task we will record after the Login operation.
 
-7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target. 
+7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target.
 
     ![Click Procurement target elements](images/robot-designer_smart-record_click-procurement.png " ")
 
@@ -286,7 +291,7 @@ While building the rest of the robot, you'll record the actions that the robot c
     4. Save To: In the field, click ![Select Flow button](images/action-details_output_flow-button.png) (**Output**)
     5. Double-click the **SupplierName** property to have it mapped to the **Save to** field.
 
-    ![Select Flow button](images/action-details_output_assign-supplier.png " ")
+    ![Assign supplier name to output](images/action-details_output_assign-supplier.png " ")
 
 29. Click **Save**.
 
@@ -296,8 +301,9 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     We will add a Log action to capture the output value of the robot.
 
-32. Click on the **Robot actions** panel, and drag-and-drop the **Log** action to the tail end of the flow.
-![Add Log action](images/robot-designer_add-log-action.png " ")
+32. Click on the ![Select Robot actions](images/robot-designer_select-robot-actions.png) (**Robot actions**) panel, and drag-and-drop the **Log** action to the tail end of the flow.
+
+    ![Add Log action](images/robot-designer_add-log-action.png " ")
 
 33. On the **Log** panel, hover over the **Message** field, click **...** (**More options**), and select **Output**. This assigns the output value to the log message.
 ![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
@@ -311,7 +317,7 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     The status of your robot should be **Draft**.
 
-    ![List Draft Robot](images/projects_robot-draft.png)
+    ![Validate Draft state](images/projects_robot-draft.png)
 
 You have successfully completed this lab.
 

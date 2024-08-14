@@ -33,7 +33,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 1. Verify if a JRE is pre-installed on the host machine by running the below command.
 
-    For Linux and macOS, run this command in the **Terminal**. 
+    For Linux and macOS, run this command in the **Terminal**.
 
     For Windows, run this command in the **Command Prompt (CMD)**.
 
@@ -47,7 +47,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
 2. If there is no JRE listed in the response, then one needs to be installed. Follow this link to download the latest JRE the applies to your system platform (Linux, macOS or Windows) and processor:
 
-    https://www.oracle.com/java/technologies/downloads
+    <https://www.oracle.com/java/technologies/downloads>
 
 3. Follow the **Installation Instructions** on the Java Downloads page.
 
@@ -60,7 +60,7 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 2. On the top right corner of the window, click on **Download**. Then, select **Robot Agent**.
 ![Download Robot Agent](./images/download-robot-agent.png ' ')
 
-    You should receive a confirmation about the agent getting downloaded.
+    You should receive a confirmation about the agent getting downloaded. This could take a couple of minutes.
     ![Download Robot Agent notification](./images/download-robot-agent-notification.png ' ')
 
 3. Once the download has completed, navigate to the designated folder on your local machine to obtain the agent installation file ```rpa_agent.zip```. The default location is typically the **Downloads** folder.
@@ -97,7 +97,7 @@ You must start the robot agent from the computer on which it is installed. If a 
 5. The robot agent is running successfully when you see below message in the terminal:
 
     ```java
-    INFO  - Requesting messages from ControlRoom`
+    INFO  - Requesting messages from ControlRoom
     ```
 
 You have successfully completed this lab.

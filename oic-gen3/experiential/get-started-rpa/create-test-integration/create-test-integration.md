@@ -30,49 +30,53 @@ This lab assumes you have:
 
 Create a scheduled integration that will invoke the robot and pass input parameters.
 
-1. On the project page, move to the **Integrations** box and click **Add**.
+1. In the navigation pane, select **Projects** and then click on the project created for this lab.
 
-2. On the **Add integration** panel, click **Create**.
+2. Go to the **Integrations** box and click **Add**.
+
+3. On the **Add integration** panel, click **Create**.
 
    ![Select Create](images/add-integration_create.png " ")
 
-3. On the next screen, select **Schedule**
+4. On the next screen, select **Schedule**
 
     ![Select Schedule pattern](images/add-integration_select-schedule.png " ")
 
-4. Enter a name for the integration, leave all other fields as default, and click **Create**.
+5. Enter a name for the integration, leave all other fields as default, and click **Create**.
 
     ![Enter integration name](images/add-integration_enter-name.png " ")
 
-    The Integration Designer will appear, with a default integration.
+    The Integration designer will appear, with a default integration.
 
-5. However the mouse just below the **Schedule** activity and click on the **+** button.
+6. However the mouse just below the **Schedule** activity and click on the **+** button.
 
     ![Add Robot activity](images/integration_add-robot-activity.png " ")
 
-6. In the popup **Actions** tab, scroll down until the bottom and select **Robot Flow** action.
+7. In the popup **Actions** tab, scroll down until the bottom and select **Robot Flow** action.
 
     ![Select Robot flow action](images/integration_select-robot-flow-action.png " ")
 
-7. On the **Configure Basic Info** screen, enter a valid name for the endpoint without spacing.
+8. On the **Configure Basic Info** screen, enter a valid name for the endpoint without spacing.
 
     ![Enter endpoint name](images/integration_add-robot-activity_enter-endpoint-name.png " ")
 
-8. On the **Configure Configuration** screen, select the previously activated Robot flow.
+9. On the **Configure Configuration** screen, select the previously activated Robot flow.
 
    ![Select robot flow](images/integration_add-robot-activity_select-robot.png " ")
 
-9. Click **Continue**, then **Finish**.
+10. Click **Continue**, then **Finish**.
 
     The designer with Robot action will be displayed.
 
-    ![Show robot action](images/integration_show-robot-action.png " ")
+    ![Show integration with robot action](images/integration_show-robot-action.png " ")
 
-10. Move below the **Robot process** activity and click on the **+** button.
+11. Move below the **Robot process** activity and click on the **+** button.
 
     ![Add activity below Robot call](images/integration_add-activity-below-robot.png " ")
 
-11. In the **Configure assign** panel, take the following steps:
+12. Select the **Assign** action.
+
+13. In the **Configure assign** panel, take the following steps:
 
     1. Change **Name** to `Response`
     2. Click on the **Apply** button to save name change
@@ -81,16 +85,16 @@ Create a scheduled integration that will invoke the robot and pass input paramet
 
     ![Configure Assign action](images/assign-action_configure.png " ")
 
-12. With the side panel displayed, take the following steps:
+14. With the side panel displayed, take the following steps:
 
     1. Change **Variable** to ```vSupplierName```
     2. On **Input sources** tab, expand **$CallRobot > RPAFlowResponse > ResponseWrapper** and drag `SupplierName` to the **Value** textbox on the right.
 
     ![Configure Assign variable](images/assign-action_configure-variable.png " ")
 
-13. Click **Save** to close the panel.
+15. Click **Save** to close the panel.
 
-14. On the integration canvas, click **Save**.
+16. On the integration canvas, click **Save**.
 
 ## Task 2: Add Scheduled parameters
 
