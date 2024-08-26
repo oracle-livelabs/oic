@@ -45,15 +45,12 @@ If you just created a new Cloud account following the instructions in Getting St
 6. Enter the following details, and click ***Create***
     | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
     | --- | --- |
-    | Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
+    | Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
     | Version| Lists Version available in this tenancy. Select "Oracle Integration 3"|
     | Consumption Model| Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (Universal Credits)|
     | Edition|Enterprise|
-    | Shape|Development|
     | License Type |Select - Subscribe to a new Oracle Integration License|
     | Message Packs |1|
-    | Access Token | If this field is displayed, you are creating an instance as a non-federated user. Sign in as a federated user and restart creating an instance.|
-
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as **Active** in the State column and you'll receive an email. You are now ready to access your instance.
 Please note that once Instance is created, an instance is visible only in the region in which it was created

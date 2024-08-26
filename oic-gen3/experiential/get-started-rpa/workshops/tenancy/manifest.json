@@ -1,0 +1,65 @@
+{
+    "workshoptitle": "Get Started with Robots in Oracle Integration 3",
+    "include": {"starter-file.sql":"../../files/starter-file.sql",
+                "sample.json":"../../files/sample.json",
+                "injected-step.md":"../../files/injected-step.md"},
+      "help": "livelabs-help-db_us@oracle.com",
+      "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "type": "livelabs",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable).",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Provision Oracle Integration 3",
+            "filename": "../../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Lab 2: Create a Project",
+            "description": "Create a Project to group all the robot flow assets",
+            "type": "livelabs",
+            "filename": "../../create-project/create-project.md"
+        },
+        {
+            "title": "Lab 3: Create a Robot Connection",
+            "description": "Specify how a robot connects to an application",
+            "type": "livelabs",
+            "filename": "../../create-robot-connection/create-robot-connection.md"
+        },
+        {
+            "title": "Lab 4: Create a Robot ",
+            "description": "Create a Robot",
+            "type": "livelabs",
+            "filename": "../../create-robot/create-robot.md"
+        },
+        {
+            "title": "Lab 5: Setup a Robot Environment",
+            "description": "Setup a robot environment",
+            "type": "livelabs",
+            "filename": "../../setup-robot-environment/setup-robot-environment.md"
+        },
+        {
+            "title": "Lab 6: Test the Robot",
+            "description": "Test the robot in its environment",
+            "type": "livelabs",
+            "filename": "../../test-robot/test-robot.md"
+        },
+        {
+            "title": "Lab 7: Create and Test the Integration",
+            "description": "Create and test the integration that calls a robot",
+            "type": "livelabs",
+            "filename": "../../create-test-integration/create-test-integration.md"
+        },
+        {
+          "title": "Need Help?",
+          "description": "Need Help lab at the end of workshop.",
+          "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
