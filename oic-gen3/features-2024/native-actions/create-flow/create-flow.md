@@ -30,7 +30,7 @@ The following diagram shows the interaction between the systems involved in this
 The Final Integration Flow should look like below.
 ![Final Integration Flow](images/complete-integration-flow.png)
 
-Estimated Time: 100 minutes
+Estimated Time: 180 minutes
 
 ### Objectives
 

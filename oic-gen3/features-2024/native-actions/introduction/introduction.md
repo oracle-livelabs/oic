@@ -43,7 +43,7 @@ Note: Inserting records into database is out of the scope of this workshop. Howe
 Here is the high level architecture reference of the workshop
 ![Usecase Architecture](images/native-actions-hla.png)
 
-Estimated Time: 1 hours 15 minutes
+Estimated Time: 3 hours
 
 ### Objectives
 
