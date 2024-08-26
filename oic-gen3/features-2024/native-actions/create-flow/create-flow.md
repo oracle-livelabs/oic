@@ -27,6 +27,9 @@ This use case describes how to use Native Actions in Oracle Integration to conne
 The following diagram shows the interaction between the systems involved in this use case.
 ![Usecase Architecture](images/native-actions-hla.png)
 
+The Final Integration Flow should look like below.
+![Final Integration Flow](images/complete-integration-flow.png)
+
 Estimated Time: 100 minutes
 
 ### Objectives
