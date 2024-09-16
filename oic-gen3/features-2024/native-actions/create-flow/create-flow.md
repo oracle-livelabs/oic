@@ -30,7 +30,7 @@ The following diagram shows the interaction between the systems involved in this
 The Final Integration Flow should look like below.
 ![Final Integration Flow](images/complete-integration-flow.png)
 
-Estimated Time: 180 minutes
+Estimated Time: 60 minutes
 
 ### Objectives
 
@@ -295,7 +295,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue*.
 
-3.  In the **Configure Request** Page select *Payload Type* as **JSON Sample**, and provide the below provide request payload.
+3.  In the **Configure Request** Page select *Payload Type* as **JSON Sample**, and provide the below request payload. In the JSON payload include your object storage namespace.
 
     ```
         <copy>
@@ -429,7 +429,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
 ## Task 4: Activate the Integration.
 
-1.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration aswell.
+1.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration as well.
 
     ![Activate Individual Integration](images/activate-integration.png)
 
@@ -441,7 +441,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
 2.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Run*.
 
-3.  In the **Configure & Run**, Select *Request Type* as **Ad hoc Request**. Click on *Run*
+3.  In the **Configure & Run** page, Select *Request Type* as **Ad hoc Request**. Click on *Run*
 
 4.  An Instance of the integration is created. Select *Instance Id*. In the Instance Monitoring page, Activity Stream section expand the *For Each* action - Iteration 1
 
