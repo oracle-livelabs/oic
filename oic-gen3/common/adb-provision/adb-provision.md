@@ -134,14 +134,7 @@ In this lab, you will:
    </if>
 
     - **Bring Your Own License (BYOL)** - Select this type when your organization has existing database licenses.
-    - **License Included** - Select this type when you want to subscribe to new database software licenses and the database cloud service.
-
-    <if type="livelabs">
-    ![Select Network Access](./images/create-adb-license-type.png " ")
-    </if>
-    <if type="freetier">
-    ![Select Network Access](./images/create-adb-license-type.png " ")
-    </if>
+    - **License Included** - This license type is selected by default.
 
 10. Click **Create Autonomous Database**.
 
