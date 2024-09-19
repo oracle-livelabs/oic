@@ -62,9 +62,9 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 3. At the far right, click the Task menu and select ***Service Console***. A new browser window will open to your Oracle Integration home page.
-    ![Oracle Integration Home Page](./images/oic-homepage.png)
+    ![Oracle Integration Home Page](./images/oic3-homepage.png)
 
-If a message appears that access was denied, or the home page flashes, you don't have access to the Oracle Integration instance. See [Assigning Oracle Integration Roles to Groups](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/assigning-oic-roles-groups.html#GUID-B839F41C-445D-4137-8F2C-BF5CCBEC3D5C)
+If a message appears that access was denied, or the home page flashes, you don't have access to the Oracle Integration instance. See [Assigning Oracle Integration Roles to Groups](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/henosis-assigning-oic-roles-groups-identity-domain.html)
 
 Please *proceed to the next lab*.
 
@@ -76,4 +76,4 @@ Please *proceed to the next lab*.
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2024

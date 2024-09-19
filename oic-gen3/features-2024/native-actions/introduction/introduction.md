@@ -47,7 +47,7 @@ Estimated Time: 3 hours
 
 ### Objectives
 
-Here are some high-level objectives for the workshop on Oracle Integration for Healthcare and HL7 messaging:
+Here are some high-level objectives for the workshop on Oracle Integration using native actions:
 
 1.  Understand OIC Native Actions
     - Gain insights into the capabilities of OIC native actions and how they can be used to integrate with OCI services effectively
