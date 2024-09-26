@@ -8,7 +8,7 @@ This workshop will walk you through the steps to create an end-to-end integratio
 
 ![Integration Architecture](images/get-started-integration-scenario.png)
 
-Estimated Time: 1 hour 30 minutes
+Estimated Time: 50 minutes
 
 ### What is Oracle Integration 3?
 

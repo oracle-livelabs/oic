@@ -1,12 +1,15 @@
 # Create an Integration flow
 
 ## Introduction
+
 This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous (ADW) Table.
 
 Estimated Time: 15 minutes
 
 ### Objectives
+
 In this lab, you will execute the following:
+
 - Initiate a Scheduled integration flow
 - Configure FTP Adapter
 - Add the ADW invoke activity
@@ -14,22 +17,24 @@ In this lab, you will execute the following:
 - Define Tracking Fields
 - Activate the integration
 
-
 ### Prerequisites
+
 This lab assumes you have:
+
 - Completed all the previous labs.
 
-
 ## Task 1: Initiate a Scheduled Integration Flow
+
 We will start by creating a new integration and adding some basic info.
 
-1. In the left Navigation pane, click **Design** &gt; **Integrations**.
-2. On the Integrations page, click ***Create***.
-3. On the *Create integration* dialog, Click on **Schedule**
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
+    You can please skip this step if you are already in the project.
+2. In the **Integrations** section, click ***Add*** to create a new connection.
+3. On the *Add integration* dialog, click ***Create***.
+4. On the *Create integration* dialog, Click on ***Schedule***
+5. In the *Create integration* dialog, enter the following information:
 
-4. In the *Create integration* dialog, enter the following information:
-
-    | **Element**        | **Value**          |       
+    | **Element**        | **Value**          |
     | --- | ----------- |
     | Name         | `LL Insert Sales Orders to ADW`       |
     | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
@@ -37,12 +42,12 @@ We will start by creating a new integration and adding some basic info.
 
     Accept all other default values.
 
-5. Click **Create**.
-6. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
+6. Click **Create**.
+7. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
     ![horizontallayout](images/horizontallayout.png)
 
-
 ## Task 2: Define FTP Invoke Activity
+
 Add FTP Invoke to integration canvas.
 
 1. Hover over the outgoing arrow from the *Scheduled* activity and Click the **+** sign in the integration canvas.
@@ -55,7 +60,7 @@ Add FTP Invoke to integration canvas.
 
 4. On the *Operations* page, Select the following values:
 
-    | **Element**        | **Value**          |       
+    | **Element**        | **Value**          |
     | --- | ----------- |
     | Select Operation        | **Download File**       |
     | Select a Transfer Mode  | **Binary** |
@@ -75,6 +80,7 @@ Add FTP Invoke to integration canvas.
     ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
 ## Task 3: Add the ADW invoke activity
+
 Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canvas.
 
 1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the ***+*** sign. Click the **+** sign and select the ADW connection created in the previous lab.
@@ -85,7 +91,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 2. On the *Basic Info* page, select the following values:
 
-    | **Element**        | **Value**          |       
+    | **Element**        | **Value**          |
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
@@ -95,7 +101,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
 
-    | **Element**        | **Value**          |       
+    | **Element**        | **Value**          |
     | --- | ----------- |
     | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
     | Delete file from object store after operation completion | **Deselect** |
@@ -108,14 +114,13 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     > **Note:** The order of the columns should match the input sales_order.csv data
 
-
 4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
 
     ![Edit Copy Format options](images/edit-copy-data-format-options-1.png)
 
     In the *copy_data format Options* page Provide the following values:
 
-    | **Element**        | **Value**          |       
+    | **Element**        | **Value**          |
     | --- | ----------- |
     | Delimiter | **Comma** |
     | Skip Headers | **1** |
@@ -133,8 +138,8 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 7. Click **Save** to apply changes.
 
-
 ## Task 4: Map data between FTP Invoke and ADW invoke
+
 Use the mapper to drag fields from the source structure (downloadSalesOrders Response)  to the target structure (insertSalesOrders) to map elements between the two.
 
 When we added the ADW invoke to the integration, a map icon was automatically added.
@@ -158,7 +163,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
     ```
 
-    Complete the mapping as below:    
+    Complete the mapping as below:
 
     | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest Oracle ADW)* |
     | --- | ----------- |
@@ -174,8 +179,8 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 5. Click **Save** to persist changes.
 
-
 ## Task 5: Define Tracking Fields
+
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
     > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
@@ -204,15 +209,14 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
     The activation will be complete in a few seconds. Once activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to *Active*.
 
-
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Getting Started with Oracle Integration](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-
+- [Getting Started with Oracle Integration](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Author** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+
+- **Author** - Kishore Katta, Product Management - Oracle Integration
+- **Author** - Subhani Italapuram, Oracle Integration Product Management
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2024
