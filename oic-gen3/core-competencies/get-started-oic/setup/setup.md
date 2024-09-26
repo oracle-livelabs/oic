@@ -7,23 +7,27 @@ This lab walks you through the setup required to complete the workshop.
 Estimated Time: 15 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Obtain Database Connection details
 - Create Database Table using a SQL script
 - Create OCI Object Storage Bucket
+- Enable File Server
 - Configure File Server
 - Connect to File Server using FTP Client
 
-
 ### Prerequisites
+
 This lab assumes you have:
+
 - Completed all the previous labs.
 
-
 ## Task 1: Create a database table using a SQL script
+
 Follow these steps to create a DB table which will be used as part of this workshop.
 
-1.  If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
+1. If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
 
     ![Click Database Actions](images/click-database-actions.png)
 
@@ -33,7 +37,7 @@ Follow these steps to create a DB table which will be used as part of this works
 
    ![Enter DB username](images/enter-username.png)
 
-3.  Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
+3. Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
 
     ![Enter DB password](images/enter-password.png)
 
@@ -44,6 +48,7 @@ Follow these steps to create a DB table which will be used as part of this works
     > **Note:** If this is the very first time you open the SQL Action, then a click-demo will be displayed. Just hit the **X** button to proceed.
 
 5. The SQL Worksheet appears. Before you proceed with the SQL Worksheet, copy below code snippet:
+
     ```
     <copy>
     CREATE TABLE v_sales_orders
@@ -74,20 +79,21 @@ Now you have an external table which will be used in the Integration flow.
 
 ## Task 2: Create Object Storage Bucket
 
-1.  Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
+1. Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
     ![Select Object Storage](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
-2.  Select the compartment that you want to create your bucket in.
+2. Select the compartment that you want to create your bucket in.
     Click **Create Bucket**
 
-3.  Fill out the dialog box:
+3. Fill out the dialog box:
       - Bucket Name: Provide a name
       - Default Storage Tier: Standard
 
-4.  Click **Create**
+4. Click **Create**
     ![Create Bucket](images/bucket-details.png)
 
 ## Task 3: Obtain Database Connection details
+
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Database** from the navigation menu under Oracle Database.
 
     ![Select Autonomous Database](images/adb-navigation.png)
@@ -100,7 +106,7 @@ Now you have an external table which will be used in the Integration flow.
 
     > **Note:** Similar steps apply to both Autonomous Data Warehouse and Autonomous Transaction Processing.
 
-3.  On your Autonomous Database Details page, click the **DB Connection** button.
+3. On your Autonomous Database Details page, click the **DB Connection** button.
 
     ![Click Database Connection](images/click-database-connection.png)
 
@@ -114,13 +120,13 @@ Now you have an external table which will be used in the Integration flow.
 
 7. Click **Close**.
 
-8.  We need Object Storage Region. In Oracle Cloud Console Navigate to **Regions** from the Top Banner. Select **Manage Regions**. Make a note of the **Region Identifier** (example: us-ashburn-1) where the Object Storage Bucket is created.
+8. We need Object Storage Region. In Oracle Cloud Console Navigate to **Regions** from the Top Banner. Select **Manage Regions**. Make a note of the **Region Identifier** (example: us-ashburn-1) where the Object Storage Bucket is created.
 
     ![Region Identifier](images/region-identifier.png)
 
-9.  We need *Object Storage Tenancy OCID*. In Oracle Cloud Console Navigate to **Profile** at the Right Top Corner. Select **Tenancy:<your-tenant-id>** . On the Tenancy Details page make a note of *OCID*. We need this to Create Autonomous Database connection in Oracle Integration
+9. We need *Object Storage Tenancy OCID*. In Oracle Cloud Console Navigate to **Profile** at the Right Top Corner. Select **Tenancy:<your-tenant-id>** . On the Tenancy Details page make a note of *OCID*. We need this to Create Autonomous Database connection in Oracle Integration
 
-10.  We need *Object Storage Compartment OCID*. In Oracle Cloud Console Navigate to **Identity & Security > Compartments**. Select the Compartment in which Object Storage bucket is created in the previous task. On the Compartment Details page make a note of *OCID*.
+10. We need *Object Storage Compartment OCID*. In Oracle Cloud Console Navigate to **Identity & Security > Compartments**. Select the Compartment in which Object Storage bucket is created in the previous task. On the Compartment Details page make a note of *OCID*.
 
 11. We need one more detail which is *Object Storage User OCID*. In Oracle Cloud Console Navigate to **Profile** at the Right Top Corner. Select your **username**. On the User details page make a note of *OCID*.
 
@@ -132,7 +138,29 @@ Now you have an external table which will be used in the Integration flow.
 
 14. The *API Key* is added to the List of API Keys. Make a note of **Fingerprint**
 
-## Task 4: Configure File Server
+## Task 4: Enable File Server
+
+- An administrator must enable File Server before an organization can start using it with their Oracle Integration instance. Enabling File Server is a one-time action in the Oracle Cloud Infrastructure Console
+
+    If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
+
+    ![File Server Not Enabled](images/fileservernotenabled.png =50%x50%)
+
+    To enable File Server:
+
+1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
+2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
+
+3. Select your instance.
+   The Integration Instance Details page is displayed.
+4. Click the Enable link for File Server on the Integration Instance Information tab.
+5. When prompted to confirm enabling File Server, click ***Enable***. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
+
+6. Once complete, the OIC icon changes back to green with an Active status, and File Server shows as Enabled. You may need to log out and log back in to Oracle Integration to access the newly activated File Server.
+
+    ![File Server Enabled](images/file-server-enablement4.png)
+
+## Task 5: Configure File Server
 
 Configure File Server settings. This is required as you are using Embedded File Serve of Oracle Integration and using File Server as a target application in your integration flow.
 
@@ -159,24 +187,25 @@ Configure File Server settings. This is required as you are using Embedded File 
 10. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.
     ![Folder permissions](images/user-permissions1-1.png)
 
-## Task 5: Connect to File Server with FTP Client
+## Task 6: Connect to File Server with FTP Client
 
 To access files on the File Server you will need to use an FTP Client. You will need to configure your FTP Client with the following:
 
-* File Server IP Address.
-* File Server Port.
-* Your Oracle Integration username.
-* Your Oracle Integration password.
+- File Server Host/IP Address.
+- File Server Port.
+- Your Oracle Integration username.
+- Your Oracle Integration password.
 
-1. To obtain the File Server IP Address and Port, select **Settings** from the left Navigation pane. The IP and Port are located in the *IP and Port Information* section of the *Settings* page.
+1. To obtain the File Server Host/IP Address and Port, select **Settings** from the left Navigation pane. The IP and Port are located in the *IP and Port Information* section of the *Settings* page.
 2. Using your FTP Client choice, connect to the File Server using the SFTP - SSH File Transfer Protocol.  
     ![Example FTP Client configuration](images/ftpclient1.png)
 An example configuration using FileZilla FTP Client.  
 If the permissions are configured correctly, you should be able to list, read, and write files on the *Output* folder.
 
-
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Last Updated By/Date** - Kishore Katta - May 2022, Subhani Italapuram - Sep 2022
+
+- **Author** - Kishore Katta, Product Management - Oracle Integration
+- **Author** - Subhani Italapuram, Oracle Integration Product Management
+- **Last Updated By/Date** - Subhani Italapuram - Sep 2024
