@@ -2,13 +2,13 @@
 
 ## About this Workshop
 
-In this workshop, we shall talk about provisioning Oracle Integration 3 instance, enabling File Server, provisioning Oracle Autonomous Database and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration.
-
 This workshop will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous Date Warehouse(ADW) Table leveraging out of the box adapters.
 
 ![Integration Architecture](images/get-started-integration-scenario.png)
 
-Estimated Time: 50 minutes
+In this workshop, we shall also talk about provisioning Oracle Integration 3 instance, enabling File Server, provisioning Oracle Autonomous Database but, all of these tasks are optional.
+
+Estimated Time: 40 minutes
 
 ### What is Oracle Integration 3?
 
@@ -32,10 +32,10 @@ Oracle Integration changes all that. It empowers you to:
 
 In this workshop, you will learn how to:
 
-- Provision Oracle Integration 3 in Oracle Cloud Infrastructure
-- How to enable the File Server in Oracle Integration 3 instance.
-- Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
-- Learn several Integrations specific concepts
+- Optional, Provision Oracle Integration 3 in Oracle Cloud Infrastructure
+- Optional, How to enable the File Server in Oracle Integration 3 instance.
+- Optional, Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
+- Optional, Setup required to complete this LiveLab
 - Creating a Project
 - Creating Connections
 - Design a Scheduled Integration Flow

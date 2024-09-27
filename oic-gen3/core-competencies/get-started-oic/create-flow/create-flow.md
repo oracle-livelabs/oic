@@ -200,14 +200,14 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 ## Task 6: Activate the integration
 
-1. On the *Integrations* page, hover over the integration you created, and click the **Activate** icon
+1. Click on **...** and click the **Activate** icon
     ![Click to Activate Integration](images/click-activate-integration.png)
 
 2. In the *Activate Integration* dialog, select **Debug** as tracing level.
 
 3. Click **Activate**.
 
-    The activation will be complete in a few seconds. Once activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to *Active*.
+    The activation will be complete in a few seconds. Once activation is successful, the status of the integration changes to *Active* OR try to refresh the page so that you could see the updated status.
 
 You may now **proceed to the next lab**.
 

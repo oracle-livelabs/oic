@@ -45,7 +45,7 @@ This lab assumes you have:
 
 Submit an adhoc run of Scheduled Integration Flow
 
-1. From the *Integrations* page, hover over the Integration Flow, click on **...** (Actions) menu, click on **Run** and again click on **Run**.
+1. From the *Projects* page, hover over the Integration Flow, click on **...** (Actions) menu, click on **Run** and again click on **Run**.
 
     ![Run Scheduled Integration Flow](images/run-integration.png)
 
@@ -53,7 +53,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
     ![Cofirmation Window](images/submit-confirmation.png)
 
-    > **Note:**  Alternatively, in the Projects pane, Click on **Observe &gt; Observability &gt; Instances**
+    > **Note:**  Alternatively, in the Projects pane, Click on **Observe &gt; Instances**
 
 3. From the *Instances* page, Click on the Integration Flow.
 
