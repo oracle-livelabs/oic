@@ -7,6 +7,7 @@ This workshop shows you how to design and develop a Real time Synchronization Us
 Estimated Time: 2 hours
 
 ### What is Oracle Integration 3?
+
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
 [First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
@@ -29,8 +30,7 @@ In this workshop, you will learn how to:
 * An Oracle Free Tier or Paid Cloud Account.
 * A Chrome browser.
 
-
-## Leverage the ERP Cloud Adapter in Oracle Integration 3
+## Task 1: Leverage the ERP Cloud Adapter in Oracle Integration 3
 
 Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
 
@@ -41,19 +41,21 @@ As an Integration Developer, if you have a requirement to integrate an ERP Cloud
 The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS applications with Oracle ERP Cloud without having to know about the specific details involved in the integration.
 
 The Oracle ERP Cloud Adapter provides the following key benefits:
-- Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud.
-- Integrates easily with the Oracle ERP Cloud application’s WSDL file to produce a simplified, integration-centric WSDL.
-- Generates automatic mapping to the selected business object, event subscription, or business (REST) API.
-- Simplifies connection creation by automatically identifying the required service resources based on the Oracle ERP Cloud hostname you specify when creating a new connection on the **Connections** page.
-- Supports several security policies for selection during Oracle ERP Cloud Adapter connection configuration:
-    - Username Password Token With PGP Key Support
-    - Username Password Token
-    - OAuth Authorization Code Credentials
-- Provides standard error handling capabilities.
-- Enables you to upload a file in the Oracle ERP Cloud business tables.
-- Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
 
-###	Video Preview
+* Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud.
+* Integrates easily with the Oracle ERP Cloud application’s WSDL file to produce a simplified, integration-centric WSDL.
+* Generates automatic mapping to the selected business object, event subscription, or business (REST) API.
+* Simplifies connection creation by automatically identifying the required service resources based on the Oracle ERP Cloud hostname you specify when creating a new connection on the **Connections** page.
+* Supports several security policies for selection during Oracle ERP Cloud Adapter connection configuration:
+  * Username Password Token With PGP Key Support
+  * Username Password Token
+  * OAuth Authorization Code Credentials
+* Provides standard error handling capabilities.
+* Enables you to upload a file in the Oracle ERP Cloud business tables.
+* Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
+
+### Video Preview
+
 [ERP Cloud Integration Patterns](youtube:nKXbh2ZPuMI)
 
 You may now **proceed to the next lab**.
