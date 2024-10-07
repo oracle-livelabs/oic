@@ -29,7 +29,7 @@ We will start by creating a new integration and adding some basic info.
 
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
     You can please skip this step if you are already in the project.
-2. In the **Integrations** section, click ***Add*** to create a new connection.
+2. In the **Integrations** section, click ***Add***.
 3. On the *Add integration* dialog, click ***Create***.
 4. On the *Create integration* dialog, Click on ***Schedule***
 5. In the *Create integration* dialog, enter the following information:
@@ -151,17 +151,11 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
     Expand the **Source** node:
 
-    ```
-    downloadSalesOrders Response(FTP) > Download File To ICS Response > Download Response > ICSFiles > ICSFile
-
-    ```
+        downloadSalesOrders Response(FTP) > Download File To ICS Response > Download Response > ICSFiles > ICSFile
 
     Expand the **Target** node:
 
-    ```
     insertSalesOrders Request
-
-    ```
 
     Complete the mapping as below:
 
@@ -200,7 +194,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
 ## Task 6: Activate the integration
 
-1. Click on **...** and click the **Activate** icon
+1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
     ![Click to Activate Integration](images/click-activate-integration.png)
 
 2. In the *Activate Integration* dialog, select **Debug** as tracing level.

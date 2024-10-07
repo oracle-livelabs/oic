@@ -4,21 +4,6 @@
 
 This lab walks you through the steps to create Integration flow.
 
-This use case uses Oracle Integration and ERP Cloud Import bulk data services with File Based Data Import (FBDI) complaint files.
-The goal is to import ERP data such as account payable invoices using processes in ERP Cloud.
-
-The typical flow of this use case is:
-
-1. The user uploads an FBDI based account payable invoice file to an FTP Server.
-2. Oracle Integration imports the account payable invoice file into the ERP Cloud.
-
-This labs will explore the ERP Cloud adapter and File Adapter features and lets you know how to perform the following tasks:
- 1. Read files from an SFTP Server
- 2. Synchronize account payable invoices into the ERP Cloud
-
-  The following diagram shows the runtime interaction between the systems involved in this use case:
-    ![FBDIImport](../images/bulk-import-simple.png)
-
 Estimated Time: 30 minutes
 
 ### Objectives

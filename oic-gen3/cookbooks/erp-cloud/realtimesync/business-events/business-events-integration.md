@@ -33,10 +33,12 @@ This lab assumes you have:
 
 ## Task 1: Create the PO Event Integration
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
-2. On the **Integrations page**, click ***Create***.
-3. On the **Create integration** dialog, Click on ***Application***.
-4. In the **Create integration** dialog, enter the following information:
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
+    You can please skip this step if you are already in the project.
+2. In the **Integrations** section, click ***Add***.
+3. On the *Add integration* dialog, click ***Create***.
+4. On the *Create integration* dialog, Click on ***Application***.
+5. In the *Create integration* dialog, enter the following information:
 
     | **Element**        | **Value**          |
     | --- | ----------- |
@@ -45,16 +47,14 @@ This lab assumes you have:
 
     Accept all other default values.
 
-5. Click ***Create***.
-
-6. Click ***Save*** to apply changes.
+6. Click ***Create***.
+7. Click ***Save*** to apply changes.
 
 ## Task 2: Define ERP Purchase Order (PO) Event trigger
 
 Add ERP PO Event trigger to the empty integration canvas.
 
 1. Click the ***+*** sign in the integration canvas.
-
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 3. On the **Basic Info** page,
      * for the **What do you want to call your endpoint?** element, enter ***POEvent***
@@ -67,21 +67,21 @@ Add ERP PO Event trigger to the empty integration canvas.
     | Define the purpose of the trigger         | Receive Business Events raised within ERP Cloud       |
     | Business Event for Subscription  | Purchase Order Event |
     | Filter Expr for Purchase Order Event | [see code snippet below] |
-    |
 
     ```
     <copy>
-    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/">$eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable"</xpathExpr></copy>
+    <xpathExpr xmlns:ns0="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/" xmlns:ns2="http://xmlns.oracle.com/apps/prc/po/editDocument/purchaseOrderServiceV2/types/">$eventPayload/ns2:result/ns0:Value/ns0:PurchaseOrderLine/ns0:ItemDescription="Lan Cable"</xpathExpr>
+    </copy>
     ```
 
     > **Tip:**
     1. If you are working on a shared ERP Cloud environment, it is recommended to use a distinct value in the filter expression under **ItemDescription**. For example `Lan Cable <your-initials>`. The value you enter is case sensitive. Write down this value for later use.
     2. Please note that the filter is not mandatory, however, it does allow you to control which integration should be triggered. This is useful if there are multiple integrations subscribed to the PO Event in the same ERP Cloud environment. Without the filter expression, all integrations subscribed to the PO Event would get triggered whenever that specific event occurs.
 
-6. Click ***Continue***.
-7. On the **Summary** page, click ***Finish***.
-8. Click ***Save*** to persist changes.
-9. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
+5. Click ***Continue***.
+6. On the **Summary** page, click ***Finish***.
+7. Click ***Save*** to persist changes.
+8. Optional, Select Layout to ***Horizontal*** and click ***Save*** to apply changes.
     ![Select Horizontal Layout](images/horizontallayout.png =30%x*)
 
 ## Task 3: Add the FTP Adapter as invoke activity
@@ -105,7 +105,7 @@ This invokes the FTP adapter Configuration Wizard.
     | File Name Pattern | PO%SEQ%.json  |
 
     Leave the rest as default.
-3. On the **Schema page**,
+4. On the **Schema page**,
     * For the **Do you want to specify the structure of the contents of the file?**, select as ***Yes***
     * select the ***Sample JSON document*** from the drop-down.
     * Copy the below json content into a file and save it on to your desktop. Name it as ***PurchaseOrder.json***
@@ -124,7 +124,7 @@ This invokes the FTP adapter Configuration Wizard.
     </copy>
     ```
 
-4. Click ***Continue***.
+5. Click ***Continue***.
 6. On the **File Contents - Definition** page, upload the file **PurchaseOrder.json** saved in the previous step
 7. Click ***Continue*** and Review the **Summary** page and click on ***Finish***
 8. Click on ***Save***
@@ -141,16 +141,8 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 2. Use the mapper to drag element nodes in the source ERP Cloud structure to element nodes in the target FTP structure.
 
     Expand the ***Source*** node:
-
-    ```
-    POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value
-    ```
-
-    Expand the ***Target*** node:
-
-    ```
-    Write2FTP Request > request-wrapper
-    ```
+        POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value
+    Expand the ***Target*** node: Write2FTP Request > request-wrapper
 
     Complete the mapping as below:
 
@@ -190,9 +182,7 @@ When we added the FTP invoke to the integration, a map icon was automatically ad
 
 ## Task 6: Activate the integration
 
-1. On the **Integrations** page, click on the ***Activate*** icon.
-
-    ![Click to Activate Integration](images/click-activate-integration.png)
+1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
 
 2. On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
     ![tracinglevel](images/tracinglevel.png)
@@ -225,7 +215,7 @@ Access your ERP Cloud environment.
 
 7. Click ***Create***.
 
-  The **Edit Document (Purchase Order)** page is displayed.
+    The **Edit Document (Purchase Order)** page is displayed.
 
 8. In the **Lines** Tab, click ***+*** to add a Purchase Order line row.
       ![Add PO Line](images/add-po-line.png)
@@ -305,4 +295,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2024

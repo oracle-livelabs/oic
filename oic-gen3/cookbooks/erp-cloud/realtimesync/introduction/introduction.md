@@ -6,28 +6,22 @@ This workshop shows you how to design and develop a Real time Synchronization Us
 
 Estimated Time: 2 hours
 
-### What is Oracle Integration 3?
-
-With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
-
-[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
-
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Creating Free Trial Account
-* Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
-* Enable File Server.
-* Configure File Server and connect with FTP client.
-* Create and configure common connections which are useful for this workshop like File Server, REST and ERP Connection
-* Learn ERP Cloud Integration Design Patterns and Usecases.
+* Optional, Enable File Server.
+* Optional, Configure File Server and connect with FTP client.
+* Optional, Configure ERP Cloud for Oracle Integration
+* Creating a Project
+* Creating Connections
 * Create a Real-Time Synchronization scenario using Business Events.
 * Use Business Object to Integrate with ERP Cloud.
 
 ### Prerequisites
 
-* An Oracle Free Tier or Paid Cloud Account.
+* Oracle Integration Instance.
+* Access to the ERP Cloud environment
 * A Chrome browser.
 
 ## Task 1: Leverage the ERP Cloud Adapter in Oracle Integration 3
@@ -69,4 +63,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2024
