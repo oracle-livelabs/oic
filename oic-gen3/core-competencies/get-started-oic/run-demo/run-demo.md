@@ -55,7 +55,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
     > **Note:**  Alternatively, in the Projects pane, Click on **Observe &gt; Instances**
 
-3. From the *Instances* page, Click on the Integration Flow.
+3. From the *Instances* section, Click on the Integration Flow.
 
     ![Open the Integration Instance](images/integration-instance-open.png)
 

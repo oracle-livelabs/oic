@@ -259,7 +259,7 @@ Access your ERP Cloud environment.
 
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
-1. In the Integration navigation pane, Go back to the ***Home*** page &gt; click on ***Observability*** &gt; ***Instances***
+1. In the Projects pane, Click on **Observe &gt; Instances**
 
 2. Find our corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 

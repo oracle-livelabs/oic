@@ -387,8 +387,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 
 ## Task 7: Activate the integration
 
-1. On the **Integrations** page, click on the ***Activate*** icon.
-
+1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
 2. On the **Activate Integration** dialog, select ***Audit*** as tracing level and click ***Activate***
 
 * The activation will be completed in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
@@ -421,7 +420,7 @@ We will be testing the Integration flow with a happy case and fault case by modi
 
 We will test the end to end Integration flow using the built-in Test Client. In an ideal scenario, the request would be posted from a Web, Mobile Client and so on.
 
-1. From **Integrations** page, Selection **Invoice Validation** Integration Flow, Click on ***... (Actions)*** and Click on  ***Run***
+1. From **Integrations** section, Select **Invoice Validation** Integration Flow, Click on ***... (Actions)*** and Click on  ***Run***
 
 2. Select ***Body*** Tab and make sure ***Text*** Radio button is selected. Provide the below Payload
 
@@ -507,4 +506,4 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2024

@@ -22,6 +22,8 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all the previous labs.
+- Oracle Autonomous Data Warehouse Instance
+- Oracle Integration Instance
 
 ## Task 1: Create a database table using a SQL script
 

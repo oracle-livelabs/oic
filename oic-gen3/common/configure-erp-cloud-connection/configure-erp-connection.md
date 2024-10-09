@@ -60,7 +60,7 @@ In this lab, you will:
 
  Reference Resources:
 
-Step 1: [Create an Oracle ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/create-oracle-erp-cloud-adapter-connection.html)
+    [Create an Oracle ERP Cloud Adapter Connection](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/create-oracle-erp-cloud-adapter-connection.html)
 
 
 ### Prerequisites
