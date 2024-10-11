@@ -18,7 +18,7 @@ This labs will explore the ERP Cloud adapter and File Adapter features and lets 
  2. Synchronize account payable invoices into the ERP Cloud
 
   The following diagram shows the runtime interaction between the systems involved in this use case:
-    ![FBDIImport](../images/bulk-import-simple.png)
+    ![FBDIImport](images/bulk-import-simple.png)
 
 Estimated Time: 2 hours
 
