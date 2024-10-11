@@ -18,43 +18,43 @@
             "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
+            "title": "Configure OIC",
+            "filename": "../../../../../common/configure-oic/configure-oic.md"
         },
         {
-            "title": "Lab 2: Enable File Server",
-            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
-        },
-        {
-            "title": "Lab 3: Setup",
-            "filename": "../../../../../common/setup/setup.md"
-        },
-        {
-            "title": "Lab 4: Configure Connections",
-            "filename": "../../create-connections/create-connections.md"
-        },
-        {
-            "title": "Lab 5: Configure ERP Cloud for Oracle Integration 3",
+            "title": "Configure ERP Cloud for Oracle Integration 3",
             "filename": "../../../../../common/configure-erpcloud-for-oic/configure-erpcloud-for-oic.md"
         },
         {
-            "title": "Lab 6: Introduction to Design Patterns",
-            "filename": "../../../../../common/intro-design-patterns/intro-to-design-patterns.md"
-        },
-        {
-            "title": "Lab 7: Configure ERP Cloud Connection",
-            "filename": "../../../../../common/configure-erp-cloud-connection/configure-erp-connection.md"
-        },
-        {
-            "title": "Lab 8: Configure Certificates",
+            "title": "Configure Certificates",
             "filename": "../../configure-certificates/configure-certificates.md"
         },
         {
-            "title": "Lab 9: Functional Details of the ERP Cloud Adapter",
+            "title": "Introduction to Design Patterns",
+            "filename": "../../../../../common/intro-design-patterns/intro-to-design-patterns.md"
+        },
+        {
+            "title": "Functional Details of the ERP Cloud Adapter",
             "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-          "title": "Lab 10: Bulk Extract",
+            "title": "Lab 1: Create a Project",
+            "filename": "../../../../../common/create-project/create-project.md"
+        },
+        {
+            "title": "Lab 2: Create FTP Connection",
+            "filename": "../../../../../common/create-ftp-connection/create-ftp-connection.md"
+        },
+        {
+            "title": "Lab 3: Create ERP Connection",
+            "filename": "../../../../../common/configure-erp-cloud-connection/configure-erp-connection.md"
+        },
+        {
+            "title": "Lab 4: Create SOAP Connections",
+            "filename": "../../create-soap-connections/create-soap-connections.md"
+        },
+        {
+          "title": "Lab 5: Bulk Extract",
           "filename": "../../create-flow/bulkextract.md"
         },
         {
