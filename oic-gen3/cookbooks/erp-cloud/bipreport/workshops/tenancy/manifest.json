@@ -18,31 +18,27 @@
             "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Introduction to Design Patterns",
+            "title": "Lab 1: Provision Oracle Integration 3",
+            "filename": "../../../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Lab 2: Configure Connections",
+            "filename": "../../create-connections/create-connections.md"
+        },
+        {
+            "title": "Lab 3: Introduction to Design Patterns",
             "filename": "../../../../../common/intro-design-patterns/intro-to-design-patterns.md"
         },
         {
-            "title": "Functional Details of the ERP Cloud Adapter",
+            "title": "Lab 4: Functional Details of the ERP Cloud Adapter",
             "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
         },
         {
-            "title": "Lab 1: Create a Project",
-            "filename": "../../../../../common/create-project/create-project.md"
-        },
-        {
-            "title": "Lab 2: Create REST Connection",
-            "filename": "../../../../../common/create-rest-connection/create-rest-connection.md"
-        },
-        {
-            "title": "Lab 3: Create SOAP Connection",
-            "filename": "../../create-soap-connection/create-soap-connection.md"
-        },
-        {
-            "title": "Lab 4: Configure BIP Report",
+            "title": "Lab 5: Configure BIP Report",
             "filename": "../../setup/setup.md"
         },
         {
-          "title": "Lab 5: BIP Report",
+          "title": "Lab 6: BIP Report",
           "filename": "../../create-flow/bipreport.md"
         },
         {
