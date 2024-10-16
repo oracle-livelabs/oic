@@ -281,6 +281,7 @@ Manage business identifiers that enable you to track fields in messages during r
     > **Note:** Wait for few seconds and refresh the screen and make sure that your integration is in Active mode.
 
 4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
+    ![integrationactionsmenu](../images/integrationactionsmenu.png)
 5. Click on ***Run details***
 6. Copy **Metadata URL** and save it in some text file.
 
@@ -316,6 +317,7 @@ Manage business identifiers that enable you to track fields in messages during r
 Refresh your page after few seconds.
 
 1. Select **ERP Bulk Extract**,  Click on **...(Actions)** menu and Click on ***Run***
+    ![Run Integration](../images/run-integration.png)
 2. Click on ***Run***
 3. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
