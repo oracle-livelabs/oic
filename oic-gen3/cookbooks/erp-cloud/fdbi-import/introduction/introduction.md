@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop shows you how to design and develop File-based Data Integration (FBDI) Import usecase in Oracle Integration 3 with the ERP Cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly develop the usecases which interacts with the ERP Cloud.
+This workshop shows you how to design and develop File-based Data Integration (FBDI) Import usecase in Oracle Integration 3 with the ERP Cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly import the data into the ERP Cloud in a secured way using various authentication schemes
 
 In this workshop, we shall use Oracle Integration and ERP Cloud Import bulk data services with File Based Data Import (FBDI) complaint files.
 The goal is to import ERP data such as account payable invoices using processes in ERP Cloud.
