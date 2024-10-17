@@ -159,7 +159,7 @@ A map action named ImportAPInvoicestoERPCloud is automatically created. We will 
 
     b. filename
 
-        ![DataMapping](../images/datamapping.png)
+    ![DataMapping](../images/datamapping.png)
 7. Click on ***Validate***
 A confirmation message appears.
 8. Click ***&lt; (Go back)***
