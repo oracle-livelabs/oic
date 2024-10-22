@@ -1,12 +1,15 @@
 # Run end-to-end Integration Flow
 
 ## Introduction
+
 This lab will walk you through the steps to run the integration flow.
 
 Estimated Time: 10 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Create a file in the File Server
 - Execute an adhoc run of Scheduled Integration Flow
 - Track message flow triggered
@@ -14,13 +17,14 @@ In this lab, you will:
 - Verify the sales orders file in Object Storage
 
 ### Prerequisites
-This lab assumes you have:
-- Completed all previous labs successfully
 
+This lab assumes you have:
+
+- Completed all previous labs successfully
 
 ## Task 1: Create a sales order file in the File Server
 
-1.  Copy the below data set in a file **sales_orders.csv** and save it to your desktop.
+1. Copy the below data set in a file **sales_orders.csv** and save it to your desktop.
 
     ```
     <copy>
@@ -33,29 +37,29 @@ This lab assumes you have:
     </copy>
     ```
 
-2.  Connect to the File Server. Copy sales_orders.csv from your desktop to a folder on the File Server that you specified in Lab 6, Task 2 as the Input Directory.
+    > **Note:** If you are a Bootcamp user then modify Order IDs to the unique values as all the participants would be using same database and it may cause duplicates in the database table
+
+2. Connect to the File Server. Copy sales_orders.csv from your desktop to a folder on the File Server that you specified in Lab 3, Task 2 as the Input Directory.
 
 ## Task 2: Run the Scheduled Integration Flow
 
 Submit an adhoc run of Scheduled Integration Flow
 
-1. From the *Integrations* page, hover over the Integration Flow, click on **...** (Actions) menu, click on **Run** and again click on **Run**.
+1. From the *Projects* page, hover over the Integration Flow, click on **...** (Actions) menu, click on **Run** and again click on **Run**.
 
     ![Run Scheduled Integration Flow](images/run-integration.png)
-
 
 2. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
 
     ![Cofirmation Window](images/submit-confirmation.png)
 
-    > **Note:**  Alternatively, in the Integration navigation pane, Go to **Home page &gt; Observability &gt; Instances**
+    > **Note:**  Alternatively, in the Projects pane, Click on **Observe &gt; Instances**
 
-3.  From the *Instances* page, Click on the Integration Flow.
+3. From the *Instances* section, Click on the Integration Flow.
 
     ![Open the Integration Instance](images/integration-instance-open.png)
 
     The flow ran successfully if it is displayed with a green line.
-
 
 4. In the *Activity Stream* window, click on the Messages which has **View Payload** icon to review the request and response messages of each and every activity.
 
@@ -63,7 +67,15 @@ Submit an adhoc run of Scheduled Integration Flow
 
     ![Activity Stream](images/activity-stream.png)
 
-## Task 3: Verify sales orders records in ADW Table
+> **Note:** If you are a Bootcamp user then execute task 3 only and skip other tasks.
+    If you are a non Bootcamp user then skip task 3 and continue with other tasks..
+
+## Task 3: Verify sales orders records in ADW Table via Visual Builder web application.
+
+- [Verify sales orders](https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/builder/rt/OrderApplication/live/webApps/orderapps/)
+
+## Task 4: Verify sales orders records in ADW Table
+
 Follow these steps to view the sales orders record in the designated DB table.
 
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Data Warehouse** from the navigation menu.
@@ -86,14 +98,13 @@ Follow these steps to view the sales orders record in the designated DB table.
 
    ![Enter DB username](../setup/images/enter-username.png)
 
-5.  Enter the **ADMIN** password and click **Sign in**.
+5. Enter the **ADMIN** password and click **Sign in**.
 
     ![Enter DB password](../setup/images/enter-password.png)
 
 6. The Database Actions page opens. In the *Development* box, click **SQL** or right click on **SQL** and click on **Open Link in New Tab**.
 
     ![Open SQL](../setup/images/open-sql.png)
-
 
 7. The SQL Worksheet appears. In the *Navigator* on the left, select the **V\_SALES\_ORDERS** table, then right-click on **Open**.
     ![Open SO table](images/open-so-table.png)
@@ -103,16 +114,16 @@ Follow these steps to view the sales orders record in the designated DB table.
 8. Click on **Data** in the left menu to display the table data. Verify your inserted Sales Orders records.
    ![Show SO data](images/show-so-data.png)
 
-## Task 4: Verify sales orders file in Object Storage
+## Task 5: Verify sales orders file in Object Storage
 
 Verify sales orders file archived in OCI Object storage
 
-1.  Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
+1. Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
     ![Select Object Storage](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
-2.  Select the **Compartment** and Click on the Bucket example: *bucket-demo* created earlier.
+2. Select the **Compartment** and Click on the Bucket example: *bucket-demo* created earlier.
 
-3.  In the list of *Objects* notice **sales_orders.csv** file uploaded. The object storage is used as intermediary storage to import data set in ADW. From the adapter configuration page, you can always select to delete the file after the operation if required.
+3. In the list of *Objects* notice **sales_orders.csv** file uploaded. The object storage is used as intermediary storage to import data set in ADW. From the adapter configuration page, you can always select to delete the file after the operation if required.
 
     ![Verify File in Object Storage](images/verify-file-so-os.png)
 
@@ -120,11 +131,12 @@ Verify sales orders file archived in OCI Object storage
 
 ## Learn More
 
-* [Activate Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/activate-and-deactivate-integrations.html)
+- [Activate Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/activate-and-deactivate-integrations.html)
 
-* [Monitor Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/track-integration-instances.html#GUID-46A7C0A0-CBE4-4F1B-9B45-62A5AFA89D74)
+- [Monitor Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/track-integration-instances.html#GUID-46A7C0A0-CBE4-4F1B-9B45-62A5AFA89D74)
 
 ## Acknowledgements
-* **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+
+- **Author** - Kishore Katta, Product Management - Oracle Integration
+- **Author** - Subhani Italapuram, Product Management - Oracle Integration
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2024
