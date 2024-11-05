@@ -11,7 +11,24 @@ This use case describes how to use Oracle Integration with Oracle ERP Business I
    - OIC sends the response to the client.
 
  The following diagram shows the interaction between the systems involved in this use case.
-    ![FBDIImport](../images/bip-report-stage-file.png)
+    ![Invoke BIP Report Flow](../images/bip-report-stage-file.png)
+
+### Components and Flow Description
+
+The diagram illustrates a high-level overview of an integration process between a **Web Client**, **Oracle Integration**, and **ERP Cloud** with a focus on extracting bulk data synchronously using Oracle Integration.
+
+1. **Web Client**:
+     - The process begins with a **Web Client** triggering the integration. This client can be a front-end application or any user interface that initiates the request to extract bulk data from ERP Cloud.
+
+2. **Oracle Integration**:
+     - **Trigger**: The Web Client initiates a trigger in Oracle Integration, which begins the integration process.
+     - **Invoke ERP Cloud using the public report service**: Oracle Integration invokes ERP Cloud through the public report service. This is done to run a Business Intelligence Publisher (BIP) report, which facilitates the extraction of bulk data.
+     - **Decode the response**: Once the BIP report is executed in ERP Cloud, the response (likely in XML or another structured format) is received. Oracle Integration decodes this response to make it suitable for the Web Client.
+     - **Response**: The decoded response, containing the extracted bulk data, is sent back to the Web Client.
+
+3. **ERP Cloud**:
+     - **Business Intelligence Publisher (BIP) Report**: The core function within ERP Cloud that processes the request from Oracle Integration. The BIP Report is run to fetch the required bulk data.
+
 
 Estimated Time: 30 minutes
 
@@ -27,15 +44,16 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* All previous labs successfully completed.
+* All previous labs successfully completed and have access to Oracle Integration Designer Console
 
 
-## Task 1: Create the Short BIP Report Integration
+## Task 1: Create the Synchronous BIP Report Integration
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
-2. On the **Integrations page**, click ***Create***.
-3. On the **Create integration** dialog, select and click on ***Application***.
-4. In the **Create integration** dialog, enter the following information:
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created. Ignore the step if you are already in the project.
+2. In the **Integrations** section, click ***Add***.
+3. On the *Add integration* dialog, click ***Create***.
+4. On the **Create integration** dialog, select and click on ***Application***.
+5. In the **Create integration** dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
@@ -44,8 +62,8 @@ This lab assumes you have:
 
     Accept all other default values.
 
-5. Click ***Create***.
-6. Click on Horizontal to change the layout to Horizontal
+6. Click ***Create***.
+7. Click on Horizontal to change the layout to Horizontal
 
 ## Task 2: Create the REST Trigger
 
@@ -243,13 +261,15 @@ Refresh your page after few seconds.
 4. Look at the Response section to verify the BIP report results and verify the Status is 200 OK
 5. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
+OR you can also track by clicking on ***Observability*** tab in your project, and click on ***Instances***
 
-## Task 12: Congratulations
-Congratulations! You have invoked an integration from a web client using REST. On the Oracle Integration side, you've called a service, convert the response to JSON, and sent the data back to the web client.
+## Task 12: Congratulations 🎉
+Congratulations on successfully completing the hands-on lab on Extracting Bulk Data Synchronously from ERP Cloud using Oracle Integration! 🎉
+In this lab, you’ve gained valuable experience in designing and implementing a seamless integration flow between Oracle Integration and ERP Cloud. Here’s what you’ve accomplished:
 
-
-You may now **proceed to the next lab**.
+- Invoking ERP Cloud Public Report Service: You mastered the technique of invoking ERP Cloud's Business Intelligence Publisher (BIP) report service to retrieve bulk data efficiently.
+- Decoding and Processing Responses: You developed skills in handling and decoding structured data responses from ERP Cloud, ensuring the information is formatted correctly for downstream use.
+- Building End-to-End Integration Flows: Overall, you now understand how to build robust integrations that connect different systems, ensuring real-time data synchronization and reporting.
 
 ## Learn More
 
@@ -261,4 +281,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** -
+* **Last Updated By/Date** - Kishore Katta, November 2024

@@ -1,4 +1,4 @@
-# AtomFeeds Integration Flow
+# Design Integration to Subscribe to New Hire Atom Feeds
 
 ## Introduction
 
@@ -8,6 +8,27 @@ This use case explores how to use of Oracle Integration 3 with Oracle HCM REST a
 
  The following diagram shows the interaction between the systems involved in this use case.
     ![directory-synchronization](../images/directory-synchronization.png)
+    The diagram illustrates a workflow where Oracle Integration Cloud (OIC) facilitates the integration between Oracle HCM Cloud and an external identity management system using SFTP for file transfer. Here's a step-by-step description of the flow:
+
+1. **HCM Cloud:**
+    - **Publish New Hire Feed (ATOM Data):** HCM Cloud generates a New Hire feed containing employee information. This feed is published using the ATOM Data service.
+    - **REST Services for retrieving additional data of new hires:**
+       - **Emps Service:** Provides employee-related data.
+       - **Assignment Service:** Manages employee assignments.
+       - **Work Structure Service:** Handles organizational structures.
+
+2. **Oracle Integration Cloud (OIC):**
+    - **Schedule:** OIC periodically schedules the integration process.
+    - **Subscribe to ATOM NewHire Feed:** OIC subscribes to the New Hire feed from HCM Cloud, receiving the data updates.
+    - **Transform Data:** The received data is transformed into the desired format suitable for the identity management system.
+    - **Stage New Hires:** The transformed data is staged within OIC for further processing.
+    - **Write File to SFTP:** The staged data is then written to a file and sent to an SFTP server.
+
+3. **File Server (SFTP):**
+    - The final file containing the new hire information is stored on the SFTP server, where it can be accessed by the customer's identity management system.
+
+### Summary:
+This integration uses Oracle Integration 3 to automate the transfer of new hire data from Oracle HCM Cloud to a customer's identity management system. OIC plays a critical role in subscribing to the HCM feed, transforming data, and securely transferring it via SFTP. This ensures that the identity management system is updated with the latest employee information.
 
 Estimated Time: 50 minutes
 
@@ -22,12 +43,12 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* All previous labs successfully completed.
+* All previous labs successfully completed and have access to Oracle Integration Designer Console
 
 ## Task 1: Create the Directory Synchronization Integration
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
-2. On the **Integrations page**, click ***Create***.
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created. Ignore the step if you are already in the project.
+2. In the **Integrations** section, click ***Add***.
 3. On the **Create integration** dialog, select and click on ***Schedule***.
 4. In the **Create integration** dialog, enter the following information:
 
@@ -136,7 +157,6 @@ Let's iterate over the new hires that you got from the ATOM feed in a JSON file,
 4. Enter ***CurEntry*** as a **Current element name**
 5. Click ***Save*** to apply changes and click on main canvas so that child window disappears
     ![foreach](../images/foreach.png)
-
 
 ## Task 11: Write New Records to Stage
 Let's write each new record to a stage file.
@@ -260,14 +280,25 @@ Refresh your page after few seconds.
 2. Select **Directory Synchronization**,  Click on **...(Actions)** menu and Click on ***Run***
 3. Click ***Run*** (in the upper right of the page).
 4. Click the link which appears on top to track the instance.
-The track instance page appears. The Integration state should be processing or successful. Alternatively, you can track the instance by clicking on ***Home***, ***Observability*** and ***Instances***
+The track instance page appears. The Integration state should be processing or successful. Alternatively, you can track the instance by clicking on ***Observability*** tab and then Select ***Instances*** tab
 5. Verify the csv file created in the File Server which contains new hire records.
 6. Run the Integration once again and notice the Scheduled Parameter Current Value which contains the last run date. This time you should see no records fetched.
 
-## Task 20: Congratulations
-Congratulations! You have used HCM Cloud adapter to get the new hire ATOM feeds and created a csv file in File server with all new hire entries.
+## Task 20: Congratulations 🎉
 
-You may now **proceed to the next lab**.
+🎉 Congratulations on Completing the Hands-on Lab! 🎉
+
+You have used HCM Cloud adapter to get the new hire ATOM feeds and created a csv file in File server with all new hire entries.
+
+You've successfully completed the hands-on lab, mastering key skills in integrating Oracle HCM Cloud with external systems using Oracle Integration Cloud (OIC). Here's what you've achieved:
+
+**Integration with HCM Cloud:** You’ve learned how to subscribe to ATOM feeds and interact with HCM Cloud REST services to extract and manipulate employee data.
+
+**Data Transformation:** You’ve acquired the ability to transform HCM Cloud data into formats required by external systems, ensuring seamless data exchange.
+
+**Automated File Handling:** You’ve demonstrated proficiency in staging and securely transferring files via SFTP, a crucial skill for integrating with identity management systems.
+
+**Scheduling and Orchestration:** You’ve managed to schedule and automate the entire integration process, showcasing your understanding of OIC’s powerful scheduling capabilities.
 
 ## Learn More
 
@@ -278,4 +309,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Oct 2023
+* **Last Updated By/Date** - Kishore Katta, November 2024

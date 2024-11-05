@@ -194,8 +194,6 @@ A confirmation message appears.
 
 ## Task 9: Run the integration
 
-Refresh your page after few seconds.
-
 1. In the **Integrations** section, Click on **...** of the Integration and click on ***Run***
 2. Click on ***Run*** again.
 3. Click the link which appears on top to track the instance.

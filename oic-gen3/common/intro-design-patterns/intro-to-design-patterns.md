@@ -137,9 +137,9 @@ Designed to extract lookup values/metadata/transaction details of a transaction 
 
 To automate an entire extraction process using Oracle Integration there are a couple of ways to do this. Automate the entire process of extraction per the below recommendations:
 
-a.	When the report size is greater than 10 MB it is recommended to leverage the extract process which pushes the file to a Content Server (UCM) which can be fetched later for further processing. This is purely an asynchronous invocation.
+a.	When the report size is greater than 100 MB it is recommended to leverage the extract process which pushes the file to a Content Server (UCM) which can be fetched later for further processing. This is purely an asynchronous invocation.
 
-b.	For smaller data sets less than 10 MB it is recommended to leverage synchronous Invocation of report service which produces the report response instantly. Ideally, client applications maybe wanted to show data set values instantly to the end-user to take a further course of action.
+b.	For smaller data sets less than 100 MB it is recommended to leverage synchronous Invocation of report service which produces the report response instantly. Ideally, client applications maybe wanted to show data set values instantly to the end-user to take a further course of action.
 
 Irrespective of the method a BIP Report must exist in the ERP Cloud.
 
@@ -154,4 +154,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2022
+* **Last Updated By/Date** - Kishore Katta, November 2024
