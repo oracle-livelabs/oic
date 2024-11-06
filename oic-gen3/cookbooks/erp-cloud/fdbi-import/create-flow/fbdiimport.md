@@ -16,7 +16,7 @@ The diagram illustrates a high-level overview of an integration process between 
 
 2. **Oracle Integration**:
      - **Oracle Integration** picks up the FBDI file from the File Server.
-     - **Oracle Integration** invokes the job *Import Payables Invoices* job in the ERP Cloud application for bulk data import into ERP Cloud. This activity uploads the file into UCM as well as it calls the respective job.
+     - **Oracle Integration** invokes the *Import Payables Invoices* job in the ERP Cloud application for bulk data import into ERP Cloud. This activity uploads the file into UCM as well as it calls the respective job.
 
 3. **ERP Cloud**:
      - **ERP Cloud** acts a target system for this use case and process the FBDI file
