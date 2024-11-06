@@ -15,6 +15,36 @@ This use case includes the following steps:
  The following diagram shows the interaction between the systems involved in this use case.
      ![Bulk Extract Integration Architecture](../images/bulk-export-callback.png)
 
+The diagram illustrates the high-level flow of an integration process involving bulk data extraction from ERP Cloud using Oracle Integration. Here's a detailed description of the diagram:
+
+### Components and Flow Description:
+
+1.  **Source Systems (Left Panel):**
+      - This panel shows various enterprise applications and on-premises/legacy systems like Workday, Salesforce, SAP SuccessFactors, Oracle E-Business Suite, PeopleSoft, Siebel, SAP, and mainframe systems.
+      - These systems can either send data to or receive data from Oracle Integration via an SFTP client or other integration mechanisms.
+
+2.  **Oracle Integration (Middle Panel):**
+      - **Flow 1:**
+        - **Initiate Bulk Export:** Oracle Integration initiates a bulk data export request to ERP Cloud.
+        - This is a trigger-based flow, typically started by a scheduled process or an event from the source systems.
+      - **Flow 2:**
+        - **Get Extract from UCM:** After the bulk data is processed in ERP Cloud, the data extract is placed in Universal Content Management (UCM).
+        - **Enrich/Transform:** The data extracted from UCM is enriched or transformed according to business requirements.
+        - **Write Final Formatted File:** The enriched or transformed data is written into a final formatted file, which is then ready for use or for transfer to the target systems.
+
+3.  **ERP Cloud (Right Panel):**
+      - **Export Bulk Data Process:**
+        - The bulk export process in ERP Cloud uses Out of the box Scheduled Jobs which is backed by Business Intelligence Publisher (BIP) report to generate data extracts.
+        - The generated data is uploaded to UCM, ensuring secure storage and retrieval.
+      - **Callback to Oracle Integration:**
+        - Once the data is processed and uploaded, ERP Cloud triggers a callback to Oracle Integration, indicating the data extract is ready for further processing.
+
+### Summary:
+
+    - The process begins with Oracle Integration triggering a bulk data export from ERP Cloud.
+    - ERP Cloud processes the data, stores it in UCM, and notifies Oracle Integration via a callback.
+    - Oracle Integration retrieves, enriches, and formats the data, completing the flow.
+
 Estimated Time: 60 minutes
 
 ### Objectives
@@ -29,30 +59,26 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* All previous labs successfully completed.
+* All previous labs successfully completed and have access to Oracle Integration Designer Console.
 
 ## Task 1: Create the ERP Bulk Extract Integration
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
-2. On the **Integrations page**, click ***Create***.
-3. On the **Create integration** dialog, select and click on ***Schedule***
-4. In the **Create integration** dialog, enter the following information:
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created. Ignore the step if you are already in the project.
+2. In the **Integrations** section, click ***Add***.
+3. On the *Add integration* dialog, click ***Create***.
+4. On the *Create integration* dialog, select and click on ***Schedule***
+5. In the *Create integration* dialog, enter the following information:
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
-    | Name          |```
-    <copy>ERP Bulk Extract</copy
-    ```
-    |
-    | Description  |```
-    <copy>This integration starts the extraction of payable transactions in the ERP Cloud</copy
-    ```
-    |
+    | Name          | ERP Bulk Extract |
+    | Description  |This integration starts the extraction of payable transactions in the ERP Cloud|
+    {: title="Create integration"}
 
     Accept all other default values.
 
-5. Click ***Create***.
-6. Click on Horizontal to change the layout to Horizontal
+6. Click ***Create***.
+7. Click on Horizontal to change the layout to Horizontal
     ![Select Horizontal Layout](../images/horizontallayout.png =30%x*)
 
 ## Task 2: Create the Initiate Extract Activity
@@ -145,14 +171,8 @@ A confirmation message appears.
 
     | **Element**          | **Value**          |       
     | --- | ----------- |
-    | Name         |```
-    <copy>ERP Bulk Extract Callback</copy
-    ```
-    |
-    | Description |```
-    <copy>This integration is triggered when it receives a callback from the ERP Bulk Extract integration. When it receives the callback, it downloads the extract, and uploads it to an FTP server</copy
-    ```
-    |
+    | Name         |ERP Bulk Extract Callback|
+    | Description |This integration is triggered when it receives a callback from the ERP Bulk Extract integration. When it receives the callback, it downloads the extract, and uploads it to an FTP server |
 
     Accept all other default values.
 
@@ -283,7 +303,7 @@ Manage business identifiers that enable you to track fields in messages during r
 ## Task 12: Activate the ERP Bulk Extract Callback Integration
 1. On the **Integrations** page, click on the ***Activate*** icon of **ERP Bulk Extract Callback** Integration.
 2. On the **Activate Integration** dialog, select ***a tracing level***.
-    ![tracinglevel](../images/tracinglevel.png)
+    ![Tracing Level](../images/tracinglevel.png)
 3. Click ***Activate***.
 
     The activation will be complete in a few seconds. If activation is successful, a status message is displayed in the banner at the top of the page, and the status of the integration changes to **Active**.
@@ -292,7 +312,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 
 4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
-![integrationactionsmenu](../images/integrationactionsmenu.png)
+![Integration Action Menu](../images/integrationactionsmenu.png)
 5. Click on ***Run details***
 6. Copy **Metadata URL** and save it in some text file.
 
@@ -325,19 +345,18 @@ Manage business identifiers that enable you to track fields in messages during r
 
 ## Task 15: Run the ERP Bulk Extract Integration
 
-Refresh your page after few seconds.
-1. Select **ERP Bulk Extract**,  Click on **...(Actions)** menu and Click on ***Run***
+1. In the **Integrations** section, Select **ERP Bulk Extract**,  Click on **...(Actions)** menu and Click on ***Run***
     ![Run Integration](../images/run-integration.png)
 2. Click on ***Run***
 3. Click the link which appears on top to track the instance.
 The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by clicking on ***Home***, ***Observability*** and ***Instances***
+OR you can also track by clicking on ***Observability*** tab in your project, and click on ***Instances***
 4. Make sure that both the integrations **ERP Bulk Extract** and **Bulk Extract Callback** completed successfully. If not, fix the issues.
-5. Click on ***Home***, ***Observability*** and ***Instances*** and Click on the Instance of ERP Bulk Extract and make a note of Process Id which is returned as a response from the activity stream.
+5. Click on ***Observability*** tab in your project, Select ***Instances*** and Click on the Instance of ERP Bulk Extract and make a note of Process Id which is returned as a response from the activity stream.
 
 
 ## Task 16: Verify
-Wait 5 minutes before performing this procedure.
+Wait for 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
 2. Click on Navigator Menu(On top left corner), select Tools tab, click Scheduled Processes.
 3. Expand Search and search for the Process Id returned from your integration.
@@ -345,10 +364,18 @@ Wait 5 minutes before performing this procedure.
 5. Using an FTP client of your choice, log in to the File server
 6. Open the FTP directory which you have mentioned in the Callback integration flow and verify the PayablesExtract.xml file exits.
 7. Download the PayablesExtract.xml file and review.
-8. Congratulations! You have finished your integration flow.
 
+## Task 17: Congratulations 🎉
+🎉 Congratulations on Completing the Hands-on Lab! 🎉
 
-You may now **proceed to the next lab**.
+You've successfully navigated through the intricate process of extracting bulk data asynchronously from ERP Cloud using Oracle Integration.
+
+Through this lab, you've gained valuable insights into:
+
+- Initiating and managing bulk data export processes.
+- Handling data extraction and secure storage using UCM.
+- Enriching, transforming, and formatting large data sets.
+- Orchestrating seamless integration between ERP Cloud and other enterprise applications.
 
 ## Learn More
 
@@ -361,4 +388,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, March 2023
+* **Last Updated By/Date** - Kishore Katta, November 2024

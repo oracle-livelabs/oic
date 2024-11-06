@@ -11,6 +11,25 @@ This lab walks you through the steps to create Integration flow.
 The following diagram shows the interaction between the systems involved in this use case.
     ![Pending Worker Import](images/pending-worker-import.png)
 
+The above architecture diagram illustrates a data integration flow involving Oracle Integration, HCM Cloud, and on-premises systems. Here's a high level description of the process:
+
+### On-Premises
+1. **Generate XML File**: The on-premises system generates an XML file containing the bulk data, such as Pending Worker details.
+2. **Stage File on SFTP**: The XML file is staged on an SFTP server, making it accessible for Oracle Integration.
+
+### Oracle Integration
+1. **Retrieve File**: The OIC process is triggered either through a scheduled job or continuous polling to retrieve the XML file from the SFTP server using the File Adapter.
+2. **Generate DAT File**: The retrieved XML data is transformed into a format compatible with HCM Cloud, specifically a DAT file, which is required for bulk data import.
+3. **Create Zip File**: The DAT file is then compressed into a zip file to meet the HCM Data Loader's requirements.
+4. **Upload File to UCM**: The zipped file is uploaded to the Universal Content Management (UCM) server of HCM Cloud using the HCM Cloud Adapter.
+5. **Start HCM Data Loader**: The process initiates the HCM Data Loader to import and load the data into the HCM Cloud.
+
+### HCM Cloud
+1. **Upload to UCM**: The zip file is uploaded into the UCM of HCM Cloud.
+2. **Import and Load**: The HCM Data Loader processes the file, importing and loading the bulk data into the HCM Cloud database, updating records as needed.
+
+This flow efficiently handles bulk data import from on-premises systems into HCM Cloud using Oracle Integration Cloud, demonstrating the capabilities of the HCM Cloud Adapter and FTP Adapter, along with data transformation and automation features.
+
 Estimated Time: 40 minutes
 
 ### Objectives
@@ -31,17 +50,20 @@ This lab assumes you have:
 
 
 ## Task 1: Import Pending Worker Integration Flow
-1.  In the left Navigation pane, click ***Design*** &gt; ***Integrations***.
 
-2.  On the **Integrations page**, click ***Import***.
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created. Ignore the step if you are already in the project.
 
-3.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
+2. In the **Integrations** section, click ***Add***.
 
-4.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
+3.  On the **Add Integration page**, click ***Import***.
 
-5.  Hover over the integration, then click ***Actions*** icon and select ***Configure***.
+4.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
 
-6.  The **Configuration Editor** page shows two connections. Replace the connections with the connections created in [Lab 5](?lab=create-connections)
+5.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
+
+6.  Hover over the integration, then click ***Actions*** icon and select ***Configure***. The **Configuration Editor** page shows two connections.
+
+7.  If you have created the connections specified in the [earlier Section](?lab=create-connections) with a different name,  edit each of the connections and using the shared connection section and search for the respective adapter connections to configure the connections of the imported integration flow.
 
 ## Task 2: Understand HCM Data Loader DAT Files
 Use the NXSD native schema to generate a DAT file compatible with the HCM Data Loader in an integration.
@@ -263,9 +285,9 @@ Refresh your page after few seconds.
 
 2. Click on *Run*
 
-3. Click the link which appears on top to track the instance.
+3. Click the link which appears on the top to track the instance.
   The track instance page appears. The Integration state should be processing or successful.
-  OR you can also track by clicking on *Home*, *Observability* and *Instances*
+  OR you can also track by clicking on *Observability* tab in your project and Select the *Instances* tab.
 
 4. Wait for your integration to complete.
 
@@ -300,9 +322,11 @@ Click on the Activity Stream and expand **Invoke ImportLoadedData** activity. Ma
 8.  Click Search. The Search Results section shows the data for the Person. This
     confirms that the data was imported to your HCM instance.
 
-    **Congratulations**! You've configured and run an integration to retrieve a file from File Server, transform it to an HDL format, and finally import pending workers to HCM Cloud.
+**Congratulations**!🎉 You've configured and run an integration to retrieve a file from File Server, transform it to an HDL format, and finally import pending workers to HCM Cloud.
 
 ## Task 11: Invoking OIC3 Factory API (Bonus Lab)
+
+> *Note: If you are a bootcamp user ignore this bonus section*
 
 In this section you will learn how to clone an integration using the Factory API. Before you can use the REST API with OAuth in Oracle Integration, you need to register your Oracle Integration instance as a trusted application in Oracle Identity Cloud Service.
 
@@ -376,7 +400,7 @@ You need Identity Domain Administrator or Application Administrator credentials 
 3.  Click *Send* button to invoke the REST API. Verify the new cloned integration appear in the  OIC 3 integration list page.
 
 
-    **Congratulations**! You've learnt how to use OIC 3 REST API using Client Credentials OAuth2.0 grant type.
+**Congratulations**! You've learnt how to use OIC 3 REST API using Client Credentials OAuth2.0 grant type.
 
 ## Learn More
 
@@ -388,4 +412,4 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Oct 2023
+* **Last Updated By/Date** - Kishore Katta, November 2024

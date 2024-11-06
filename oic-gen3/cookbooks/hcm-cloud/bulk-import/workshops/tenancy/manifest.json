@@ -1,44 +1,37 @@
 {
     "workshoptitle": "Oracle Integration 3 - Cookbook - HCM Cloud Bulk Data Import",
-    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
-                "sample.json":"../../data-load/files/sample.json",
-                "step2.md":"../../data-load/files/step2.md"},
-    "variables": ["../../variables/variables.json",
-                 "../../variables/variables-in-another-file.json"],
     "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
-            "description":"Introduction to Integrating with HCM Cloud",
             "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Get Started",
-            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
+            "filename": "../../../common/get-started-hcm/get-started-hcm.md"
         },
         {
-            "title": "Lab 1: Provision Oracle Integration 3",
-            "filename": "../../../../../common/provision-oic/provision.md"
-        },
-        {
-            "title": "Lab 2: Enable File Server",
+            "title": "Enable File Server",
             "filename": "../../../../../common/enable-file-server/enable-file-server.md"
         },
         {
-            "title": "Lab 3: Setup",
+            "title": "Setup",
             "filename": "../../../../../common/setup/setup.md"
         },
         {
-            "title": "Lab 4: Configure HCM Cloud for Oracle Integration 3",
+            "title": "Create User and Add Roles in HCM Cloud",
             "filename": "../../../common/configure-hcmcloud-for-oic/configure-hcmcloud-for-oic.md"
         },
         {
-            "title": "Lab 5: Configure Common Connections",
+            "title": "Lab 1: Create a Project",
+            "filename": "../../../../../common/create-project/create-project.md"
+        },
+        {
+            "title": "Lab 2: Create Connections",
             "filename": "../../../common/create-connections/create-connections.md"
         },
         {
-          "title": "Lab 6: Create Bulk Import Integration Flow",
+          "title": "Lab 3: Create Bulk Import Integration Flow",
           "filename": "../../create-bulk-import-integration-flow/create-bulk-import-integration-flow.md"
         },
         {
