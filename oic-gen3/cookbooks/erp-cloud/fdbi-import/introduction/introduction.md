@@ -36,9 +36,6 @@ Estimated Time: 2 hours
 * A Chrome browser.
 * Access to the ERP Cloud environment
 
-### Video Preview
-
-[ERP Cloud Integration Patterns](youtube:nKXbh2ZPuMI)
 
 You may now **proceed to the next lab**.
 
