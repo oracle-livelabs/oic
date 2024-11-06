@@ -4,6 +4,24 @@
 
 This lab walks you through the steps to create Integration flow.
 
+The following diagram shows the runtime interaction between the systems involved in this use case:
+    ![FBDIImport](../introduction/images/bulk-import-simple.png)
+
+### Components and Flow Description
+
+The diagram illustrates a high-level overview of an integration process between a **File Server**, **Oracle Integration**, and **ERP Cloud** with a focus on business events in the ERP Cloud application.
+
+1. **File Server**:
+     - The process begins with a **File Server** triggering the integration. User creates a FBDI file and uploads into the File Server.
+
+2. **Oracle Integration**:
+     - **Oracle Integration** picks up the FBDI file from the File Server.
+     - **Oracle Integration** invokes the job *Import Payables Invoices* job in the ERP Cloud application for bulk data import into ERP Cloud. This activity uploads the file into UCM as well as it calls the respective job.
+
+3. **ERP Cloud**:
+     - **ERP Cloud** acts a target system for this use case and process the FBDI file
+
+
 Estimated Time: 30 minutes
 
 ### Objectives

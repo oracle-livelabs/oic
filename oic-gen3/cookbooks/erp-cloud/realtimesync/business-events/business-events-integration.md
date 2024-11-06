@@ -4,6 +4,24 @@
 
 This lab walks you through the steps to create Integration flow.
 
+The following diagram shows the runtime interaction between the systems involved in this use case:
+
+![POEvent](images/po-real-time-sync-1.png)
+
+### Components and Flow Description
+
+The diagram illustrates a high-level overview of an integration process between a **ERP Cloud**, **Oracle Integration**, and **File Server** with a focus on business events in the ERP Cloud application.
+
+1. **ERP Cloud**:
+     - The process begins with a **ERP Cloud** triggering the integration. When user creates a purchase order in the ERP Cloud, ERP Cloud raises an event.
+
+2. **Oracle Integration**:
+     - **Trigger**: The **ERP Cloud** initiates a trigger in Oracle Integration, which begins the integration process.
+     - Oracle Integration picks up the purchase order information and creates a file and puts it into the File Server.
+
+3. **File Server**:
+     - Embedded **File Server** acts a target system for this use case and Oracle Integration creates a file and puts into the File Server
+
 Estimated Time: 30 minutes
 
 ### Objectives
