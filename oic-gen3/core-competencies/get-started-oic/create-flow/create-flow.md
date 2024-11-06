@@ -4,6 +4,20 @@
 
 This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous (ADW) Table.
 
+![Integration Architecture](images/get-started-integration-scenario.png)
+
+In this use case, a scheduled orchestration pattern in OIC is used to automate the transfer and processing of sales order data. The process begins by reading a sales orders file from an SFTP server at scheduled intervals. Once the file is retrieved, it goes through necessary transformations or validations in OIC to prepare the data for database insertion.
+
+The Oracle Autonomous Database adapter in OIC simplifies bulk data loading by leveraging an Object Storage staging area. Here’s how it works:
+
+1. **File Staging**: Instead of directly inserting each record individually, the adapter stages the processed file in an Oracle Object Storage location. This staging reduces the overhead on the database by pre-loading the data into a format suited for bulk operations.
+
+2. **Bulk Data Import**: Using the pre-configured object storage location, the adapter then performs a bulk import into the Autonomous Database. This approach optimizes performance, making it highly efficient for large volumes of sales order data.
+
+3. **Database Insertion**: Once staged, the sales order data is inserted into the appropriate tables in the Oracle Autonomous Database, making the data readily available for further analysis, reporting, or business applications.
+
+This integration approach ensures efficient and scalable handling of large data volumes, minimizes manual intervention, and enables reliable data transfer between systems. It is especially useful for organizations that need to frequently process and analyze sales order data from various sources.
+
 Estimated Time: 15 minutes
 
 ### Objectives
@@ -213,4 +227,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2024
+- **Last Updated By/Date** - Subhani Italapuram, November 2024

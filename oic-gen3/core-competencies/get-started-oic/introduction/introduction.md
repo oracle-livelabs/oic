@@ -14,12 +14,12 @@ Estimated Time: 60 minutes
 
 In this workshop, you will learn how to:
 
-- Optional, How to enable the File Server in Oracle Integration 3 instance.
-- Optional, Setup required to complete this LiveLab
-- Creating a Project
-- Creating Connections
+- Enable the File Server in Oracle Integration 3 instance.
+- Setup required artifacts to complete the live lab
+- Create a Project
+- Create Connections
 - Design a Scheduled Integration Flow
-- Test and Monitor Integration Flow
+- Test and Observe Integration Flow
 
 ### Prerequisites
 
