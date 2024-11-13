@@ -4,57 +4,38 @@
 
 This workshop shows you how to design and develop File-based Data Integration (FBDI) Import usecase in Oracle Integration 3 with the ERP Cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly import the data into the ERP Cloud in a secured way using various authentication schemes
 
+In this workshop, we shall use Oracle Integration and ERP Cloud Import bulk data services with File Based Data Import (FBDI) complaint files.
+The goal is to import ERP data such as account payable invoices using processes in ERP Cloud.
+
+The typical flow of this use case is:
+
+1. The user uploads an FBDI based account payable invoice file to an FTP Server.
+2. Oracle Integration imports the account payable invoice file into the ERP Cloud.
+
+This labs will explore the ERP Cloud adapter and File Adapter features and lets you know how to perform the following tasks:
+
+ 1. Read files from an SFTP Server
+ 2. Synchronize account payable invoices into the ERP Cloud
+
+  The following diagram shows the runtime interaction between the systems involved in this use case:
+    ![FBDIImport](images/bulk-import-simple.png)
+
 Estimated Time: 2 hours
-
-### What is Oracle Integration 3?
-
-With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
-
-[First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 ### Objectives
 
-* Creating Free Trial Account
-* Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
-* Enable File Server.
-* Configure File Server and connect with FTP client.
-* Create and configure common connections which are useful for this workshop like File Server and ERP Connection
-* Learn ERP Cloud Integration Design Patterns and Usecases.
+* Optional, How to enable the File Server in Oracle Integration 3 instance.
+* Optional, Setup required to complete this LiveLab
+* Creating a Project
+* Creating Connections
 * Create an Integration flow which reads the file from FTP Server and imports into the ERP Cloud.
-
 
 ### Prerequisites
 
-* An Oracle Free Tier or Paid Cloud Account.
+* An Oracle Integration instance.
 * A Chrome browser.
+* Access to the ERP Cloud environment
 
-
-## Leverage the ERP Cloud Adapter in Oracle Integration 3
-
-Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
-
-With the help of this cookbook series, you can design and implement ERP Cloud Integration patterns leveraging Oracle Integration 3 features and functionalities
-
-As an Integration Developer, if you have a requirement to integrate an ERP Cloud application with any other SaaS or On-premise application, then this cookbook series helps you to go through the pre-requisite steps, common use cases, ERP Cloud adapter functional capabilities and several implementation considerations along with lab exercises to provide hands-on experience.
-
-The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS applications with Oracle ERP Cloud without having to know about the specific details involved in the integration.
-
-The Oracle ERP Cloud Adapter provides the following key benefits:
-- Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud.
-- Integrates easily with the Oracle ERP Cloud application’s WSDL file to produce a simplified, integration-centric WSDL.
-- Generates automatic mapping to the selected business object, event subscription, or business (REST) API.
-- Simplifies connection creation by automatically identifying the required service resources based on the Oracle ERP Cloud hostname you specify when creating a new connection on the **Connections** page.
-- Supports several security policies for selection during Oracle ERP Cloud Adapter connection configuration:
-    - Username Password Token With PGP Key Support
-    - Username Password Token
-    - OAuth Authorization Code Credentials
-- Provides standard error handling capabilities.
-- Enables you to upload a file in the Oracle ERP Cloud business tables.
-- Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
-
-###	Video Preview
-
-[ERP Cloud Integration Patterns](youtube:nKXbh2ZPuMI)
 
 You may now **proceed to the next lab**.
 
@@ -68,4 +49,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Nov 2022
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2024

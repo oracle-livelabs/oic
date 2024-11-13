@@ -1,4 +1,4 @@
-# Configure HCM Cloud for Oracle Integration 3
+# Create User and Add Roles in HCM Cloud
 
 ## Introduction
 To use the Oracle HCM Cloud Adapter in an integration, you must assign specific roles to an integration user.
@@ -86,4 +86,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Feb 2023
+* **Last Updated By/Date** - Kishore Katta, November 2024

@@ -19,7 +19,7 @@ This lab assumes you have:
 ## Task 1: Configure BIP Report
 
 1. [Download the BIPSetupArtifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/Ld1_lZnuQC-R0d4nw1tkCQ5VvmzG-rXEdT9CQlWUpZGhXfw4VxGwB0B8g2CsbAKA/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud/bipreport/BIPSetupArtifacts.zip) and extract the zip file in your local folders. It should contain two files GLCCDataModel.xdmz and GLCCReport.xdoz
-2. Login to https://ERPCloudHost/xmlpserver/servlet/catalog using bala.gupta or similar user which has **BI Administrator Role and BI Publisher Data Model Developer Role**, Go to  Catalog &gt; Shared folders &gt; Custom &gt; Financials &gt; Click on ***Upload*** under **Tasks** region(below left corner) and upload "GLCCDataModel.xdmz"
+2. Login to https://<erp-cloud-host>/xmlpserver/servlet/catalog using a user which has **BI Administrator Role and BI Publisher Data Model Developer Role**, Go to  Catalog &gt; Shared folders &gt; Custom &gt; Financials &gt; Click on ***Upload*** under **Tasks** region(below left corner) and upload "GLCCDataModel.xdmz"
     ![UploadModel](../images/uploadmodel.png)
 3. Logout and Login back again into https://ERPCloudHost/xmlpserver/servlet/catalog using CASEY.BROWN or similar user which has **BI Administrator Role and BI Publisher Data Model Developer Role** and upload “GLCCReport.xdoz”
     ![BIPCatalog](../images/bipcatalog.png)
@@ -37,4 +37,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Mar 2023
+* **Last Updated By/Date** - Subhani Italapuram, November 2024

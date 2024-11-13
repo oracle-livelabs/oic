@@ -1,4 +1,4 @@
-# Functional Details of ERP Cloud Adapter
+# Functional Details of ERP Cloud Adapter - READ Only
 
 ## Introduction
 
@@ -84,4 +84,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
+* **Last Updated By/Date** - Kishore Katta, November 2024
