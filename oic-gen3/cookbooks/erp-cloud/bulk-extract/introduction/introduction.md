@@ -43,4 +43,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta & Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2023
+* **Last Updated By/Date** - Subhani Italapuram, November 2024

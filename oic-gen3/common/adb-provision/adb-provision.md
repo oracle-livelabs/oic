@@ -161,4 +161,4 @@ Go to [the documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-
 - **Author** - Nilay Panchal, Oracle Autonomous Database Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
 - **Contributors** - Oracle LiveLabs QA Team (Jeffrey Malcolm Jr, Intern | Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Ravi Chablani - March 2022, Kishore Katta - May 2022, Subhani Italapuram - Oct 2022
+- **Last Updated By/Date** - Subhani Italapuram - Oct 2024
