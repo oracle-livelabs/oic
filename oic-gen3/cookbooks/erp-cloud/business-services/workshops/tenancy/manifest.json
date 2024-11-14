@@ -39,11 +39,11 @@
         },
         {
             "title": "Lab 2: Create Connections",
-            "filename": "../../../common/create-connections/create-connections.md"
+            "filename": "../../create-connections/create-connections.md"
         },
         {
-          "title": "Lab 3: Create Business Events Integration",
-          "filename": "../../create-flow/business-events-integration.md"
+          "title": "Lab 3: Create Business Services Integration",
+          "filename": "../../create-flow/business-services-integration.md"
         },
         {
             "title": "Need Help?",
