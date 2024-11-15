@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
+This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events in a secured way using various authentication schemes.
 
 This Lab explores the use of Oracle Integration to subscribe to Oracle ERP Cloud Events and
 push the relevant event information to downstream systems. As part of the lab you will build the following use case scenario:
@@ -74,4 +74,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Oct 2024
+* **Last Updated By/Date** - Subhani Italapuram, Nov 2024
