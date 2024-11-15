@@ -20,9 +20,6 @@ Estimated Time: 80 minutes
 
 In this workshop, you will learn how to:
 
-* Optional, Enable File Server.
-* Optional, Configure File Server and connect with FTP client.
-* Optional, Configure ERP Cloud for Oracle Integration
 * Creating a Project
 * Creating Connections
 * Create a Real-Time Synchronization scenario using Business Services.

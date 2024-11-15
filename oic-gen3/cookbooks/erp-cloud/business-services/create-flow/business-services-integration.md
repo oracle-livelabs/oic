@@ -1,4 +1,4 @@
-# Real Time Business Services Integration
+# Business Services Integration
 
 ## Introduction
 
@@ -22,7 +22,7 @@ The diagram illustrates a high-level overview of an integration process between 
      - Using REST Interface to trigger the integration flow via OIC Test console and you will be providing the Invoice Payload given to you as part of the test task.
 
 2. **Oracle Integration**:
-     - Oracle Integration picks up the invoice and validates the business unit, verifies Supplier exists in the ERP Cloud application or not and also searches for Supplier Site
+     - Oracle Integration picks up the invoice and validates the business unit. If business unite exists, then it will proceed with creating an invoice in the ERP Cloud application otherwise, it will throw the error.
 
 3. **ERP Cloud**:
      - The process ends with a **ERP Cloud** by creating an invoice into the ERP Cloud application.
@@ -381,7 +381,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
 4. Select ***Validate*** and click on ***&lt; (Go back)***
 5. Your final Integration Flow should look as below
     ![Final Integration Flow](images/final-integration-flow.png)
-    
+
 ## Task 6: Define Tracking Fields
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
