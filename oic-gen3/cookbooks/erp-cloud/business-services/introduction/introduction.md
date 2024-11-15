@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events in a secured way using various authentication schemes.
+This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Services in a secured way using various authentication schemes.
 
 This Lab explores the use of Oracle Integration to subscribe to Oracle ERP Cloud Events and
 push the relevant event information to downstream systems. As part of the lab you will build the following use case scenario:
@@ -12,21 +12,17 @@ push the relevant event information to downstream systems. As part of the lab yo
 3. Your integration receives the PO event and pushes the data
     into the File Server.
 
-    The following diagram shows the runtime interaction between the systems involved in this use case:
-    ![POEvent](../business-events/images/po-real-time-sync-1.png)
-
-Estimated Time: 90 minutes
+     The following diagram shows the runtime interaction between the systems involved in this use case:
+    ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
+Estimated Time: 80 minutes
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Optional, Enable File Server.
-* Optional, Configure File Server and connect with FTP client.
-* Optional, Configure ERP Cloud for Oracle Integration
 * Creating a Project
 * Creating Connections
-* Create a Real-Time Synchronization scenario using Business Events.
+* Create a Real-Time Synchronization scenario using Business Services.
 * Use Business Object to Integrate with ERP Cloud.
 
 ### Prerequisites
