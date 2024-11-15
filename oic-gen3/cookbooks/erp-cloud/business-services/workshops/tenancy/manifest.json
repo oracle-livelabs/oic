@@ -1,10 +1,5 @@
 {
     "workshoptitle": "Oracle Integration 3 - Cookbook - ERP Cloud Business Services",
-    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
-                "sample.json":"../../data-load/files/sample.json",
-                "step2.md":"../../data-load/files/step2.md"},
-    "variables": ["../../variables/variables.json",
-                 "../../variables/variables-in-another-file.json"],
     "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
@@ -16,6 +11,18 @@
             "title": "Get Started",
             "description": "This is a get started section to understand the basic of OIC and the extract design pattern integrating with ERP cloud",
             "filename": "../../../../../common/get-started-erp-cloud/get-started.md"
+        },
+        {
+            "title": "Introduction to Design Patterns",
+            "filename": "../../../../../common/intro-design-patterns/intro-to-design-patterns.md"
+        },
+        {
+            "title": "Functional Details of the ERP Cloud Adapter",
+            "filename": "../../../../../common/adapter-functional-details/erp-cloud-adapter-details.md"
+        },
+        {
+            "title": "Create User and Add Roles in ERP Cloud",
+            "filename": "../../../../../common/configure-erpcloud-for-oic/configure-erpcloud-for-oic.md"
         },
         {
             "title": "Lab 1: Create a Project",
