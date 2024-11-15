@@ -18,14 +18,15 @@ validates the data on the fly and creates a Payables Invoice in ERP Cloud. As pa
 
 The diagram illustrates a high-level overview of an integration process between a **REST Interface**, **Oracle Integration**, and **ERP Cloud** with a focus on business services in the ERP Cloud application.
 
-1. **REST Interface**:
-     - Using REST Interface to trigger the integration flow via OIC Test console and you will be providing the Invoice Payload given to you as part of the test task.
+1. **User Input**: The process begins with a user providing an invoice and line details in JSON format, which is sent to the OIC.
+2. **OIC Processing**: Within OIC, several validation steps occur:
+     - **Validate Business Unit**: Ensures the business unit provided in the invoice data is valid.
+     - **Verify Supplier Exists**: Checks if the supplier exists in the ERP Cloud system.
+     - **Search Supplier Site**: Validates the supplier site associated with the invoice.
+3. **Invoice Creation**: Once all validations pass, OIC invokes Oracle ERP Cloud's transactional services through REST APIs to create the invoice and associated line items.
+4. **Response**: After successfully creating the invoice, a status response is sent back to the user, completing the flow.
 
-2. **Oracle Integration**:
-     - Oracle Integration picks up the invoice and validates the business unit. If business unite exists, then it will proceed with creating an invoice in the ERP Cloud application otherwise, it will throw the error.
-
-3. **ERP Cloud**:
-     - The process ends with a **ERP Cloud** by creating an invoice into the ERP Cloud application.
+This integration leverages OIC's ERP Cloud adapter to facilitate seamless communication with ERP Cloud's REST API, enabling the creation of invoices based on validated input data.
 
 Estimated Time: 20 minutes
 
@@ -276,7 +277,7 @@ A Map action named Map createERPInvoice is automatically created. We'll define t
 
     Expand the **Target** node:
       createInvoice Request > Invoices
-  
+
     Complete the mapping per below:
 
     | **Source**      | **Target**  |
@@ -341,7 +342,7 @@ The response we got from ERP Cloud for **createERPInvoice** must be mapped to th
     Expand the **Target** node:
 
      createInvoice Response > Response Wrapper
-  
+
     Complete the mapping per below:
 
     | **Source**      | **Target**  |
