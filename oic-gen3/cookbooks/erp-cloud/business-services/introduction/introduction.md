@@ -4,17 +4,10 @@
 
 This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Services in a secured way using various authentication schemes.
 
-This Lab explores the use of Oracle Integration to subscribe to Oracle ERP Cloud Events and
-push the relevant event information to downstream systems. As part of the lab you will build the following use case scenario:
+  The following diagram shows the runtime interaction between the systems involved in this use case:
+  ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
 
-1. You create and activate an integration that subscribes to an ERP Cloud Purchase Order (PO) event
-2. You then create a PO in ERP Cloud and a PO event is triggered.
-3. Your integration receives the PO event and pushes the data
-    into the File Server.
-
-     The following diagram shows the runtime interaction between the systems involved in this use case:
-    ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
-Estimated Time: 80 minutes
+Estimated Time: 40 minutes
 
 ### Objectives
 
@@ -43,17 +36,23 @@ The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS
 
 The Oracle ERP Cloud Adapter provides the following key benefits:
 
-* Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud.
+* Supports connecting to private resources that are in your virtual cloud network (VCN) private subnet with a private endpoint. Private endpoints do not support Oracle ERP Cloud business events. This type of connection does not use the connectivity agent.
 * Integrates easily with the Oracle ERP Cloud application’s WSDL file to produce a simplified, integration-centric WSDL.
-* Generates automatic mapping to the selected business object, event subscription, or business (REST) API.
-* Simplifies connection creation by automatically identifying the required service resources based on the Oracle ERP Cloud hostname you specify when creating a new connection on the **Connections** page.
-* Supports several security policies for selection during Oracle ERP Cloud Adapter connection configuration:
-  * Username Password Token With PGP Key Support
-  * Username Password Token
-  * OAuth Authorization Code Credentials
-* Provides standard error handling capabilities.
-* Enables you to upload a file in the Oracle ERP Cloud business tables.
-* Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
+
+* Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud. 
+
+* Generates automatic mapping to the exposed business object, event subscription, or business (REST) API that you select during adapter configuration:
+    - Business object: Represents a self-contained business document that can be acted upon by the integration. An integration can send requests to create a new record for that business object. They can send a request either to update or delete an existing record for a business object. Integrations can also send requests to retrieve information about one or more records representing that business object.
+
+    - Event subscription: Represents an event document to which you subscribe. The event subscription is raised by the Oracle ERP Cloud application.
+
+      You can also create custom business events in Oracle ERP Cloud that can be published and subscribed to with the Oracle ERP Cloud Adapter. 
+
+    - Business (REST) API: Represents an Oracle Fusion Applications REST API resource.
+      You can select parent business resources and their corresponding child business resources on the Operations page in the Adapter Endpoint Configuration Wizard. Support is provided in the invoke (outbound) direction. If you select a top-level resource on the Operations page, you can also select sub-resources on the Sub-Resources page. 
+
+* Simplified connection creation: Automatically identifies the required service catalog service WSDL, optional event catalog URL, and optional interface catalog URL to use based on the Oracle ERP Cloud host name you specify when creating a new connection on the Connections page.
+* Dynamically invokes a REST endpoint/URL at runtime without requiring you to configure any extra invoke connection or REST outbound details
 
 ### Video Preview
 

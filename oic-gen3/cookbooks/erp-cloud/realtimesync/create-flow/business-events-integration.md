@@ -22,7 +22,7 @@ The diagram illustrates a high-level overview of an integration process between 
 3. **File Server**:
      - Embedded **File Server** acts a target system for this use case and Oracle Integration creates a file and puts into the File Server
 
-Estimated Time: 30 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
