@@ -520,4 +520,4 @@ We will test the end to end Integration flow using the built-in Test Client. In 
 
 - **Author** - Kishore Katta, Director Product Management, Oracle Integration
 - **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Oct 2024
+- **Last Updated By/Date** - Subhani Italapuram, Nov 2024
