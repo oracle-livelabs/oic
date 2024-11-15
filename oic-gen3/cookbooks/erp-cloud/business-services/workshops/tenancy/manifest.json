@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Oracle Integration 3 - Cookbook - ERP Cloud REST Services",
+    "workshoptitle": "Oracle Integration 3 - Cookbook - ERP Cloud Business Services",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
