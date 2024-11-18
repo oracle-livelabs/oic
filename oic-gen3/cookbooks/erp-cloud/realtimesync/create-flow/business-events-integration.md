@@ -280,15 +280,15 @@ Use the Oracle Integration dashboard to see the data flow resulting from the cre
 
 4. In the Activity Steam window, click on the different ***Message*** links to review the flow of request and response messages.
 
-6. Click ***&lt; (Go back)*** button after reviewing the Activity Stream.
+5. Click ***&lt; (Go back)*** button after reviewing the Activity Stream.
 
 ## Task 10: Verify PO record in FTP Server
 
 Follow these steps to view the file in the FTP Server
 
-1. In the Integration navigation pane, click ***Home*** &gt; ***Settings*** &gt; ***File Server*** &gt; ***Folders*** &gt; ***home*** &gt; ***users*** &gt; ***Select your username*** &gt; ***Output*** &gt; You should see the **PO%.json** file.
+1. In the Integration navigation pane, click ***Home*** &gt; ***Settings*** &gt; ***File Server*** &gt; ***Folders*** &gt; ***upload*** &gt; ***users*** &gt; ***Select your username*** &gt; You should see the **PO%.json** file.
 
-    > **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party tools like FileZilla to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
+    > **Note:** Currently, you can not view the contents of the file using the Oracle Integration console but, you can use any third-party file client to connect to this file server and pull the file from the FTP server to your local machine and view the file contents
 
 **Congratulations!** You have learnt how to subscribe to ERP Cloud Business Events by configuring the Out of the box ERP Cloud adapter. The Adapter abstracts the Business Events experience and provides an intuitive interface to select from the Catalog which greatly simplifies the task to perform Real-Time Synchronization.
 
