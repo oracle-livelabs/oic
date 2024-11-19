@@ -77,7 +77,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 2. In the **Connections** section, click ***Add*** to create a new connection.
 
 3. Select the **FTP** Adapter.
-4. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**
+4. From the *Create Connection* dialog, *Name* your connection as **File Server** and select *Role* as **Invoke** and leave the rest of the configurations as default. Click **Create**
     > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
