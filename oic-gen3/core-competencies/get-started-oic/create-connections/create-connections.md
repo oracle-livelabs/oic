@@ -46,8 +46,7 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
     ![Shared Connection](images/lldemosharedconnection.png)
 
-You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
-
+    You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
     ![Shared Connection](images/connection-sharing.png)
 
 6. In the *Oracle ADW Connection* dialog, enter the following information:
