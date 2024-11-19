@@ -57,6 +57,8 @@ Configure File Server settings. This is required as you are using Embedded File 
     ![Navigation to Users](images/enableuseronfileserver.png)
 5. Click on **Switch to enable** and click on **Save**.
     ![Enable User](images/enableuseronfileserver1.png)
+    > **Note:** If you are a Bootcamp user then you would be using /upload/users/*your oic username* and it is configured for the bootcamp otherwise, you can can configure the appropriate directory and use it in the lab.
+
 6. Select **Folders** from left Navigation pane.
     ![Navigation to Folders](images/file-server-files1.png)
 7. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.

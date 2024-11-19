@@ -42,10 +42,13 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
     > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
-5. Search for **LLDemo**, Please note that the connection with the name **LLDemo\_ADW** is already created by the instructors, configured and shared with other projects.
-Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **LLDemo\_ADW** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+5. Search for **LLDemo**, Please note that the connection with the name **LLDemo\_ADW** is already created by the instructors, configured and shared with other projects. Do not get confused with the same name, both the connections are in the different projects. Click on **LLDemo\_ADW** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-    ![Shared Connection](images/lldemosharedconnection.png).
+    ![Shared Connection](images/lldemosharedconnection.png)
+
+You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
+
+    ![Shared Connection](images/connection-sharing.png)
 
 6. In the *Oracle ADW Connection* dialog, enter the following information:
 
@@ -77,7 +80,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 2. In the **Connections** section, click ***Add*** to create a new connection.
 
 3. Select the **FTP** Adapter.
-4. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**
+4. From the *Create Connection* dialog, *Name* your connection as **File Server** and select *Role* as **Invoke** and leave the rest of the configurations as default. Click **Create**
     > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
