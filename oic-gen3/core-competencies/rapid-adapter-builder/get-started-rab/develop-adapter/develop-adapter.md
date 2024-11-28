@@ -63,11 +63,7 @@ This lab assumes you have successfully completed all previous lab sections
     - misc: You can save all Postman collections in this folder. Ensure that the file names of all Postman collections are appended with .postman_collection.json.
     - logo.svg: A default logo file for your adapter is created under the root folder. You can replace this file with the required image. The logo should be of svg format only.
 
-5.  Open postman collection that you downloaded earlier using any text editor. Navigate to the **variable** section which is almost at the end of the file. Provide the ORDS url in the value property.
-
-![Configure Baseurl In Postman Collection](images/configure-baseurl-postman-collection.png)
-
-6.  Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
+5.  Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
 
 
 ##  Task 3: Configure the publisher profile for the extension.
@@ -306,4 +302,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Kishore Katta, April 2024
+* **Last Updated By/Date** - Kishore Katta, November 2024
