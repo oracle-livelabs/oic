@@ -21,7 +21,7 @@ This lab assumes you have:
 - Completed all the previous labs.
 
 
-## Task 1: Create a database objects using an SQL script
+## Task 1: Create database objects using an SQL script
 Follow these steps to create a Database objects which will be used as part of this workshop.
 
 1. From you ATP Database Details page, click the **Database Actions** button and Select **SQL**.
@@ -559,10 +559,6 @@ Follow these steps to create a Database objects which will be used as part of th
 
 ## Task 5: Create a Client Application and Obtain Credentials
 
-In Oracle Identity Cloud Service (IDCS), create a client application for your Oracle Integration instance and obtain the client credentials.
-
-> Note: If your tenancy is enabled with domains launch the Confidential application creation from OCI Console &gt; Identity & Security &gt; domains &gt; <your domain> &gt; Integrated Applications. The steps below are pretty much the same.
-
 You'll use these client credentials in your publisher-profile details while publishing an adapter using the Rapid Adapter Builder.
 
 You must obtain the following details for your Oracle Integration instance:
@@ -575,7 +571,56 @@ You must obtain the following details for your Oracle Integration instance:
     - clientSecret
     - scope
 
-1.  In the Oracle Identity Cloud Service Console, go to the **Applications** section to create a new application that allows you to trigger an integration with OAuth.
+Steps are given below to create a confidential application in IDCS/Domains. Based on how your tenancy is enabled follow the steps in respective sections as per below:
+
+***If you tenancy is enabled with Domains follow the below steps:***
+
+1.  In the OCI Console, Navigate to **Identity & Security &gt; domains &gt; <your domain> &gt; Integrated Applications** section to create a new application
+
+2.  Click **Add application**.
+
+3.  Select **Confidential Application** and select *Launch Workflow*.
+
+4.  Complete the **Application Details** page as per below, and click **Next**.
+
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | rab-oauth-app     |
+    | Description  | OAuth App for RAB|
+    {: title="Configure Confidential App Details Page"}
+
+5.  In the **Configure OAuth** page, select **Configure this application as a client now**, and complete the following:
+
+    - Select **Client Credentials** from the **Allowed Grant Types** list.
+    - Select **Client Type** as *Confidential*
+    - Under the **Token issuance policy** section, Select **Specific** in the **Authorized Resources**
+    - Select **Add resources** check box
+    - Click **Add Scope** under the **Resources** section.
+    - Search for your OIC Instance, and Select the instance. Click on *Add*. You should see below 2 scopes added
+
+    | **Resouce**        | **Scope**          |       
+    | --- | ----------- |
+    | &lt; oic-instance &gt; | https://xxxxx.integration.<region>.ocp.oraclecloud.com:443urn:opc:resource:consumer::all |
+    | &lt; oic-instance &gt;   | https://xxxxx.integration.<region>.ocp.oraclecloud.com:443/ic/api/	|
+    {: title="Scopes of the OIC Instance"}
+    - Click on *Next* and Select *Finish*. Do not configure anything in the web tier policy.
+
+6.  Click through the remaining wizard pages without making changes and save the application
+
+7.  Click on *Activate* to activate the application for use.
+
+    Make a note of below
+      - ClientId
+      - Secret
+      - Scope (that ends with urn:opc:resource:consumer::all)
+
+      ![OAuth Confidential App](images/oauth-confidential-app.png)
+
+***If you tenancy is enabled with IDCS follow the below steps:***
+
+In Oracle Identity Cloud Service (IDCS), create a client application for your Oracle Integration instance and obtain the client credentials.
+
+1.  In the Oracle Identity Cloud Service Console, go to the **Applications** section to create a new application.
 
 2.  Click **Add**.
 
@@ -594,22 +639,37 @@ You must obtain the following details for your Oracle Integration instance:
 
 6.  Click through the remaining wizard pages without making changes and save the application
 
-7.  Activate the application for use.
+7.  Click on *Activate* to activate the application for use.
 
     Make a note of below
       - ClientId
       - Secret
       - Scope (that ends with urn:opc:resource:consumer::all)
 
-## Task 6: Add roles to the client application
 
-To successfully use the client credentials, assign the integration-instance developer role to the client application you created previously.
+## Task 6: Add client application to the OIC Service Developer Role
+
+To successfully use the client credentials, assign the integration instance **Service Developer** role to the client application you created previously.
+
+
+***If you tenancy is enabled with Domains follow the below steps:***
+
+1.  Go to  **Identity & Security &gt; Domains &gt; Oracle Cloud Services** in the OCI Console.
+
+2. Search for your OIC instance, and Select the instance. Under **Resources** section Select *Application Roles*
+
+3.  From the list of Application Roles, expand the **Service Developer** role, and then click **Assign Applications**. Select the *Show available applications*, and Search for the confidential app created in the previous section.
+
+3.  Select the client application and click **Assign**. Now, IAM assigns the integration-instance a service developer role to the application.
+
+***If you tenancy is enabled with IDCS follow the below steps:***
 
 1.  Go to the **Application Roles** tab of the Oracle Identity Cloud Service application. The list of all applicable roles appears.
 
-2.  Locate and click the ServiceDeveloper role, and then click **Assign Applications**. The Assign Applications dialog appears, displaying the client application you created previously.
+2.  Locate and click the **ServiceDeveloper** role, and then click **Assign Applications**. The Assign Applications dialog appears, displaying the client application you created previously.
 
 3.  Select the client application and click **OK**. Now, IDCS assigns the integration-instance developer role to the application.
+
 
 ## Task 7: Download and Install the Required Software
 
@@ -635,4 +695,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Kishore Katta, April 2024
+* **Last Updated By/Date** - Kishore Katta, November 2024

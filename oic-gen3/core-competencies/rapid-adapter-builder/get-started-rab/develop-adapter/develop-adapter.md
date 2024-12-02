@@ -63,11 +63,7 @@ This lab assumes you have successfully completed all previous lab sections
     - misc: You can save all Postman collections in this folder. Ensure that the file names of all Postman collections are appended with .postman_collection.json.
     - logo.svg: A default logo file for your adapter is created under the root folder. You can replace this file with the required image. The logo should be of svg format only.
 
-5.  Open postman collection that you downloaded earlier using any text editor. Navigate to the **variable** section which is almost at the end of the file. Provide the ORDS url in the value property.
-
-![Configure Baseurl In Postman Collection](images/configure-baseurl-postman-collection.png)
-
-6.  Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
+5.  Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
 
 
 ##  Task 3: Configure the publisher profile for the extension.
@@ -76,7 +72,7 @@ This lab assumes you have successfully completed all previous lab sections
 
 2.  In the resulting view, click Edit in the Publisher Profiles section. The publisher-profiles.yaml file opens in the editor.
 
-3.  Update the file with the client credentials you obtained earlier. In addition, update the active field with the name of the profile to use. The following example shows the details of 3 Oracle Integration instances, named dev, uat and oic3demo, stored in a .yaml file. See highlighted below and provide the values as per your client application configuration.
+3.  Update the file with the client credentials you obtained earlier. In addition, update the **active** field with the name of the profile to use. The following example shows the details of 3 Oracle Integration instances, named dev, uat and oic3demo, stored in a .yaml file. See highlighted below and provide the values as per your client application configuration.
 
 | **Field**        | **Value**          |       
 | --- | ----------- |
@@ -111,7 +107,7 @@ Click *Done*
 
 4.  In the dialog box that appears, click *Update main*. Now, the VS Code extension converts the data from the Postman collection and adds it to the default adapter definition document (main.add.json) within the definitions directory of your workspace. In addition, the document opens in the VS Code editor.
 
-5.  Copy the **acme-order.svg** (downloaded from lab-artifacts zip) into your workspace under root folder. You may delete the default logo.svg file generated as part of workspace initialization. The copied graphic will be the icon used in OIC for the custom adapter.
+5.  Copy the **logo.svg** (downloaded from lab-artifacts zip) into your workspace under root folder. You may delete the default logo.svg file generated as part of workspace initialization. The copied graphic will be the icon used in OIC for the custom adapter.
 
 ##  Task 5: Understand the Adapter definition document (Read Only Task)
 
@@ -211,11 +207,13 @@ In this section you will configure **info** section and also add security polici
 | publisherInfo &gt; name   | Oracle Live Lab |
 {: title="Info Section Property Values"}
 
-2.  In the **connection** section Right Click anywhere in the **Connection** section, and click on *RAB: Insert Authentication Scheme* and Select *No Authentication*. You should see a dialog box to override the existing **NONE** section, Select *Yes*.
+2.  Navigate to the **connection** section and observe that *No Authentication* is already added. The API do not use any authentication and the auth type is captured from the postman collection automatically.
 
 ![Add No Auth Security Policy](images/add-connection-section-no-auth.png)
 
-A new code snippet is added in the **connection** &gt; **connectionProperties** section. Change the property value of **hidden** to *false*. Observe a new property named **baseURL** is added to allow the end user to provide host url of the ACME OM Application. This property **baseURL** will be used in the respective flows to construct the concrete endpoint  of the operations API supports.
+In the **connection** &gt; **connectionProperties** section, change the property value of **hidden** to *false*. Observe a new property named **baseUrl** is automatically added to allow the end user to provide host url of the ACME OM Application in the adapter connection in OIC. This property **baseUrl** will be used in the respective flows to construct the concrete endpoint of all the operations API supports at runtime.
+
+Note: baseUrl is a variable defined in the Postman Collection
 
 ![New No Auth Code Snippet](images/connection-property-hidden-value-true.png)
 
@@ -225,49 +223,43 @@ Assume ORDS API will be secured by Basic Authentication in future. In such case 
 
 A code snippet is added in the Connection section with **BASIC_AUTH** security policy.
 
-3.  In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Task 4**. However, we want the test connection flow to use the baseURL specified by the user when configuring the ACME adapter connection instead of a concrete url. Construct a uri as below to get the **baseURL** value dynamically.
+3.  In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Lab 4 - Task 4**. The test connection flow will use the **uri** generated by the RAB plugin so that ACME adapter connection concrete url is generated based on expression value used in baseUrl. The **uri** is constructed dynamically at runtime.
 
 Note: We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
 ```
-<copy>
-  "${.connectionProperties.baseURL +\"/customers\"}"
-</copy>
+  "${.connectionProperties.baseUrl +\"/customers\"}"
 ```
-
-Provide the above copied snippet in the **uri** value
-
-
-> Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB are appropriate to configure in the test connection flow.
+> Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB without any parameters are appropriate to configure in the test connection flow
 
 ![Configure Test Connection Endpoint](images/add-flow-section-test-connection.png)
 
 4.  Save the ADD file
 
-5.  In the **flows** section for every flow action uri modify the **uri** value as you did for the test connection flow. Use the below values for your reference and modify accordingly.
+5.  In the **flows** section for every flow action observe the **uri** value. All of them have a dynamic expression which evaluates to a concrete endpoint at runtime.
 
-> If you plan to implement adapter for only Customer Resource you may change just the customer related flow actions as per your choice.
+> If you have selected all resources you would see a flow action generated for each of the CRUD operation. As per below reference
 
 | **uri**        | **Value**          |       
 | --- | ----------- |
-| CreateANewCustomerFlowAction | "${.connectionProperties.baseURL +\"/customers\"}"      |
-| DeleteCustomerFlowAction | "${.connectionProperties.baseURL +\"/customers\"}"     |
-| GetAllCustomersFlowAction | "${.connectionProperties.baseURL +\"/customers\"}"        |
-| UpdateCustomerFlowAction | "${.connectionProperties.baseURL +\"/customers\"}"      |
-| GetCustomerPaymentsAndOrdersFlowAction | "${.connectionProperties.baseURL +\"/payments/{p\_customer\_id}\"}"     |
-| GetSingleCustomerFlowAction | "${.connectionProperties.baseURL +\"/customers/{p\_customer\_id}\"}"      |
-| GetAllOrdersFlowAction | "${.connectionProperties.baseURL +\"/orders\"}"    |
-| GetSingleOrderFlowAction | "${.connectionProperties.baseURL + \"/orders/{p\_order\_id}\"}"     |
-| CreateANewOrderFlowAction | "${.connectionProperties.baseURL +\"/orders\"}"       |
-| UpdateAnOrderFlowAction | "${.connectionProperties.baseURL +\"/orders\"}"      |
-| CancelOrderFlowAction | "${.connectionProperties.baseURL+\"/orders\"}"      |
-| GetItemsForOrderFlowAction | "${.connectionProperties.baseURL+\"/order\_items/{p\_order\_id\"}"     |
-| CreateANewOrderItemFlowAction |"${.connectionProperties.baseURL +\"/order\_items\"}"     |
-| UpdateAnOrderItemFlowAction | "${.connectionProperties.baseURL +\"/order\_items\"}"     |
-| DeleteAnOrderItemFlowAction | "${.connectionProperties.baseURL +\"/order\_items\"}"      |
-| GetAllProductsFlowAction | "${.connectionProperties.baseURL +\"/products\"}"     |
-| CreateANewProductFlowAction | "${.connectionProperties.baseURL + \"/products\"}"       |
-| UpdateAProductFlowAction | "${.connectionProperties.baseURL + \"/products\"}"       |
-| DeleteAProductFlowAction | "${.connectionProperties.baseURL +\"/products\"}"     |
+| CreateANewCustomerFlowAction | "${.connectionProperties.baseUrl +\"/customers\"}"      |
+| DeleteCustomerFlowAction | "${.connectionProperties.baseUrl +\"/customers\"}"     |
+| GetAllCustomersFlowAction | "${.connectionProperties.baseUrl +\"/customers\"}"        |
+| UpdateCustomerFlowAction | "${.connectionProperties.baseUrl +\"/customers\"}"      |
+| GetCustomerPaymentsAndOrdersFlowAction | "${.connectionProperties.baseUrl +\"/payments/{p\_customer\_id}\"}"     |
+| GetSingleCustomerFlowAction | "${.connectionProperties.baseUrl +\"/customers/{p\_customer\_id}\"}"      |
+| GetAllOrdersFlowAction | "${.connectionProperties.baseUrl +\"/orders\"}"    |
+| GetSingleOrderFlowAction | "${.connectionProperties.baseUrl + \"/orders/{p\_order\_id}\"}"     |
+| CreateANewOrderFlowAction | "${.connectionProperties.baseUrl +\"/orders\"}"       |
+| UpdateAnOrderFlowAction | "${.connectionProperties.baseUrl +\"/orders\"}"      |
+| CancelOrderFlowAction | "${.connectionProperties.baseUrl+\"/orders\"}"      |
+| GetItemsForOrderFlowAction | "${.connectionProperties.baseUrl+\"/order\_items/{p\_order\_id\"}"     |
+| CreateANewOrderItemFlowAction |"${.connectionProperties.baseUrl +\"/order\_items\"}"     |
+| UpdateAnOrderItemFlowAction | "${.connectionProperties.baseUrl +\"/order\_items\"}"     |
+| DeleteAnOrderItemFlowAction | "${.connectionProperties.baseUrl +\"/order\_items\"}"      |
+| GetAllProductsFlowAction | "${.connectionProperties.baseUrl +\"/products\"}"     |
+| CreateANewProductFlowAction | "${.connectionProperties.baseUrl + \"/products\"}"       |
+| UpdateAProductFlowAction | "${.connectionProperties.baseUrl + \"/products\"}"       |
+| DeleteAProductFlowAction | "${.connectionProperties.baseUrl +\"/products\"}"     |
 {: title="Flow Action URI Configuration"}
 
 ##  Task 7: Validate the Adapter Definition Document
@@ -310,4 +302,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Kishore Katta, April 2024
+* **Last Updated By/Date** - Kishore Katta, November 2024
