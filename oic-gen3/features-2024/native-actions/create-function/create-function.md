@@ -166,15 +166,13 @@ In this section we will initialize function workspace which generates a boilerpl
 
 3.  Select **func.py** file. On th eright hand side code editor sample boilerplate code is available. Replace the entire code with code snippet in the downloaded artifacts (func.py file) and save.
 
-4.  Select the **requirements.txt** file. In the boilerplate code generated, replace the below snippet and save the code.
+4.  Select the **requirements.txt** file. In the boilerplate code generated, replace with the below snippet and save the code.
 
     ```
     <copy>
-    fdk>=0.1.36
+    fdk>=0.1.86
     oci
-    pandas
     openpyxl
-    xlrd
     </copy>
     ```
 
@@ -200,4 +198,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta - August 2024
+* **Last Updated By/Date** - Kishore Katta - January 2025
