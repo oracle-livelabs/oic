@@ -29,26 +29,25 @@ This lab assumes you have
 3. In the *Roles* tab, click **Create Role**.
 
 4. In the *Create Role* Canvas, enter the following information:
-    ```
+
     | **Field**  | **Value** |
     |---|---|
     |Role Name | `<your-role-name>` |
     |Role Code | `<your-role-code>` |
     |Role Category | select **HCM - Job Roles** |
     |
-    ```    
+
 
 5. Click **Next**.
 
 6. Add the following Roles and Privileges to the custom role:
-    ```
+
     | Grant Type | Name | Code |
     | ---- | ---- | ---- |
     | Role | Integration Specialist | FND\_INTEGRATION\_SPECIALIST\_JOB |
     | Role | Attachments User | AttachmentsUser |
     | Role | SOA Operator | SOAOperator |
     |
-    ```
 
 
 7. In the *Summary* screen, click **Save and Close**.
@@ -58,7 +57,7 @@ This lab assumes you have
 1. In the *Security Console*, select **Users** tab and click **Add User Account**.
 
 2.  In the *Add User Account* Canvas, enter the following information:
-    ```
+
     | **Field**  | **Value** |
     |---|---|
     |User Category | (Default) |
@@ -69,6 +68,7 @@ This lab assumes you have
     |Password | `<your-password>` |
     |
     ```
+
 
 3. Click **Add Role**.
 
