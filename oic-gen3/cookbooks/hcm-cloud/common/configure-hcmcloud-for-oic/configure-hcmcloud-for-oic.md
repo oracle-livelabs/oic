@@ -29,12 +29,14 @@ This lab assumes you have
 3. In the *Roles* tab, click **Create Role**.
 
 4. In the *Create Role* Canvas, enter the following information:
+
     | **Field**  | **Value** |
     |---|---|
     |Role Name | `<your-role-name>` |
     |Role Code | `<your-role-code>` |
     |Role Category | select **HCM - Job Roles** |
-    |    
+    |
+
 
 5. Click **Next**.
 
@@ -65,6 +67,8 @@ This lab assumes you have
     |User Name | &lt;auto generated&gt; |
     |Password | `<your-password>` |
     |
+    ```
+
 
 3. Click **Add Role**.
 
