@@ -161,7 +161,7 @@ Let's iterate over the new hires that you got from the ATOM feed in a JSON file,
 ## Task 11: Write New Records to Stage
 Let's write each new record to a stage file.
 
-1. [Download the newEmployeeFile.csv](https://objectstorage.us-phoenix-1.oraclecloud.com/p/2WVy-bdkjjGYRdtyujZ6ye6UXWrNtwl16z7n1YsxZrBP1XIJGsru4RkCpnwPGh5b/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/newEmployeeFile.csv)
+1. [Download the newEmployeeFile.csv](https://objectstorage.us-phoenix-1.oraclecloud.com/p/Wx6E-m7sOC1wZclszusC0VV_yAADvqcF9sfdVoZ7CSiSjoAvSH9__y9RGriwQhPJ/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/newEmployeeFile.csv)
 
 2. Click the ***+*** sign which is inside the for loop.
     Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.

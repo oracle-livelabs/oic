@@ -46,7 +46,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
+* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
 
 
 ## Task 1: Import Pending Worker Integration Flow
@@ -57,7 +57,7 @@ This lab assumes you have:
 
 3.  On the **Add Integration page**, click ***Import***.
 
-4.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
+4.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
 
 5.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
 
@@ -70,7 +70,7 @@ Use the NXSD native schema to generate a DAT file compatible with the HCM Data L
 
 The NXSD schema defines the structure of the output file (fields) and the formatting of the data.
 
-1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
+1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
 
 2.  Open the file *worker-hdl.nxsd* in a text editor.
 
