@@ -156,7 +156,7 @@ You may now *proceed to the next lab*.
 
 ## Learn more
 
-Go to [the documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-workflow.html#GUID-5780368D-6D40-475C-8DEB-DBA14BA675C3) on the typical workflow for using Autonomous Data Warehouse.
+- [Oracle Autonomous Data Warehouse](https://www.oracle.com/in/autonomous-database/autonomous-data-warehouse/)
 
 ## Acknowledgements
 
