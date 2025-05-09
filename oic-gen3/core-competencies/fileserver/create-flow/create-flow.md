@@ -80,15 +80,16 @@ We will start by creating a new integration and adding some basic info.
 
 6. Click **Create**.
 7. Click **System** on the *Choose event* dialog, expand **File Server**, select **File created**, click **Choose** and click on **Add Filter**  and provide the sample json given below. You may modify the file name and path as per your use case.
-
+    
     ```
 <copy>
-    {"type":"jq_filter","filter-def":".data.path==\"/upload/users/your oic usernumber\" and (.data.name | endswith(\".json\")) "}
+    {"type":"jq_filter","filter-def":".data.path==\"/upload/users/your oic usernumber\" and (.data.name | endswith(\".csv\")) "}
 </copy>
     ```
 
-8. Click **Validate**, Click **<(Back)**,  Click **Finish**.
-7. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
+
+8. Click **Validate**, Click **&lt;(Back)**,  Click **Finish**.
+9. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
 
 ## Task 2: Get the file reference using File server native action
 
@@ -103,7 +104,7 @@ Search for the **File server** activity and click on it. This invokes  the Confi
     - Click ***Continue***.
 3. Review the summary and click ***Finish***
 4. Click ***Save*** to persist changes
-    ![FileReference](../images/filereference.png)
+    ![FileReference](images/filereference.png)
 
 ## Task 3: Define the Data Mapping
 
@@ -116,14 +117,15 @@ Search for the **File server** activity and click on it. This invokes  the Confi
   | Path         | Directory|
   | Name         | File Name|
 
-  - Click on ***Validate***.
-     - A confirmation message appears.
-  - Click ***&lt; (Go back)***
-  - Click ***Save*** to persist changes.
+- Click on ***Validate***.
+  - A confirmation message appears.
+- Click ***&lt; (Go back)***
+- Click ***Save*** to persist changes.
 
-## Task 4: Read the file from Stage
+## Task 4: Read the file using Stage File action
+
 1. Hover over the outgoing arrow for the **File Server readfileref** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
+Search for the **Stage File** action and click on it. This invokes Stage File Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***readfile***
     - Click ***Continue***.
@@ -140,133 +142,95 @@ Search for the **Stage File** activity and click on it. This invokes Stage File 
       - for the **Enter Record Name**, enter ***SalesOrderSet***
       - Click ***Continue***.
 6. Review the summary and click ***Finish***
-7. Click ***Save*** to persist changes 
+7. Click ***Save*** to persist changes
 ![ReadFileFromStage](images/readfilefromstage.png)
 
+## Task 3: Add the ATP invoke activity
 
-## Task 3: Add the ADW invoke activity
+Add the Oracle ATP Adapter invoke to the integration canvas.
 
-Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canvas.
+1. Hover your cursor over the outgoing arrow of *Stage file readfile* activity in the integration canvas to display the ***+*** sign and select the ATP connection created in the previous lab.
 
-1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the ***+*** sign. Click the **+** sign and select the ADW connection created in the previous lab.
-
-    ![Add ADW Connection](images/add-adw-connection.png)
-
-    This invokes the Oracle Autonomous Data Warehouse Endpoint Configuration Wizard.
+    This invokes the Oracle ATP Wizard.
 
 2. On the *Basic Info* page, select the following values:
 
     | **Element**        | **Value**          |
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
-    | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
-    {: title="ADW Basic Info"}
-
+    | What operation do you want to perform? | **Run a SQL Statement (Run AI for SQL)** |
+    
     - Click **Continue**
+    - Enter the query given below and click on **Validate SQL Query**
 
-3. On the *Bulk load from Object Storage to ATP table* page, select the following values:
+    ```
+<copy>
 
-    | **Element**        | **Value**          |
-    | --- | ----------- |
-    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
-    | Delete file from object store after operation completion | **Deselect** |
-    | Select Schema | **ADMIN** |
-    | Select Table | Select **V\_SALES\_ORDERS**|
-    | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
-    {: title="Object Storage Info"}
+                INSERT INTO v_sales_orders (
+        order_id,
+        region,
+        country,
+        item_type,
+        sales_channel,
+        order_priority,
+        order_date,
+        ship_date,
+        units_sold,
+        unit_price,
+        unit_cost,
+        total_revenue,
+        total_cost,
+        total_profit
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?
+        )
+</copy>
+    ```
 
-    ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
-
-    > **Note:** The order of the columns should match the input sales_order.csv data
-
-4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
-
-    ![Edit Copy Format options](images/edit-copy-data-format-options-1.png)
-
-    In the *copy_data format Options* page Provide the following values:
-
-    | **Element**        | **Value**          |
-    | --- | ----------- |
-    | Delimiter | **Comma** |
-    | Skip Headers | **1** |
-    {: title="Data format"}
-
-    ![Edit Copy Format options](images/edit-copy-data-format-options-2.png)
-
-    Leave the rest of the values as default and Select **Ok**.
-
-5. Click **Continue**
-
-6. On the Summary page, review the configuration and click **Finish**.
+ - If *Status* is *Success!* then Click **Continue**, otherwise *fix the query*
+3. On the Summary page, review the configuration and click **Finish**.
 
     ![Summary in ADW Wizard](images/adw-wizard-summary.png)
 
-7. Click **Save** to apply changes.
+4. Click **Save** to apply changes.
 
-## Task 4: Map data between FTP Invoke and ADW invoke
+## Task 4: Map data between Stage File activity and ATP Invoke
 
-Use the mapper to drag fields from the source structure (downloadSalesOrders Response)  to the target structure (insertSalesOrders) to map elements between the two.
-
-When we added the ADW invoke to the integration, a map icon was automatically added.
-
-1. Hover your cursor over the *Map insertSalesOrders* **Mapper** icon, click once, then select **Edit**.
-   ![Edit ADW Mapper](images/mapper-edit-erp-adw.png)
-
-2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle ADW structure.
+1. Hover your cursor over the *Map insertSalesOrders* icon, click on **...** and click on **Edit**
+   
+2. Use the mapper to drag element nodes in the source readfile Response structure to element nodes in the target insertSalesOrder Request.
 
     Expand the **Source** node:
 
-        downloadSalesOrders Response(FTP) > Download File To ICS Response > Download Response > ICSFiles > ICSFile
+        readfile Response > Read Response > Soset > Salesorder
 
     Expand the **Target** node:
 
-    insertSalesOrders Request
+    insertSalesOrder Request
 
-    Complete the mapping as below:
+    Map all the elements from source to target, can find the image given below for the reference
 
-    | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest Oracle ADW)* |
-    | --- | ----------- |
-    | FileReference | FileReference |
-    {: title="Map"}
+   ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
 
-   ![Completed FTP to ADW Mapping](images/mapper-completed-ftp-adw.png)
-
-3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
-
+3. Click **Validate**, then wait for the confirmation message.*
 4. Click **&lt; (Go back)**
-    ![GoBack](images/mapper-goback-ftp-adw.png)
-
 5. Click **Save** to persist changes.
 
 ## Task 5: Define Tracking Fields
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-    > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
-    ![Error Icon in Design Canvas](images/error-icon.png)
-
 2. Click the **Business Identifiers icon** on the top right.
-    ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
-
-3. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
-
-    ![Assign Business Identifiers](images/add-business-identifiers.png)
-
+3. From the *Source* section, expand **execute**, expand **request-wrapper**. Drag the **name** field from source and drop into the *Business Identifier Field* section:
 4. Click **Business Identifiers icon** to hide the dialog.
 5. Click on **Save** to apply your changes.
 6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
-    ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
 
-1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
-    ![Click to Activate Integration](images/click-activate-integration.png)
-
+1. In the **Integrations** section, activate your integration flow
 2. In the *Activate Integration* dialog, select **Debug** as tracing level.
-
 3. Click **Activate**.
 
-    The activation will be complete in a few seconds. Once activation is successful, the status of the integration changes to *Active* OR try to refresh the page so that you could see the updated status.
 
 You may now **proceed to the next lab**.
 
@@ -276,6 +240,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, November 2024
+- **Last Updated By/Date** - Subhani Italapuram, May 2025
