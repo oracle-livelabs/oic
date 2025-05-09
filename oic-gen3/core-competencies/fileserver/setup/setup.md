@@ -12,7 +12,6 @@ In this lab, you will:
 
 - Obtain Database Connection details
 - Create Database Table using a SQL script
-- Create OCI Object Storage Bucket
 - Enable File Server
 - Configure File Server
 - Connect to File Server using FTP Client
@@ -22,34 +21,20 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all the previous labs.
-- Oracle Autonomous Data Warehouse Instance
+- Oracle Autonomous Transaction Processing Instance
 - Oracle Integration Instance
 
 ## Task 1: Create a database table using a SQL script
 
 Follow these steps to create a DB table which will be used as part of this workshop.
 
-1. If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
-
-    ![Click Database Actions](images/click-database-actions.png)
-
-    > **Note:** If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log in manually.  
+1. If you are not already logged in to SQL Worksheet, on your ATP Database Details page, click the **Database Actions** button.
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
-   ![Enter DB username](images/enter-username.png)
-
 3. Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
 
-    ![Enter DB password](images/enter-password.png)
-
-4. The Database Actions page opens. In the *Development* box, click **SQL**.
-
-    ![Open SQL](images/open-sql.png)
-
-    > **Note:** If this is the very first time you open the SQL Action, then a click-demo will be displayed. Just hit the **X** button to proceed.
-
-5. The SQL Worksheet appears. Before you proceed with the SQL Worksheet, copy below code snippet:
+4. The SQL Worksheet appears. Before you proceed with the SQL Worksheet, copy below code snippet:
 
     ```
     <copy>
@@ -73,7 +58,7 @@ Follow these steps to create a DB table which will be used as part of this works
     </copy>
     ```
 
-6. Paste the script in the SQL Worksheet, then click **Run It** button. This will create the **V\_SALES\_ORDERS** table. The table is created successfully when you see the notification in the *Script Output* window.
+5. Paste the script in the SQL Worksheet, then click **Run It** button. This will create the **V\_SALES\_ORDERS** table. The table is created successfully when you see the notification in the *Script Output* window.
 
     ![Past SQL Script](images/paste-run-sql-script.png)
 
@@ -83,27 +68,15 @@ Now you have an external table which will be used in the Integration flow.
 
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Database** from the navigation menu under Oracle Database.
 
-    ![Select Autonomous Database](images/adb-navigation.png)
-
-    > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
-
 2. Navigate into your demo database by clicking on the instance link.
 
-    ![Select Autonomous Database](images/select-adb-instance.png)
-
-    > **Note:** Similar steps apply to both Autonomous Data Warehouse and Autonomous Transaction Processing.
-
-3. On your Autonomous Database Details page, click the **DB Connection** button.
-
-    ![Click Database Connection](images/click-database-connection.png)
+3. On your Autonomous Database Details page, click the **Database Connection** button.
 
 4. In the displayed *Database Connection* dialog, click **Download Wallet**.
 
 5. Provide a Wallet password, then click **Download**. Save the wallet file (ZIP) on your local machine. This file will be used later when creating the Autonomous Database connection in Oracle Integration.
 
 6. Under *Connection Strings*, select one of the *TNS Name* entries and write it down. This value will be used later when creating the Autonomous Database connection in Oracle Integration.
-
-    ![Select Connection TNS Name](images/database-connection-tnsname.png)
 
 7. Click **Close**.
 
@@ -113,7 +86,7 @@ Now you have an external table which will be used in the Integration flow.
 
     If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
 
-    ![File Server Not Enabled](images/fileservernotenabled.png =50%x50%)
+    ![File Server Not Enabled](./images/fileservernotenabled.png)
 
     To enable File Server:
 
@@ -134,8 +107,7 @@ Now you have an external table which will be used in the Integration flow.
 Configure File Server settings. This is required as you are using Embedded File Serve of Oracle Integration and using File Server as a target application in your integration flow.
 
 1. Starting at the Oracle Integration *Home* page, select **Settings**, then **File Server** from the left Navigation pane.
-2. Select **Settings** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of IP and port number.
-    ![File Server Settings page](images/file-server-settings.png)
+2. Select **Settings** from the left Navigation pane to open the File Server Settings page and review the File Server status and configurations. Make a note of IP OR Host and port number.
     > **Note:** Ensure the *Authentication Type* is set to **Password or Key**.
 
 3. Under SFTP Server Status, monitor the server's status, and stop or restart as needed
@@ -144,6 +116,7 @@ Configure File Server settings. This is required as you are using Embedded File 
     ![Navigation to Users](images/enableuseronfileserver.png)
 5. Click on **Switch to enable** and click on **Save**.
     ![Enable User](images/enableuseronfileserver1.png)
+    
     > **Note:** If you are a Bootcamp user then you would be using /upload/users/*your oic username* and it is configured for the bootcamp otherwise, you can can configure the appropriate directory and use it in the lab.
 
 6. Select **Folders** from left Navigation pane.
@@ -151,8 +124,7 @@ Configure File Server settings. This is required as you are using Embedded File 
 7. Click on **home**, click on **users**, click on your username and from the top right click **Create** and create a Folder named **Output**.
 8. Click on **Permissions** on the **Output** Folder
     ![Workshop Folder structure](images/fs-permissions.png)
-    > **Note:**  You will be using the above Folder structure in the lab.
-
+    
 9. Click **Add Permissions** and select your user. Click **Add**.
    ![Add user to Folder permissions](images/user-permissions-1.png)
 10. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.

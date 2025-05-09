@@ -11,7 +11,6 @@ Estimated Time: 10 minutes
 In this lab, you will:
 
 - Create an Oracle Autonomous Transaction Processing connection
-- Create an Oracle FTP Connection
 
 ### Prerequisites
 
@@ -27,7 +26,7 @@ Create a connection with the Oracle Autonomous Transaction Processing Adapter.
     You can please skip this step if you are already in the project.
 2. In the **Connections** section, click ***Add*** to create a new connection.
 
-3. In the *Create Connection* dialog, select the **Oracle ATP** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter.
+3. In the *Create Connection* dialog, select the **Oracle ATP** adapter to use for this connection. To find the adapter, enter `ATP` in the search field. Click on the highlighted adapter.
     
 4. In the *Create Connection* dialog, enter the following information and click **Create**
 
@@ -43,15 +42,11 @@ Create a connection with the Oracle Autonomous Transaction Processing Adapter.
 
 5. Search for **ATP Database**, Please note that the connection with the name **ATP Database** is already created by the instructors, configured and shared with other projects. Do not get confused with the same name, both the connections are in the different projects. Click on **ATP Database** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-    ![Shared Connection](images/atpsharedconnection.png)
-
-    ![Shared Connection](images/connection-sharing.png)
-
 6. In the *Oracle ATP Connection* dialog, enter the following information:
 
     | **Field**  | **Value** |
     |---------------|----------------|
-    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Lab Setup** &gt; **Task 3** &gt; **Step 6**) |
+    |Service Name | `<your-adb-tns-name>` (Use the TNS Name obtained in **Setup lab** &gt; **Task 2** &gt; **Step 6**) |
     |Security Policy | **JDBC Over SSL**|
     |Wallet | **Upload wallet file (Zip)** |
     |Wallet Password | `<wallet-password>`|

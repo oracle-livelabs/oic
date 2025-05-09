@@ -35,7 +35,7 @@ Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Softw
 
 ### Video Preview
 
-    [Oracle Integration 3 New Features Overview](videohub:1_1q5y8pfh:medium)
+[Oracle Integration 3 New Features Overview](videohub:1_1q5y8pfh:medium)
 
 You may now **proceed to the next lab**.
 
