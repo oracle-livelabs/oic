@@ -84,12 +84,6 @@ Now you have an external table which will be used in the Integration flow.
 
 - An administrator must enable File Server before an organization can start using it with their Oracle Integration instance. Enabling File Server is a one-time action in the Oracle Cloud Infrastructure Console
 
-    If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
-
-    ![File Server Not Enabled](./images/fileservernotenabled.png)
-
-    To enable File Server:
-
 1. On the Oracle Cloud Get Started page, select the region in the upper right where you created your Oracle Integration 3 instance. Open the navigation menu in the upper left and click **Developer Services**. Under **Application Integration**, click **Integration**.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
