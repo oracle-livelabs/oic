@@ -4,7 +4,7 @@
 
 This lab will walk you through the steps to create connections for all the services which will be used in the Integration Flow.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 

@@ -20,19 +20,11 @@ This lab assumes you have:
 
 - Completed all previous labs successfully
 
-## Task 1: Create a sales order file in the File Server
+## Task 1: Modify the Order ID in the sales order file
 
-1. Copy the below data set in a file **sales.csv** and save it to your desktop.
+1. Open the **sales.csv** file which you have downloaded in the previous lab, modify Order Id and save it to your desktop.
 
-    ```
-    <copy>
-    Order ID,Region,Country,Item Type,Sales Channel,Order Priority,Order Date,Ship Date,Units Sold,Unit Price,Unit Cost,Total Revenue,Total Cost,Total Profit
-    2225000001,Australia and Oceania,Tuvalu,Baby Food,Offline,H,2025-05-01,2025-05-05,9925,255.28,159.42,2533654,1582243.5,951410.5
-
-    </copy>
-    ```
-
-    > **Note:** If you are a Bootcamp user then modify Order IDs to the unique values as all the participants would be using same database and it may cause duplicates in the database table
+    > **Note:** If you are a Bootcamp user, please modify the Order IDs to unique values, as all participants will be using the same database. This will help prevent duplicate entries, which may otherwise violate unique constraints and result in data insertion failures
 
 2. Connect to the File Server. Copy sales.csv from your desktop to a folder on the File Server that you specified in the integration flow
 
@@ -57,7 +49,7 @@ Follow these steps to view the sales orders record in the designated DB table.
 
 6. Click on **Data** in the left menu to display the table data. Verify your inserted Sales Orders records.
 
-**Congratulations!** You have learned how to download a file from File Server and bulk import data into ADW leveraging Out of the box ADW adapter capabilities. Thank you!
+**Congratulations!** You have successfully learned how to use file events in OIC and insert data into ATP by leveraging the out-of-the-box capabilities of the ATP adapter. Thank you!
 
 ## Learn More
 

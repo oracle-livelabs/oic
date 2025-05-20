@@ -10,37 +10,37 @@ In this use case, an Event pattern in OIC is used to automate the transfer and p
 
 The Oracle Autonomous Transaction Processing adapter in OIC simplifies inserting the data into the database. Here’s how it works:
 
-## Components Involved
+# Components Involved
 
-1.Oracle Integration Cloud (OIC):
+    1.Oracle Integration Cloud (OIC):
 
-Acts as the central platform for orchestrating the integration flow.
+    Acts as the central platform for orchestrating the integration flow.
 
-2.OIC Embedded SFTP Server:
+    2.OIC Embedded SFTP Server:
 
-Files are securely created or uploaded here as the source input.
+    Files are securely created or uploaded here as the source input.
 
-3.File Event Trigger (OIC):
+    3.File Event Trigger (OIC):
 
-Monitors the embedded SFTP server and triggers the integration process when a new file arrives.
+    Monitors the embedded SFTP server and triggers the integration process when a new file arrives.
 
-4.Stage File Action (Read File Content):
+    4.Stage File Action (Read File Content):
 
-Reads the contents of the incoming file for further processing.
+    Reads the contents of the incoming file for further processing.
 
-5.Data Mapping & Transformation:
+    5.Data Mapping & Transformation:
 
-Transforms and maps the raw file data into a structure suitable for ADW.
+    Transforms and maps the raw file data into a structure suitable for ADW.
 
-6.Oracle ATP Connection (via ATP Adapter):
+    6.Oracle ATP Connection (via ATP Adapter):
 
-Establishes a secure connection from OIC to Oracle ATP using the ATP adapter.
+    Establishes a secure connection from OIC to Oracle ATP using the ATP adapter.
 
-7.Oracle ATP Database Table:
+    7.Oracle ATP Database Table:
 
-The transformed data is inserted into the target database table in ATP
+    The transformed data is inserted into the target database table in ATP
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -79,13 +79,14 @@ We will start by creating a new integration and adding some basic info.
     Accept all other default values.
 
 6. Click **Create**.
-7. Click **System** on the *Choose event* dialog, expand **File Server**, select **File created**, click **Choose** and click on **Add Filter**  and provide the sample json given below. You may modify the file name and path as per your use case.
+7. Click **System** on the *Choose event* dialog, expand **File Server**, select **File created**, click **Choose** and click on **Add Filter**  and provide the sample json given below. You need to modify the file name and path as per your use case. 
+
+> **Note:**  Path given below is not a real path, it is just a syntax, you need to modify it as per your use case.
+
+    <copy>
+        {"type":"jq_filter","filter-def":".data.path==\"/upload/users/your oic usernumber\" and (.data.name | endswith(\".csv\")) "}
+    </copy>
     
-    ```
-<copy>
-    {"type":"jq_filter","filter-def":".data.path==\"/upload/users/your oic usernumber\" and (.data.name | endswith(\".csv\")) "}
-</copy>
-    ```
 
 
 8. Click **Validate**, Click **&lt;(Back)**,  Click **Finish**.
@@ -99,8 +100,8 @@ Search for the **File server** activity and click on it. This invokes  the Confi
     - for the **What do you want to call your endpoint?** element, enter ***readfileref***
     - for the **Select resource** element, select ***File***
     - for the **Select operation** element, select ***Get File Reference***
-    - for the **Input Directory** element, enter ***"/"***
-    - for the **File Name** element, select ***"temp.csv"***
+    - for the **Input Directory** element, enter ***/***
+    - for the **File Name** element, select ***temp.csv***
     - Click ***Continue***.
 3. Review the summary and click ***Finish***
 4. Click ***Save*** to persist changes
@@ -124,7 +125,7 @@ Search for the **File server** activity and click on it. This invokes  the Confi
 
 ## Task 4: Read the file using Stage File action
 
-1. Hover over the outgoing arrow for the **File Server readfileref** activity and Click the ***+*** sign in the integration canvas.
+1. Hover over the outgoing arrow for the **File server readfileref** activity and Click the ***+*** sign in the integration canvas.
 Search for the **Stage File** action and click on it. This invokes Stage File Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***readfile***
@@ -137,9 +138,9 @@ Search for the **Stage File** action and click on it. This invokes Stage File Co
 4. On the **Schema Options** page,
       - Click ***Continue***.
 5. On the **Format Definition** page,
-      - click ***Drag and Drop*** and select the ***sales.csv*** which you have downloaded
+      - click ***Drag and Drop*** and download the the [sales.csv][https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv] file and upload here
       - for the **Enter Record Name**, enter ***salesorder***
-      - for the **Enter Record Name**, enter ***SalesOrderSet***
+      - for the **Enter Record Name**, enter ***salesorderset***
       - Click ***Continue***.
 6. Review the summary and click ***Finish***
 7. Click ***Save*** to persist changes
@@ -188,9 +189,6 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 
  - If *Status* is *Success!* then Click **Continue**, otherwise *fix the query*
 3. On the Summary page, review the configuration and click **Finish**.
-
-    ![Summary in ADW Wizard](images/adw-wizard-summary.png)
-
 4. Click **Save** to apply changes.
 
 ## Task 4: Map data between Stage File activity and ATP Invoke
@@ -201,7 +199,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 
     Expand the **Source** node:
 
-        readfile Response > Read Response > Soset > Salesorder
+        readfile Response > Read Response > Salesorderset > Salesorder
 
     Expand the **Target** node:
 
@@ -211,7 +209,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 
    ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
 
-3. Click **Validate**, then wait for the confirmation message.*
+3. Click **Validate**, then wait for the confirmation message.
 4. Click **&lt; (Go back)**
 5. Click **Save** to persist changes.
 
@@ -228,7 +226,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 ## Task 6: Activate the integration
 
 1. In the **Integrations** section, activate your integration flow
-2. In the *Activate Integration* dialog, select **Debug** as tracing level.
+2. In the *Activate Integration* dialog, select the tracing level.
 3. Click **Activate**.
 
 
@@ -242,3 +240,6 @@ You may now **proceed to the next lab**.
 
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
 - **Last Updated By/Date** - Subhani Italapuram, May 2025
+
+
+[https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv]: https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv
