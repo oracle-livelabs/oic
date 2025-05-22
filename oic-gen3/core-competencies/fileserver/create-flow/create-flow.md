@@ -146,7 +146,7 @@ Search for the **Stage File** action and click on it. This invokes Stage File Co
 7. Click ***Save*** to persist changes
 ![ReadFileFromStage](images/readfilefromstage.png)
 
-## Task 3: Add the ATP invoke activity
+## Task 5: Add the ATP invoke activity
 
 Add the Oracle ATP Adapter invoke to the integration canvas.
 
@@ -191,10 +191,9 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 3. On the Summary page, review the configuration and click **Finish**.
 4. Click **Save** to apply changes.
 
-## Task 4: Map data between Stage File activity and ATP Invoke
+## Task 6: Map data between Stage File activity and ATP Invoke
 
 1. Hover your cursor over the *Map insertSalesOrders* icon, click on **...** and click on **Edit**
-   
 2. Use the mapper to drag element nodes in the source readfile Response structure to element nodes in the target insertSalesOrder Request.
 
     Expand the **Source** node:
@@ -213,7 +212,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 4. Click **&lt; (Go back)**
 5. Click **Save** to persist changes.
 
-## Task 5: Define Tracking Fields
+## Task 7: Define Tracking Fields
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
@@ -223,7 +222,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 5. Click on **Save** to apply your changes.
 6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
 
-## Task 6: Activate the integration
+## Task 8: Activate the integration
 
 1. In the **Integrations** section, activate your integration flow
 2. In the *Activate Integration* dialog, select the tracing level.
