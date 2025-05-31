@@ -20,7 +20,7 @@ This lab assumes you have:
 
 * All previous labs completed.
 
-## Task 1: Pre-Requisites setup for Native Actions
+## Task 1: Create Project workspace
 
 ***Create Project***
 
