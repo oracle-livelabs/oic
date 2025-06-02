@@ -97,7 +97,7 @@ This lab assumes you have:
 1.  In the Project workspace *Select* the tab **Decision**
 ![Create Project](images/select-decision.png)
 
-2.  Click *Add** button and Select *Create a Decision*
+2.  Click *Add* button and Select *Create a Decision*
 Enter the following details:
 
 | **Field**        | **Value**          |       
@@ -109,10 +109,10 @@ Enter the following details:
 
 ![Create decisions](images/create-decision.png)
 
-Click *Create*
+Click *Create*.
 The decision model editor will open in graph view with an empty canvas.
 
-##	Task 2:	Understand the Graph View (Read ONLY Knowledge)
+##	Task 2:	Understand the Graph View and Decisions Palette (Read ONLY Section)
 
 1.	Decisions are created in the graph view. In the graph view, you can create decision requirement diagrams (DRD), in accordance with DMN standards, to visually represent your decisions.
 
@@ -120,11 +120,38 @@ The decision model editor will open in graph view with an empty canvas.
 ![Decision Elements DRD](images/decision-elements-drd.png)
 
 3.	The graph view is divided into the following areas:
-  -	Toolbar : The decision toolbar provides quick access controls to manage the decision canvas.
-  -	Canvas : The decision canvas is the central area where you can create a diagram that represents your decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
-  -	Diagram palette: From the diagram palette, drag and drop DRD components onto the canvas to use them in your diagram.
+    -	Toolbar : The decision toolbar provides quick access controls to manage the decision canvas.
+    -	Canvas : The decision canvas is the central area where you can create a diagram that represents your decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
+    -	Diagram palette: From the diagram palette, drag and drop DRD components onto the canvas to use them in your diagram.
 ![Decision Service Canvas](images/decision-service-canvas.png)
-You may now **proceed to the next lab**.
+
+4.  Decision Components Brief Overview
+
+  - **If-Then-Else Decisions**:
+
+    Amount Category & Invoice Urgency Classifications: These conditional decisions evaluate specific criteria and return different outcomes based on logical tests. In our lab, if-then-else logic determines whether an invoice amount is "small," "medium," or "large," and assesses urgency levels based on invoice age, providing clear categorical outputs that feed into more complex decision tables.
+
+  - **Expression Decisions**
+
+    Vendor Recognition Logic: Expression decisions use FEEL language to perform calculations and evaluations that return single values. Our vendor recognition expression checks if vendor names contain known terms like "Tech" or "Office" using string functions, returning a boolean result that indicates vendor familiarity for downstream processing.
+
+  - **Context Decisions**
+
+    Risk Assessment Context: Context decisions create collections of related calculations and data points as key-value pairs with an optional result. Our risk context combines multiple factors like tax ID validity, line item matching, and vendor status to calculate a comprehensive risk score, demonstrating how contexts aggregate complex business logic into a single decision outcome.
+
+  - **Decision Tables**
+
+    Approval Routing & Payment Terms Tables: Decision tables provide a structured way to model complex business rules with multiple inputs and outputs in an easy-to-read tabular format. Our tables use hit policies to determine approval tracks and payment terms based on combinations of amount, risk level, urgency, and vendor status, showing how tabular logic handles multiple business scenarios efficiently.
+
+  - **Functions (Referenced)**
+
+    Reusable Calculation Logic: Functions encapsulate specific operations that can be invoked multiple times throughout the decision model. While not directly implemented in our core lab, functions would be useful for complex calculations like discount computations or date manipulations that need to be reused across different decisions in the model.
+
+  - **Lists (Referenced)**
+
+    Structured Data Collections: List decisions create ordered collections of elements where each element can contain different types of logic. In extended scenarios, lists could manage multiple vendor categories or approval levels, providing organized ways to handle sequential data processing within the decision framework.
+
+![Decision Palette](images/decisions-palette.png)
 
 ##	Task 3:	Create Input Data Type (invoiceExtract)
 
@@ -209,7 +236,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 ##	Task 4:	Create Amount Category (If-Then-Else) Component
 
-1.  From the diagram palette, Drag **If-Then-Else** onto the canvas after the input data
+1.  From the diagram palette, Drag **If-Then-Else** element onto the canvas after the input data
 
 2.  Select the If-Then-Else element, and Click *Edit* to Open Properties. Provide per below
 

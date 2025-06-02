@@ -81,7 +81,7 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
     | Select Resource | File |
     | Select Operation | Get File Reference |
     | Input Directory | &lt; directory path configured in File Server for your user &gt; |
-    | File Name | Invoice_Global_Innovations_Ltd.pdf |
+    | File Name | Invoice\_Global\_Innovations\_Ltd.pdf |
     {: title="Configure FS Native Action "}
 
     ![Configure FS Native Action Step 1](images/config-fs-native-action-step1.png)
