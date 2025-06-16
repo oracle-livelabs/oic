@@ -13,7 +13,7 @@ In this lab, you will learn:
 *Core Decision Modeling Skills*
 
   - Create a comprehensive decision model from scratch using the OIC Decision Model editor
-  - Navigate between graph and list views to effectively design and manage decision components
+  - Navigate to graph view to effectively design and manage decision components
   - Define complex input data types using nested structures to represent extracted invoice information
   - Implement multiple decision component types including if-then-else, expressions, contexts, lists, and decision tables
 

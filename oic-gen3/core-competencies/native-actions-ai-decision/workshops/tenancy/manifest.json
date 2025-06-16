@@ -17,6 +17,10 @@
             "filename": "../../../../common/provision-oic/provision.md"
         },
         {
+            "title": "Enable Process Automation in OIC 3",
+            "filename": "../../enable-opa/enable-opa.md"
+        },
+        {
             "title": "Enable File Server",
             "filename": "../../../../common/enable-file-server/enable-file-server.md"
         },
