@@ -233,7 +233,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
 ## Task 4: Bonus Section
 
-We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should get help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
+We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
 
 **Extending Your Integration with OIC Event System**
 
@@ -270,11 +270,15 @@ Take your invoice processing solution to the next level by implementing asynchro
     - Similarly, create Expedited-Track, Fast-Track Subscriber Integration Flows
     - Activate and Execute the updated Integration Flows and Subscriber Integrations. Verify if the Subscriber integrations are triggered as per the Approval Routing values returned by the Decision Model
 
+![Bonus Section Event Architecture](images/bonus-section-event-architecture.png)
+
 **Extended Use Case: Strategic Payment Terms Optimization**
 
 Enhance your invoice processing solution with intelligent payment terms calculation that leverages your existing approval routing decisions to optimize cash flow and vendor relationships!
 
 Your enhanced solution now automatically determines optimal payment terms by reusing the intelligence from your approval routing decision combined with additional business factors:
+
+![Payment Terms Decision Connection](images/bonus-section-payment-terms.png)
 
 - Leverage approval routing insights - Fast-track invoices get preferential payment terms
 - Vendor trust levels - Known vendors receive better payment conditions
