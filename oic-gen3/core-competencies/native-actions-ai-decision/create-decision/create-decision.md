@@ -363,6 +363,7 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
 Similarly, add other entries per below:
 | **Key**        | **Value**          |       
 | --- | ----------- |
+|   amountCategory       | Amount Category    |
 |   urgencyLevel       | Invoice Urgency    |
 | knownVendor  | Vendor Recognition |
 | hasValidTaxID  | string length(invoiceExtract.invoiceExtract.vendor\_data.tax_id ) >= 9 |
@@ -452,7 +453,7 @@ Similarly, add other entries per below:
 4.  Add Additional Output Columns
   - Click the output column and select **Add column after**
   - Name the new column: **SLA Days**
-  - Configure as **Number** type
+  - Configure as **Number** type (**Note:** You may add integer values for SLA Days by selecting list of values, in a similar fashion as you did for Approval Routing. Refer the list of values shown in the screenshot. This is for ease of selection from drop down, when defining your business rules values)
   - Add another output column:
     - Name: **Special Review Required**
     - Configure as **True or False** type
