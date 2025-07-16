@@ -38,29 +38,20 @@ Follow these steps to create a DB table which will be used as part of this works
 
     ```
     <copy>
-    CREATE TABLE v_sales_orders
+    CREATE TABLE events_sales_orders
     (
        order_id       INTEGER NOT NULL PRIMARY KEY,
        region         VARCHAR(33),
        country        VARCHAR(21),
        item_type      VARCHAR(15),
-       sales_channel  VARCHAR(7),
-       order_priority VARCHAR(1),
-       order_date     DATE,
-       ship_date      DATE,
-       units_sold     INTEGER,
-       unit_price     NUMERIC(6, 2),
-       unit_cost      NUMERIC(6, 2),
-       total_revenue  NUMERIC(10, 2),
        total_cost     NUMERIC(10, 2),
        total_profit   NUMERIC(10, 2)
     );
     </copy>
     ```
 
-5. Paste the script in the SQL Worksheet, then click **Run It** button. This will create the **V\_SALES\_ORDERS** table. The table is created successfully when you see the notification in the *Script Output* window.
+5. Paste the script in the SQL Worksheet, then click **Run It** button. This will create the **events\_sales\_orders** table. The table is created successfully when you see the notification in the *Script Output* window.
 
-    ![Past SQL Script](images/paste-run-sql-script.png)
 
 Now you have an external table which will be used in the Integration flow.
 

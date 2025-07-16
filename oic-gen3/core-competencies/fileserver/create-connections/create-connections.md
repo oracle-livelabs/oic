@@ -33,6 +33,7 @@ Create a connection with the Oracle Autonomous Transaction Processing Adapter.
     | **Field**        | **Value**          |
     | --- | ----------- |
     | Name         | `ATP Database`       |
+    | Role  | Select `Invoke` |
     | Description  | `ATP Connection for LiveLabs` |
 
     Keep all other values as default.

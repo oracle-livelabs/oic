@@ -88,7 +88,6 @@ We will start by creating a new integration and adding some basic info.
     </copy>
     
 
-
 8. Click **Validate**, Click **&lt;(Back)**,  Click **Finish**.
 9. Optional, Select Layout to ***Horizontal*** and click **Save** to apply changes.
 
@@ -138,7 +137,7 @@ Search for the **Stage File** action and click on it. This invokes Stage File Co
 4. On the **Schema Options** page,
       - Click ***Continue***.
 5. On the **Format Definition** page,
-      - click ***Drag and Drop*** and download the the [sales.csv][https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv] file and upload here
+      - click ***Drag and Drop*** and download the [sales.csv](../files/sales.csv?download=1) file and upload here
       - for the **Enter Record Name**, enter ***salesorder***
       - for the **Enter Record Name**, enter ***salesorderset***
       - Click ***Continue***.
@@ -159,7 +158,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
     | **Element**        | **Value**          |
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
-    | What operation do you want to perform? | **Run a SQL Statement (Run AI for SQL)** |
+    | What operation do you want to perform? | **Run a SQL Statement** |
     
     - Click **Continue**
     - Enter the query given below and click on **Validate SQL Query**
@@ -167,23 +166,14 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
     ```
 <copy>
 
-                INSERT INTO v_sales_orders (
+        INSERT INTO events_sales_orders (
         order_id,
         region,
         country,
         item_type,
-        sales_channel,
-        order_priority,
-        order_date,
-        ship_date,
-        units_sold,
-        unit_price,
-        unit_cost,
-        total_revenue,
         total_cost,
         total_profit
-        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?
-        )
+        ) VALUES (?,?,?,?,?,?)
 </copy>
     ```
 
@@ -238,7 +228,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, May 2025
-
-
-[https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv]: https://objectstorage.us-phoenix-1.oraclecloud.com/p/1Zfbee1VhwAV2gaeGxZwMSa9Hrp8SlhB0vPv6_wKGOQWxhFSAqVFNmdpwHvFWiOs/n/oicpm/b/oiclivelabs/o/oic3/core-competency/fileserver/sales.csv
+- **Last Updated By/Date** - Subhani Italapuram, July 2025

@@ -33,6 +33,8 @@ This lab assumes you have:
 1. From the *Projects* page, Click on **Observe &gt; Instances**
 2. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
 
+> **Note:** If you are a Bootcamp user, you can just cross check the logs in observe tab and ignore the Task 3 as database details can not be shared. If you have your own Oracle ATP instance, then you may try the lab with that instance.
+
 ## Task 3: Verify sales orders record in ATP Table
 
 Follow these steps to view the sales orders record in the designated DB table.
@@ -60,4 +62,4 @@ Follow these steps to view the sales orders record in the designated DB table.
 ## Acknowledgements
 
 - **Author** - Subhani Italapuram, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, May 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2025
