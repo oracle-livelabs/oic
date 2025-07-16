@@ -19,6 +19,8 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all previous labs successfully
+- Download the Visual Builder application if you are running this application on your environment and import and setup in your Oracle Integration environment
+    [OrderApplication](files/OrderApplication1-1.0.zip?download=1)
 
 ## Task 1: Modify the Order ID in the sales order file
 
