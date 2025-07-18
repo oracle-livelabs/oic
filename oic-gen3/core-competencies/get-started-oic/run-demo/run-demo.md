@@ -74,7 +74,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
 ## Task 3: Verify sales orders records in ADW Table via Visual Builder web application.
 
-- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/)
+- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oic3training5-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication_1_0/live/webApps/orderapps/)
 
 ## Task 4: Verify sales orders records in ADW Table
 
