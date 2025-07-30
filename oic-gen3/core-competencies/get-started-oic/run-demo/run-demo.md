@@ -21,6 +21,8 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all previous labs successfully
+- Download the Visual Builder application if you are running this application on your environment and import and setup in your Oracle Integration environment
+    [OrderApplication](files/OrderApplication1-1.0.zip?download=1)
 
 ## Task 1: Create a sales order file in the File Server
 
@@ -72,7 +74,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
 ## Task 3: Verify sales orders records in ADW Table via Visual Builder web application.
 
-- [Verify sales orders](https://oictraining5-oicpm-px.integration.ocp.oraclecloud.com/ic/builder/rt/OrderApplication/live/webApps/orderapps/)
+- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oic3training5-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication_1_0/live/webApps/orderapps/)
 
 ## Task 4: Verify sales orders records in ADW Table
 
