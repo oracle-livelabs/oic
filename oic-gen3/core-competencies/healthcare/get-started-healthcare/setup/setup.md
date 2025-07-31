@@ -88,7 +88,7 @@ java –jar connectivityagent.jar
 
 ## Task 4: Download Lab Artifacts
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) the lab artifacts and unzip.
+1.  [Download](../files/get-started-hc-lab-artifacts.zip?download=1) the lab artifacts and unzip.
 
 2. The unzipped folder will contain three folders. These artifacts will be referred to in the next sections.
 

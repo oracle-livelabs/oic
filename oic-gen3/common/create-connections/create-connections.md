@@ -23,12 +23,22 @@ This lab assumes you have:
 
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 
-1. In the left Navigation pane, click ***Design*** &gt; ***Connections*** &gt; click ***Create***
-2. In the *Create Connection* dialog, select the **FTP** adapter to use for this connection. To find the adapter, enter FTP in the search field. Click on the highlighted adapter
-3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click ***Create***.  
-    > **Note:**  If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
+    You can please skip this step if you are already in the project.
+2. In the **Connections** section, click ***Add*** to create a new connection.
 
-4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
+3. Select the **FTP** Adapter.
+4. From the *Create Connection* dialog, *Name* your connection as **File Server** and select *Role* as **Invoke** and leave the rest of the configurations as default. Click **Create**
+    > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
+    If you are a non Bootcamp user then skip step 5 and continue with other steps..
+
+5. Search for **File**, Please note that the connection with the name **File Server** is already created by the instructors, configured and shared with other projects.
+Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+
+    ![File Server Connection](images/fileserversharedconn.png).
+
+6. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
+
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
     | FTP Server Host Address | From File Server Settings - IP and Port Information   |
@@ -38,12 +48,13 @@ To access the File Server from an Integration, you will need to create an FTP Co
     | Username                | Your Oracle Integration username                      |
     | Password                | Your Oracle Integration password                      |
 
-5. Confirm your Connection by clicking ***Test***, then ***Diagnose & Test***. You should see the *Connection File Server was tested successfully* confirmation message. Click ***Save*** and exit the Connection editor.
+7. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
 
 ##	Task	2: Create Connection using REST adapter
 Create a connection with the REST Adapter.
 
-1. In the left Navigation pane of OIC, Click ***Design*** &gt; ***Connections*** and Click ***Create***.
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
+    You can please skip this step if you are already in the project. In the **Connections** section, click ***Add*** to create a new connection.
 2. In the *Create Connection* dialog, select the **REST** adapter. To find the adapter, enter `REST` in the search field. Click on the highlighted adapter.
 3. In the *Create Connection* dialog, enter the following information and click on ***Create***:
 
@@ -74,4 +85,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, November 2024
+* **Last Updated By/Date** - Subhani Italapuram, July 2025

@@ -123,7 +123,7 @@ This displays the Cloud Shell in a "drawer" at the bottom of the console
 
 ## Task 4: Import supporting lab artifacts
 
-There are some artifacts which are made available so that you can focus on the core part of the usecase. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ErOK2_XFjuwyvJYosDbgtXTBTwPUDCvDzr-iaG6-3aw_KSHxZrWTq5LjiYsNA3-v/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud-b2b/oic-ocw-artifacts.zip) the lab artifacts and unzip in any local directory.
+There are some artifacts which are made available so that you can focus on the core part of the usecase. [Download](../files/oic-ocw-artifacts.zip?download=1) the lab artifacts and unzip in any local directory.
 
 1.  Navigate to **OIC console** and from the left corner Hamburger Menu Select *Design* &gt; *Packages*. Select *Import* action and browse for the *oic.ocw.hol.par* package under **Import** folder.
     ![Import Integration Package](images/import-supporting-package.png)
@@ -160,23 +160,32 @@ Select *Import and Configure*. This will open the *Configuration Editor*
 
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 
-1. In the left Navigation pane, click *Design* &gt; *Connections* &gt; click *Create*
-2. In the *Create Connection* dialog, select the **FTP** adapter to use for this connection. To find the adapter, enter FTP in the search field. Click on the highlighted adapter
-3. From the **Create Connection** dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click *Create*.  
-    > **Note:**  If you get an error that the identifier already exists, enter unique connection name and remember this name for use later in the workshop.
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
+    You can please skip this step if you are already in the project.
+2. In the **Connections** section, click ***Add*** to create a new connection.
 
-4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
-  | Field                   | Value                                                 |
-  |-------------------------|-------------------------------------------------------|
-  | FTP Server Host Address | From File Server Settings - IP Information   |
-  | FPT Server Port         | From File Server Settings - Port Information   |
-  | SFTP Connection         | Yes                                                   |
-  | Security                | FTP Server Access Policy                              |
-  | Username                | Your Oracle Integration username                      |
-  | Password                | Your Oracle Integration password                      |
-  {: title="FTP Connection Properties"}
+3. Select the **FTP** Adapter.
+4. From the *Create Connection* dialog, *Name* your connection as **File Server** and select *Role* as **Invoke** and leave the rest of the configurations as default. Click **Create**
+    > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
+    If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
-5. Confirm your Connection by clicking *Test*. You should see a confirmation message and select *Test* once again. Click *Save* and exit the Connection editor.
+5. Search for **File**, Please note that the connection with the name **File Server** is already created by the instructors, configured and shared with other projects.
+Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+
+    ![File Server Connection](images/fileserversharedconn.png).
+
+6. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
+
+    | Field                   | Value                                                 |
+    |-------------------------|-------------------------------------------------------|
+    | FTP Server Host Address | From File Server Settings - IP and Port Information   |
+    | FPT Server Port         | From File Server Settings - IP and Port Information   |
+    | SFTP Connection         | Yes                                                   |
+    | Security                | FTP Server Access Policy                              |
+    | Username                | Your Oracle Integration username                      |
+    | Password                | Your Oracle Integration password                      |
+
+7. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
 
 ## Task 6: Create Connection with Visual Builder
 
@@ -202,7 +211,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
 ### Create REST Adapter Connection in OIC pointing to VB endpoint
 
-1.  Navigate back to OIC Console. Create a connection using **REST Adapter** and name it as *Visual Builder*. Select role as *Invoke*.
+1.  Navigate back to OIC Console and Projects. Create a connection using **REST Adapter** and name it as *Visual Builder*. Select role as *Invoke*.
 
 2.  Configure the connection properties and security auth scheme per below
 
@@ -232,4 +241,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Kishore Katta, July 2023
+* **Last Updated By/Date** - Subhani Italapuram, July 2025

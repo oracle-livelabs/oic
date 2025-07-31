@@ -145,7 +145,9 @@ In continuation to the previous task the next step is to login to docker registr
 
 ## Task 6: Create and Deploy your function
 
-In this section we will initialize function workspace which generates a boilerplate code in python. We will create our excel to csv function code in python. We will make some modifications as per the code in the artifact provided. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SrKYt_S-_e5uWp_jo44A1sGMQwYnybC86-ZaQzHUbyKw5oRRKBG-wdN3sZHQHEFG/n/oicpm/b/oiclivelabs/o/oic3/oic-native-actions/native-actions.zip) lab artifacts to your desktop and unzip the file.
+In this section we will initialize function workspace which generates a boilerplate code in python. We will create our excel to csv function code in python. We will make some modifications as per the code in the artifact provided. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/AAq_5pNpZL8ly52JkSs1x2l6WCypVSEC-Zs6m3XGXG5zpcMk-SooTr4EPEBF787Z/n/oicpm/b/oiclivelabs/o/oic3_native-actions.zip) lab artifacts to your desktop and unzip the file.
+
+
 
 1.  In the **Cloud Shell** command line execute the below commands to create a directory  and initialize the workspace.
 
