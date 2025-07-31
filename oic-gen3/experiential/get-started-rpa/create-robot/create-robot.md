@@ -94,174 +94,120 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 
 6. Click **OK** when done, then **Save**.
 
-## Task 4: Add Login Action
-
-Start the robot by adding the Login action.
-
-1. On the Robot Designer canvas, hover over the **Open Application** action and click on the **+** which appears below it.
-![Add Open Application action](images/robot-designer_open-application_add-action.png " ")
-
-    A menu of available actions appears.
-
-2. From the **Actions** tab, select the **Login** action.
-![Add Login action](images/robot-designer_open-application_add-login.png " ")
-
-    The **Login** action appears on the canvas.
-
-3. On the **Login** panel, within the **Username** field, select ![Select robot connections](images/robot-connections-button.png) (**Robot connections**). On the Robot connections side panel, expand the created robot connection and drag the `username` parameter to the **Username** field.
-![Assign username](images/robot-designer_login_assign-username.png " ")
-
-4. Repeat these steps by dragging the `password` parameter to the **Password** field.
-
-    Next, we will specify input details for Username and Password actions.
-
-5. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. For example, to access Oracle Cloud ERP, your login URL pattern will be:
+7. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. For example, to access Oracle Cloud ERP, your login URL pattern will be:
 `https://<Fusion-domain>.fa.<data-center>.oraclecloud.com/fscmUI/faces/FuseWelcome`
 
-6. Return to the **Login** panel on the Robot window, click within the **Username locator** field, and select ![Target a page element button](images/robot-taget-page-button.png) (**Target a page element**).
+8. On the canvas, select the action to record after, you can select the **Open Application** action
+9. On the toolbar, select Record after the selected action Record after the selected action.
+The Smart record panel appears. If you haven't installed the recorder, Browser extension not detected appears and follow Task 4, otherwise skip Task 4.
+    ![Record action](images/recordaction.png " ")
 
-    > **Note**: The rest of the workshop requires the **Robot Designer Extension** on your Chrome browser. This extension is used for Targeting and Recording, which allows you to harness the power of control and power of the low-code capabilities. This extension must be installed in order to build robots.
+## Task 4: Install the recorder (Optional if you have not installed the recorder)
 
-7. If you see below message while following the previous step, then complete the extension installation. After installing the browser extension, you can start creating targets when adding actions to a robot.
+The recorder is an extension that you use to build robots. Everyone who builds robots must install the recorder.
 
-    ![Browser extension not detected](images/robot-designer_browser-extension-missing.png)
+1. Select Install browser extension.
+    ![browserextensionnotdetected action](images/browserextensionnotdetected.png " ")
+2. Select Add to Chrome, In the pop-up, select Add extension.
+The Oracle Robot Flow Designer extension is installed to your browser. A pop-up appears when the installation is finished.
+3. Refresh the browser window where Oracle Integration is open. If you work in an Incognito window, allow the extension in Incognito windows.
+    Perform these steps in an Incognito browser or a regular Chrome browser.
+        a. In Google Chrome, open the Extensions Extensions menu, and select Manage Extensions.
+        b. In the box for the Oracle Robot Designer Extension, select Details.
+        c. Enable the Allow in Incognito setting.
+4. Close the **Extensions** tab and return to the Robot. Click **Save**, reopen the project.
 
-    Follow these steps to install the Browser Extension:
-
-    * Click on the **Download browser extension** button and wait for the download to complete.
-    * Navigate to the location of the downloaded ZIP file, such as your **Downloads** folder.
-    * Move the ZIP file to a local folder of your choice, such as ```Users\<user>\RPA\plugin```
-    * Extract the ZIP file to the designated plugin folder.
-    * In Google Chrome, open the **Extensions** menu, and select **Manage Extensions**.
-    * Enable **Developer mode** using the slider on the top right corner.
-    ![Chrome Developer Mode](images/chrome_enable-developer-mode.png)
-    * On the **Extensions** page, select **Load unpacked**.
-    * Navigate to the folder containing the unzipped files, select the *target* folder, and click on **Select Folder**.
-
-    This installs the Robot Extension in your Chrome browser.
-
-    ![Loaded Robot extension](images/robot-extension_loaded.png " ")
-
-    Close the **Extensions** tab and return to the Robot. Click **Save**, reopen the project and return to the previous step.
-
-    > **Note**: If the extension fails to load, then save all your work and restart the browser window. Next, navigate to the Robot and reopen the **Login** action.
-
-8. On the **Target a page element** panel, select the target browser window to the Oracle Fusion login page with title `Sign In`, and click **Go**.
-
-    ![Robot input username locator select](images/robot-input_username-locator_select.png)
-
-    This starts the design Targeting on the ERP Cloud login page. This component pops up at the bottom of the Fusion Application window:
-
-    ![Robot design Targeting](images/robot-designer_targeting-on.png "")
-
-9. On the Oracle Fusion login page, point to the `User ID` field where the robot will enter the user name and click on that field when the icon changes to a target (color turns green).
-
-    ![Robot input username locator select](images/robot-designer_smart-record_select-user-id.png "")
-
-    The Targeting will map the `User ID` UI element value to the **Username locator** field in the robot.
-
-    > **Note**: When using the targeting component, wait until the target icon appears, the field turns green, and your mouse icon changes to a hand before selecting the UI element. By clicking the field before it turns green will result in a regular UI interaction.
-
-    ![Robot input username locator select](images/robot-designer_username-locator_mapped.png "")
-
-10. Repeat the previous steps for the following fields:
-
-    * **Password locator**: Select the `password` UI element after it turns green.
-    * **Submit locator**: Select the `Sign In` button after it turns green. The robot will click this button to sign in to the Oracle Fusion application.
-
-    Your intermediate Login action panel should look as follows:
-
-    ![Current flow until sign-in](images/robot-designer_flow_sign-in-complete.png " ")
-
-11. Click **OK**.
-
-12. Above the Robot canvas, click **Save**.
-
-## Task 5: Add Robot ERP Actions using the Record option
+## Task 5: Add ERP Login Actions using the Record option
 
 While building the rest of the robot, you'll record the actions that the robot completes using the recorder, all while harnessing the power of control and power of the low-code capabilities. We will navigate the Fusion pages using UI actions (e.g. mouse clicks, keyboard entries), which will automatically generate the relevant robot actions on the flow.
 
-1. Open the browser window with the Oracle Cloud ERP login page. Enter the provided credentials and click **Sign In** to proceed to the ERP Cloud landing page.
+1. Click the **Record after the selected option** button to start recording after the selected **Open Application** action.  ![Record button enabled](images/recordaction.png " ")
 
-    ![ERP Cloud login](images/erp-cloud_login.png " ")
+2. On the **Smart Record** panel, click **Select browser tab to target** drop-down.
 
-    We will start the robot recording after the login action.
+3. Select the window title which coincides with the Oracle ERP Cloud tab.
 
-2. Return to the browser tab running the robot designer. On the robot designer canvas, click the **Login** action to enable the record button.
+    ![Select browser tab](images/select-browser.png " ")
 
-3. Click the **Record after the selected option** button to start recording after the selected **Login** action.  ![Record button enabled](images/robot-designer_record-button.png " ")
+    This starts the recorder on the ERP Cloud login page.
 
-4. On the **Smart Record** panel, click **Select browser tab to target** drop-down.
+4. On the **RPA Smart Recording** panel, click on **Begin Recording**.
 
-5. Select the window title which coincides with the Oracle ERP Cloud tab.
-
-    ![Select browser tab](images/robot-designer_smart-record_select-browser.png " ")
-
-    This starts the recorder on the ERP Cloud landing page.
-
-6. On the **RPA Smart Recording** panel, click on **Begin Recording**.
-
-    We will now select field elements to generate associated Actions in the robot.
+    We will now select elements to generate associated Actions in the robot.
 
     > **Note**: When recording actions, the recorder can start from any point in time. However, for this task we will record after the Login operation.
 
-7. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target.
+5. Click on "User Name" text field when the icon changes to a target. This will open a child window.
+    ![erp username](images/erploginusername.png " ")
+6. Click on **RPA Connections**, expand **RPA ERP Connection** OR *the connection which you have created* and drag and drop *username* from left side to the right side under *Value* element, and also enter *Test value* as *bala.gupta* or *any other username who has permissions to complete this use case* and click on **Save**
+    ![enter username](images/select-username.png " ")
+7. Go back to the OIC Designer and you should see the *username* element added to the RPA flow.
+8. Click on "Password" text field when the icon changes to a target. This will open a child window.
+    ![erp password](images/erploginpassword.png " ")
+9. Click on **RPA Connections**, expand **RPA ERP Connection** OR *the connection which you have created* and drag and drop *password* from left side to the right side under *Value* element and click on **Save**
+10. Go back to the OIC Designer and you should see the *password* element added to the RPA flow.
+11. Click on "Sign" text field when the icon changes to a target. This will open a child window and click on **Save**
+    ![erp signin](images/erpsignin.png " ")
+
+## Task 6: Add Robot ERP Actions using the Record option
+
+1. From the top menu in ERP Cloud, click on **Procurement** when the icon changes to a target.
 
     ![Click Procurement target elements](images/robot-designer_smart-record_click-procurement.png " ")
 
-8. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab. If your element value is not `A`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Procurement** target element again while using the recorder.
+2. In the **Action Details**, keep all values as default and click **Save**. This will add the action `Click "Procurement"` and move to the **Procurement** tab. If your element value is not `A`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Procurement** target element again while using the recorder.
 
     ![Procurement action details](images/robot-designer_smart-record_procurement-action-details.png " ")
 
     > **Note:** When recording or targeting a field, hover your cursor over a UI element and note the shading that appears. While the shading is purple and the icon above the field is a magnifying glass, the recorder is still collecting information about the element. Clicking the element before it turns green will result in a regular UI interaction.
 
-9. Click on **Purchase Orders** when the complete tile is shaded and changed to a target.
+3. Click on **Purchase Orders** when the complete tile is shaded and changed to a target.
 
     ![Select Purchase Orders tile](images/robot-designer_smart-record_click-purchase-orders.png "=50%x*")
 
-10. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen. If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Purchase Orders** target element again while using the recorder.
+4. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Purchase Orders"` action and move to the **Overview - Purchase Orders** screen. If your element value is not `DIV`, then you clicked on the wrong element. Retry the action by selecting **Discard** and click **Purchase Orders** target element again while using the recorder.
 
     ![Purchase Orders action details](images/robot-designer_smart-record_purchase-orders-action-details.png " ")
 
-11. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
+5. On the **Overview** page, move to the right of the screen and select the **Tasks** icon when the icon changes to a target.
 
     ![Select Tasks icon](images/erp-cloud_select-tasks.png " ")
 
-12. In the **Action Details**, if your Element value is `IMG`, then click **Save** to add the `Click "Tasks"` action. If you see a different element value, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
+6. In the **Action Details**, if your Element value is `IMG`, then click **Save** to add the `Click "Tasks"` action. If you see a different element value, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click **Tasks** icon element again while using the recorder.
 
     ![Tasks action details](images/robot-designer_smart-record_tasks-action-details.png " ")
 
-13. On the Tasks side panel, hover to the **Orders** section and click on **Manage Orders** when the icon changes to a target.
+7. On the Tasks side panel, hover to the **Orders** section and click on **Manage Orders** when the icon changes to a target.
 
     ![Manage Orders action details](images/robot-designer_smart-record_click-manage-orders.png " ")
 
-14. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
+8. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Manage Orders"` action.
 
      > **Note**: When we are ready to test the robot, a valid Purchase Order number will be required as input. In the next steps, we will momentarily pause the recording and search for a valid Purchase Order before continuing with recording consequent actions.
 
-15. Click the **Pause** button on the Smart Recording panel.
+9. Click the **Pause** button on the Smart Recording panel.
 
     ![Pause Smart Recording](images/robot-designer_smart-record_pause.png "" )
 
-16. Click the **Tasks** icon again, then select **Manage Orders**. This will display the Manage Orders overview screen.
+10. Click the **Tasks** icon again, then select **Manage Orders**. This will display the Manage Orders overview screen.
 
-17. Click **Search** and wait until you see a list of existing purchase orders.
+11. Click **Search** and wait until you see a list of existing purchase orders.
 
-18. Choose one of the purchase orders with a listed `Supplier Name`, and make a note of the order number.
+12. Choose one of the purchase orders with a listed `Supplier Name`, and make a note of the order number.
 
-19. Click **Done** on the top right corner to close the **Manage Orders** screen.
+13. Click **Done** on the top right corner to close the **Manage Orders** screen.
 
-20. Once again click on the **Tasks** icon, and select **Manage Orders** to display the Manage Orders overview screen.
+14. Once again click on the **Tasks** icon, and select **Manage Orders** to display the Manage Orders overview screen.
 
-21. Click the **Resume** button on the Smart Recording panel to commence recording of UI actions.
+15. Click the **Resume** button on the Smart Recording panel to commence recording of UI actions.
 
     ![Resume Smart Recording](images/robot-designer_smart-record_resume.png " " )
 
-22. Move to the **Order** field and click the textbox element when the icon changes to a target.
+16. Move to the **Order** field and click the textbox element when the icon changes to a target.
 
     ![Click Order textbox](images/robot-designer_smart-record_click-order-field.png " ")
 
-23. Change the following values in the **Action Details**.
+17. Change the following values in the **Action Details**.
 
     1. Name: `Enter "PO number" Text`
     2. Target name: Add something descriptive without spaces (such as `Enter_po_number`)
@@ -271,19 +217,19 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![PO Number action details](images/action-details_po-number.png " ")
 
-24. Click **Save**.
+18. Click **Save**.
 
-25. Click on **Search** when the complete tile is shaded and changed to a target.
+19. Click on **Search** when the complete tile is shaded and changed to a target.
 
     ![Click Search button](images/robot-designer_smart-record_click-search.png " ")
 
-26. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
+20. In the **Action Details**, keep all values as default and click **Save**. This will add the `Click "Search"` action and display the search results containing the specified purchase order.
 
-27. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target.
+21. For the listed purchase order, move to the **Supplier** column and select the supplier name after the icon changes to a target.
 
     ![Click Supplier cell](images/robot-designer_smart-record_click-supplier.png " ")
 
-28. In the **Action Details**, if your Element value is not `TD`, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click on the **Supplier** value again while using the recorder. When the Element value is `TD`, then proceed with the following changes:
+22. In the **Action Details**, if your Element value is not `TD`, then you clicked on the wrong UI element. Retry the action by selecting **Discard** and click on the **Supplier** value again while using the recorder. When the Element value is `TD`, then proceed with the following changes:
 
     1. Action: `Get Text`
     2. Name: `Click "Get supplier name"`
@@ -293,27 +239,27 @@ While building the rest of the robot, you'll record the actions that the robot c
 
     ![Assign supplier name to output](images/action-details_output_assign-supplier.png " ")
 
-29. Click **Save**.
+23. Click **Save**.
 
-30. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png) **(Stop recording)** to end the recording.
+24. In the "Smart Recording" panel, click on ![Smart Recording stop button](images/smart-recording_stop-button.png) **(Stop recording)** to end the recording.
 
-31. In the **Robot Designer**, click on **Save**.
+25. In the **Robot Designer**, click on **Save**.
 
     We will add a Log action to capture the output value of the robot.
 
-32. Click on the ![Select Robot actions](images/robot-designer_select-robot-actions.png) (**Robot actions**) panel, and drag-and-drop the **Log** action to the tail end of the flow.
+26. Click on the ![Select Robot actions](images/robot-designer_select-robot-actions.png) (**Robot actions**) panel, and drag-and-drop the **Log** action to the tail end of the flow.
 
     ![Add Log action](images/robot-designer_add-log-action.png " ")
 
-33. On the **Log** panel, hover over the **Message** field, click **...** (**More options**), and select **Output**. This assigns the output value to the log message.
+27. On the **Log** panel, hover over the **Message** field, click **...** (**More options**), and select **Output**. This assigns the output value to the log message.
 ![Assign Log Output Message](images/robot-designer_log-action_assign-output.png "")
 
-34. Drag the `SupplierName` property to **Message** field.
+28. Drag the `SupplierName` property to **Message** field.
 ![Drag Supplier property](images/robot-designer_log-action_assign-supplier.png "")
 
-35. Click **OK**, then **Save**.
+29. Click **OK**, then **Save**.
 
-36. Close the robot designer by clicking on the **<** (**Go back**) button on the top left of the screen.
+30. Close the robot designer by clicking on the **<** (**Go back**) button on the top left of the screen.
 
     The status of your robot should be **Draft**.
 

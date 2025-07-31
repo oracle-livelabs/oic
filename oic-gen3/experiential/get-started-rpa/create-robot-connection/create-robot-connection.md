@@ -63,7 +63,11 @@ Specify the service URL and login credentials in a robot connection.
 
 You have successfully completed this lab.
 
+## Learn More
+
+* [Create Connections to Applications](https://docs.oracle.com/en/cloud/paas/application-integration/robotic-automation/create-connections-applications.html#GUID-24DD94B0-4914-4333-B4E7-7EE750257792)
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, June 2024
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2025
