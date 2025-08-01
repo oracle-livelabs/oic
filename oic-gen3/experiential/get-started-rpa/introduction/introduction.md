@@ -18,6 +18,8 @@ Oracle Integration offers unified observability of all assets with robust monito
 
 Businesses can build flexible and future-proof solutions using Oracle Integration. Use Robots when the underlying service only support a UI-interface. You create an integration that calls a robot and then moves on to the next automation work. When the time comes to replace the UI-based implementation with an API-based interface, you can make an update without impacting the larger business process.
 
+[First Glimpse - Oracle Integration 3 RPA](youtube:ljZdU3j2lPw:medium)
+
 ### Objectives
 
 In this workshop, you will:
@@ -39,4 +41,4 @@ In this workshop, you will:
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, June 2024
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2025
