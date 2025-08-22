@@ -3,7 +3,7 @@
 ## About this Workshop
 
 This workshop will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous Transaction Processing(ATP) Table leveraging out of the box adapters.
-- We shall leverage the features published on OIC 25.04 like File Server Events to trigger the integration flow and insert the data into ATP."
+- We shall leverage the features published on OIC 25.04 like File Server Events to trigger the integration flow and insert the data into ATP.
 
 
     ![Integration Architecture](images/oicfileevent.png)

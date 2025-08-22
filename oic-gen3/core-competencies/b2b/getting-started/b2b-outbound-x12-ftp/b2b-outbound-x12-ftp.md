@@ -32,7 +32,7 @@ In this lab, you will create a basic integration flow to process the EDI documen
 
 ### Prerequisites
 > **Note** : 1. This Lab assumes you have completed all the previous labs. Importantly, [Lab5:B2B Schemas and Documents](../workshops/tenancy/?lab=b2b-documents-schemas) & [Lab6: B2B Trading Partner Manager](../workshops/tenancy/?lab=b2b-trading-partner-manager)
-2.[Download Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BoaluNGQEwbsB8_mv5JWSB5TI4FSMwRCkfyNdDwC8KXKgqYGmcHVSUIUS3E0dB-9/n/oicpm/b/oiclivelabs/o/oic3/b2b/b2b-getting-started.zip) if, not done in previous sections
+2.[Download Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mYt3DJ-Ow-S8nkClLBjtHtD950zT_3S9Xp-aw-J0_3awQfp4lXobotkSJEI9SqiW/n/oicpm/b/oiclivelabs/o/oic3/b2b-getting-started1.0.zip) if, not done in previous sections
 
 ## Task 1: Create an Integration
 

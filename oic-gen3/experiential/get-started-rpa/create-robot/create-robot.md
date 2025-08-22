@@ -267,7 +267,11 @@ While building the rest of the robot, you'll record the actions that the robot c
 
 You have successfully completed this lab.
 
+## Learn More
+
+* [11 Tips for New Robot Builders](https://docs.oracle.com/en/cloud/paas/application-integration/robotic-automation/tips-new-robot-builders.html#GUID-F6ABB846-03AA-4E62-8348-15ABFC5B777A)
+
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, June 2024
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2025

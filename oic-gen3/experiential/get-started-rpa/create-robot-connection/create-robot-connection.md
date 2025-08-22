@@ -66,6 +66,10 @@ You have successfully completed this lab.
 ## Learn More
 
 * [Create Connections to Applications](https://docs.oracle.com/en/cloud/paas/application-integration/robotic-automation/create-connections-applications.html#GUID-24DD94B0-4914-4333-B4E7-7EE750257792)
+## Learn More
+
+* [11 Tips for New Robot Builders](https://docs.oracle.com/en/cloud/paas/application-integration/robotic-automation/tips-new-robot-builders.html#GUID-F6ABB846-03AA-4E62-8348-15ABFC5B777A)
+
 
 ## Acknowledgements
 
