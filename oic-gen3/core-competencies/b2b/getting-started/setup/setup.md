@@ -118,7 +118,7 @@ If the permissions are configured correctly, you should be able to list, read, a
 
 ## Task 5: Download Lab Artifacts
 
-[Download the lab artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/b2b-getting-started.zip) and unzip in a folder **b2b-getting-started**
+[Download the lab artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mYt3DJ-Ow-S8nkClLBjtHtD950zT_3S9Xp-aw-J0_3awQfp4lXobotkSJEI9SqiW/n/oicpm/b/oiclivelabs/o/oic3/b2b-getting-started1.0.zip) and unzip in a folder **b2b-getting-started**
 
 You may now **proceed to the next lab**.
 
