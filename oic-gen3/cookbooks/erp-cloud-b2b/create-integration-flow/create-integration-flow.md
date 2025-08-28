@@ -873,4 +873,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors**
-* **Last Updated By/Date** - Kishore Katta, July 2023
+* **Last Updated By/Date** - Kishore Katta, Aug 2025

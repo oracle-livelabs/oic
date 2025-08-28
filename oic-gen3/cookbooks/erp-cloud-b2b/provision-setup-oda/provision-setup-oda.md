@@ -184,4 +184,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Vijaya Vishwanath, Sr. Cloud Solution Engineer
-* **Last Updated By/Date** - Kishore Katta, August 2023
+* **Last Updated By/Date** - Kishore Katta, August 2025
