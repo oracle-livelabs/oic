@@ -42,4 +42,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram (Oracle Integration, Product Management), Vijaya Vishwanath (Sr. Cloud Solution Engineer - Public Sector)
-* **Last Updated By/Date** - Subhani Italapuram, July 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2025

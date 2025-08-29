@@ -71,4 +71,4 @@ Please *proceed to the next lab*.
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, July 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2025
