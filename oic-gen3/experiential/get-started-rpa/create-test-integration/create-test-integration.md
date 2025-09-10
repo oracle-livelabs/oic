@@ -193,4 +193,4 @@ You have successfully completed this lab.
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Ravi Chablani, July 2024
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

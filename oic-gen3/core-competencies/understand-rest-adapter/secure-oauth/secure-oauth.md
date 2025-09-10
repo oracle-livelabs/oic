@@ -91,4 +91,4 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta, May 2023
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

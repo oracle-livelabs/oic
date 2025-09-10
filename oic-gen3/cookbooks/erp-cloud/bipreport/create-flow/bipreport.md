@@ -281,4 +281,4 @@ In this lab, you’ve gained valuable experience in designing and implementing a
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, November 2024
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

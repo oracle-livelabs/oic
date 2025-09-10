@@ -141,4 +141,4 @@ Verify sales orders file archived in OCI Object storage
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, November 2024
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2025

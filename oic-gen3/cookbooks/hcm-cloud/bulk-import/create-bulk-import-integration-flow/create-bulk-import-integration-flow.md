@@ -412,4 +412,4 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, November 2024
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

@@ -62,4 +62,4 @@ Follow these steps to view the sales orders record in the designated DB table.
 ## Acknowledgements
 
 - **Author** - Subhani Italapuram, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, July 2025
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2025

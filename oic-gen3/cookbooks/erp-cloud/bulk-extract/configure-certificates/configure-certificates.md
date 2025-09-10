@@ -50,4 +50,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Kishore Katta March 2023
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

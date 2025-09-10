@@ -630,4 +630,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
 * **Contributors** - Subhani Italapuram (Oracle Integration, Product Management)
-* **Last Updated By/Date** - Kishore Katta, Aug 2025
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
