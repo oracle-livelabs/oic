@@ -77,4 +77,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
-* **Last Updated By/Date** - Kishore Katta, February 2024
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
