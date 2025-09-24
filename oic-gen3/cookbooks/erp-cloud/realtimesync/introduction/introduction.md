@@ -27,7 +27,7 @@ In this workshop, you will learn how to:
 * Creating a Project
 * Creating Connections
 * Create a Real-Time Synchronization scenario using Business Events.
-* Use Business Object to Integrate with ERP Cloud.
+
 
 ### Prerequisites
 
