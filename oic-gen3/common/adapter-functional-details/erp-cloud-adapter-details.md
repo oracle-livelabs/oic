@@ -18,7 +18,7 @@ This lab assumes you have:
 
 * All previous labs successfully completed.
 
-##	Task	1: Understand ERP Cloud Adapter usage roles
+## Task	1: Understand ERP Cloud Adapter usage roles
 
 - Adapters Identify and Select the pattern of Integration upfront. The adapter wizard provides an intuitive way to select the task of choice by listing out relevant integration artefacts which provide an abstract view to the Integration Developer
 
@@ -79,9 +79,12 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/index.html)
+* [Using the Oracle ERP Cloud Adapter with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/understand-oracle-erp-cloud-adapter.html)
+
+* [Prerequisites for Creating a Connection](https://docs.oracle.com/en/cloud/paas/application-integration/erp-adapter/prerequisites-creating-connection.html)
+
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, November 2024
+* **Last Updated By/Date** - Subhani Italapuram, Sep 2025

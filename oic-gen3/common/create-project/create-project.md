@@ -45,4 +45,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2024
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
