@@ -211,4 +211,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025

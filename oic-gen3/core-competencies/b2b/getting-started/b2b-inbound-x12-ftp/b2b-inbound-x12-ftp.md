@@ -91,7 +91,7 @@ The backend integration is yet to be defined. So, we will deploy the Inbound Agr
 
 Let's create a basic, Inbound backend integration flow that receives an XML document through a REST request, converts  EDI X12 format to B2B XML Canonical Message, and logs a few elements in the Invoice EDI document.
 
-1. In the **Navigation pane**, click ***Integrations***
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***Integrations***
 2. On the **Integrations page**, click ***Create***
 3. Select **Application** as the style to use.
 

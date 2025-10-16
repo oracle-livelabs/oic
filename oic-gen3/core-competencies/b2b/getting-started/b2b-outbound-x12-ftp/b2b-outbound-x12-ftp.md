@@ -40,9 +40,9 @@ Let's create a basic, outbound integration flow that receives an XML document th
 
 > **Note**: This integration flow uses REST for simplicity. You can substitute the REST Adapter trigger connection with any other adapter, such as the FTP Adapter, NetSuite Adapter, ERP Cloud Adapter, available in Oracle Integration
 
-1. In the **Navigation pane**, click ***Integrations***
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***Integration***
 
-2. On the **Integrations page**, click ***Create***
+2. On the **Integrations** section, click ***+***, click on *Create*
 
 3. Select **Application** as the style to use.
 
@@ -97,10 +97,9 @@ The **Configure B2B Action** wizard opens
 
 Configure data mappings for the EDI-Generate action and Receive-App-Msg action in order to successfully parse the incoming XML message and translate it to EDI message.
 
-1. Click the ***Map to EDI-Generate*** action and select ***Edit***
+1. Click the ***Map EDI-Generate*** action and select ***Edit***
 2. Click on ***Developer*** mode
-   ![Devmode diagram](images/devmode.png)
-3. From Source, expand the ***root element***, expand ***AcmePurchaseOrder*** and From Target, expand the ***root element***, expand ***TranslateInput***, expand ***edi-xml-document***, expand ***transaction-data*** and **map** all the mandatory elements given below.
+3. From Source, expand the ***root element***, expand ***Acme Purchase Order*** and From Target, expand the ***root element***, expand ***Translate Input***, expand ***Edi Xml Document***, expand ***Transaction Data*** and **map** all the mandatory elements given below.
 > **Note**: You can search for the element to find it quickly
 
 | Source | Target |
@@ -122,7 +121,6 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 | Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
 
 4. Click on ***Validate***
-  * A confirmation message appears.
 5. Click ***&lt; (Go back)***
 6. Click ***Save*** to persist changes.
 
@@ -134,16 +132,16 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
     * Click on ***Main canvas*** and Click ***Save*** to persist changes.
     ![Route1](images/switch-route1.png)
 
-    * In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
+    * In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select *project* and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
     * Select **POST** operation and Click on ***Continue***. Click on ***Finish*** and ***Save*** your integration flow
       ![callTP](images/call-tp.png)
-    * Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate Response > executeResponse > Translate Output**
+    * Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate > executeResponse > Translate Output**
 | Source | Target |
 | --- | --- |
-| B2B Message Reference | Components Schemas Request Wrapper > Messages > B2B Message Reference |
-| Trading Partner Name | Components Schemas Request Wrapper > Trading Partner |
-| Connectivity Properties Code | Connectivity Properties > Localintegration > Integration Code |
-| Connectivity Properties Version | Connectivity Properties > Localintegration > Integration Version |
+| b2b-message-reference | Components Schemas Request Wrapper > messages > b2b-message-reference |
+| trading-partner | Components Schemas Request Wrapper > trading-partner |
+| connectivity-properties-code | ConnectivityProperties > Localintegration > code |
+| connectivity-properties-version | ConnectivityProperties > Localintegration > version |
 
     * Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
     * In Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
@@ -180,7 +178,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 ## Task 8: Activate the Integration
 
-1. On the **Integrations** page, click on the ***Activate*** icon of **PO Backend** Integration.
+1. Go to **Integration** section, activate the integration.
 2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 

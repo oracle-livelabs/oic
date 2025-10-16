@@ -20,7 +20,6 @@ In this lab, you will learn:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Completed [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
 
 ## Task 1: Configure the Host Profile
 
@@ -42,7 +41,7 @@ This lab assumes you have:
 
       2. Create the Host Profile
 
-     - In the left navigation pane, click ***Host Profile***
+     - In the left navigation pane *Home* page, click on *B2B*, click ***Host Profile***
      - In the **Host Company Name** field, enter ***Acme*** as your company name.  
         The name is currently only for reference and not used elsewhere.
      - Select an Identifier or, if none are defined, click **Add Identifiers** ***+***. You add Identifiers given below to the Host Profile on behalf of your company and then click ***Save***.  
@@ -63,9 +62,9 @@ This lab assumes you have:
 
   You can create and manage Trading Partners. A Trading Partner is the external business entity with which your company interacts to send or receive business documents, such as orders and invoices, in electronic form.
 
-  Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) lab for more information on Trading Partners.
+  Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingstartedb2b) lab for more information on Trading Partners.
 
-  - In the left navigation pane, click ***Trading Partners***
+  - In the left Navigation pane, click ***Projects***, click on the project which you have created, Click on ***B2B*** Tab, Click on **Add** on *Trading Partners* section
   - Click ***Create***. Enter the Trading Partner **Name** as ***Dell Inc*** and an optional description. The **Identifier** field is automatically populated with a unique Trading Partner identifier. Click ***Create***.
 
   1. Define Contacts
@@ -130,12 +129,12 @@ This lab assumes you have:
       |------------------------------|------------------------------|
       | Name                         | FTP                          |
       | Type                         | FTP                          |
-      | Trading Partner's Connection | Select the FTP Connection you previously created (File Server). Refer to [Creating Connection with File Server](../workshops/tenancy/?lab=setup#Task4:CreatingConnectionwithFileServer) for more information.|
+      | Trading Partner's Connection | Select the FTP Connection you previously created (File Server). Refer to [Creating Connection with File Server](../workshops/tenancy/?lab=setup###Task3:CreateConnectionwithFileServer) for more information.|
       | Output Directory             | /B2BTPDELLOut    |
       | Output File Name             | Order-%SEQ%.edi              |
       | Integration Name Prefix      | Dell                         |
 
-> **Note** : The AS2 and FTP transport protocols are currently supported.  
+> **Note** : If you get an error then please cross check your FTP connection Role, it should be *Invoke* only.  
 
 4. B2B Integrations
 
@@ -148,20 +147,17 @@ Two Integrations are created automatically when a Transport is created. These In
 
   - Click the ***Action*** menu on the **FTP** Transport to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment.  
   ![Deploy Transport Integrations](images\tpm-tp-transport-1.png)
-  - Starting at the Oracle Integration **Home** page, select ***Integrations***, then ***Integrations*** again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
-  ![Dell FTP Transport Integrations](images\tpm-tp-transport-2.png)
-
+  - Click on *Go back*, click on ***Integrations*** from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
 
 ## Task 3: Create Agreements
 
   This section describes creating and managing Agreements. You define one or more Agreements for a B2B Trading Partner with an intent to send or receive only certain types of business documents to or from that Trading Partner.
 
-  Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) lab for more information on Agreements.
-
+  
   1. Define Outbound Agreement
 
-    - Starting at the Oracle Integration **Home** page, select ***B2B***, then ***Trading Partners***.
-    - Select the ***Dell Inc*** Trading Partner you created, then click ***Transports & Agreements***.
+    - Click on ***B2B*** tab, then ***Trading Partners***.
+    - Select the ***Dell Inc*** Trading Partner you created and click on *Edit* from *Actions* menu, then click ***Transports & Agreements***.
     - In the **Outbound Agreements** section, click ***+*** to add a new Agreement. Enter the details as per the below and click ***Add***.  
 
     | Field                              | Value                       |
@@ -184,10 +180,9 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration 3 B2B in Trading Partner Mode](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/b2b-oracle-integration-intrading-partner-mode.html#GUID-A8B10BDB-462C-49C3-9710-833FA11AE8BA)
-
+* [ Two Patterns For Using B2B for Oracle Integration ](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/two-patterns-using-b2b-oracle-integration-standalone-or-trading-partners.html)
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025

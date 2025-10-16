@@ -18,7 +18,6 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Completed [B2B Concepts](../workshops/tenancy/?lab=gettingStartedB2B) Lab which explains B2B concepts at a high level.
 
 ## Task	1: B2B Integration Action Trading Partner Mode
 
@@ -61,10 +60,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Use B2B Action](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/introduction-b2b-oracle-integration.html#GUID-11EFFD48-3E63-4C60-8771-DE789FF90909)
+* [Use B2B Action](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/use-b2b-action-standalone-mode.html#GUID-9F99E492-8B38-410E-9A88-7E4A6A355514)
 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025
