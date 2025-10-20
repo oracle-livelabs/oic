@@ -101,11 +101,11 @@ This lab assumes you have:
     - Identifiers
           | Identifier Type              | Value     |
           | ---                          | ---       |
-          | EDI Interchange ID           | Dell Inc. |
+          | EDI Interchange ID           | Dell Inc |
           | EDI Interchange ID Qualifier | ZZ        |
-          | EDI Group ID                 | Dell Inc. |
+          | EDI Group ID                 | Dell Inc |
           | EDI Group ID Qualifier       | 01        |
-          | Application Partner ID       | Dell Inc. |
+          | Application Partner ID       | Dell Inc |
 
 
       - Click ***Save***.  
@@ -147,7 +147,7 @@ Two Integrations are created automatically when a Transport is created. These In
 
   - Click the ***Action*** menu on the **FTP** Transport to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment.  
   ![Deploy Transport Integrations](images\tpm-tp-transport-1.png)
-  - Click on *Go back*, click on ***Integrations*** from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
+  - Click on *Go back*, Go to *Projects*, select the *Project* you have created,  click on ***Integration*** tab and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
 
 ## Task 3: Create Agreements
 

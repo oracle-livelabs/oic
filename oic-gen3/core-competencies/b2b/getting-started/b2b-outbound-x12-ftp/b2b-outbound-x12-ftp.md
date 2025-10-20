@@ -42,7 +42,7 @@ Let's create a basic, outbound integration flow that receives an XML document th
 
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***Integration***
 
-2. On the **Integrations** section, click ***+***, click on *Create*
+2. On the **Integration** section, click ***+***, click on *Create*
 
 3. Select **Application** as the style to use.
 
@@ -135,16 +135,16 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
     * In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select *project* and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
     * Select **POST** operation and Click on ***Continue***. Click on ***Finish*** and ***Save*** your integration flow
       ![callTP](images/call-tp.png)
-    * Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate > executeResponse > Translate Output**
+    * Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate Response > executeResponse > Translate Output**
 | Source | Target |
 | --- | --- |
-| b2b-message-reference | Components Schemas Request Wrapper > messages > b2b-message-reference |
-| trading-partner | Components Schemas Request Wrapper > trading-partner |
-| connectivity-properties-code | ConnectivityProperties > Localintegration > code |
-| connectivity-properties-version | ConnectivityProperties > Localintegration > version |
+| B2B Message Reference | Components Schemas Request Wrapper > Messages > B 2b Message Reference |
+| Trading Partner Name | Components Schemas Request Wrapper > Trading Partner |
+| Connectivity Properties Code | Connectivity Properties > Localintegration > Integration Code |
+| Connectivity Properties Version | Connectivity Properties > Localintegration > Integration Version |
 
     * Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
-    * In Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
+    * Add Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
 
       $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error to Code
       AND
@@ -241,3 +241,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Kishore Katta, Technical Director, Oracle Integration Product Management
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025
