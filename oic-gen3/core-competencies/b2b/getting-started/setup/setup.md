@@ -132,7 +132,7 @@ Create a connection with the REST Adapter.
 
 ## Task 5: Download Lab Artifacts
 
-[Download the lab artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mYt3DJ-Ow-S8nkClLBjtHtD950zT_3S9Xp-aw-J0_3awQfp4lXobotkSJEI9SqiW/n/oicpm/b/oiclivelabs/o/oic3/b2b-getting-started1.0.zip) and unzip in a folder **b2b-getting-started**
+[Download the lab artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/iVG3apykbBPW5_DlEgKU_3ww6gzYw1EifLHDXxluloz1YQ76kdAbFbkgxi__m5Pm/n/oicpm/b/oiclivelabs/o/oic3/b2b-getting-started2.0.zip) and unzip in a folder **b2b-getting-started**
 
 You may now **proceed to the next lab**.
 
