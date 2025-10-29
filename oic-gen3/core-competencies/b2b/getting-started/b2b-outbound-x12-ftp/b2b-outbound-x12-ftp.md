@@ -142,6 +142,8 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 | Trading Partner Name | Components Schemas Request Wrapper > Trading Partner |
 | Connectivity Properties Code | Connectivity Properties > Localintegration > Integration Code |
 | Connectivity Properties Version | Connectivity Properties > Localintegration > Integration Version |
+| Connectivity Properties Projectcode | Connectivity Properties > Localintegration > Project Code |
+
 
     * Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
     * Add Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
@@ -189,18 +191,14 @@ Manage business identifiers that enable you to track fields in messages during r
   ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
-5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/B2BTPDELLOut**
+5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BWorkshop/B2BTPDELLOut**
 6. In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
 This feature will very much useful when we have more than one trading partner. We just define the trading partner on the user interface, integrations will be created automatically and files will be processed with the existing Backend Integration.
 
 ## Task 10: Monitoring
 
-1. Navigate to ***Home***, ***Observability*** and ***B2B tracking*** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
-
-Tip:  Select the Filter to search based on Trading Partner Name
-
-2. Click on the ***View*** icon and inspect **Message Logs, Payload**
+1. Click on ***Observe*** and ***Instances*** tab to monitor the logs
 
 ## Task 11: Exercise(Optional)
 
@@ -227,7 +225,7 @@ Follow the instructions from Step5 to Step9 given under [Setup the Environment](
 3. ***Deploy*** the **Transport and Agreements** if not deployed.
 4. Copy&Paste the payload from **USGEPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**)
 5. Go back to Integrations and test using the new trading partner as you did for DellInc
-[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:Testtheintegration)
+[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
 6. Monitor the trading partner and backend integrations.
 
 You may now **proceed to the next lab**.
