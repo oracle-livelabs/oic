@@ -40,9 +40,9 @@ Let's create a basic, outbound integration flow that receives an XML document th
 
 > **Note**: This integration flow uses REST for simplicity. You can substitute the REST Adapter trigger connection with any other adapter, such as the FTP Adapter, NetSuite Adapter, ERP Cloud Adapter, available in Oracle Integration
 
-1. In the **Navigation pane**, click ***Integrations***
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***Integration***
 
-2. On the **Integrations page**, click ***Create***
+2. On the **Integration** section, click ***+***, click on *Create*
 
 3. Select **Application** as the style to use.
 
@@ -97,10 +97,9 @@ The **Configure B2B Action** wizard opens
 
 Configure data mappings for the EDI-Generate action and Receive-App-Msg action in order to successfully parse the incoming XML message and translate it to EDI message.
 
-1. Click the ***Map to EDI-Generate*** action and select ***Edit***
+1. Click the ***Map EDI-Generate*** action and select ***Edit***
 2. Click on ***Developer*** mode
-   ![Devmode diagram](images/devmode.png)
-3. From Source, expand the ***root element***, expand ***AcmePurchaseOrder*** and From Target, expand the ***root element***, expand ***TranslateInput***, expand ***edi-xml-document***, expand ***transaction-data*** and **map** all the mandatory elements given below.
+3. From Source, expand the ***root element***, expand ***Acme Purchase Order*** and From Target, expand the ***root element***, expand ***Translate Input***, expand ***Edi Xml Document***, expand ***Transaction Data*** and **map** all the mandatory elements given below.
 > **Note**: You can search for the element to find it quickly
 
 | Source | Target |
@@ -122,7 +121,6 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 | Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
 
 4. Click on ***Validate***
-  * A confirmation message appears.
 5. Click ***&lt; (Go back)***
 6. Click ***Save*** to persist changes.
 
@@ -134,19 +132,21 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
     * Click on ***Main canvas*** and Click ***Save*** to persist changes.
     ![Route1](images/switch-route1.png)
 
-    * In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
+    * In the success route: Add ***Integration*** Action. Enter name as **callTradingPartner** and select *project* and select **DELL FTP Send** (OR any other outbound B2B integration which you have created) and click on ***Continue***.
     * Select **POST** operation and Click on ***Continue***. Click on ***Finish*** and ***Save*** your integration flow
       ![callTP](images/call-tp.png)
     * Edit **Map callTradingPartner** > Select **Developer mode** and From Source, expand **EDI-Generate Response > executeResponse > Translate Output**
 | Source | Target |
 | --- | --- |
-| B2B Message Reference | Components Schemas Request Wrapper > Messages > B2B Message Reference |
+| B2B Message Reference | Components Schemas Request Wrapper > Messages > B 2b Message Reference |
 | Trading Partner Name | Components Schemas Request Wrapper > Trading Partner |
 | Connectivity Properties Code | Connectivity Properties > Localintegration > Integration Code |
 | Connectivity Properties Version | Connectivity Properties > Localintegration > Integration Version |
+| Connectivity Properties Projectcode | Connectivity Properties > Localintegration > Project Code |
+
 
     * Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
-    * In Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
+    * Add Otherwise route: Add ***Throw new fault*** Action. Enter name as **Error**. Map the below elements
 
       $EDI-Generate/nsmpr7:executeResponse/nsmpr10:TranslateOutput/nsmpr10:validation-error to Code
       AND
@@ -180,7 +180,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 ## Task 8: Activate the Integration
 
-1. On the **Integrations** page, click on the ***Activate*** icon of **PO Backend** Integration.
+1. Go to **Integration** section, activate the integration.
 2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 
@@ -191,18 +191,14 @@ Manage business identifiers that enable you to track fields in messages during r
   ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
-5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/B2BTPDELLOut**
+5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BWorkshop/B2BTPDELLOut**
 6. In conclusion, you can use Oracle Integration to accept XML message and convert it into EDI format and send it to the trading partners dynamically.
 
 This feature will very much useful when we have more than one trading partner. We just define the trading partner on the user interface, integrations will be created automatically and files will be processed with the existing Backend Integration.
 
 ## Task 10: Monitoring
 
-1. Navigate to ***Home***, ***Observability*** and ***B2B tracking*** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
-
-Tip:  Select the Filter to search based on Trading Partner Name
-
-2. Click on the ***View*** icon and inspect **Message Logs, Payload**
+1. Click on ***Observe*** and ***Instances*** tab to monitor the logs
 
 ## Task 11: Exercise(Optional)
 
@@ -229,7 +225,7 @@ Follow the instructions from Step5 to Step9 given under [Setup the Environment](
 3. ***Deploy*** the **Transport and Agreements** if not deployed.
 4. Copy&Paste the payload from **USGEPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**)
 5. Go back to Integrations and test using the new trading partner as you did for DellInc
-[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:Testtheintegration)
+[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
 6. Monitor the trading partner and backend integrations.
 
 You may now **proceed to the next lab**.
@@ -243,3 +239,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Kishore Katta, Technical Director, Oracle Integration Product Management
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025
