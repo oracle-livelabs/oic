@@ -31,7 +31,7 @@ In this lab, you will:
 
 ### *Create B2B Document*
 
-1. Navigate to **Home > B2B > Documents**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Save***
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***B2B*** > **Documents** > **+**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Create***, click on ***Save***
 
 ![inbound-b2b-810-invoice-document](images/invoice-document.png)
 
@@ -49,15 +49,15 @@ In this lab, you will:
 
 | Identifier Type | Value |
 | --- | --- |
-| EDI Interchange ID | Dell Inc.  |
+| EDI Interchange ID | Dell Inc  |
 |EDI Interchange ID Qualifier | ZZ|
-|EDI Group ID | Dell Inc.|
+|EDI Group ID | Dell Inc|
 |EDI Group ID Qualifier | 01|
-|Application Partner ID | Dell Inc.|
+|Application Partner ID | Dell Inc|
 
 ### *Configure Transport & Inbound Agreements*
 
-1.Click ***Transports & Agreements*** tab. In the Transports section, edit the **FTP** Transport and Configure per below and **Save**.
+1.Click ***Transports & Agreements*** tab. In the Transports section, edit the **FTP** Transport, (*Undeploy* if already deployed and *Edit* and Configure per below and **Save**.
 
 |     Name                                    |     FTP                                 |
 |---------------------------------------------|-----------------------------------------|
@@ -69,8 +69,6 @@ In this lab, you will:
 |     Output   File Name                      |     Out997-%SEQ%.edi             |
 
 2.Select ***Action Menu*** and ***Redeploy*** if already Deployed
-
-![Activate Integration](images/ftp-redeploy.png)
 
 **Check Point:** Go to the Integrations page and note that both integrations are activated
 
@@ -91,8 +89,8 @@ The backend integration is yet to be defined. So, we will deploy the Inbound Agr
 
 Let's create a basic, Inbound backend integration flow that receives an XML document through a REST request, converts  EDI X12 format to B2B XML Canonical Message, and logs a few elements in the Invoice EDI document.
 
-1. In the **Navigation pane**, click ***Integrations***
-2. On the **Integrations page**, click ***Create***
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***Integration***
+2. On the **Integration section**, click ***+***, click ***Create***
 3. Select **Application** as the style to use.
 
     enter the Name of the integration per the value given below and then click on ***Create***
@@ -203,15 +201,13 @@ The **Configure B2B Action** wizard opens
 
 ## Task 9: Activate the Integration
 
-1. On the **Integrations** page, click on the ***Activate*** icon of **PO Backend** Integration.
-2. On the **Activate Integration** dialog, select **a tracing level** to ***Audit***
+1. On the **Integrations** section, *Activate* the integration flow which you have created
+2. Select **a tracing level** to ***Audit***
 3. Click ***Activate***.
 
 ## Task 10: Go to B2B, Trading Partners and Deploy Inbound Agreement
 
 1. Navigate to **Trading Partner (Dell Inc)**. Select ***Transport and Agreements*** tab. Edit ***Inbound Agreement*** and select the Backend Integration **Process Inbound Vendor Invoices**.  (Alternatively You can copy the identifier and version which you can find from the respective Integration details.  After pasting the Identifier and the version should look like. PROCESS\_INBOUND\_VENDOR\_INVOICES|01.00.0000)
-
-   ![inbound-agreement-deploy](images/inbound-agreement-deploy.png)
 
 2. From the **Action** Menu, deploy the **Inbound Agreement**
 
@@ -221,27 +217,27 @@ The **Configure B2B Action** wizard opens
 
 We will Import and Activate an Integration Flow which Simulates a Supplier (Dell Inc) Trading Partner to send an Invoice (810) document to a defined FTP location so that host (Acme Corp) can process the Inbound Invoice document. This integration accepts an Invoice XML and pushes and 810 Invoice EDI message into a specific directory provided in the xml payload. In a real world scenario typically an ERP application (ex. ERP Cloud or NetSuite) generates the Receivables Invoice and sends the Invoice document to Acme Corp
 
-1. From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Import the **OUTBOUND\_XTP_DELL\_INC\_01.00.0001.iar** (Dell Inc Simulator Integration) and ***Activate*** the Integration with Tracing Enabled.
+1. From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Import the **OUTBOUND\_XTP_DELL\_INC\_01.00.0001.iar** (Dell Inc Simulator Integration), cross check the file server connection and make sure that it is pointing to the correct connection, modify the file server path in the integration flow and ***Activate*** the Integration with Tracing Enabled.
 
 ## Task 12: Testing the B2B Inbound Integration Scenario
 
-1. Navigate to **Integrations** page. Select the **OutboundEDI-XTP-Dell-Inc** integration flow. Select ***Run*** and click on ***Test*** which will open an Integration Test Console
+1. Navigate to **Integration** tab. Select the **OutboundEDI-XTP-Dell-Inc** integration flow. Select ***Run*** and click on ***Test*** which will open an Integration Test Console
 
     * Let's use Oracle Integration Test Console to simulate a 810 Invoice EDI message from **Dell Inc** Supplier.
     * From the Lab Artifacts **b2b-getting-started\b2b-inbound-x12-ftp** folder, Copy the **DellIncInvoice.xml** data and paste it in the body of the request console. Before Selecting Test modify the below elements in the supplied XML payload
 
     * InvoiceNumber – ex: XX-INV-DE-0299 (where 'XX' is any numeric for uniqueness)
-    * XTP\_FTP\_DIR - /B2BTPDELLIn
+    * XTP\_FTP\_DIR - /upload/users/B2BWorkshop/B2BTPDELLIn
     * XTP\_FTP\_FILENAME - Invoice-1.edi (Note: The file pattern should be similar to the configuration  in the **Dell Inc** Trading Partner Setup for **FTP** Transport Input File value
     * You should see a response which is base64encoded
         ![inobound-test-1](images/inbound-test-1.png)
     * Copy paste the base64 encoded data in any online base64 decoder we should see an Invoice EDI message. Here is the representational invoice equivalent to EDI message
         ![inbound-test-2](images/inbound-test-2.png)
-    * Navigate to the  **Settings > File Server > Folders** and check the  **/B2BWorkshop/B2BTPDELLIn** directory. You should see an edi file (Invoice-XX.edi ) generated by the external Trading Partner
+    * Navigate to the  **Settings > File Server > Folders** and check the  **/upload/users/B2BWorkshop/B2BTPDELLIn** directory. You should see an edi file (Invoice-XX.edi ) generated by the external Trading Partner
 
-2. Navigate to **Integrations** page. Search for the B2B Integration – **Dell FTP Receive** integration flow and Click on ***Run*** and click on ***Run*** again
+2. Navigate to **Integrations** tab. Search for the B2B Integration – **Dell FTP Receive** integration flow and Click on ***Run*** and click on ***Run*** again
 
-    * Navigate to the **File server** and check the  /B2BWorkshop/B2BTPDELLIn directory. You should see an edi file is moved to **/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
+    * Navigate to the **File server** and check the  /B2BTPDELLIn directory. You should see an edi file is moved to **/B2BTPDELLIn\_backup** renamed as **\_processed**. Indicating that the B2B integration had successfully handed over the edi document to Backend Integration
     * Now, Check the **/B2BTPDELLOut** folder and we should see a 997 Functional Ack generated
 
     Here is the representational format of Functional Acknowledgement which is generated.
@@ -249,20 +245,6 @@ We will Import and Activate an Integration Flow which Simulates a Supplier (Dell
     ![inbound-test-3](images/inbound-test-3.png)
 
     **Knowledge Point**: A separate Functional Ack will be generated for every Transaction set
-
-3. Navigate to ***Observability*** and ***B2B tracking*** page. You should see 2 Business Messages under the Business Messages Tab for your specific Trading Partner.
-
-    Tip:  Select the **Filter** to search based on Trading Partner Name
-
-    The first message is an Inbound Invoice document received by B2B Integration (Receive Integration) and the second message is a Functional Ack generated by B2B which is based on Trading Partner Inbound Agreement configuration.
-
-    Click on the **View** icon and inspect Message Logs, Payload
-
-    ![View Activity Stream](images/inbound-test-5.png)
-
-4. Inspect the **Wire Messages**
-
-    ![View Wire Messages](images/inbound-test-6.png)
 
 In conclusion, you can use Oracle Integration B2B feature to automatically generate the B2B integration for receiving and the B2B integration for sending. Both integrations are front-end integrations because they directly interface with the external trading partner. These integrations are at the heart of the transport for its runtime functioning which allows the Integration developer to focus on creating the backend Integrations to process the business messages.
 
@@ -275,4 +257,4 @@ In conclusion, you can use Oracle Integration B2B feature to automatically gener
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Mar 2024
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025

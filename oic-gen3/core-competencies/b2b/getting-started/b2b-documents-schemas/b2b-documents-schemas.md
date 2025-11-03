@@ -26,10 +26,9 @@ This lab assumes you have:
 
 You can create a new B2B Schema based on a standard Document type.
 
-1. Starting at the Oracle Integration **Home** page, select ***B2B*** from the left Navigation pane.
-2. Select ***B2B Schemas***.
-3. On the **B2B Schemas** page, click ***Create***.
-4. Enter the following details:  
+1. In the left Navigation pane, click ***Projects***, click on the project which you have created, Click on ***B2B*** Tab, Click on **Add** on *Schemas* section
+2. On the **Add schema** window, click ***Create***.
+4. Enter the following details on *Create schema* page:  
   | Element           | Description                                           |
   | ----------------- | ----------------------------------------------------- |
   | Name              | PurchaseOrderSchema                                   |
@@ -40,45 +39,39 @@ You can create a new B2B Schema based on a standard Document type.
   | Document Type     | 850 (Purchase Order)                                  |
 
 5. Click ***Create***, then ***Save***, then exit the PurchaseOrderSchema page.  
-  ![Create New B2B Schema](images/poschema4010-1.png)
-  ![Purchase Order Schema](images/poschema-structure-1.png)
-
+  
   The following diagram shows a schematic structure of X12 envelopes.
     ![X12 Envelope](images/x12_env_structure-1.png)
 
-    Refer to the [EDI X12 Documentation](https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-b2b/edi-x12.html#GUID-7C278E59-A35E-41A2-8EB7-9E947FF32F4E) to understand more details about the X12 structure.
+    Refer to the [EDI X12 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/integration-b2b/edi-x12.html) to understand more details about the X12 structure.
 
 ## Task 2: Create a new B2B Document
 
 You can create a new B2B Document based on a standard document type.
 
-1. In the left navigation pane, click ***B2B Documents***.
-2. On the B2B Documents page, click ***Create***.
+1. On the Documents section, click ***Add***.
+2. On the **Add document** window, click ***Create***.
 3. Enter the following details:  
   | Element           | Description               |
   | ------------------| ------------------------- |
   | Name              | PurchaseOrder4010Document |
   | Identifier        | This field is automatically populated with a unique Document identifier. |
   | Description       | Purchase Order Schema     |
-  | Document Standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12 ) |
-  | Document VersioN  | 4010                      |
-  | Document Type     | 850 (Purchase Order)      |
-
+  | Document standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12 ) |
+  | Document versioN  | 4010                      |
+  | Document type     | 850 (Purchase Order)      |
+  | Document schema     | PurchaseOrderSchema      |
+  
 4. Click ***Create***.  
-  ![Create New B2B Document](images/podocument4010-1.png)
-5. The Document page for your new B2B Document is displayed. The **Document Schema** field is set to **Standard** by default. Change the **Document Schema** to ***PurchaseOrderSchema*** which you created in the last task.  
-  ![Select a custom Schema](images/podocument4010-customize-1.png)
-6. Click ***Save*** and exit the PurchaseOrder4010Document page.
+5. Click ***Save*** and Click on **Go back**
 
 ## Task 3: Customize a B2B Schema
 
 You can create customized document definitions to use in your B2B integrations. Custom document definitions are useful for scenarios in which your trading partner requires specific customizations to meet certain business requirements.
 
-1. In the left navigation pane, click ***B2B Schemas***.
-2. On the B2B Schemas page, ***Clone*** on the **PurchaseOrderSchema** created in previous task.
-  ![Clone Schema](images/customizeposchema4010-clone-1.png)
-
-3. Change the name to ***PurchaseOrderSchema_Customized*** and click ***Clone***.
+1. Select ***PurchaseOrderSchema*** which you have created, clone it
+2. Change the name to ***PurchaseOrderSchema_Customized***
+3. Click ***Clone***.
 4. Click ***Edit*** on the **PurchaseOrderSchema_Customized** Schema.
 5. On the Schema page, find the element you want to customize, and select ***Edit Details***. As an example, select the ***CUR02*** currency code element (part of the ***CUR*** segment) to edit it. You can also add new constructs to the schema.  
   ![Schema Editor](images/customizeposchema4010-editcur02-1a.png)  
@@ -114,8 +107,8 @@ You can create customized document definitions to use in your B2B integrations. 
 
   In Oracle Integration B2B, you can generate implementation guides for both standard and custom B2B schemas. The guide is generated as an HTML document, which you can edit to apply branding and print as a PDF document if necessary.
 
-1. In the left navigation pane, click ***B2B Schemas***.
-2. On the B2B Schemas page, select the ***PurchaseOrderSchema_Customized*** Schema and select ***Generate Implementation Guide***.
+1. Click ***Schemas***.
+2. On the Schemas page, select the ***PurchaseOrderSchema_Customized*** Schema and select ***Generate Implementation Guide***.
   ![Generate Implementation Guide](images/customizeposchema4010-implguide-1-1.png)
 3. From here you can View or Download the Implementation Guide. Click ***View*** to open a new browser window containing the    Implementation Guide. Search for the **EUR** or **USD** Codes you added to this customized Schema.  
 The following image shows an example Implementation Guide:
@@ -133,4 +126,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** -  Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, December 2021
+* **Last Updated By/Date** - Subhani Italapuram, Oct 2025
