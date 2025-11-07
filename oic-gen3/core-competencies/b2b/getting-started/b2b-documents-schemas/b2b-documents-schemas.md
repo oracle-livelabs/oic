@@ -90,7 +90,7 @@ You can create customized document definitions to use in your B2B integrations. 
 9. Set **Code** to ***EUR*** and **Description** to ***Euro Dollar***. Click ***X*** to close the Code editor.
 10. Hover over the **EUR** Code, click ***+*** to add a new Code line, then click ***Edit*** on the empty Code line.
 11. Set **Code** to ***USD*** and **Description** to ***US Dollar***. Click ***X*** to close the Code editor.  
-  ![Code List Editor](images/customizeposchema4010-editcur02-2-1.png)
+  ![Code List Editor](images/currency.png)
 12. Click ***Save*** to close the Code List editor and save your Schema changes. The segment (CUR) and the element (CUR02) that you customized from the standard schema are identified by a dot.
   ![Customized Schema](images/customizeposchema4010-editcur02-3-1.png)
 13. Exit the **PurchaseOrderSchema_Customized** page.

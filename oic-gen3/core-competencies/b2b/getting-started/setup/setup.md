@@ -28,11 +28,9 @@ This lab assumes you have:
 Configure File Server settings.
 
 1. Starting at the Oracle Integration **Home** page, select ***Settings***, then ***File Server*** from the left Navigation pane.
-2. Select ***Settings*** from left Navigation pane to open the File Server Settings page and review the File Server status and configurations.Make a note of IP and port number by expanding the General tab.
-  ![File Server Settings page](images/file-server-settings.png)
+2. Select ***Settings*** from left Navigation pane to open the File Server Settings page and review the File Server status and configurations.Make a note of Host or IP and port number by expanding the General tab.
 **Note**: Ensure the **Authentication Type** is set to ***Password or Key***.
 3. Select Users from left Navigation pane, search for your User Name and click on Configure.
-
 4. Click on Switch to enable and click on Save.
 5. Select ***Folders*** from left Navigation pane.
   ![Navigation to Files](images/file-server-files1.png)
