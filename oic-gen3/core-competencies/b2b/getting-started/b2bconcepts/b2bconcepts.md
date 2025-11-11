@@ -142,9 +142,8 @@ This lab assumes you have:
   4. Define rules for routing of documents - for example, when receiving documents, an Inbound Agreement defines which Backend Integration to route a document to, based on its type. While sending documents, an Outbound Agreement defines which B2B Sending Integration to hand-over a specific document to for delivery to a trading partner.
 
   Below are example screenshots of two Inbound and two Outbound Agreements defined for a trading partner:
-    ![Example B2B Inbound Agreement](./images/gettingstarted-inboundagreement.png)
+    ![Example B2B Inbound Outbound Agreement](./images/inboundoutboundagreement.png)
 
-    ![Example B2B Outbound Agreement](./images/gettingstarted-outboundagreement.png)
 
 ### *B2B Documents and Schemas*
 
@@ -165,7 +164,7 @@ This lab assumes you have:
 
   As messages flow through the B2B Integrations for Receiving and Sending, each Inbound and Outbound message is persisted separately, in addition to the usual integration instance tracking.
 
-  The persisted B2B messages can be accessed from the **Home** page and clicking ***Monitoring***, then ***B2B Tracking***.
+  The persisted B2B messages can be accessed from the **Home** page and clicking ***Observability***, then ***B2B Tracking***.
 
   The sample screenshot below shows the B2B Tracking page.
     ![B2B Tracking](./images/gettingstarted-trackmessages.png)
