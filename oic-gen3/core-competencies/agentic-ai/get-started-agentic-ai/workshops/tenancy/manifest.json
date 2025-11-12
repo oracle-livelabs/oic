@@ -1,0 +1,57 @@
+{
+    "workshoptitle": "Oracle Integration 3 - Getting Started with Agentic AI in Oracle Integration",
+    "help": "livelabs-help-oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description":"Introduction to the live lab agentic ai usecase",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Provision Oracle Integration 3",
+            "filename": "../../../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Enable File Server",
+            "filename": "../../../../../common/enable-file-server/enable-file-server.md"
+        },
+        {
+            "title": "File Server Setup",
+            "filename": "../../../../../common/setup/setup.md"
+        },
+        {
+            "title": "Agentic AI Design Patterns in Oracle Integration",
+            "filename": "../../agenticai-patterns/agenticai-patterns.md"
+        },
+        {
+            "title": "Lab 1: Create a Project",
+            "filename": "../../create-project/create-project.md"
+        },
+        {
+            "title": "Lab 2: Register Integration as Tool",
+            "filename": "../../create-tool/create-tool.md"
+        },
+        {
+            "title": "Lab 3: Discover Integrations as Tools from MCP Client",
+            "filename": "../../discover-integration/discover-integration.md"
+        },
+        {
+            "title": "Lab 4: Build OIC AI Agent",
+            "filename": "../../build-aiagent/build-aiagent.md"
+        },
+        {
+            "title": "Lab 5: Run and Test the AI Agent",
+            "filename": "../../test-aiagent/test-aiagent.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
