@@ -25,7 +25,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs completed.
-* [Download](TBD) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and few .csv and .json files which will act as data source for this usecase.
+* [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and few .csv and .json files which will act as data source for this usecase.
 
 ## Task 1: Import Project
 
@@ -121,7 +121,7 @@ Verify that all the connections are in Configured state.
 
 ## Task 4: Configure FTP Adapter in the Imported Integrations
 
-1.  Download the [Lab Artifacts](TBD) file and unzip if not already done
+1.  Download the [Lab Artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip file and unzip if not already done
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
