@@ -29,6 +29,7 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 | Integration is Active | ✓ | Activated in Previous Section |
 | First connection is REST trigger with REST Adapter | ✓ | Configured in Previous Section |
 | REST trigger configured with OAuth/Basic Auth, JSON payload, POST verb | ✓ | Configured in Previous Section |
+{: title="Integrations Requirement"}
 
 **Five Healthcare Tools Overview**
 
@@ -39,6 +40,7 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 | **Check Guideline Validity** | Determine whether the patient's symptoms and notes satisfy the guideline criteria for medical necessity |
 | **Escalation Decision** | Executes the escalation decision table based on quality score and complications |
 | **Recommend Care Plan** | Recommend a follow-up care plan based on a given diagnosis |
+{: title="Overview of Tools you will create"}
 
 ## Task 1: Access AI Agents and Tools Section
 
@@ -50,19 +52,16 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 
 4. On the AI Agents page, locate the **Tools** card section
 
-5. Click **Add** or **+** button to create a new tool
-
 ## Task 2: Register Fetch Patient Record as an Agentic AI Tool
 
 ### Step 1: Create New Tool from Tools Card
 
 1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. A tool selection or Create tool diaglog appears
-3. Select **Fetch Patient Record** integration from the list of available integrations
+2. Create tool dialog appears
 
 ### Step 2: Enter Tool Information
 
-Fill in the following fields as shown in the table:
+In the Create Tool dialog , fill in the following fields as shown in the table:
 
 | Field | Value | Notes |
 |-------|-------|-------|
@@ -72,6 +71,7 @@ Fill in the following fields as shown in the table:
 | **Name** | Fetch Patient Record | Auto-populated from integration name |
 | **Identifier** | FETCH\_PATIENT\_RECORD | Sent to LLM; uniquely identifies the tool |
 | **Description** | Fetches comprehensive patient information | Clear, concise description of what the tool does |
+{: title="Fetch Patient Record Tool Properties"}
 
 ![Fetch Patient Record Create Tool](images/fetch-patient-record-createtool.png)
 
@@ -84,8 +84,9 @@ In the **Parameters configuration** section:
 | Parameter | Visible | Required | Description |
 |-----------|---------|----------|-------------|
 | patientId | ✓ | ✓ | The patient's Medical Record Number (MRN) or unique patient identifier |
+{: title="Fetch Patient Record Parameter Configuration"}
 
-![Fetch Patient Record Congiure Tool](images/fetch-patient-record-configtool.png)
+![Fetch Patient Record Configure Tool](images/fetch-patient-record-configtool.png)
 
 ### Step 4: Configure Guidelines (Optional)
 
@@ -101,7 +102,7 @@ In the **Parameters configuration** section:
 ### Step 1: Create New Tool from Tools Card
 
 1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. A tool selection or Create tool diaglog appears
+2. A tool selection or Create tool dialog appears
 3. Select **Match Clinical Guideline** integration from the list of available integrations
 
 ### Step 2: Enter Tool Information
@@ -114,8 +115,9 @@ Fill in the following fields as shown in the table:
 | **Project** | Patient Care Utilization Review |  |
 | **Integration** | Match Clinical Guideline |  |
 | **Name** | Match Clinical Guideline | Auto-populated from integration name |
-| **Identifier** | MATCH_CLINICAL_GUIDELINE | Sent to LLM; uniquely identifies the tool |
+| **Identifier** | MATCH\_CLINICAL\_GUIDELINE | Sent to LLM; uniquely identifies the tool |
 | **Description** | Match a given procedure and diagnosis to the most relevant clinical guideline | Explains matching process |
+{: title="Match Clinical Guideline Tool Properties"}
 
 Click on **Create**
 
@@ -127,6 +129,7 @@ In the **Parameters configuration** section:
 |-----------|---------|----------|-------------|
 | procedure | ✓ | ✓ | The type of clinical procedure performed |
 | diagnosis | ✓ | ✓ | The primary clinical diagnosis |
+{: title="Match Clinical Guideline Parameter Configuration"}
 
 ### Step 4: Configure Guidelines (Optional)
 
@@ -142,7 +145,7 @@ In the **Parameters configuration** section:
 ### Step 1: Create New Tool from Tools Card
 
 1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. A tool selection or Create tool diaglog appears
+2. A tool selection or Create tool dialog appears
 3. Select **Check Guideline Validity** integration from the list of available integrations
 
 ### Step 2: Enter Tool Information
@@ -155,8 +158,9 @@ Fill in the following fields as shown in the table:
 | **Project** | Patient Care Utilization Review |  |
 | **Integration** | Check Guideline Validity |  |
 | **Name** | Check Guideline Validity | Auto-populated from integration name |
-| **Identifier** | CHECK_GUIDELINE_VALIDITY | Sent to LLM; uniquely identifies the tool |
+| **Identifier** | CHECK\_GUIDELINE\_VALIDITY | Sent to LLM; uniquely identifies the tool |
 | **Description** | Determine whether the patient's symptoms and notes satisfy the guideline criteria for medical necessity. | Core compliance validation |
+{: title="Check Guideline Validity Tool Properties"}
 
 Click on **Create**
 
@@ -169,6 +173,7 @@ In the **Parameters configuration** section:
 | symptoms | ✓ | ✓ | Patient's documented symptoms before procedure |
 | required_symptoms | ✓ | ✓ | Symptoms required by guideline for medical necessity |
 | notes | ✓ | ✓ | Complete clinical documentation from patient record |
+{: title="Check Guideline Validity Parameter Configuration"}
 
 ### Step 4: Configure Guidelines (Optional)
 
@@ -184,7 +189,7 @@ In the **Parameters configuration** section:
 ### Step 1: Create New Tool from Tools Card
 
 1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. A tool selection or Create tool diaglog appears
+2. A tool selection or Create tool dialog appears
 3. Select **Escalation Decision** integration from the list of available integrations
 
 ### Step 2: Enter Tool Information
@@ -197,8 +202,9 @@ Fill in the following fields as shown in the table:
 | **Project** | Patient Care Utilization Review |  |
 | **Integration** | Escalation Decision |  |
 | **Name** | Escalation Decision | Auto-populated from integration name |
-| **Identifier** | ESCALATION_DECISION | Sent to LLM; uniquely identifies the tool |
+| **Identifier** | ESCALATION\_DECISION | Sent to LLM; uniquely identifies the tool |
 | **Description** | Executes the escalation decision table based on quality score and complications | Risk assessment and policy application|
+{: title="Escalation Decision Tool Properties"}
 
 Click on **Create**
 
@@ -210,7 +216,7 @@ In the **Parameters configuration** section:
 |-----------|---------|----------|-------------|-------------|
 | quality_score | ✓ | ✓ | Overall quality rating (EXCELLENT/SATISFACTORY/NEEDS IMPROVEMENT/NON COMPLIANT) |EXCELLENT,SATISFACTORY,NEEDS IMPROVEMENT,NON COMPLIANT
 | complications_present | ✓ | ✓ | Boolean indicating if complications occurred (true/false) |Leave Blank|
-
+{: title="Escalate Decision Parameter Configuration"}
 ### Step 4: Configure Guidelines (Optional)
 
 - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now use the text provided in the description and paste it in Guidelines.
@@ -238,8 +244,9 @@ Fill in the following fields as shown in the table:
 | **Project** | Patient Care Utilization Review |  |
 | **Integration** | Recommend Care Plan|  |
 | **Name** | Recommend Care Plan| Auto-populated from integration name |
-| **Identifier** | RECOMMEND_CARE_PLAN | Sent to LLM; uniquely identifies the tool |
+| **Identifier** | RECOMMEND\_CARE\_PLAN | Sent to LLM; uniquely identifies the tool |
 | **Description** | Recommend a follow-up care plan based on a given diagnosis | Evidence-based care recommendations|
+{: title="Recommend Care Plan Tool Properties"}
 
 Click on **Create**
 
@@ -250,6 +257,7 @@ In the **Parameters configuration** section:
 | Parameter | Visible | Required | Description |
 |-----------|---------|----------|-------------|
 | diagnosis | ✓ | ✓ | Primary diagnosis description) |
+{: title="Recommend Care Plan Parameter Configuration"}
 
 ### Step 4: Configure Guidelines (Optional)
 
@@ -276,7 +284,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Design Decision Models](https://docs.oracle.com/en/cloud/paas/application-integration/decision-modeling/design-decision-models.html)
+* [Register Integration as Tools](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/register-integration-agentic-ai-tool1.html)
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration

@@ -47,6 +47,7 @@ When you enable MCP for an OIC project:
 | **MCP Server URL** | Unique endpoint for discovering available tools |
 | **Transport Mechanism** | Communication protocol (streamable HTTP) |
 | **Security** | OAuth 2.0 authentication |
+{: title="MCP Terminology"}
 
 ### Benefits of MCP
 
@@ -64,22 +65,21 @@ To enable Process Automation with Oracle Integration, you need to create Oracle 
 
 1. Navigate to **Projects** in OIC navigation pane
 2. Select the **Patient Care Utilization Review** project
-3. Click the edit icon (pencil/settings icon) in the upper right corner to open **Project details**
+3. Click **Edit** (pencil icon) in the upper right corner to open **Project details**
 
 ### Step 2: Enable MCP Server
 
-1. In the Project details panel, locate **Enable MCP server** checkbox or button
+1. In the Project details panel, locate **Enable MCP server** checkbox
 2. Click to **Enable MCP server**
 3. Click **Save changes**
    - MCP server URL is created when you save
-   - Message confirms: "MCP server enabled successfully"
 
 ![Enable MCP In Project](images/enable-mcp-server.png)
 
 ### Step 3: Retrieve MCP Server URL
 
 1. Click the edit icon again to open **Project details**
-2. Locate the **MCP server URL** field
+2. Locate the **MCP server URL**
 3. Copy the complete URL - it follows this format:
 
 ```
@@ -102,6 +102,7 @@ To connect any MCP client to your OIC project, you need:
 | **MCP Server URL** | From Project details (Step 3 above) | `https://.../.../mcp` |
 | **Access Token** | OAuth token for confidential client app | See Prerequisites above |
 | **Transport Mechanism** | Standard for OIC | `streamable HTTP` |
+{: title="MCP Client Requirements to connect with MCP server"}
 
 ### OAuth Credentials
 
@@ -159,6 +160,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
    | Client Secret | Your confidential client app client secret (from Section 2) |
    | Scope | `https://<instance>.integration.<region>.ocp.oraclecloud.com/urn:opc:resource:consumer::all` |
    | Client Authentication | Send client credentials in body |
+   {: title="OAuth 2.0 Settings"}
 
    4. Click **Get New Access Token** at the bottom to verify authentication works
 
@@ -193,6 +195,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 | Argument | Value | Type |
 |----------|-------|------|
 | patientId | P101 | string |
+{: title="Fetch Patient Record Request Parameters"}
 
 3. Postman creates a JSON message for you:
 
@@ -232,7 +235,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 
 ### Step 7: Similarly, create MCP requests for the other tools. You may duplicate the requests and execute the tools.
 
-Use below JSON as reference to provide appropriate Values for the tools
+Use below JSON as reference to provide appropriate Values for the tools. **DO NOT COPY** the JSON, instead use the property values.
 
 **Match Clinical Guidelines**
 
@@ -390,6 +393,7 @@ Use the above 2 values and replace with the placeholders (<paste-mcp-url> and <p
 | **Model** | gpt-4o-mini | LLM to use for reasoning |
 | **OpenAI API Key** | Your OpenAI API key | LLM authentication  |
 | **Agent Instructions** | See detailed prompt below | Guides agent behavior and role |
+{: title="Langflow Agent Control Properties"}
 
 
 **System Prompt for Clinical Quality Assurance Agent:**
@@ -583,7 +587,7 @@ Chat Output
 
 1. Click **Playground** button (top right of Langflow)
 2. The testing interface opens with your flow ready
-3. In the chat input field, enter a clinical review query
+3. In the chat input field, enter a clinical review query. See the sample queries below.
 
 **Example Query 1 - Basic Review:**
 ```
