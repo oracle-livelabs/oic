@@ -61,11 +61,11 @@ You'll build an **end-to-end AI Agent workflow** that automates clinical utiliza
 
 These integrations become **agentic AI tools** that the AI agent orchestrates intelligently based on the clinical context and audit requirements.
 
-![Pattern OIC Agentic AI Tools](images/pattern-oic-agent.png)
+![Pattern OIC Agent](images/pattern-oic-agent.png)
 
 You'll also explore how these tools can be discovered and used from external agent frameworks via **Model Context Protocol (MCP)**.
 
-![Pattern OIC AI Agent](images/pattern-oic-tools.png)
+![Pattern OIC Tools](images/pattern-oic-tools.png)
 
 **Technology Stack**
 
