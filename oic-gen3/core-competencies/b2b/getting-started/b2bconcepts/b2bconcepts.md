@@ -180,8 +180,7 @@ This lab assumes you have:
   An alternate low-level technical view of B2B messages is the Wire Messages. In this view, you will see messages in the form they are actually transmitted to, or received from a trading partner. This view is useful for troubleshooting, in case the message failed to be delivered to a trading partner, or if a message that was received failed the signature verification step. Rows marked **MDN** denote AS2 MDNs (electronic return receipts).
 
   In the case where you receive an inbound message containing batched transaction, in this view, you will only see one row corresponding to the actual batch message that was received.
-
-    ![B2B Messages](./images/gettingstarted-wiremessages.png)
+    
 
 - Demystify the Concepts
 

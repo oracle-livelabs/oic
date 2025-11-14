@@ -62,7 +62,7 @@ This lab assumes you have:
 
   You can create and manage Trading Partners. A Trading Partner is the external business entity with which your company interacts to send or receive business documents, such as orders and invoices, in electronic form.
 
-  Refer to [B2B Concepts](../workshops/tenancy/?lab=gettingstartedb2b) lab for more information on Trading Partners.
+  Refer to [B2B Concepts](../workshops/tenancy/?lab=b2bconcepts) lab for more information on Trading Partners.
 
   - In the left Navigation pane, click ***Projects***, click on the project which you have created, Click on ***B2B*** Tab, Click on **Add** on *Trading Partners* section
   - Click ***Create***. Enter the Trading Partner **Name** as ***Dell Inc*** and an optional description. The **Identifier** field is automatically populated with a unique Trading Partner identifier. Click ***Create***.
