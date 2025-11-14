@@ -59,7 +59,13 @@ You'll build an **end-to-end AI Agent workflow** that automates clinical utiliza
 - **Escalation Decision Tool** - Determines escalation actions based on quality scores and complications
 - **Recommend Care Plan Tool** - Generates evidence-based follow-up recommendations
 
-These integrations become **agentic AI tools** that the AI agent orchestrates intelligently based on the clinical context and audit requirements. You'll also explore how these tools can be discovered and used from external agent frameworks via **Model Context Protocol (MCP)**.
+These integrations become **agentic AI tools** that the AI agent orchestrates intelligently based on the clinical context and audit requirements.
+
+![Pattern OIC Agentic AI Tools](images/pattern-oic-agent.png)
+
+You'll also explore how these tools can be discovered and used from external agent frameworks via **Model Context Protocol (MCP)**.
+
+![Pattern OIC AI Agent](images/pattern-oic-tools.png)
 
 **Technology Stack**
 
@@ -86,6 +92,10 @@ These integrations become **agentic AI tools** that the AI agent orchestrates in
 5. ***Build the AI Agent*** - Create the Clinical Quality Assurance Agent, configure AI thinking patterns, add tools, and define agent behavior
 
 6. ***Run and Test*** - Execute the agent with sample utilization review cases, monitor execution, and validate the complete workflow
+
+**High level workflow of the Workshop**
+
+![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
 
 Estimated Time: 2 hours
 
@@ -133,9 +143,6 @@ By the end of this workshop, you will have a comprehensive understanding of how 
 7. Monitor and validate AI agent behavior
 8. Apply agentic AI patterns to other business use cases
 
-**High level workflow of the Workshop**
-
-![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
 
 ### Prerequisites
 
