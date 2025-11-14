@@ -589,17 +589,19 @@ Chat Output
 2. The testing interface opens with your flow ready
 3. In the chat input field, enter a clinical review query. See the sample queries below.
 
-**Example Query 1 - Basic Review:**
+**Example Query 1 - QUALITY ASSESSMENT SCORE: EXCELLENT**
 ```
 <copy>
-I need a quality review for patient P106 who completed a CT Chest for Community-Acquired Pneumonia. The patient is immunosuppressed. Please verify this imaging was appropriate per our guidelines.
+I need a quality review for patient P104 who completed a CT Chest for Suspected Pulmonary
+Embolism. The patient presented with chest pain, shortness of breath, and tachycardia, with a high Wells score and positive D-dimer. Please verify guideline compliance.
 </copy>
 ```
 
-**Example Query 2 - With Clinical Details:**
+**Example Query 2 - QUALITY ASSESSMENT SCORE: NON COMPLIANT**
 ```
 <copy>
-Run a quality audit for patient P105. Patient had an MRI Lumbar Spine for Chronic Low Back Pain three days ago. Please assess guideline compliance and determine if any escalation is needed.
+Please conduct a quality review for patient P103 who received an MRI Brain for a classic
+migraine presentation. The patient reports recurrent headaches with no neurological deficits or red flag features noted. Assess whether this imaging aligns with guidelines.
 </copy>
 ```
 
