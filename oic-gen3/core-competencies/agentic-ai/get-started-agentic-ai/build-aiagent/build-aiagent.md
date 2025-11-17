@@ -15,7 +15,7 @@ The AI agent transforms your individual healthcare tools into an intelligent sys
 
 Estimated Time: 10 minutes
 
-## Understanding AI Agent Components
+### Understanding AI Agent Components
 
 Before building, understand the key components:
 
