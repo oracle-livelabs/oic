@@ -84,9 +84,7 @@ When you enable MCP for a project, the project becomes an MCP server. Any integr
 2. Locate the **MCP server URL**
 3. Copy the complete URL - it follows this format:
 
-```
-https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp
-```
+`https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
 **Example:**
 ```
@@ -144,9 +142,8 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
    - Select **HTTP**
 
 2. Enter the MCP Server URL:
-   ```
-   https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp
-   ```
+
+   `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
 ### Step 4: Configure Authorization
 
@@ -160,7 +157,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
    | Access Token URL | `https://<identity_domain>.identity.oraclecloud.com/oauth2/v1/token` |
    | Client ID | Your confidential client app client ID (from Section 2) |
    | Client Secret | Your confidential client app client secret (from Section 2) |
-   | Scope | `https://<instance>.integration.<region>.ocp.oraclecloud.com/urn:opc:resource:consumer::all` |
+   | Scope | `https://<instance>.integration.<region>.ocp.oraclecloud.com:443urn:opc:resource:consumer::all` |
    | Client Authentication | Send client credentials in body |
    {: title="OAuth 2.0 Settings"}
 
