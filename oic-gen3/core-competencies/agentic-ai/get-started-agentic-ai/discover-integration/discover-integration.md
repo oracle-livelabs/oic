@@ -85,7 +85,7 @@ When you enable MCP for a project, the project becomes an MCP server. Any integr
 3. Copy the complete URL - it follows this format:
 
 ```
-https://<NameOfServiceInstance>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<ProjectIdentifier>/mcp
+https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp
 ```
 
 **Example:**
