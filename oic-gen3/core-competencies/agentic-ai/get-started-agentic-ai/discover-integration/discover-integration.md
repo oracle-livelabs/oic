@@ -665,6 +665,8 @@ You may now **proceed to the next lab**.
 
 * [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-and-activate-confidential-client-application.html)
 
+* [MCP Server in OIC](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/faqs-projects-mcp-servers.html)
+
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration
