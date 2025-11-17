@@ -145,7 +145,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 
 2. Enter the MCP Server URL:
    ```
-   https://<NameOfServiceInstance>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/PatientUtilizationReview/mcp
+   https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp
    ```
 
 ### Step 4: Configure Authorization
