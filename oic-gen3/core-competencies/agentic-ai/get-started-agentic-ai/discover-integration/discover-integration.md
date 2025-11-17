@@ -59,7 +59,9 @@ When you enable MCP for an OIC project:
 
 ## Task 1: Enable MCP in OIC Project
 
-To enable Process Automation with Oracle Integration, you need to create Oracle Cloud Infrastructure Identity and Access Management (IAM) policies that allow Oracle Integration administrators belonging to a specified IAM group to manage the Process Automation instance.
+When you enable MCP for a project, the project becomes an MCP server. Any integrations registered as agentic AI tools are discoverable through the MCP server URL, and AI agent frameworks that support MCP can invoke the integrations. Each project has its own MCP server URL.
+
+![MCP Server Architecture](images/mcp-server.png)
 
 ### Step 1: Access Project Details
 

@@ -28,7 +28,7 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 | Part of a project | ✓ | Imported in Previous Section |
 | Integration is Active | ✓ | Activated in Previous Section |
 | First connection is REST trigger with REST Adapter | ✓ | Configured in Previous Section |
-| REST trigger configured with OAuth/Basic Auth, JSON payload, POST verb | ✓ | Configured in Previous Section |
+| REST trigger configured with OAuth Auth, JSON payload, POST verb | ✓ | Configured in Previous Section |
 {: title="Integrations Requirement"}
 
 **Five Healthcare Tools Overview**
