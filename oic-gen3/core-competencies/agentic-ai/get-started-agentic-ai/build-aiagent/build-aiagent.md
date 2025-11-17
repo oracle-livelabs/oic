@@ -15,9 +15,11 @@ The AI agent transforms your individual healthcare tools into an intelligent sys
 
 Estimated Time: 10 minutes
 
-## Understanding AI Agent Components
+### Understanding AI Agent Components
 
 Before building, understand the key components:
+
+![Agentic AI Architecture](images/agenticai-architecture.png)
 
 ### Thinking Patterns
 
@@ -49,7 +51,7 @@ The AI agent will use an LLM connection.
 
 ### Agentic AI Tools
 
-Your five registered healthcare tools from previous become the agent's action capabilities.
+Your five registered healthcare tools from previous labs become the agent's action capabilities.
 
 The agent decides which tools to invoke based on clinical need.
 
