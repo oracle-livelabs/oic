@@ -25,7 +25,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs completed.
-* [Download](TBD) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and few .csv and .json files which will act as data source for this usecase.
+* [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and few .csv and .json files which will act as data source for this usecase.
 
 ## Task 1: Import Project
 
@@ -119,7 +119,42 @@ Keep the following information handy. Note: Refer File Server Setup section
 
 Verify that all the connections are in Configured state.
 
-## Task 4: Activate Integrations and Decision
+## Task 4: Configure FTP Adapter in the Imported Integrations
+
+1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) file and unzip if not already done
+
+2.  Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
+
+Note: The file server path that you would be using below is just a indicative. You may use any directory location of your choice that was already setup in previous lab and you should have access to it.
+
+3.  There are 3 files in the **Data Source** folder. Upload the *care\_recommendations.json*, *medical\_guidelines.json*, *patient\_records.csv* files to the ftp directory ***<your configured file server path>*** for example: /upload/users/KK/in/patient-utilization-review
+
+**Edit the Fetch Patient Record Integration**
+
+a.  *Edit* the Fetch Patient Record Integration Flow. Select the *loadPatientRecords* FTP invoke activity. Select the three dots and Click on *Edit*.
+
+b.  In the FTP Wizard navigate to the **Operations** page. In the Input Directory field, enter the ***<your configured file server path>***. Click *Next*.
+    ![Load Patient Record FTP Configuration](images/load-patient-records-ftp-config.png)
+
+c.  Complete the wizard by leaving the rest of the values as defaults and click *Finish*.
+
+**Edit the Match Clinical Guideline Integration**
+
+a.  *Edit* the Match Clinical Guideline Integration Flow. Select the *loadGuidelines* FTP invoke activity. Select the three dots and Click on *Edit*.
+
+b.  In the FTP Wizard navigate to the **Operations** page. In the Input Directory field, enter ***<your configured file server path>***. Click *Next*.
+
+c.  Complete the wizard by leaving the rest of the values as defaults and click *Finish*.
+
+**Edit the Recommend Care Plan Integration**
+
+a.  *Edit* the Recommend Care Plan Integration Flow. Select the *fetchCareRecommendations* FTP invoke activity. Select the three dots and Click on *Edit*.
+
+b.  In the FTP Wizard navigate to the **Operations** page. In the Input Directory field, enter the ***<your configured file server path>***. Click *Next*.
+
+c.  Complete the wizard by leaving the rest of the values as defaults and click *Finish*.
+
+## Task 5: Activate Integrations and Decision
 
 1.  In the **Patient Care Utilization Review** project, Design View select the **Decision** tab. You should see **Escalation Rules** decision listed.
 

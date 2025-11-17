@@ -27,11 +27,11 @@ In this lab you will learn:
 * All the previous labs completed successfully.
 * Agent in Activated Status
 
-## Task 1: Configure the Agentic AI Thinking Pattern
+## Task 1: Run and Test the AI Agent
 
 1.  In the left navigation pane, select **Projects**.
 
-2.  Select the **Patient Care Utilizaton Review** project that you created.
+2.  Select the **Patient Care Utilization Review** project that you created.
 
 3.  In the left navigation pane, select **AI Agents** icon.
 
@@ -53,24 +53,47 @@ In this lab you will learn:
     The progress bar displays and then you see agent actions.
 
     b.  Look at the agent actions.
-        - System: indicates what you sent to the LLM in the system prompt. This includes the agent role, the agent guidelines, the AI agent pattern guidelines.
-        - User: user indicates what you entered to send to the LLM.
-        - Tool: shows response from the tool. You should see the audit report and quality assurance done for a specific Patient
-        - Assistant: shows the agent reasoning. You should see in the reasoning that the agent needs to use the various tools. It waits for the return from the tool and concludes that the expense is approved.
+    - **System:** indicates what you sent to the LLM in the system prompt. This includes the agent role, the agent guidelines, the AI agent pattern guidelines.
+    - **User:** user indicates what you entered to send to the LLM.
+    - **Tool:** shows response from the tool. You should see the audit report and quality assurance done for a specific Patient
+    - **Assistant:** shows the agent reasoning. You should see in the reasoning that the agent needs to use the various tools. It waits for the tool execution to be completed.
 
+You can also Navigate to the **Observe** tab in your project and Select **Agent** tab on the left pane. You will see the list of Agent Instances.
 
-Congratulations!
+![Agent Observability](images/agent-observeability.png)
+
+Click on **View Details** eye icon next to your Agent to see the Agent **Activity Stream**.
+
+![Agent Observability](images/agent-observeability.png)
+
+**User** this is the User query
+
+![Activity Stream with User Agent Action](images/user-activity-stream.png)
+
+**System** this is what you configured to be sent the LLM.
+
+![Activity Stream with System Agent Action](images/system-activity-stream.png)
+
+**Tool** is the response from the tool
+
+![Activity Stream with Tool Agent Action](images/tool-activity-stream.png)
+
+**Assistant** displays the conclusion, the final audit report as per the format mentioned in Agent Guidelines.
+
+![Activity Stream with Assistant Agent Action](images/assistant-activity-stream.png)
+
+Congratulations! 🎉
 
 You have successfully completed the entire Patient Utilization Review AI Agent Live Lab!
 
 What You've Accomplished
-✅ Understood agentic AI concepts and use case
-✅ Imported project and configured healthcare connections
-✅ Registered five healthcare integrations as agentic AI tools
-✅ Enabled MCP to expose tools to external frameworks
-✅ Discovered tools from external MCP clients (such as Postman and Langflow)
-✅ Built intelligent Clinical Quality Assurance AI Agent
-✅ Executed and validated agent with comprehensive test cases
+- ✅ Understood agentic AI concepts and use case
+- ✅ Imported project and configured healthcare connections
+- ✅ Registered five healthcare integrations as agentic AI tools
+- ✅ Enabled MCP to expose tools to external frameworks
+- ✅ Discovered tools from external MCP clients (such as Postman and Langflow)
+- ✅ Built intelligent Clinical Quality Assurance AI Agent
+- ✅ Executed and validated agent with comprehensive test cases
 
 ## Learn More
 

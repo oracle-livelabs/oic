@@ -72,7 +72,7 @@ In this lab you will learn:
 
 1.  In the left navigation pane, select **Projects**.
 
-2.  Select the **Patient Care Utilizaton Review** project that you created.
+2.  Select the **Patient Care Utilization Review** project that you created.
 
 3.  In the left navigation pane, select **AI Agents** icon.
 
@@ -91,7 +91,7 @@ In this lab you will learn:
 
 7.  Configure the Pattern Guidelines and the LLM Connection.
     a.  Leave the Max Iterations and Temperature as defaults.
-    b.  In the Guidlines box, enter the following guidelines for the ReAct Thinking pattern.
+    b.  In the Guidelines box, enter the following guidelines for the ReAct Thinking pattern.
 
     ```
     <copy>
@@ -116,14 +116,13 @@ In this lab you will learn:
     d.  Under LLM Connections, click **Edit** icon to configure the LLM connection. A new LLM connection is created and is displayed.
 
     e.  Configure connection information for your LLM.
+    - **Base URL:** URL to connect to your LLM. For example: https://api.openai.com.
+    - **Model:** Model to use for your AI agent. For example: gpt-4o-mini
+    - **API Key Based Authentication:** Specify your Open AI API key to connect to the LLM.
 
-          - Base URL: URL to connect to your LLM. For example: https://api.openai.com.
-          - Model: Model to use for your AI agent. For example: gpt-4o-mini
-          - API Key Based Authentication: Specify your API key to connect to the LLM.
+    f.  Click **Test** to test that your connection works, then click **Save**.
 
-    f.  Click **Test** to test that your connection works, then click **Save**
-
-        When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent.
+    When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent.
 
 8.  Click **Back** < to return to Pattern Details page
 
@@ -149,11 +148,11 @@ Once your thinking pattern is created for your AI agent, Oracle Integration auto
 
 3.  Configure your Agent Role, Guidelines and Tools.
 
-    a.  Role: You are a Clinical Quality Assurance specialist responsible for conducting post-procedure audits to ensure quality care delivery.
+    a.  **Role:** You are a Clinical Quality Assurance specialist responsible for conducting post-procedure audits to ensure quality care delivery.
 
     Note: Role is Sent to the LLM as part of the system prompt. We need to specify a clear role for your agent so that the LLM knows the purpose of your agent.
 
-    b.  Copy Paste the below guidelines. Guidelines are sent to the LLM as part of the system prompt.
+    b.  Copy Paste the below guidelines. **Guidelines** are sent to the LLM as part of the system prompt.
 
     ```
     <copy>
@@ -321,7 +320,7 @@ Once your thinking pattern is created for your AI agent, Oracle Integration auto
 
     </copy>
     ```
-    c. In Tools, provide tools for the AI agent. Tools are integrations that have been registered as agentic AI tools and provide external connectivity for the AI agent. You already created the tool when you registered the integration as a tool in the previous Section. Click **+** and Add the following Tools
+    c. In **Tools**, provide tools for the AI agent. Tools are integrations that have been registered as agentic AI tools and provide external connectivity for the AI agent. You already created the tool when you registered the integration as a tool in the previous Section. Click **+** and Add the following Tools
       - Fetch Patient Record
       - Match Clinical Guidelines
       - Check Guideline Validity
