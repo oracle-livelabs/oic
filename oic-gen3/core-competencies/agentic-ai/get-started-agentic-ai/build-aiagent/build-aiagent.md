@@ -19,6 +19,8 @@ Estimated Time: 10 minutes
 
 Before building, understand the key components:
 
+![Agentic AI Architecture](images/agenticai-architecture.png)
+
 ### Thinking Patterns
 
 **Thinking patterns define how the AI agent reasons about problems.**
@@ -49,7 +51,7 @@ The AI agent will use an LLM connection.
 
 ### Agentic AI Tools
 
-Your five registered healthcare tools from previous become the agent's action capabilities.
+Your five registered healthcare tools from previous labs become the agent's action capabilities.
 
 The agent decides which tools to invoke based on clinical need.
 
