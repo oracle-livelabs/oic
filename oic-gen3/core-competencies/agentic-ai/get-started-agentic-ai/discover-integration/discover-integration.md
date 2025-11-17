@@ -59,7 +59,9 @@ When you enable MCP for an OIC project:
 
 ## Task 1: Enable MCP in OIC Project
 
-To enable Process Automation with Oracle Integration, you need to create Oracle Cloud Infrastructure Identity and Access Management (IAM) policies that allow Oracle Integration administrators belonging to a specified IAM group to manage the Process Automation instance.
+When you enable MCP for a project, the project becomes an MCP server. Any integrations registered as agentic AI tools are discoverable through the MCP server URL, and AI agent frameworks that support MCP can invoke the integrations. Each project has its own MCP server URL.
+
+![MCP Server Architecture](images/mcp-server.png)
 
 ### Step 1: Access Project Details
 
@@ -82,9 +84,7 @@ To enable Process Automation with Oracle Integration, you need to create Oracle 
 2. Locate the **MCP server URL**
 3. Copy the complete URL - it follows this format:
 
-```
-https://<NameOfServiceInstance>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<ProjectIdentifier>/mcp
-```
+`https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
 **Example:**
 ```
@@ -142,9 +142,8 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
    - Select **HTTP**
 
 2. Enter the MCP Server URL:
-   ```
-   https://<NameOfServiceInstance>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/PatientUtilizationReview/mcp
-   ```
+
+   `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
 ### Step 4: Configure Authorization
 
@@ -158,7 +157,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
    | Access Token URL | `https://<identity_domain>.identity.oraclecloud.com/oauth2/v1/token` |
    | Client ID | Your confidential client app client ID (from Section 2) |
    | Client Secret | Your confidential client app client secret (from Section 2) |
-   | Scope | `https://<instance>.integration.<region>.ocp.oraclecloud.com/urn:opc:resource:consumer::all` |
+   | Scope | `https://<instance>.integration.<region>.ocp.oraclecloud.com:443urn:opc:resource:consumer::all` |
    | Client Authentication | Send client credentials in body |
    {: title="OAuth 2.0 Settings"}
 
@@ -589,17 +588,19 @@ Chat Output
 2. The testing interface opens with your flow ready
 3. In the chat input field, enter a clinical review query. See the sample queries below.
 
-**Example Query 1 - Basic Review:**
+**Example Query 1 - QUALITY ASSESSMENT SCORE: EXCELLENT**
 ```
 <copy>
-I need a quality review for patient P106 who completed a CT Chest for Community-Acquired Pneumonia. The patient is immunosuppressed. Please verify this imaging was appropriate per our guidelines.
+I need a quality review for patient P104 who completed a CT Chest for Suspected Pulmonary
+Embolism. The patient presented with chest pain, shortness of breath, and tachycardia, with a high Wells score and positive D-dimer. Please verify guideline compliance.
 </copy>
 ```
 
-**Example Query 2 - With Clinical Details:**
+**Example Query 2 - QUALITY ASSESSMENT SCORE: NON COMPLIANT**
 ```
 <copy>
-Run a quality audit for patient P105. Patient had an MRI Lumbar Spine for Chronic Low Back Pain three days ago. Please assess guideline compliance and determine if any escalation is needed.
+Please conduct a quality review for patient P103 who received an MRI Brain for a classic
+migraine presentation. The patient reports recurrent headaches with no neurological deficits or red flag features noted. Assess whether this imaging aligns with guidelines.
 </copy>
 ```
 
@@ -660,6 +661,8 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-and-activate-confidential-client-application.html)
+
+* [MCP Server in OIC](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/faqs-projects-mcp-servers.html)
 
 
 ## Acknowledgements

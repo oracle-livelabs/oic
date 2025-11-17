@@ -28,7 +28,7 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 | Part of a project | ✓ | Imported in Previous Section |
 | Integration is Active | ✓ | Activated in Previous Section |
 | First connection is REST trigger with REST Adapter | ✓ | Configured in Previous Section |
-| REST trigger configured with OAuth/Basic Auth, JSON payload, POST verb | ✓ | Configured in Previous Section |
+| REST trigger configured with OAuth Auth, JSON payload, POST verb | ✓ | Configured in Previous Section |
 {: title="Integrations Requirement"}
 
 **Five Healthcare Tools Overview**
@@ -49,6 +49,8 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 2. Select the **Patient Care Utilization Review** project
 
 3. In the left navigation pane, click **AI Agents**
+
+![AI Agent Blank Canvas](images/agent-blank-canvas.png)
 
 4. On the AI Agents page, locate the **Tools** card section
 
