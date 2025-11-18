@@ -37,6 +37,7 @@ In this lab you will learn:
 
 4.  Run the agent
     a.  In the Agents card, find the AI agent to run: **Patient Care Quality Assessment Agent**
+
     b.  Click **Actions icon**, and select *Run*.
 
 5.  Test the agent.
@@ -49,6 +50,8 @@ In this lab you will learn:
     ```
 
     ![Test AI Agent](images/test-aiagent.png)
+
+    b.  Click on the little run icon at the end of the User prompt text box.
 
     The progress bar displays and then you see agent actions.
 
