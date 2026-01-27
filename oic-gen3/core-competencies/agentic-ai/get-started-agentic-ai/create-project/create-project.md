@@ -37,7 +37,7 @@ This lab assumes you have:
 
     ![Start New Project](images/start-new-project.png)
 
-4.  Locate the OIC project file **Patient\_Utilization\_Review.car** on your local computer. Drag the file and drop it into the upload area in the dialog
+4.  Locate the OIC project file **Patient\_Utilization\_Review.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
 
 5.  Click on *Import*.
 
