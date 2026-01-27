@@ -207,7 +207,7 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     ```
 ## Task 5: Load sample data
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/Wqfm8dXFdit0yLa5qqIYhNLMPi6D8dRWrGxMGMLyuP7LRr1VWzvXvp2dz3jfNNq1/n/oicpm/b/oiclivelabs/o/oic3/core-competency/understand-rest-adapter/Understand-Rest-Adapter.zip) the zip file and unzip the files in a local drive folder
+1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/MA-zpdJy9KGr43VNVgPlI_fNj2nGfZ6dKjaNxcB8kPgi0A7XhprgezdXXeBPGGcY/n/oicpm/b/oiclivelabs/o/oic3/core-competency/understand-rest-adapter/Understand-Rest-Adapter.zip) the zip file and unzip the files in a local drive folder
 
 2.  In the  *SQL Database Actions* select the DB table **Customer** right click **Data Loading &gt Upload Data..**
     ![Load Sample Data](images/load-sample-data.png)
@@ -241,4 +241,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Jan 2026
