@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this section, you'll import the pre built *Autonomous Expense Agent* project into your Oracle Integration environment and configure the necessary connections for the integrations. The project contains four integrations that will become agentic AI tools.
+In this section, you'll import the pre built *Intelligent Expense Automation with Agentic AI* project into your Oracle Integration environment and configure the necessary connections for the integrations. The project contains four integrations that will become agentic AI tools.
 
 You'll need to configure three essential connections:
 
@@ -38,22 +38,22 @@ This lab assumes you have:
 
     ![Start New Project](images/start-new-project.png)
 
-4. Locate the OIC project file **AUTONOMOUS\_EXPENSE\_AGENT-EXPENSECREATION.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
+4. Locate the OIC project file **INTEL\_EXPEN\_AUTOM\_WITH\_AGENT\_AI-EXPENSECREATION.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
 
 5. Click on *Import*.
 
-6. Upon successful import, you should see Project Name: **Autonomous Expense Agent** and clone the project with modify the project name which consists of your initials and delete the imported project so that others can do these steps if it is shared environment.
+6. Upon successful import, you should see Project Name: **Intelligent Expense Automation with Agentic AI** and clone the project with modify the project name which consists of your initials and delete the imported project so that others can do these steps if it is shared environment.
 
 ## Task 2: Explore the Imported Project
 
 1. Once inside the project, you should see the Project Overview page showing:
 
-    - Project Name: Autonomous Expense Agent
+    - Project Name: Intelligent Expense Automation with Agentic AI
     - Integrations section with the four integrations:
 
         - **1. Read Expense Receipt** — Retrieves expense receipt images from a file server and uses AIs-powered document understanding to extract structured expense details such as date, amount, merchant, and line items.
         - **2. Approval Required** — Applies AI reasoning and policy evaluation to determine whether the expense complies with organizational rules or requires managerial approval.
-        - **3. HITL — Raise Approval Request** — Triggers a human-in-the-loop review when exceptions, policy violations, or confidence thresholds demand explicit authorization before proceeding.
+        - **3. HITL-Raise Approval Request** — Triggers a human-in-the-loop review when exceptions, policy violations, or confidence thresholds demand explicit authorization before proceeding.
         - **4. Create Expense in Oracle HCM** — Once validated, automatically creates the expense record in Oracle HCM, ensuring accurate categorization, audit traceability, and seamless downstream processing.
 
     - Decisions
@@ -155,12 +155,15 @@ Verify that all the connections are in Configured state.
 ![Expense Workflow4](images/expense-workflow4.png)
 6. Go back to *Workflows* which is under *Human in the loop* tab by clicking *back* button
 7. Activate *Expense Workflow*
+8. Please note that If, existing workflow is not working then try to create new workflow and use existing workflow as a reference for json samples.
 
 ## Task 7: Configure the integrations and Activate
 
 1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and modify the compartment name if required in OCI Document Understanding action and activate it.
 2. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment and Edit *Decision Service* and make sure that it is pointing to the correct decision service if not, make a note of source and target mappings and delete the *Decision Service*, add new decision service which will point to the correct decision service and map the source and target elements. And finally,  activate the integration flow.
-3. Edit **HITL-Raise Approval Request** integration, Edit *Human in the loop* action and make sure that it is pointing to the correct process or HITL if not, make a note of source and target mappings and delete the *Human in the loop* action, add new *Human in the loop* action which will point to the correct process and map the source and target elements. And finally,  activate the integration flow.
+3. Edit **HITL-Raise Approval Request** integration, Edit *Human in the loop* action and make sure that it is pointing to the correct process or HITL if not, make a note of source and target mappings and delete the *Human in the loop* action, add new *Human in the loop* action which will point to the correct process and map the source and target elements. And finally,  activate the integration flow, refer the mappings given below in the screenshot.
+![HITL mappings](images/hitl-mappings.png)
+
 4. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to reduce the number of calls for this lab. And finally, activate the integration flow
 
 You may now **proceed to the next lab**.
@@ -179,5 +182,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+- **Author** - Ankur Jain, Kishore Katta, Subhani Italapuram, Product Management, Oracle Integration
 - **Last Updated By/Date** - Subhani Italapuram, Feb 2026

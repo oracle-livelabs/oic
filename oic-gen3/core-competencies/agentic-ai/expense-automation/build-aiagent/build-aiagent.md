@@ -55,7 +55,7 @@ In this lab you will learn:
 
 1. In the left navigation pane, select **Projects**.
 
-2. Select the **Autonomous Expense Agent** project that you created.
+2. Select the **Intelligent Expense Automation with Agentic AI** project that you created.
 3. In the left navigation pane, select **AI Agents** icon.
 4. In the **Agent patterns** card, click *Add*. The Create pattern dialog is displayed.
 5. In **Create pattern**, configure required fields for your pattern:
@@ -64,23 +64,24 @@ In this lab you will learn:
     - **Pattern recipe:** Value sent to the LLM as a system prompt to define how the agent reasons. Select the *ReAct* pattern for this lab.
 6. Click Create. The Pattern details page is displayed.
 7. Configure the Pattern Guidelines and the LLM Connection.
-    a.  Leave the Max Iterations and Temperature as defaults.
-    b.  In the Guidelines box, enter the following guidelines for the ReAct Thinking pattern.
+    - Leave the Max Iterations and Temperature as defaults.
+    - In the Guidelines box, enter the following guidelines for the ReAct Thinking pattern.
 
-```
-    <copy>
-      Expense Creator.
-    </copy>
-```
+    ```
+        <copy>
+        Expense Creator.
+        </copy>
+    ```
 
-![React Pattern Guidelines](images/react-pattern-guidelines.png)
-    c.  Click **Save**.
-    d.  Under LLM Connections, click **Edit** icon to configure the LLM connection. A new LLM connection is created and is displayed.
-    e.  Configure connection information for your LLM.
-    - **Base URL:** URL to connect to your LLM. For example: https://api.openai.com
-    - **Model:** Model to use for your AI agent. For example: gpt-4o-mini
-    - **API Key Based Authentication:** Specify your Open AI API key to connect to the LLM.
-    f.  Click **Test** to test that your connection works, then click **Save**.
+    ![React Pattern Guidelines](images/react-pattern-guidelines.png)
+
+    - Click **Save**.
+    - Under LLM Connections, click **Edit** icon to configure the LLM connection. A new LLM connection is created and is displayed.
+    - Configure connection information for your LLM.
+        - **Base URL:** URL to connect to your LLM. For example: https://api.openai.com
+        - **Model:** Model to use for your AI agent. For example: gpt-4o-mini
+        - **API Key Based Authentication:** Specify your Open AI API key to connect to the LLM.
+    - Click **Test** to test that your connection works, then click **Save**.
     When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent when you activate the Agent Pattern.
 8. Click **Back** < to return to Pattern Details page
 9. Click **Back** < to return to AI Agents page
@@ -92,11 +93,11 @@ In this lab you will learn:
 2. Enter the name as *Read the expense receipt* and click **Create**
 3. Enter the prompt as given below and click on **Save**
 
-```
-    <copy>
-      Process this expense receipt. File: {{fileName}} and Directory: {{directory}}
-    </copy>
-```
+    ```
+        <copy>
+        Process this expense receipt. File: {{fileName}} and Directory: {{directory}}
+        </copy>
+    ```
 
 ## Task 3: Add and Configure the AI Agent
 
@@ -127,7 +128,7 @@ In this lab you will learn:
     c. In **Tools**, provide tools for the AI agent. Tools are integrations that have been registered as agentic AI tools and provide external connectivity for the AI agent. You already created the tool when you registered the integration as a tool in the previous Section. Click **+** and Add the following Tools, can select all the tools at a time.
       - Read Expense Receipt
       - Approval Required
-      - HITL — Raise Approval Request
+      - HITL-Raise Approval Request
       - Create Expense Oracle HCM
     d. In **Prompt templates**, Click **+** and add the prompt template *Read the expense receipt*
 4. Click on **Save**

@@ -37,7 +37,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 1. In the OIC navigation pane, click **Projects**
 
-2. Select the **Autonomous Expense Agent** project
+2. Select the project which you have created
 
 3. In the left navigation pane, click **AI Agents**
 
@@ -45,7 +45,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 ## Task 2: Register *Read Expense Receipt* as an Agentic AI Tool
 
-### Step 1: Create New Tool from Tools Card
+Step 1: Create New Tool from Tools Card
 
 1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
 2. Create tool dialog appears
@@ -54,19 +54,19 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 In the Create Tool dialog , fill in the following fields as shown in the table:
 
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Type** | Integration |  |
-| **Project** | Autonomous Expense Agent |  |
-| **Integration** | Read Expense Receipt |  |
-| **Name** | Read Expense Receipt | Auto-populated from integration name |
-| **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-| **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
-{: title="Read Expense Receipt Tool Properties"}
+   | Field | Value | Notes |
+   |-------|-------|-------|
+   | **Type** | Integration |  |
+   | **Project** | Select the project which you have created |  |
+   | **Integration** | Read Expense Receipt |  |
+   | **Name** | Read Expense Receipt | Auto-populated from integration name |
+   | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+   | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
+   {: title="Read Expense Receipt Tool Properties"}
 
-![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
+   ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
 
-Click on **Create**
+   Click on **Create**
 
 ### Step 3: Configure Parameters
 
@@ -103,7 +103,7 @@ In the Create Tool dialog , fill in the following fields as shown in the table:
 | Field | Value | Notes |
 |-------|-------|-------|
 | **Type** | Integration |  |
-| **Project** | Autonomous Expense Agent |  |
+| **Project** | Select the project which you have created |  |
 | **Integration** | Approval Required |  |
 | **Name** | Approval Required | Auto-populated from integration name |
 | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
@@ -139,7 +139,7 @@ In the Create Tool dialog , fill in the following fields as shown in the table:
 | Field | Value | Notes |
 |-------|-------|-------|
 | **Type** | Integration |  |
-| **Project** | Autonomous Expense Agent |  |
+| **Project** | Select the project which you have created |  |
 | **Integration** | HITL-Raise Approval Request |  |
 | **Name** | HITL-Raise Approval Request | Auto-populated from integration name |
 | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
@@ -175,7 +175,7 @@ In the Create Tool dialog , fill in the following fields as shown in the table:
 | Field | Value | Notes |
 |-------|-------|-------|
 | **Type** | Integration |  |
-| **Project** | Autonomous Expense Agent |  |
+| **Project** | Select the project which you have created |  |
 | **Integration** | Create Expense Oracle HCM |  |
 | **Name** | Create Expense Oracle HCM | Auto-populated from integration name |
 | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
@@ -203,7 +203,7 @@ In the **Parameters configuration** section, keep default values.
 2. Verify all five tools appear in the **Tools** section:
    - ✓ Read Expense Receipt
    - ✓ Approval Required
-   - ✓ HITL — Raise Approval Request
+   - ✓ HITL-Raise Approval Request
    - ✓ Create Expense Oracle HCM
 
 

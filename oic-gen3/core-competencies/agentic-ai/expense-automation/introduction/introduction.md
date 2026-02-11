@@ -1,14 +1,14 @@
-# Introduction -  Autonomous Expense Agent
+# Introduction
 
 This expense agent use case demonstrates an intelligent, end-to-end automation flow that transforms raw expense receipts into validated expense records with minimal manual intervention. The agent reads receipt images from a file server and sends them to OCI Document Understanding for structured data extraction, while OCI GenAI assists in classifying the expense type with contextual accuracy. A decision service evaluates policy rules to determine whether approval is required; when explicit authorization is needed, a human-in-the-loop (HITL) step is triggered to maintain governance and compliance. Once validated, the agent creates the expense entry in Oracle HCM Cloud. The entire process is orchestrated through Oracle Integration, where an agent built using a ReAct-style pattern dynamically invokes the appropriate tools based on defined guidelines. This architecture combines AI-driven insight, rule-based decisioning, and enterprise workflow orchestration to deliver a scalable, auditable, and intelligent expense processing experience.
 
 **Agentic AI** represents a paradigm shift in intelligent automation. Unlike traditional integration workflows that follow a fixed, predetermined sequence of steps, AI agents leverage Large Language Models (LLMs) to reason, adapt, and dynamically orchestrate multiple services based on real-time context. This approach is especially powerful in environments where requirements and scenarios vary, enabling systems to make informed decisions, follow defined guidelines, and execute the most appropriate actions autonomously. In this live lab, you will explore how agent-driven orchestration enhances flexibility, responsiveness, and decision quality compared to conventional rule-based integrations.
 
-## Use Case: Autonomous Expense Agent
+## Use Case: Intelligent Expense Automation with Agentic AI
 
-**What is Autonomous Expense Agent?**
+**What is Intelligent Expense Automation with Agentic AI?**
 
-The Autonomous Expense Agent is a structured workflow that reviews employee expense submissions and supporting receipts on a case-by-case basis to ensure policy compliance, financial accuracy, and appropriate approvals. The process validates expense details against organizational policies, confirms that required documentation is provided, and determines whether escalation or human review is needed before reimbursement or posting.
+The Intelligent Expense Automation with Agentic AI is a structured workflow that reviews employee expense submissions and supporting receipts on a case-by-case basis to ensure policy compliance, financial accuracy, and appropriate approvals. The process validates expense details against organizational policies, confirms that required documentation is provided, and determines whether escalation or human review is needed before reimbursement or posting.
 
 Organizations typically rely on finance and expense management teams who:
 
@@ -40,7 +40,7 @@ Traditional expense processing workflows often encounter several limitations:
 
 **The AI Agent Solution**
 
-In this live lab, you’ll build an **Autonomous Expense Agent** that:
+In this live lab, you’ll build an **Intelligent Expense Automation with Agentic AI** that:
 
 **1. Read Expense Receipt** — Retrieves expense receipt images from a file server and uses AI-powered document understanding to extract structured expense details such as date, amount, merchant, and line items.
 
@@ -126,6 +126,7 @@ By completing this live lab, you will:
 - Define agent behaviors, guardrails, and execution parameters
 
 **Test and Monitor Agent Execution**
+
 - Run AI agents with sample inputs
 - Monitor agent execution flows and tool invocations
 - Validate agent reasoning and decision-making
@@ -144,12 +145,11 @@ By the end of this workshop, you will have a comprehensive understanding of how 
 7. Monitor and validate AI agent behavior
 8. Apply agentic AI patterns to other business use cases
 
-
 ### Prerequisites
 
 This lab assumes you have the following:
 
-* Oracle Cloud Account with credits to provision services.
+- Oracle Cloud Account with credits to provision services.
 
 You may now **proceed to the next lab**.
 
@@ -159,5 +159,5 @@ You may now **proceed to the next lab**.
 * [Oracle Integration 3 Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/get-started.html)
 
 ## Acknowledgements
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+- **Author** - Ankur Jain, Kishore Katta, Subhani Italapuram, Product Management, Oracle Integration
 - **Last Updated By/Date** - Subhani Italapuram, Feb 2026

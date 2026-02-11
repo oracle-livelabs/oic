@@ -1,10 +1,10 @@
 {
-    "workshoptitle": "Oracle Integration 3 - Autonomous Expense Agent",
+    "workshoptitle": "Oracle Integration 3 - Intelligent Expense Automation with Agentic AI",
     "help": "livelabs-help-oic_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
-            "description":"Autonomous Expense Agent with OCI AI and Oracle Integration",
+            "description":"Intelligent Expense Automation with Agentic AI",
             "filename": "../../introduction/introduction.md"
         },
         {
