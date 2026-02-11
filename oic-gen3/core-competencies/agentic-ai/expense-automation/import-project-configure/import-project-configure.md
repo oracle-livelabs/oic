@@ -26,7 +26,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - All previous labs completed.
-- [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and few .csv and .json files which will act as data source for this usecase.
+- [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/8-YwzLnq0rWHIrdRe0KU1Dn3E0A1dnJFgqoCMuiVnkl2A9pVrgA9qBFep694wlpE/n/oicpm/b/oiclivelabs/o/oic3/ExpenseCreationLab.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and .jpeg files which will act as data source for this usecase.
 
 ## Task 1: Import Project
 
