@@ -77,7 +77,7 @@ Click on **View Details** of eye icon next to your Agent to see the Agent **Acti
 ## Task 2: Human approval
 
 1. If human approval is required then, go to **Observe** tab, Click on **Human in the loop**
-2. Click on *eye* icon
+2. Click on *eye* icon of the instance.
     ![workflow-instances](images/workflow-instances.png)
 3. Click on **Open in workspace** 
     ![open-workspace](images/open-workspace.png)

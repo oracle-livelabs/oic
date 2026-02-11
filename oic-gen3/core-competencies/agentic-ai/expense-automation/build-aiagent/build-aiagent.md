@@ -130,6 +130,7 @@ In this lab you will learn:
       - Approval Required
       - HITL-Raise Approval Request
       - Create Expense Oracle HCM
+      
     d. In **Prompt templates**, Click **+** and add the prompt template *Read the expense receipt*
 4. Click on **Save**
 5. Navigate **Back <** to the AI Agents Page.

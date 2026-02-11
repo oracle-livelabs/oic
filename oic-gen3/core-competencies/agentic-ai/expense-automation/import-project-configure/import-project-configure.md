@@ -38,7 +38,7 @@ This lab assumes you have:
 
     ![Start New Project](images/start-new-project.png)
 
-4. Locate the OIC project file **INTEL\_EXPEN\_AUTOM\_WITH\_AGENT\_AI-EXPENSECREATION.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
+4. Locate the OIC project file **INTEL\_EXPEN\_AUTOM\_WITH\_AGENT\_AI-OICDP.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
 
 5. Click on *Import*.
 
@@ -160,9 +160,13 @@ Verify that all the connections are in Configured state.
 ## Task 7: Configure the integrations and Activate
 
 1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and modify the compartment name if required in OCI Document Understanding action and activate it.
-2. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment and Edit *Decision Service* and make sure that it is pointing to the correct decision service if not, make a note of source and target mappings and delete the *Decision Service*, add new decision service which will point to the correct decision service and map the source and target elements. And finally,  activate the integration flow.
+2. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment and Edit *Decision Service* and make sure that it is pointing to the correct decision service if not, make a note of source and target mappings and delete the *Decision Service*, add new decision service which will point to the correct decision service and map the source and target elements. And finally,  activate the integration flow, refer the mappings given below for the source and target mappings of decision service action in the screenshots.
+    - Mappings before decision service action
+    ![Decision mappings](images/decisionmappings.png)
+    - Mappings after decision service action
+    ![Decision mappings](images/decisionmappings1.png)
 3. Edit **HITL-Raise Approval Request** integration, Edit *Human in the loop* action and make sure that it is pointing to the correct process or HITL if not, make a note of source and target mappings and delete the *Human in the loop* action, add new *Human in the loop* action which will point to the correct process and map the source and target elements. And finally,  activate the integration flow, refer the mappings given below in the screenshot.
-![HITL mappings](images/hitl-mappings.png)
+    ![HITL mappings](images/hitl-mappings.png)
 
 4. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to reduce the number of calls for this lab. And finally, activate the integration flow
 
