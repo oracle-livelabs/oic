@@ -46,7 +46,7 @@ In this live lab, you’ll build an **Intelligent Expense Automation with Agenti
 
 **2. Approval Required** — Applies AI reasoning and policy evaluation to determine whether the expense complies with organizational rules or requires managerial approval.
 
-**3. HITL — Raise Approval Request** — Triggers a human-in-the-loop review when exceptions, policy violations, or confidence thresholds demand explicit authorization before proceeding.
+**3. HITL-Raise Approval Request** — Triggers a human-in-the-loop review when exceptions, policy violations, or confidence thresholds demand explicit authorization before proceeding.
 
 **4. Create Expense in Oracle HCM** — Once validated, automatically creates the expense record in Oracle HCM, ensuring accurate categorization, audit traceability, and seamless downstream processing.
 
@@ -60,7 +60,7 @@ You’ll build an **end-to-end AI Agent workflow** that automates intelligent ex
 
 - **Approval Required Tool** — Evaluates expense details against policy rules to determine whether approval is needed.
 
-- **HITL — Raise Approval Request Tool** — Initiates a human-in-the-loop review when exceptions or policy thresholds require explicit authorization.
+- **HITL-Raise Approval Request Tool** — Initiates a human-in-the-loop review when exceptions or policy thresholds require explicit authorization.
 
 - **Create Expense in Oracle HCM Tool** — Automatically creates the validated expense record in Oracle HCM for downstream processing.
 
