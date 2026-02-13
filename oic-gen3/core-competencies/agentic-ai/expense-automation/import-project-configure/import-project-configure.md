@@ -26,7 +26,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - All previous labs completed.
-- [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/8-YwzLnq0rWHIrdRe0KU1Dn3E0A1dnJFgqoCMuiVnkl2A9pVrgA9qBFep694wlpE/n/oicpm/b/oiclivelabs/o/oic3/ExpenseCreationLab.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and .jpeg files which will act as data source for this usecase.
+- [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/UrkKROO3M8fiP5l9MEfHBkRSo4s8NkprRfGIOqKaDG3-4oiim0y0AWwFmfiO6K97/n/oicpm/b/oiclivelabs/o/oic3/ExpenseCreationLabVer2.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and .jpeg files which will act as data source for this usecase.
 
 ## Task 1: Import Project
 
@@ -58,8 +58,6 @@ This lab assumes you have:
 
     - Decisions
         - Expense Approval: A decision table used to determine whether approval is required based on the expense type (Food or Airfare) and the expense amount.
-    - Human-In-The-Loop
-        - Expense Workflow: If approval is required, this workflow is triggered and a task is assigned to the user. The user must log in to the Process Workspace to approve or reject the task.
     - Connections
         - REST Connection
         - FTP Connection : This is the place where your files are stored
@@ -116,6 +114,8 @@ Keep the following information handy. Note: Refer File Server Setup section
 
 **OpenAI LLM Adapter Connection Configuration**
 
+> **Note:** For now, you can ignore this connection.You need this information later part of the live lab.
+
 1. Edit the open AI LLM Adapter Connection.
 
 2. Configure the below properties in the connection properties page.
@@ -135,7 +135,7 @@ Verify that all the connections are in Configured state.
 
 1. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-2. Copy the files (food.jpeg, food_comliant.jpeg) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. You can create your own folder under /home/users/fileserveroic3user and copy the files in into new directory which you have created.
+2. Copy the files *food.jpeg, food_comliant.jpeg* (You can get these files from the zip file which you have downloade) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. You can create your own folder under /home/users/fileserveroic3user and copy the files in into new directory which you have created.
 
 ## Task 5: Configure the Decision and Activate
 
@@ -144,31 +144,103 @@ Verify that all the connections are in Configured state.
 
 ## Task 6: Configure the Human in the loop(HITL) and Activate
 
-1. Click on *Human in the loop* tab, edit the form **Expense Form**, review the form and activate the form
-2. Edit the **Expense Workflow**, review **Start event**, review **End event** and click on **Expense Approval** user action OR select **Expense Approval** action , click on **Open Properties**
-![Expense Workflow1](images/expense-workflow1.png)
-3. Click on the user under **Assignees** and remove the existing user and add your oic username.
-![Expense Workflow2](images/expense-workflow2.png)
-4. Select the form under UI section if it is not selected already.
-5. select **Expense Approval** action, click on **Open Data Association**, check *Input* and *Output* assignments.
-![Expense Workflow3](images/expense-workflow3.png)
-![Expense Workflow4](images/expense-workflow4.png)
-6. Go back to *Workflows* which is under *Human in the loop* tab by clicking *back* button
-7. Activate *Expense Workflow*
-8. Please note that If, existing workflow is not working then try to create new workflow and use existing workflow as a reference for json samples.
+1. Click on *Human in the loop* tab, edit the form **Expense Form**, review the form and *activate* the form
+2. Click on **Add** button in Workflow section, enter Name **Expense Workflow** and click on **Create**
+3. Click on **Start event**, click on **Actions** icon, click on **Open Properties**
+    ![Start event](images/startevent.png)
+4. Add the JSON given below by clicking on **inline**, and click on **Apply**
+    ![Workflow Properties](images/workflowproperties.png)
+
+    ```
+        <copy>
+            {
+            "expenseType":"",
+            "subTotal" : "",
+            "merchantPhone" : "+91-7982988244",
+            "merchantAddress" : "CYBERHUB MALL, GURGAON",
+            "transactionTime" : "19:06",
+            "tax" : "",
+            "tip" : "",
+            "total" : "11",
+            "merchantName" : "GOLA SIZZLERS PRIVATE LIMITED",
+            "transactionDate" : "2025-12-25T00:00:00.000Z",
+            "items" : [ {
+                "itemName" : "NY AMRITSARI PARATHA",
+                "itemPrice" : "159",
+                "quantity" : "",
+                "itemTotalPrice" : "477.00"
+            }]
+            }
+        </copy>
+    ```
+
+5. Click on **End event**, click on **Actions** icon, click on **Open Properties**
+6. Add the JSON given below by clicking on **inline**, and click on **Apply**
+
+    ```
+        <copy>
+         {
+          "outcome":""
+         }
+        </copy>
+    ```
+7. Close the *Properties*
+8. Add *User Task*, drag and drop **User Task** from the *Palette* on the the designer between *Start event* and *End Event*
+    ![User task](images/usertask.png)
+9. Click on **User Task** user action OR select **User Task** action , click on **Open Properties**
+    ![Expense Workflow1](images/expense-workflow1.png)
+10. Change *User Task* name and *Title* as * *Expense Approval*.
+11. Click on the user under **Assignees** and add your oic username.
+    ![Expense Workflow2](images/expense-workflow2.png)
+12. For *UI* property, select the from which you have activated from the drop down.
+ and click on the designer to save all the properties automatically.
+    ![UI Properties](images/usertask-properties.png)
+13. select **Expense Approval** action, click on **Open Data Association**, expand *Input* from source, expand *messageStartArgs* and expand *input* from right side, expand *formData* and map the below elements and refer the screenshot given below.
+    - merchantName to merchantName
+    - merchantAddress to merchantAddress
+    - transactionDate to expenseDate
+    - total to amount
+    ![Expense Workflow3](images/expense-workflow3.png)
+14. Click on **Output**, map *output.taskOutcome* to *callBackEndArgs.outcome*
+    ![Expense Workflow4](images/expense-workflow4.png)
+15. Click on **Apply**.
+16. Go back to *Workflows* which is under *Human in the loop* tab by clicking *back* button
+17. Activate *Expense Workflow*
 
 ## Task 7: Configure the integrations and Activate
 
-1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and modify the compartment name if required in OCI Document Understanding action and activate it.
-2. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment and Edit *Decision Service* and make sure that it is pointing to the correct decision service if not, make a note of source and target mappings and delete the *Decision Service*, add new decision service which will point to the correct decision service and map the source and target elements. And finally,  activate the integration flow, refer the mappings given below for the source and target mappings of decision service action in the screenshots.
-    - Mappings before decision service action
-    ![Decision mappings](images/decisionmappings.png)
-    - Mappings after decision service action
-    ![Decision mappings](images/decisionmappings1.png)
-3. Edit **HITL-Raise Approval Request** integration, Edit *Human in the loop* action and make sure that it is pointing to the correct process or HITL if not, make a note of source and target mappings and delete the *Human in the loop* action, add new *Human in the loop* action which will point to the correct process and map the source and target elements. And finally,  activate the integration flow, refer the mappings given below in the screenshot.
-    ![HITL mappings](images/hitl-mappings.png)
+_Read Expense Receipt_
 
-4. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to reduce the number of calls for this lab. And finally, activate the integration flow
+1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and try to understand it.
+2. Go to *OCI Document Understanding* action, edit it, and modify the compartment name as per your OCI environment and activate **Read Expense Receipt** integration.
+
+_Approval Required_
+
+1. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
+2. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
+    ![Decision Service](images/decision-service.png)
+3. Map the source and target elements as per the screenshot given below. And finally, refer the mappings given below for the source and target mappings of decision service action in the screenshots.
+    - **Map ExecuteBusinessRule**
+    ![Decision mappings](images/decisionmappings.png)
+    ![Decision mappings2](images/decisionmappings2.png)
+    - **Map GetExpenseType**
+    ![Decision mappings1](images/decisionmappings1.png)
+4. Activate the integration flow
+
+_HITL-Raise Approval Request_
+
+1. Edit **HITL-Raise Approval Request** integration, add *Human in the loop* action under *Main* section by clicking on **+** icon.
+    ![HITL action](images/hitlaction.png)
+2. Enter *endpoint* name as **InitiateProcess** and select the *workflow* which you have created and activated.
+    ![HITL action wizard](images/hitlactionwizard.png)
+3. Edit *Map InitiateProcess* the source and target elements. Refer the mappings given below in the screenshot.
+    ![HITL mappings](images/hitl-mappings.png)
+4. Activate the integration flow
+
+_Create Expense Oracle HCM_
+
+1. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to reduce the number of calls for this lab.
+2. Activate the integration flow
 
 You may now **proceed to the next lab**.
 
