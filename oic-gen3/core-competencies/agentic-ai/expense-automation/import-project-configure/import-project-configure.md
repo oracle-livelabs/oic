@@ -64,7 +64,7 @@ This lab assumes you have:
         - HCM Cloud Connection : To create an expense record
 
 TIP: Edit each integration and click on **Learn about the Integration** to understand the details of the integration flow.
-![Learn About the Integration](images/learn-about-integration.png)
+    ![Learn About the Integration](images/learn-about-integration.png)
 
 ## Task 3: Configure Connections
 
@@ -136,7 +136,7 @@ Verify that all the connections are in Configured state.
 
 1. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-2. Copy the files *food.jpeg, food_comliant.jpeg* (You can get these files from the zip file which you have downloade) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. You can create your own folder under /home/users/fileserveroic3user and copy the files in into new directory which you have created.
+2. Copy the files *food.jpeg, food_non_hitl.jpeg* (You can get these files from the zip file which you have downloade) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. You can create your own folder under /home/users/fileserveroic3user and copy the files in into new directory which you have created.
 
 ## Task 5: Configure the Decision and Activate
 

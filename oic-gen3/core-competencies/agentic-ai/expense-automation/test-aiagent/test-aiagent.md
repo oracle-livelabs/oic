@@ -35,7 +35,7 @@ In this lab you will learn:
 3. In the left navigation pane, select **AI Agents** icon.
 
 4. Run the agent
-    - Copy food.jpeg and food_comliant.jpeg files to the File Server if not done. And You can get these two files from the downloaded artifacts.
+    - Copy food.jpeg and food_non_hitl.jpeg files to the File Server if not done. And You can get these two files from the downloaded artifacts.
     - In the Agents card, find the AI agent to run: **Expense Agent**
     - Click **Actions icon**, and select *Run*.
 
