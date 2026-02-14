@@ -61,7 +61,7 @@ This lab assumes you have:
     - Connections
         - REST Connection
         - FTP Connection : This is the place where your files are stored
-        - HCM Cloud Connection
+        - HCM Cloud Connection : To create an expense record
 
 TIP: Edit each integration and click on **Learn about the Integration** to understand the details of the integration flow.
 ![Learn About the Integration](images/learn-about-integration.png)
@@ -88,7 +88,8 @@ All the connections are in draft state. We will configure the connections used b
 
 **FTP Adapter Connection Configuration**
 
-Keep the following information handy. Note: Refer File Server Setup section
+Keep the following information handy. Refer File Server Setup section and make a note of the following information
+
     - File Server IP Address.
     - File Server Port.
     - Your Oracle Integration username.
@@ -189,10 +190,10 @@ Verify that all the connections are in Configured state.
     ![User task](images/usertask.png)
 9. Click on **User Task** user action OR select **User Task** action , click on **Open Properties**
     ![Expense Workflow1](images/expense-workflow1.png)
-10. Change *User Task* name and *Title* as * *Expense Approval*.
-11. Click on the user under **Assignees** and add your oic username.
+10. Change User Task's *Name* and *Title* as *Expense Approval*.
+11. Click on *+* under **Assignees** and add your oic username.
     ![Expense Workflow2](images/expense-workflow2.png)
-12. For *UI* property, select the from which you have activated from the drop down.
+12. For *UI* property, select the *form* from the drop down.
  and click on the designer to save all the properties automatically.
     ![UI Properties](images/usertask-properties.png)
 13. select **Expense Approval** action, click on **Open Data Association**, expand *Input* from source, expand *messageStartArgs* and expand *input* from right side, expand *formData* and map the below elements and refer the screenshot given below.
@@ -212,35 +213,42 @@ Verify that all the connections are in Configured state.
 _Read Expense Receipt_
 
 1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and try to understand it.
-2. Go to *OCI Document Understanding* action, edit it, and modify the compartment name as per your OCI environment and activate **Read Expense Receipt** integration.
+2. Go to *OCI Document Understanding* action, edit it, and modify the compartment name as per your OCI environment.
+3. Save the integration flow and activate it.
 
 _Approval Required_
 
 1. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
 2. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
     ![Decision Service](images/decision-service.png)
-3. Map the source and target elements as per the screenshot given below. And finally, refer the mappings given below for the source and target mappings of decision service action in the screenshots.
-    - **Map ExecuteBusinessRule**
+3. Map the source and target elements as per the details given below. If, required refer the screenshots.
+    - Edit **Map ExecuteBusinessRule**
+    - expand *Request Wrapper->Expense Data* from Target
+    - expand *GetExpenseType Request-->Request Wrapper* from Source
+    - Map *Total Amount* to *Amount*
+    - expand *ExtractType Response-->Chat Action Response-->Response Wrapper-->Body-->Chat Response-->Choices-->Message-->Content* from Source
+    - Map *Text* to *Exp Type*
+
     ![Decision mappings](images/decisionmappings.png)
     ![Decision mappings2](images/decisionmappings2.png)
-    - **Map GetExpenseType**
+4. Edit **Map GetExpenseType** and map as per the screenshot given below.
     ![Decision mappings1](images/decisionmappings1.png)
-4. Activate the integration flow
+5. Save the integration flow and activate it.
 
 _HITL-Raise Approval Request_
 
 1. Edit **HITL-Raise Approval Request** integration, add *Human in the loop* action under *Main* section by clicking on **+** icon.
     ![HITL action](images/hitlaction.png)
-2. Enter *endpoint* name as **InitiateProcess** and select the *workflow* which you have created and activated.
+2. Enter *endpoint* name as **InitiateProcess** and select the *workflow* which you have created.
     ![HITL action wizard](images/hitlactionwizard.png)
-3. Edit *Map InitiateProcess* the source and target elements. Refer the mappings given below in the screenshot.
+3. Edit **Map InitiateProcess** and map the source and target elements. Refer the mappings given below in the screenshot.
     ![HITL mappings](images/hitl-mappings.png)
-4. Activate the integration flow
+4. Save the integration flow and activate it.
 
 _Create Expense Oracle HCM_
 
-1. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to reduce the number of calls for this lab.
-2. Activate the integration flow
+1. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to keep it simple.
+2. Save the integration flow and activate it.
 
 You may now **proceed to the next lab**.
 
