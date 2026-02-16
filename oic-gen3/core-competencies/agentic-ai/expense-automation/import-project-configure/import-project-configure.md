@@ -229,10 +229,10 @@ _Approval Required_
     - expand *ExtractType Response-->Chat Action Response-->Response Wrapper-->Body-->Chat Response-->Choices-->Message-->Content* from Source
     - Map *Text* to *Exp Type*
 
-    ![Decision mappings](images/decisionmappings.png)
-    ![Decision mappings2](images/decisionmappings2.png)
 4. Edit **Map GetExpenseType** and map as per the screenshot given below.
-    ![Decision mappings1](images/decisionmappings1.png)
+    - expand *ExecuteBusinessRule Response-->postDecisionActionResponse-->ResponseWrapper* from source
+    - expand *ResponseWrapper* from target
+    - map **interpretation** to **Approval Required**
 5. Save the integration flow and activate it.
 
 _HITL-Raise Approval Request_
