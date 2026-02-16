@@ -38,7 +38,7 @@ Traditional expense processing workflows often encounter several limitations:
 
 ***Complexity Management:*** Aggregating receipt data, expense classifications, approval rules, and audit checks across multiple systems is difficult with traditional siloed integrations, increasing the risk of errors and inefficiencies.
 
-**The AI Agent Solution**
+***The AI Agent Solution***
 
 In this live lab, you’ll build an **Intelligent Expense Automation with Agentic AI** that:
 
@@ -155,9 +155,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Oracle Integration 3 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
-* [Oracle Integration 3 Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/get-started.html)
+- [Oracle Integration 3 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+- [Oracle Integration 3 Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/get-started.html)
 
 ## Acknowledgements
+
 - **Author** - Ankur Jain, Kishore Katta, Subhani Italapuram, Product Management, Oracle Integration
 - **Last Updated By/Date** - Subhani Italapuram, Feb 2026

@@ -21,7 +21,7 @@ This lab assumes you have:
 
 - Completed all the previous labs
 
-**Integration Requirements Met**
+***Integration Requirements Met***
 
 All the integrations have been pre-configured and meet the Agentic AI tool requirements:
 

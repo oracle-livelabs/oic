@@ -63,14 +63,14 @@ This lab assumes you have:
         - FTP Connection : This is the place where your files are stored
         - HCM Cloud Connection : To create an expense record
 
-TIP: Edit each integration and click on **Learn about the Integration** to understand the details of the integration flow.
+> **Note:** Edit each integration and click on **Learn about the Integration** to understand the   details of the integration flow.
     ![Learn About the Integration](images/learn-about-integration.png)
 
 ## Task 3: Configure Connections
 
 All the connections are in draft state. We will configure the connections used by the integration flows.
 
-**REST Connection Configuration**
+***REST Connection Configuration***
 
 1. Edit the REST Connection.
 
@@ -78,7 +78,7 @@ All the connections are in draft state. We will configure the connections used b
 
 3. Click on **Test** and *Save* the connection.
 
-**HCM Connection Configuration**
+***HCM Connection Configuration***
 
 1. Edit the HCM Connection.
 
@@ -86,7 +86,7 @@ All the connections are in draft state. We will configure the connections used b
 
 3. Click on **Test** and *Save* the connection.
 
-**FTP Adapter Connection Configuration**
+***FTP Adapter Connection Configuration***
 
 Keep the following information handy. Refer File Server Setup section and make a note of the following information
 
@@ -113,7 +113,7 @@ Keep the following information handy. Refer File Server Setup section and make a
 
 4. Click on **Test** and *Save* the connection.
 
-**OpenAI LLM Adapter Connection Configuration**
+***OpenAI LLM Adapter Connection Configuration***
 
 > **Note:** For now, you can ignore this connection.You need this information later part of the live lab.
 
@@ -185,6 +185,7 @@ Verify that all the connections are in Configured state.
          }
         </copy>
     ```
+
 7. Close the *Properties*
 8. Add *User Task*, drag and drop **User Task** from the *Palette* on the the designer between *Start event* and *End Event*
     ![User task](images/usertask.png)
@@ -210,13 +211,13 @@ Verify that all the connections are in Configured state.
 
 ## Task 7: Configure the integrations and Activate
 
-_Read Expense Receipt_
+***Read Expense Receipt***
 
 1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and try to understand it.
 2. Go to *OCI Document Understanding* action, edit it, and modify the compartment name as per your OCI environment.
 3. Save the integration flow and activate it.
 
-_Approval Required_
+***Approval Required***
 
 1. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
 2. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
@@ -235,7 +236,7 @@ _Approval Required_
     - map **interpretation** to **Approval Required**
 5. Save the integration flow and activate it.
 
-_HITL-Raise Approval Request_
+***HITL-Raise Approval Request***
 
 1. Edit **HITL-Raise Approval Request** integration, add *Human in the loop* action under *Main* section by clicking on **+** icon.
     ![HITL action](images/hitlaction.png)
@@ -245,7 +246,7 @@ _HITL-Raise Approval Request_
     ![HITL mappings](images/hitl-mappings.png)
 4. Save the integration flow and activate it.
 
-_Create Expense Oracle HCM_
+***Create Expense Oracle HCM***
 
 1. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to keep it simple.
 2. Save the integration flow and activate it.
