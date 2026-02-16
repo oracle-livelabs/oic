@@ -61,9 +61,7 @@ This lab assumes you have:
     - Connections
         - REST Connection
         - FTP Connection : This is the place where your files are stored
-        - HCM Cloud Connection : To create an expense record
-
-> **Note:** Edit each integration and click on **Learn about the Integration** to understand the   details of the integration flow.
+    - Click on **Learn about the Integration** to understand the details of the integration flow.
     ![Learn About the Integration](images/learn-about-integration.png)
 
 ## Task 3: Configure Connections
@@ -88,16 +86,15 @@ All the connections are in draft state. We will configure the connections used b
 
 ***FTP Adapter Connection Configuration***
 
-Keep the following information handy. Refer File Server Setup section and make a note of the following information
-
+1. Keep the following information handy. Refer File Server Setup section and make a note of the following information
     - File Server IP Address.
     - File Server Port.
     - Your Oracle Integration username.
     - Your Oracle Integration password.
 
-1. Edit the FTP Adapter Connection.
+2. Edit the FTP Adapter Connection.
 
-2. Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.  
+3. Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -109,9 +106,9 @@ Keep the following information handy. Refer File Server Setup section and make a
     | Password                | Your Oracle Integration password                      |
     {: title="FTP Adapter Connection Properties"}
 
-3. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
+4. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
 
-4. Click on **Test** and *Save* the connection.
+5. Click on **Test** and *Save* the connection.
 
 ***OpenAI LLM Adapter Connection Configuration***
 
