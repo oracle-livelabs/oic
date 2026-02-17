@@ -104,21 +104,19 @@ Keep the following information handy. Refer File Server Setup section and make a
     - Click on **Test** and *Save* the connection.
 
 4. OpenAI LLM Adapter Connection Configuration
-
-> **Note:** For now, you can ignore this connection.You need this information later part of the live lab.
-    - Edit the open AI LLM Adapter Connection.
+For now, you can ignore this connection.You need this information later part of the live lab.
+    -Edit the open AI LLM Adapter Connection.
     - Configure the below properties in the connection properties page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
-    | Base URL                | **<https://api.openai.com>**                                |
-    | Models                  | **gpt-4o-mini**                                           |
-    | API Key                 | <You open ai API Key> Refer: <https://platform.openai.com/api-keys>   |
+    | Base URL                | **<https://api.openai.com>**                          |
+    | Models                  | **gpt-4o-mini**                                       |
+    | API Key                 | Your open ai API Key                                   |
     {: title="OpenAI Adapter Connection Properties"}
 
     - Click on **Test** and *Save* the connection.
-
-    Verify that all the connections are in Configured state.
+    - Verify that all the connections are in Configured state.
 
 ## Task 4: Configure the File(FTP) Server
 
