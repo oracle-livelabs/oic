@@ -54,17 +54,17 @@ In this lab you will learn:
         - **Tool:** shows response from the tool. You should see the audit report and quality assurance done for a specific Patient
         - **Assistant:** shows the agent reasoning. You should see in the reasoning that the agent needs to use the various tools. It waits for the tool execution to be completed.
 
-- You can also Navigate to the **Observe** tab in your project and Select **Agent** tab on the left pane. You will see the list of Agent Instances.
+    - You can also Navigate to the **Observe** tab in your project and Select **Agent** tab on the left pane. You will see the list of Agent Instances.
 
-- Click on **View Details** of eye icon next to your Agent to see the Agent **Activity Stream**.
+    - Click on **View Details** of eye icon next to your Agent to see the Agent **Activity Stream**.
 
-- **User** this is the User query
+    - **User** this is the User query
     ![Activity Stream with User Agent Action](images/user-activity-stream.png)
-- **System** this is what you configured to be sent the LLM.
+    - **System** this is what you configured to be sent the LLM.
     ![Activity Stream with System Agent Action](images/system-activity-stream.png)
-- **Tool** is the response from the tool
+    - **Tool** is the response from the tool
     ![Activity Stream with Tool Agent Action](images/tool-activity-stream.png)
-- **Assistant** displays the report as per the format mentioned in Agent Guidelines.
+    - **Assistant** displays the report as per the format mentioned in Agent Guidelines.
     ![Activity Stream with Assistant Agent Action](images/assistant-activity-stream.png)
 
 ## Task 2: Human approval

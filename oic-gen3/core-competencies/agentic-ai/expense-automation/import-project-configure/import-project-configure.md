@@ -66,35 +66,28 @@ This lab assumes you have:
 
 ## Task 3: Configure Connections
 
-- All the connections are in draft state. We will configure the connections used by the integration flows.
+All the connections are in draft state. We will configure the connections used by the integration flows.
 
-***REST Connection Configuration***
+1. REST Connection Configuration
+    - Edit the REST Connection.
+    - Configure the Security Policy as **OAuth 2.0 Or Basic Authentication**
+    - Click on **Test** and *Save* the connection.
 
-1. Edit the REST Connection.
+2. HCM Connection Configuration
 
-2. Configure the Security Policy as **OAuth 2.0 Or Basic Authentication**
+    - Edit the HCM Connection.
+    - Configure the host and username and password.
+    - Click on **Test** and *Save* the connection.
 
-3. Click on **Test** and *Save* the connection.
-
-***HCM Connection Configuration***
-
-1. Edit the HCM Connection.
-
-2. Configure the host and username and password.
-
-3. Click on **Test** and *Save* the connection.
-
-***FTP Adapter Connection Configuration***
-
-1. Keep the following information handy. Refer File Server Setup section and make a note of the following information
+3. FTP Adapter Connection Configuration
+Keep the following information handy. Refer File Server Setup section and make a note of the following information
     - File Server IP Address.
     - File Server Port.
     - Your Oracle Integration username.
     - Your Oracle Integration password.
 
-2. Edit the FTP Adapter Connection.
-
-3. Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.
+    - Edit the FTP Adapter Connection.
+    - Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -106,17 +99,15 @@ This lab assumes you have:
     | Password                | Your Oracle Integration password                      |
     {: title="FTP Adapter Connection Properties"}
 
-4. Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
+    - Confirm your Connection by clicking **Test**, then **Diagnose & Test**. You should see the *Connection File Server was tested successfully* confirmation message. Click **Save** and exit the Connection editor.
 
-5. Click on **Test** and *Save* the connection.
+    - Click on **Test** and *Save* the connection.
 
-***OpenAI LLM Adapter Connection Configuration***
+4. OpenAI LLM Adapter Connection Configuration
 
 > **Note:** For now, you can ignore this connection.You need this information later part of the live lab.
-
-1. Edit the open AI LLM Adapter Connection.
-
-2. Configure the below properties in the connection properties page.
+    - Edit the open AI LLM Adapter Connection.
+    - Configure the below properties in the connection properties page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -125,7 +116,7 @@ This lab assumes you have:
     | API Key                 | <You open ai API Key> Refer: <https://platform.openai.com/api-keys>   |
     {: title="OpenAI Adapter Connection Properties"}
 
-3. Click on **Test** and *Save* the connection.
+    - Click on **Test** and *Save* the connection.
 
     Verify that all the connections are in Configured state.
 

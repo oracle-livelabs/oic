@@ -45,13 +45,10 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 ## Task 2: Register *Read Expense Receipt* as an Agentic AI Tool
 
-- Step 1: Create New Tool from Tools Card
-
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
-
-- Step 2: Enter Tool Information
-
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
    In the Create Tool dialog , fill in the following fields as shown in the table:
 
    | Field | Value | Notes |
@@ -64,11 +61,11 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
    | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
    {: title="Read Expense Receipt Tool Properties"}
 
-   ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
+    ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
 
    Click on **Create**
 
-- Step 3: Configure Parameters
+3. Configure Parameters
 
    In the **Parameters configuration** section:
 
@@ -78,23 +75,20 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
    | receiptName | ✓ | ✓ | Name of the image file |
    {: title="Read Expense Receipt Parameter Configuration"}
 
-   ![Read Expense Receipt Tool](images/read-expense-receipt-configtool.png)
+    ![Read Expense Receipt Tool](images/read-expense-receipt-configtool.png)
 
-- Step 4: Configure Guidelines (Optional)
+4. Configure Guidelines (Optional)
 
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-- Step 5: Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 3: Register *Approval Required* as an Agentic AI Tool
 
-- Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
 
-    1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-    2. Create tool dialog appears
-
-- Step 2: Enter Tool Information
-
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
    In the Create Tool dialog , fill in the following fields as shown in the table:
 
    | Field | Value | Notes |
@@ -109,24 +103,22 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
    Click on **Create**
 
-- Step 3: Configure Parameters
+3. Configure Parameters
 
-   In the **Parameters configuration** section, keep default values.
+    - In the **Parameters configuration** section, keep default values.
 
-- Step 4: Configure Guidelines (Optional)
+4. Configure Guidelines (Optional)
 
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
 
-- Step 5: Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 4: Register *HITL-Raise Approval Request* as an Agentic AI Tool
 
-- Step 1: Create New Tool from Tools Card
-
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
-
-- Step 2: Enter Tool Information
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
 
    In the Create Tool dialog , fill in the following fields as shown in the table:
 
@@ -141,25 +133,19 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
    {: title="HITL-Raise Approval Request Tool Properties"}
 
    Click on **Create**
-
-- Step 3: Configure Parameters
-
-   In the **Parameters configuration** section, keep default values.
-
-- Step 4: Configure Guidelines (Optional)
-
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-- Step 5: Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
+3. Configure Parameters
+    - In the **Parameters configuration** section, keep default values.
+4. Configure Guidelines (Optional)
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 5: Register *Create Expense Oracle HCM* as an Agentic AI Tool
 
-- Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
 
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
-
-- Step 2: Enter Tool Information
+2. Enter Tool Information
 
    In the Create Tool dialog , fill in the following fields as shown in the table:
 
@@ -175,26 +161,26 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
    Click on **Create**
 
-- Step 3: Configure Parameters
+3. Configure Parameters
 
    In the **Parameters configuration** section, keep default values.
 
-- Step 4: Configure Guidelines (Optional)
+4. Configure Guidelines (Optional)
 
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
 
-- Step 5: Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 7: Verify All Tools are Registered
 
 1. Navigate to **AI Agents** page in the project
 2. Verify all five tools appear in the **Tools** section:
-   - ✓ Read Expense Receipt
-   - ✓ Approval Required
-   - ✓ HITL-Raise Approval Request
-   - ✓ Create Expense Oracle HCM
+    - ✓ Read Expense Receipt
+    - ✓ Approval Required
+    - ✓ HITL-Raise Approval Request
+    - ✓ Create Expense Oracle HCM
 
-   ![List of Tools Registered](images/tools-list.png)
+    ![List of Tools Registered](images/tools-list.png)
 
 You may now **proceed to the next lab**.
 

@@ -137,7 +137,7 @@ In this lab you will learn:
 6. Activate the AI Agent.
     a.  In the Agents card, find the agent to activate. Click **Actions ...**, and Select *Activate*.
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 
