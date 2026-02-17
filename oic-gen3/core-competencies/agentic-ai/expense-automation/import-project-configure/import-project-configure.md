@@ -1,6 +1,6 @@
 # Import the Project and Configure
 
-## Introduction
+## About this lab
 
 In this section, you'll import the pre built *Intelligent Expense Automation with Agentic AI* project into your Oracle Integration environment and configure the necessary connections for the integrations. The project contains four integrations that will become agentic AI tools.
 
