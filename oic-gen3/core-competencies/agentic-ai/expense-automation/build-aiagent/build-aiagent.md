@@ -13,28 +13,28 @@ Estimated Time: 10 minutes
 OIC provides two built-in patterns:
 
 **1. ReAct (Reasoning and Action)**
-- AI agent alternates between thinking and doing
-- Pattern: Think → Act → Observe → Think → Act → ...
-- Best for: Tasks requiring iterative problem-solving and adaptation
+    - AI agent alternates between thinking and doing
+    - Pattern: Think → Act → Observe → Think → Act → ...
+    - Best for: Tasks requiring iterative problem-solving and adaptation
 
 **2. Plan and Execute**
-- AI agent creates complete plan first, then executes steps
-- Pattern: Think (create plan) → Execute step 1 → Execute step 2 → ... → Observe results
-- Best for: Well-defined workflows with predetermined steps
+    - AI agent creates complete plan first, then executes steps
+    - Pattern: Think (create plan) → Execute step 1 → Execute step 2 → ... → Observe results
+    - Best for: Well-defined workflows with predetermined steps
 
-**For This Lab we will use ReAct Pattern**
+***For This Lab we will use ReAct Pattern***
 
 ### LLM Connection
 
-The thinking pattern requires connection to a Large Language Model that powers the agent's reasoning.
+- The thinking pattern requires connection to a Large Language Model that powers the agent's reasoning.
 
-The AI agent will use an LLM connection.
+- The AI agent will use an LLM connection.
 
 ### Agentic AI Tools
 
-Your four registered tools from previous labs become the agent's action capabilities.
+- Your four registered tools from previous labs become the agent's action capabilities.
 
-The agent decides which tools to invoke based on the data.
+- The agent decides which tools to invoke based on the data.
 
 ### Objectives
 

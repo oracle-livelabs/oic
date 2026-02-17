@@ -66,7 +66,7 @@ This lab assumes you have:
 
 ## Task 3: Configure Connections
 
-All the connections are in draft state. We will configure the connections used by the integration flows.
+- All the connections are in draft state. We will configure the connections used by the integration flows.
 
 ***REST Connection Configuration***
 
@@ -127,7 +127,7 @@ All the connections are in draft state. We will configure the connections used b
 
 3. Click on **Test** and *Save* the connection.
 
-Verify that all the connections are in Configured state.
+    Verify that all the connections are in Configured state.
 
 ## Task 4: Configure the File(FTP) Server
 

@@ -12,7 +12,6 @@ This is where all your prior work comes together:
 - Your LLM powers autonomous decision-making
 - Your agent creates an expense record in the Oracle HCM Cloud
 
-
 Estimated Time: 15 minutes
 
 ### Objectives
@@ -23,8 +22,8 @@ In this lab you will learn:
 
 ### Prerequisites
 
-* All the previous labs completed successfully.
-* Agent in Activated Status
+- All the previous labs completed successfully.
+- Agent in Activated Status
 
 ## Task 1: Run and Test the AI Agent
 
