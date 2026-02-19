@@ -112,7 +112,7 @@ In this lab you will learn:
 
     a.  **Role:** You are an expense report analyst.
 
-    Note: Role is Sent to the LLM as part of the system prompt. We need to specify a clear role for your agent so that the LLM knows the purpose of your agent.
+    > **Note:**  Role is Sent to the LLM as part of the system prompt. We need to specify a clear role for your agent so that the LLM knows the purpose of your agent.
 
     b.  Copy Paste the below guidelines. **Guidelines** are sent to the LLM as part of the system prompt.
 

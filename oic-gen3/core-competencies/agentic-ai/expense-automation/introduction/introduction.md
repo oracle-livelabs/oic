@@ -12,32 +12,22 @@ Estimated Time: 2 hours
 
 By completing this live lab, you will:
 
-- Understand Agentic AI Concepts
-- Master Agentic AI Tool Registration
-- Configure and Discover Tools via MCP
-- Build and Deploy AI Agents
-- Test and Monitor Agent Execution
-
-**Knowledge Outcomes**
-
-By the end of this workshop, you will have a comprehensive understanding of how to leverage OIC's Agentic AI features and capabilities.
-
-1. Explain how AI agents differ from traditional integrations and when each is appropriate
-2. Design integrations with agentic AI capabilities in mind
-3. Register integrations as agentic AI tools with effective descriptions and guidelines
-4. Configure MCP servers to expose tools to external frameworks
-5. Build and deploy AI agents that orchestrate multiple integrations
-6. Leverage thinking patterns for agent reasoning
-7. Monitor and validate AI agent behavior
-8. Apply agentic AI patterns to other business use cases
+* Understand Agentic AI Concepts
+* Master Agentic AI Tool Registration
+* Configure and Discover Tools via MCP
+* Build and Deploy AI Agents
+* Test and Monitor Agent Execution
 
 ### Prerequisites
 
 This lab assumes you have the following:
 
-- Oracle Cloud Account with credits to provision services.
+* Oracle Cloud Account with credits to provision services.
 
-## Task 1: Use Case: Intelligent Expense Automation with Agentic AI
+
+## Task 1: Use Case: Intelligent Expense Automation with Agentic AI.
+
+> **Note:** All the tasks under *Introduction* are *read-only*.
 
 ***What is Intelligent Expense Automation with Agentic AI?***
 
@@ -130,6 +120,19 @@ These integrations function as agentic AI tools that the agent dynamically orche
 ## Task 7: High level workflow of the Workshop
 
  ![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
+
+## Task 8: Knowledge Outcomes
+
+By the end of this workshop, you will have a comprehensive understanding of how to leverage OIC's Agentic AI features and capabilities.
+
+1. Explain how AI agents differ from traditional integrations and when each is appropriate
+2. Design integrations with agentic AI capabilities in mind
+3. Register integrations as agentic AI tools with effective descriptions and guidelines
+4. Configure MCP servers to expose tools to external frameworks
+5. Build and deploy AI agents that orchestrate multiple integrations
+6. Leverage thinking patterns for agent reasoning
+7. Monitor and validate AI agent behavior
+8. Apply agentic AI patterns to other business use cases
 
 You may now **proceed to the next lab**.
 
