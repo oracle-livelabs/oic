@@ -49,21 +49,21 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
     - On the AI Agents page, in the **Tools** section, click **Add** or **+**
     - Create tool dialog appears
 2. Enter Tool Information
-   In the Create Tool dialog , fill in the following fields as shown in the table:
+    In the Create Tool dialog , fill in the following fields as shown in the table:
 
-   | Field | Value | Notes |
-   |-------|-------|-------|
-   | **Type** | Integration |  |
-   | **Project** | Select the project which you have created |  |
-   | **Integration** | Read Expense Receipt |  |
-   | **Name** | Read Expense Receipt | Auto-populated from integration name |
-   | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-   | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
-   {: title="Read Expense Receipt Tool Properties"}
+    | Field | Value | Notes |
+    |-------|-------|-------|
+    | **Type** | Integration |  |
+    | **Project** | Select the project which you have created |  |
+    | **Integration** | Read Expense Receipt |  |
+    | **Name** | Read Expense Receipt | Auto-populated from integration name |
+    | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+    | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
+    {: title="Read Expense Receipt Tool Properties"}
 
     ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
 
-   Click on **Create**
+    Click on **Create**
 
 3. Configure Parameters
 
