@@ -21,7 +21,7 @@ This lab assumes you have:
 
 - Completed all the previous labs
 
-**Integration Requirements Met**
+***Integration Requirements Met***
 
 All the integrations have been pre-configured and meet the Agentic AI tool requirements:
 
@@ -45,177 +45,150 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 ## Task 2: Register *Read Expense Receipt* as an Agentic AI Tool
 
-Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
+    In the Create Tool dialog , fill in the following fields as shown in the table:
 
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
+    | Field | Value | Notes |
+    |-------|-------|-------|
+    | **Type** | Integration |  |
+    | **Project** | Select the project which you have created |  |
+    | **Integration** | Read Expense Receipt |  |
+    | **Name** | Read Expense Receipt | Auto-populated from integration name |
+    | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+    | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
+    {: title="Read Expense Receipt Tool Properties"}
 
-### Step 2: Enter Tool Information
+    ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
 
-In the Create Tool dialog , fill in the following fields as shown in the table:
+    Click on **Create**
 
-   | Field | Value | Notes |
-   |-------|-------|-------|
-   | **Type** | Integration |  |
-   | **Project** | Select the project which you have created |  |
-   | **Integration** | Read Expense Receipt |  |
-   | **Name** | Read Expense Receipt | Auto-populated from integration name |
-   | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-   | **Description** | You are responsible to read the receipt details based on the filename and directory given to you. | Clear, concise description of what the tool does |
-   {: title="Read Expense Receipt Tool Properties"}
+3. Configure Parameters
 
-   ![Read Expense Receipt Tool](images/read-expense-receipt-tool.png)
+    In the **Parameters configuration** section:
 
-   Click on **Create**
+    | Parameter | Visible | Required | Description |
+    |-----------|---------|----------|-------------|
+    | directory | ✓ | ✓ | The directory name where you copy your expense images |
+    | receiptName | ✓ | ✓ | Name of the image file |
+    {: title="Read Expense Receipt Parameter Configuration"}
 
-### Step 3: Configure Parameters
+    ![Read Expense Receipt Tool](images/read-expense-receipt-configtool.png)
 
-In the **Parameters configuration** section:
+4. Configure Guidelines (Optional)
 
-| Parameter | Visible | Required | Description |
-|-----------|---------|----------|-------------|
-| directory | ✓ | ✓ | The directory name where you copy your expense images |
-| receiptName | ✓ | ✓ | Name of the image file |
-{: title="Read Expense Receipt Parameter Configuration"}
-
-![Read Expense Receipt Tool](images/read-expense-receipt-configtool.png)
-
-### Step 4: Configure Guidelines (Optional)
-
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-### Step 5: Save Tool
-
-1. Click **Save** to register the tool
-2. Navigate back to the AI Agents page.
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 3: Register *Approval Required* as an Agentic AI Tool
 
-### Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
 
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
+    In the Create Tool dialog , fill in the following fields as shown in the table:
 
-### Step 2: Enter Tool Information
+    | Field | Value | Notes |
+    |-------|-------|-------|
+    | **Type** | Integration |  |
+    | **Project** | Select the project which you have created |  |
+    | **Integration** | Approval Required |  |
+    | **Name** | Approval Required | Auto-populated from integration name |
+    | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+    | **Description** | You are responsible to check if approval required or not from the provided receipt details. | Clear, concise description of what the tool does |
+    {: title="Approval Required Tool Properties"}
 
-In the Create Tool dialog , fill in the following fields as shown in the table:
+    Click on **Create**
 
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Type** | Integration |  |
-| **Project** | Select the project which you have created |  |
-| **Integration** | Approval Required |  |
-| **Name** | Approval Required | Auto-populated from integration name |
-| **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-| **Description** | You are responsible to check if approval required or not from the provided receipt details. | Clear, concise description of what the tool does |
-{: title="Approval Required Tool Properties"}
+3. Configure Parameters
 
-Click on **Create**
+    - In the **Parameters configuration** section, keep default values.
 
-### Step 3: Configure Parameters
+4. Configure Guidelines (Optional)
 
-In the **Parameters configuration** section, keep default values.
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
 
-### Step 4: Configure Guidelines (Optional)
-
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-### Step 5: Save Tool
-
-1. Click **Save** to register the tool
-2. Navigate back to the AI Agents page.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 4: Register *HITL-Raise Approval Request* as an Agentic AI Tool
 
-### Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
+2. Enter Tool Information
 
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
+    In the Create Tool dialog , fill in the following fields as shown in the table:
 
-### Step 2: Enter Tool Information
+    | Field | Value | Notes |
+    |-------|-------|-------|
+    | **Type** | Integration |  |
+    | **Project** | Select the project which you have created |  |
+    | **Integration** | HITL-Raise Approval Request |  |
+    | **Name** | HITL-Raise Approval Request | Auto-populated from integration name |
+    | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+    | **Description** |You are responsible to raise HITL workflow for expense approval. | Clear, concise description of what the tool does |
+    {: title="HITL-Raise Approval Request Tool Properties"}
 
-In the Create Tool dialog , fill in the following fields as shown in the table:
-
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Type** | Integration |  |
-| **Project** | Select the project which you have created |  |
-| **Integration** | HITL-Raise Approval Request |  |
-| **Name** | HITL-Raise Approval Request | Auto-populated from integration name |
-| **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-| **Description** |You are responsible to raise HITL workflow for expense approval. | Clear, concise description of what the tool does |
-{: title="HITL-Raise Approval Request Tool Properties"}
-
-Click on **Create**
-
-### Step 3: Configure Parameters
-
-In the **Parameters configuration** section, keep default values.
-
-### Step 4: Configure Guidelines (Optional)
-
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-### Step 5: Save Tool
-
-1. Click **Save** to register the tool
-2. Navigate back to the AI Agents page.
+    Click on **Create**
+3. Configure Parameters
+    - In the **Parameters configuration** section, keep default values.
+4. Configure Guidelines (Optional)
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 5: Register *Create Expense Oracle HCM* as an Agentic AI Tool
 
-### Step 1: Create New Tool from Tools Card
+1. Create New Tool from Tools Card
+    - On the AI Agents page, in the **Tools** section, click **Add** or **+**
+    - Create tool dialog appears
 
-1. On the AI Agents page, in the **Tools** section, click **Add** or **+**
-2. Create tool dialog appears
+2. Enter Tool Information
 
-### Step 2: Enter Tool Information
+    In the Create Tool dialog , fill in the following fields as shown in the table:
 
-In the Create Tool dialog , fill in the following fields as shown in the table:
+    | Field | Value | Notes |
+    |-------|-------|-------|
+    | **Type** | Integration |  |
+    | **Project** | Select the project which you have created |  |
+    | **Integration** | Create Expense Oracle HCM |  |
+    | **Name** | Create Expense Oracle HCM | Auto-populated from integration name |
+    | **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
+    | **Description** | You are required to create Expense in Oracle based on the data passed. | Clear, concise description of what the tool does |
+    {: title="Create Expense Oracle HCM Tool Properties"}
 
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Type** | Integration |  |
-| **Project** | Select the project which you have created |  |
-| **Integration** | Create Expense Oracle HCM |  |
-| **Name** | Create Expense Oracle HCM | Auto-populated from integration name |
-| **Identifier** | Auto-populated | Sent to LLM; uniquely identifies the tool |
-| **Description** | You are required to create Expense in Oracle based on the data passed. | Clear, concise description of what the tool does |
-{: title="Create Expense Oracle HCM Tool Properties"}
+    Click on **Create**
 
-Click on **Create**
+3. Configure Parameters
 
-### Step 3: Configure Parameters
+    In the **Parameters configuration** section, keep default values.
 
-In the **Parameters configuration** section, keep default values.
+4. Configure Guidelines (Optional)
 
-### Step 4: Configure Guidelines (Optional)
+    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
 
-- Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
-### Step 5: Save Tool
-
-1. Click **Save** to register the tool
-2. Navigate back to the AI Agents page.
+5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 7: Verify All Tools are Registered
 
 1. Navigate to **AI Agents** page in the project
 2. Verify all five tools appear in the **Tools** section:
-   - ✓ Read Expense Receipt
-   - ✓ Approval Required
-   - ✓ HITL-Raise Approval Request
-   - ✓ Create Expense Oracle HCM
+    - ✓ Read Expense Receipt
+    - ✓ Approval Required
+    - ✓ HITL-Raise Approval Request
+    - ✓ Create Expense Oracle HCM
 
+    ![List of Tools Registered](images/tools-list.png)
 
-![List of Tools Registered](images/tools-list.png)
-
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [Register Integration as Tools](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/register-integration-agentic-ai-tool1.html)
+* [Register Integration as Tools](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/register-integration-agentic-ai-tool1.html)
 
 ## Acknowledgements
 
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+* **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026

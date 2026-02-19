@@ -13,28 +13,28 @@ Estimated Time: 10 minutes
 OIC provides two built-in patterns:
 
 **1. ReAct (Reasoning and Action)**
-- AI agent alternates between thinking and doing
-- Pattern: Think → Act → Observe → Think → Act → ...
-- Best for: Tasks requiring iterative problem-solving and adaptation
+    - AI agent alternates between thinking and doing
+    - Pattern: Think → Act → Observe → Think → Act → ...
+    - Best for: Tasks requiring iterative problem-solving and adaptation
 
 **2. Plan and Execute**
-- AI agent creates complete plan first, then executes steps
-- Pattern: Think (create plan) → Execute step 1 → Execute step 2 → ... → Observe results
-- Best for: Well-defined workflows with predetermined steps
+    - AI agent creates complete plan first, then executes steps
+    - Pattern: Think (create plan) → Execute step 1 → Execute step 2 → ... → Observe results
+    - Best for: Well-defined workflows with predetermined steps
 
-**For This Lab we will use ReAct Pattern**
+***For This Lab we will use ReAct Pattern***
 
 ### LLM Connection
 
-The thinking pattern requires connection to a Large Language Model that powers the agent's reasoning.
+- The thinking pattern requires connection to a Large Language Model that powers the agent's reasoning.
 
-The AI agent will use an LLM connection.
+- The AI agent will use an LLM connection.
 
 ### Agentic AI Tools
 
-Your four registered tools from previous labs become the agent's action capabilities.
+- Your four registered tools from previous labs become the agent's action capabilities.
 
-The agent decides which tools to invoke based on the data.
+- The agent decides which tools to invoke based on the data.
 
 ### Objectives
 
@@ -112,7 +112,7 @@ In this lab you will learn:
 
     a.  **Role:** You are an expense report analyst.
 
-    Note: Role is Sent to the LLM as part of the system prompt. We need to specify a clear role for your agent so that the LLM knows the purpose of your agent.
+    > **Note:**  Role is Sent to the LLM as part of the system prompt. We need to specify a clear role for your agent so that the LLM knows the purpose of your agent.
 
     b.  Copy Paste the below guidelines. **Guidelines** are sent to the LLM as part of the system prompt.
 
@@ -137,12 +137,13 @@ In this lab you will learn:
 6. Activate the AI Agent.
     a.  In the Agents card, find the agent to activate. Click **Actions ...**, and Select *Activate*.
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 
 * [Using OIC Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/welcome-agentic-ai.html)
 
 ## Acknowledgements
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+
+* **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026
