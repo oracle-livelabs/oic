@@ -1,6 +1,6 @@
 # Import the Project and Configure
 
-## About this lab
+## Introduction
 
 In this section, you'll import the pre built *Intelligent Expense Automation with Agentic AI* project into your Oracle Integration environment and configure the necessary connections for the integrations. The project contains four integrations that will become agentic AI tools.
 
@@ -13,7 +13,7 @@ You'll need to configure three essential connections:
 
 By the end of this section, you'll have a fully operational project with all connections configured and tested, ready for agentic AI tool registration.
 
-Estimated Time: 30 minutes
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 
@@ -80,7 +80,7 @@ All the connections are in draft state. We will configure the connections used b
     - Click on **Test** and *Save* the connection.
 
 3. FTP Adapter Connection Configuration
-Keep the following information handy. Refer File Server Setup section and make a note of the following information
+    - Keep the following information handy. Refer File Server Setup section and make a note of the following information
     - File Server IP Address.
     - File Server Port.
     - Your Oracle Integration username.
@@ -104,7 +104,7 @@ Keep the following information handy. Refer File Server Setup section and make a
     - Click on **Test** and *Save* the connection.
 
 4. OpenAI LLM Adapter Connection Configuration
-For now, you can ignore this connection.You need this information later part of the live lab.
+    - For now, you can ignore this connection.You need this information later part of the live lab.
     -Edit the open AI LLM Adapter Connection.
     - Configure the below properties in the connection properties page.
 
@@ -180,8 +180,7 @@ For now, you can ignore this connection.You need this information later part of 
 10. Change User Task's *Name* and *Title* as *Expense Approval*.
 11. Click on *+* under **Assignees** and add your oic username.
     ![Expense Workflow2](images/expense-workflow2.png)
-12. For *UI* property, select the *form* from the drop down.
- and click on the designer to save all the properties automatically.
+12. For *UI* property, select the *form* from the drop down. And click on the designer to save all the properties automatically.
     ![UI Properties](images/usertask-properties.png)
 13. select **Expense Approval** action, click on **Open Data Association**, expand *Input* from source, expand *messageStartArgs* and expand *input* from right side, expand *formData* and map the below elements and refer the screenshot given below.
     - merchantName to merchantName
@@ -197,18 +196,14 @@ For now, you can ignore this connection.You need this information later part of 
 
 ## Task 7: Configure the integrations and Activate
 
-***Read Expense Receipt***
-
 1. Edit **Read Expense Receipt** integration, go through all the actions of the integration flow and try to understand it.
 2. Go to *OCI Document Understanding* action, edit it, and modify the compartment name as per your OCI environment.
 3. Save the integration flow and activate it.
 
-***Approval Required***
-
-1. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
-2. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
+4. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
+5. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
     ![Decision Service](images/decision-service.png)
-3. Map the source and target elements as per the details given below. If, required refer the screenshots.
+6. Map the source and target elements as per the details given below. If, required refer the screenshots.
     - Edit **Map ExecuteBusinessRule**
     - expand *Request Wrapper->Expense Data* from Target
     - expand *GetExpenseType Request-->Request Wrapper* from Source
@@ -216,42 +211,38 @@ For now, you can ignore this connection.You need this information later part of 
     - expand *ExtractType Response-->Chat Action Response-->Response Wrapper-->Body-->Chat Response-->Choices-->Message-->Content* from Source
     - Map *Text* to *Exp Type*
 
-4. Edit **Map GetExpenseType** and map as per the screenshot given below.
+7. Edit **Map GetExpenseType** and map as per the screenshot given below.
     - expand *ExecuteBusinessRule Response-->postDecisionActionResponse-->ResponseWrapper* from source
     - expand *ResponseWrapper* from target
     - map **interpretation** to **Approval Required**
-5. Save the integration flow and activate it.
+8. Save the integration flow and activate it.
 
-***HITL-Raise Approval Request***
-
-1. Edit **HITL-Raise Approval Request** integration, add *Human in the loop* action under *Main* section by clicking on **+** icon.
+9. Edit **HITL-Raise Approval Request** integration, add *Human in the loop* action under *Main* section by clicking on **+** icon.
     ![HITL action](images/hitlaction.png)
-2. Enter *endpoint* name as **InitiateProcess** and select the *workflow* which you have created.
+10. Enter *endpoint* name as **InitiateProcess** and select the *workflow* which you have created.
     ![HITL action wizard](images/hitlactionwizard.png)
-3. Edit **Map InitiateProcess** and map the source and target elements. Refer the mappings given below in the screenshot.
+11. Edit **Map InitiateProcess** and map the source and target elements. Refer the mappings given below in the screenshot.
     ![HITL mappings](images/hitl-mappings.png)
-4. Save the integration flow and activate it.
+12. Save the integration flow and activate it.
 
-***Create Expense Oracle HCM***
-
-1. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to keep it simple.
-2. Save the integration flow and activate it.
+13. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to keep it simple.
+14. Save the integration flow and activate it.
 
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Getting Started with Oracle Integration 3](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 
-- [About Projects](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/integration-projects.html)
+* [About Projects](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/integration-projects.html)
 
-- [Activate Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/activate-and-deactivate-integrations.html)
+* [Activate Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/activate-and-deactivate-integrations.html)
 
-- [Monitor Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/track-integration-instances.html#GUID-46A7C0A0-CBE4-4F1B-9B45-62A5AFA89D74)
+* [Monitor Integration](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/track-integration-instances.html#GUID-46A7C0A0-CBE4-4F1B-9B45-62A5AFA89D74)
 
-- [Open AI Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/openai-adapter/openai-adapter-capabilities.html)
+* [Open AI Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/openai-adapter/openai-adapter-capabilities.html)
 
 ## Acknowledgements
 
-- **Author** - Subhani Italapuram, Product Management, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+* **Author** - Subhani Italapuram, Product Management, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026

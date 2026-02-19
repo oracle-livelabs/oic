@@ -86,23 +86,23 @@ In this lab you will learn:
 2. Go to *Activity Stream* and check all the messages and you should see the expense created in the HCM application
     ![expense-created](images/expense-created.png)
 
-Congratulations! 🎉
+    Congratulations! 🎉
 
-You have successfully completed the *Intelligent Expense Automation with Agentic AI* Live Lab!
+    You have successfully completed the *Intelligent Expense Automation with Agentic AI* Live Lab!
 
-What You've Accomplished
+    What You've Accomplished
 
-- ✅ Understood agentic AI concepts and use case
-- ✅ Imported project and configured connections
-- ✅ Registered the integrations as agentic AI tools
-- ✅ Built intelligent AI Agent
-- ✅ Executed and validated agent with comprehensive test cases
+    - ✅ Understood agentic AI concepts and use case
+    - ✅ Imported project and configured connections
+    - ✅ Registered the integrations as agentic AI tools
+    - ✅ Built intelligent AI Agent
+    - ✅ Executed and validated agent with comprehensive test cases
 
 ## Learn More
 
-- [Using Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/welcome-agentic-ai.html)
+* [Using Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/welcome-agentic-ai.html)
 
 ## Acknowledgements
 
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+* **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026

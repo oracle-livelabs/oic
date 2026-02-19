@@ -144,5 +144,6 @@ In this lab you will learn:
 * [Using OIC Agentic AI](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/welcome-agentic-ai.html)
 
 ## Acknowledgements
-- **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+
+* **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026

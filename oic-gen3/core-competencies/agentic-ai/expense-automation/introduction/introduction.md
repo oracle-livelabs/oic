@@ -1,6 +1,6 @@
-# Introduction
+# Intelligent Expense Automation with Agentic AI
 
-## About this Workshop
+## Introduction
 
 This expense agent use case demonstrates an intelligent, end-to-end automation flow that transforms raw expense receipts into validated expense records with minimal manual intervention. The agent reads receipt images from a file server and sends them to OCI Document Understanding for structured data extraction, while OCI GenAI assists in classifying the expense type with contextual accuracy. A decision service evaluates policy rules to determine whether approval is required; when explicit authorization is needed, a human-in-the-loop (HITL) step is triggered to maintain governance and compliance. Once validated, the agent creates the expense entry in Oracle HCM Cloud. The entire process is orchestrated through Oracle Integration, where an agent built using a ReAct-style pattern dynamically invokes the appropriate tools based on defined guidelines. This architecture combines AI-driven insight, rule-based decisioning, and enterprise workflow orchestration to deliver a scalable, auditable, and intelligent expense processing experience.
 
