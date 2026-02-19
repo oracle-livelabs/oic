@@ -13,7 +13,7 @@ You'll need to configure three essential connections:
 
 By the end of this section, you'll have a fully operational project with all connections configured and tested, ready for agentic AI tool registration.
 
-Estimated Workshop Time: 2 hours
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -228,7 +228,7 @@ All the connections are in draft state. We will configure the connections used b
 13. Edit **Create Expense Oracle HCM** integration, go through the all the actions and please note that we have hard coded username as *CASEY.BROWN* to create the expense report on behalf of actual user to keep it simple.
 14. Save the integration flow and activate it.
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 

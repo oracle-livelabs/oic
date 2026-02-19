@@ -163,7 +163,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
 3. Configure Parameters
 
-   In the **Parameters configuration** section, keep default values.
+    In the **Parameters configuration** section, keep default values.
 
 4. Configure Guidelines (Optional)
 
