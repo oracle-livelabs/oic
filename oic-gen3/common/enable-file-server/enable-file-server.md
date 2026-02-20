@@ -41,7 +41,7 @@ This lab assumes you have:
 
     ![File Server Enabled](images/file-server-enablement4.png)
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 

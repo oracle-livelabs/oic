@@ -4,7 +4,7 @@
 
 In this section, you'll import the pre built *Intelligent Expense Automation with Agentic AI* project into your Oracle Integration environment and configure the necessary connections for the integrations. The project contains four integrations that will become agentic AI tools.
 
-You'll need to configure three essential connections:
+You'll need to configure four essential connections:
 
 - FTP Adapter Connection - For retrieving patient data files from healthcare repositories
 - HCM Cloud Connection - For creating an expense record.
@@ -105,7 +105,7 @@ All the connections are in draft state. We will configure the connections used b
 
 4. OpenAI LLM Adapter Connection Configuration
     - For now, you can ignore this connection.You need this information later part of the live lab.
-    -Edit the open AI LLM Adapter Connection.
+    - Edit the open AI LLM Adapter Connection.
     - Configure the below properties in the connection properties page.
 
     | Field                   | Value                                                 |
@@ -122,7 +122,7 @@ All the connections are in draft state. We will configure the connections used b
 
 1. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-2. Copy the files *food.jpeg, food_non_hitl.jpeg* (You can get these files from the zip file which you have downloade) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. You can create your own folder under /home/users/fileserveroic3user and copy the files in into new directory which you have created.
+2. Copy the files *food.jpeg, food\_non\_hitl.jpeg* (you can find them in the ZIP file you downloaded) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. If folder is not there with your oicusername then create and copy the files in into new directory.
 
 ## Task 5: Configure the Decision and Activate
 
@@ -175,7 +175,7 @@ All the connections are in draft state. We will configure the connections used b
 7. Close the *Properties*
 8. Add *User Task*, drag and drop **User Task** from the *Palette* on the the designer between *Start event* and *End Event*
     ![User task](images/usertask.png)
-9. Click on **User Task** user action OR select **User Task** action , click on **Open Properties**
+9. Select **User Task** action and click on small menu icon , click on **Open Properties**
     ![Expense Workflow1](images/expense-workflow1.png)
 10. Change User Task's *Name* and *Title* as *Expense Approval*.
 11. Click on *+* under **Assignees** and add your oic username.
@@ -203,7 +203,7 @@ All the connections are in draft state. We will configure the connections used b
 4. Edit **Approval Required** integration, Edit *OCI Generative AI* action and modify the *Region, Compartment, Model and Model ID* as per your OCI environment.
 5. Add *Decision Service* action after *OCI Generative AI* action and call it as *ExecuteBusinessRule* and select the *Decision Service* which you have activated.
     ![Decision Service](images/decision-service.png)
-6. Map the source and target elements as per the details given below. If, required refer the screenshots.
+6. Map the source and target elements as per the details given below.
     - Edit **Map ExecuteBusinessRule**
     - expand *Request Wrapper->Expense Data* from Target
     - expand *GetExpenseType Request-->Request Wrapper* from Source

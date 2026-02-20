@@ -36,7 +36,7 @@ If you just created a new Cloud account following the instructions in Getting St
 
     > *Note:* Do NOT create your instance in the root or ManagedCompartmentForPaaS compartment
 
-4. Click ***Create*** .
+4. Click ***Create instance*** .
 
 6. Enter the following details, and click ***Create***
     | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
@@ -59,9 +59,9 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 3. At the far right, click the Task menu and select ***Open console***. A new browser window will open to your Oracle Integration home page.
     ![Oracle Integration Home Page](./images/oic3-homepage.png)
 
-If a message appears that access was denied, or the home page flashes, you don't have access to the Oracle Integration instance. See [Assigning Oracle Integration Roles to Groups](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/henosis-assigning-oic-roles-groups-identity-domain.html)
+    If a message appears that access was denied, or the home page flashes, you don't have access to the Oracle Integration instance. See [Assigning Oracle Integration Roles to Groups](https://docs.oracle.com/en/cloud/paas/application-integration/oracle-integration-oci/henosis-assigning-oic-roles-groups-identity-domain.html)
 
-Please *proceed to the next lab*.
+    Please *proceed to the next lab*.
 
 ## Learn More
 
@@ -71,4 +71,4 @@ Please *proceed to the next lab*.
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2026
+* **Last Updated By/Date** - Subhani Italapuram, Feb 2026
