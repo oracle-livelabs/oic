@@ -48,7 +48,7 @@ If you just created a new Cloud account following the instructions in Getting St
     | Message Packs |1|
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as **Active** in the State column and you'll receive an email. You are now ready to access your instance.
-Please note that once Instance is created, an instance is visible only in the region in which it was created
+    - Please note that once Instance is created, an instance is visible only in the region in which it was created
 
 ## Task 2: Accessing an Oracle Integration 3 Instance
 
