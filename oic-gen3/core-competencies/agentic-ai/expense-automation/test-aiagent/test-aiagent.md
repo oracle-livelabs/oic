@@ -34,7 +34,7 @@ In this lab you will learn:
 3. In the left navigation pane, select **AI Agents** icon.
 
 4. Run the agent
-    - Copy food.jpeg and food_non_hitl.jpeg files to the File Server if not done. And You can get these two files from the downloaded artifacts.
+    - Copy food.jpeg and food\_non\_hitl.jpeg files to the File Server if not done. And You can get these two files from the downloaded artifacts.
     - In the Agents card, find the AI agent to run: **Expense Agent**
     - Click **Actions icon**, and select *Run*.
 
@@ -85,6 +85,10 @@ In this lab you will learn:
 1. Now, click on *AI Agents* tab and you should see the status of your agent as *Succeeded*
 2. Go to *Activity Stream* and check all the messages and you should see the expense created in the HCM application
     ![expense-created](images/expense-created.png)
+
+## Task 4: Run and test the AI agent without the HITL use case.
+
+1. You can try with *food\_non\_hitl.jpeg* and cross check the results.
 
     Congratulations! 🎉
 

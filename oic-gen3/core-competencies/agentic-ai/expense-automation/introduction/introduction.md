@@ -13,8 +13,8 @@ Estimated Workshop Time: 2 hours
 By completing this live lab, you will:
 
 * Understand Agentic AI Concepts
+* Import and Configure the integrations
 * Master Agentic AI Tool Registration
-* Configure and Discover Tools via MCP
 * Build and Deploy AI Agents
 * Test and Monitor Agent Execution
 
@@ -105,13 +105,13 @@ These integrations function as agentic AI tools that the agent dynamically orche
 
 ## Task 6: Workshop Flow
 
-1. ***Import Pre-Built Project*** - Start with a ready-made OIC project containing all five healthcare integrations already configured
+1. ***Import Pre-Built Project*** - Start with a ready-made OIC project that contains all four integrations, and configure it according to the steps provided in the upcoming labs.
 
 2. ***Register as Agentic AI Tools*** - Convert each integration into an agentic AI tool with clear descriptions, identifiers, and parameter definitions
 
-3. ***Enable MCP Server*** - Configure the project as an MCP server to expose tools to external agent frameworks
+3. ***Enable MCP Server*** - (Optional) Configure the project as an MCP server to expose tools to external agent frameworks
 
-4. ***Discover Tools from MCP Clients*** - Verify tool discoverability from external applications using MCP protocol
+4. ***Discover Tools from MCP Clients*** - (Optional) Verify tool discoverability from external applications using MCP protocol
 
 5. ***Build the AI Agent*** - Create the Clinical Quality Assurance Agent, configure AI thinking patterns, add tools, and define agent behavior
 
