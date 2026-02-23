@@ -174,7 +174,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 ## Task 7: Verify All Tools are Registered
 
 1. Navigate to **AI Agents** page in the project
-2. Verify all five tools appear in the **Tools** section:
+2. Verify all four tools appear in the **Tools** section:
     - ✓ Read Expense Receipt
     - ✓ Approval Required
     - ✓ HITL-Raise Approval Request

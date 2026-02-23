@@ -4,7 +4,7 @@
 
 In this section, you'll create the **Expense Agent** within Oracle Integration. This agent will orchestrate your four tools to conduct intelligent, automated utilization reviews.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Thinking Patterns
 
@@ -101,14 +101,14 @@ In this lab you will learn:
 
 ## Task 3: Add and Configure the AI Agent
 
-1. In the AI Agents card, click **Add** . The Create agent panel is displayed.
+1. In the Agents card, click **Add** . The Create agent panel is displayed.
 
 2. Configure required fields for your agent and Click **Create**
     - Name: Name for your AI Agent. Example: Expense Agent
     - Identifier: Auto generated
     - Thinking Pattern: Select the **Thinking pattern** created in the previous Task.
 
-3. Configure your Agent Role, Guidelines and Tools.
+3. Configure your Agent Role, Guidelines, Prompt template and Tools.
 
     a.  **Role:** You are an expense report analyst.
 
