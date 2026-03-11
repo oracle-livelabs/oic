@@ -132,7 +132,7 @@ In this lab you will learn:
 
 10. Activate the thinking pattern. The pattern must have the status Active before you can specify it in your agent. In the **Agent patterns** section, next to **Patient Care Pattern**, click Actions (...)) icon, and select **Activate**.
 
-Once your thinking pattern is created for your AI agent, Oracle Integration automatically creates two integrations in your project: **ReAct Pattern Intg** and **Get Tool Data**. Select the Integration section to see these integrations. These integrations are system-generated and are required for your AI agent. You don't need to change or edit them.
+Once your thinking pattern is created for your AI agent, Oracle Integration automatically creates an integration flow in your project: **ReAct Pattern Intg**. Select the Integration section to the integration. This is a system-generated integration and is required for your AI agent. You don't need to change or edit them.
 
 ![React Pattern System Integrations](images/react-pattern-system-integrations.png)
 

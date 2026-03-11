@@ -20,6 +20,10 @@ Estimated Time: 30 minutes
 In this lab, you will:
 
 - Import a Project
+- Configure Connections
+- Configure Decision Service
+- Configure Human in the loop
+- Configure the Integrations and activate.
 
 ### Prerequisites
 
@@ -61,6 +65,7 @@ This lab assumes you have:
     - Connections
         - REST Connection
         - FTP Connection : This is the place where your files are stored
+        - ORACLE_HCM : Agent creates an expense in Oracle HCM Cloud.
     - Click on **Learn about the Integration** to understand the details of the integration flow.
     ![Learn About the Integration](images/learn-about-integration.png)
 
@@ -74,12 +79,15 @@ All the connections are in draft state. We will configure the connections used b
     - Click on **Test** and *Save* the connection.
 
 2. HCM Connection Configuration
+    > **Note:** For the Bootcamp, please use the shared connection *ORACLE_HCM*
 
     - Edit the HCM Connection.
     - Configure the host and username and password.
     - Click on **Test** and *Save* the connection.
 
 3. FTP Adapter Connection Configuration
+    > **Note:** For the Bootcamp, please use the shared connection *FTP_SERVER*
+
     - Keep the following information handy. Refer File Server Setup section and make a note of the following information
     - File Server IP Address.
     - File Server Port.
@@ -122,7 +130,7 @@ All the connections are in draft state. We will configure the connections used b
 
 1. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-2. Copy the files *food.jpeg, food\_non\_hitl.jpeg* (you can find them in the ZIP file you downloaded) into FTP server location. For example, copy these two files to the folder /home/users/fileserveroic3user/oicusername. If folder is not there with your oicusername then create and copy the files in into new directory.
+2. Copy the files *food.jpeg, food\_non\_hitl.jpeg* (you can find them in the ZIP file you downloaded) into FTP server location. For example, copy these two files to the folder /upload/expenseautomation/oicusername. If folder is not there with your oicusername then create and copy the files in into new directory.
 
 ## Task 5: Configure the Decision and Activate
 
