@@ -4,8 +4,9 @@
 
 This session introduces how to call Oracle Integration tools from Fusion AI Agent Studio by leveraging an MCP server, enabling agents to securely invoke enterprise integrations and automate business processes.
 
-You can now use AI Agent Studio, a design-time environment that empowers you to create, configure, validate, and deploy GenAI features and AI agents to meet your organization's needs. With AI Agent Studio, you can easily extend pre-configured agent templates, and even build new agents and multi-agent workflows from scratch. AI Agent Studio is fully integrated into Fusion Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the workflow, ensuring an efficient process.
+You can now use AI Agent Studio, a design-time environment that empowers you to create, configure, validate, and deploy GenAI features and AI agents to meet your organization's needs. With AI Agent Studio, you can easily extend preconfigured agent templates and even build new agents and multi-agent workflows from scratch.
 
+AI Agent Studio is fully integrated into Fusion Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly within business workflows, ensuring efficient and streamlined processes.
 This is where all your prior work comes together:
 
 - Your integrations become active
@@ -15,18 +16,18 @@ Estimated Time: 15 minutes
 
 ### Objectives
 
-In this lab you will learn:
+In this lab, you will learn:
 
 - How external applications, such as Fusion AI Agent Studio, discover and access MCP tools
-- How tools appear to external frameworks
-- How to invoke tools from outside OIC
-- Integration between different platforms using MCP
-- How to create tools, agent and agent teams in Fusion AI Agent Studio. 
+- How tools are exposed to external frameworks
+- How to invoke tools from outside Oracle Integration (OIC)
+- How MCP enables integration between different platforms
+- How to create tools, agents, and agent teams in Fusion AI Agent Studio
 
 ### Prerequisites
 
 - All the previous labs completed successfully.
-- [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-and-activate-confidential-client-application.html): This configuration is mandatory for non-Bootcamp users. These details are already configured for Bootcamp users.
+- [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-and-activate-confidential-client-application.html): This configuration is mandatory for non-Bootcamp users. For Bootcamp users, these details are already configured.
 
 ###	Background - Understanding Model Context Protocol (MCP)
 
@@ -61,9 +62,9 @@ When you enable MCP for an OIC project:
 - **Security**: OAuth-secured access to tools
 - **Decoupling**: Separate your tools from specific agent implementations
 
-## Task 1: Enable MCP in OIC Project
+## Task 1: Enable MCP in the OIC Project
 
-When you enable MCP for a project, the project becomes an MCP server. Any integrations registered as agentic AI tools are discoverable through the MCP server URL, and AI agent frameworks that support MCP can invoke the integrations. Each project has its own MCP server URL.
+When MCP is enabled for a project, the project functions as an MCP server. Integrations registered as Agentic AI tools are exposed through the MCP server URL, enabling AI agent frameworks that support MCP to discover and invoke these integrations. Each project has a unique MCP server URL.
 
 1. Access Project Details
     - Navigate to **Projects** in OIC navigation pane
@@ -92,7 +93,7 @@ https://mycompany.integration.us-phoenix-1.ocp.oraclecloud.com/mcp-server/v1/pro
 
 4. Save this URL - you'll need it for Fusion AI Agent Studio
 
-## Task 2: Prerequisites for MCP Clients
+## Task 2: MCP Client Prerequisites
 
 > **Note:** For **Bootcamp** users, complete details will be provided.
 
@@ -117,7 +118,7 @@ You should already have from Prerequisites section:
 
     If you don't have these, refer back to Prerequisites section to create a confidential client application.
 
-## Task 3: Agent Studio Overview - READ ONLY
+## Task 3: Agent Studio Overview (Read-Only)
 
 To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio. You can do these tasks:
 1. Instantiate, configure, and deploy predefined Agents and Agent Teams templates
@@ -131,12 +132,12 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     - Provide a deep link within Fusion Applications
     - Perform mathematical calculations
 
-## Task 4: Steps to enable Fusion AI Agent Studio and configure (Not required if is already enabled)
+## Task 4: Steps to Enable and Configure Fusion AI Agent Studio (Not required if is already enabled)
 
 1. Set the Enable Security Console External Application Integration (ORA\_ASE\_SAS\_INTEGRATION\_ENABLED) profile option to Yes, and enable permission groups for the appropriate roles. See [Access Requirements for AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/access-ai-agent-studio.html)
 2. After you provide users access to AI Agent Studio, they should be able to open AI Agent Studio without additional setup. If not, it's possible that your environment doesn't have certain necessary configurations. Ask your help desk to contact Oracle Support, who can verify what your environment has and address any gaps
 
-## Task 5: Create an Agent and Configure
+## Task 5: Agent Creation and Configuration
 
 1. Login to HCM Cloud using FIN_IMPL or any other user who has an access to the Agent Studio
 2. Go to Navigator, select Tools, and then AI Agent Studio
