@@ -213,9 +213,7 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 
 12. Click on **Create**
 13. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required. And You can skip step 14 and 15 also if not planning to save and publish.
-14. Click on **Save and Close**
-15. Edit the agent team which you have created and click on **Publish**
-16. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
+14. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
 
     ```
         <copy>
