@@ -84,12 +84,12 @@ When MCP is enabled for a project, the project functions as an MCP server. Integ
     - Locate the **MCP server URL**
     - Copy the complete URL - it follows this format:
 
-`https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
+    `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
-**Example:**
-```
-https://mycompany.integration.us-phoenix-1.ocp.oraclecloud.com/mcp-server/v1/projects/INTEL_EXPEN_AUTOM_WITH_AGENT_AI/mcp
-```
+    **Example:**
+    ```
+    https://mycompany.integration.us-phoenix-1.ocp.oraclecloud.com/mcp-server/v1/projects/INTEL_EXPEN_AUTOM_WITH_AGENT_AI/mcp
+    ```
 
 4. Save this URL - you'll need it for Fusion AI Agent Studio
 
@@ -134,6 +134,8 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 
 ## Task 4: Steps to Enable and Configure Fusion AI Agent Studio (Not required if is already enabled)
 
+> **Note:** This configuration is mandatory for non-Bootcamp users. For Bootcamp users, these details are already configured.
+
 1. Set the Enable Security Console External Application Integration (ORA\_ASE\_SAS\_INTEGRATION\_ENABLED) profile option to Yes, and enable permission groups for the appropriate roles. See [Access Requirements for AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/access-ai-agent-studio.html)
 2. After you provide users access to AI Agent Studio, they should be able to open AI Agent Studio without additional setup. If not, it's possible that your environment doesn't have certain necessary configurations. Ask your help desk to contact Oracle Support, who can verify what your environment has and address any gaps
 
@@ -145,21 +147,22 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     ![aiagentstudio](images/aiagentstudio.png)
 4. Click on **Add** button and enter the details given below.
 
-| Information | Value |
-|-------------|--------------|
-| **Tool Type** | select *MCP* |
-| **Tool Name** | enter *OIC Expense Automation Tool* + suffix with your initials |
-| **Family** | select *Common* |
-| **Product** | select *Others* |
-| **Description** | enter *OIC expense automation tools* |
-| **Add MCP server connection** | Click on *Add* |
-| **Instance URL** | enter the URL which you have copied when you have enabled MCP server |
-| **Transport Type** | select `Streamable  HTTP` |
-| **Credential Type** | select *Client Credential* |
-| **Token URL** | enter *the URL which you have coopied from pre reque*, eg: `https://<identity_domain>.identity.oraclecloud.com/oauth2/v1/token`|
-| **lient Credentials Connection Configuration** | prepare a JSON sample as given below and enter here. Please validate the JSON sample with online tools and make sure that it is correct |
-{: title="MCP Client Requirements to connect with MCP server"}
+    | Information | Value |
+    |-------------|--------------|
+    | **Tool Type** | select *MCP* |
+    | **Tool Name** | enter *OIC Expense Automation Tool* + suffix with your initials |
+    | **Family** | select *Common* |
+    | **Product** | select *Others* |
+    | **Description** | enter *OIC expense automation tools* |
+    | **Add MCP server connection** | Click on *Add* |
+    | **Instance URL** | enter the URL which you have copied when you have enabled MCP server |
+    | **Transport Type** | select `Streamable  HTTP` |
+    | **Credential Type** | select *Client Credential* |
+    | **Token URL** | enter *the URL which you have coopied from pre reque*, eg: `https://<identity_domain>.identity.oraclecloud.com/oauth2/v1/token`|
+    | **lient Credentials Connection Configuration** | prepare a JSON sample as given below and enter here. Please validate the JSON sample with online tools and make sure that it is correct |
+    {: title="MCP Client Requirements to connect with MCP server"}
 
+    ```
     <copy>
     {
     "grant_type": "client_credentials",
@@ -168,6 +171,7 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     "scope": "https://XXXXXXXXXXX.integration.us-phoenix-1.ocp.oraclecloud.  com:443urn:opc:resource:consumer::all"
     }
     </copy>
+    ```
 
 5. Click on **Update**, System will show you the tools from OIC as per the screenshot given below if, everything is perfect, otherwise fix the issues, mostly related to connection. Select the required tools for the agent, in our case, you can uncheck **HITL..** tool and select the remaining
     ![oictools](images/oictools.png)
@@ -175,16 +179,17 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 7. Click on **Agents** from the bottom menu or banner of the page
 8. Click on **Add** button and enter the details given below.
 
-| Information | Value |
-|-------------|--------------|
-| **Agent Name** | enter *OIC Expense Automation Agent* + suffix with your initials |
-| **Family** | select *Common* |
-| **Product** | select *Others* |
-| **Description** | enter *OIC expense automation agent* |
-| **Agent Persona and Role** | copy the details given below |
-| **Prompt** | enter *{{$context.$system.$inputMessage}}* OR you can form the similar expression with the help of expression builder|
-{: title="Fusion Agent"}
+    | Information | Value |
+    |-------------|--------------|
+    | **Agent Name** | enter *OIC Expense Automation Agent* + suffix with your initials |
+    | **Family** | select *Common* |
+    | **Product** | select *Others* |
+    | **Description** | enter *OIC expense automation agent* |
+    | **Agent Persona and Role** | copy the details given below |
+    | **Prompt** | enter *{{$context.$system.$inputMessage}}* OR you can form the similar expression with the help of expression builder|
+    {: title="Fusion Agent"}
 
+    ```
     <copy>
     1. Read the receipt based on the details provided by the user such as directory and receipt name.
     2. Based on the expense data, check if approval required or not.
@@ -192,6 +197,7 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     4. If "APPROVAL_REQUIRED", then proceed with raising a request for human review of this expense without asking user.
     5. Finally, Create an expense in Oracle HCM if the expense is approved by the reviewer else don't do anything.
     </copy>
+    ```
 5. Click on **Create**
 6. Click on **Tools** from the left-side menu on the Designer canvas.
     ![aiagenttools](images/agent-tools.png)
@@ -203,14 +209,14 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 10. Click on **Agents Teams** from the bottom menu or banner of the page
 11. Click on **+** button and enter the details given below.
 
-| Information | Value |
-|-------------|--------------|
-| **Agent Team Name** | enter *OIC Expense Automation Agent Team* + suffix with your initials |
-| **Family** | select *Common* |
-| **Product** | select *Others* |
-| **Type** | select *Supervisor* |
-| **Description** | enter *OIC expense automation agent team* |
-{: title="Fusion Agent Team"}
+    | Information | Value |
+    |-------------|--------------|
+    | **Agent Team Name** | enter *OIC Expense Automation Agent Team* + suffix with your initials |
+    | **Family** | select *Common* |
+    | **Product** | select *Others* |
+    | **Type** | select *Supervisor* |
+    | **Description** | enter *OIC expense automation agent team* |
+    {: title="Fusion Agent Team"}
 
 12. Click on **Create**
 13. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required. And You can skip step 14 and 15 also if not planning to save and publish.

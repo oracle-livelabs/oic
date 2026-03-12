@@ -72,7 +72,6 @@ In this lab you will learn:
         Expense Creator.
         </copy>
     ```
-
     ![React Pattern Guidelines](images/react-pattern-guidelines.png)
 
     - Click **Save**.
@@ -82,7 +81,7 @@ In this lab you will learn:
         - **Model:** Model to use for your AI agent. For example: gpt-4o-mini
         - **API Key Based Authentication:** Specify your Open AI API key to connect to the LLM.
     - Click **Test** to test that your connection works, then click **Save**.
-    When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent when you activate the Agent Pattern.
+    - When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent when you activate the Agent Pattern.
 8. Click **Back** < to return to Pattern Details page
 9. Click **Back** < to return to AI Agents page
 10. Activate the thinking pattern. The pattern must have the status Active before you can specify it in your agent. In the **Agent patterns** section, next to **Thinking pattern**, click Actions  icon, and select **Activate**.
@@ -125,12 +124,12 @@ In this lab you will learn:
     5. Finally, Create an expense in Oracle HCM if the expense is approved by the reviewer else don't do anything.
     </copy>
     ```
+
     c. In **Tools**, provide tools for the AI agent. Tools are integrations that have been registered as agentic AI tools and provide external connectivity for the AI agent. You already created the tool when you registered the integration as a tool in the previous Section. Click **+** and Add the following Tools, can select all the tools at a time.
       - Read Expense Receipt
       - Approval Required
       - HITL-Raise Approval Request
       - Create Expense Oracle HCM
-      
     d. In **Prompt templates**, Click **+** and add the prompt template *Read the expense receipt*
 4. Click on **Save**
 5. Navigate **Back <** to the AI Agents Page.
@@ -146,4 +145,4 @@ In this lab you will learn:
 ## Acknowledgements
 
 * **Author** - Subhani Italapuram, Technical Director, Partner Enablement, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+* **Last Updated By/Date** - Subhani Italapuram, Mar 2026
