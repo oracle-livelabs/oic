@@ -72,7 +72,7 @@ In this lab you will learn:
             Expense Creator.
             </copy>
         ```
-        ![React Pattern Guidelines](images/react-pattern-guidelines.png)
+    ![React Pattern Guidelines](images/react-pattern-guidelines.png)
     - Click **Save**.
     - Under LLM Connections, click **Edit** icon to configure the LLM connection. A new LLM connection is created and is displayed.
     - Configure connection information for your LLM.
@@ -128,7 +128,7 @@ In this lab you will learn:
     - Approval Required
     - HITL-Raise Approval Request
     - Create Expense Oracle HCM
-    
+
     d. In **Prompt templates**, Click **+** and add the prompt template *Read the expense receipt*
 4. Click on **Save**
 5. Navigate **Back <** to the AI Agents Page.
