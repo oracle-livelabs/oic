@@ -8,6 +8,7 @@ You can now use AI Agent Studio, a design-time environment that empowers you to 
 
 AI Agent Studio is fully integrated into Fusion Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly within business workflows, ensuring efficient and streamlined processes.
 This is where all your prior work comes together:
+    ![Architecture](images/architecture.png)
 
 - Your integrations become active
 - You have created the tools for all your integrations
