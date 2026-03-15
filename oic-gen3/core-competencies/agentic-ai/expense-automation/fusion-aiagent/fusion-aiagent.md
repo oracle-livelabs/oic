@@ -198,16 +198,15 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     5. Finally, Create an expense in Oracle HCM if the expense is approved by the reviewer else don't do anything.
     </copy>
     ```
-5. Click on **Create**
-6. Click on **Tools** from the left-side menu on the Designer canvas.
+9. Click on **Create**
+10. Click on **Tools** from the left-side menu on the Designer canvas.
     ![aiagenttools](images/agent-tools.png)
-7. Search for the tool you created, select it, and click the **+** icon. Then click **Add** in the pop-up window to add the tool to the agent..
-    ![addtoolstoagent](images/addtoolstoagent.png)
-8. Finally agent screen should look like the below screenshot.
+11. Search for the tool you created, select it, and click the **+** icon. Then click **Add** in the pop-up window to add the tool to the agent..
+12. Finally agent screen should look like the below screenshot.
     ![agent-creation](images/agent-creation.png)
-9. Click on **Create**. Then click on **Publish** to publish the agent which you have created.
-10. Click on **Agents Teams** from the bottom menu or banner of the page
-11. Click on **+** button and enter the details given below.
+13. Click on **Create**. Then click on **Publish** to publish the agent which you have created.
+14. Click on **Agents Teams** from the bottom menu or banner of the page
+15. Click on **+** button and enter the details given below.
 
     | Information | Value |
     |-------------|--------------|
@@ -218,16 +217,16 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     | **Description** | enter *OIC expense automation agent team* |
     {: title="Fusion Agent Team"}
 
-12. Click on **Create**
-13. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required. And You can skip step 14 and 15 also if not planning to save and publish.
-14. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
+16. Click on **Create**
+17. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required. And You can skip step 14 and 15 also if not planning to save and publish.
+18. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
 
     ```
         <copy>
         /upload/expenseautomation/C21/food_non_hitl.jpeg
         </copy>
     ```
-17. Check the results and also observe in Oracle Integration console to monitor the activity stream.
+19. Check the results and also observe in Oracle Integration console to monitor the activity stream.
 
     Congratulations! 🎉
 
