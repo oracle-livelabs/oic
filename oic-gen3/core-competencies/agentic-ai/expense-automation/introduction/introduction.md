@@ -6,6 +6,8 @@ This expense agent use case demonstrates an intelligent, end-to-end automation f
 
 Agentic AI represents a paradigm shift in intelligent automation. Unlike traditional integration workflows that follow a fixed, predetermined sequence of steps, AI agents leverage Large Language Models (LLMs) to reason, adapt, and dynamically orchestrate multiple services based on real-time context. This approach is especially powerful in environments where requirements and scenarios vary, enabling systems to make informed decisions, follow defined guidelines, and execute the most appropriate actions autonomously. In this live lab, you will explore how agent-driven orchestration enhances flexibility, responsiveness, and decision quality compared to conventional rule-based integrations.
 
+![Architecture](images/architecture.png)
+
 Estimated Workshop Time: 2 hours
 
 ### Objectives

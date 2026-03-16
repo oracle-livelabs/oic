@@ -72,26 +72,26 @@ In this lab you will learn:
 
 ## Task 1: Configure the Agentic AI Thinking Pattern
 
-1.  In the left navigation pane, select **Projects**.
+1. In the left navigation pane, select **Projects**.
 
-2.  Select the **Patient Care Utilization Review** project that you created.
+2. Select the **Patient Care Utilization Review** project that you created.
 
-3.  In the left navigation pane, select **AI Agents** icon.
+3. In the left navigation pane, select **AI Agents** icon.
 
-4.  In the **Agent patterns** card, click *Add*. The Create pattern dialog is displayed.
+4. In the **Agent patterns** card, click *Add*. The Create pattern dialog is displayed.
 
-5.  In **Create pattern**, configure required fields for your pattern:
+5. In **Create pattern**, configure required fields for your pattern:
     - **Name:** Name for the thinking pattern. For our lab, enter the name **Patient Care Pattern**. Currently, there are two patterns available in Oracle Integration. ReAct and Plan and Execute as explained above.
 
     - **Identifier:** Auto Populated
 
     - **Pattern recipe:** Value sent to the LLM as a system prompt to define how the agent reasons. Select the ReAct pattern for this lab. A pattern recipe is implemented as an integration that contains the thinking pattern for the AI agent. Oracle Integration ships with two ready-to-use patterns.
 
-6.  Click Create. The Pattern details page is displayed.
+6. Click Create. The Pattern details page is displayed.
 
     ![Create Pattern](images/create-pattern-dialog.png)
 
-7.  Configure the Pattern Guidelines and the LLM Connection.
+7. Configure the Pattern Guidelines and the LLM Connection.
     a.  Leave the Max Iterations and Temperature as defaults.
     b.  In the Guidelines box, enter the following guidelines for the ReAct Thinking pattern.
 
@@ -126,29 +126,29 @@ In this lab you will learn:
 
     When you save, Oracle Integration creates an integration that implements the ReAct pattern called ReAct Pattern Intg. This system-created integration is automatically activated for the agent.
 
-8.  Click **Back** < to return to Pattern Details page
+8. Click **Back** < to return to Pattern Details page
 
-9.  Click **Back** < to return to AI Agents page
+9. Click **Back** < to return to AI Agents page
 
 10. Activate the thinking pattern. The pattern must have the status Active before you can specify it in your agent. In the **Agent patterns** section, next to **Patient Care Pattern**, click Actions (...)) icon, and select **Activate**.
 
-Once your thinking pattern is created for your AI agent, Oracle Integration automatically creates two integrations in your project: **ReAct Pattern Intg** and **Get Tool Data**. Select the Integration section to see these integrations. These integrations are system-generated and are required for your AI agent. You don't need to change or edit them.
+Once your thinking pattern is created for your AI agent, Oracle Integration automatically creates an integration flow in your project: **ReAct Pattern Intg**. Select the Integration section to the integration. This is a system-generated integration and is required for your AI agent. You don't need to change or edit them.
 
 ![React Pattern System Integrations](images/react-pattern-system-integrations.png)
 
 
 ## Task 2: Add and Configure the AI Agent
 
-1.  In the AI Agents card, click **Add** . The Create agent panel is displayed.
+1. In the AI Agents card, click **Add** . The Create agent panel is displayed.
 
-2.  Configure required fields for your agent and Click **Create**
+2. Configure required fields for your agent and Click **Create**
     - Name: Name for your AI Agent. Example: Patient Care Quality Assessment Agent
     - Identifier: Auto generated
     - Thinking Pattern: Select the **Patient Care Pattern** created in the previous Task.
 
-![Create Agent](images/create-agent.png)
+    ![Create Agent](images/create-agent.png)
 
-3.  Configure your Agent Role, Guidelines and Tools.
+3. Configure your Agent Role, Guidelines and Tools.
 
     a.  **Role:** You are a Clinical Quality Assurance specialist responsible for conducting post-procedure audits to ensure quality care delivery.
 
@@ -329,16 +329,16 @@ Once your thinking pattern is created for your AI agent, Oracle Integration auto
       - Escalation Decision
       - Recommend Care Plan
 
-4.  Click on **Save**
+4. Click on **Save**
 
-5.  Navigate **Back <** to the AI Agents Page.
+5. Navigate **Back <** to the AI Agents Page.
 
-6.  Activate the AI Agent.
+6. Activate the AI Agent.
     a.  In the Agents card, find the agent to activate. Click **Actions ...**, and Select *Activate*.
 
     ![Activate Agent](images/activate-agent.png)
 
-You may now **proceed to the next lab**.
+    You may now **proceed to the next lab**.
 
 ## Learn More
 
