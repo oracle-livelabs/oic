@@ -24,7 +24,6 @@ In this lab, you will learn:
 - How to invoke tools from outside Oracle Integration (OIC)
 - How MCP enables integration between different platforms
 - How to create tools, agents, and agent teams in Fusion AI Agent Studio
-- The step for calling Fusion native tools along with OIC tools is not included in this lab. You are encouraged to explore it independently.
 
 ### Prerequisites
 
