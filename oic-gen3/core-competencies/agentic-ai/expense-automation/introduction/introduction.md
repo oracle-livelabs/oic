@@ -8,7 +8,7 @@ Agentic AI represents a paradigm shift in intelligent automation. Unlike traditi
 
 ![Architecture](images/architecture.png)
 
-Estimated Workshop Time: 2 hours
+Estimated Workshop Time: 2 hours 30 minutes
 
 ### Objectives
 
