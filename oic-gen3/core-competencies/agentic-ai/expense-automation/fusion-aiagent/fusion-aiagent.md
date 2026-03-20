@@ -13,7 +13,7 @@ This is where all your prior work comes together:
 - Your integrations become active
 - You have created the tools for all your integrations
 
-Estimated Time: 15 minutes
+Estimated Time: 25 minutes
 
 ### Objectives
 
@@ -24,7 +24,6 @@ In this lab, you will learn:
 - How to invoke tools from outside Oracle Integration (OIC)
 - How MCP enables integration between different platforms
 - How to create tools, agents, and agent teams in Fusion AI Agent Studio
-- The step for calling Fusion native tools along with OIC tools is not included in this lab. You are encouraged to explore it independently.
 
 ### Prerequisites
 
@@ -141,9 +140,46 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 1. Set the Enable Security Console External Application Integration (ORA\_ASE\_SAS\_INTEGRATION\_ENABLED) profile option to Yes, and enable permission groups for the appropriate roles. See [Access Requirements for AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/access-ai-agent-studio.html)
 2. After you provide users access to AI Agent Studio, they should be able to open AI Agent Studio without additional setup. If not, it's possible that your environment doesn't have certain necessary configurations. Ask your help desk to contact Oracle Support, who can verify what your environment has and address any gaps
 
-## Task 5: Agent Creation and Configuration
+## Task 5: Create a Native Tool in AI Agent Studio
 
-1. Login to HCM Cloud using FIN_IMPL or any other user who has an access to the Agent Studio
+1. Log in to HCM Cloud using FIN_IMPL or any other user who has access to Agent Studio.
+2. Go to Navigator, select Tools, and then AI Agent Studio
+3. Click on **Tools** from the bottom menu or banner of the page
+    ![aiagentstudio](images/aiagentstudio.png)
+4. Click on **Add** button and enter the details given below.
+
+    | Information | Value |
+    |-------------|--------------|
+    | **Tool Type** | select *External REST* |
+    | **Tool Name** | enter *getExpenseDetails* + suffix with your initials |
+    | **Family** | select *SCM* |
+    | **Product** | select *Others* |
+    | **Description** | enter *gets expense details tool* |
+    | Under **Authorization** | click on *Add* |
+    | **Instance URL** | enter the HCM Cloud URL, eg: `https://xxxxxxxx.ds-fa.oraclepdemos.com` |
+    | **Authentication** | select *Basic* |
+    | **User Name** | enter *casey.brown* |
+    | **Password** | enter *the password of HCM Cloud for the user casey.brown* |
+    | **Description** | enter *authorization details* |
+    | Under **Functions** | click on *Add* |
+    | **Name** | select *getExpenseDetailsByExpenseId* |
+    | **Operation Type** | select *HTTP GET* |
+    | **Resource Path** | enter the resource path as per your environment, eg: `/fscmRestApi/resources/11.13.18.05/expense/{ExpenseId}` |
+    | **Description** | enter *gets expense details based on expense identifier* |
+    | Under **Parameters** | click on *Add* |
+    | **Name** | enter *getExpenseDetailsByExpenseId* |
+    | **Data Type** | select *String* |
+    | **Description** | enter *expense identifier* |
+    | On **Parameters** section | click *Save* |
+    | On **Add Endpoint** section | click *Add* |
+    | On **tool creation** page | click *Create* |
+    {: title="Creating Native tool in Fusion AI Agent Studio"}
+
+5. You have created a native tool and make a note of the tool name
+
+## Task 6: Agent Creation and Configuration
+
+1. Log in to HCM Cloud using FIN_IMPL or any other user who has access to Agent Studio, if you are not already logged in.
 2. Go to Navigator, select Tools, and then AI Agent Studio
 3. Click on **Tools** from the bottom menu or banner of the page
     ![aiagentstudio](images/aiagentstudio.png)
@@ -156,7 +192,7 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     | **Family** | select *Common* |
     | **Product** | select *Others* |
     | **Description** | enter *OIC expense automation tools* |
-    | **Add MCP server connection** | Click on *Add* |
+    | **Add MCP server connection** | click on *Add* |
     | **Instance URL** | enter the URL which you have copied when you have enabled MCP server |
     | **Transport Type** | select `Streamable  HTTP` |
     | **Credential Type** | select *Client Credential* |
@@ -175,7 +211,7 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     </copy>
     ```
 
-5. Click on **Update**, System will show you the tools from OIC as per the screenshot given below if, everything is perfect, otherwise fix the issues, mostly related to connection. Select the required tools for the agent, in our case, you can uncheck **HITL..** tool and select the remaining
+5. Click on **Update**, The system will display the tools from OIC as shown in the screenshot below if everything is configured correctly. Otherwise, resolve any issues—most are typically related to connections. Select the required tools for the agent. In our case, uncheck the **HITL...** tool and select the remaining tools.
     ![oictools](images/oictools.png)
 6. Click on **Create** button which is on top right side.
 7. Click on **Agents** from the bottom menu or banner of the page
@@ -187,8 +223,8 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     | **Family** | select *Common* |
     | **Product** | select *Others* |
     | **Description** | enter *OIC expense automation agent* |
-    | **Agent Persona and Role** | copy the details given below |
-    | **Prompt** | enter *{{$context.$system.$inputMessage}}* OR you can form the similar expression with the help of expression builder|
+    | **Agent Persona and Role** | enter *You are an expense report analyst* |
+    | **Prompt** | copy the details given below |
     {: title="Fusion Agent"}
 
     ```
@@ -196,14 +232,13 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     1. Read the receipt based on the details provided by the user such as directory and receipt name.
     2. Based on the expense data, check if approval required or not.
     3. If "APPROVAL_NOT_REQUIRED", then create the expense in Oracle HCM and stop the process.
-    4. If "APPROVAL_REQUIRED", then proceed with raising a request for human review of this expense without asking user.
-    5. Finally, Create an expense in Oracle HCM if the expense is approved by the reviewer else don't do anything.
     </copy>
     ```
 9. Click on **Create**
 10. Click on **Tools** from the left-side menu on the Designer canvas.
     ![aiagenttools](images/agent-tools.png)
-11. Search for the tool you created, select it, and click the **+** icon. Then click **Add** in the pop-up window to add the tool to the agent..
+11. Search for the tool *OIC Expense Automation Tool* you created, select it, and click the **+** icon. Then click **Add** in the pop-up window to add the tool to the agent.
+12. Search for the tool *getExpenseDetails* you created, select it, and click the **+** icon. Then click **Add** in the pop-up window to add the tool to the agent.
 12. Finally agent screen should look like the below screenshot.
     ![agent-creation](images/agent-creation.png)
 13. Click on **Create**. Then click on **Publish** to publish the agent which you have created.
@@ -220,15 +255,23 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
     {: title="Fusion Agent Team"}
 
 16. Click on **Create**
-17. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required. And You can skip step 14 and 15 also if not planning to save and publish.
+17. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required.
 18. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
 
     ```
         <copy>
-        /upload/expenseautomation/C21/food_non_hitl.jpeg
+        Process this expense receipt. receipt name: food_non_hitl.jpeg and directory: /upload/expenseautomation/C21
         </copy>
     ```
-19. Check the results and also observe in Oracle Integration console to monitor the activity stream.
+
+19. You should see the expense creation response. Then enter the prompt below again to call the native tool and retrieve the expense details.
+    ```
+        <copy>
+        gets expense details based on expense identifier
+        </copy>
+    ```
+
+19. Check the results and also observe the activity stream in the Oracle Integration Console.
 
     Congratulations! 🎉
 
