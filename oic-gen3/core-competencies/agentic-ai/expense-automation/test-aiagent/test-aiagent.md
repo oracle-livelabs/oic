@@ -77,7 +77,6 @@ In this lab you will learn:
 4. The system opens the OPA workspace in a new window, select the task assigned to you and approve it.
     ![tasks](images/workspace-tasks.png)
 5. Click on the link given under *Title* field and click on **APPROVE**
-    ![approve](images/task-approve.png)
 6. Refresh **Workflow instances** page and you should see the task status as *Completed*
 
 ## Task 3: Monitor the final result
