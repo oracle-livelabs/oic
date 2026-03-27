@@ -41,11 +41,7 @@ In this lab you will learn:
 5. Test the agent.
     - In the Test Agent page, click on the prompt text area, system will show you the prompt template you created, select it, and enter the *filename* and *directory* to test the AI agent and click on Submit.
 
-        ![Test AI Agent](images/test-aiagent2.png)
-
     - Click on the little run icon at the end of the User prompt text box.
-        ![Run AI Agent](images/test-aiagent3.png)
-
     The progress bar displays and then you see agent actions.
 
     - Look at the agent actions.
