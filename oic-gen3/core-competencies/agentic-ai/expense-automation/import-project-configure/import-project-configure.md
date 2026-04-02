@@ -130,7 +130,7 @@ All the connections are in draft state. We will configure the connections used b
 
 1. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-2. Copy the files *food.jpeg, food\_non\_hitl.jpeg* (you can find them in the ZIP file you downloaded) into FTP server location. For example, copy these two files to the folder /upload/expenseautomation/oicusername. If folder is not there with your oicusername then create and copy the files in into new directory.
+2. Copy the files *food.jpeg, food\_non\_hitl.jpeg* (you can find them in the ZIP file you downloaded) into FTP server location. For example, copy these two files to the folder /upload/agenticai/expagent/oicusername. If folder is not there with your oicusername then create and copy the files in into new directory.
 
 ## Task 5: Configure the Decision and Activate
 

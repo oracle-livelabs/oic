@@ -257,10 +257,11 @@ To use AI Agent Studio, go to Navigator, select Tools, and then AI Agent Studio.
 16. Click on **Create**
 17. Click **Agents** from the left-side menu and search for the agent you created. Click the **+** icon. Then click **Add** in the pop-up window to add the agent. You can also use filters to search for the agent if required.
 18. Click on Run(Debug) Icon to test the agent and enter the prompt given below and click on **enter**
+    > **Note:** Modify the directory as per your folder structure.
 
     ```
         <copy>
-        Process this expense receipt. receipt name: food_non_hitl.jpeg and directory: /upload/expenseautomation/C21
+        Process this expense receipt. receipt name: food_non_hitl.jpeg and directory: /upload/agenticai/expagent/C21
         </copy>
     ```
 
