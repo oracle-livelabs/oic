@@ -39,13 +39,20 @@ If you just created a new Cloud account following the instructions in Getting St
 4. Click ***Create instance*** .
 
 6. Enter the following details, and click ***Create***
-    | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
-    | --- | --- |
-    | Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
-    | Consumption Model| Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (universal credit)|
-    | Edition|Enterprise|
-    | License Type |Select - Subscribe to a new Oracle Integration License|
-    | Message Packs |1|
+
+    - Enter the Oracle Integration Instance details as per the details given below.
+
+    > *Note:*  Please select the Healthcare Edition for healthcare-related live labs or use cases.
+    
+
+    | Field             | Description                                        |
+    |-------------------|----------------------------------------------------|
+    | Name              |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance|
+    | Consumption Model | Lists consumption models available in this tenancy. Typically, one model is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include : Metered (universal credit)|
+    | Edition           |Enterprise OR Healthcare                                    |
+    | License Type      |Select - Subscribe to a new Oracle Integration License|
+    | Message Packs     |1                                              |
+    {: title="Oracle Integration Instance creation"}
 
 7. You should see your instance in the Creating state. It will take several minutes for the instance to be created. When instance creation completes successfully, the instance shows as **Active** in the State column and you'll receive an email. You are now ready to access your instance.
     - Please note that once Instance is created, an instance is visible only in the region in which it was created
@@ -71,4 +78,4 @@ Navigate to an Oracle Integration 3 instance in the Oracle Cloud Infrastructure 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Feb 2026
+* **Last Updated By/Date** - Subhani Italapuram, Apr 2026
