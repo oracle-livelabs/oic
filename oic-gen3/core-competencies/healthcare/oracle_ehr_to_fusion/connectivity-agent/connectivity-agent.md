@@ -14,7 +14,7 @@ At the end of this lab, you will have:
 - Created an Agent Group in Oracle Integration
 - Installed and configured the Oracle Integration Connectivity Agent
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -45,6 +45,7 @@ This lab assumes you have:
     > **Note:** Creating the agent group automatically creates an OAuth client application used by the connectivity agent
     > **Note:** If you select Use only one agent at a time and then associate only one connectivity agent with the agent group, the agent group works as if you never selected the option. You must associate a second agent with that agent group to achieve active-passive agent functionality.  
     > **Note:** If you enabled Use only one agent at a time, the label Singleton appears next to the agent group name.
+    
     ![OIC Agents](images/oic-agents.png)
 
 ## Task 2: Download and Install Connectivity Agent
@@ -52,16 +53,16 @@ This lab assumes you have:
 1. Login into Oracle Integration console
 2. Navigate to *Home → Design → Agents*
 3. Click *Download*, then *Connectivity Agent*
-4. Download the connectivity agent installer to a directory (e.g.,: C:\oic_conn_agent_installer) on your on-premises host
-5. Extract *oic_conn_agent_installer.zip* into the directory
+4. Download the connectivity agent installer to a directory (e.g.,: C:\oic\_conn\_agent\_installer) on your on-premises host
+5. Extract *oic\_conn\_agent\_installer.zip* into the directory
 
     > **Note:** Do not install the agent in a directory path that includes /tmp.
 
-6. Hover over the *agent group* created in Task 1
+6. Go back to the OIC Console and Hover over the *agent group* created in Task 1
 7. Click Actions *...*icon, then select *Download config*
-8. Replace the existing InstallerProfile.cfg template file in the oic_conn_agent_installer directory that was created when you extracted the agent installation file in Step 5 with the preconfigured InstallerProfile.cfg file you downloaded
+8. Replace the existing InstallerProfile.cfg template file in the oic\_conn\_agent\_installer directory that was created when you extracted the agent installation file in Step 5 with the preconfigured InstallerProfile.cfg file you downloaded
 
-    > **Note:** The preconfigured InstallerProfile.cfg file automatically includes values for all required parameters such as oic_URL and agent_GROUP_IDENTIFIER and OAuth 2.0 token-based authentication parameters such as client ID, client secret, and scope. This eliminates the need to manually specify values for these parameters
+    > **Note:** The preconfigured InstallerProfile.cfg file automatically includes values for all required parameters such as oic\_URL and agent\_GROUP\_IDENTIFIER and OAuth 2.0 token-based authentication parameters such as client ID, client secret, and scope. This eliminates the need to manually specify values for these parameters
 9. Set the JAVA_HOME property to the location of the JDK installation
 10. Set the PATH property as *setenv PATH = $JAVA_HOME/bin:$PATH*
 11. Run the connectivity agent installer (java –jar connectivityagent.jar) from the command prompt

@@ -26,7 +26,7 @@ This lab assumes you have:
 
 ## Task 1: Download the HL7 Inspector Application
 
-1. Click on [Download](https://bitbucket.org/crambow/hl7inspector/wiki/Home)
+1. Click on [Download](https://bitbucket.org/crambow/hl7inspector/wiki/Home) to download HL7 Inspector
 2. Navigate to the HL7 Inspector download page.
 3. Download the latest version of the HL7 Inspector installer appropriate for your operating system.
 4. Save the installer file to your local machine.
@@ -49,6 +49,7 @@ This lab assumes you have:
 ## Task 4:  Enable Message Sender and Message Receiver Panes
 
 1. In the HL7 Inspector toolbar, locate the Send/Receive icons.
+    ![hl7-sender-reciever](images/hl7-sender-reciever.png)
 2. Click the Message Sender icon.
 3. Click the Message Receiver icon.
 4. Verify that both panes appear at the bottom of the application window.
@@ -59,8 +60,9 @@ This lab assumes you have:
 
 1. In the Message Sender pane, click the Setup Send icon.
 2. In the setup window, locate the Hostname:Port field.
-3. Enter the following value:
-localhost:2100
+3. Enter the following value *localhost:2100*
+    ![hl7-port](images/hl7-port.png)
+
 4. Click OK to save the configuration.
 
     > **Note:** Port 2100 corresponds to the MLLP Listener Port configured in Oracle Integration.

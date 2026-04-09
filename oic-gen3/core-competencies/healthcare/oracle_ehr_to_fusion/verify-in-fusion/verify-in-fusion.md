@@ -6,7 +6,7 @@ After sending the HL7 message and triggering the Oracle Integration flow, the fi
 
 In this section, you will navigate to Oracle Fusion, locate the newly created Care Request, and validate that the data has been successfully transferred from the HL7 message into Oracle Fusion. This verification confirms that the end-to-end healthcare integration flow is functioning as expected
 
-Estimated Time: 15 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 
@@ -31,7 +31,7 @@ In this section, you will:
 
 ## Task 2: Navigate to Service Requests
 
-1. From the Oracle Fusion home page, click the Navigator icon.
+1. From the Oracle Fusion home page, click the *Navigator* icon.
 2. Navigate to Service > Service Requests
 
 > **Note:** Depending on your Oracle Fusion environment, the menu may also appear under Customer Service or Service Workspace.
@@ -39,11 +39,9 @@ In this section, you will:
 ## Task 3: Search for the Newly Created Care Request
 
 1. In the Service Requests page, use the search/filter options to locate the newly created record.
-2. Search using one of the following criteria:
-    - Recently Created Records
-    - Patient/Customer Name
-    - Subject/Title
-    - Creation Date
+2. Select *All Open Service Requests* from the drop down for the List field.
+    ![osc-servicerequests](images/osc-servicerequests.png)
+
 
 ## Task 4: Open the Care Request Record
 
@@ -54,9 +52,7 @@ In this section, you will:
 
 1. Review the record and confirm the following information is populated correctly:
 
-    - Patient/Customer details
-    - Order/Request information
-    - Description/Notes from HL7 message
+    - Title and etc
     - Creation timestamp
     - Status of the request
 
@@ -66,10 +62,10 @@ In this section, you will:
 
 If the Care Request is visible and contains the expected details, this confirms that:
 
-    - Oracle Integration successfully received the HL7 message
-    - The HL7 payload was transformed correctly
-    - Oracle Fusion API call completed successfully
-    - The end-to-end integration flow executed as expected
+- Oracle Integration successfully received the HL7 message
+- The HL7 payload was transformed correctly
+- Oracle Fusion API call completed successfully
+- The end-to-end integration flow executed as expected
 
     You may now **proceed to the next lab**.
 

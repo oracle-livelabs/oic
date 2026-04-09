@@ -6,7 +6,7 @@ After configuring and activating the Oracle Integration recipe, the next step is
 
 In this section, you will use HL7 Inspector to load and send a sample HL7 ORM/OMR message to Oracle Integration. Once the message is sent, Oracle Integration processes the incoming HL7 payload, transforms it into a readable format using Healthcare actions, and creates a Care Request in Oracle Fusion.
 
-Estimated Time: 15 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 
@@ -51,10 +51,11 @@ NTE|||platelets decreasing|
     - Browse to the provided sample HL7 message file: ORM_001.hl7
     - In the Import Options window: Leave the default settings unchanged.Click OK.
 4. Send the HL7 Message
-    - In the Send Message window, click Send Selected Message
+    - In the Message Sender window, click Send Selected Message
+    ![send-hl7-message](images/send-hl7-message.png)
     - This action sends the selected HL7 ORM 2.5.1 message to Oracle Integration.
 5. Verify the Acknowledgement
-    - After sending the message, review the Sender Message window.
+    - After sending the message, review the Message Sender window.
     - Confirm that an Acknowledgement (ACK) message is received.
 
 > **Note:** Receipt of the acknowledgement confirms that Oracle Integration successfully received the HL7 message.

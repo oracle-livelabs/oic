@@ -6,7 +6,7 @@ In this section, you will install and configure the Oracle Integration recipe th
 
 After installing the recipe from the Oracle Integration Store, you will configure the required connections and resources, including the MLLP receiving connection for inbound HL7 messages and the Oracle Sales Cloud connection for creating Care Requests in Oracle Fusion. Proper configuration of these resources ensures that the integration can successfully receive, process, and route healthcare messages between systems.
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
