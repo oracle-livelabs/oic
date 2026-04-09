@@ -18,7 +18,7 @@
         },
         {
             "title": "Lab 1: Create an Agent Group and Install Connectivity Agent",
-            "filename": "../../oicagent/oicagent.md"
+            "filename": "../../connectivity-agent/connectivity-agent.md"
         },
         {
             "title": "Lab 2: Download and Install HL7 Inspector",
