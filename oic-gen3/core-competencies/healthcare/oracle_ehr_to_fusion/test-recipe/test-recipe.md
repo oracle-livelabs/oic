@@ -27,12 +27,11 @@ In this lab you will learn:
 
 Follow the steps below to send an HL7 message and trigger the Oracle Integration recipe.
 
-1. Verify HL7 Inspector Setup
-Ensure the following before sending the message:
+1. Verify HL7 Inspector Setup. Ensure the following before sending the message:
     - The Message Receiver pane is open
     - The Message Sender is configured to send messages to port 2100
 
-> **Note:** Port 2100 should match the MLLP Listener Port configured in Oracle Integration.
+    > **Note:** Port 2100 should match the MLLP Listener Port configured in Oracle Integration.
 
 2. Create a file named ORM_001.hl7 with the below data, and ensure that there are no additional extensions such as .txt.
 
