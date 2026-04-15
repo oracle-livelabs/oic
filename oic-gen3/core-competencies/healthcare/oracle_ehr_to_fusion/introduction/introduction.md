@@ -36,6 +36,7 @@ Ensure the following are available before starting:
 * Oracle Integration for Healthcare Support for HL7
 * Oracle Sales Cloud credentials
 * Local machine access for Connectivity Agent installation
+* Ensure that either the *Healthcare edition* is enabled or the feature flag *oic.healthcare.settings.enable*
 
 ## Task 1: Business Scenario
 

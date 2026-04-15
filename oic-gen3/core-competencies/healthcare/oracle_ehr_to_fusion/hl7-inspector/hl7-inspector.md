@@ -49,10 +49,9 @@ This lab assumes you have:
 ## Task 4:  Enable Message Sender and Message Receiver Panes
 
 1. In the HL7 Inspector toolbar, locate the Send/Receive icons.
+2. Click the Message Sender icon and Click the Message Receiver icon.
     ![hl7-sender-reciever](images/hl7-sender-reciever.png)
-2. Click the Message Sender icon.
-3. Click the Message Receiver icon.
-4. Verify that both panes appear at the bottom of the application window.
+3. Verify that both panes appear at the bottom of the application window.
 
     > **Note:** These panes allow you to simulate sending and receiving HL7 messages.
 

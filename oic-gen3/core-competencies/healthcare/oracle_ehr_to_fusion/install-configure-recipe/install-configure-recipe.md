@@ -28,8 +28,8 @@ This lab assumes you have:
 
 1. Login into Oracle Integration console.
 2. On the Oracle Integration Home page, under the Get Started section, click Browse Store.
-3. Search for the required recipe (e.g., Oracle Health EHR to Fusion Cloud – Create Care Request), then click *Get* to install it. If it is already installed, you will not see the *Get* button.
-A confirmation message will appear, and the recipe card status will change to In *Use*.
+3. Search for the required recipe (for example, Oracle Health EHR to Fusion Cloud – Create Care Request), then click *Get* to install it. If the recipe is already installed,  the *Get* button will not be displayed.
+Once installed, a confirmation message appears, and the recipe status changes to *In use*.
 
 ## Task 2: Explore the Installed Recipe
 
