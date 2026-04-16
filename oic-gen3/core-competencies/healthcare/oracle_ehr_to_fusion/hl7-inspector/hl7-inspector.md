@@ -39,7 +39,7 @@ This lab assumes you have:
 4. Accept the license agreement if prompted.
 5. Choose the installation directory.
 6. Click Install.
-7. Once installation completes, click Finish
+7. Once installation completes, click Finish.
 
 ## Task 3: Launch HL7 Inspector
 
@@ -49,8 +49,8 @@ This lab assumes you have:
 ## Task 4:  Enable Message Sender and Message Receiver Panes
 
 1. In the HL7 Inspector toolbar, locate the Send/Receive icons.
-2. Click the Message Sender icon and Click the Message Receiver icon.
-    ![hl7-sender-reciever](images/hl7-sender-reciever.png)
+2. Click the Message Sender icon and click the Message Receiver icon.
+    ![hl7-sender-receiver](images/hl7-sender-receiver.png)
 3. Verify that both panes appear at the bottom of the application window.
 
     > **Note:** These panes allow you to simulate sending and receiving HL7 messages.

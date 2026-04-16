@@ -26,7 +26,7 @@ This lab assumes you have:
 
 ## Task 1: Install the recipe
 
-1. Login into Oracle Integration console.
+1. Log in to Oracle Integration console.
 2. On the Oracle Integration Home page, under the Get Started section, click Browse Store.
 3. Search for the required recipe (for example, Oracle Health EHR to Fusion Cloud – Create Care Request), then click *Get* to install it. If the recipe is already installed,  the *Get* button will not be displayed.
 Once installed, a confirmation message appears, and the recipe status changes to *In use*.
@@ -40,7 +40,7 @@ Once installed, a confirmation message appears, and the recipe status changes to
         - Integrations
         - Connections
     - Navigate to the Integrations section and examine the available integration flows, such as:
-        - Get Hl7 message
+        - Get HL7 message
         - Create Care Request
     - Click on **Learn about the Integration** to understand the details of the integration flow.
     ![Learn About the Integration](images/learn-about-integration.png)
@@ -77,7 +77,7 @@ All the connections are in draft state. We will configure the connections used b
 
     - Click on **Test** and *Save* the connection.
 
-## Task 4: Edit all the integration and understand the design and flow logic
+## Task 4: Edit all the integrations and understand the design and flow logic
 
 1. Select an integration flow (for example, Create Care Request) and click Edit to open the integration designer.
 2. Review the overall integration structure, including:
@@ -85,7 +85,7 @@ All the connections are in draft state. We will configure the connections used b
     - Healthcare action
     - Invoke (Oracle Sales Cloud call)
 3. Repeat the above steps for other integration flow:
-    - Get Hl7 message
+    - Get HL7 message
 4. Save and close the integration after review (no changes required unless customization is needed)
 
 ## Task 5: Activate All Integrations

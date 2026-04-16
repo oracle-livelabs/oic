@@ -48,7 +48,7 @@ NTE|||platelets decreasing|
     - Launch the HL7 Inspector application if it is not already open.
     - From the top menu, select File > File Open
     - Browse to the provided sample HL7 message file: ORM_001.hl7
-    - In the Import Options window: Leave the default settings unchanged.Click OK.
+    - In the Import Options window: Leave the default settings unchanged. Click OK.
 4. Send the HL7 Message
     - In the Message Sender window, click Send Selected Message
     ![send-hl7-message](images/send-hl7-message.png)
