@@ -196,7 +196,7 @@ All the connections are in draft state. We will configure the connections used b
     ![Expense Workflow3](images/expense-workflow3.png)
 13. Click on *<* to go back to the main window.
 14. Click on *End event* Task, click on **...** icon, click on **Map Data** and map as per the screenshot given below
-![Expense Workflow4](images/expense-workflow4.png)
+    ![Expense Workflow4](images/expense-workflow4.png)
 15. Click on *<* to go back to the main window.
 16. Go back to *Workflows* which is under *Human in the loop* tab by clicking *<* button
 17. Activate *Expense Workflow*
