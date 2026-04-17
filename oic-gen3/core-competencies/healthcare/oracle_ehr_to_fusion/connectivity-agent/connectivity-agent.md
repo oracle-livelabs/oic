@@ -32,7 +32,7 @@ This lab assumes you have:
 
 ## Task 1: Create an Agent Group
 
-1. Login into Oracle Integration console.
+1. Log in to Oracle Integration console.
 2. Navigate to *Home → Design → Agents*
 3. Click **Create**, enter the details given below and Click **Create**.
 
@@ -51,7 +51,7 @@ This lab assumes you have:
 
 ## Task 2: Download and Install Connectivity Agent
 
-1. Login into Oracle Integration console
+1. Log in to Oracle Integration console
 2. Navigate to *Home → Design → Agents*
 3. Click *Download*, then *Connectivity Agent*
 4. Download the connectivity agent installer to a directory (e.g.,: C:\oic\_conn\_agent\_installer) on your on-premises host
@@ -59,7 +59,7 @@ This lab assumes you have:
 
     > **Note:** Avoid installing the agent in a directory path that includes /tmp, as it may lead to runtime or stability issues.
 
-6. Go back to the OIC Console and Hover over the *agent group* created in Task 1
+6. Go back to the OIC Console and hover over the *agent group* created in Task 1
 7. Click Actions *...*icon, then select *Download config*
 8. Replace the existing InstallerProfile.cfg template file in the oic\_conn\_agent\_installer directory that was created when you extracted the agent installation file in Step 5 with the preconfigured InstallerProfile.cfg file you downloaded
 

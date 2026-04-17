@@ -146,7 +146,7 @@ You may now **proceed to the next lab**.
 * [Oracle Integration 3 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
 * [Oracle Integration 3 MLLP Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/mllp-adapter/understand-mllp-adapter.html)
 
-* [Oracle Integration 3 Oracle CX Sales and B2B Service Adapter Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/sales-adapter/oracle-sales-cloud-capabilities.html#GUID-05D2AFAE-911E-4F1D-B745-A97FA92B2AD2)
+* [Oracle Integration 3 Oracle CX Sales and B2B Service Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/sales-adapter/oracle-sales-cloud-capabilities.html#GUID-05D2AFAE-911E-4F1D-B745-A97FA92B2AD2)
 
 ## Acknowledgements
 

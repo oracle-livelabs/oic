@@ -4,7 +4,7 @@
 
 After sending the HL7 message and triggering the Oracle Integration flow, the final step is to verify that the integration successfully created a Care Request in Oracle Fusion. Oracle Integration processes the incoming HL7 healthcare message, maps the required data fields, and invokes Oracle Fusion APIs to generate the corresponding Care Request record.
 
-In this section, you will navigate to Oracle Fusion, locate the newly created Care Request, and validate that the data has been successfully transferred from the HL7 message into Oracle Fusion. This verification confirms that the end-to-end healthcare integration flow is functioning as expected
+In this section, you will navigate to Oracle Fusion, locate the newly created Care Request, and validate that the data has been successfully transferred from the HL7 message into Oracle Fusion. This verification confirms that the end-to-end healthcare integration flow is functioning as expected.
 
 Estimated Time: 5 minutes
 
@@ -39,14 +39,14 @@ In this section, you will:
 ## Task 3: Search for the Newly Created Care Request
 
 1. In the Service Requests page, use the search/filter options to locate the newly created record.
-2. Select *All Open Service Requests* from the drop down for the List field.
+2. Select *All Open Service Requests* from the drop-down for the List field.
     ![osc-servicerequests](images/osc-servicerequests.png)
 
 
 ## Task 4: Open the Care Request Record
 
 1. Select the newly created Care Request from the search results.
-2. Open the record details page
+2. Open the record details page.
 
 ## Task 5:  Validate the Care Request Details
 
