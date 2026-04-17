@@ -141,9 +141,9 @@ All the connections are in draft state. We will configure the connections used b
 
 1. Click on *Human in the loop* tab, edit the form **Expense Form**, review the form and *activate* the form
 2. Click on **Add** button in Workflow section, enter Name **Expense Workflow** and click on **Create**
-3. Click on **Start event**, click on **Actions** icon, click on **Open Properties**
-    ![Start event](images/startevent.png)
-4. Add the JSON given below by clicking on **inline**, and click on **Apply**
+3. Click on **Start event**, click on **...** icon, click on **Configure**
+    
+4. Add the JSON given below under *Payload* section, and click on **Designer canvas** to go back to the designer.
     ![Workflow Properties](images/workflowproperties.png)
 
     ```
@@ -169,8 +169,8 @@ All the connections are in draft state. We will configure the connections used b
         </copy>
     ```
 
-5. Click on **End event**, click on **Actions** icon, click on **Open Properties**
-6. Add the JSON given below by clicking on **inline**, and click on **Apply**
+5. Click on **End event**, click on **...** icon, click on **Configure**
+6. Add the JSON given below under *Payload* section, and click on **Designer canvas** to go back to the designer.
 
     ```
         <copy>
@@ -180,26 +180,25 @@ All the connections are in draft state. We will configure the connections used b
         </copy>
     ```
 
-7. Close the *Properties*
-8. Add *User Task*, drag and drop **User Task** from the *Palette* on the the designer between *Start event* and *End Event*
-    ![User task](images/usertask.png)
-9. Select **User Task** action and click on small menu icon , click on **Open Properties**
+7. Click on *Task*, click on **...** icon, click on **Configure**
+8. Change Task *Name*, *Description* and *Task title..* as *Expense Approval*. And select *Outcome* as **Approve or Reject**
     ![Expense Workflow1](images/expense-workflow1.png)
-10. Change User Task's *Name* and *Title* as *Expense Approval*.
-11. Click on *+* under **Assignees** and add your oic username.
+9. Select *Form* from the dropdown
+10. For **Select assignee-->User**, enter your oic username and close the configuration window.
     ![Expense Workflow2](images/expense-workflow2.png)
-12. For *UI* property, select the *form* from the drop down. And click on the designer to save all the properties automatically.
-    ![UI Properties](images/usertask-properties.png)
-13. select **Expense Approval** action, click on **Open Data Association**, expand *Input* from source, expand *messageStartArgs* and expand *input* from right side, expand *formData* and map the below elements and refer the screenshot given below.
+11. Click on *Expense Approval* Task, click on **...** icon, click on **Map Data**
+12. Click *Edit* option for each field under *Actions* column and map the source elements as per the mappings given below. You may find similar elements under different objects, so please cross-check the screenshot to ensure the correct mappings.
     - merchantName to merchantName
     - merchantAddress to merchantAddress
     - transactionDate to expenseDate
     - total to amount
+    ![expense-mappings](images/expense-mappings.png)
     ![Expense Workflow3](images/expense-workflow3.png)
-14. Click on **Output**, map *output.taskOutcome* to *callBackEndArgs.outcome*
-    ![Expense Workflow4](images/expense-workflow4.png)
-15. Click on **Apply**.
-16. Go back to *Workflows* which is under *Human in the loop* tab by clicking *back* button
+13. Click on *<* to go back to the main window.
+14. Click on *End event* Task, click on **...** icon, click on **Map Data** and map as per the screenshot given below
+![Expense Workflow4](images/expense-workflow4.png)
+15. Click on *<* to go back to the main window.
+16. Go back to *Workflows* which is under *Human in the loop* tab by clicking *<* button
 17. Activate *Expense Workflow*
 
 ## Task 7: Configure the integrations and Activate
