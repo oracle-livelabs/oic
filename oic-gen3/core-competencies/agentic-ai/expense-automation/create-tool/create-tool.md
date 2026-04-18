@@ -77,9 +77,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
     ![Read Expense Receipt Tool](images/read-expense-receipt-configtool.png)
 
-4. Configure Guidelines (Optional)
-
-    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+4. Configure the *Guidelines* like the *Description*, then move the cursor out of the *Guidelines* field to enable the *Save* option.
 5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 3: Register *Approval Required* as an Agentic AI Tool
@@ -107,10 +105,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
     - In the **Parameters configuration** section, keep default values.
 
-4. Configure Guidelines (Optional)
-
-    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
+4. Configure the *Guidelines* like the *Description*, then move the cursor out of the *Guidelines* field to enable the *Save* option.
 5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 4: Register *HITL-Raise Approval Request* as an Agentic AI Tool
@@ -135,8 +130,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
     Click on **Create**
 3. Configure Parameters
     - In the **Parameters configuration** section, keep default values.
-4. Configure Guidelines (Optional)
-    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
+4. Configure the *Guidelines* like the *Description*, then move the cursor out of the *Guidelines* field to enable the *Save* option.
 5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 5: Register *Create Expense Oracle HCM* as an Agentic AI Tool
@@ -165,10 +159,7 @@ All the integrations have been pre-configured and meet the Agentic AI tool requi
 
     In the **Parameters configuration** section, keep default values.
 
-4. Configure Guidelines (Optional)
-
-    - Ideally we need to add any specific guidelines or constraints for LLM use (as applicable). For now, shall leave it blank.
-
+4. Configure the *Guidelines* like the *Description*, then move the cursor out of the *Guidelines* field to enable the *Save* option.
 5. Save Tool, Click **Save** to register the tool and Navigate back to the AI Agents page.
 
 ## Task 7: Verify All Tools are Registered
