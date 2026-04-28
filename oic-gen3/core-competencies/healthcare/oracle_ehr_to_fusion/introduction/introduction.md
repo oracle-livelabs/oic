@@ -124,7 +124,7 @@ The solution architecture includes:
           │            Map to Fusion Payload                    │
           │                    ▼                                │
           │  ┌──────────────────────────────────────────────┐   │
-          │   │  Oracle Fusion Cloud Adapter                │   │
+          │  │  Oracle Fusion Cloud Adapter                 │   │
           │  └──────────────────────────────────────────────┘   │
           │                                                     │
           │  ┌──────────────────────────────────────────────┐   │
