@@ -145,11 +145,11 @@ In continuation to the previous task the next step is to login to docker registr
 
 ## Task 6: Create and Deploy your function
 
-In this section we will initialize function workspace which generates a boilerplate code in python. We will create our excel to csv function code in python. We will make some modifications as per the code in the artifact provided. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/AAq_5pNpZL8ly52JkSs1x2l6WCypVSEC-Zs6m3XGXG5zpcMk-SooTr4EPEBF787Z/n/oicpm/b/oiclivelabs/o/oic3_native-actions.zip) lab artifacts to your desktop and unzip the file.
+In this section we will initialize function workspace which generates a boilerplate code in python. We will create our excel to csv function code in python. We will make some modifications as per the code in the artifact provided. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BYKvQSixJObNNYihDgIfN6_1E_vSQEF7BhLPx2Var2-8arOkdr_Cyrwkxdhp9nlu/n/oicpm/b/oiclivelabs/o/oic3_native-actions.zip) lab artifacts to your desktop and unzip the file.
 
 
 
-1.  In the **Cloud Shell** command line execute the below commands to create a directory  and initialize the workspace.
+1. In the **Cloud Shell** command line execute the below commands to create a directory  and initialize the workspace.
 
     ```
     <copy>
@@ -162,13 +162,13 @@ In this section we will initialize function workspace which generates a boilerpl
     ```
     You should see 3 files func.py, func.yaml, requirments.txt files created.
 
-2.  From the developer tools at the top banner, open **Cloud Editor**.
+2. From the developer tools at the top banner, open **Cloud Editor**.
 
 ![Open Cloud Editor](images/open-cloud-shell.png)
 
-3.  Select **func.py** file. On th eright hand side code editor sample boilerplate code is available. Replace the entire code with code snippet in the downloaded artifacts (func.py file) and save.
+3. Select **func.py** file. On th eright hand side code editor sample boilerplate code is available. Replace the entire code with code snippet in the downloaded artifacts (func.py file) and save.
 
-4.  Select the **requirements.txt** file. In the boilerplate code generated, replace with the below snippet and save the code.
+4. Select the **requirements.txt** file. In the boilerplate code generated, replace with the below snippet and save the code.
 
     ```
     <copy>
@@ -178,7 +178,7 @@ In this section we will initialize function workspace which generates a boilerpl
     </copy>
     ```
 
-5.  Enter the following single Fn Project command to build the function and its dependencies as a Docker image called **convert2CSV**, push the image to the specified Docker registry, and deploy the function to OCI Functions in the **oicnativeaction** application that you created earlier:
+5. Enter the following single Fn Project command to build the function and its dependencies as a Docker image called **convert2CSV**, push the image to the specified Docker registry, and deploy the function to OCI Functions in the **oicnativeaction** application that you created earlier:
 
     ```
     <copy>
@@ -188,7 +188,7 @@ In this section we will initialize function workspace which generates a boilerpl
 Note: The function image build might take a bit because of some pre req py libraries.
 ![Function Created](images/create-function-image-success.png)
 
-6.  Confirm that the function has been deployed to OCI Functions by clicking Functions (under Resources on the details page for the **oicnativeaction** application) and noting that the **convert2CSV** function now appears.
+6. Confirm that the function has been deployed to OCI Functions by clicking Functions (under Resources on the details page for the **oicnativeaction** application) and noting that the **convert2CSV** function now appears.
 
 ![List Function In The App](images/list-function-in-app.png)
 
@@ -200,4 +200,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, May 2026
