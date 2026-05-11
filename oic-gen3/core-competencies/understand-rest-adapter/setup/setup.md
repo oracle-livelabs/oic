@@ -28,7 +28,7 @@ Follow these steps to create a DB table which will be used as part of this works
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
-   ![Enter DB username](images/enter-username.png)
+    ![Enter DB username](images/enter-username.png)
 
 3. Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
 
