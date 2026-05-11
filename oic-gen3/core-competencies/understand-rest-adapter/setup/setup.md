@@ -20,7 +20,7 @@ This lab assumes you have:
 ## Task 1: Create a database table using an SQL script
 Follow these steps to create a DB table which will be used as part of this workshop.
 
-1.  If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
+1. If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
 
     ![Click Database Actions](images/click-database-actions.png)
 
@@ -28,9 +28,9 @@ Follow these steps to create a DB table which will be used as part of this works
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
-   ![Enter DB username](images/enter-username.png)
+    ![Enter DB username](images/enter-username.png)
 
-3.  Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
+3. Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
 
     ![Enter DB password](images/enter-password.png)
 
@@ -74,9 +74,9 @@ Similarly, copy  and run the below script to create **Order** table
     ```
 
 ## Task 2: Create ORDS Service for the database objects
-
 In the SQL Worksheet execute below set of script to create ORDS service.
-1.  Enable ORDS for the Schema. If your schema name is different modify the
+
+1. Enable ORDS for the Schema. If your schema name is different modify the
     p\_schema and p\_url\_mapping\_pattern values accordingly.
     ```
     <copy>
@@ -92,7 +92,7 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     </copy>
     ```
 
-2.  Create handlers to get a single Customer and get all orders for a Customer.
+2. Create handlers to get a single Customer and get all orders for a Customer.
 
     ```
     <copy>
@@ -175,7 +175,7 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     ```
 
 ## Task 4: Create a new client and associate Privilege(s)
-1.  Now that we have our rest services secured, we need to create a *Client* and associate the client with one or more  
+1. Now that we have our rest services secured, we need to create a *Client* and associate the client with one or more  
     privileges. We are going to create a client called *inventory\_partner\_company* which is going to consume the Customer and Order API to get real time customer information and orders for a specific customer.
 
     ```
@@ -197,7 +197,7 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     </copy>
     ```
 
-2.  Execute the below query and make a note of *ClientId* and *secret*
+2. Execute the below query and make a note of *ClientId* and *secret*
 
     ```
     <copy>
@@ -207,9 +207,9 @@ In the SQL Worksheet execute below set of script to create ORDS service.
     ```
 ## Task 5: Load sample data
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/MA-zpdJy9KGr43VNVgPlI_fNj2nGfZ6dKjaNxcB8kPgi0A7XhprgezdXXeBPGGcY/n/oicpm/b/oiclivelabs/o/oic3/core-competency/understand-rest-adapter/Understand-Rest-Adapter.zip) the zip file and unzip the files in a local drive folder
+1. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/qjUNYls616M-gurn_nl1d7rEhCCfERMG22wCS-yoJ0IFe3N-NcW48UVZTh16-E_k/n/oicpm/b/oiclivelabs/o/oic3/core-competency/understand-rest-adapter/Understand-Rest-Adapter.zip) the zip file and unzip the files in a local drive folder
 
-2.  In the  *SQL Database Actions* select the DB table **Customer** right click **Data Loading &gt Upload Data..**
+2. In the  *SQL Database Actions* select the DB table **Customer** right click **Data Loading &gt Upload Data..**
     ![Load Sample Data](images/load-sample-data.png)
     Click on  **Add File** and Select the **customer.csv** from the local drive folder. Select **Run All** Action from top left.
     ![Load Customer Sample Data](images/load-customer-sample-data.png)
@@ -224,21 +224,19 @@ In the SQL Worksheet execute below set of script to create ORDS service.
 2. Select **REST** tile from the Database Action Launchpad
 
 3. Under the *Objects* category select **Modules**
-   ![REST DB Actions](images/db-actions-rest-tile.png)
+    ![REST DB Actions](images/db-actions-rest-tile.png)
 
 4. Verify the *inventory.v1* module type. Copy the Open API 3.0 catalog url and confirm in a browser window that it is
     reachable. We will use the url to configure REST adapter connection in OIC 3 in the later section.
-   ![Inventory Module](images/inventory-module.png)
+    ![Inventory Module](images/inventory-module.png)
 
-   Make a note of the OAuth Token URL from the catalog which is of below highlighted format.
+    Make a note of the OAuth Token URL from the catalog which is of below highlighted format.
 
-   ![Open API Token URL](images/oas-token-url.png)
-5. Select the **inventory.v1** module and verify the *Order* and *Customer* resources and handlers which are created
-   earlier
-
+    ![Open API Token URL](images/oas-token-url.png)
+5. Select the **inventory.v1** module and verify the *Order* and *Customer* resources and handlers which are created earlier
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Jan 2026
+* **Last Updated By/Date** - Subhani Italapuram, May 2026

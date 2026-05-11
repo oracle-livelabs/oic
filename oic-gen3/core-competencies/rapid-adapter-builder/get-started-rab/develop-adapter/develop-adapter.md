@@ -28,33 +28,33 @@ This lab assumes you have successfully completed all previous lab sections
 
 ## Task 1: Import and test the Postman Collection
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/gv0J-Iza_p0uU8Cct_XwRupcPO1tnNivFkJP0UJp_eB9S52_JWdJJi4W8rD2zjQi/n/oicpm/b/oiclivelabs/o/oic3/get-started-rab/lab-artifacts-rab.zip) the lab artifacts and unzip in your local directory.
+1. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/RfKAxs7QsSKqSBkTcj0FWlUg4nO4a_FrASHnw9vOFwJ5SckjS6FQHHyyUG0ipDBK/n/oicpm/b/oiclivelabs/o/oic3/get-started-rab/lab-artifacts-rab.zip) the lab artifacts and unzip in your local directory.
 
-2.  Open the Postman application and sign in with your account.
+2. Open the Postman application and sign in with your account.
 
-3.  Select **Import** and browse the Postman collection file from the lab artifacts saved earlier in local directory. The collection will consists of a set of resources related to Acme Ordermanagement Application created in ORDS in the previous section.
+3. Select **Import** and browse the Postman collection file from the lab artifacts saved earlier in local directory. The collection will consists of a set of resources related to Acme Ordermanagement Application created in ORDS in the previous section.
 
     ![Postman Collection Import](images/postman-collection-import.png)
 
-4.  Select **Acme OM Application** and click on **Variables** in the right hand side pane. In the Current Value text field provide the ORDS url noted in the **Setup** section of previous lab. Your url pattern should be like ex: https://&lt;ords_host&gt;/ords/admin/om/v1
+4. Select **Acme OM Application** and click on **Variables** in the right hand side pane. In the Current Value text field provide the ORDS url noted in the **Setup** section of previous lab. Your url pattern should be like ex: https://&lt;ords_host&gt;/ords/admin/om/v1
 
     ![Modify Base URL](images/base-url-variable-edit.png)
 
-5.  Test a couple of API's under **Customers** resource. Select *Get All Customers* resource and make sure you get a response back to ensure Acme Order Management Application REST API is working.
+5. Test a couple of API's under **Customers** resource. Select *Get All Customers* resource and make sure you get a response back to ensure Acme Order Management Application REST API is working.
 
 
 ## Task 2: Initialize a workspace in Visual Studio
 
-1.  Create a folder named **AcmeOMApp** in your local directory.
+1. Create a folder named **AcmeOMApp** in your local directory.
 
-2.  In VS Code, click *Explorer* ![VS Code Explorer Icon](images/explorer-icon.png).
+2. In VS Code, click *Explorer* ![VS Code Explorer Icon](images/explorer-icon.png).
 
-3.  Click *Open Folder*, and choose a folder on your system as the workspace for adapter development.
+3. Click *Open Folder*, and choose a folder on your system as the workspace for adapter development.
     The folder is now listed on the left in the Explorer view.
 
->   Note: You can also click File in the top ribbon, and select Open Folder... to open a folder in VS Code.
+    > **Note:** You can also click File in the top ribbon, and select Open Folder... to open a folder in VS Code.
 
-4.  Press *Ctrl + Shift + P* to open the command palette, type **RAB: Initialize Workspace**, and hit Enter.
+4. Press *Ctrl + Shift + P* to open the command palette, type **RAB: Initialize Workspace**, and hit Enter.
 
     The VS Code extension now initializes the workspace, and creates a few directories and template files in the workspace. The directories and files created are displayed in the Explorer view on the left. The following directories and files are created:
 
@@ -63,53 +63,53 @@ This lab assumes you have successfully completed all previous lab sections
     - misc: You can save all Postman collections in this folder. Ensure that the file names of all Postman collections are appended with .postman_collection.json.
     - logo.svg: A default logo file for your adapter is created under the root folder. You can replace this file with the required image. The logo should be of svg format only.
 
-5.  Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
+5. Navigate to the local directory structure **misc** directory. Copy and paste the updated postman collection into the **misc** directory. You may delete the existing postman collection generated as part of the workspace initialization.
 
 
-##  Task 3: Configure the publisher profile for the extension.
+## Task 3: Configure the publisher profile for the extension.
 
-1.  In VS Code, click *OIC Rapid Adapter Builder* ![VS Code Explorer Icon](images/oic-rab-icon.png) on the sidebar.
+1. In VS Code, click *OIC Rapid Adapter Builder* ![VS Code Explorer Icon](images/oic-rab-icon.png) on the sidebar.
 
-2.  In the resulting view, click Edit in the Publisher Profiles section. The publisher-profiles.yaml file opens in the editor.
+2. In the resulting view, click Edit in the Publisher Profiles section. The publisher-profiles.yaml file opens in the editor.
 
-3.  Update the file with the client credentials you obtained earlier. In addition, update the **active** field with the name of the profile to use. The following example shows the details of 3 Oracle Integration instances, named dev, uat and oic3demo, stored in a .yaml file. See highlighted below and provide the values as per your client application configuration.
+3. Update the file with the client credentials you obtained earlier. In addition, update the **active** field with the name of the profile to use. The following example shows the details of 3 Oracle Integration instances, named dev, uat and oic3demo, stored in a .yaml file. See highlighted below and provide the values as per your client application configuration.
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| name         | oic3demo     |
-| host         | https://design.integration.&lt;region&gt;.ocp.oraclecloud.com       |
-| integrationInstance  | The name of your Oracle Integration instance.|
-| tokenUrl  | The IDCS get token url ex: https://idcs-xxxxx.identity.oraclecloud.com/oauth2/v1/token|
-| clientId  | The client ID of the configured application in IDCS noted earlier|
-| clientSecret  | The client secret of the configured application in IDCS noted earlier|
-| scope  | The allowed scope of the configured application in IDCS noted earlier.|
-{: title="Configure Publisher Profile Values"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | name         | oic3demo     |
+    | host         | https://design.integration.&lt;region&gt;.ocp.oraclecloud.com       |
+    | integrationInstance  | The name of your Oracle Integration instance.|
+    | tokenUrl  | The IDCS get token url ex: https://idcs-xxxxx.identity.oraclecloud.com/oauth2/v1/token|
+    | clientId  | The client ID of the configured application in IDCS noted earlier|
+    | clientSecret  | The client secret of the configured application in IDCS noted earlier|
+    | scope  | The allowed scope of the configured application in IDCS noted earlier.|
+    {: title="Configure Publisher Profile Values"}
 
-![Publisher Profile YAML](images/publisher-profile-yaml.png)
+    ![Publisher Profile YAML](images/publisher-profile-yaml.png)
 
-4.  Save publisher yaml file
+4. Save publisher yaml file
 
-##  Task 4: Generate the Adapter definition document
+## Task 4: Generate the Adapter definition document
 
 Using the VS Code extension for Rapid Adapter Builder, you can generate an adapter definition document from the exported Postman collection.
 
-1.  In VS Code, click *Explorer* ![VS Code Explorer Icon](images/explorer-icon.png) on the sidebar to bring up the Explorer view. The directory structure of your workspace folder is displayed.
+1. In VS Code, click *Explorer* ![VS Code Explorer Icon](images/explorer-icon.png) on the sidebar to bring up the Explorer view. The directory structure of your workspace folder is displayed.
 
-2.  Click the **misc** directory listing to expand it. Select the **Acme OM Application.postman_collection.json** file. Right Click *RAB: Convert POSTMAN Collection*
+2. Click the **misc** directory listing to expand it. Select the **Acme OM Application.postman_collection.json** file. Right Click *RAB: Convert POSTMAN Collection*
 
-![RAB Convert Postman Collection](images/rab-convert-postman-collection.png)
+    ![RAB Convert Postman Collection](images/rab-convert-postman-collection.png)
 
-3.  In the Select request(s) pane, *select all* requests to convert, and Select **Get All customers** as test connection.
+3. In the Select request(s) pane, *select all* requests to convert, and Select **Get All customers** as test connection.
 
-![Select Requests](images/select-requests-convert.png)
+    ![Select Requests](images/select-requests-convert.png)
 
-Click *Done*
+    Click *Done*
 
-4.  In the dialog box that appears, click *Update main*. Now, the VS Code extension converts the data from the Postman collection and adds it to the default adapter definition document (main.add.json) within the definitions directory of your workspace. In addition, the document opens in the VS Code editor.
+4. In the dialog box that appears, click *Update main*. Now, the VS Code extension converts the data from the Postman collection and adds it to the default adapter definition document (main.add.json) within the definitions directory of your workspace. In addition, the document opens in the VS Code editor.
 
-5.  Copy the **logo.svg** (downloaded from lab-artifacts zip) into your workspace under root folder. You may delete the default logo.svg file generated as part of workspace initialization. The copied graphic will be the icon used in OIC for the custom adapter.
+5. Copy the **logo.svg** (downloaded from lab-artifacts zip) into your workspace under root folder. You may delete the default logo.svg file generated as part of workspace initialization. The copied graphic will be the icon used in OIC for the custom adapter.
 
-##  Task 5: Understand the Adapter definition document (Read Only Task)
+## Task 5: Understand the Adapter definition document (Read Only Task)
 
 An adapter definition document is a JSON-formatted document that describes the functional behavior and the implementation for an adapter. You build an adapter by authoring an adapter definition document. The adapter definition document logically consists of several sections as shown below.
 
@@ -123,9 +123,9 @@ Following is the basic properties you should provide when building an adapter. S
   - Display name and description which appears in Oracle Integration Console
   - A version number to determine your adapter release
 
-Sample of Info section
+    Sample of Info section
 
-![Sample Info Section](images/add-info-section-sample.png)
+    ![Sample Info Section](images/add-info-section-sample.png)
 
 ***schemas section***: The VS Code extension for Rapid Adapter Builder generates schemas for requests and responses when you convert a Postman collection to an adapter definition document. This information appears in the schemas section of the document. You can update this information as needed for your requirements.
 
@@ -193,49 +193,51 @@ Sample of Flow Section
 
 ![Sample of Flow Section](images/add-flow-section-sample.png)
 
-##  Task 6: Configure the Adapter definition document
+## Task 6: Configure the Adapter definition document
 
 In this section you will configure **info** section and also add security policies that the adapter needs to support. Open the **main.add.json** file in VS.
 
 1. In the **info** section provide the following values for the respective properties.
 
-| **Property**        | **Value**          |       
-| --- | ----------- |
-| id         | livelab:acme-om-application     |
-| appInfo &gt; name  | Acme OM Application|
-| appInfo &gt; description  | This is an order management application for Acme |
-| publisherInfo &gt; name   | Oracle Live Lab |
-{: title="Info Section Property Values"}
+    | **Property**        | **Value**          |       
+    | --- | ----------- |
+    | id         | livelab:acme-om-application     |
+    | appInfo &gt; name  | Acme OM Application|
+    | appInfo &gt; description  | This is an order management application for Acme |
+    | publisherInfo &gt; name   | Oracle Live Lab |
+    {: title="Info Section Property Values"}
 
-2.  Navigate to the **connection** section and observe that *No Authentication* is already added. The API do not use any authentication and the auth type is captured from the postman collection automatically.
+2. Navigate to the **connection** section and observe that *No Authentication* is already added. The API do not use any authentication and the auth type is captured from the postman collection automatically.
 
-![Add No Auth Security Policy](images/add-connection-section-no-auth.png)
+    ![Add No Auth Security Policy](images/add-connection-section-no-auth.png)
 
-In the **connection** &gt; **connectionProperties** section, change the property value of **hidden** to *false*. Observe a new property named **baseUrl** is automatically added to allow the end user to provide host url of the ACME OM Application in the adapter connection in OIC. This property **baseUrl** will be used in the respective flows to construct the concrete endpoint of all the operations API supports at runtime.
+    In the **connection** &gt; **connectionProperties** section, change the property value of **hidden** to *false*. Observe a new property named **baseUrl** is automatically added to allow the end user to provide host url of the ACME OM Application in the adapter connection in OIC. This property **baseUrl** will be used in the respective flows to construct the concrete endpoint of all the operations API supports at runtime.
 
-Note: baseUrl is a variable defined in the Postman Collection
+    > **Note:** baseUrl is a variable defined in the Postman Collection
 
-![New No Auth Code Snippet](images/connection-property-hidden-value-true.png)
+    ![New No Auth Code Snippet](images/connection-property-hidden-value-true.png)
 
-Assume ORDS API will be secured by Basic Authentication in future. In such case you can easily add another security policy in the connection section. Right Click anywhere in the **Connection** section, and click on *RAB: Insert Authentication Scheme* and Select *Basic Authentication*.
+    Assume ORDS API will be secured by Basic Authentication in future. In such case you can easily add another security policy in the connection section. Right Click anywhere in the **Connection** section, and click on *RAB: Insert Authentication Scheme* and Select *Basic Authentication*.
 
-![Add Basic Auth Security Policy](images/add-connection-section-basic-auth.png)
+    ![Add Basic Auth Security Policy](images/add-connection-section-basic-auth.png)
 
-A code snippet is added in the Connection section with **BASIC_AUTH** security policy.
+    A code snippet is added in the Connection section with **BASIC_AUTH** security policy.
 
-3.  In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Lab 4 - Task 4**. The test connection flow will use the **uri** generated by the RAB plugin so that ACME adapter connection concrete url is generated based on expression value used in baseUrl. The **uri** is constructed dynamically at runtime.
+3. In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Lab 4 - Task 4**. The test connection flow will use the **uri** generated by the RAB plugin so that ACME adapter connection concrete url is generated based on expression value used in baseUrl. The **uri** is constructed dynamically at runtime.
 
-Note: We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
-```
-  "${.connectionProperties.baseUrl +\"/customers\"}"
-```
-> Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB without any parameters are appropriate to configure in the test connection flow
+    > **Note:** We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
+    
+    ```
+      "${.connectionProperties.baseUrl +\"/customers\"}"
+    ```
+    
+    > Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB without any parameters are appropriate to configure in the test connection flow
 
-![Configure Test Connection Endpoint](images/add-flow-section-test-connection.png)
+    ![Configure Test Connection Endpoint](images/add-flow-section-test-connection.png)
 
-4.  Save the ADD file
+4. Save the ADD file
 
-5.  In the **flows** section for every flow action observe the **uri** value. All of them have a dynamic expression which evaluates to a concrete endpoint at runtime.
+5. In the **flows** section for every flow action observe the **uri** value. All of them have a dynamic expression which evaluates to a concrete endpoint at runtime.
 
 > If you have selected all resources you would see a flow action generated for each of the CRUD operation. As per below reference
 
@@ -262,23 +264,23 @@ Note: We can use .connectionProperties.&lt;property-name&gt; configured in the C
 | DeleteAProductFlowAction | "${.connectionProperties.baseUrl +\"/products\"}"     |
 {: title="Flow Action URI Configuration"}
 
-##  Task 7: Validate the Adapter Definition Document
+## Task 7: Validate the Adapter Definition Document
 
 Before you publish the adapter to Oracle Integration, you must validate the adapter definition document. Validating the document ensures that it does not contain any syntactic or semantic errors.
 
-1.  In VS Code, click **Explorer** on the sidebar. The directory structure of your workspace folder is displayed.
+1. In VS Code, click **Explorer** on the sidebar. The directory structure of your workspace folder is displayed.
 
-2.  Click the **definitions** directory listing to expand it.
+2. Click the **definitions** directory listing to expand it.
 
-3.  Right click the adapter definition document (main.add.json) and then click *RAB: Validate*.
+3. Right click the adapter definition document (main.add.json) and then click *RAB: Validate*.
 
-4.  In the output console at the bottom you should see confirmation message, indicates that your adapter definition document is valid and ready to be published.
+4. In the output console at the bottom you should see confirmation message, indicates that your adapter definition document is valid and ready to be published.
 
 ##  Task 8: Register the Adapter on Oracle Integration
 
 After you have validated the adapter definition document, you can make your adapter available on Oracle Integration.
 
-1.  In the VS editor, press **Ctrl + Shift + P** to open the command palette. From the commands displayed, click the *RAB: Register RAB Bundle* command.
+1. In the VS editor, press **Ctrl + Shift + P** to open the command palette. From the commands displayed, click the *RAB: Register RAB Bundle* command.
 
 Now, the VS Code extension registers the adapter on your Oracle Integration instance. The adapter is registered on the instance specified as active in the publisher profile.
 
@@ -288,11 +290,11 @@ You should see a confirmation in the Output Console.
 
 ![Register Adapter Confirmation](images/reigster-adapter-confirmation.png)
 
-2.  Log in to your Oracle Integration instance and check for the registered adapter. In the navigation pane, click Design, and then click Adapters. On the Adapters page, click the Search icon, type the name of your adapter in the **Search** field, and hit **Enter**.
+2. Log in to your Oracle Integration instance and check for the registered adapter. In the navigation pane, click Design, and then click Adapters. On the Adapters page, click the Search icon, type the name of your adapter in the **Search** field, and hit **Enter**.
 
 ![Acme Custom Adapter Listed](images/oic-custom-adpater-show.png)
 
-3.  You'll see the adapter you published in the search results. Point to the adapter's row and click  **View** icon to view its details.
+3. You'll see the adapter you published in the search results. Point to the adapter's row and click  **View** icon to view its details.
 
 You may now **proceed to the next lab**.
 
@@ -302,4 +304,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, May 2026
