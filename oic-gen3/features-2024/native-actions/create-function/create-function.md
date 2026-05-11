@@ -22,46 +22,46 @@ This lab assumes you have:
 
 ## Task 1: Create a function application
 
-1.  Sign in to the OCI Console as a functions developer.
+1. Sign in to the OCI Console as a functions developer.
 
-2.  Open the navigation menu, click *Developer Services*. Under **Functions**, click *Applications*
+2. Open the navigation menu, click *Developer Services*. Under **Functions**, click *Applications*
 
-3.  Select the region you're using with OCI Functions.
+3. Select the region you're using with OCI Functions.
 
-4.  Select the same compartment (example: ll-native-actions) you have used to provision OIC instance in the previous lab. We will create the Function application in the same compartment.
+4. Select the same compartment (example: ll-native-actions) you have used to provision OIC instance in the previous lab. We will create the Function application in the same compartment.
 
-5.  Click *Create Application*
+5. Click *Create Application*
 
-6.  Specify:
-      - **oicnativeaction** as the name for the new application. You'll deploy your first function in this application, and specify this application when deploying/invoking the function.
-      - The VCN and subnet in which to run the function. Select the **public subnet** in the VCN **ll-native-actions-vcn** , and a **private subnet** in the same VCN.
-      - Leave the shape with defaults
+6. Specify:
+    - **oicnativeaction** as the name for the new application. You'll deploy your first function in this application, and specify this application when deploying/invoking the function.
+    - The VCN and subnet in which to run the function. Select the **public subnet** in the VCN **ll-native-actions-vcn** , and a **private subnet** in the same VCN.
+    - Leave the shape with defaults
 
-![Create Function Application](images/create-function-app.png)
+    ![Create Function Application](images/create-function-app.png)
 
-7.  Click **Create**
+7. Click **Create**
 
 ## Task 2: Set up your Cloud Shell dev environment
 
 We will use OCI Cloud Shell environment to develop and deploy our function
 
-1.  Click the **oicnativeaction** function application you just created to display the application details page.
+1. Click the **oicnativeaction** function application you just created to display the application details page.
 
-2.  Click the *Getting Started* link, and then click *Cloud Shell Setup*. Duplicate a browser window to copy paste few commands in cloud shell as we follow through the next steps.
+2. Click the *Getting Started* link, and then click *Cloud Shell Setup*. Duplicate a browser window to copy paste few commands in cloud shell as we follow through the next steps.
 
-![Get Started Page](images/function-app-cloudshell-select.png)
+    ![Get Started Page](images/function-app-cloudshell-select.png)
 
-**Tip:** The Getting Started page now displays commands tailored specifically for you. You copy and paste these commands to configure your Cloud Shell environment for functions development.
+    **Tip:** The Getting Started page now displays commands tailored specifically for you. You copy and paste these commands to configure your Cloud Shell environment for functions development.
 
-![Functions All Commands Page](images/functions-all-commands-page.png)
+    ![Functions All Commands Page](images/functions-all-commands-page.png)
 
-3.  Click *Launch Cloud Shell* to display the Cloud Shell terminal window. Make sure the Network is selected as public in the green banner.
+3. Click *Launch Cloud Shell* to display the Cloud Shell terminal window. Make sure the Network is selected as public in the green banner.
 
 ## Task 3: Set up Fn Project CLI context
 
 Copy and paste commands from the Getting Started page into the Cloud Shell terminal window to configure your environment, as follows:
 
-1.  Find the name of the pre-created Fn Project context for the current region in which you created the application:
+1. Find the name of the pre-created Fn Project context for the current region in which you created the application:
 
     ```
     <copy>
@@ -70,7 +70,7 @@ Copy and paste commands from the Getting Started page into the Cloud Shell termi
     ```
     At least two Fn Project contexts are returned, a default context and a context for the current region (for example, named us-phoenix-1).
 
-2.  Set the Fn Project context to use the region context. where <region-context> is the context for the current region. For example:
+2. Set the Fn Project context to use the region context. where <region-context> is the context for the current region. For example:
 
     ```
     <copy>
@@ -78,7 +78,7 @@ Copy and paste commands from the Getting Started page into the Cloud Shell termi
     </copy>
     ```
 
-3.  Configure the Fn Project context with the OCID of the current compartment that will own deployed functions:
+3. Configure the Fn Project context with the OCID of the current compartment that will own deployed functions:
 
     ```
     <copy>
@@ -88,7 +88,7 @@ Copy and paste commands from the Getting Started page into the Cloud Shell termi
 
     The current context should be updated.
 
-4.  Configure the Fn Project context with the Oracle Cloud Infrastructure Registry address in the current region and tenancy that you want to use with OCI Functions. Provide a unique repository name suffix (for example: oic-native-actions-repo) to distinguish your function images
+4. Configure the Fn Project context with the Oracle Cloud Infrastructure Registry address in the current region and tenancy that you want to use with OCI Functions. Provide a unique repository name suffix (for example: oic-native-actions-repo) to distinguish your function images
 
     ```
     <copy>
@@ -97,7 +97,7 @@ Copy and paste commands from the Getting Started page into the Cloud Shell termi
     ```
     where <repo-name-prefix> for example: is a prefix of your choosing for the Oracle Cloud Infrastructure Registry repository in which to store images for the function
 
-5.  Configure the Fn Project context with the OCID of the compartment for repositories to and from which you want OCI Functions to push and pull function images, by entering:
+5. Configure the Fn Project context with the OCID of the compartment for repositories to and from which you want OCI Functions to push and pull function images, by entering:
 
     ```
     <copy>
@@ -110,19 +110,19 @@ Copy and paste commands from the Getting Started page into the Cloud Shell termi
 
 In continuation to the above the next step is to generate auth token to login into registry
 
-1.  Click *Generate an Auth Token* to display the Auth Tokens page, and click **Generate Token**.
+1. Click *Generate an Auth Token* to display the Auth Tokens page, and click **Generate Token**.
 
-2.  Enter a meaningful description for the auth token in the Generate Token dialog, and click *Generate Token*. The new auth token is displayed (for example, 6aN...6MqX).
+2. Enter a meaningful description for the auth token in the Generate Token dialog, and click *Generate Token*. The new auth token is displayed (for example, 6aN...6MqX).
 
-3.  Copy the auth token immediately to a secure location from where you can retrieve it later, because you won't see the auth token again in the Console.
+3. Copy the auth token immediately to a secure location from where you can retrieve it later, because you won't see the auth token again in the Console.
 
-4.  Close the **Generate Token** dialog.
+4. Close the **Generate Token** dialog.
 
 ## Task 5: Log in to Registry
 
 In continuation to the previous task the next step is to login to docker registry with the auth token generated. This step confirms that you have access and ready to register and deploy the function code.
 
-1.  Copy the following command. Modify the command as per your tenancy namespace, username and region key.
+1. Copy the following command. Modify the command as per your tenancy namespace, username and region key.
 
     ```
     <copy>
@@ -130,10 +130,10 @@ In continuation to the previous task the next step is to login to docker registr
     </copy>
     ```
 
-2.  When prompted for a password, enter the Oracle Cloud Infrastructure auth token that you created and copied earlier.
+2. When prompted for a password, enter the Oracle Cloud Infrastructure auth token that you created and copied earlier.
     You should see login succeeded message. You're now ready to start creating, deploying, and invoking functions.
 
-3.  Execute the below to confirm function apps are listed
+3. Execute the below to confirm function apps are listed
 
     ```
     <copy>
@@ -146,8 +146,6 @@ In continuation to the previous task the next step is to login to docker registr
 ## Task 6: Create and Deploy your function
 
 In this section we will initialize function workspace which generates a boilerplate code in python. We will create our excel to csv function code in python. We will make some modifications as per the code in the artifact provided. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/BYKvQSixJObNNYihDgIfN6_1E_vSQEF7BhLPx2Var2-8arOkdr_Cyrwkxdhp9nlu/n/oicpm/b/oiclivelabs/o/oic3_native-actions.zip) lab artifacts to your desktop and unzip the file.
-
-
 
 1. In the **Cloud Shell** command line execute the below commands to create a directory  and initialize the workspace.
 
@@ -164,7 +162,7 @@ In this section we will initialize function workspace which generates a boilerpl
 
 2. From the developer tools at the top banner, open **Cloud Editor**.
 
-![Open Cloud Editor](images/open-cloud-shell.png)
+    ![Open Cloud Editor](images/open-cloud-shell.png)
 
 3. Select **func.py** file. On th eright hand side code editor sample boilerplate code is available. Replace the entire code with code snippet in the downloaded artifacts (func.py file) and save.
 
@@ -185,12 +183,13 @@ In this section we will initialize function workspace which generates a boilerpl
     fn -v deploy --app oicnativeaction
     </copy>
     ```
-Note: The function image build might take a bit because of some pre req py libraries.
-![Function Created](images/create-function-image-success.png)
+    
+    Note: The function image build might take a bit because of some pre req py libraries.
+    ![Function Created](images/create-function-image-success.png)
 
 6. Confirm that the function has been deployed to OCI Functions by clicking Functions (under Resources on the details page for the **oicnativeaction** application) and noting that the **convert2CSV** function now appears.
 
-![List Function In The App](images/list-function-in-app.png)
+    ![List Function In The App](images/list-function-in-app.png)
 
 You may now **proceed to the next lab**.
 

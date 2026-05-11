@@ -52,7 +52,7 @@ This lab assumes you have successfully completed all previous lab sections
 3. Click *Open Folder*, and choose a folder on your system as the workspace for adapter development.
     The folder is now listed on the left in the Explorer view.
 
-  > **Note:** You can also click File in the top ribbon, and select Open Folder... to open a folder in VS Code.
+    > **Note:** You can also click File in the top ribbon, and select Open Folder... to open a folder in VS Code.
 
 4. Press *Ctrl + Shift + P* to open the command palette, type **RAB: Initialize Workspace**, and hit Enter.
 
@@ -74,18 +74,18 @@ This lab assumes you have successfully completed all previous lab sections
 
 3. Update the file with the client credentials you obtained earlier. In addition, update the **active** field with the name of the profile to use. The following example shows the details of 3 Oracle Integration instances, named dev, uat and oic3demo, stored in a .yaml file. See highlighted below and provide the values as per your client application configuration.
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| name         | oic3demo     |
-| host         | https://design.integration.&lt;region&gt;.ocp.oraclecloud.com       |
-| integrationInstance  | The name of your Oracle Integration instance.|
-| tokenUrl  | The IDCS get token url ex: https://idcs-xxxxx.identity.oraclecloud.com/oauth2/v1/token|
-| clientId  | The client ID of the configured application in IDCS noted earlier|
-| clientSecret  | The client secret of the configured application in IDCS noted earlier|
-| scope  | The allowed scope of the configured application in IDCS noted earlier.|
-{: title="Configure Publisher Profile Values"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | name         | oic3demo     |
+    | host         | https://design.integration.&lt;region&gt;.ocp.oraclecloud.com       |
+    | integrationInstance  | The name of your Oracle Integration instance.|
+    | tokenUrl  | The IDCS get token url ex: https://idcs-xxxxx.identity.oraclecloud.com/oauth2/v1/token|
+    | clientId  | The client ID of the configured application in IDCS noted earlier|
+    | clientSecret  | The client secret of the configured application in IDCS noted earlier|
+    | scope  | The allowed scope of the configured application in IDCS noted earlier.|
+    {: title="Configure Publisher Profile Values"}
 
-![Publisher Profile YAML](images/publisher-profile-yaml.png)
+    ![Publisher Profile YAML](images/publisher-profile-yaml.png)
 
 4. Save publisher yaml file
 
@@ -97,13 +97,13 @@ Using the VS Code extension for Rapid Adapter Builder, you can generate an adapt
 
 2. Click the **misc** directory listing to expand it. Select the **Acme OM Application.postman_collection.json** file. Right Click *RAB: Convert POSTMAN Collection*
 
-![RAB Convert Postman Collection](images/rab-convert-postman-collection.png)
+    ![RAB Convert Postman Collection](images/rab-convert-postman-collection.png)
 
 3. In the Select request(s) pane, *select all* requests to convert, and Select **Get All customers** as test connection.
 
-![Select Requests](images/select-requests-convert.png)
+    ![Select Requests](images/select-requests-convert.png)
 
-Click *Done*
+    Click *Done*
 
 4. In the dialog box that appears, click *Update main*. Now, the VS Code extension converts the data from the Postman collection and adds it to the default adapter definition document (main.add.json) within the definitions directory of your workspace. In addition, the document opens in the VS Code editor.
 
@@ -199,39 +199,41 @@ In this section you will configure **info** section and also add security polici
 
 1. In the **info** section provide the following values for the respective properties.
 
-| **Property**        | **Value**          |       
-| --- | ----------- |
-| id         | livelab:acme-om-application     |
-| appInfo &gt; name  | Acme OM Application|
-| appInfo &gt; description  | This is an order management application for Acme |
-| publisherInfo &gt; name   | Oracle Live Lab |
-{: title="Info Section Property Values"}
+    | **Property**        | **Value**          |       
+    | --- | ----------- |
+    | id         | livelab:acme-om-application     |
+    | appInfo &gt; name  | Acme OM Application|
+    | appInfo &gt; description  | This is an order management application for Acme |
+    | publisherInfo &gt; name   | Oracle Live Lab |
+    {: title="Info Section Property Values"}
 
 2. Navigate to the **connection** section and observe that *No Authentication* is already added. The API do not use any authentication and the auth type is captured from the postman collection automatically.
 
-![Add No Auth Security Policy](images/add-connection-section-no-auth.png)
+    ![Add No Auth Security Policy](images/add-connection-section-no-auth.png)
 
-In the **connection** &gt; **connectionProperties** section, change the property value of **hidden** to *false*. Observe a new property named **baseUrl** is automatically added to allow the end user to provide host url of the ACME OM Application in the adapter connection in OIC. This property **baseUrl** will be used in the respective flows to construct the concrete endpoint of all the operations API supports at runtime.
+    In the **connection** &gt; **connectionProperties** section, change the property value of **hidden** to *false*. Observe a new property named **baseUrl** is automatically added to allow the end user to provide host url of the ACME OM Application in the adapter connection in OIC. This property **baseUrl** will be used in the respective flows to construct the concrete endpoint of all the operations API supports at runtime.
 
-Note: baseUrl is a variable defined in the Postman Collection
+    > **Note:** baseUrl is a variable defined in the Postman Collection
 
-![New No Auth Code Snippet](images/connection-property-hidden-value-true.png)
+    ![New No Auth Code Snippet](images/connection-property-hidden-value-true.png)
 
-Assume ORDS API will be secured by Basic Authentication in future. In such case you can easily add another security policy in the connection section. Right Click anywhere in the **Connection** section, and click on *RAB: Insert Authentication Scheme* and Select *Basic Authentication*.
+    Assume ORDS API will be secured by Basic Authentication in future. In such case you can easily add another security policy in the connection section. Right Click anywhere in the **Connection** section, and click on *RAB: Insert Authentication Scheme* and Select *Basic Authentication*.
 
-![Add Basic Auth Security Policy](images/add-connection-section-basic-auth.png)
+    ![Add Basic Auth Security Policy](images/add-connection-section-basic-auth.png)
 
-A code snippet is added in the Connection section with **BASIC_AUTH** security policy.
+    A code snippet is added in the Connection section with **BASIC_AUTH** security policy.
 
-3.  In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Lab 4 - Task 4**. The test connection flow will use the **uri** generated by the RAB plugin so that ACME adapter connection concrete url is generated based on expression value used in baseUrl. The **uri** is constructed dynamically at runtime.
+3. In the **flows** section go to the **testConnectionFlow** snippet, verify the **get all customers** concrete endpoint url is configured. The endpoint of **get all customers** is captured automatically based on the choice made in **Lab 4 - Task 4**. The test connection flow will use the **uri** generated by the RAB plugin so that ACME adapter connection concrete url is generated based on expression value used in baseUrl. The **uri** is constructed dynamically at runtime.
 
-Note: We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
-```
-  "${.connectionProperties.baseUrl +\"/customers\"}"
-```
-> Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB without any parameters are appropriate to configure in the test connection flow
+    > **Note:** We can use .connectionProperties.&lt;property-name&gt; configured in the Connection Properties section.
+    
+    ```
+      "${.connectionProperties.baseUrl +\"/customers\"}"
+    ```
+    
+    > Note: We need a valid endpoint which do not accept any parameters or so to make sure test connection is working. API endpoints of GET VERB without any parameters are appropriate to configure in the test connection flow
 
-![Configure Test Connection Endpoint](images/add-flow-section-test-connection.png)
+    ![Configure Test Connection Endpoint](images/add-flow-section-test-connection.png)
 
 4. Save the ADD file
 
