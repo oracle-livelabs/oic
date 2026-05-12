@@ -17,12 +17,12 @@
             "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
-            "title": "Lab 1: Install and Configure the Recipe",
-            "filename": "../../install-configure-recipe/install-configure-recipe.md"
+            "title": "Lab 1: Install and Configure the Accelerator",
+            "filename": "../../install-configure-accelerator/install-configure-accelerator.md"
         },
         {
-            "title": "Lab 2: Test the Recipe",
-            "filename": "../../test-recipe/test-recipe.md"
+            "title": "Lab 2: Activate and Test the Accelerator",
+            "filename": "../../activate-test-accelerator/activate-test-accelerator.md"
         },
         {
             "title": "Need Help?",

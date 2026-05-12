@@ -1,4 +1,4 @@
-# Test the Recipe
+# Test the Accelerator
 
 ## Introduction
 
