@@ -4,7 +4,7 @@
 
 This LiveLab demonstrates how to use the Oracle Fusion Cloud SCM — Oracle Health EHR | Sync Items accelerator to synchronize item master, item location, and item cost information from Oracle Fusion Cloud SCM with Oracle Health EHR.
 
-The accelerator enables scheduled synchronization of SCM item data using Oracle Integration. The Synchronize Items with Oracle Health scheduled process extracts item data from Oracle WebCenter Content and securely transfers the files to an SFTP location for downstream Oracle Health EHR processing.
+The accelerator enables scheduled synchronization of SCM item data using Oracle Integration. The Synchronize Items with Oracle Health scheduled process extracts item data from Oracle WebCenter Content, transforms the data, and loads it into Oracle Health Interface Tables for further downstream processing within Oracle Health EHR.
 
 This solution helps healthcare organizations streamline inventory management, automate item synchronization processes, and improve consistency between Oracle SCM and Oracle Health systems.
 
@@ -12,7 +12,6 @@ The integration solution orchestrates item synchronization and transaction proce
 
 * Oracle Fusion Cloud SCM / ERP Cloud
 * Oracle WebCenter Content
-* Secure File Transfer Protocol (SFTP) servers
 * Oracle Health
 
 The accelerator automates healthcare inventory-related integrations and reduces manual processing effort.
@@ -42,8 +41,10 @@ Before starting this lab, ensure you have:
 
 * Oracle Cloud Account with credits to provision services.
 * Access to Oracle Integration Cloud (OIC) healthcare edition
-* Access to Oracle Fusion SCM
-* Access to Oracle Health EHR
+* Access to Oracle Fusion SCM (Oracle Fusion Cloud SCM Update 24D or later)
+* An account in Oracle ERP Cloud with the Administrator role
+* Access to Oracle Health EHR (Oracle Health EHR 2025.3 or later)
+* An account in Oracle Health EHR with the Administrator role
 * Basic understanding of REST APIs
 * Familiarity with healthcare data concepts (optional)
 
@@ -84,7 +85,6 @@ The accelerator uses these primary connections:
 * Files are stored in Oracle WebCenter Content.
 * The scheduled synchronization process triggers Oracle Integration.
 * Integration flows read item master, location, and cost files.
-* Files are transferred securely to an SFTP location.
 * Oracle Health EHR consumes the synchronized data
 
 ## Task 5: Solution Overview
@@ -119,19 +119,19 @@ You can use the actual integration names from the uploaded document:
 
 ## Task 7: Suggested Architecture Diagram Flow 2
 
-        Oracle Health
-                │
-                ▼
-        Complete Transactions in Oracle Health
-                │
-                ▼
-        Oracle Integration Retrieves Transactions
-                │
-                ▼
-        Transform and Validate Transaction Data
-                │
-                ▼
-        Determine Item Type
+            Oracle Health
+                    │
+                    ▼
+            Complete Transactions in Oracle Health
+                    │
+                    ▼
+            Oracle Integration Retrieves Transactions
+                    │
+                    ▼
+            Transform and Validate Transaction Data
+                    │
+                    ▼
+            Determine Item Type
             ┌─────────────────────┐
             │                     │
             ▼                     ▼

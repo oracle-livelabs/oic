@@ -17,6 +17,14 @@
             "filename": "../../../../../common/provision-oic/provision.md"
         },
         {
+            "title": "Use Cases",
+            "filename": "../../usecases/usecases.md"
+        },
+        {
+            "title": "Configure SCM",
+            "filename": "../../configure-scm/configure-scm.md"
+        },
+        {
             "title": "Lab 1: Install and Configure the Accelerator",
             "filename": "../../install-configure-accelerator/install-configure-accelerator.md"
         },
