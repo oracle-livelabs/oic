@@ -88,7 +88,8 @@ Before starting this lab, ensure that:
 8. Verify that the publication maps and filters required for Oracle Health integration are configured correctly.
 9. Click Save and Close after reviewing the configuration.
 10. Validation
-Verify that:
+
+    Verify that:
     - The Oracle Health spoke system exists.
     - Publication maps are assigned correctly.
     - Required item classes are included.
@@ -112,7 +113,8 @@ Verify that:
     - Organization Assignments
 7. Confirm that the item classes are configured correctly for Oracle Health spoke system publication.
 8. Validation
-Verify that:
+
+    Verify that:
     - Required item classes exist.
     - Attribute groups are configured correctly.
     - Required attributes are enabled.
@@ -188,7 +190,8 @@ Verify that:
 2. Confirm publication attributes are enabled.
 3. Verify organization assignment is configured correctly.
 4. Validation
-Verify that:
+
+    Verify that:
     - The required item exists.
     - The item is assigned to the correct organization.
     - The item class is configured correctly.
@@ -214,7 +217,8 @@ Verify that:
     - Effective Dates
 10. Click Save and Close.
 11. Validation
-Verify that:
+
+    Verify that:
     - The Trading Partner Item is configured successfully.
     - The manufacturer matches the Oracle Health EHR configuration.
     - The item relationship is active and valid.
