@@ -146,6 +146,8 @@ You may now **proceed to the next lab**.
 ## Learn More
 
 * [Oracle Integration 3 Documentation](https://docs.oracle.com/en/cloud/paas/application-integration/index.html)
+* [Get Started with Healthcare](https://docs.oracle.com/en/cloud/paas/application-integration/integration-healthcare/get-started-healthcare.html)
+
 * [Sync Items From Oracle Fusion Cloud SCM to Oracle Health EHR](https://docs.oracle.com/en/cloud/saas/supply-chain-and-manufacturing/26b/fasih/index.html)
 
 ## Acknowledgements

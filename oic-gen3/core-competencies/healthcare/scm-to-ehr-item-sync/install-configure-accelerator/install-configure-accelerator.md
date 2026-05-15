@@ -142,7 +142,6 @@ In the **Lookups** section, click the lookup name to edit and update the require
 | Oracle PLM Item Event Stub          | Event trigger flow             |
 | Get Transactions Summary            | Transaction summary processing |
 
-
 - Click on **Learn about the Integration** to understand the details of the integration flow.
     ![Learn About the Integration](images/learn-about-integration.png)
 
@@ -174,6 +173,9 @@ In the **Lookups** section, click the lookup name to edit and update the require
 * [Monitor Integrations in a Project](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/monitor-integrations-project.html)
 
 * [Oracle Integration 3 FHIR Adapter](https://docs.oracle.com/en/cloud/paas/application-integration/fhir-adapter/index.html)
+
+* [Get Started with Healthcare](https://docs.oracle.com/en/cloud/paas/application-integration/integration-healthcare/get-started-healthcare.html)
+
 
 ## Acknowledgements
 
