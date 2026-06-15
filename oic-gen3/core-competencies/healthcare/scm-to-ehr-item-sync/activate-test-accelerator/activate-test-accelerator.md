@@ -1,4 +1,4 @@
-# Test the Accelerator
+# Activate and Test the Accelerator
 
 ## Introduction
 
@@ -37,7 +37,6 @@ Review the integration instance details and verify:
 4. Unit-of-measure mappings are applied
 5. Transaction mappings are processed successfully
 6. Validate the lookup table mappings configured earlier in the accelerator.
-
 
 ## Task 2: Activate All Integrations
 
