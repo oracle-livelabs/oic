@@ -90,7 +90,7 @@ Review the integration instance details and verify:
 ## Task 6: Verify Files in Oracle WebCenter Content
 
 1. Access Oracle WebCenter Content. For example:
-   https://fusion_instance.com/cs
+    https://fusion_instance.com/cs
 2. Navigate to the configured content folder.
 3. Verify publication files are generated, Search for Title *PIM*
 4. Confirm files are uploaded to Oracle WebCenter Content.

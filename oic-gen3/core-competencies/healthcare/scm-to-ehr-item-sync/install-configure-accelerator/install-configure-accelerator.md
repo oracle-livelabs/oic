@@ -61,7 +61,7 @@ To configure the accelerator, on the accelerator card, click on *...* (Actions) 
 
 3. Oracle Health Connection
 
-- Enter the following details and Click on **Test** and *Save* the connection.
+    - Enter the following details and Click on **Test** and *Save* the connection.
 
     | Field                               |Information to Enter            |
     | ----------------------------------- | ------------------------------ |
