@@ -168,7 +168,7 @@ Verify that:
 
     | Field                   | Example Value        |
     | ----------------------- | -------------------- |
-    | Item                    | TEST_ITEM_001        |
+    | Item                    | TEST\_ITEM\_001        |
     | Description             | Test Healthcare Item |
     | Primary Unit of Measure | Each                 |
     | Lifecycle Phase         | Production           |

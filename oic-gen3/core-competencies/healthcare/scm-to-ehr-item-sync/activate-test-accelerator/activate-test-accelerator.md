@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In this lab, you will test the configured and activated integrations using Oracle Integration Cloud to validate that the recipe is functioning as expected.
-
-After completing the setup and activation steps, it is important to verify that the integration flows can successfully interact with the FHIR-based EMR system and return accurate results. 
+In this lab, you will activate the project and test the configured integrations using Oracle Integration Cloud (OIC). The objective is to validate that the accelerator has been configured correctly and that the integrations are functioning as expected. By executing the test scenarios, you will verify the end-to-end flow and ensure that the recipe is operating successfully.
 
 This lab helps ensure that the end-to-end integration—from request submission to response retrieval—is working correctly. You will also monitor the execution and analyze responses to confirm that the expected FHIR resources are being returned.
 
@@ -49,7 +47,7 @@ Review the integration instance details and verify:
 4. Wait for the confirmation message indicating that the integration has been successfully activated.
 5. Refresh the page to verify the updated status.
 
-## Task 3: Generate Initial Full Publish - Execute this task if required, otherwise skip.
+## Task 3: Generate Initial Full Publish (Perform this task only if required. Otherwise, proceed to the next task.)
 
 1. Sign in to Oracle Fusion Cloud SCM.
 2. Navigate to Tools > Run the scheduled process : Product Hub Publication Job
@@ -153,7 +151,7 @@ At the end of this section:
     What You've Accomplished
     In this Live Lab, you have successfully:
 
-    - Installed a prebuilt integration recipe in Oracle Integration Cloud
+    - Installed a prebuilt integration accelerator in Oracle Integration Cloud
     - Configured the FHIR connection to interact with an EMR system
     - Explored and understood the design and flow of multiple integration processes
     - Activated integration flows for execution
