@@ -98,8 +98,6 @@ Now you have an external table which will be used in the Integration flow.
 
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Database** from the navigation menu under Oracle Database.
 
-    ![Select Autonomous Database](images/adb-navigation.png)
-
     > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.

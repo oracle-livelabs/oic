@@ -105,7 +105,7 @@ Add the Oracle Autonomous AI Lakehouse Adapter invoke to the integration canvas.
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
-    {: title="ADW Basic Info"}
+    {: title="DL Basic Info"}
 
     - Click **Continue**
 
@@ -153,7 +153,7 @@ When we added the Datalake invoke to the integration, a map icon was automatical
 1. Hover your cursor over the *Map insertSalesOrders* **Mapper** icon, click once, then select **Edit**.
     ![Edit DL Mapper](images/mapper-edit-erp-dl.png)
 
-2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle ADW structure.
+2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle DL structure.
 
     Expand the **Source** node:
 
@@ -165,7 +165,7 @@ When we added the Datalake invoke to the integration, a map icon was automatical
 
     Complete the mapping as below:
 
-    | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest Oracle ADW)* |
+    | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest)* |
     | --- | ----------- |
     | FileReference | FileReference |
     {: title="Map"}
@@ -196,13 +196,11 @@ When we added the Datalake invoke to the integration, a map icon was automatical
 4. Click **Business Identifiers icon** to hide the dialog.
 5. Click on **Save** to apply your changes.
 6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
-    ![GoBack](images/integration-goback-ftp-adw.png)
+    ![GoBack](images/integration-goback-ftp-dl.png)
 
 ## Task 6: Activate the integration
 
 1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
-    ![Click to Activate Integration](images/click-activate-integration.png)
-
 2. In the *Activate Integration* dialog, select **Audit** as tracing level.
 
 3. Click **Activate**.
