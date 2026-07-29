@@ -22,22 +22,22 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all the previous labs.
-- Oracle Autonomous Data Warehouse Instance
+- Oracle Autonomous AI Database (Lakehouse) Instance
 - Oracle Integration Instance
 
 ## Task 1: Create a database table using a SQL script
 
 Follow these steps to create a DB table which will be used as part of this workshop.
 
-1. If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
+1. If you are not already logged in to SQL Worksheet, on your Database Details page, click the **Database Actions** button.
 
     ![Click Database Actions](images/click-database-actions.png)
 
-    > **Note:** If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log in manually.  
+    > **Note:** If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log in manually.
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
-   ![Enter DB username](images/enter-username.png)
+    ![Enter DB username](images/enter-username.png)
 
 3. Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
 
@@ -98,8 +98,6 @@ Now you have an external table which will be used in the Integration flow.
 
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Database** from the navigation menu under Oracle Database.
 
-    ![Select Autonomous Database](images/adb-navigation.png)
-
     > **Note:** You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
 2. Navigate into your demo database by clicking on the instance link.
@@ -154,7 +152,7 @@ Now you have an external table which will be used in the Integration flow.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
 3. Select your instance.
-   The Integration Instance Details page is displayed.
+    The Integration Instance Details page is displayed.
 4. Click the Enable link for File Server on the Integration Instance Information tab.
 5. When prompted to confirm enabling File Server, click ***Enable***. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
 
@@ -187,7 +185,7 @@ Configure File Server settings. This is required as you are using Embedded File 
     > **Note:**  You will be using the above Folder structure in the lab.
 
 9. Click **Add Permissions** and select your user. Click **Add**.
-   ![Add user to Folder permissions](images/user-permissions-1.png)
+    ![Add user to Folder permissions](images/user-permissions-1.png)
 10. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.
     ![Folder permissions](images/user-permissions1-1.png)
 
@@ -212,4 +210,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2026

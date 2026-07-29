@@ -28,7 +28,7 @@ In this lab, you will learn:
 ### Prerequisites
 
 - All the previous labs completed successfully.
-- [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-and-activate-confidential-client-application.html): This configuration is mandatory for non-Bootcamp users. For Bootcamp users, these details are already configured.
+- [Complete and Activate Client Application](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-activate-confidential-client-application.html): This configuration is mandatory for non-Bootcamp users. For Bootcamp users, these details are already configured.
 
 ###	Background - Understanding Model Context Protocol (MCP)
 
