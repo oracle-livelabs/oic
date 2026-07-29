@@ -8,7 +8,7 @@ This workshop will walk you through the steps to create an end-to-end integratio
 
 In this workshop, we shall also talk about provisioning Oracle Integration 3 instance, enabling File Server, provisioning Oracle Autonomous AI Database but, all of these tasks are optional.
 
-Estimated Time: 60 minutes
+Estimated Workshop Time: 60 minutes
 
 ### Objectives
 

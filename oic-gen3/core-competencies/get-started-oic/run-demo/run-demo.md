@@ -92,7 +92,7 @@ Follow these steps to view the sales orders record in the designated DB table.
 
 4. Sign in with your database instance's default administrator account, Username = `ADMIN` and click **Next**.
 
-   ![Enter DB username](../setup/images/enter-username.png)
+    ![Enter DB username](../setup/images/enter-username.png)
 
 5. Enter the **ADMIN** password and click **Sign in**.
 

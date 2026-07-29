@@ -151,7 +151,7 @@ Use the mapper to drag fields from the source structure (downloadSalesOrders Res
 When we added the Datalake invoke to the integration, a map icon was automatically added.
 
 1. Hover your cursor over the *Map insertSalesOrders* **Mapper** icon, click once, then select **Edit**.
-   ![Edit DL Mapper](images/mapper-edit-erp-dl.png)
+    ![Edit DL Mapper](images/mapper-edit-erp-dl.png)
 
 2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle ADW structure.
 
@@ -170,7 +170,7 @@ When we added the Datalake invoke to the integration, a map icon was automatical
     | FileReference | FileReference |
     {: title="Map"}
 
-   ![Completed FTP to DL Mapping](images/mapper-completed-ftp-dl.png)
+    ![Completed FTP to DL Mapping](images/mapper-completed-ftp-dl.png)
 
 3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
