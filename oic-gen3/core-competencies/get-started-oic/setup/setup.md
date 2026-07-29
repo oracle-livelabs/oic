@@ -22,18 +22,18 @@ In this lab, you will:
 This lab assumes you have:
 
 - Completed all the previous labs.
-- Oracle Autonomous Data Warehouse Instance
+- Oracle Autonomous AI Database (Lakehouse) Instance
 - Oracle Integration Instance
 
 ## Task 1: Create a database table using a SQL script
 
 Follow these steps to create a DB table which will be used as part of this workshop.
 
-1. If you are not already logged in to SQL Worksheet, on your ADW Database Details page, click the **Database Actions** button.
+1. If you are not already logged in to SQL Worksheet, on your Database Details page, click the **Database Actions** button.
 
     ![Click Database Actions](images/click-database-actions.png)
 
-    > **Note:** If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log in manually.  
+    > **Note:** If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log in manually.
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
@@ -212,4 +212,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2026

@@ -22,7 +22,7 @@ This lab assumes you have:
 
 - Completed all previous labs successfully
 - Download the Visual Builder application if you are running this application on your environment and import and setup in your Oracle Integration environment
-    [OrderApplication](files/OrderApplication1-1.0.zip?download=1)
+    [OrderApplication](files/OrderApplication1.zip?download=1)
 
 ## Task 1: Create a sales order file in the File Server
 
@@ -72,27 +72,21 @@ Submit an adhoc run of Scheduled Integration Flow
 > **Note:** If you are a Bootcamp user then execute task 3 only and skip other tasks.
     If you are a non Bootcamp user then skip task 3 and continue with other tasks..
 
-## Task 3: Verify sales orders records in ADW Table via Visual Builder web application.
+## Task 3: Verify sales orders records in DL Table via Visual Builder web application.
 
-- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oic3training5-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication_1_0/live/webApps/orderapps/)
+- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oic2027t1-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/)
 
-## Task 4: Verify sales orders records in ADW Table
+## Task 4: Verify sales orders records in DL Table
 
 Follow these steps to view the sales orders record in the designated DB table.
 
-1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Data Warehouse** from the navigation menu.
-
-    ![Select Autonomous Database](../setup/images/adb-navigation.png)
-
-    > **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
+1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous AI Datalake** from the navigation menu.
 
 2. Navigate into your demo database by clicking on the instance link.
 
     ![Select Autonomous Database](../setup/images/select-adb-instance.png)
 
-    > **Note:**  Similar steps apply to either Autonomous Data Warehouse or Autonomous Transaction Processing.
-
-3. In your ADW Database Details page, click the **Database Actions** button.
+3. In your DL Details page, click the **Database Actions** button.
 
     ![Select Autonomous Database](../setup/images/click-database-actions.png)
 
@@ -123,7 +117,7 @@ Verify sales orders file archived in OCI Object storage
 1. Navigate to *Oracle Cloud Console* Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
     ![Select Object Storage](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png)
 
-2. Select the **Compartment** and Click on the Bucket example: *bucket-demo* created earlier.
+2. Select the **Compartment** and Click on the Bucket.
 
 3. In the list of *Objects* notice **sales_orders.csv** file uploaded. The object storage is used as intermediary storage to import data set in ADW. From the adapter configuration page, you can always select to delete the file after the operation if required.
 
@@ -141,4 +135,4 @@ Verify sales orders file archived in OCI Object storage
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2026

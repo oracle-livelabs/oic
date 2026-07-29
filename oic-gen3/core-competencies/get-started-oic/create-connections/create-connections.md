@@ -10,7 +10,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Create an Oracle Autonomous Data Warehouse connection
+- Create an Oracle Autonomous AI Lakehouse(LH) connection
 - Create an Oracle FTP Connection
 
 ### Prerequisites
@@ -19,38 +19,36 @@ This lab assumes you have:
 
 - Completed all the previous labs.
 
-## Task 1: Create an Oracle Autonomous Data Warehouse Connection
+## Task 1: Create an Oracle Autonomous AI Lakehouse(LH) Connection
 
-Create a connection with the Oracle Autonomous Data Warehouse Adapter.
+Create a connection with the Oracle Autonomous AI Lakehouse(LH) Adapter.
 
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created.
     You can please skip this step if you are already in the project.
 2. In the **Connections** section, click ***Add*** to create a new connection.
 
-3. In the *Create Connection* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter.
-    ![Create ADW connection](images/create-adw-connection.png)
+3. In the *Create Connection* dialog, select the **Oracle Autonomous AI Lakehouse(LH)** adapter to use for this connection. To find the adapter, enter `Oracle` in the search field. Click on the highlighted adapter.
 
 4. In the *Create Connection* dialog, enter the following information and click **Create**
 
     | **Field**        | **Value**          |
     | --- | ----------- |
-    | Name         | `LLDemo_ADW`       |
-    | Description  | `ADW Connection for LiveLabs` |
+    | Name         | `LLDemo_LH`       |
+    | Role         | `Trigger and invoke` |
+    | Description  | `Oracle Autonomous AI LH Connection for LiveLabs` |
 
     Keep all other values as default.
 
     > **Note:** If you are a Bootcamp user then execute step 5 only and skip other steps.
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
-5. Search for **LLDemo**, Please note that the connection with the name **LLDemo\_ADW** is already created by the instructors, configured and shared with other projects. Do not get confused with the same name, both the connections are in the different projects. Click on **LLDemo\_ADW** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+5. Search for **LLDemo**, Please note that the connection with the name **LLDemo\_LH** is already created by the instructors, configured and shared with other projects. Do not get confused with the same name, both the connections are in the different projects. Click on **LLDemo\_LH** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-    ![Shared Connection](images/lldemosharedconnection.png)
-
-    You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
+    You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud, Oracle Autonomous AI Lakehouse. The connection you created is referencing the shared connection in the instance.
 
     ![Shared Connection](images/connection-sharing.png)
 
-6. In the *Oracle ADW Connection* dialog, enter the following information:
+6. In the *Oracle LH Connection* dialog, enter the following information:
 
     | **Field**  | **Value** |
     |---------------|----------------|
@@ -115,4 +113,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2026
