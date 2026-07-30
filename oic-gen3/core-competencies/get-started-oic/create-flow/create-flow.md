@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous (ADW) Table.
+This lab will walk you through the steps to create an end-to-end integration of reading a file from the File Server and inserting the data set in an Oracle Autonomous AI Lakehouse(LH) Table.
 
 ![Integration Architecture](images/get-started-integration-scenario.png)
 
 In this use case, a scheduled orchestration pattern in OIC is used to automate the transfer and processing of sales order data. The process begins by reading a sales orders file from an SFTP server at scheduled intervals. Once the file is retrieved, it goes through necessary transformations or validations in OIC to prepare the data for database insertion.
 
-The Oracle Autonomous Database adapter in OIC simplifies bulk data loading by leveraging an Object Storage staging area. Here’s how it works:
+The Oracle Autonomous AI Lakehouse(LH) adapter in OIC simplifies bulk data loading by leveraging an Object Storage staging area. Here’s how it works:
 
 1. **File Staging**: Instead of directly inserting each record individually, the adapter stages the processed file in an Oracle Object Storage location. This staging reduces the overhead on the database by pre-loading the data into a format suited for bulk operations.
 
@@ -26,8 +26,8 @@ In this lab, you will execute the following:
 
 - Initiate a Scheduled integration flow
 - Configure FTP Adapter
-- Add the ADW invoke activity
-- Map data between Source File structure and ADW invoke
+- Add the Oracle Autonomous AI Lakehouse(LH) invoke activity
+- Map data between Source File structure and Lakehouse invoke
 - Define Tracking Fields
 - Activate the integration
 
@@ -50,8 +50,8 @@ We will start by creating a new integration and adding some basic info.
 
     | **Element**        | **Value**          |
     | --- | ----------- |
-    | Name         | `LL Insert Sales Orders to ADW`       |
-    | Description  | `Live Lab to Read File and Insert Sales Orders to ADW` |
+    | Name         | `LL Insert Sales Orders to Lakehouse`       |
+    | Description  | `Live Lab to Read File and Insert Sales Orders to Lakehouse` |
     {: title="Create integration"}
 
     Accept all other default values.
@@ -93,15 +93,11 @@ Add FTP Invoke to integration canvas.
 
     ![Integration Progress after FTP Invoke](images/integration-progress-1.png)
 
-## Task 3: Add the ADW invoke activity
+## Task 3: Add the Lakehouse invoke activity
 
-Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canvas.
+Add the Oracle Autonomous AI Lakehouse Adapter invoke to the integration canvas.
 
-1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the ***+*** sign. Click the **+** sign and select the ADW connection created in the previous lab.
-
-    ![Add ADW Connection](images/add-adw-connection.png)
-
-    This invokes the Oracle Autonomous Data Warehouse Endpoint Configuration Wizard.
+1. Hover your cursor over the outgoing arrow of *downloadSalesOrders* activity in the integration canvas to display the ***+*** sign. Click the **+** sign and select the Lakehouse connection created in the previous lab. This invokes the Oracle Autonomous Data Warehouse Endpoint Configuration Wizard.
 
 2. On the *Basic Info* page, select the following values:
 
@@ -109,7 +105,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | --- | ----------- |
     | What do you want to call your endpoint? | **insertSalesOrders**       |
     | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
-    {: title="ADW Basic Info"}
+    {: title="DL Basic Info"}
 
     - Click **Continue**
 
@@ -117,18 +113,16 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
     | **Element**        | **Value**          |
     | --- | ----------- |
-    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in previous lab)  |
+    | Select Bucket | **bulk-orders** (Select the Object Storage bucket that was created in the setup lab)  |
     | Delete file from object store after operation completion | **Deselect** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
     | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
     {: title="Object Storage Info"}
 
-    ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
-
     > **Note:** The order of the columns should match the input sales_order.csv data
 
-4. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
+4. Click on **Edit** for the property *Review and specify the copy_data format options*.
 
     ![Edit Copy Format options](images/edit-copy-data-format-options-1.png)
 
@@ -148,20 +142,18 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
 
 6. On the Summary page, review the configuration and click **Finish**.
 
-    ![Summary in ADW Wizard](images/adw-wizard-summary.png)
-
 7. Click **Save** to apply changes.
 
-## Task 4: Map data between FTP Invoke and ADW invoke
+## Task 4: Map data between FTP Invoke and DL invoke
 
 Use the mapper to drag fields from the source structure (downloadSalesOrders Response)  to the target structure (insertSalesOrders) to map elements between the two.
 
-When we added the ADW invoke to the integration, a map icon was automatically added.
+When we added the Datalake invoke to the integration, a map icon was automatically added.
 
 1. Hover your cursor over the *Map insertSalesOrders* **Mapper** icon, click once, then select **Edit**.
-   ![Edit ADW Mapper](images/mapper-edit-erp-adw.png)
+    ![Edit DL Mapper](images/mapper-edit-erp-dl.png)
 
-2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle ADW structure.
+2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle DL structure.
 
     Expand the **Source** node:
 
@@ -173,17 +165,17 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
     Complete the mapping as below:
 
-    | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest Oracle ADW)* |
+    | **Source** *(downloadSalesOrders Response FTP)*        | **Target** *(insertSalesOrdersRequest)* |
     | --- | ----------- |
     | FileReference | FileReference |
     {: title="Map"}
 
-   ![Completed FTP to ADW Mapping](images/mapper-completed-ftp-adw.png)
+    ![Completed FTP to DL Mapping](images/mapper-completed-ftp-dl.png)
 
 3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
 4. Click **&lt; (Go back)**
-    ![GoBack](images/mapper-goback-ftp-adw.png)
+    ![GoBack](images/mapper-goback-ftp-dl.png)
 
 5. Click **Save** to persist changes.
 
@@ -204,14 +196,12 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 4. Click **Business Identifiers icon** to hide the dialog.
 5. Click on **Save** to apply your changes.
 6. On the Integration canvas, click **&lt; (Go back) button** to go back to the list of integrations page.
-    ![GoBack](images/integration-goback-ftp-adw.png)
+    ![GoBack](images/integration-goback-ftp-dl.png)
 
 ## Task 6: Activate the integration
 
 1. In the **Integrations** section, Click on **...** of the Integration and click the **Activate** icon
-    ![Click to Activate Integration](images/click-activate-integration.png)
-
-2. In the *Activate Integration* dialog, select **Debug** as tracing level.
+2. In the *Activate Integration* dialog, select **Audit** as tracing level.
 
 3. Click **Activate**.
 
@@ -227,4 +217,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, July 2026
