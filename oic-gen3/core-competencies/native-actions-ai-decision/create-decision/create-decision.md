@@ -86,11 +86,11 @@ This lab assumes you have:
 
 **Data Flow Logic:**
 
-1. Invoice Extract feeds raw invoice data to three supporting decisions
-2. Supporting decisions (Vendor List, Amount Category, Invoice Urgency) process specific aspects of the invoice
-3. Risk Context combines all supporting decision outputs plus additional data to calculate risk level
-4. Required Reviewers uses the risk level to determine appropriate reviewer list
-5. Approval Routing receives inputs from all components to make the final routing decision
+- Invoice Extract feeds raw invoice data to three supporting decisions
+- Supporting decisions (Vendor List, Amount Category, Invoice Urgency) process specific aspects of the invoice
+- Risk Context combines all supporting decision outputs plus additional data to calculate risk level
+- Required Reviewers uses the risk level to determine appropriate reviewer list
+- Approval Routing receives inputs from all components to make the final routing decision
 
 ## Task 1: Create and Design Decision Model Flow
 
