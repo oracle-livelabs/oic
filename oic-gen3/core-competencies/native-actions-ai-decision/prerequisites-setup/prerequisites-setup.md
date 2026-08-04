@@ -26,31 +26,29 @@ You will create a dynamic group and add policies to use AI Document Understandin
 1. Sign in to the OCI Console as a tenancy administrator.
 
 2. Obtain the client ID of the OAuth application for the Oracle Integration instance.In the upper right corner, select Profile, then click the identity domain.
-![Select Profile](images/select-profile.png)
+    ![Select Profile](images/select-profile.png)
 
 3. In the left navigation pane, click *Oracle Cloud Services*.
-![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
+    ![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
 
 4. Select the OIC service instance, and scroll down to **General Information** and copy the client ID value to use it in the dynamic group creation.
 
 5. In the OCI Console, Open the navigation menu and click *Identity & Security*, Select the domain (example: Default domain).
-![Select Domain](images/default-domain.png)
+    ![Select Domain](images/default-domain.png)
 
-6.In the left navigation pane, click *Dynamic groups*
-
+6. In the left navigation pane, click *Dynamic groups*
 7. Click *Create Dynamic Group*.
-
 8. Provide a name (example: ll-dynamic-group) and description.In the **Matching Rules** section, enter the below rules.The resource ID you specify must match the client ID of the OAuth application of your Oracle Integration instance.
 
-```
-<copy>
-  resource.id = 'oic-instance-client-ID'
-</copy>
-```
+    ```
+    <copy>
+      resource.id = 'oic-instance-client-ID'
+    </copy>
+    ```
 
-  >Note: The rule is required to group the OIC instance which matches the client id.
+    >Note: The rule is required to group the OIC instance which matches the client id.
 
-![Dynamic Group Rules](images/dynamic-group-rules.png)
+    ![Dynamic Group Rules](images/dynamic-group-rules.png)
 
 ## Task 2: Create policy for the dynamic group and service
 
