@@ -191,23 +191,23 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     ***Add logger Action***
 
-1.**Add** a *logger* action after the **invoiceApprovalDecision** activity and name it as **LogTrackingInfo**.
+    1.**Add** a *logger* action after the **invoiceApprovalDecision** activity and name it as **LogTrackingInfo**.
 
-2.In the **Configure Logger** page, drag and drop **vendorName (extracted from pdf)** element, **Approval Routing (output of decision)** and **SLA Days (output of decision)** elements to logging message text box. Construct a readable expression using the concat() function as per below
+    2.In the **Configure Logger** page, drag and drop **vendorName (extracted from pdf)** element, **Approval Routing (output of decision)** and **SLA Days (output of decision)** elements to logging message text box. Construct a readable expression using the concat() function as per below
 
     ![Configure Log Message](images/logger-message.png)
 
     ***Define Business Identifiers & Activate the Integration Flow***
 
-1. Manage business identifiers that enable you to track fields in messages during runtime.
+    1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-2. Click on the *(I) Business Identifiers* menu on the top right.
+    2. Click on the *(I) Business Identifiers* menu on the top right.
 
-3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
+    3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
 
     ![Configure Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
 
-4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
+    4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
 
 ## Task 2: Activate the Integration.
 
@@ -233,7 +233,7 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
 ## Task 4: Bonus Section
 
-We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
+    We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
 
 **Extending Your Integration with OIC Event System**
 
