@@ -160,13 +160,13 @@ This lab assumes you have:
 
 2. In the properties panel:
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to "invoiceExtract" |
-| Mode | Select Other Type |
-{: title="Modify Input Type"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to "invoiceExtract" |
+    | Mode | Select Other Type |
+    {: title="Modify Input Type"}
 
-In the Type Definition section *Select* **Show Type Definition List** to define a new Complex Type
+    In the Type Definition section *Select* **Show Type Definition List** to define a new Complex Type
 
 3. In the Types section, *Select* **Import from Sample**
     ![Import From Sample](images/import-from-sample.png)
@@ -253,9 +253,9 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. Select the **Amount Category** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Define If-Then-Else Logic***
+    ***Define If-Then-Else Logic***
 
-1. In the decision Editor construct your logic as per below
+1.In the decision Editor construct your logic as per below
 
 - **if:** invoiceExtract.invoiceExtract.invoice\_data.invoice\_total< 5000
 - **then:** "small"
@@ -286,7 +286,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. Select the **Invoice Urgency** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Define If-Then-Else Logic***
+    ***Define If-Then-Else Logic***
 
 1. In the decision Editor construct your logic as per below
 
@@ -317,7 +317,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. Select the **Vendor Recognition** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Define Expression Logic***
+    ***Define Expression Logic***
 
 1. In the Expression field enter the below logic
 
@@ -359,7 +359,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. Select the **Risk Context** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Define Context Entries***
+    ***Define Context Entries***
 
 1. Click **Add entry** to create the first context entry:
     - **Key:** amountCategory
@@ -394,7 +394,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. Select the **Required Reviewer** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Define List Entries***
+    ***Define List Entries***
 
 1. Click Add (➕) to create the first entry:
     - Keep Expression as the type
@@ -442,30 +442,30 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 2. Add Additional Input columns
 
-- Click the **Amount Category** column header
-- Click **Add column after** (➕) from the top tool bar
-- In the new column's Enter Expression cell, enter **Risk Context.riskLevel**
-- Add another column after Risk Context:
-    -Enter Expression: **Invoice Urgency**
-- Add one more column:
-    -Enter Expression: **Vendor Recognition**
+    - Click the **Amount Category** column header
+    - Click **Add column after** (➕) from the top tool bar
+    - In the new column's Enter Expression cell, enter **Risk Context.riskLevel**
+    - Add another column after Risk Context:
+        -Enter Expression: **Invoice Urgency**
+    - Add one more column:
+        -Enter Expression: **Vendor Recognition**
 
 3. Configure Output Columns
 
-- The default output column is named after your decision, if not name it as **Approval Routing**
-- Click **Enter Allowed Values** for the output column
-- Mode: Select Text
-- **Allowed Values**: Select **list of values**
-- Enter each value in new line: fast-track,standard,enhanced,executive,expedited
+    - The default output column is named after your decision, if not name it as **Approval Routing**
+    - Click **Enter Allowed Values** for the output column
+    - Mode: Select Text
+    - **Allowed Values**: Select **list of values**
+    - Enter each value in new line: fast-track,standard,enhanced,executive,expedited
 
 4. Add Additional Output Columns
 
-- Click the output column and select **Add column after**
-- Name the new column: **SLA Days**
-- Configure as **Number** type (**Note:** You may add integer values for SLA Days by selecting list of values, in a similar fashion as you did for Approval Routing. Refer the list of values shown in the screenshot. This is for ease of selection from drop down, when defining your business rules values)
-- Add another output column:
-    -Name: **Special Review Required**
-    -Configure as **True or False** type
+    - Click the output column and select **Add column after**
+    - Name the new column: **SLA Days**
+    - Configure as **Number** type (**Note:** You may add integer values for SLA Days by selecting list of values, in a similar fashion as you did for Approval Routing. Refer the list of values shown in the screenshot. This is for ease of selection from drop down, when defining your business rules values)
+    - Add another output column:
+        -Name: **Special Review Required**
+        -Configure as **True or False** type
 
     ![Approval Routing Initial State](images/approval-routing-dt-initial.png)
 
@@ -495,150 +495,150 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 3. Copy Sample below to execute Test Case 1 and provide the JSON in the test window. Click on **Start Test**
 
-```
-<copy>
-{
-  "invoiceExtract": {
-      "invoiceExtract": {
-          "invoice_data": {
-              "invoice_id": "INV-2023789",
-              "invoice_date": "2023-05-10",
-              "due_date": "2023-06-10",
-              "purchase_order": "PO-24680",
-              "invoice_total": 12500.75,
-              "tax_amount": 1031.25,
-              "subtotal": 11469.50,
-              "currency": "USD",
-              "payment_terms": "Net 30",
-              "status": "UNPAID"
-          },
-          "vendor_data": {
-              "vendor_name": "TechSupplies International",
-              "vendor_id": "TSI-13579",
-              "tax_id": "45-6789012",
-              "address": "1010 Technology Drive, San Jose, CA 95128",
-              "contact": {
-                  "name": "Accounts Receivable",
-                  "phone": "408-555-1357",
-                  "email": "ar@techsupplies.example.com"
-              },
-              "payment_details": {
-                  "bank_name": "Pacific Banking Corporation",
-                  "account_number": "XXXX2468",
-                  "routing_number": "XXXXX1357"
-              }
-          },
-          "line_items": [
-              {
-                  "item_number": "1",
-                  "description": "Network Switch - 48 Port",
-                  "quantity": 2,
-                  "unit_price": "3750.00",
-                  "amount": "7500.00",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "618.75"
-              },
-              {
-                  "item_number": "2",
-                  "description": "Ethernet Cables - CAT6",
-                  "quantity": 50,
-                  "unit_price": "25.50",
-                  "amount": "1275.00",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "105.19"
-              },
-              {
-                  "item_number": "3",
-                  "description": "Installation Services",
-                  "quantity": 1,
-                  "unit_price": "2694.50",
-                  "amount": "2694.50",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "222.29"
-              }
-          ]
-      },
-      "CurrentDateTime": "2023-05-20T14:30:00Z"
-  }
-}
-</copy>
-```
+    ```
+    <copy>
+    {
+    "invoiceExtract": {
+        "invoiceExtract": {
+            "invoice_data": {
+                "invoice_id": "INV-2023789",
+                "invoice_date": "2023-05-10",
+                "due_date": "2023-06-10",
+                "purchase_order": "PO-24680",
+                "invoice_total": 12500.75,
+                "tax_amount": 1031.25,
+                "subtotal": 11469.50,
+                "currency": "USD",
+                "payment_terms": "Net 30",
+                "status": "UNPAID"
+            },
+            "vendor_data": {
+                "vendor_name": "TechSupplies International",
+                "vendor_id": "TSI-13579",
+                "tax_id": "45-6789012",
+                "address": "1010 Technology Drive, San Jose, CA 95128",
+                "contact": {
+                    "name": "Accounts Receivable",
+                    "phone": "408-555-1357",
+                    "email": "ar@techsupplies.example.com"
+                },
+                "payment_details": {
+                    "bank_name": "Pacific Banking Corporation",
+                    "account_number": "XXXX2468",
+                    "routing_number": "XXXXX1357"
+                }
+            },
+            "line_items": [
+                {
+                    "item_number": "1",
+                    "description": "Network Switch - 48 Port",
+                    "quantity": 2,
+                    "unit_price": "3750.00",
+                    "amount": "7500.00",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "618.75"
+                },
+                {
+                    "item_number": "2",
+                    "description": "Ethernet Cables - CAT6",
+                    "quantity": 50,
+                    "unit_price": "25.50",
+                    "amount": "1275.00",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "105.19"
+                },
+                {
+                    "item_number": "3",
+                    "description": "Installation Services",
+                    "quantity": 1,
+                    "unit_price": "2694.50",
+                    "amount": "2694.50",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "222.29"
+                }
+            ]
+        },
+        "CurrentDateTime": "2023-05-20T14:30:00Z"
+    }
+    }
+    </copy>
+    ```
 
-![Copy JSON For Test Model](images/test-model-copy-json.png)
+    ![Copy JSON For Test Model](images/test-model-copy-json.png)
 
 4. Click on each green checkmark to see individual decision results. Verify the **Approval Routing decision** output as per the Business Rules specified. Also, Verify the **Required Reviewer** Decision output. The result should be **departmentManager**
 
-![Test Case 1 Output](images/test-case-1-result.png)
+    ![Test Case 1 Output](images/test-case-1-result.png)
 5. Similarly, test another usecase using the below sample payload. Verify various decision outputs.
 
-```
-<copy>
-{
-  "invoiceExtract": {
-      "invoiceExtract": {
-          "invoice_data": {
-              "invoice_id": "INV-2023321",
-              "invoice_date": "2023-04-05",
-              "due_date": "2023-05-05",
-              "purchase_order": "PO-98765",
-              "invoice_total": 3250.00,
-              "tax_amount": 268.13,
-              "subtotal": 2981.87,
-              "currency": "USD",
-              "payment_terms": "Net 30",
-              "status": "UNPAID"
-          },
-          "vendor_data": {
-              "vendor_name": "Professional Consulting Group",
-              "vendor_id": "PCG-7890",
-              "tax_id": "23-456",
-              "address": "567 Business Park Drive, Austin, TX 78701",
-              "contact": {
-                  "name": "Finance Department",
-                  "phone": "512-555-2468",
-                  "email": "finance@profconsulting.example.com"
-              },
-              "payment_details": {
-                  "bank_name": "Lone Star Bank",
-                  "account_number": "XXXX3698",
-                  "routing_number": "XXXXX1478"
-              }
-          },
-          "line_items": [
-              {
-                  "item_number": "1",
-                  "description": "Business Process Analysis",
-                  "quantity": 40,
-                  "unit_price": "125.00",
-                  "amount": "5000.00",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "412.50"
-              },
-              {
-                  "item_number": "2",
-                  "description": "Documentation Services",
-                  "quantity": 20,
-                  "unit_price": "75.00",
-                  "amount": "1500.00",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "123.75"
-              },
-              {
-                  "item_number": "3",
-                  "description": "Travel Expenses",
-                  "quantity": 1,
-                  "unit_price": "850.00",
-                  "amount": "850.00",
-                  "tax_rate": "8.25%",
-                  "tax_amount": "70.13"
-              }
-          ]
-      },
-      "CurrentDateTime": "2023-05-20T14:30:00Z"
-  }
-}
-</copy>
-```
+    ```
+    <copy>
+    {
+    "invoiceExtract": {
+        "invoiceExtract": {
+            "invoice_data": {
+                "invoice_id": "INV-2023321",
+                "invoice_date": "2023-04-05",
+                "due_date": "2023-05-05",
+                "purchase_order": "PO-98765",
+                "invoice_total": 3250.00,
+                "tax_amount": 268.13,
+                "subtotal": 2981.87,
+                "currency": "USD",
+                "payment_terms": "Net 30",
+                "status": "UNPAID"
+            },
+            "vendor_data": {
+                "vendor_name": "Professional Consulting Group",
+                "vendor_id": "PCG-7890",
+                "tax_id": "23-456",
+                "address": "567 Business Park Drive, Austin, TX 78701",
+                "contact": {
+                    "name": "Finance Department",
+                    "phone": "512-555-2468",
+                    "email": "finance@profconsulting.example.com"
+                },
+                "payment_details": {
+                    "bank_name": "Lone Star Bank",
+                    "account_number": "XXXX3698",
+                    "routing_number": "XXXXX1478"
+                }
+            },
+            "line_items": [
+                {
+                    "item_number": "1",
+                    "description": "Business Process Analysis",
+                    "quantity": 40,
+                    "unit_price": "125.00",
+                    "amount": "5000.00",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "412.50"
+                },
+                {
+                    "item_number": "2",
+                    "description": "Documentation Services",
+                    "quantity": 20,
+                    "unit_price": "75.00",
+                    "amount": "1500.00",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "123.75"
+                },
+                {
+                    "item_number": "3",
+                    "description": "Travel Expenses",
+                    "quantity": 1,
+                    "unit_price": "850.00",
+                    "amount": "850.00",
+                    "tax_rate": "8.25%",
+                    "tax_amount": "70.13"
+                }
+            ]
+        },
+        "CurrentDateTime": "2023-05-20T14:30:00Z"
+    }
+    }
+    </copy>
+    ```
 
 ## Task 11: Create Decision Service
 
@@ -646,12 +646,12 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 2. Click Add new service (➕). Provide Service Name: **InvoiceProcessingService**. Click OK
 
-![Create Decision Service](images/create-decision-service.png)
+    ![Create Decision Service](images/create-decision-service.png)
 3. Configure Service: Click the vertical 3 dots
     - Output Decisions: Click and *select* **Approval Routing**
     - Input Data: Click and *select* **invoiceExtract**
 
-![Configure Service](images/configure-service.png)
+    ![Configure Service](images/configure-service.png)
 
 ## Task 12: Activate Decision Model
 
@@ -659,7 +659,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 2. *Select* (...) next to the Decision Model and Select **Activate** action
 
-![Activate Decision Model](images/activate-decision.png)
+    ![Activate Decision Model](images/activate-decision.png)
 3. Now, the Decision Model is in **ACTIVE**. The model can now be used in Oracle Integration flow.
 
 ## Task 13: Congratulations 🎉
