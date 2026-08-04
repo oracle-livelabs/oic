@@ -100,4 +100,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta - May 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

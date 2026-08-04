@@ -354,4 +354,4 @@ OIC's native actions provide enterprise-grade AI and decision capabilities with 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta, May 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
