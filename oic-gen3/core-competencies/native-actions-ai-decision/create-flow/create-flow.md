@@ -69,11 +69,11 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     ***Get Invoice PDF File Reference from File Server***
 
-1.Click *+* icon next to the **Schedule** activity and Select *File Server* action from the action palette.
+    1.Click *+* icon next to the **Schedule** activity and Select *File Server* action from the action palette.
 
     ![Orchestrate File Server Native Action](images/select-fs-native-action.png)
 
-2.In the **Configure FS Native Action** provide per below values.
+    2.In the **Configure FS Native Action** provide per below values.
 
     | **Property**| **Value**|
     | --- | ----------- |
@@ -90,11 +90,11 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     ![Flow After Get Invoice](images/flow-after-getinvoice.png)
 
-***Add Document Understanding Native Action***
+    ***Add Document Understanding Native Action***
 
-1. Click *+* icon next to the **getInvoiceFile** action and Select *Document Understanding* action from the action palette.
+    1. Click *+* icon next to the **getInvoiceFile** action and Select *Document Understanding* action from the action palette.
 
-2. In the **Configure Baisic Info** wizard provide per below
+    2. In the **Configure Baisic Info** wizard provide per below
 
     | **Property**| **Value**|
     | --- | ----------- |
@@ -112,25 +112,25 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     Click *Continue* and *Finish* the wizard. **Save** your integration.
 
-***Edit the Map Activity -> extractInvoiceInfo***
+    ***Edit the Map Activity -> extractInvoiceInfo***
 
-1. Select the **Map** activity **extractInvoiceInfo** and *Click* on **(...)** and Select *Edit*. OCI AI Document Understanding accepts base64encoded data as input.
+    1. Select the **Map** activity **extractInvoiceInfo** and *Click* on **(...)** and Select *Edit*. OCI AI Document Understanding accepts base64encoded data as input.
 
-2. In the mapper expand the Target **extractInvoiceInfoRequest -> Request Wrapper -> Body -> Document -> Data**. Right Click on **Data** and Select *Create Target Node*
+    2. In the mapper expand the Target **extractInvoiceInfoRequest -> Request Wrapper -> Body -> Document -> Data**. Right Click on **Data** and Select *Create Target Node*
 
     ![Create Data Target Node](images/create-data-target-node.png)
 
-3. In the **Expression Window** Select **Switch to Developer Mode**. Expand the **Components** pane at the top. From the **Advanced** functions category, *Drag and Drop* the  encodeReferenceToBase64() function into the expression Window. Pass the input parameter as File Reference from **getInvoiceFileResponse -> Get File Reference Response -> File Definitions.. -> File Reference**
+    3. In the **Expression Window** Select **Switch to Developer Mode**. Expand the **Components** pane at the top. From the **Advanced** functions category, *Drag and Drop* the  encodeReferenceToBase64() function into the expression Window. Pass the input parameter as File Reference from **getInvoiceFileResponse -> Get File Reference Response -> File Definitions.. -> File Reference**
     ![Encode File Reference Mapping](images/encode-file-reference-mapping.png)
 
-Click the *Tick* mark to validate the expression. Close the **expression** window and *Validate*. Navigate back to the Integration Canvas. *Save* your integration.
+    Click the *Tick* mark to validate the expression. Close the **expression** window and *Validate*. Navigate back to the Integration Canvas. *Save* your integration.
     ![Flow After Extract Invoice Info](images/flow-after-extractinvoiceinfo.png)
 
     ***Add Decision Native Action***
 
-1. Click *+* icon next to the **extractInvoiceInfo** action and Select *Decision* action from the action palette.
+    1. Click *+* icon next to the **extractInvoiceInfo** action and Select *Decision* action from the action palette.
 
-2. In the **Configure Baisic Info** wizard provide per below
+    2. In the **Configure Baisic Info** wizard provide per below
 
     | **Property**| **Value**|
     | --- | ----------- |
@@ -153,7 +153,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     ***Edit the Map Activity -> invoiceApprovalDecision***
 
-1. Select the **Map** activity **invoiceApprovalDecision** and *Click* on **(...)** and Select *Edit*.
+    1. Select the **Map** activity **invoiceApprovalDecision** and *Click* on **(...)** and Select *Edit*.
     Now, we will map the extracted invoice information from Document Understanding service to the Decision Model Service Request.
 
     On the Source Side *Expand* the variable **extractInvoiceData Response --> Analyze Document Response --> Response Wrapper --> Body --> Invoice --> Fields**
@@ -197,7 +197,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     ![Configure Log Message](images/logger-message.png)
 
-***Define Business Identifiers & Activate the Integration Flow***
+    ***Define Business Identifiers & Activate the Integration Flow***
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
@@ -205,7 +205,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
 3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
 
-   ![Configure Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
+    ![Configure Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
 
 4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
 
