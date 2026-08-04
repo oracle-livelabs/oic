@@ -95,7 +95,7 @@ This lab assumes you have:
 ## Task 1: Create and Design Decision Model Flow
 
 1. In the Project workspace *Select* the tab **Decision**
-![Create Project](images/select-decision.png)
+    ![Create Project](images/select-decision.png)
 
 2. Click *Add* button and Select *Create a Decision*
 Enter the following details:
@@ -107,23 +107,24 @@ Enter the following details:
 | Description | Decision model for automated invoice processing with business rules |
 {: title="Create Decision"}
 
-![Create decisions](images/create-decision.png)
+    ![Create decisions](images/create-decision.png)
 
-Click *Create*.
-The decision model editor will open in graph view with an empty canvas.
+    Click *Create*.
+    The decision model editor will open in graph view with an empty canvas.
 
 ## Task 2: Understand the Graph View and Decisions Palette (Read ONLY Section)
 
 1. Decisions are created in the graph view. In the graph view, you can create decision requirement diagrams (DRD), in accordance with DMN standards, to visually represent your decisions.
 
 2. The following table lists all the available DRD components, which you can use to create your decision.
-![Decision Elements DRD](images/decision-elements-drd.png)
+    ![Decision Elements DRD](images/decision-elements-drd.png)
 
 3. The graph view is divided into the following areas:
     - Toolbar : The decision toolbar provides quick access controls to manage the decision canvas.
     - Canvas : The decision canvas is the central area where you can create a diagram that represents your decision, using the elements in the diagram palette. The zoom controls at the bottom of the canvas allow you to zoom in or fit the canvas in your browser.
     - Diagram palette: From the diagram palette, drag and drop DRD components onto the canvas to use them in your diagram.
-![Decision Service Canvas](images/decision-service-canvas.png)
+
+    ![Decision Service Canvas](images/decision-service-canvas.png)
 
 4. Decision Components Brief Overview
 
@@ -151,7 +152,7 @@ The decision model editor will open in graph view with an empty canvas.
 
     Structured Data Collections: List decisions create ordered collections of elements where each element can contain different types of logic. In extended scenarios, lists could manage multiple vendor categories or approval levels, providing organized ways to handle sequential data processing within the decision framework.
 
-![Decision Palette](images/decisions-palette.png)
+    ![Decision Palette](images/decisions-palette.png)
 
 ## Task 3: Create Input Data Type (invoiceExtract)
 
@@ -168,7 +169,7 @@ The decision model editor will open in graph view with an empty canvas.
 In the Type Definition section *Select* **Show Type Definition List** to define a new Complex Type
 
 3. In the Types section, *Select* **Import from Sample**
-![Import From Sample](images/import-from-sample.png)
+    ![Import From Sample](images/import-from-sample.png)
 
 4. In the **Create New Type** window provide *Name* as **InvoiceExtractType**. Provide the below JSON Sample
 
@@ -229,10 +230,12 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 }
 </copy>
 ```
-![Invoice Extract Sample JSON Payload](images/invoice-extract-sample-json.png)
+
+    ![Invoice Extract Sample JSON Payload](images/invoice-extract-sample-json.png)
 
 5. Click *Next*, a Schema is generated Automatically, Finally *Select* **Create**. Invoice extract type is created. Close the *Create New Type* window and *Types* window. Now, Select *Edit* the **invoiceExtract** component once again and *Select* Type as **InvoiceExtractType**. Close the properties panel.
-![Select Type](images/select-type.png)
+    
+    ![Select Type](images/select-type.png)
 
 ## Task 4: Create Amount Category (If-Then-Else) Component
 
@@ -247,7 +250,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 {: title="Amount Category Properties"}
 
 3. Select the *invoiceExtract* input data element. A connection arrow will appear. Drag to the **Amount Category** decision and release
-![Connect Invoice Type And Amount Category](images/connect-invoice-amount-cat.png)
+    ![Connect Invoice Type And Amount Category](images/connect-invoice-amount-cat.png)
 
 4. Select the **Amount Category** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
@@ -262,10 +265,10 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
       - **then:** "medium"
 - **else:** "large"
 
-Make sure there are no errors in the logic. *Close* the decision editor to return back to the Canvas
+    Make sure there are no errors in the logic. *Close* the decision editor to return back to the Canvas
 > Note: Copy paste the exact logic provided. If you have followed the naming convention provided in the steps you should be fine. Else you may have to adjust the logic as per your definition
 
-![Amount Category Logic](images/amount-category-logic.png)
+    ![Amount Category Logic](images/amount-category-logic.png)
 
 ## Task 5: Create Invoice Urgency (If-Then-Else) Component
 
@@ -273,11 +276,12 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
 
 2. Select the If-Then-Else element, and Click *Edit* to Open Properties. Provide per below
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Invoice Urgency** |
-| Description | Determines urgency based on invoice age |
-{: title="Invoice Urgency Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Invoice Urgency** |
+    | Description | Determines urgency based on invoice age |
+
+    {: title="Invoice Urgency Properties"}
 
 3. Select the *invoiceExtract* input data element. A connection arrow will appear. Drag to the **Invoice Urgency** decision and release
 
@@ -294,10 +298,9 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
       - **then:** "high"
 - **else:** "normal"
 
-Make sure there are no errors in the logic. *Close* the decision editor to return back to the Canvas
+    Make sure there are no errors in the logic. *Close* the decision editor to return back to the Canvas
 
-![Invoice Urgency Logic](images/invoice-urgency-logic.png)
-
+    ![Invoice Urgency Logic](images/invoice-urgency-logic.png)
 
 ## Task 6: Create Vendor Recognition (Expression) Component
 
@@ -305,17 +308,19 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
 
 2. Select the Expression element. Click *Edit* to Open **Properties**
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Vendor Recognition** |
-| Description | Checks if vendor name contains known terms |
-{: title="Vendor Recognition Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Vendor Recognition** |
+    | Description | Checks if vendor name contains known terms |
+
+    {: title="Vendor Recognition Properties"}
 
 3. Select the *invoiceExtract* input data element. A connection arrow will appear. Drag to the **Vendor Recognition** decision and release
 
 4. Select the **Vendor Recognition** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
 ***Define Expression Logic***
+
 1. In the Expression field enter the below logic
 
 ```
@@ -331,7 +336,8 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
   )
 </copy>
 ```
-![Flow After Vendor Recognition](images/flow-after-vendor-recognition.png)
+
+    ![Flow After Vendor Recognition](images/flow-after-vendor-recognition.png)
 
 ## Task 7: Create Risk Context (Context) Component
 
@@ -339,18 +345,19 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
 
 2. Select the Context element, and Click *Edit* to Open Properties. Provide per below
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Risk Context** |
-| Description | Calculates overall risk assessment |
-{: title="Risk Context Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Risk Context** |
+    | Description | Calculates overall risk assessment |
+    {: title="Risk Context Properties"}
 
 3. Create connections from following decisions to **Risk Context**
     - invoiceExtract -> Risk Context
     - Vendor Recognition -> Risk context
     - Amount Category -> Risk context
     - Invoice Urgency -> Risk context
-![Connections to Risk Context](images/connections-to-risk-context.png)
+
+    ![Connections to Risk Context](images/connections-to-risk-context.png)
 
 4. Select the **Risk Context** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
@@ -361,17 +368,17 @@ Make sure there are no errors in the logic. *Close* the decision editor to retur
     - **Value:** Amount Category (provides type along hints)
 
 Similarly, add other entries per below:
-| **Key** | **Value** |
-| --- | ----------- |
-| amountCategory | Amount Category |
-| urgencyLevel | Invoice Urgency |
-| knownVendor | Vendor Recognition |
-| hasValidTaxID | string length(invoiceExtract.invoiceExtract.vendor\_data.tax_id ) >= 9 |
-| riskScore | (if amountCategory = "large" then 5 else if amountCategory = "medium" then 3 else 1) + (if urgencyLevel = "urgent" then 4 else if urgencyLevel = "high" then 2 else 0) + (if knownVendor then 0 else 3) + (if hasValidTaxID then 0 else 4) |
-| riskLevel | if riskScore <= 3 then "low" else if riskScore <= 7 then "medium" else "high" |
-{: title="Risk Context Logic"}
+    | **Key** | **Value** |
+    | --- | ----------- |
+    | amountCategory | Amount Category |
+    | urgencyLevel | Invoice Urgency |
+    | knownVendor | Vendor Recognition |
+    | hasValidTaxID | string length(invoiceExtract.invoiceExtract.vendor\_data.tax_id ) >= 9 |
+    | riskScore | (if amountCategory = "large" then 5 else if amountCategory = "medium" then 3 else 1) + (if urgencyLevel = "urgent" then 4 else if urgencyLevel = "high" then 2 else 0) + (if knownVendor then 0 else 3) + (if hasValidTaxID then 0 else 4) |
+    | riskLevel | if riskScore <= 3 then "low" else if riskScore <= 7 then "medium" else "high" |
+    {: title="Risk Context Logic"}
 
-![Risk Context Logic](images/risk-context-logic.png)
+    ![Risk Context Logic](images/risk-context-logic.png)
 
 ## Task 8: Create Required Reviewer (List) Component
 
@@ -379,11 +386,11 @@ Similarly, add other entries per below:
 
 2. Select the List element, and Click *Edit* to Open Properties. Provide per below
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Required Reviewer** |
-| Description | Determines required reviewers based on risk level |
-{: title="Required Reviewer Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Required Reviewer** |
+    | Description | Determines required reviewers based on risk level |
+    {: title="Required Reviewer Properties"}
 
 3. Create a connection from **Risk Context** → **Required Reviewer**
 
@@ -403,9 +410,9 @@ Similarly, add other entries per below:
     - Keep Expression as the type
     - Expression: if Risk Context.riskLevel = "high" then ["departmentManager", "finance", "director"]else []
 
-![Reviewer List Logic](images/required-reviewer-logic.png)
+    ![Reviewer List Logic](images/required-reviewer-logic.png)
 
-![Flow after Required Reviewer](images/after-required-reviewer.png)
+    ![Flow after Required Reviewer](images/after-required-reviewer.png)
 
 ## Task 9: Create Approval Routing (Decision Table) Component
 
@@ -413,18 +420,19 @@ Similarly, add other entries per below:
 
 2. Select the Decision Table element
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Approval Routing** |
-| Description | Determines final approval routing and SLA |
-{: title="Approval Routing Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Approval Routing** |
+    | Description | Determines final approval routing and SLA |
+    {: title="Approval Routing Properties"}
 
 3. Create connections to the Approval Routing decision table from:
     - Amount Category
     - Risk Context
     - Invoice Urgency
     - Vendor Recognition
-![Connection to Approval Routing](images/connections-to-approval-routing.png)
+
+    ![Connection to Approval Routing](images/connections-to-approval-routing.png)
 
 4. Select the **Approval Routing** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
@@ -432,18 +440,20 @@ Similarly, add other entries per below:
 
 1. The table will open with one input column and one output column. Click on the first input column header (Enter Expression cell). *Select* **Amount Category** from the dropdown
 
-![First Input Header Cell](images/dt-first-input-cell.png)
+    ![First Input Header Cell](images/dt-first-input-cell.png)
 
 2. Add Additional Input columns
+
 - Click the **Amount Category** column header
 - Click **Add column after** (➕) from the top tool bar
 - In the new column's Enter Expression cell, enter **Risk Context.riskLevel**
 - Add another column after Risk Context:
-    - Enter Expression: **Invoice Urgency**
+    -Enter Expression: **Invoice Urgency**
 - Add one more column:
-    - Enter Expression: **Vendor Recognition**
+    -Enter Expression: **Vendor Recognition**
 
 3. Configure Output Columns
+
 - The default output column is named after your decision, if not name it as **Approval Routing**
 - Click **Enter Allowed Values** for the output column
 - Mode: Select Text
@@ -451,14 +461,15 @@ Similarly, add other entries per below:
 - Enter each value in new line: fast-track,standard,enhanced,executive,expedited
 
 4. Add Additional Output Columns
+
 - Click the output column and select **Add column after**
 - Name the new column: **SLA Days**
 - Configure as **Number** type (**Note:** You may add integer values for SLA Days by selecting list of values, in a similar fashion as you did for Approval Routing. Refer the list of values shown in the screenshot. This is for ease of selection from drop down, when defining your business rules values)
 - Add another output column:
-    - Name: **Special Review Required**
-    - Configure as **True or False** type
+    -Name: **Special Review Required**
+    -Configure as **True or False** type
 
-![Approval Routing Initial State](images/approval-routing-dt-initial.png)
+    ![Approval Routing Initial State](images/approval-routing-dt-initial.png)
 
 ***Configure Decision Table Rules***
 
@@ -466,23 +477,23 @@ Similarly, add other entries per below:
 
 2. Fill in the rules as follows:
 
-![Approval Routing Decision Rule](images/configure-approval-routing-dt.png)
+    ![Approval Routing Decision Rule](images/configure-approval-routing-dt.png)
 
 3. Observe that there are some conflict rules as indicated in the Warnings. You can configure the decision table to choose the first matching rule by Selecting the hit policy as *First(F)*. Now the warnings will disappear.
 
-![Change Hit Policy](images/approval-routing-dt-hit-policy.png)
+    ![Change Hit Policy](images/approval-routing-dt-hit-policy.png)
 
 ## Task 10: Test the Decision Model
 
 1. Click **Test Decision Model** from the right pane. *Toggle* the **Start Test** which will allow us to enter the json payload directly.
 
-![toggle JSON For Test Model](images/test-model-toggle-test.png)
+    ![toggle JSON For Test Model](images/test-model-toggle-test.png)
 
 2. We will execute 2 Test Cases
 
-Test Case 1: A routine technology purchase from a trusted vendor that follows standard processing
+    Test Case 1: A routine technology purchase from a trusted vendor that follows standard processing
 
-Test Case 2: A consulting services invoice from a new vendor that's overdue, requiring expedited processing despite being from an unknown vendor due to urgency
+    Test Case 2: A consulting services invoice from a new vendor that's overdue, requiring expedited processing despite being from an unknown vendor due to urgency
 
 3. Copy Sample below to execute Test Case 1 and provide the JSON in the test window. Click on **Start Test**
 
@@ -554,13 +565,11 @@ Test Case 2: A consulting services invoice from a new vendor that's overdue, req
 }
 </copy>
 ```
-![Copy JSON For Test Model](images/test-model-copy-json.png)
 
+![Copy JSON For Test Model](images/test-model-copy-json.png)
 4. Click on each green checkmark to see individual decision results. Verify the **Approval Routing decision** output as per the Business Rules specified. Also, Verify the **Required Reviewer** Decision output. The result should be **departmentManager**
 
 ![Test Case 1 Output](images/test-case-1-result.png)
-
-
 5. Similarly, test another usecase using the below sample payload. Verify various decision outputs.
 
 ```
@@ -639,8 +648,6 @@ Test Case 2: A consulting services invoice from a new vendor that's overdue, req
 2. Click Add new service (➕). Provide Service Name: **InvoiceProcessingService**. Click OK
 
 ![Create Decision Service](images/create-decision-service.png)
-
-
 3. Configure Service: Click the vertical 3 dots
     - Output Decisions: Click and *select* **Approval Routing**
     - Input Data: Click and *select* **invoiceExtract**
@@ -654,7 +661,6 @@ Test Case 2: A consulting services invoice from a new vendor that's overdue, req
 2. *Select* (...) next to the Decision Model and Select **Activate** action
 
 ![Activate Decision Model](images/activate-decision.png)
-
 3. Now, the Decision Model is in **ACTIVE**. The model can now be used in Oracle Integration flow.
 
 ## Task 13: Congratulations 🎉
