@@ -434,7 +434,7 @@ This lab assumes you have:
 
 4. Select the **Approval Routing** element and *Edit* to Open Properties. Click Edit (✏️) next to the Name field
 
-***Configure Decision Table Structure***
+    ***Configure Decision Table Structure***
 
 1. The table will open with one input column and one output column. Click on the first input column header (Enter Expression cell). *Select* **Amount Category** from the dropdown
 
@@ -469,7 +469,7 @@ This lab assumes you have:
 
     ![Approval Routing Initial State](images/approval-routing-dt-initial.png)
 
-***Configure Decision Table Rules***
+    ***Configure Decision Table Rules***
 
 1. Click **Add rule after** (from the table actions toolbar at the top) several times to create multiple rows
 
