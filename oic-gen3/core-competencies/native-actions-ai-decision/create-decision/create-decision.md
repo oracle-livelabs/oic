@@ -98,14 +98,14 @@ This lab assumes you have:
     ![Create Project](images/select-decision.png)
 
 2. Click *Add* button and Select *Create a Decision*
-Enter the following details:
+    Enter the following details:
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Invoice Processing Decision Model |
-| Identifier | Generated automatically |
-| Description | Decision model for automated invoice processing with business rules |
-{: title="Create Decision"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Invoice Processing Decision Model |
+    | Identifier | Generated automatically |
+    | Description | Decision model for automated invoice processing with business rules |
+    {: title="Create Decision"}
 
     ![Create decisions](images/create-decision.png)
 
@@ -173,64 +173,63 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 4. In the **Create New Type** window provide *Name* as **InvoiceExtractType**. Provide the below JSON Sample
 
-```
-<copy>
-{
-  "invoiceExtract": {
-      "invoice_data": {
-          "invoice_id": "INV-2023789",
-          "invoice_date": "2023-05-01T00:00:00.000Z",
-          "due_date": "2023-05-01T00:00:00.000Z",
-          "purchase_order": "PO-24680",
-          "invoice_total": 38750.50,
-          "tax_amount": 3199.50,
-          "subtotal": 35551.00,
-          "currency": "USD",
-          "payment_terms": "Net 30",
-          "status": "UNPAID"
-      },
-      "vendor_data": {
-          "vendor_name": "TechSupplies International",
-          "vendor_id": "TSI-13579",
-          "tax_id": "45-6789012",
-          "address": "789 Innovation Avenue, Boston, MA 02108, USA",
-          "contact": {
-              "name": "Accounts Receivable",
-              "phone": "408-555-1357",
-              "email": "ar@techsupplies.example.com"
-          },
-          "payment_details": {
-              "bank_name": "Pacific Banking Corporation",
-              "account_number": "XXXX2468",
-              "routing_number": "XXXXX1357"
-          }
-      },
-      "line_items": [
-          {
-              "item_number": "1",
-              "description": "Enterprise Server Cluster - Hardware",
-              "quantity": 3,
-              "unit_price": "9500.00",
-              "amount": "28500.00",
-              "tax_rate": "8%",
-              "tax_amount": "2351.25"
-          },
-          {
-              "item_number": "2",
-              "description": "Server Rack - 42U",
-              "quantity": 1,
-              "unit_price": "9500.00",
-              "amount": "28500.00",
-              "tax_rate": "8%",
-              "tax_amount": "2351.25"
-          }
-      ]
-  },
-  "CurrentDateTime": "2023-05-20T14:30:00Z"
-}
-</copy>
-```
-
+    ```
+    <copy>
+    {
+    "invoiceExtract": {
+        "invoice_data": {
+            "invoice_id": "INV-2023789",
+            "invoice_date": "2023-05-01T00:00:00.000Z",
+            "due_date": "2023-05-01T00:00:00.000Z",
+            "purchase_order": "PO-24680",
+            "invoice_total": 38750.50,
+            "tax_amount": 3199.50,
+            "subtotal": 35551.00,
+            "currency": "USD",
+            "payment_terms": "Net 30",
+            "status": "UNPAID"
+        },
+        "vendor_data": {
+            "vendor_name": "TechSupplies International",
+            "vendor_id": "TSI-13579",
+            "tax_id": "45-6789012",
+            "address": "789 Innovation Avenue, Boston, MA 02108, USA",
+            "contact": {
+                "name": "Accounts Receivable",
+                "phone": "408-555-1357",
+                "email": "ar@techsupplies.example.com"
+            },
+            "payment_details": {
+                "bank_name": "Pacific Banking Corporation",
+                "account_number": "XXXX2468",
+                "routing_number": "XXXXX1357"
+            }
+        },
+        "line_items": [
+            {
+                "item_number": "1",
+                "description": "Enterprise Server Cluster - Hardware",
+                "quantity": 3,
+                "unit_price": "9500.00",
+                "amount": "28500.00",
+                "tax_rate": "8%",
+                "tax_amount": "2351.25"
+            },
+            {
+                "item_number": "2",
+                "description": "Server Rack - 42U",
+                "quantity": 1,
+                "unit_price": "9500.00",
+                "amount": "28500.00",
+                "tax_rate": "8%",
+                "tax_amount": "2351.25"
+            }
+        ]
+    },
+    "CurrentDateTime": "2023-05-20T14:30:00Z"
+    }
+    </copy>
+    ```
     ![Invoice Extract Sample JSON Payload](images/invoice-extract-sample-json.png)
 
 5. Click *Next*, a Schema is generated Automatically, Finally *Select* **Create**. Invoice extract type is created. Close the *Create New Type* window and *Types* window. Now, Select *Edit* the **invoiceExtract** component once again and *Select* Type as **InvoiceExtractType**. Close the properties panel.
@@ -243,11 +242,11 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 2. Select the If-Then-Else element, and Click *Edit* to Open Properties. Provide per below
 
-| **Field** | **Value** |
-| --- | ----------- |
-| Name | Change to **Amount Category** |
-| Description | Categorizes invoice amount as small, medium, or large |
-{: title="Amount Category Properties"}
+    | **Field** | **Value** |
+    | --- | ----------- |
+    | Name | Change to **Amount Category** |
+    | Description | Categorizes invoice amount as small, medium, or large |
+    {: title="Amount Category Properties"}
 
 3. Select the *invoiceExtract* input data element. A connection arrow will appear. Drag to the **Amount Category** decision and release
     ![Connect Invoice Type And Amount Category](images/connect-invoice-amount-cat.png)
@@ -266,7 +265,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 - **else:** "large"
 
     Make sure there are no errors in the logic. *Close* the decision editor to return back to the Canvas
-> Note: Copy paste the exact logic provided. If you have followed the naming convention provided in the steps you should be fine. Else you may have to adjust the logic as per your definition
+    > Note: Copy paste the exact logic provided. If you have followed the naming convention provided in the steps you should be fine. Else you may have to adjust the logic as per your definition
 
     ![Amount Category Logic](images/amount-category-logic.png)
 
@@ -312,7 +311,6 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
     | --- | ----------- |
     | Name | Change to **Vendor Recognition** |
     | Description | Checks if vendor name contains known terms |
-
     {: title="Vendor Recognition Properties"}
 
 3. Select the *invoiceExtract* input data element. A connection arrow will appear. Drag to the **Vendor Recognition** decision and release
@@ -323,19 +321,19 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
 
 1. In the Expression field enter the below logic
 
-```
-<copy>
-  list contains(
-  [
-    contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "OFFICE"),
-    contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "TECH"),
-    contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "SUPPLIES"),
-    contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "SERVICES")
-  ],
-  true
-  )
-</copy>
-```
+    ```
+    <copy>
+    list contains(
+    [
+        contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "OFFICE"),
+        contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "TECH"),
+        contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "SUPPLIES"),
+        contains(upper case(invoiceExtract.invoiceExtract.vendor_data.vendor_name), "SERVICES")
+    ],
+    true
+    )
+    </copy>
+    ```
 
     ![Flow After Vendor Recognition](images/flow-after-vendor-recognition.png)
 
@@ -367,7 +365,7 @@ In the Type Definition section *Select* **Show Type Definition List** to define 
     - **Key:** amountCategory
     - **Value:** Amount Category (provides type along hints)
 
-Similarly, add other entries per below:
+    Similarly, add other entries per below:
     | **Key** | **Value** |
     | --- | ----------- |
     | amountCategory | Amount Category |
@@ -567,6 +565,7 @@ Similarly, add other entries per below:
 ```
 
 ![Copy JSON For Test Model](images/test-model-copy-json.png)
+
 4. Click on each green checkmark to see individual decision results. Verify the **Approval Routing decision** output as per the Business Rules specified. Also, Verify the **Required Reviewer** Decision output. The result should be **departmentManager**
 
 ![Test Case 1 Output](images/test-case-1-result.png)
