@@ -6,8 +6,8 @@ This lab walks you through the steps to create an Integration flow as per the be
 
 This use case describes how to use Native Actions in Oracle Integration to connect with file server, object storage and serverless functions.
 
-1.  Vendors drop invoice PDF files into the File Server.
-2.  Oracle Integration orchestrates the logic as below:
+1. Vendors drop invoice PDF files into the File Server.
+2. Oracle Integration orchestrates the logic as below:
     - A scheduler triggers the Integration flow.
     - File Server Native Action gets the file from the source.
     - Document Understanding Native Action uploads the Invoice PDF file to OCI AI Service
@@ -15,7 +15,7 @@ This use case describes how to use Native Actions in Oracle Integration to conne
     - The transformed Invoice data is sent to Decision Model. Again, Decision Native Action is used to perform this activity
     - Decision Model applies several Business rules and determines the Approval Routing and places into appropriate tracking Queue.
     - Invoice is parsed and inserted into the ERP Application (Optional)
-3.  OIC Decision Model
+3. OIC Decision Model
     - Evaluates if vendor is in known vendor list
     - Categorizes invoice amount as small/medium/large
     - Determines urgency based on invoice age
@@ -57,7 +57,7 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
 3. In the *Create integration* dialog, enter the following information:
 
-    | **Element**          | **Value**          |       
+    | **Element**| **Value**|
     | --- | ----------- |
     |Name | Invoice Processing LL |
     |Description | Integration to process invoice using native actions and apply business rules |
@@ -67,15 +67,15 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     ![Create Integration](images/create-integration.png)
 
-***Get Invoice PDF File Reference from File Server***
+    ***Get Invoice PDF File Reference from File Server***
 
-1.  Click *+* icon next to the **Schedule** activity and Select *File Server* action from the action palette.
+    1.Click *+* icon next to the **Schedule** activity and Select *File Server* action from the action palette.
 
     ![Orchestrate File Server Native Action](images/select-fs-native-action.png)
 
-2.  In the **Configure FS Native Action** provide per below values.
+    2.In the **Configure FS Native Action** provide per below values.
 
-    | **Property**          | **Value**          |       
+    | **Property**| **Value**|
     | --- | ----------- |
     | What do you want to call your endpoint? | getInvoiceFile |
     | Select Resource | File |
@@ -90,13 +90,13 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     ![Flow After Get Invoice](images/flow-after-getinvoice.png)
 
-***Add Document Understanding Native Action***
+    ***Add Document Understanding Native Action***
 
-1.  Click *+* icon next to the **getInvoiceFile** action and Select *Document Understanding* action from the action palette.
+    1. Click *+* icon next to the **getInvoiceFile** action and Select *Document Understanding* action from the action palette.
 
-2.  In the **Configure Baisic Info** wizard provide per below
+    2. In the **Configure Baisic Info** wizard provide per below
 
-    | **Property**          | **Value**          |       
+    | **Property**| **Value**|
     | --- | ----------- |
     | What do you want to call your endpoint? | extractInvoiceInfo |
     | What does this endpoint do | This action extracts invoice information from a PDF file invoking OCI Document Understanding Service |
@@ -104,7 +104,7 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     Click *Continue*. In the **Configure Configuration** page provide per below
 
-    | **Property**          | **Value**          |       
+    | **Property**| **Value**|
     | --- | ----------- |
     | Compartment| Select the compartment which you have created or access to |
     | Document Type | Invoice |
@@ -112,27 +112,27 @@ In this section you will design an Integration Flow leveraging the OIC Native Ac
 
     Click *Continue* and *Finish* the wizard. **Save** your integration.
 
-***Edit the Map Activity -> extractInvoiceInfo***
+    ***Edit the Map Activity -> extractInvoiceInfo***
 
-1.  Select the **Map** activity **extractInvoiceInfo** and *Click* on **(...)** and Select *Edit*. OCI AI Document Understanding accepts base64encoded data as input.
+    1. Select the **Map** activity **extractInvoiceInfo** and *Click* on **(...)** and Select *Edit*. OCI AI Document Understanding accepts base64encoded data as input.
 
-2.  In the mapper expand the Target **extractInvoiceInfoRequest -> Request Wrapper -> Body -> Document -> Data**. Right Click on **Data** and Select *Create Target Node*
+    2. In the mapper expand the Target **extractInvoiceInfoRequest -> Request Wrapper -> Body -> Document -> Data**. Right Click on **Data** and Select *Create Target Node*
 
     ![Create Data Target Node](images/create-data-target-node.png)
 
-3.  In the **Expression Window** Select **Switch to Developer Mode**. Expand the **Components** pane at the top. From the **Advanced** functions category, *Drag and Drop* the  encodeReferenceToBase64() function into the expression Window. Pass the input parameter as File Reference from **getInvoiceFileResponse -> Get File Reference Response -> File Definitions.. -> File Reference**
+    3. In the **Expression Window** Select **Switch to Developer Mode**. Expand the **Components** pane at the top. From the **Advanced** functions category, *Drag and Drop* the  encodeReferenceToBase64() function into the expression Window. Pass the input parameter as File Reference from **getInvoiceFileResponse -> Get File Reference Response -> File Definitions.. -> File Reference**
     ![Encode File Reference Mapping](images/encode-file-reference-mapping.png)
 
-Click the *Tick* mark to validate the expression. Close the **expression** window and *Validate*. Navigate back to the Integration Canvas. *Save* your integration.
+    Click the *Tick* mark to validate the expression. Close the **expression** window and *Validate*. Navigate back to the Integration Canvas. *Save* your integration.
     ![Flow After Extract Invoice Info](images/flow-after-extractinvoiceinfo.png)
 
-***Add Decision Native Action***
+    ***Add Decision Native Action***
 
-1.  Click *+* icon next to the **extractInvoiceInfo** action and Select *Decision* action from the action palette.
+    1. Click *+* icon next to the **extractInvoiceInfo** action and Select *Decision* action from the action palette.
 
-2.  In the **Configure Baisic Info** wizard provide per below
+    2. In the **Configure Baisic Info** wizard provide per below
 
-    | **Property**          | **Value**          |       
+    | **Property**| **Value**|
     | --- | ----------- |
     | What do you want to call your endpoint? | invoiceApprovalDecision |
     | What does this endpoint do | This action sends the extracted invoice data to OIC Decision Model and applies the business rules |
@@ -140,7 +140,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     Click *Continue*. In the **Configure Configuration** page provide per below
 
-    | **Property**          | **Value**          |       
+    | **Property**| **Value**|
     | --- | ----------- |
     | Decision Application Name | Select **InvoiceProcessingDecisionModel** which is already activated in the previous Lab |
     | Version |  Select **01.00.0000** |
@@ -151,9 +151,9 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     Click *Continue* and *Finish* the wizard. **Save** your integration.
 
-***Edit the Map Activity -> invoiceApprovalDecision***
+    ***Edit the Map Activity -> invoiceApprovalDecision***
 
-1.  Select the **Map** activity **invoiceApprovalDecision** and *Click* on **(...)** and Select *Edit*.
+    1. Select the **Map** activity **invoiceApprovalDecision** and *Click* on **(...)** and Select *Edit*.
     Now, we will map the extracted invoice information from Document Understanding service to the Decision Model Service Request.
 
     On the Source Side *Expand* the variable **extractInvoiceData Response --> Analyze Document Response --> Response Wrapper --> Body --> Invoice --> Fields**
@@ -162,7 +162,7 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     >Note: The mapping below requires some date transformation from source. We will be using mapper functions to do the same. Wherever, there is a **$** symbol provided in the mapping below use the appropriate element from the Source Fields. DO NOT USE the expression as-is given in the table below. Use the below table as reference and create your mapping transformations.
 
-    | **Source**          | **Target**          |       
+    | **Source**| **Target**|
     | --- | ----------- |
     | Invoice Id |  Invoice Data -> InvoiceId |
     | xp20:format-dateTime ($Invoice Date, "[Y0001]-[M01]-[D01]" ) |  Invoice Data -> Invoice Date |
@@ -189,51 +189,51 @@ Click the *Tick* mark to validate the expression. Close the **expression** windo
 
     Click on **Validate** and make sure there are no errors. *Save* your integration.
 
-***Add logger Action***
+    ***Add logger Action***
 
-1.  **Add** a *logger* action after the **invoiceApprovalDecision** activity and name it as **LogTrackingInfo**.
+    1.**Add** a *logger* action after the **invoiceApprovalDecision** activity and name it as **LogTrackingInfo**.
 
-2.  In the **Configure Logger** page, drag and drop **vendorName (extracted from pdf)** element, **Approval Routing (output of decision)** and **SLA Days (output of decision)** elements to logging message text box. Construct a readable expression using the concat() function as per below
+    2.In the **Configure Logger** page, drag and drop **vendorName (extracted from pdf)** element, **Approval Routing (output of decision)** and **SLA Days (output of decision)** elements to logging message text box. Construct a readable expression using the concat() function as per below
 
     ![Configure Log Message](images/logger-message.png)
 
-***Define Business Identifiers & Activate the Integration Flow***
+    ***Define Business Identifiers & Activate the Integration Flow***
 
-1. Manage business identifiers that enable you to track fields in messages during runtime.
+    1. Manage business identifiers that enable you to track fields in messages during runtime.
 
-2. Click on the *(I) Business Identifiers* menu on the top right.
+    2. Click on the *(I) Business Identifiers* menu on the top right.
 
-3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
+    3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
 
-   ![Configure Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
+    ![Configure Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
 
-4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
+    4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
 
 ## Task 2: Activate the Integration.
 
-1.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration as well.
+1. In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration as well.
 
     ![Activate Individual Integration](images/activate-integration.png)
 
-2.  In the **Activate Integration** page select *Tracing Level* as *Debug*, and Click on *Activate*
+2. In the **Activate Integration** page select *Tracing Level* as *Debug*, and Click on *Activate*
 
 ## Task 3: Test & Monitor the Integration.
 
-1.  Upload one of the Sample PDF file (available in the lab artifacts) to the directory configured in the Integration Flow File Server Action. Make sure the name of the file matches with the one given in the file server action.
+1. Upload one of the Sample PDF file (available in the lab artifacts) to the directory configured in the Integration Flow File Server Action. Make sure the name of the file matches with the one given in the file server action.
 
-2.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Run*.
+2. In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Run*.
 
-3.  In the **Configure & Run** page, Select *Request Type* as **Ad hoc Request**. Click on *Run*
+3. In the **Configure & Run** page, Select *Request Type* as **Ad hoc Request**. Click on *Run*
 
-4.  An Instance of the integration is created. Select *Instance Id*. Go to the Logger action and Click on *(...)* and Select *Activity Stream*.
+4. An Instance of the integration is created. Select *Instance Id*. Go to the Logger action and Click on *(...)* and Select *Activity Stream*.
 
     ![Monitoring Activity Stream](images/monitoring-activity-stream.png)
 
-5.  Click on the *Eye* icon next to the Logger Action in the activity stream. Observe the blurb printed and Validate with the Business Rules created.
+5. Click on the *Eye* icon next to the Logger Action in the activity stream. Observe the blurb printed and Validate with the Business Rules created.
 
 ## Task 4: Bonus Section
 
-We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
+    We have not implemented the Integration flow to send the invoice data to appropriate Approval Routing Queue for further processing. Let's say if you have to send the invoice to an ERP Cloud or any downstream application. Implementing a content based routing queue gives greater flexibility to decouple the architecture from the main Integration flow. Detailed steps are not provided in this section. However, the following high level hints should help you design the extended usecase. Make sure you create a version of your integration and perform the enhancements.
 
 **Extending Your Integration with OIC Event System**
 
@@ -264,7 +264,7 @@ Take your invoice processing solution to the next level by implementing asynchro
 
       ```
       <copy>
-        {"type":"jq_filter","filter-def":".approvalrouting==\"executive\""}
+ {"type":"jq_filter","filter-def":".approvalrouting==\"executive\""}
       </copy>
       ```
     - Similarly, create Expedited-Track, Fast-Track Subscriber Integration Flows
@@ -354,4 +354,4 @@ OIC's native actions provide enterprise-grade AI and decision capabilities with 
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta, May 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
