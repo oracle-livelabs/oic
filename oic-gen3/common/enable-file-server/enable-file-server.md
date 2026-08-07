@@ -51,4 +51,4 @@ This lab assumes you have:
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Oracle Integration team, Feb 2026
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

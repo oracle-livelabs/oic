@@ -39,64 +39,62 @@ In this workshop, you will learn how to:
 **Solution Architecture:**
 You'll implement an intelligent invoice processing system that addresses these challenges through:
 
-1.  *Automated Data Extraction:*
+1. *Automated Data Extraction:*
 
     - OCI Document Understanding processes PDF invoices with maximum accuracy
     - Automatically extracts vendor information, invoice amounts, line items, and payment terms
     - Eliminates manual data entry, reducing processing time from 8 minutes to 30 seconds per invoice
     - Provides structured data for consistent downstream processing
 
-2.  *Intelligent Risk Assessment:*
+2. *Intelligent Risk Assessment:*
     - Multi-factor risk scoring considering:
       - Invoice amount categories: Small (<$5K), Medium ($5K-$25K), Large (>$25K)
       - Vendor recognition: Known vendors from approved vendor database vs. new vendors (handled in the business rules logic for demonstration purpose)
       - Invoice age urgency: Normal (<15 days), High (15-30 days), Urgent (>30 days)
       - Data quality factors: Valid tax ID, complete vendor information, matching line item totals
 
-3.  *Automated Routing:*
+3. *Automated Routing:*
     - Fast-Track Processing (3-day SLA): Small amounts from known, trusted vendors
     - Standard Processing (5-day SLA): Regular invoices meeting normal risk criteria
     - Enhanced Review (7-day SLA): Medium-risk invoices requiring additional verification
     - Executive Approval (10-day SLA): High-value or high-risk invoices requiring senior management review
     - Expedited Processing (1-2 day SLA): Urgent invoices regardless of amount to avoid late payment penalties
 
-4.  *Business Rule Automation:*
+4. *Business Rule Automation:*
     - Consistent application of approval policies across all departments
     - Automatic vendor verification against approved vendor list
     - Systematic duplicate detection based on vendor, amount, and date proximity
     - Early payment discount identification and fast-track routing for qualifying invoices
 
+    Here is the high level architecture reference of the workshop
+    ![Usecase Architecture](images/native-actions-ai-decision.png)
 
-Here is the high level architecture reference of the workshop
-![Usecase Architecture](images/native-actions-ai-decision.png)
+    >Note: Inserting records into ERP Cloud is out of the scope of this workshop. However, feel free to play around with the extracted/transformed invoice data and push it to the downstream systems.
 
-Note: Inserting records into ERP Cloud is out of the scope of this workshop. However, feel free to play around with the extracted/transformed invoice data and push it to the downstream systems.
-
-
-Estimated Time: 3 hours
+Estimated Workshop Time: 3 hours
 
 ### Objectives
 
 Here are some high-level objectives for the workshop on Oracle Integration using native actions:
 
-1.  Understand OIC Native Actions
+1. Understand OIC Native Actions
     - Gain insights into the capabilities of OIC native actions and how they can be used to integrate with OCI AI services effectively
-2.  Automate File Transfer
+2. Automate File Transfer
     - Learn how to configure OIC to download Invoice PDF files from a File server
-3.  Extract invoice data
+3. Extract invoice data
     - Configure OCI Document Understanding to extract structured data from invoice PDFs
-3.  Implement Decision Application
+4. Implement Decision Application
     - Implement complex business rules to process invoices as per compliance
-4.  Process Invoice Files in OIC
+5. Process Invoice Files in OIC
     - Discover Decisions service and invoke as native action in OIC
-5.  Hands-on activities and exercises
+6. Hands-on activities and exercises
     - Provide hands-on exercises to practice usage of native actions to invoke file server, AI Document Understanding and Decisions service
 
-By the end of this workshop, you will have a comprehensive understanding of how to leverage OIC's native actions to invoke OCI AI Document Understanding service, Decision Model and File Server, creating a seamless and automated integration design.
+    By the end of this workshop, you will have a comprehensive understanding of how to leverage OIC's native actions to invoke OCI AI Document Understanding service, Decision Model and File Server, creating a seamless and automated integration design.
 
-**High level workflow of the Workshop**
+    **High level workflow of the Workshop**
 
-![Usecase Workflow](images/uc-ai-decision-highlevel-workflow.png)
+    ![Usecase Workflow](images/uc-ai-decision-highlevel-workflow.png)
 
 ### Prerequisites
 
@@ -113,4 +111,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
-* **Last Updated By/Date** - Kishore Katta, May 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

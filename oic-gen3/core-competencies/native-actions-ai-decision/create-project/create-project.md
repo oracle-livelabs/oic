@@ -24,20 +24,20 @@ This lab assumes you have:
 
 ***Create Project***
 
-1.  Login into OIC Console
+1. Login into OIC Console
 
-2.  In the left Navigation pane of OIC console, Click *Projects* and Click *Add*, then *Create*
+2. In the left Navigation pane of OIC console, Click *Projects* and Click *Add*, then *Create*
 
-3.  In the **Create Project** dialog, enter the following information and click on *Create*:
+3. In the **Create Project** dialog, enter the following information and click on *Create*:
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | OIC Native Actions FS AI DS     |
-| Identifier         | Generated automatically       |
-| Description  | This project is the workspace to create integrations to invoke OCI File server, AI Services and Decision Service |
-{: title="Create Project"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | OIC Native Actions FS AI DS     |
+    | Identifier         | Generated automatically       |
+    | Description  | This project is the workspace to create integrations to invoke OCI File server, AI Services and Decision Service |
+    {: title="Create Project"}
 
-![Create Project](images/create-project.png)
+    ![Create Project](images/create-project.png)
 
 You may now **proceed to the next lab**.
 
@@ -54,4 +54,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration & OPA
-* **Last Updated By/Date** - Kishore Katta, May 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
