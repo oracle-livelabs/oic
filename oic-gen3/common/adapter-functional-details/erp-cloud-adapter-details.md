@@ -18,7 +18,7 @@ This lab assumes you have:
 
 * All previous labs successfully completed.
 
-## Task	1: Understand ERP Cloud Adapter usage roles
+## Task 1: Understand ERP Cloud Adapter usage roles
 
 - Adapters Identify and Select the pattern of Integration upfront. The adapter wizard provides an intuitive way to select the task of choice by listing out relevant integration artefacts which provide an abstract view to the Integration Developer
 

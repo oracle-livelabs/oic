@@ -55,16 +55,16 @@ Integration's embedded File Server as a target application in an integration
 flow.
 
 1. From the Oracle Integration *Home* page, select **Settings**, then **File
-   Server** in the navigation pane.
+    Server** in the navigation pane.
 2. Select **Settings** to open the File Server Settings page. Review the File
-   Server status and configuration, and make a note of the hostname or IP
-   address and port number.
+    Server status and configuration, and make a note of the hostname or IP
+    address and port number.
     ![File Server Settings page](images/file-server-settings.png)
     > **Note:**  Ensure the *Authentication Type* is set to **Password or Key**.
 
 3. Under **Status**, monitor the server's status and stop or restart it as needed.
 4. Select **Users** in the navigation pane, search for your username, and
-   click **Configure**.
+    click **Configure**.
     ![Navigation to Users](images/enableuseronfileserver.png)
 5. Enable the user, then click **Save**.
     ![Enable User](images/enableuseronfileserver1.png)
@@ -75,7 +75,7 @@ flow.
 6. Select **Folders** in the navigation pane.
     ![Navigation to Folders](images/file-server-files1.png)
 7. Open **home**, then **users**, and then your username. In the upper-right
-   corner, click **Create** and create a folder named **Output**.
+    corner, click **Create** and create a folder named **Output**.
 8. On the **Output** folder, click **Permissions**.
     ![Workshop Folder structure](images/fs-permissions.png)
     > **Note:**  You will be using the above Folder structure in the lab.

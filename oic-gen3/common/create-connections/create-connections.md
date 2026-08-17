@@ -33,7 +33,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
 5. Search for **File**, Please note that the connection with the name **File Server** is already created by the instructors, configured and shared with other projects.
-Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+    Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
     ![File Server Connection](images/fileserversharedconn.png).
 

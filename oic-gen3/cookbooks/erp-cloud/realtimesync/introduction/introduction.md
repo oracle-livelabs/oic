@@ -1,6 +1,6 @@
-# Introduction
+# ERP Cloud Real Time Synchronization
 
-## About this Workshop
+## Introduction
 
 This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events in a secured way using various authentication schemes.
 
@@ -15,7 +15,7 @@ push the relevant event information to downstream systems. As part of the lab yo
     The following diagram shows the runtime interaction between the systems involved in this use case:
     ![POEvent](../business-events/images/po-real-time-sync-1.png)
 
-Estimated Time: 80 minutes
+Estimated Workshop Time: 80 minutes
 
 ### Objectives
 

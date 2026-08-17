@@ -96,7 +96,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 Add the FTP Adapter invoke to the integration canvas.
 
 1. Hover your cursor over the arrow in the integration canvas to display the ***+*** sign. Click the ***+*** sign and select the **File Server** Connection created in the previous lab.
-This invokes the FTP adapter Configuration Wizard.
+    This invokes the FTP adapter Configuration Wizard.
 2. On the **Basic Info** page, select the following values and click ***Continue***.
 
     | **Element**        | **Value**          |
