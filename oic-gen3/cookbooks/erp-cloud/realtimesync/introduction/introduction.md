@@ -1,47 +1,44 @@
-# Introduction
+# ERP Cloud Real Time Synchronization
 
-## About this Workshop
+## Introduction
 
-This workshop shows you how to design and develop a Real time Synchronization Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events in a secured way using various authentication schemes.
+This workshop shows you how to design and develop a real-time synchronization use case in Oracle Integration 3 with ERP Cloud. The out-of-the-box ERP Cloud Adapter helps an integration developer quickly consume business events securely by using various authentication schemes.
 
-This Lab explores the use of Oracle Integration to subscribe to Oracle ERP Cloud Events and
-push the relevant event information to downstream systems. As part of the lab you will build the following use case scenario:
+This lab explores how to use Oracle Integration to subscribe to Oracle ERP Cloud events and push relevant event information to downstream systems. As part of the lab, you will build the following use case:
 
 1. You create and activate an integration that subscribes to an ERP Cloud Purchase Order (PO) event
-2. You then create a PO in ERP Cloud and a PO event is triggered.
-3. Your integration receives the PO event and pushes the data
-    into the File Server.
+2. You then create a PO in ERP Cloud, which triggers a PO event.
+3. Your integration receives the PO event and sends the data to File Server.
 
     The following diagram shows the runtime interaction between the systems involved in this use case:
     ![POEvent](../business-events/images/po-real-time-sync-1.png)
 
-Estimated Time: 80 minutes
+Estimated Workshop Time: 80 minutes
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Optional, Enable File Server.
-* Optional, Configure File Server and connect with FTP client.
-* Optional, Configure ERP Cloud for Oracle Integration
-* Creating a Project
-* Creating Connections
-* Create a Real-Time Synchronization scenario using Business Events.
-
+* Optionally enable File Server.
+* Optionally configure File Server and connect with an FTP client.
+* Optionally configure ERP Cloud for Oracle Integration.
+* Create a project.
+* Create connections.
+* Create a real-time synchronization scenario using business events.
 
 ### Prerequisites
 
-* Oracle Integration Instance.
-* Access to the ERP Cloud environment
-* A Chrome browser.
+* An Oracle Integration instance.
+* Access to the ERP Cloud environment.
+* Google Chrome.
 
 ## Task 1: Leverage the ERP Cloud Adapter in Oracle Integration 3
 
-Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and On-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, NetSuite and so on. OIC adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices
+Oracle Integration 3 provides native connectivity to Oracle and non-Oracle Software as a Service (SaaS) and on-premises applications, such as Oracle ERP Cloud, Oracle Service Cloud, HCM Cloud, Salesforce.com, Workday, EBS, SAP, and NetSuite. Oracle Integration adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-standard best practices.
 
-With the help of this cookbook series, you can design and implement ERP Cloud Integration patterns leveraging Oracle Integration 3 features and functionalities
+With this cookbook series, you can design and implement ERP Cloud integration patterns by using Oracle Integration 3 features and capabilities.
 
-As an Integration Developer, if you have a requirement to integrate an ERP Cloud application with any other SaaS or On-premise application, then this cookbook series helps you to go through the pre-requisite steps, common use cases, ERP Cloud adapter functional capabilities and several implementation considerations along with lab exercises to provide hands-on experience.
+If you are an integration developer who needs to integrate ERP Cloud with another SaaS or on-premises application, this cookbook series guides you through the prerequisites, common use cases, ERP Cloud Adapter capabilities, and implementation considerations. It also includes lab exercises that provide hands-on experience.
 
 The Oracle ERP Cloud Adapter enables you to easily integrate on-premises or SaaS applications with Oracle ERP Cloud without having to know about the specific details involved in the integration.
 
@@ -51,18 +48,19 @@ The Oracle ERP Cloud Adapter provides the following key benefits:
 * Integrates easily with the Oracle ERP Cloud application’s WSDL file to produce a simplified, integration-centric WSDL.
 * Provides declarative support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Management Cloud.
 
-* Generates automatic mapping to the exposed business object, event subscription, or business (REST) API that you select during adapter configuration:
-    - Business object: Represents a self-contained business document that can be acted upon by the integration. An integration can send requests to create a new record for that business object. They can send a request either to update or delete an existing record for a business object. Integrations can also send requests to retrieve information about one or more records representing that business object.
+* Generates an automatic mapping to the exposed business object, event subscription, or business REST API that you select during adapter configuration:
 
-    - Event subscription: Represents an event document to which you subscribe. The event subscription is raised by the Oracle ERP Cloud application.
+* Business object: Represents a self-contained business document that the integration can act on. An integration can send requests to create, update, or delete a record for that business object. It can also send requests to retrieve information about one or more records representing that business object.
 
-      You can also create custom business events in Oracle ERP Cloud that can be published and subscribed to with the Oracle ERP Cloud Adapter. 
+* Event subscription: Represents an event document to which you subscribe. The event subscription is raised by the Oracle ERP Cloud application.
 
-    - Business (REST) API: Represents an Oracle Fusion Applications REST API resource.
-      You can select parent business resources and their corresponding child business resources on the Operations page in the Adapter Endpoint Configuration Wizard. Support is provided in the invoke (outbound) direction. If you select a top-level resource on the Operations page, you can also select sub-resources on the Sub-Resources page. 
+* You can also create custom business events in Oracle ERP Cloud that can be published and subscribed to with the Oracle ERP Cloud Adapter.
 
-* Simplified connection creation: Automatically identifies the required service catalog service WSDL, optional event catalog URL, and optional interface catalog URL to use based on the Oracle ERP Cloud host name you specify when creating a new connection on the Connections page.
-* Dynamically invokes a REST endpoint/URL at runtime without requiring you to configure any extra invoke connection or REST outbound details
+* Business (REST) API: Represents an Oracle Fusion Applications REST API resource.
+* You can select parent business resources and their corresponding child business resources on the Operations page in the Adapter Endpoint Configuration Wizard. Support is provided in the invoke (outbound) direction. If you select a top-level resource on the Operations page, you can also select sub-resources on the Sub-Resources page.
+
+* Simplified connection creation: Automatically identifies the required service catalog WSDL, optional event catalog URL, and optional interface catalog URL based on the Oracle ERP Cloud host name that you specify when creating a connection on the Connections page.
+* Dynamically invokes a REST endpoint or URL at runtime without requiring you to configure an additional invoke connection or REST outbound details.
 
 ### Video Preview
 
@@ -79,4 +77,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
