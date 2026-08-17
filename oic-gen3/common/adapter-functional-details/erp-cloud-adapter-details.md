@@ -1,8 +1,8 @@
-# Functional Details of ERP Cloud Adapter - READ Only
+# Functional Details of the ERP Cloud Adapter - Read Only
 
 ## Introduction
 
-In this section, we will see the functional usage of the ERP Cloud Adapter and its capabilities w.r.t the design patterns described earlier.
+This section describes the functional use of the ERP Cloud Adapter and its capabilities with respect to the design patterns described earlier.
 
 Estimated Time: 15 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-* Understand Functional Usage of the ERP Cloud adapter
+* Understand the functional use of the ERP Cloud Adapter.
 
 ### Prerequisites
 
@@ -20,21 +20,21 @@ This lab assumes you have:
 
 ## Task 1: Understand ERP Cloud Adapter usage roles
 
-- Adapters Identify and Select the pattern of Integration upfront. The adapter wizard provides an intuitive way to select the task of choice by listing out relevant integration artefacts which provide an abstract view to the Integration Developer
+- Select the integration pattern in advance. The Adapter Configuration Wizard provides an intuitive way to select a task by listing relevant integration artifacts that provide an abstract view for the integration developer.
 
 ### **When used as a trigger role**
 
-- Adapter Configuration wizard supports the ability to process business events, expose an object interface, subscription to completed FBDI jobs
+- The Adapter Configuration Wizard supports processing business events, exposing an object interface, and subscribing to completed FBDI jobs.
 
     ![ERP Cloud Adapter Trigger Role](images/erp-adapter-trigger-role.png)
 
 ### *Configure Business Events*
 
-- Business Event is received as a request that starts the integration. Only events that can be subscribed to are displayed in the Adapter Wizard.
+- A business event is received as a request that starts the integration. Only events that can be subscribed to are displayed in the Adapter Configuration Wizard.
 
     ![ERP Cloud Adapter Business Events](images/trigger-business-events.png)
 
-- ERP Cloud Adapter Supports Events from various modules such as
+- The ERP Cloud Adapter supports events from various modules, including:
 
     - Financials
     - Inventory Management
@@ -53,13 +53,12 @@ This lab assumes you have:
     ![ERP Cloud Adapter Business Objects](images/trigger-business-objects.png)
 
 
-### **When used as a invoke role**
-- Adapter Configuration wizard supports the ability to invoke SOAP/REST services, simplify invocation of FBDI jobs, and send import files (FBDI/Non-FBDI) to ERP Cloud
+### **When used in an invoke role**
+- The Adapter Configuration Wizard supports invoking SOAP and REST services, simplifies the invocation of FBDI jobs, and sends import files (FBDI/non-FBDI) to ERP Cloud.
 
     ![ERP Cloud Adapter Webservices](images/invoke-business-services.png)
 
-* ***Query, Create, Update, or Delete Information:*** Provides the standard configuration path for selecting a business object or service. This option displays the standard Operations and Response pages.
-Select to browse by business object or service. There is a one-to-one correspondence between the business object and service. The service acts on the business document. The Adapter supports:
+* ***Query, Create, Update, or Delete Information:*** Provides the standard configuration path for selecting a business object or service. This option displays the standard Operations and Response pages. Select this option to browse by business object or service. There is a one-to-one correspondence between a business object and a service. The service acts on the business document. The Adapter supports:
 
     - Business Objects: Select to browse a list of available business objects.
 
