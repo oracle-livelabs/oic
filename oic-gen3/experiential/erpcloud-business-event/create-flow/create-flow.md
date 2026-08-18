@@ -3,6 +3,8 @@
 ## Introduction
 This demo lab walks you through the steps to create an end-to-end integration that receives ERP purchase order events and persists the data in an ADW table.
 
+Estimated Time: 40 minutes
+
 ### Objectives
 You will learn how to:
 
