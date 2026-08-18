@@ -58,7 +58,7 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 1. In the left Navigation pane, click **Design**, followed by **Agents**.
 
 2. In the upper-right corner of the window, click **Download**, then select **Robot Agent**.
-![Download Robot Agent](./images/download-robot-agent.png ' ')
+    ![Download Robot Agent](./images/download-robot-agent.png ' ')
 
     You should receive a confirmation that the agent is downloading. This could take a few minutes.
     ![Download Robot Agent notification](./images/download-robot-agent-notification.png ' ')

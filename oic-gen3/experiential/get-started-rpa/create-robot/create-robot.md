@@ -96,7 +96,7 @@ This action tells the robot to open a web browser and navigate to the Oracle ERP
 6. Click **OK** when done, then **Save**.
 
 7. In another browser window, open the sign-in page for the Oracle Fusion environment that the robot will work in. For example, to access Oracle Cloud ERP, your login URL pattern will be:
-`https://<Fusion-domain>.fa.<data-center>.oraclecloud.com/fscmUI/faces/FuseWelcome`
+    `https://<Fusion-domain>.fa.<data-center>.oraclecloud.com/fscmUI/faces/FuseWelcome`
 
 8. On the canvas, select the **Open Application** action, after which you want to record.
 9. On the toolbar, select **Record after the selected action**. The Smart Record panel appears. If you have not installed the recorder, **Browser extension not detected** appears; follow Task 4. Otherwise, skip Task 4.
