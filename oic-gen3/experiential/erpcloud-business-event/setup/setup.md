@@ -2,36 +2,36 @@
 
 ## Introduction
 
-This lab walks you through the setup required to complete this demo workshop.
+This lab walks you through the setup required to complete this workshop.
 
 Estimated Lab Time: 5 minutes
 
 ### Objectives
 In this lab, you will:
-- Obtain Database Connection details
-- Create Database Table using a SQL script
+- Obtain database connection details.
+- Create a database table using a SQL script.
 
 
 ### Prerequisites
 This lab assumes you have:
-* An Oracle Cloud account
-* All previous labs successfully completed
+* An Oracle Cloud account.
+* Successfully completed all previous labs.
 
 
-## Task 1: Obtain Database Connection details
+## Task 1: Obtain Database Connection Details
 1. If you are not already logged in to Oracle Cloud Console, log in and select **Autonomous Database** from the navigation menu under Oracle Database.
 
     ![Select Autonomous Database](images/adb-navigation.png)
 
     > **Note:**  You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the **Quick Actions** section of the dashboard.
 
-2. Navigate into your demo database by clicking on the instance link.
+2. Navigate to your demo database by clicking the instance link.
 
     ![Select Autonomous Database](images/select-adb-instance.png)
 
     > **Note:**  Similar steps apply to either Autonomous Data Warehouse and Autonomous Transaction Processing.
 
-3.  In your Autonomous Database Details page, click the **Database Connection** button.
+3. In the Autonomous Database Details page, click the **Database Connection** button.
 
 
 
@@ -39,7 +39,7 @@ This lab assumes you have:
 
 5. Provide a Wallet password, then click **Download**. Save the wallet file (ZIP) on your local machine. This file will be used later when creating the Autonomous Database connection in Oracle Integration.
 
-6. Under *Connection Strings*, select one of the *TNS Name* entries and write it down. This value will used later when creating the Autonomous Database connection in Oracle Integration.
+6. Under *Connection Strings*, select one of the *TNS Name* entries and write it down. This value will be used later when creating the Autonomous Database connection in Oracle Integration.
 
     ![Select Connection TNS Name](images/database-connection-tnsname.png)
 
@@ -47,18 +47,18 @@ This lab assumes you have:
 
 
 ## Task 2: Create a database table using a SQL script
-Follow these steps to create a DB table which will be used as part of this workshop.
+Follow these steps to create a database table that will be used in this workshop.
 
-1.  If you are not already logged in to SQL Worksheet, in your ADW Database Details page, click the **Database Actions** button.
+1. If you are not already logged in to SQL Worksheet, click the **Database Actions** button on the ADW Database Details page.
 
 
-   > **Note:**  If you are redirected to the Database Actions page, then skip to Step 4. Otherwise, follow the next step to log-in manually.  
+    > **Note:** If you are redirected to the Database Actions page, skip to step 4. Otherwise, follow the next step to log in manually.
 
 2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account `ADMIN` and click **Next**.
 
-   ![Enter DB username](images/enter-username.png)
+    ![Enter DB username](images/enter-username.png)
 
-3.  Enter the **ADMIN** password you specified when creating the database and click **Sign in**.
+3. Enter the **ADMIN** password you specified when creating the database, then click **Sign in**.
 
     ![Enter DB password](images/enter-password.png)
 
@@ -66,9 +66,9 @@ Follow these steps to create a DB table which will be used as part of this works
 
     ![Open SQL](images/open-sql.png)
 
-    > **Note:**  If this is the very first time you open the SQL Action, then a click-demo will be displayed. Just hit the **X** button to proceed.
+    > **Note:** If this is the first time you open SQL, a click-through demo is displayed. Click **X** to proceed.
 
-5. The SQL Worksheet appears. Before you proceed with the SQL Worksheet, copy below code snippet:
+5. The SQL Worksheet appears. Copy the code snippet below:
     ```
     <copy>
     CREATE TABLE PURCHASEORDER
@@ -86,11 +86,11 @@ Follow these steps to create a DB table which will be used as part of this works
     </copy>
     ```
 
-6. Paste the script in the SQL Worksheet, then click **Run It** button. This will create the **PURCHASEORDER** table. The table is created successfully when you see the notification in the *Script Output* window.
+6. Paste the script into the SQL Worksheet, then click the **Run It** button. This creates the **PURCHASEORDER** table. The table is created successfully when a notification appears in the *Script Output* window.
 
-    ![Past SQL Script](images/paste-run-sql-script.png)
+    ![Paste SQL Script](images/paste-run-sql-script.png)
 
-Now you have an external table which will be used in the demo flow.
+You now have an external table that will be used in the demo flow.
 
 
 You may now **proceed to the next lab**.
@@ -98,4 +98,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
