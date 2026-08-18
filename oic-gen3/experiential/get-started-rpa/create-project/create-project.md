@@ -2,35 +2,35 @@
 
 ## Introduction
 
-This lab walks you through the steps to create a Project to hold all the relevant Integration and Robot assets, such as connections and flows.
+This lab walks you through the steps to create a project to hold all relevant integration and robot assets, such as connections and flows.
 
 Estimated Lab Time: 5 minutes
 
 ### About Projects
 
-Projects are the hubs of all your automation work and the place to go when you want to design automation solutions, including integrations and robots. Each project can focus on a specific business objective, where select users are given access to project assets. Users who are on different teams and who have different skill-sets can collaborate on designated projects to meet their team objectives.
+Projects are the hubs of your automation work and the place to design automation solutions, including integrations and robots. Each project can focus on a specific business objective, and selected users can be given access to project assets. Users from different teams and with different skill sets can collaborate on designated projects to meet their objectives.
 
-Projects provide convenient deployment and unified observability, allowing pre-defined teams to work together to build, deploy, and monitor integrations and robots.
+Projects provide convenient deployment and unified observability, allowing predefined teams to work together to build, deploy, and monitor integrations and robots.
 
 ### Objectives
 
 In this lab, you will:
 
-- Create a project to hold the integration and robot assets
+- Create a project to hold the integration and robot assets.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-- Completed the Oracle Integration provisioning lab
+- Completed the Oracle Integration provisioning lab.
 
 ## Task 1: Create a Project
 
-1. In the left Navigation pane, click **Projects**.
+1. In the left navigation pane, click **Projects**.
 
 2. Click **Add**.
 
-3. Select **Create**
+3. Select **Create**.
 
     ![Click Create](./images/create-project_add.png " ")
 
@@ -53,4 +53,4 @@ You have successfully completed this lab.
 ## Acknowledgements
 
 - **Author** - Ravi Chablani, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, Aug 2026
