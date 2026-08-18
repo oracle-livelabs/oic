@@ -4,7 +4,7 @@
 
 This workshop demonstrates how to integrate Oracle Integration (OIC) with Oracle ERP Cloud to automate the creation of invoices using the ERP Cloud adapter. In real-world business scenarios, managing invoices efficiently is crucial for maintaining smooth financial operations. By leveraging OIC, organizations can streamline this process, reducing manual efforts and minimizing errors.
 
-In this workshop, we will build an OIC integration flow that receives an invoice and lines data payload in JSON format. The integration flow will:
+In this workshop, we will build an OIC integration flow that receives invoice and line data in JSON format. The integration flow will:
 
   - Validate the specified business unit to ensure it exists.
   - Verify the supplier's existence within the ERP system.
@@ -21,15 +21,15 @@ Estimated Time: 90 minutes
 
 In this workshop, you will learn how to:
 
-* Creating a Project
-* Creating Connections
-* Create a Real-Time Integration scenario using ERP Cloud Business Services.
-* Use Business Object to Integrate with ERP Cloud.
+* Create a project.
+* Create connections.
+* Create a real-time integration scenario using ERP Cloud business services.
+* Use business objects to integrate with ERP Cloud.
 
 ### Prerequisites
 
-* Oracle Integration Instance.
-* Access to the ERP Cloud environment
+* An Oracle Integration instance.
+* Access to the ERP Cloud environment.
 * A Chrome browser.
 
 
@@ -44,4 +44,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
