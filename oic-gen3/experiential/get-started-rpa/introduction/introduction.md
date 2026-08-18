@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop will enable you to build a Robot with Oracle Integration 3. The steps will include setting up the robot environment and connections, creating the robot and integration, followed by running and testing a robot.
+This workshop enables you to build a robot with Oracle Integration 3. The steps include setting up the robot environment and connections, creating the robot and integration, and then running and testing the robot.
 
 Estimated Workshop Time: 2 hours
 
@@ -12,11 +12,11 @@ Robots and integrations help you achieve the same business goals using different
 
 Robots enable organizations to unify their automation work and strategies, which can eliminate any automation silos.
 
-Having robots as part of Oracle Integration let's you gain the efficiencies of automation along with the controls to guarantee good corporate governance. Corporate teams can automate their business processes with only minimal involvement from IT, while a designated team maintains operational excellence by providing oversight. Essentially, you reduce risk by managing the entire lifecycle of all automation assets in one place.
+Having robots as part of Oracle Integration lets you gain the efficiencies of automation along with controls that support good corporate governance. Corporate teams can automate their business processes with minimal involvement from IT, while a designated team maintains operational excellence by providing oversight. You reduce risk by managing the entire lifecycle of all automation assets in one place.
 
 Oracle Integration offers unified observability of all assets with robust monitoring tools, including dashboards, proactive email notifications, and detailed troubleshooting pages.
 
-Businesses can build flexible and future-proof solutions using Oracle Integration. Use Robots when the underlying service only support a UI-interface. You create an integration that calls a robot and then moves on to the next automation work. When the time comes to replace the UI-based implementation with an API-based interface, you can make an update without impacting the larger business process.
+Businesses can build flexible, future-proof solutions using Oracle Integration. Use robots when the underlying service supports only a user interface. You create an integration that calls a robot and then proceeds to the next automation task. When the time comes to replace the UI-based implementation with an API-based interface, you can make the update without affecting the larger business process.
 
 [First Glimpse - Oracle Integration 3 RPA](youtube:ljZdU3j2lPw:medium)
 
@@ -24,14 +24,14 @@ Businesses can build flexible and future-proof solutions using Oracle Integratio
 
 In this workshop, you will:
 
-* Learn about the benefits of using Robots in Oracle Integration 3
-* Provision Oracle Integration 3 in Oracle Cloud Infrastructure
-* Build, Test and Monitor a Robot and its Integration
+* Learn about the benefits of using robots in Oracle Integration 3.
+* Provision Oracle Integration 3 in Oracle Cloud Infrastructure.
+* Build, test, and monitor a robot and its integration.
 
 ### Prerequisites
 
-* An Oracle Free Tier or Paid Cloud Account
-* A Chrome browser
+* An Oracle Free Tier or paid cloud account.
+* A Chrome browser.
 
 ## Learn More
 
@@ -41,4 +41,4 @@ In this workshop, you will:
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
