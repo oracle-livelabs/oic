@@ -11,7 +11,7 @@ This lab explores how to use Oracle Integration to subscribe to Oracle ERP Cloud
 3. Your integration receives the PO event and sends the data to File Server.
 
     The following diagram shows the runtime interaction between the systems involved in this use case:
-    ![POEvent](../business-events/images/po-real-time-sync-1.png)
+        ![POEvent](../create-flow/images/po-real-time-sync-1.png)
 
 Estimated Workshop Time: 80 minutes
 
