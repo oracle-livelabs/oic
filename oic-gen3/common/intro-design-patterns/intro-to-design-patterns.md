@@ -14,9 +14,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-
 * None.
-
 
 ## Task 1: Understand ERP Cloud and SCM Cloud Connectivity Capabilities
 
@@ -26,22 +24,22 @@ Customers choose to have some modules running on-premise and many of them in the
 
 ![ERP SCM Connectivity](./images/erp-scm-connectivity.png)
 
-
 ### *Inbound Connect Scenarios*
 
--	File-Based Data Import
+- File-Based Data Import
     - Batch based
     -	Send file through MTOM or Stage in UCM
--	SOAP/Rest Web services
+- SOAP/Rest Web services
     -	Real-Time
--	Collaboration Messaging Framework (CMK) for B2B
+- Collaboration Messaging Framework (CMK) for B2B
 
 ### *Outbound Connect Scenarios*
+
 - Events and Notification
     - Only Events published will need enrichment of data
--   BI Publisher / BICC
+- BI Publisher / BICC
     - BI Publisher  and Business Intelligence Cloud Connect (BICC) used for SaaS extracts
--	Collaboration Messaging Framework (CMK) for B2B
+- Collaboration Messaging Framework (CMK) for B2B
 
   | **Business Event Integration** | **Import Bulk Data to Fusion Applications** | **Callback Integration** | **Business Object Integration** | **Send Files to Fusion Applications** |
   |:---:|:---:|:---:|:---:|:---:|
@@ -51,6 +49,7 @@ Customers choose to have some modules running on-premise and many of them in the
 ## Task 2: Real-Time Integration
 
 There are several ways to Synchronize data between ERP Cloud and downstream applications
+
 - Business Events - Oracle Integration subscribes to events from ERP Cloud
 - Business Object – ERP Cloud invokes Oracle Integration Endpoints exposed using Business Object Interface
 - Business Services (APIs) - ERP/SCM Cloud provides REST/SOAP APIs which includes how to create, update and fetch records in Real-Time Integration scenarios.
@@ -154,4 +153,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
