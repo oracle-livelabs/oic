@@ -207,7 +207,7 @@ A Map action named **Map to validateBusinessUnit** is created automatically. Def
 Check whether the business unit sent in the request payload is valid.
 
 1. Click the ***Actions*** icon. From the **Collection** section, drag ***Switch*** to the **Integration** canvas and place it after the **validateBusinessUnit** activity.
-  ![Check for BusinessUnit](images/checkforbu.png)
+    ![Check for BusinessUnit](images/checkforbu.png)
 
     You need to define two branches:
     - Route1 branch: This branch checks the **count of items**. If the expression evaluates to true, the instance follows this branch.
@@ -216,7 +216,7 @@ Check whether the business unit sent in the request payload is valid.
 ### *Add the branches*
 1. Select ***Switch***, click **...**, select **Add**, then click **Otherwise**.
 2. You should see two branches: **Route1** and **Otherwise**.
-   ![switch condition branches](images/switchbranches.png)
+    ![switch condition branches](images/switchbranches.png)
 
 ### *Define the Route1 flow*
 

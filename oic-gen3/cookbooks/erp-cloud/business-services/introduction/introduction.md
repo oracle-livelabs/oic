@@ -15,7 +15,7 @@ Once these validations are complete, the integration will invoke Oracle ERP Clou
   The following diagram shows the runtime interaction between the systems involved in this use case:
   ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
 
-Estimated Time: 90 minutes
+Estimated Workshop Time: 90 minutes
 
 ### Objectives
 

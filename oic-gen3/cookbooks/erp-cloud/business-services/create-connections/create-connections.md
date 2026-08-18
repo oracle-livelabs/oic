@@ -39,14 +39,14 @@ Create a connection with the REST Adapter.
 
     Keep all other values at their defaults.
 
-> **Note: If you are a Bootcamp user, complete only step 5 and skip the remaining steps.
-If you are not a Bootcamp user, skip step 5 and continue with step 6.**
+    > **Note: If you are a Bootcamp user, complete only step 5 and skip the remaining steps.
+    If you are not a Bootcamp user, skip step 5 and continue with step 6.**
 
 5. In the *Use a Shared Connection* section, search for **REST Interface** and select the connection that is already created and shared in the training instance. Exit the connection canvas by clicking the back button in the upper-left corner of the screen.
 
-The connection named **REST Interface** is already created, configured, and shared with other projects in your training instance. Although the two connection names are similar, they exist in different projects. You can share adapter connection resources across projects. For example, two projects can integrate with a common system, such as Oracle ERP Cloud. The connection you created references the shared connection in the instance.
+    The connection named **REST Interface** is already created, configured, and shared with other projects in your training instance. Although the two connection names are similar, they exist in different projects. You can share adapter connection resources across projects. For example, two projects can integrate with a common system, such as Oracle ERP Cloud. The connection you created references the shared connection in the instance.
 
-![Shared Connection](images/connection-sharing.png)
+    ![Shared Connection](images/connection-sharing.png)
 
 6. In the *Configuration* page, enter the following information:
 
