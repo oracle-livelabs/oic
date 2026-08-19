@@ -110,9 +110,7 @@ You can create customized document definitions to use in your B2B integrations. 
 1. Click ***Schemas***.
 2. On the Schemas page, select the ***PurchaseOrderSchema_Customized*** Schema and select ***Generate Implementation Guide***.
     ![Generate Implementation Guide](images/customizeposchema4010-implguide-1-1.png)
-3. From here you can View or Download the Implementation Guide. Click ***View*** to open a new browser window containing the    Implementation Guide. Search for the **EUR** or **USD** Codes you added to this customized Schema.  
-The following image shows an example Implementation Guide:
-    ![Implementation Guide](images/customizeposchema4010-implguide-2-1.png)
+3. From here you can View or Download the Implementation Guide. Click ***View*** to open a new browser window containing the    Implementation Guide. Search for the **EUR** or **USD** Codes you added to this customized Schema.      
 
   When done reviewing the Implementation Guide, exit the **Generate Implementation Guide** page.
 
