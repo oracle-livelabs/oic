@@ -46,7 +46,7 @@ In this lab, you will:
 This lab assumes you have:
 
 * All previous labs successfully completed.
-* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
+* Download the [Live Labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ahJbEWti82iZ5e-VnHr5mrHrgx2YIrDVU9p18TU5_RLJfe4rLkXuwvH1OiW68bhW/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) related files and unzip. The files downloaded will be referred in the lab instructions.
 
 
 ## Task 1: Import Pending Worker Integration Flow
@@ -214,7 +214,7 @@ Stop | Stop | The end of the integration.
 
 ## Task 4: Edit the ReadFileFromFTP Activity
 
-1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ionECcn9REuLomlkD0k0yxEqnRt2MqMX9rL21K4zBaSAhQwbN3H5MMNQ5PXza4mI/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
+1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ahJbEWti82iZ5e-VnHr5mrHrgx2YIrDVU9p18TU5_RLJfe4rLkXuwvH1OiW68bhW/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
 
 2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
@@ -412,4 +412,4 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
