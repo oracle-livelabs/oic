@@ -83,7 +83,7 @@ The Adapter Endpoint Configuration Wizard opens
 
 Add an EDI translate action to the flow to translate XML document to an EDI document
 1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the first **Receive-App-Msg** element.
-The **Configure B2B Action** wizard opens
+    The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     * for the **What do you want to call this B2B action?** element, enter ***EDI-Generate***
     * select a mode as ***B2B Trading Partner mode***, and click **Continue**
@@ -100,21 +100,21 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 1. Click the ***Map EDI-Generate*** action and select ***Edit***
 2. Click on ***Developer*** mode
 3. From Source, expand the ***root element***, expand ***Acme Purchase Order*** and From Target, expand the ***root element***, expand ***Translate Input***, expand ***Edi Xml Document***, expand ***Transaction Data*** and **map** all the mandatory elements given below.
-> **Note**: You can search for the element to find it quickly
+    > **Note**: You can search for the element to find it quickly
 
-| Source | Target |
-| --- | --- |
-| “00” | BEG01 |
-| “NE” | BEG02 |
-| Order Number | BEG03 |
-| drag and drop format-dateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
-|  count (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:lineItems )  | CTT01 |
-| Total Amount | CTT02 |
-| “2L” | CUR01 |
-| Currency Code | CUR02 |
-| Currency Conversion Rate | CUR03 |
-| Line Items | Loop-PO1 |
-| Line Items > SKU | PO101 |
+    | Source | Target |
+    | --- | --- |
+    | “00” | BEG01 |
+    | “NE” | BEG02 |
+    | Order Number | BEG03 |
+    | drag and drop format-dateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
+    |  count (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:lineItems )  | CTT01 |
+    | Total Amount | CTT02 |
+    | “2L” | CUR01 |
+    | Currency Code | CUR02 |
+    | Currency Conversion Rate | CUR03 |
+    | Line Items | Loop-PO1 |
+    | Line Items > SKU | PO101 |
     | Line Items > Quantity | PO102 |
     | Line Items > Unit Of Measure | PO103 |
     | Line Items > Price | PO104 |

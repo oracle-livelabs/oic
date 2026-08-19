@@ -167,13 +167,13 @@ Create a connection using REST Adapter to invoke FHIR API
 2. In the Create Lookup dialog provide **Name** as *HL7\_to\_FHIR\_Equipment\_to\_System* and click *Create*
 
 3. Change the name of the domain\_name\_1 to **HL7\_Telecom\_Equipment**. Similarly, edit the name of the domain\_name\_2 to **FHIR\_Telecom\_System**.
-Provide the values below and *Save* the lookup.
-![Configure HL7 Equipment System Lookup](images/lkp-hl7-equipment-system.png)
+    Provide the values below and *Save* the lookup.
+    ![Configure HL7 Equipment System Lookup](images/lkp-hl7-equipment-system.png)
 
 4. Refer to the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts. In the unzipped folder refer the **lookups**  folder for csv files. Use each of csv to create separate lookups by importing the same from the lookups section in the Project.
-- HL7\_to\_FHIR\_Gender\_Map.csv
-- HL7\_to\_FHIR\_Telecom\_Use.csv
-- HL7ProcessorRoutes.csv
+    - HL7\_to\_FHIR\_Gender\_Map.csv
+    - HL7\_to\_FHIR\_Telecom\_Use.csv
+    - HL7ProcessorRoutes.csv
 
 5. Finally, four lookups are created.
     ![List of Lookups](images/list-of-lookups.png)
@@ -186,13 +186,13 @@ Provide the values below and *Save* the lookup.
 
 3. Select *Create* and provide the below values and *Save* the document
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | A08\_PATIENT\_UPDATE\_2\_3\_1   |
-| Document Standard         | HL7V2      |
-| Document Version  | 2.3.1 |
-| Document Type  | ADT_A08 (Update patient information) |
-{: title="HL7 V 2.3.1 Document"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | A08\_PATIENT\_UPDATE\_2\_3\_1   |
+    | Document Standard         | HL7V2      |
+    | Document Version  | 2.3.1 |
+    | Document Type  | ADT_A08 (Update patient information) |
+    {: title="HL7 V 2.3.1 Document"}
 
 4. Similarly, create another document with below values
 

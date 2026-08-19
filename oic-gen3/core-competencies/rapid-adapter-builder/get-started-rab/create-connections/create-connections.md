@@ -60,26 +60,26 @@ Create a connection using newly published **Acme OM Application** Adapter to inv
 
 3. In the *Create Connection* dialog, enter the following information and click on **Create**:
 
-> Note: We see only Invoke role as the adapter is implemented for Invoke Flows. Refer ADD document invoke section.
+    > Note: We see only Invoke role as the adapter is implemented for Invoke Flows. Refer ADD document invoke section.
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | Acme OM Connection     |
-| Role         | Invoke       |
-| Description  | Acme adapter Connection for ACME OM Application |
-{: title="Acme Connection"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | Acme OM Connection     |
+    | Role         | Invoke       |
+    | Description  | Acme adapter Connection for ACME OM Application |
+    {: title="Acme Connection"}
 
-Keep all other values as default.
+    Keep all other values as default.
 
 4. In the *Configuration* page, enter the following information:
 
-| **Field**  | **Values** |
-|---|---|
-|Base URL | ORDS URL noted in **Setup** section |
-|Security Policy |  No Authentication |
-{: title="ACME Connection Properties"}
+    | **Field**  | **Values** |
+    |---|---|
+    |Base URL | ORDS URL noted in **Setup** section |
+    |Security Policy |  No Authentication |
+    {: title="ACME Connection Properties"}
 
-> Note: A list of security policies added in your ADD file will be available in the published adapter
+    > Note: A list of security policies added in your ADD file will be available in the published adapter
 
 5. Click on **Test**  and wait until you receive a confirmation box that the test was successful.
 

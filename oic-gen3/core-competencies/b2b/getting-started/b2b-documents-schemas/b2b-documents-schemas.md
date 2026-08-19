@@ -29,14 +29,14 @@ You can create a new B2B Schema based on a standard Document type.
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created, Click on ***B2B*** Tab, Click on **Add** on *Schemas* section
 2. On the **Add schema** window, click ***Create***.
 4. Enter the following details on *Create schema* page:  
-  | Element           | Description                                           |
-  | ----------------- | ----------------------------------------------------- |
-  | Name              | PurchaseOrderSchema                                   |
-  | Identifier        | This field is automatically populated with a unique Schema identifier. |
-  | Description       | Purchase Order Schema                                 |
-  | Document Standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12) |
-  | Document Version  | 4010                                                  |
-  | Document Type     | 850 (Purchase Order)                                  |
+    | Element           | Description                                           |
+    | ----------------- | ----------------------------------------------------- |
+    | Name              | PurchaseOrderSchema                                   |
+    | Identifier        | This field is automatically populated with a unique Schema identifier. |
+    | Description       | Purchase Order Schema                                 |
+    | Document Standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12) |
+    | Document Version  | 4010                                                  |
+    | Document Type     | 850 (Purchase Order)                                  |
 
 5. Click ***Create***, then ***Save***, then exit the PurchaseOrderSchema page.  
   
@@ -52,15 +52,15 @@ You can create a new B2B Document based on a standard document type.
 1. On the Documents section, click ***Add***.
 2. On the **Add document** window, click ***Create***.
 3. Enter the following details:  
-  | Element           | Description               |
-  | ------------------| ------------------------- |
-  | Name              | PurchaseOrder4010Document |
-  | Identifier        | This field is automatically populated with a unique Document identifier. |
-  | Description       | Purchase Order Schema     |
-  | Document standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12 ) |
-  | Document versioN  | 4010                      |
-  | Document type     | 850 (Purchase Order)      |
-  | Document schema     | PurchaseOrderSchema      |
+    | Element           | Description               |
+    | ------------------| ------------------------- |
+    | Name              | PurchaseOrder4010Document |
+    | Identifier        | This field is automatically populated with a unique Document identifier. |
+    | Description       | Purchase Order Schema     |
+    | Document standard | X12 (Select the document standard X12. The document standard identifies the business protocol to follow when exchanging business documents between partners. Supported document standards are EDIFACT and X12 ) |
+    | Document versioN  | 4010                      |
+    | Document type     | 850 (Purchase Order)      |
+    | Document schema     | PurchaseOrderSchema      |
   
 4. Click ***Create***.  
 5. Click ***Save*** and Click on **Go back**
@@ -75,14 +75,14 @@ You can create customized document definitions to use in your B2B integrations. 
 4. Click ***Edit*** on the **PurchaseOrderSchema_Customized** Schema.
 5. On the Schema page, find the element you want to customize, and select ***Edit Details***. As an example, select the ***CUR02*** currency code element (part of the ***CUR*** segment) to edit it. You can also add new constructs to the schema.  
     ![Schema Editor](images/customizeposchema4010-editcur02-1a.png)
-  The Details pane is displayed with the Properties tab selected.
+    The Details pane is displayed with the Properties tab selected.
     ![Element Details](images/customizeposchema4010-editcur02-1-1.png)  
-  The three tabs on the Details pane enable you to define additional customizations.  
-  | Tab &nbsp;&nbsp;&nbsp;&nbsp; | Description                                                           |
-  | --- | --------------------------------------------------------------------- |
-  | Properties &nbsp;&nbsp; | Displayed by default when you initially access the Details pane. You can modify the following standard EDI X12 properties for the selected segment or element:  <ul><li>Purpose of element.</li><li>Requirement (mandatory, optional, or conditional).</li><li>Usage (must use, do not use, recommended, or not recommended).</li><li>Minimum and maximum number of characters.</li><li>Number of times to repeat the element.</li></ul> |
-  | Code List    | A Code List defines an enumeration of allowed values for the element. |
-  | Notes        | Notes to document the Element.                                    |
+    The three tabs on the Details pane enable you to define additional customizations.
+    | Tab &nbsp;&nbsp;&nbsp;&nbsp; | Description                                                           |
+    | --- | --------------------------------------------------------------------- |
+    | Properties &nbsp;&nbsp; | Displayed by default when you initially access the Details pane. You can modify the following standard EDI X12 properties for the selected segment or element:  <ul><li>Purpose of element.</li><li>Requirement (mandatory, optional, or conditional).</li><li>Usage (must use, do not use, recommended, or not recommended).</li><li>Minimum and maximum number of characters.</li><li>Number of times to repeat the element.</li></ul> |
+    | Code List    | A Code List defines an enumeration of allowed values for the element. |
+    | Notes        | Notes to document the Element.                                    |
 
 6. Select ***Code list*** to add a new code List.
 7. Click ***Add a New Code List*** (if the element does not already have a code list defined).

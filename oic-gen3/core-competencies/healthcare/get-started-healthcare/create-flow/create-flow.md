@@ -111,15 +111,15 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 4. In the *Create integration* dialog, enter the following information:
 
-  | **Element**          | **Value**          |       
-  | --- | ----------- |
-  |Name | Process ADT HL7 V25 Messages |
-  |Description | Child Processor Integration to process HL7 V2.5 messages |
-  {: title="Create Integration Flow"}
+      | **Element**          | **Value**          |       
+      | --- | ----------- |
+      |Name | Process ADT HL7 V25 Messages |
+      |Description | Child Processor Integration to process HL7 V2.5 messages |
+      {: title="Create Integration Flow"}
 
     Accept all other default values.
 
-**Configure Trigger Connection**
+    **Configure Trigger Connection**
 
 1. In the OIC canvas mapper, Search for the *Processor REST Interface* connection which was created in the previous Lab and click on it. This invokes the REST  Adapter Configuration Wizard.
 
@@ -166,41 +166,41 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 7. Click *Save* to persist changes.
 
-**Initialize Assign Variables**
+    **Initialize Assign Variables**
 
 1. Hover over the outgoing arrow of the **receiveMessage** activity, Click on *+* sign in the integration canvas. Choose *assign* action and Name it as **setVars**. Create below Variables
 
-| **Variable**          | **Value**          |       
-| --- | ----------- |
-|patientExists | "" |
-|FHIR_ID | "" |
-|queryString | "" |
-{: title="Configure assignment variables"}
+    | **Variable**          | **Value**          |       
+    | --- | ----------- |
+    |patientExists | "" |
+    |FHIR_ID | "" |
+    |queryString | "" |
+    {: title="Configure assignment variables"}
 
-![Configure Assignment Variables](images/child-configure-assign-vars.png)
+    ![Configure Assignment Variables](images/child-configure-assign-vars.png)
 
-**Healthcare Action**
+    **Healthcare Action**
 
 1. *Add* **Healthcare** action after the Assign Variables activity
 
 2. In the **Configure** page provide details as below
 
-| **Property Name**          | **Value**          |       
-| --- | ----------- |
-|Name | ConvertMessage |
-|Operation | Convert message reference to document |
-|Document | A08\_PATIENT\_UPDATE\_2\_5 |
-{: title="Configure Healthcare Action"}
+    | **Property Name**          | **Value**          |       
+    | --- | ----------- |
+    |Name | ConvertMessage |
+    |Operation | Convert message reference to document |
+    |Document | A08\_PATIENT\_UPDATE\_2\_5 |
+    {: title="Configure Healthcare Action"}
 
-![Convert Message Configuration](images/child-configure-convert-message.png)
+    ![Convert Message Configuration](images/child-configure-convert-message.png)
 
-**Map to Convert Message**
+    **Map to Convert Message**
 
 1. *Edit* the **Map to ConvertMessage** activity
 
 2. Map the following values
 
-| **Source**          | **Target**          |       
+    | **Source**          | **Target**          |       
 | --- | ----------- |
 |**Expand** ReceiveMessage Request &gt; Request Wrapper &gt; Message &gt; **Healthcare Message Reference** | ConvertMessage Request &gt; Convert Message Input &gt; **Healthcare Message Reference** |
 {: title="Map to ConvertMessage Mapping elements"}
@@ -531,7 +531,7 @@ Set the condition for Route1 as **patientExists = "false"**
             }
           ],
           "name": {
-            "family": "du MarchÃ©",
+            "family": "du MarchÃƒÂ©",
             "_family": {
               "extension": [
                 {
@@ -541,7 +541,7 @@ Set the condition for Route1 as **patientExists = "false"**
               ]
             },
             "given": [
-              "BÃ©nÃ©dicte"
+              "BÃƒÂ©nÃƒÂ©dicte"
             ]
           },
           "telecom": [
@@ -713,7 +713,7 @@ Set the condition for Route1 as **patientExists = "false"**
                   }
                 ],
                 "name": {
-                  "family": "du MarchÃ©",
+                  "family": "du MarchÃƒÂ©",
                   "_family": {
                     "extension": [
                       {
@@ -723,7 +723,7 @@ Set the condition for Route1 as **patientExists = "false"**
                     ]
                   },
                   "given": [
-                    "BÃ©nÃ©dicte"
+                    "BÃƒÂ©nÃƒÂ©dicte"
                   ]
                 },
                 "telecom": [
@@ -948,7 +948,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
           }
         ],
         "name": {
-          "family": "du MarchÃ©",
+          "family": "du MarchÃƒÂ©",
           "_family": {
             "extension": [
               {
@@ -958,7 +958,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
             ]
           },
           "given": [
-            "BÃ©nÃ©dicte"
+            "BÃƒÂ©nÃƒÂ©dicte"
           ]
         },
         "telecom": [
@@ -1129,7 +1129,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
           }
         ],
         "name": {
-          "family": "du MarchÃ©",
+          "family": "du MarchÃƒÂ©",
           "_family": {
             "extension": [
               {
@@ -1139,7 +1139,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
             ]
           },
           "given": [
-            "BÃ©nÃ©dicte"
+            "BÃƒÂ©nÃƒÂ©dicte"
           ]
         },
         "telecom": [
@@ -1256,11 +1256,11 @@ Finally, Map the **EVN** segment from the source to copy-of node in the Target.
 
 ![Copy Function Final mapping](images/mapping-v25-to-v231-copy-of-evn.png)
 
-Similarly, use copy-of function for PID Segment.
+    Similarly, use copy-of function for PID Segment.
 
-Final, mapping should look like below. *Validate* and *Save* your work.
+    Final, mapping should look like below. *Validate* and *Save* your work.
 
-![Final Copy of Mapping](images/mapping-v25-to-v231-copy-of-pid.png)
+    ![Final Copy of Mapping](images/mapping-v25-to-v231-copy-of-pid.png)
 
 4. *Add* logger action after the **Healthcare** action Translate2NativeHL7. Log the HL7 V2.3.1 translated **Healthcare Reference Message*
 
@@ -1274,14 +1274,14 @@ Final, mapping should look like below. *Validate* and *Save* your work.
     Click *Continue* and *Finish* the wizard. The port and host specified during Connection configuration is automatically taken by default.
 
 7. *Edit* the **Map to MLLPAdapter\_Outbound** perform the following mapping.
-On the Source section side *Expand* the Translate2NativeHL7Response &gt; Execute Response &gt; Translate Output.
-On the Target section side *Expand* the MLLPAdapter\_Outbound Request &gt; MLLP Outbound Message
+    On the Source section side *Expand* the Translate2NativeHL7Response &gt; Execute Response &gt; Translate Output.
+    On the Target section side *Expand* the MLLPAdapter\_Outbound Request &gt; MLLP Outbound Message
 
-Map the **Healthcare Message Reference** from the Sources to the **Healthcare Message Reference** on the Target side.
+    Map the **Healthcare Message Reference** from the Sources to the **Healthcare Message Reference** on the Target side.
 
-![Healthcare Message Reference Mapping](images/map-hc-message-outbound-mllp.png)
+    ![Healthcare Message Reference Mapping](images/map-hc-message-outbound-mllp.png)
 
-*Validate* and *Save* the Integration Flow.
+    *Validate* and *Save* the Integration Flow.
 
 8. *Add* an **Assign** action after the **Parallel** action. Set tracking variable 2 (Name) and tracking variable 3 (FHIR ID) to use as Business Identifiers.
 
@@ -1293,9 +1293,9 @@ Map the **Healthcare Message Reference** from the Sources to the **Healthcare Me
 
     ![Set Tracking Var 2](images/set-tracking-var-3.png)
 
-Final Integration Flow
+    Final Integration Flow
 
-![Final Integration Flow](images/proces-adt-final-integration-flow.png)
+    ![Final Integration Flow](images/proces-adt-final-integration-flow.png)
 
 11. *Add* business identifier **execute** &gt; **request-wrapper** &gt; **message** &gt; **message-tracking-id** for tracking\_var\_1
 
@@ -1311,7 +1311,7 @@ Final Integration Flow
     - Use variable tracking\_var\_2 and assign **translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; document-type**
     - Use variable tracking\_var\_3 and assign **translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; document-version**
 
-![Handler Assign Tracking Variables](images/handler-assign-tracking-vars.png)
+    ![Handler Assign Tracking Variables](images/handler-assign-tracking-vars.png)
 
 3. *Add* an **Integration** action next to the Assign activity. This will bring up the local integration invoke configuration wizard.
     - In the *Basic Info* page, enter as per below and Click *Continue*
@@ -1324,24 +1324,24 @@ Final Integration Flow
 
 4. *Edit* the map activity **invokeProcessor** and perform the mapping below:
 
-Note: Highlight the root element and search for the element to find it easily.
+    Note: Highlight the root element and search for the element to find it easily.
 
-Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
+    Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
 
-| **Source**| **Target**|       
-| --- | ----------- |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-standard** | invokeProcesor Request &gt; request-wrapper &gt; **document-standard** |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-version** | invokeProcesor Request &gt; request-wrapper &gt; **document-version** |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-type** | invokeProcesor Request &gt; request-wrapper &gt; **document-type** |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-definition** | invokeProcesor Request &gt; request-wrapper &gt; **document-definition** |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; Message &gt; **healthcare-message-reference** | invokeProcesor Request &gt; request-wrapper &gt; Message &gt;  **Healthcare Message Reference** |
-| $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; Message &gt; **Message Tracking Id** | invokeProcesor Request &gt; request-wrapper &gt; Message &gt;  **Healthcare Message Reference** |
-|lookupValue( "HL7ProcessorRoutes", "DocumentDefinition", @document-definition, "ChildProcessorIdentifer", "")| Connectivity Properties &gt; Localintegration &gt; Integration Code|
-|lookupValue( "HL7ProcessorRoutes", "DocumentDefinition", @document-definition, "ChildProcessorVersion", "")| Connectivity Properties &gt; Localintegration &gt; Integration Version|
-|Copy your Project Identifier and map static text example: |Connectivity Properties &gt; Localintegration &gt; Project Code|
-{: title="Map to invokeProcessor elements"}
+    | **Source**| **Target**|       
+    | --- | ----------- |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-standard** | invokeProcesor Request &gt; request-wrapper &gt; **document-standard** |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-version** | invokeProcesor Request &gt; request-wrapper &gt; **document-version** |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-type** | invokeProcesor Request &gt; request-wrapper &gt; **document-type** |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; **@document-definition** | invokeProcesor Request &gt; request-wrapper &gt; **document-definition** |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; Message &gt; **healthcare-message-reference** | invokeProcesor Request &gt; request-wrapper &gt; Message &gt;  **Healthcare Message Reference** |
+    | $translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; Message &gt; **Message Tracking Id** | invokeProcesor Request &gt; request-wrapper &gt; Message &gt;  **Healthcare Message Reference** |
+    |lookupValue( "HL7ProcessorRoutes", "DocumentDefinition", @document-definition, "ChildProcessorIdentifer", "")| Connectivity Properties &gt; Localintegration &gt; Integration Code|
+    |lookupValue( "HL7ProcessorRoutes", "DocumentDefinition", @document-definition, "ChildProcessorVersion", "")| Connectivity Properties &gt; Localintegration &gt; Integration Version|
+    |Copy your Project Identifier and map static text example: |Connectivity Properties &gt; Localintegration &gt; Project Code|
+    {: title="Map to invokeProcessor elements"}
 
-![Map to Invoke Processor Elements Configuration](images/map-invoke-processor-elements.png)
+    ![Map to Invoke Processor Elements Configuration](images/map-invoke-processor-elements.png)
 
 5. Validate the mapping and Save the Integration flow.
 

@@ -58,7 +58,7 @@ This lab assumes you have:
 5. Click on ```AP_INVOICE_LINE_INTERFACE``` sheet.
 6. Enter the same invoice IDs that you used in the ```AP_INVOICES_INTERFACE``` sheet. Please do not copy and paste the invoice IDs.
 7. ***Save*** the file, Open the Instructions and CSV Generation Sheet and click ***Generate CSV file***.
-A file browser dialog appears.
+    A file browser dialog appears.
 8. Name the zip file as ```apinvoiceimport.zip```, save the ```AP_INVOICES_INTERFACE``` file as ApInvoiceInterface.csv, save the ```AP_INVOICE_LINE_INTERFACE``` file as APInvoiceLinesInterface.csv
 9. Close the GSEPayablesStandardInvoiceImportTemplate.xlsm file
 10. From File Explorer, copy the APTEST.PROPERTIES file to the apinvoiceimport.zip file.
@@ -129,7 +129,7 @@ A file browser dialog appears.
 1. Hover over the outgoing arrow for **Invoke ReadAPInvoicesFileFromFTP** and click + icon.
 2. Begin typing ERP in the Search field to find the connection to your ERP Cloud.
 3. Select the connection which you have created in the previous labs.
-The Configure Oracle ERP Cloud Endpoint wizard appears.
+    The Configure Oracle ERP Cloud Endpoint wizard appears.
 4. On the Basic Info page,
     * In the **What do you want to call your endpoint?** field, enter ***ImportAPInvoicestoERPCloud***
     * In the **What does this endpoint do?** field, enter: ***Uploads files to UCM in ERP Cloud***
@@ -179,7 +179,7 @@ A map action named ImportAPInvoicestoERPCloud is automatically created. We will 
 
     ![DataMapping](../images/datamapping.png)
 7. Click on ***Validate***
-A confirmation message appears.
+    A confirmation message appears.
 8. Click ***&lt; (Go back)***
 9. Click ***Save*** to persist changes.
 
@@ -228,7 +228,7 @@ Wait 5 minutes before performing this procedure.
 1. Open a browser to sign in to the ERP Cloud using the information provided to you.
 2. Click on Navigator Menu(On top left corner), Click on Payables, click Invoices and Click on the search in the Details panel located below the User menu.
 3. Enter the invoice number and click search.
-The invoice should appear in the search results.
+    The invoice should appear in the search results.
 4. Congratulations! You have finished your integration flow.
 
 You may now **proceed to the next lab**.

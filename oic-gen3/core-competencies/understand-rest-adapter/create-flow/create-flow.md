@@ -122,7 +122,7 @@ This lab assumes you have:
 1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomer* activity (after first activity) and Click the **+** sign in the integration canvas.
-Search for the *REST Inventory OAS* connection which was created in the previous Lab and click on it. This invokes the REST  Adapter Configuration Wizard.
+    Search for the *REST Inventory OAS* connection which was created in the previous Lab and click on it. This invokes the REST  Adapter Configuration Wizard.
 
 3. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* element, enter **getCustomer**
@@ -180,7 +180,7 @@ A map action named getCustomer is automatically created. We will define this dat
 6. Click **Save** to persist changes
 
 7. Integration flow designed so far
-    ![Get Orders](images/create-integration-getOrders.png)
+    ![Get Orders](images/create-integration-get-orders.png)
 
 ## Task 6: Define the Data Mapping for Get Orders
 A map action named getOrdersForCustomer is automatically created. We will define this data mapping.
@@ -196,21 +196,21 @@ A map action named getOrdersForCustomer is automatically created. We will define
 ## Task 7: Define the Data Mapping for Composite Response
 
 1. Add a **Map** activity after *Invoke get Orders By Customer* action
-   We will create a transformation to reply back with Customer Details and All the orders for the given customer id
+    We will create a transformation to reply back with Customer Details and All the orders for the given customer id
 
 2. Select the action **Map getCustomerOrders** and click on **...** and click on **Edit**
 
 3. In the Source section, expand **getCustomer Response**, expand **GET Response**, expand **Customer GET 200 Response Application JSON**
 
 4. In the Target section, expand the **getCustomerOrders Response**, expand **Response Wrapper**
-   - Map the following fields from the Sources section to the fields in the Target section
-  | **Field**        | **Value**|       
-  | --- | ----------- |
-  | City         | City|
-  | Customer Id         | Customer Id|
-  | Cust Name         | Cust Name|
-  | Grade         | Grade |
-  {: title="Customer Details mapping."}
+    - Map the following fields from the Sources section to the fields in the Target section
+    | **Field**        | **Value**|
+    | --- | ----------- |
+    | City         | City|
+    | Customer Id         | Customer Id|
+    | Cust Name         | Cust Name|
+    | Grade         | Grade |
+    {: title="Customer Details mapping."}
 
     ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
 
@@ -271,7 +271,7 @@ Refresh your page after a few seconds.
 1. Select *Customer Order Composite Service*,  Click on **...(Actions)** menu and Click on **Run**
 
 2. Configure the URI parameters:
-  - for *customer_id*, enter **3002**
+    - for *customer_id*, enter **3002**
 
 3. Click **Run** (in the upper right of the page).
 

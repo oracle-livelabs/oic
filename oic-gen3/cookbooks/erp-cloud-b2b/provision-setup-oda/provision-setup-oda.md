@@ -9,6 +9,10 @@ Oracle Digital Assistant is a platform that allows enterprises to create and dep
 
 You can add skills to digital assistants or deploy them to a channel on their own.
 
+### Objectives
+
+In this lab, you will learn how to provision Oracle Digital Assistant.
+
 **Basic Concepts**
 Before you dive into digital assistant and skill development, here are some concepts you’ll want to get familiar with:
 
@@ -45,9 +49,9 @@ In this lab, you will:
     ![federation](images/federation.png)
 
 3. Then click on **OracleIDentityCloudService**  and click on the url that ends with "/adminconsole"
-> **Note:** https://identitydomain/ui/v1/adminconsole)
+    > **Note:** https://identitydomain/ui/v1/adminconsole)
 
-![identityurl](images/identityurl.png)
+    ![identityurl](images/identityurl.png)
 
 4. Click on the hamburger icon ![hamburger](images/hamburger.png) and then click on the **Users**
 
@@ -89,17 +93,17 @@ Create a Digital Assistant instance to start working with bots. You can find adv
     ![oda-1-1](images/oda-1-1.png)
 
 2. Click on Create **Digital Assistant Instance** button:
-You will have the **root compartment** selected, or pick the one you want.
+    You will have the **root compartment** selected, or pick the one you want.
 
     ![oda-2](images/oda-2.png)
 
 3. Fill the information as in the next image. *Development* edition is perfect for this workshop and develop new *Digital Assistant* systems until you want to move to production. Finally click **Create** bottom:
-| Element           | Description               |
-| ------------------| ------------------------- |
-| Name              | ODA |
-| Description       | My Oracle Digital Assistant     |
-| Shape  | Development                      |
-{: title="ODA Provision Properties"}
+    | Element           | Description               |
+    | ------------------| ------------------------- |
+    | Name              | ODA |
+    | Description       | My Oracle Digital Assistant     |
+    | Shape  | Development                      |
+    {: title="ODA Provision Properties"}
 
     ![oda-3](images/oda-3.png)
 
@@ -147,7 +151,7 @@ You will have the **root compartment** selected, or pick the one you want.
          - **Endpoint**: *Sample URL Given below*
          - **Method**: GET
 
-> **Note:** https://&lt;oic\_host&gt;/ic/api/integration/v1/flows/rest/PURCHASE_ORDER_DETAILS_PROXY/1.0/purchaseOrderDetails/{orderNumber}
+    > **Note:** https://&lt;oic\_host&gt;/ic/api/integration/v1/flows/rest/PURCHASE_ORDER_DETAILS_PROXY/1.0/purchaseOrderDetails/{orderNumber}
 
     ![create-rest-service](images/create-rest-service.png)
 

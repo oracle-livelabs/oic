@@ -76,7 +76,7 @@ The NXSD schema defines the structure of the output file (fields) and the format
 
 3. Locate the **schema** element at the beginning of the file.
 
-This element defines the global schema attributes. You must include a similar **schema** element in the NXSD schemas you build for HDL objects. You will need to change the object names.
+    This element defines the global schema attributes. You must include a similar **schema** element in the NXSD schemas you build for HDL objects. You will need to change the object names.
         ```
         <schema xmlns="http://www.w3.org/2001/XMLSchema"
                 xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
@@ -91,14 +91,14 @@ This element defines the global schema attributes. You must include a similar **
         ```
 
 4. Locate the **WorkerData** element.
-This element defines the set of objects and child objects required to load this business object to the HCM Data Loader.
+    This element defines the set of objects and child objects required to load this business object to the HCM Data Loader.
 
-The following elements are specified for each of the objects in the NXSD schema:
-- **ObjectLabel** element: inserts a **METADATA** line in the **DAT** file.
-  For example: **WorkerLabel**
-- **Object** element: inserts a **MERGE** line in the **DAT** file.
-  For example: **Worker**
-The format for the lines is specified in the **nxsd:startsWidth** attribute with the values **METADATA** for the object label and **MERGE** for the object.
+    The following elements are specified for each of the objects in the NXSD schema:
+    - **ObjectLabel** element: inserts a **METADATA** line in the **DAT** file.
+    For example: **WorkerLabel**
+    - **Object** element: inserts a **MERGE** line in the **DAT** file.
+    For example: **Worker**
+    The format for the lines is specified in the **nxsd:startsWidth** attribute with the values **METADATA** for the object label and **MERGE** for the object.
         ```
         <element name="WorkerData">
             <complexType>
@@ -128,7 +128,7 @@ The format for the lines is specified in the **nxsd:startsWidth** attribute with
         </element>
         ```
 5. Find the **WokerLabel** element.
-This element adds the name of the fields to the **METADATA** line. Each object requires its corresponding label element.
+    This element adds the name of the fields to the **METADATA** line. Each object requires its corresponding label element.
         ```
         <element name="WorkerLabel">
             <complexType>
@@ -148,7 +148,7 @@ This element adds the name of the fields to the **METADATA** line. Each object r
         ```
 
 6. Locate the **Worker** element.
-This element defines the fields required by the HCM Data Loader **Worker** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
+    This element defines the fields required by the HCM Data Loader **Worker** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
         ```
         <element name="Worker">
             <complexType>

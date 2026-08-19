@@ -161,7 +161,7 @@ The Adapter Endpoint Configuration Wizard opens
 ## Task 5: Configure the B2B Translate Action
 
 1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the **Assign-Current-Msg** element.
-The **Configure B2B Action** wizard opens
+    The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     * for the **What do you want to call this B2B action?** element, enter ***Fetch-Message***
     * select a mode as ***B2B Trading Partner mode***, and click ***Continue***.

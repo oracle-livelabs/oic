@@ -72,7 +72,7 @@ Schedule the current ATOM polling to the current date and time. The next time th
 1. Click **Actions** icon which is there on the right side of the screen and from the **Actions** section, drag ***Assign*** to the Integration canvas, and place it after the **Schedule** activity.
     The Configure assign dialog appears
 2. In the **Name** field, enter ***assignCurrentTimeStamp***, Click on **+** icon, Select **String**,
-In the **Variable** field, enter ***ts***, In the **Value** field (click on **switch to developer view** icon if, required), enter expression as ***fn:concat(fn:substring-before(/ics:schedule/ics:startTime, "."), ".000Z")***
+    In the **Variable** field, enter ***ts***, In the **Value** field (click on **switch to developer view** icon if, required), enter expression as ***fn:concat(fn:substring-before(/ics:schedule/ics:startTime, "."), ".000Z")***
 
     > **Note:**  Expression given above might not work as is, you might need to build such expression and drag and drop the components from the functions pallet and variables. For this, you need to drag concat function, substring-before and then startTime from left side to Value text field which is under configuration section.
 
@@ -103,7 +103,7 @@ A Map action named **Map getNewHireATOMFeed** is automatically created. We'll de
 1. Select the **Map getNewHireATOMFeed action** and click on **...** and click on **Edit**
 2. In the **Target** section, expand **Application Pull Parameter**
 3. Map the **ATOMLastRunDateTime** field in the Sources section, to the **Updated Min** field in the Target section.
-   To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
+    To map an element, select the element from the Sources section, then while clicking your mouse move it towards the target element. When you reach the target element the line turns green and a check mark appears.
 4. Click on ***Validate***
 5. Click ***&lt; (Go back)***
 6. Click ***Save*** to persist changes
@@ -223,7 +223,7 @@ A Map action named **Map WriteRecordToStage** is automatically created. We'll de
 1. Hover over the outgoing arrow after the **ForEachEntry** activity and click **+** icon.
 2. In the Search field, begin typing **File Server** to find your connection
 3. Select the connection named **File Server**.
-The Configure Oracle Adapter Endpoint Configuration Wizard appears.
+    The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***WriteStageFileToFTP***
      - Click ***Continue***.
@@ -280,7 +280,7 @@ Refresh your page after few seconds.
 2. Select **Directory Synchronization**,  Click on **...(Actions)** menu and Click on ***Run***
 3. Click ***Run*** (in the upper right of the page).
 4. Click the link which appears on top to track the instance.
-The track instance page appears. The Integration state should be processing or successful. Alternatively, you can track the instance by clicking on ***Observability*** tab and then Select ***Instances*** tab
+    The track instance page appears. The Integration state should be processing or successful. Alternatively, you can track the instance by clicking on ***Observability*** tab and then Select ***Instances*** tab
 5. Verify the csv file created in the File Server which contains new hire records.
 6. Run the Integration once again and notice the Scheduled Parameter Current Value which contains the last run date. This time you should see no records fetched.
 

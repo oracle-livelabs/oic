@@ -37,7 +37,7 @@ In this workshop, you will create a skill that can be used for interactions with
     - **One-Sentence Description**:
           A unique skill that assists users with the Status of Purchase Orders.  
     - **Skill Version**:
-          1.0</copy>
+           1.0
     - **Platform Version**:
         Choose the latest from the drop down, ***23.06(Latest)***
     - **Dialoge Mode**:
@@ -58,7 +58,7 @@ you have successfully created a skill now you can proceed to the next task
 
 2. Select and copy all of the example sentences below to your clipboard:
 
-```
+    ```
 <copy>
 Hello there! How's it going?
 Hey! Can you help?
@@ -91,7 +91,7 @@ Hi, how are you?
 
 5. Repeat the above steps for another Intent by naming the intent as  **Purchase Order** and add the below list of utterences to that particular intent and click on the **Create** button as shown below:
 
-```
+    ```
 <copy>
 how to know the status of my purchase order
 I would like to know the status of my order
@@ -104,7 +104,7 @@ what is the status of my purchase order
 </copy>
 ```
 
-![purchase-order-intent](images/purchase-order-intent.png)
+    ![purchase-order-intent](images/purchase-order-intent.png)
 
 6. Train your Intents , by clicking on the **Train** on the right side of the page, click **Train Tm** and Submit. wait  for the training to complete, this may take few minutes.
 
@@ -121,7 +121,7 @@ We will create Two conversation dialogues.
 
 2. Purchase Order Conversation - Ask for the order number, verify and get the details of the PO.
 
-**Create the Greetings conversation dialogue flow:**
+    **Create the Greetings conversation dialogue flow:**
 
 1. Click on the Flow ![dialogue-flow](images/dialog-flows-icon.png) icon  on the left side of the page.
 
@@ -143,14 +143,14 @@ We will create Two conversation dialogues.
 
 6. Then a side window opens up with the properties of the template to fill, under the **Component** tab , Please add the below text:
 
-```
+    ```
 <copy>
 Hello ${profile.firstName}, Welcome to the Purchase Order Assistant! How can I assist you today?   
 </copy>
 ```
 
 
-**Create the Purchase Order conversation dialogue flow:**
+    **Create the Purchase Order conversation dialogue flow:**
 
 1. Click on the Flow ![dialogue-flow](images/dialog-flows-icon.png) icon  on the left side of the page.
 
@@ -159,7 +159,7 @@ Hello ${profile.firstName}, Welcome to the Purchase Order Assistant! How can I a
     ![add-flow-button](images/add-flow-button.png)
 
 3. In the **Create Flow** dialogue box enter the name of the flow  **PurchaseOrderConversationFlow** and hit the **Create**
-button, make sure to check the box "**Open created flow afterwards**".
+    button, make sure to check the box "**Open created flow afterwards**".
     ![purchase-order-flow](images/purchase-order-conversationflow.png)
 
 4. Once Visual Flow design editor opens, click on the **Configuration** tab and add two variables on the **Flow level** in the variables section by click on the **+ Add Variable** .   
@@ -168,17 +168,17 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 5. Enter the following details to add variables one by one and hit **Apply** button.
 
-**Name**:   OrderNumber
-**Description**:  Purchase Order Number
-**Variable Type**: String
-![order-number-variable](images/order-number-variable.png)
+    **Name**:   OrderNumber
+    **Description**:  Purchase Order Number
+    **Variable Type**: String
+    ![order-number-variable](images/order-number-variable.png)
 
 6. Repeat the step above for adding another variable with the details mentioned below
 
-**Name**:   PurchaseOrderDetails  
-**Description**:  Details of the Purchase Order
-**Variable Type**: Map
-![purchase-order-details-variable](images/purchase-order-details-variable.png)
+    **Name**:   PurchaseOrderDetails
+    **Description**:  Details of the Purchase Order
+    **Variable Type**: Map
+    ![purchase-order-details-variable](images/purchase-order-details-variable.png)
 
 7. Click on the **Flow** tab to start building the conversation flow.
 
@@ -194,8 +194,8 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 10. A side window pane opens up for this select template to fill all the details, click on the **Component** tab and enter the below details:
 
-**Question**  :  Absolutely! To better assist you, could you please provide your Order Number?
-**Variable**: select the *Order Number* from Flow Variables
+    **Question**  :  Absolutely! To better assist you, could you please provide your Order Number?
+    **Variable**: select the *Order Number* from Flow Variables
      ![ask order number component](images/ask-order-number-component.png)
 
 11. Click on the **Transition** tab and select **Add State ...**
@@ -306,7 +306,7 @@ button, make sure to check the box "**Open created flow afterwards**".
     ![add-switch-component](images/add-switch-component.png)
 
 27. Select the **determineIfValuePresent** In the **Component** tab under the **Expression** editor add the below free marker expression.
-```
+    ```
 <copy>
 ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('success','failure')}
 </copy>
@@ -333,7 +333,7 @@ ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('succes
 
 32. In the **apiResponse** pane, under the **Component** tab , copy the below message and paste it.
 
-```
+    ```
 <copy>
 The Status is "${PurchaseOrderDetails.value.responsePayload.status}"
 
@@ -363,7 +363,7 @@ Letter of Credit Id:   "${PurchaseOrderDetails.value.responsePayload.locId}"
 35. Click on the **Transitions** tab and under the **Next Transition** select **add state** and follow this path  **User Messaging>>Create Text Menu>> Create Action Menu**, name it as **anotherOrderNumber** and hit the **Insert** button. In the **Component** tab click on the **Edit Response Items** and copy the below text add the text and hit on the **Apply** button.
 
 
-```
+    ```
 <copy>
          responseItems:
            - text: Are you interested in checking the Status of a different Order Number?
@@ -385,7 +385,7 @@ Letter of Credit Id:   "${PurchaseOrderDetails.value.responsePayload.locId}"
                  keyword: "2"
                  </copy>
                  ```
-The above code is a **YAML** code make sure the indentation matches with the screenshot below:
+    The above code is a **YAML** code make sure the indentation matches with the screenshot below:
     ![another-order-number](images/another-order-number-yaml.png)
 
 36. Now click on the **Transitions** tab and under the **Next Transition** drop down select the **askOrderNumber** state.
@@ -394,7 +394,7 @@ The above code is a **YAML** code make sure the indentation matches with the scr
 
 37. under the **Action** section, add **Action Name** as **No** and in the **Transition To** select **add state** and select the **Send Message** template and name it as **ThankYouMessage**. Go to the **Component** tab is opened copy the below message and paste it in the editor.
 
-```
+    ```
 <copy>
 Thank you for your time. It was a pleasure to assist you. Please feel free to reach out any time you need more assistance with your Purchase Order, until then, Goodbye and takecare!
 </copy>

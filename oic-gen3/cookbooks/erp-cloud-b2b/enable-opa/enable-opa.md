@@ -1,6 +1,6 @@
 # Enable Oracle Process Automation(OPA)
 
-## About this Workshop
+## Introduction
 
 To use Process Automation with Oracle Integration, an administrator needs to enable it from an Oracle Integration service instance in the Oracle Cloud Infrastructure (OCI) Console. When enabled, a Process Automation instance gets automatically provisioned with the Oracle Integration instance. In such a case, the two services become associated with each other and gets listed in each others Associated services page in the Oracle Cloud Infrastructure Console.
 
@@ -73,18 +73,18 @@ After an Oracle Cloud Infrastructure Process Automation instance has been create
 2. If not already selected, select the Compartment in which the domain that contains the group to which you want to assign Process Automation roles resides.
 
 3. In the **Name** column, click the *Default* domain for the group to which you want to assign roles.
-The domain Overview page is displayed.
+    The domain Overview page is displayed.
 
 4. In the navigation pane, click *Oracle Cloud Services*.
-The Oracle Cloud Services page is displayed.
+    The Oracle Cloud Services page is displayed.
 
 5. In the **Oracle Cloud Services** page, navigate to the Process Automation service instance for which you want to assign user roles.
-You can also search for the service instance by entering the prefix or string that begins the Process Automation service instance's display name.
+    You can also search for the service instance by entering the prefix or string that begins the Process Automation service instance's display name.
 
 6. Click the Process Automation service instance to open the instance details page.
 
 7. Under **Resources**, click **Application roles**.
-The available IDCS application roles are displayed.
+    The available IDCS application roles are displayed.
 
 8. In the Application roles list, locate the **Service Administrator** role that you want to assign to the user. At the far right, click Open **Details**
 

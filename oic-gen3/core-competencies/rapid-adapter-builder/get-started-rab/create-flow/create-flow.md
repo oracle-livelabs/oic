@@ -118,7 +118,7 @@ This lab assumes you have:
 1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomerOrders* activity (after first activity) and Click the **+** sign in the integration canvas.
-Search for the *Acme OM Connection* connection which was created in the previous Lab and click on it. This invokes the Acme OM Application Adapter Configuration Wizard.
+    Search for the *Acme OM Connection* connection which was created in the previous Lab and click on it. This invokes the Acme OM Application Adapter Configuration Wizard.
 
 3. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* element, enter **getACMECustomerOrders**
@@ -152,7 +152,7 @@ A map action named getACMECustomerOrders is automatically created. We will defin
 ## Task 5: Define the Data Mapping for Composite Response
 
 1. Add a **Map** activity after *Invoke getACMECustomerOrders* action. In the Add Map dialog select the endpoint as **getCustomerOrders** and click *Create*.
-We will create a transformation to reply back with Customer Details and All the orders for the given customer id
+    We will create a transformation to reply back with Customer Details and All the orders for the given customer id
 
 2. Select the action **Map getCustomerOrders** and click on **...** and click on **Edit**
 
@@ -214,7 +214,7 @@ Refresh your page after a few seconds.
 1. Select *Acme Customers Order Integration*,  Click on **...(Actions)** menu and Click on **Run**
 
 2. Configure the URI parameters:
-  - for *customer_id*, enter **1**
+      - for *customer_id*, enter **1**
 
 3. Click **Run** (in the upper right of the page).
 
@@ -224,14 +224,14 @@ Refresh your page after a few seconds.
 
 5. Click the link which appears on top to track the instance.
 
-The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and **Instances**
+    The track instance page appears. The Integration state should be processing or successful.
+    OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and **Instances**
 
 6. In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
 
     ![Activity Stream](images/acme-invoke-activity-stream.png)
 
-## Task 9: Congratulations 🎉
+## Task 9: Congratulations Ã°Å¸Å½â€°
 
 Congratulations on successfully completing the **Get Started with Rapid Adapter Builder** Live Lab! You've taken an important step in expanding your Oracle Integration skills by learning how to build custom adapters for applications exposing RESTful APIs.
 

@@ -192,13 +192,13 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 2. Define its arguments:
 
     | Argument | Value | Type |
-|----------|-------|------|
-| patientId | P101 | string |
-{: title="Fetch Patient Record Request Parameters"}
+    |----------|-------|------|
+    | patientId | P101 | string |
+    {: title="Fetch Patient Record Request Parameters"}
 
 3. Postman creates a JSON message for you:
 
-```json
+    ```json
 {
   "method": "tools/call",
   "params": {
@@ -210,12 +210,12 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 }
 ```
 
-![Execute Fetch Patient Record Tool](images/execute-fetch-patient-record.png)
+    ![Execute Fetch Patient Record Tool](images/execute-fetch-patient-record.png)
 
 4. Click **Run**
 
-**Expected Response:**
-```json
+    **Expected Response:**
+    ```json
 {
     "content": [
         {
@@ -312,18 +312,18 @@ Arrange them in order: Chat Input → Agent → Chat Output
     ![Langflow Add MCP Tools](images/langflow-add-mcp-tools.png)
 
 
-**For OIC Healthcare Tools Configuration:**
+    **For OIC Healthcare Tools Configuration:**
 
 1. Select the **JSON** tab
 2. Use the below JSON to construct JSON config to connect with OIC MCP server
 
-You will need two Values
-- OAuth Token (Refer the Previous section **POSTMAN as MCP Client** and copy the Token)
-- OIC MCP URL (Refer the Previous section **Retrieve MCP Server UR** and copy the URL)
+    You will need two Values
+    - OAuth Token (Refer the Previous section **POSTMAN as MCP Client** and copy the Token)
+    - OIC MCP URL (Refer the Previous section **Retrieve MCP Server UR** and copy the URL)
 
-Use the above 2 values and replace with the placeholders (<paste-mcp-url> and <paste-oauth-token>) in JSON below
+    Use the above 2 values and replace with the placeholders (<paste-mcp-url> and <paste-oauth-token>) in JSON below
 
-```
+    ```
 <copy>
 {
   "mcpServers": {
@@ -345,13 +345,13 @@ Use the above 2 values and replace with the placeholders (<paste-mcp-url> and <p
 }
 </copy>
 ```
-![Langflow JSON Config](images/langflow-json-config.png)
+    ![Langflow JSON Config](images/langflow-json-config.png)
 
 3. Click **Add Server**
 4. Langflow connects to the OIC MCP server and loads available tools
 
-**Expected Display:**
-```
+    **Expected Display:**
+    ```
 ✓ OIC Patient Review Tools (Connected)
   Tools Available:
   • FETCH_PATIENT_RECORD
@@ -366,38 +366,38 @@ Use the above 2 values and replace with the placeholders (<paste-mcp-url> and <p
 1. Click the **MCP Tools** component
 2. In the component's header menu (three dots ⋯ in top right of component)
 3. Select **Tool Mode** or toggle it to enable
-   - This allows the component to provide tools to an Agent component
+    - This allows the component to provide tools to an Agent component
 
-**Expected Result:**
-- MCP Tools component now exposes a **Toolset** output port (right side of component)
-- Component is now ready to connect to an Agent
+    **Expected Result:**
+    - MCP Tools component now exposes a **Toolset** output port (right side of component)
+    - Component is now ready to connect to an Agent
 
-![Langflow MCP Tools Config](images/langflow-mcp-tools-config.png)
+    ![Langflow MCP Tools Config](images/langflow-mcp-tools-config.png)
 
 ### Step 7: Select Tools to Use
 
 1. In the **MCP Tools** Click *Action* icon on the right hand side.
 2. Select all the **Tools**
-  - Agent will have access to all five available tools
-  - Agent can intelligently choose which tool to use
+    - Agent will have access to all five available tools
+    - Agent can intelligently choose which tool to use
 
 ### Step 8: Configure Agent Component
 
 1. Select **Agent** component
 2. Click on **Controls**. Configure the Agent with the following parameters:
 
-| Field | Value | Description |
-|-------|-------|-------------|
-| **Model Provider** | OpenAI | Model provider |
-| **Model** | gpt-4o-mini | LLM to use for reasoning |
-| **OpenAI API Key** | Your OpenAI API key | LLM authentication  |
-| **Agent Instructions** | See detailed prompt below | Guides agent behavior and role |
-{: title="Langflow Agent Control Properties"}
+    | Field | Value | Description |
+    |-------|-------|-------------|
+    | **Model Provider** | OpenAI | Model provider |
+    | **Model** | gpt-4o-mini | LLM to use for reasoning |
+    | **OpenAI API Key** | Your OpenAI API key | LLM authentication  |
+    | **Agent Instructions** | See detailed prompt below | Guides agent behavior and role |
+    {: title="Langflow Agent Control Properties"}
 
 
-**System Prompt for Clinical Quality Assurance Agent:**
+    **System Prompt for Clinical Quality Assurance Agent:**
 
-```
+    ```
 <copy>
 You are a **Clinical Quality Assurance specialist** responsible for conducting post-procedure audits to ensure quality care delivery and identify opportunities for clinical improvement.
 
@@ -525,12 +525,12 @@ Follow this sequence for every quality audit:
 1. **ALWAYS** call **Fetch Patient Record** tool first with the patient ID
 2. **ALWAYS** call **Match Guideline** tool with the procedure and diagnosis from the patient record
 3. **ALWAYS** call **Check Guideline Validity** tool with:
-   - Patient symptoms from the record
-   - Required symptoms from the matched guideline
-   - Clinical notes from the record
+    - Patient symptoms from the record
+    - Required symptoms from the matched guideline
+    - Clinical notes from the record
 4. **ALWAYS** call **Escalation Decision** tool with:
-   - Your assigned Quality Assessment Score (EXCELLENT/SATISFACTORY/NEEDS IMPROVEMENT/NON COMPLIANT)
-   - Complications status (true/false) from the patient record
+    - Your assigned Quality Assessment Score (EXCELLENT/SATISFACTORY/NEEDS IMPROVEMENT/NON COMPLIANT)
+    - Complications status (true/false) from the patient record
 5. **CONDITIONALLY** call **Recommend Care Plan** tool ONLY if clinical quality gaps require additional patient care interventions
 6. **ALWAYS** generate the final quality audit report in the specified format
 
@@ -588,16 +588,16 @@ Chat Output
 2. The testing interface opens with your flow ready
 3. In the chat input field, enter a clinical review query. See the sample queries below.
 
-**Example Query 1 - QUALITY ASSESSMENT SCORE: EXCELLENT**
-```
+    **Example Query 1 - QUALITY ASSESSMENT SCORE: EXCELLENT**
+    ```
 <copy>
 I need a quality review for patient P104 who completed a CT Chest for Suspected Pulmonary
 Embolism. The patient presented with chest pain, shortness of breath, and tachycardia, with a high Wells score and positive D-dimer. Please verify guideline compliance.
 </copy>
 ```
 
-**Example Query 2 - QUALITY ASSESSMENT SCORE: NON COMPLIANT**
-```
+    **Example Query 2 - QUALITY ASSESSMENT SCORE: NON COMPLIANT**
+    ```
 <copy>
 Please conduct a quality review for patient P103 who received an MRI Brain for a classic
 migraine presentation. The patient reports recurrent headaches with no neurological deficits or red flag features noted. Assess whether this imaging aligns with guidelines.
@@ -607,8 +607,8 @@ migraine presentation. The patient reports recurrent headaches with no neurologi
 4. Click **Send** or press Enter
 5. Agent processes the query step-by-step:
 
-**Agent Execution Sequence:**
-```
+    **Agent Execution Sequence:**
+    ```
 Step 1: Fetching patient clinical record...
 → Invokes: fetch_patient_record tool
 → Retrieves: Complete patient data, symptoms, diagnoses

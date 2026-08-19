@@ -52,15 +52,15 @@ This action automatically creates an OAuth client application in Oracle Identity
 5. Extract oic_conn_agent_installer.zip.
 
 6. Hover over the agent group. Click *Actions...*, then select *Download config*.
-This step downloads a preconfigured InstallerProfile.cfg file to use during installation. The following message is displayed.
+    This step downloads a preconfigured InstallerProfile.cfg file to use during installation. The following message is displayed.
 
-**Bootstrap configuration downloaded for Agent Group agent\_group\_name. Replace the file in agent install location before proceeding with agent setup.**
+    **Bootstrap configuration downloaded for Agent Group agent\_group\_name. Replace the file in agent install location before proceeding with agent setup.**
 
 7. Run the connectivity agent installer from the command prompt.
 
-```
+    ```
 <copy>
-java –jar connectivityagent.jar
+java Ã¢â‚¬â€œjar connectivityagent.jar
 </copy>
 ```
 

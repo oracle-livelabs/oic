@@ -616,9 +616,9 @@ Steps are given below to create a confidential application in IDCS/Domains. Base
 
       ![OAuth Confidential App](images/oauth-confidential-app.png)
 
-***If you tenancy is enabled with IDCS follow the below steps:***
+    ***If you tenancy is enabled with IDCS follow the below steps:***
 
-In Oracle Identity Cloud Service (IDCS), create a client application for your Oracle Integration instance and obtain the client credentials.
+    In Oracle Identity Cloud Service (IDCS), create a client application for your Oracle Integration instance and obtain the client credentials.
 
 1. In the Oracle Identity Cloud Service Console, go to the **Applications** section to create a new application.
 
@@ -662,7 +662,7 @@ To successfully use the client credentials, assign the integration instance **Se
 
 3. Select the client application and click **Assign**. Now, IAM assigns the integration-instance a service developer role to the application.
 
-***If you tenancy is enabled with IDCS follow the below steps:***
+    ***If you tenancy is enabled with IDCS follow the below steps:***
 
 1. Go to the **Application Roles** tab of the Oracle Identity Cloud Service application. The list of all applicable roles appears.
 

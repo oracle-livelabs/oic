@@ -80,7 +80,7 @@ This lab assumes you have:
     - Select ***Configure this endpoint to receive the response*** checkbox
     - Click ***Continue***.
 4. From the **Request Parameters** page, in the **Specify Query Parameter section**, click ***Add***
-A new row appears.
+    A new row appears.
     - Enter ***LedgerName*** in the **Name** column and select ***string*** from the **Date Type** column
     - Click ***Add***, Enter ***ReportAbsolutePath*** in the **Name** column and select ***string*** from the **Date Type** column
     - Click ***Continue***.
@@ -117,7 +117,7 @@ A new row appears.
 
 ## Task 3: Get the BIP report
 1. Hover over the outgoing arrow for the ShortBIPReport activity (after first activity) and Click the ***+*** sign in the integration canvas.
-Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
+    Search for the **ERP Cloud External Report Service** connection which you have created in the previous Task and click on it. This invokes the REST  Adapter Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***GetBIPReport***
     - Click ***Continue***.
@@ -159,7 +159,7 @@ A map action named GetBIPReport is automatically created. We will define this da
 1. [Download the artifacts](https://objectstorage.us-phoenix-1.oraclecloud.com/p/gjUpkg_HuTvolLXaRmeXCRl_wqIQgoR19z6tFsva93wVrnLuN-iHaKZEjgAvHGG-/n/oicpm/b/oiclivelabs/o/oic3/erp-cloud/BIPReportArtifacts.zip) and extract the zip file in your local folders. It should contain two files opaque_schema.xsd and GLCCReport.csv
 
 2. Hover over the outgoing arrow for the **Invoke GetBIPReport** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
+    Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 3. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***StageFileWrite***
     - Click ***Continue***.
@@ -185,13 +185,13 @@ A map action named StageFileWrite is automatically created. We will define this 
 3. In the Target section, expand the **StageFileWrite Response**
 4. Map the ***reportBytes*** from the source section to the ***Opaque Element*** of target section.
 5. Click on ***Validate***
-  - A confirmation message appears.
+    - A confirmation message appears.
 6. Click ***&lt; (Go back)***
 7. Click ***Save*** to persist changes.
 
 ## Task 7: Read the file from Stage
 1. Hover over the outgoing arrow for the **StageFileWrite** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
+    Search for the **Stage File** activity and click on it. This invokes Stage File Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***ReadFileFromStage***
     - Click ***Continue***.
@@ -255,8 +255,8 @@ Manage business identifiers that enable you to track fields in messages during r
 Refresh your page after few seconds.
 1. Select **Short BIP Report**,  Click on **...(Actions)** menu and Click on ***Run***
 2. Configure the URI parameters:
-  - for **ReportAbsolutePath**, enter ***/Custom/Financials/GLCCReport.xdo***
-  - for **LedgerName**, enter ***US Primary Ledger***
+    - for **ReportAbsolutePath**, enter ***/Custom/Financials/GLCCReport.xdo***
+    - for **LedgerName**, enter ***US Primary Ledger***
 3. Click ***Run*** (in the upper right of the page).
 4. Look at the Response section to verify the BIP report results and verify the Status is 200 OK
 5. Click the link which appears on top to track the instance.

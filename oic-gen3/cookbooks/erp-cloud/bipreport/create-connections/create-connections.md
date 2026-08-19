@@ -80,8 +80,8 @@ Please note that the connection with the name **REST Interface** is already crea
     |Security Policy | select ***Basic Authentication*** |
     |Username | Enter ***Enter ERP Cloud username received from the instructor*** |
     |Password | Enter ***Enter ERP Cloud password received from the instructor*** |
-> **Note: If you are a Bootcamp user then execute step 5 ONLY and skip the other steps.
-If you are a non Bootcamp user then skip step 5 and continue from step 6..**
+    > **Note: If you are a Bootcamp user then execute step 5 ONLY and skip the other steps.
+    If you are a non Bootcamp user then skip step 5 and continue from step 6..**
 
 5. In the *Use a shared Connection* section search for **ERP Cloud External Report Service** and select the connection which is already created/shared in the Training instance. Exit the connection canvas by clicking the back button on the top left side of the screen.
 

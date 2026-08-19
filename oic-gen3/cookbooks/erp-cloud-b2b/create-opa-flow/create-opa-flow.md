@@ -151,17 +151,17 @@ Now that we have created the two roles - User and Approver, let’s create a pro
 2.	In the **Add component pane**, expand *Connectors*, and click *REST API*.
 
 3. Enter the name as *LOCAppConnector* and Base URL as *You should have copied the URL from the Lab2 > Task 6 > Step 6* and remove */PO* from the URL  and click on *Create*.
-> **Note:**Here is the Sample URL https://&lt;oic-vbcs-host&gt;/ic/builder/design/LOCAppTestOPA/1.0/resources/data
+    > **Note:**Here is the Sample URL https://&lt;oic-vbcs-host&gt;/ic/builder/design/LOCAppTestOPA/1.0/resources/data
 
 4. Click the *Open now* link OR click on the connector to open it.
 5. Click on *+* icon to add a new resource.
     ![new resource](images/new-resource.png)
 6. Enter *PO* as a name and enter *PO* under resource Path
 7. Add an **operation** by clicking the *+ Operation* on the right, for your resource. Make it a 	
-		*GET*, with the name **getPO**
+    *GET*, with the name **getPO**
      ![Connector Add Operation Get PO](images/connector-add-operation-get-po.png)
-8.	Select the operation created which will transition to the operation specific configuration. You
-		will configure Request and Response message
+    8.	Select the operation created which will transition to the operation specific configuration. You
+    will configure Request and Response message
 
 9. Click on the *Response* (there is nothing to add to the request, as we have no
     parameters to pass). In the **Body Definition** section, Click the *+ JSON Sample*sign to define the response.
@@ -452,32 +452,32 @@ The structured process editor opens. **Start** and **end** elements are already 
 4.	Open the properties of **Approve Change Order** task. Configure the Properties per below
 
 | Property Name | Value |
-| --- | --- |
-| Policy | Any Single Assignee |
-| Select Participants| Current Lane Participants |
-| Title | Approve Change Order Request |
-| UI | AttachLOCForm |
-| Presentation |  ApproverLOCForm  |
-| Action | APPROVE,REJECT |
-| Priority | Normal |
-{: title="Approve Change Order Task Properties"}
+    | --- | --- |
+    | Policy | Any Single Assignee |
+    | Select Participants| Current Lane Participants |
+    | Title | Approve Change Order Request |
+    | UI | AttachLOCForm |
+    | Presentation |  ApproverLOCForm  |
+    | Action | APPROVE,REJECT |
+    | Priority | Normal |
+    {: title="Approve Change Order Task Properties"}
 
-5.	Open the properties of **Resubmit** task. Configure the Properties per below
+    5.	Open the properties of **Resubmit** task. Configure the Properties per below
 
-| Property Name | Value |
-| --- | --- |
-| Select Participants| Current Lane Participants |
-| Title | Resubmit Change Order |
-| UI | AttachLOCForm |
-| Presentation | Default Presentation |
-| Action | SUBMIT |
-| Priority | Normal |
-{: title="Resubmit Task Properties"}
+    | Property Name | Value |
+    | --- | --- |
+    | Select Participants| Current Lane Participants |
+    | Title | Resubmit Change Order |
+    | UI | AttachLOCForm |
+    | Presentation | Default Presentation |
+    | Action | SUBMIT |
+    | Priority | Normal |
+    {: title="Resubmit Task Properties"}
 
-6.	Select the connector from **Approved?** to **invoke change order**. In the properties pane Configure **Name** as *Yes* and define other values as per the screenshot given below.
+    6.	Select the connector from **Approved?** to **invoke change order**. In the properties pane Configure **Name** as *Yes* and define other values as per the screenshot given below.
     ![Edit Gateway Yes](images/edit-gateway-yes.png)
-7.	Select the connector from **Approved?** to **Resubmit** which is the conditional path. In the properties pane Configure **Name** as *More Information Required*
-Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditional Flow*
+    7.	Select the connector from **Approved?** to **Resubmit** which is the conditional path. In the properties pane Configure **Name** as *More Information Required*
+    Define the condition **taskOutcomeDataObject=="REJECT"** and mark as *Conditional Flow*
     ![Edit Gateway Reject](images/edit-gateway-reject.png)
 8. 	Open the properties of **invoke change order** task. Select *Resource* as **/PO_PROXY** and *Operation* as **POST**
     ![invoke change order impl](images/invoke-change-order-impl.png)
@@ -503,7 +503,7 @@ The left pane displays source objects (Data Objects) in an expandable tree. The 
 4. From the right pane, hold and drag **createdBy** and drop it in the input field titled **New Association**
     ![Approve Change Order Data mapping](images/approve-co-data-mapping.png)
 5. Repeat the above steps for all the elements given below. And in between, click on Apply to reflect the changes and come back to the same screen and continue with the mappings.
-- creationDate, id, lastUpdateDate, lastUpdatedBy, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
+    - creationDate, id, lastUpdateDate, lastUpdatedBy, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
     ![Approve Change Order Data mapping1](images/approve-co-data-mapping1.png)
 6. Click on *Apply* and again comeback to the mappings screen.
 7. Expand **Input > attachLOCFormArgs** from the left pane and Expand **input > attachLOCForm** from the right pane.
@@ -515,7 +515,7 @@ The left pane displays source objects (Data Objects) in an expandable tree. The 
 11. Select **invoke change order** task and Click on *Open Data Association*.
 12. Expand **Input > attachLOCFormArgs > pOType** from the left pane and Expand **input > body > pOType** from the right pane.
 13. Complete mappings for all the elements given below.
-- id, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
+    - id, orderAmount, orderNumber, pOHeaderId, procurementBUId, procurementBusinessUnit, soldToLegalEntity, supplier, supplierId
     ![Invoke Change Order Data mapping](images/invoke-co-data-mapping.png)
 14. Click on *Apply* and again comeback to the mappings screen.
 
@@ -563,17 +563,17 @@ Before you begin, get familiar with the options in the Workspace navigation menu
 In this case, pretend you are an end user who wants to request for Travel. Each time the application is started, a process instance is created.
 
 1. From the **Start Requests** page, select the *Attach LOC Application*.
-  	The card’s banner lists the application identifier, and its process and start event titles appear below.
-  	![workspace-list-of-apps](images/workspace-list-of-apps.png)
+    The card’s banner lists the application identifier, and its process and start event titles appear below.
+    ![workspace-list-of-apps](images/workspace-list-of-apps.png)
 2. The *AttachLOCForm* you created appears, with the first presentation shown and Select the Order Number from the list.
-		![test-selectordernumber](images/test-selectordernumber.png)
+    ![test-selectordernumber](images/test-selectordernumber.png)
 
 3. Upon selection of the Order Number from the list, form displays *PO Header Details* section
-	![test-poheaderdetails](images/test-poheaderdetails.png)
+    ![test-poheaderdetails](images/test-poheaderdetails.png)
 4. Select the *Letter of credit* from the list and click *Submit*.
-	![workspace-submit-the-request](images/workspace-submit-the-request.png)
-  	A message confirms that an instance was created. The start event for the process is complete.
-5.	Optionally, repeat these steps to select the application and create a few more instances.
+    ![workspace-submit-the-request](images/workspace-submit-the-request.png)
+    A message confirms that an instance was created. The start event for the process is complete.
+    5.	Optionally, repeat these steps to select the application and create a few more instances.
 
 ###	Complete an Assigned Task
 

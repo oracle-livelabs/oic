@@ -43,9 +43,9 @@ Note: Make sure the Message Receiver and Sender is Open. Receiver is listening t
 
 5. You can track instances and monitor errors in a project from a single workspace during runtime. You can also access and view the activity stream that shows details about the movement of messages through integrations.
 
-Navigate to the Project **Healthcare ADT Project**. Click on *Observe* tab and Select *Instances*. Notice that 2 Instances are created (Handler and Processor integrations are triggered).
+    Navigate to the Project **Healthcare ADT Project**. Click on *Observe* tab and Select *Instances*. Notice that 2 Instances are created (Handler and Processor integrations are triggered).
 
-![End to End Test Flow Instances View](images/test-flow-observe-instances.png)
+    ![End to End Test Flow Instances View](images/test-flow-observe-instances.png)
 
 6. Explore the Activity Stream of Processor Integration **Branch1** in parallel action. Notice that one of the routes (Create Patient / Update Patient) is executed based on the patient data available in the HAPI FHIR Test Server. Explore the FHIR API response in the Activity stream.
 
@@ -60,7 +60,7 @@ Navigate to the Project **Healthcare ADT Project**. Click on *Observe* tab and S
 3. Processor Integration not sending converted HL7 V2.3.1 message to HL7 Inspector: Check the port configured in the HL7 Inspector application **Message Receiver** is same as in the HC SEND HL7 Connection in OIC
 
 
-##  Congratulations! 🎉
+##  Congratulations! Ã°Å¸Å½â€°
 
 You've successfully completed the tutorial on leveraging the new healthcare integration capabilities in Oracle Integration Cloud (OIC). Throughout this tutorial, you gained hands-on experience with several key features:
 

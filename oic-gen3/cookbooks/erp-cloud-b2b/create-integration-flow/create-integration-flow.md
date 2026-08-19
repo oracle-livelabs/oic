@@ -612,12 +612,12 @@ Access your ERP Cloud environment.
     | **Field**        | **Value**          |
     | --- | ----------- |
     | Type | *Goods* |
-  | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable B2B&lt;your-initials&gt;*|
-  | Category Name | Search for *Computer Supplies* and then select it |
-  | Quantity | Enter a valid number, eg. *1* |
-  | UOM | *Ea* (Default) |
-  | Base Price | Enter a valid number, eg. *1.0*|
-  {: title="Create PO Details"}
+    | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable B2B&lt;your-initials&gt;*|
+    | Category Name | Search for *Computer Supplies* and then select it |
+    | Quantity | Enter a valid number, eg. *1* |
+    | UOM | *Ea* (Default) |
+    | Base Price | Enter a valid number, eg. *1.0*|
+    {: title="Create PO Details"}
 
 10. Click *Submit* to initiate the Purchase Order processing.
 After submitting the Purchase Order, a confirmation message will appear with the PO number. Make a note of the **PO Number**
@@ -743,65 +743,65 @@ Expand the *Target* node:
     ![Subscribe to Publisher Event](images/subscribe-flow-pub-event-choose.png)
 
 4. Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From the list of **Invoke** connections choose *Visual Builder*
-- In the **Basic Info** page, configure the endpoint per below and click *Next*
+    - In the **Basic Info** page, configure the endpoint per below and click *Next*
 
-| **Field Name** | **Value** |
-|----------------|-----------|
-| What do you want to call your endpoint? | syncPO |
-| What is the endpoint's relative resource URI? | /ic/builder/design/LOCAppTestOPA/1.0/resources/data/PO |
-| What action do you want to perform on the endpoint? | POST |
-| Configure a request payload for this endpoint | Select the check box |
-| Configure this endpoint to receive the response | Select the check box |
-{: title="Visual Builder Endpoint Details"}
+    | **Field Name** | **Value** |
+    |----------------|-----------|
+    | What do you want to call your endpoint? | syncPO |
+    | What is the endpoint's relative resource URI? | /ic/builder/design/LOCAppTestOPA/1.0/resources/data/PO |
+    | What action do you want to perform on the endpoint? | POST |
+    | Configure a request payload for this endpoint | Select the check box |
+    | Configure this endpoint to receive the response | Select the check box |
+    {: title="Visual Builder Endpoint Details"}
 
 5. On the **Request** page configure the following values:
-- From the **Select the request payload format** list, select JSON Sample.
-- *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
-- Enter the following JSON Sample and click *OK*
-```
-<copy>
-{
-  "pOHeaderId" : "300000074157551",
-  "orderNumber" : "US163521",
-  "procurementBUId" : "300000046987012",
-  "procurementBusinessUnit" : "US1 Business Unit",
-  "supplierId" : "300000047414679",
-  "supplier" : "Dell Inc.",
-  "soldToLegalEntity" : "US1 Legal Entity",
-  "orderAmount" : 10.0
-}
-</copy>
-```
+    - From the **Select the request payload format** list, select JSON Sample.
+    - *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
+    - Enter the following JSON Sample and click *OK*
+    ```
+    <copy>
+    {
+    "pOHeaderId" : "300000074157551",
+    "orderNumber" : "US163521",
+    "procurementBUId" : "300000046987012",
+    "procurementBusinessUnit" : "US1 Business Unit",
+    "supplierId" : "300000047414679",
+    "supplier" : "Dell Inc.",
+    "soldToLegalEntity" : "US1 Legal Entity",
+    "orderAmount" : 10.0
+    }
+    </copy>
+    ```
 6. On the **Response** page, configure the following values:
-- From the **Select the response payload format** list, select JSON Sample.
-- *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
-- Enter the following JSON Sample and click *OK*
-```
-<copy>
-{
-  "id" : 448,
-  "creationDate" : "2023-07-17T12:23:50+00:00",
-  "lastUpdateDate" : "2023-07-17T12:23:50.074+00:00",
-  "createdBy" : "john.doe@example.com",
-  "lastUpdatedBy" : "john.doe@example.com",
-  "pOHeaderId" : "300000074157551",
-  "orderNumber" : "US163521",
-  "procurementBUId" : "300000046987012",
-  "procurementBusinessUnit" : "US1 Business Unit",
-  "supplierId" : "300000047414679",
-  "supplier" : "Dell Inc.",
-  "soldToLegalEntity" : "US1 Legal Entity",
-  "lOCId" : "1",
-  "orderAmount" : 10.0
-}
-</copy>
-```
+    - From the **Select the response payload format** list, select JSON Sample.
+    - *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
+    - Enter the following JSON Sample and click *OK*
+    ```
+    <copy>
+    {
+    "id" : 448,
+    "creationDate" : "2023-07-17T12:23:50+00:00",
+    "lastUpdateDate" : "2023-07-17T12:23:50.074+00:00",
+    "createdBy" : "john.doe@example.com",
+    "lastUpdatedBy" : "john.doe@example.com",
+    "pOHeaderId" : "300000074157551",
+    "orderNumber" : "US163521",
+    "procurementBUId" : "300000046987012",
+    "procurementBusinessUnit" : "US1 Business Unit",
+    "supplierId" : "300000047414679",
+    "supplier" : "Dell Inc.",
+    "soldToLegalEntity" : "US1 Legal Entity",
+    "lOCId" : "1",
+    "orderAmount" : 10.0
+    }
+    </copy>
+    ```
 
 7. Click *Next* and finish the wizard.
 
 8. Define the data mapping between Source (PUBLISHPODETAILS) AND Target (syncPO Request). All the mappings are self explanatory and one to one mapping per below.
     ![PublishPO To SyncPO mapping](images/publishpo-to-syncpo-mapping.png)
-   *Validate* the mapping and *Save* your Integration flow.
+    *Validate* the mapping and *Save* your Integration flow.
 
 9. Define Business Identifiers **poHeaderId** and **orderNumber**
 
@@ -817,7 +817,7 @@ Expand the *Target* node:
 
 4. In the **Overview** section, click the ***Tasks*** button on the right.
     ![Tasks in Overview section](images/overview-tasks.png)
-This opens the Tasks menu.
+    This opens the Tasks menu.
 
 5. Under the **Orders** section, select ***Manage Order***.
 
