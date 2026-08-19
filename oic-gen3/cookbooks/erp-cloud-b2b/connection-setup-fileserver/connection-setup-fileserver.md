@@ -28,7 +28,7 @@ This lab assumes you have:
 
     If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
 
-    ![File Server Not Enabled](images/fileservernotenabled.png =50%x50%)
+    ![File Server Not Enabled](images/file-server-not-enabled.png =50%x50%)
 
 
     To enable File Server:
