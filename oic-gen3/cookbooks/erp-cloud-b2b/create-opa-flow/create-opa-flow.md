@@ -399,17 +399,16 @@ The structured process editor opens. **Start** and **end** elements are already 
     ![Edit Swimlane](images/edit-swimlane.png)
 > **Note:**  Note that the swimlane’s name changes to *Process User*.
 
-10.	Similarly, edit the second swimlane and select *Process Approver*
 
-11.	In the BPMN elements palette, expand the **Human** category and drag an *Approve* task to the second swimlane. Adjust the process flow so that the **Approve** task is the second element in the flow. Rename it to *Approve Change Order*
-		![Add Approve Activity](images/add-approve-activity.png)
+    11.	In the BPMN elements palette, expand the **Human** category and drag an *Approve* task to the second swimlane. Adjust the process flow so that the **Approve** task is the second element in the flow. Rename it to *Approve Change Order*
+    		![Add Approve Activity](images/add-approve-activity.png)
 
-12.	In the BPMN elements palette, expand the **Gateway** category and drag an *Exclusive* Gateway Activity to the second swimlane next to the **Approve Change Order**. Rename the **Gateway** activity to *Approved?*
-		![Add Gateway Activity](images/add-gateway-activity.png)
+    12.	In the BPMN elements palette, expand the **Gateway** category and drag an *Exclusive* Gateway Activity to the second swimlane next to the **Approve Change Order**. Rename the **Gateway** activity to *Approved?*
+    		![Add Gateway Activity](images/add-gateway-activity.png)
 
-13.	In the BPMN elements palette, expand the **Human** category and drag a *Submit* task to the first swimlane. Rename it to *Resubmit*.
+    13.	In the BPMN elements palette, expand the **Human** category and drag a *Submit* task to the first swimlane. Rename it to *Resubmit*.
 
-14.	Select the *Approved?* Gateway activity. Using the connector (arrow icon) Connect one of the branches to the **Resubmit** task.
+    14.	Select the *Approved?* Gateway activity. Using the connector (arrow icon) Connect one of the branches to the **Resubmit** task.
 15. Delete the arrow which is connected to *Completed* activity from *Resubmit* activity.
 
 16. Delete the arrow which is connected to *Resubmit* activity from *Update PO* and connect from *Update PO* to *Approve Change Order*
@@ -441,17 +440,17 @@ The structured process editor opens. **Start** and **end** elements are already 
 
 3. In the properties pane configure per below
 
-| Property Name | Value |
-| --- | --- |
-| Assignee | Any user with Use Permission  |
-| Title| Update PO with LOC |
-| UI | AttachLOCForm |
-| Presentation | Default Presentation |
-{: title="Update PO Task Properties"}
+    | Property Name | Value |
+    | --- | --- |
+    | Assignee | Any user with Use Permission  |
+    | Title| Update PO with LOC |
+    | UI | AttachLOCForm |
+    | Presentation | Default Presentation |
+    {: title="Update PO Task Properties"}
 
-4.	Open the properties of **Approve Change Order** task. Configure the Properties per below
+    4.	Open the properties of **Approve Change Order** task. Configure the Properties per below
 
-| Property Name | Value |
+    | Property Name | Value |
     | --- | --- |
     | Policy | Any Single Assignee |
     | Select Participants| Current Lane Participants |

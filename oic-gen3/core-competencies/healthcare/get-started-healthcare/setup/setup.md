@@ -60,7 +60,7 @@ This action automatically creates an OAuth client application in Oracle Identity
 
     ```
 <copy>
-java Ã¢â‚¬â€œjar connectivityagent.jar
+java –jar connectivityagent.jar
 </copy>
 ```
 
