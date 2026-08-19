@@ -50,7 +50,7 @@ All five integrations have been pre-configured and meet the Agentic AI tool requ
 
 3. In the left navigation pane, click **AI Agents**
 
-![AI Agent Blank Canvas](images/agent-blank-canvas.png)
+    ![AI Agent Blank Canvas](images/agent-blank-canvas.png)
 
 4. On the AI Agents page, locate the **Tools** card section
 

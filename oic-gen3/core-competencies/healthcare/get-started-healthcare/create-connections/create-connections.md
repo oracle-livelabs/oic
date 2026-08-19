@@ -176,7 +176,7 @@ Provide the values below and *Save* the lookup.
 - HL7ProcessorRoutes.csv
 
 5. Finally, four lookups are created.
-![List of Lookups](images/list-of-lookups.png)
+    ![List of Lookups](images/list-of-lookups.png)
 
 ## Task 7: Create Healthcare Documents
 

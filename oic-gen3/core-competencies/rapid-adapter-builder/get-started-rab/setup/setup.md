@@ -551,11 +551,11 @@ Follow these steps to create a Database objects which will be used as part of th
 
 4. Verify the *ordermanagement.v1* module type. Copy the Open API 3.0 catalog url highlighted below and confirm in a browser window that it is reachable. We will use the url to verify the ORDS services from Postman in the later section.
 
-![Order Management Module](images/ords-module-list.png)
+    ![Order Management Module](images/ords-module-list.png)
 
 5. Select the **ordermanagement.v1** module and verify and Select *Customer* resource and handlers which are created. Click on *GET* handler url and confirm that you are able to see a json response with few records.
 
-![ORDS Get Customers Test](images/ords-get-customers-test.png)
+    ![ORDS Get Customers Test](images/ords-get-customers-test.png)
 
 ## Task 5: Create a Client Application and Obtain Credentials
 

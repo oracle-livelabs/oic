@@ -53,15 +53,15 @@ You will create a dynamic group and add policies to use functions and manage obj
 1. Sign in to the OCI Console as a tenancy administrator.
 
 2. Obtain the client ID of the OAuth application for the Oracle Integration instance. In the upper right corner, select Profile, then click the identity domain.
-![Select Profile](images/select-profile.png)
+    ![Select Profile](images/select-profile.png)
 
 3. In the left navigation pane, click *Oracle Cloud Services*.
-![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
+    ![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
 
 4. Select the OIC service instance, and scroll down to **General Information** and copy the client ID value to use it in the dynamic group creation.
 
 5. In the OCI Console, Open the navigation menu and click *Identity & Security*, Select the domain (example: Default domain).
-![Select Domain](images/default-domain.png)
+    ![Select Domain](images/default-domain.png)
 
 6. In the left navigation pane, click *Dynamic groups*
 
@@ -103,7 +103,7 @@ You will create two buckets namely, bucket-excel and bucket-csv. These buckets a
 
 3. Click *Create Bucket* and provide a name (example: bucket-excel) and description. Click **Create**
 
-![Create Bucket](images/create-bucket-excel.png)
+    ![Create Bucket](images/create-bucket-excel.png)
 
 4. Similarly, create another bucket and name it (example: bucket-csv)
 

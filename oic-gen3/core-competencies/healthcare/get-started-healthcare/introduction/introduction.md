@@ -29,7 +29,7 @@ Note: You will install HL7 Inspector application to simulate EMR and Pathology s
 Here is the high level architecture reference of the tutorial
 ![Usecase Architecture](images/uc1.png)
 
-Estimated Time: 3 hours 40 minutes
+Estimated Workshop Time: 3 hours 40 minutes
 
 ### Objectives
 

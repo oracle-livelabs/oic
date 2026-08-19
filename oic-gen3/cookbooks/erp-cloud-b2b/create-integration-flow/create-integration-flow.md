@@ -224,7 +224,7 @@ You can create a new B2B Schema based on a standard Document type.
 {: title="Schema Properties"}
 
 5. Click *Create*, then *Save*, then exit the PurchaseOrderSchema page.  
-![Create New B2B Schema](images/poschema4010-1.png)
+    ![Create New B2B Schema](images/poschema4010-1.png)
 ![Purchase Order Schema](images/poschema-structure-1.png)
 
 The following diagram shows a schematic structure of X12 envelopes.
@@ -250,9 +250,9 @@ You can create a new B2B Document based on a standard document type.
 {: title="Document Properties"}
 
 4. Click *Create*.  
-![Create New B2B Document](images/podocument4010-1.png)
+    ![Create New B2B Document](images/podocument4010-1.png)
 5. The Document page for your new B2B Document is displayed. The **Document Schema** field is set to **Standard** by default. Change the **Document Schema** to *PurchaseOrderSchema* which you created in the last task.  
-![Select a custom Schema](images/podocument4010-customize-1.png)
+    ![Select a custom Schema](images/podocument4010-customize-1.png)
 6. Click *Save* and exit the PurchaseOrder4010Document page.
 
 ##  Task 3: Configure the Host Profile
@@ -306,7 +306,7 @@ You can create and manage Trading Partners. A Trading Partner is the external bu
 You can add ways to contact the trading partner, such as their name, email, phone number, or short message service (SMS) number. You can select from the predefined Contact Types or enter your own custom Contact Type. Use this information to contact individuals offline, as needed. Contacts are currently provided only for reference and are not used in Oracle Integration B2B.
 
 1. Click the *Contacts* tab. Select **Contact Type** as *Email*. Enter your email id in the **Value** column and click *Save*  
-![Contacts](images/tpm-tp-contact-1.png)
+    ![Contacts](images/tpm-tp-contact-1.png)
 
 *Define B2B Identifiers*
 
@@ -338,7 +338,7 @@ Understand the Identifiers that we will use.
 {: title="B2B Identifiers"}
 
 4. Click *Save* after every addition.  
-![B2B Identifiers](images/tpm-tp-b2bIdentifiers-1.png)
+    ![B2B Identifiers](images/tpm-tp-b2bIdentifiers-1.png)
 
 *Define Transports*
 
@@ -374,10 +374,10 @@ You will notice two Integrations are created automatically when a Transport is c
 Deploy the Transport Integrations.
 
 1. Click the *Actions* menu on the **FTP** Transport to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment.
-![Deploy Transport Integrations](images/tpm-tp-transport-1.png)
+    ![Deploy Transport Integrations](images/tpm-tp-transport-1.png)
 
 2. Starting at the Oracle Integration **Home** page, select *Design*, then *Integrations* again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.
-![Dell FTP Transport Integrations](images/tpm-tp-transport-2.png)
+    ![Dell FTP Transport Integrations](images/tpm-tp-transport-2.png)
 
 ##  Task 5: Create Agreements
 
@@ -430,7 +430,7 @@ Let's create a basic, outbound integration flow that subscribes to PO event, con
 Add ERP PO Event trigger to the empty integration canvas.
 
 1. In the Designer canvas hover over the *Start* and Click the *+* sign in the integration canvas.
-![Start End Empty Canvas](images/start-end-canvas.png)
+    ![Start End Empty Canvas](images/start-end-canvas.png)
 
 2. Select the *ERP Cloud* connection which you have created in the previous labs. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
 
@@ -524,7 +524,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 Click on *Validate* to check for any errors or so. Navigate back to the designer canvas
 
 6. Add a *Switch* action after the **B2B EDI-Generate** activity
-![Add Switch Activity](images/add-switch-activity.png)
+    ![Add Switch Activity](images/add-switch-activity.png)
     - For the **Route1** branch, Enter the Expression Name as **Success or Warning**
     - Configure the following expression under Expression section. Expand *EDI-Generate* > *executeResponse* > *TranslateOutput* > *translation-status*.
     - Drag and drop into the element *translation-status* into the **Value** box.
@@ -574,7 +574,7 @@ Congratulations! You have reached a significant milestone in this design. You ma
 4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
 
 5. On the **Integrations** page, click on the *Activate* sign.
-![Click to Activate Integration](images/click-activate-integration.png)
+    ![Click to Activate Integration](images/click-activate-integration.png)
 
 6. On the **Activate Integration** dialog, select *Debug* as tracing level and click *Activate*
 
@@ -660,7 +660,7 @@ The flow ran successfully if it is displayed with a green line.
 7. Click on the *View* icon and inspect **Message Logs, Payload**
 
 8. Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
-![Wire Messages](images/observability-wire-messages.png)
+    ![Wire Messages](images/observability-wire-messages.png)
 
 9. (Optional) If you have FTP Client installed on your machine, you can login using the FTP details that you have noted down in the previous lab and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
 
@@ -690,7 +690,7 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 1. Navigate to the **Integrations** page. By selecting the *...* next to your **LL ERPPO BACKEND B2B** integration. From the list of actions select *Create New Version*. Leave the defaults and Click on *Create*. This will create a minor version change of the integration.
 
 2. *Edit* the new version of Integration. In **Branch 2**, Click on *+* sign next to Logger activity and add an Action *Publish Event*.
-![Add Publish Event](images/action-publish-event.png)
+    ![Add Publish Event](images/action-publish-event.png)
 
 3. Click on **Define new event**. Provide a name **PublishPODetails**. Select *Continue*
 
@@ -740,7 +740,7 @@ Expand the *Target* node:
 2. In the **Create integration**page select the design pattern *Event* and provide name *Subscribe PO Event Details*. Click on *Create*
 
 3. In the integration canvas **Choose Event** page select the publisher Event and select *Choose* and *Finish*. Save your integration.
-![Subscribe to Publisher Event](images/subscribe-flow-pub-event-choose.png)
+    ![Subscribe to Publisher Event](images/subscribe-flow-pub-event-choose.png)
 
 4. Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From the list of **Invoke** connections choose *Visual Builder*
 - In the **Basic Info** page, configure the endpoint per below and click *Next*
@@ -800,7 +800,7 @@ Expand the *Target* node:
 7. Click *Next* and finish the wizard.
 
 8. Define the data mapping between Source (PUBLISHPODETAILS) AND Target (syncPO Request). All the mappings are self explanatory and one to one mapping per below.
-![PublishPO To SyncPO mapping](images/publishpo-to-syncpo-mapping.png)
+    ![PublishPO To SyncPO mapping](images/publishpo-to-syncpo-mapping.png)
    *Validate* the mapping and *Save* your Integration flow.
 
 9. Define Business Identifiers **poHeaderId** and **orderNumber**
@@ -824,7 +824,7 @@ This opens the Tasks menu.
 6. Search for the **Purchase Order Number** that was noted earlier. Select the Order. From **Actions** select *Edit*.
 
 7. Provide some description in the **Description** field. Its a mandatory field for change order. Leave the default and click *Submit*. Select *OK* on the confirmation dialog. Click *Done*.
-![Change Order Description](images/change-order-description.png)
+    ![Change Order Description](images/change-order-description.png)
 
 8. Navigate to *Manage Orders* tab and wait for the status to be *Open*. A small **Information** icon appears next to the status, which indicates its in process. Wait for the icon to disappear.
 

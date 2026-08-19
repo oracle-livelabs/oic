@@ -36,7 +36,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
 5. In the *Use a shared Connection* section, Search for **File**. Click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-![File Server Connection Reference](images/fileserversharedconn.png)
+    ![File Server Connection Reference](images/fileserversharedconn.png)
 
 Please note that the connection with the name **File Server** is already created in your training instance, which is configured and shared with other projects. Although both the connections names are similar, they exist in the different projects. You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
 

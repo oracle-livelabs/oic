@@ -212,19 +212,19 @@ Create Child processor Integration to process HL7 V2.5 messages
 2. In **Route1** *Add* an  **Assign** action and Name it as **assignID**.
 
 3. *Add* a variable and name it as **queryString** and construct logic to concat('/', C-PID.4-CX-01). Use developer view.
-![Switch Route1 Assign](images/switch-route1-assign-var-querystring.png)
+    ![Switch Route1 Assign](images/switch-route1-assign-var-querystring.png)
 
 4. *Add* another variable and name it as **patientExists** and assign **true**
-![Switch Route1 Assignment Variables](images/switch-route1-assign-vars.png)
+    ![Switch Route1 Assignment Variables](images/switch-route1-assign-vars.png)
 
 5. Define **Route1** condition as **string-length(C-PID.4-CX-01) &gt; 0**
-![Switch Route1 Condition](images/switch-route1-condition.png)
+    ![Switch Route1 Condition](images/switch-route1-condition.png)
 
 6. *Save* your work.
 
 7. In **Otherwise** route *Add* an  **Assign** action and Name it as **setupSearchTerms** and create variables and assignments as below and *Save*your work.
 
-![Switch Otherwise Variables](images/switch-otherwise-variables.png)
+    ![Switch Otherwise Variables](images/switch-otherwise-variables.png)
 
 | **Variables Names**          | **Values**          |       
 | --- | ----------- |
@@ -1219,7 +1219,7 @@ Integration so far...
 
 2. Name the Healthcare Action as **Translate2NativeHL7** and Select the action *Translate to outbound message* and Document as *A08\_PATIENT\_UPDATE\_2\_3\_1*
 
-![Configure Healthcare Action](images/branch2-healthcare-action-configure.png)
+    ![Configure Healthcare Action](images/branch2-healthcare-action-configure.png)
 
 3. *Edit* the map activity of Healthcare action. Perform the mapping as per below
 
@@ -1264,7 +1264,7 @@ Final, mapping should look like below. *Validate* and *Save* your work.
 
 4. *Add* logger action after the **Healthcare** action Translate2NativeHL7. Log the HL7 V2.3.1 translated **Healthcare Reference Message*
 
-![Log Outbound Message](images/log-v231-outbound-message.png)
+    ![Log Outbound Message](images/log-v231-outbound-message.png)
 
 5. Click the **+** sign in the integration canvas next to the Logger action. Search for **HC SEND HL7**. This invokes the MLLP  Adapter Configuration Wizard.
 
@@ -1287,11 +1287,11 @@ Map the **Healthcare Message Reference** from the Sources to the **Healthcare Me
 
 9. Create a new assignment variable by using the existing **tracking\_var\_2** and value as *concat(C-PID.5-XPN-02, ' ', SC-XPN.1-FN-01)*
 
-![Set Tracking Var 2](images/set-tracking-var-2.png)
+    ![Set Tracking Var 2](images/set-tracking-var-2.png)
 
 10. Create a new assignment variable by using the existing **tracking\_var\_3** and value as *C-PID.4-CX-01*
 
-![Set Tracking Var 2](images/set-tracking-var-3.png)
+    ![Set Tracking Var 2](images/set-tracking-var-3.png)
 
 Final Integration Flow
 
@@ -1299,7 +1299,7 @@ Final Integration Flow
 
 11. *Add* business identifier **execute** &gt; **request-wrapper** &gt; **message** &gt; **message-tracking-id** for tracking\_var\_1
 
-![Business Identifier Tracking Var 1](images/business-identifier-tracking-var-1.png)
+    ![Business Identifier Tracking Var 1](images/business-identifier-tracking-var-1.png)
 
 12. Navigate back to the Project and *Activate* the Processor Integration Flow **Process ADT HL7 V25 Messages**
 
@@ -1347,7 +1347,7 @@ Note: Wherever lookupValue function is used in the below table expand the mapper
 
 6. Configure Business Identifier field as **message-control-id** for tracking\_var\_1 variable
 
-![Handler Integration Business Identifier Configuration](images/handler-integration-business-identifier.png)
+    ![Handler Integration Business Identifier Configuration](images/handler-integration-business-identifier.png)
 
 7. *Activate* the Integration flow.
 

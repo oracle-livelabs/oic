@@ -4,7 +4,7 @@
 
 This workshop shows you how to design and develop a B2B Integration in Oracle Integration 3 that helps an Integration developer to onboard Trading Partners and exchange documents (example: Purchase Order, Invoices etc) in a secured way using protocols like AS2 and FTP.
 
-Estimated Time: 3 hours
+Estimated Workshop Time: 3 hours
 
 ### What is Oracle Integration 3?
 

@@ -33,7 +33,7 @@ In this lab, you will:
 
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***B2B*** > **Documents** > **+**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Create***, click on ***Save***
 
-![inbound-b2b-810-invoice-document](images/invoice-document.png)
+    ![inbound-b2b-810-invoice-document](images/invoice-document.png)
 
 ### *Verify Host Profile*
 

@@ -10,7 +10,7 @@ This workshop will walk you through the steps to create an end-to-end integratio
 
 The architecture shows a horizontal integration flow using Oracle Integration Cloud (OIC). Files are uploaded to the OIC Embedded SFTP Server, triggering a File Event in OIC. The file content is read using the Stage File Action, then passed through Data Mapping & Transformation. Finally, the processed data is inserted into an Oracle ATP Database Table using the ATP Adapter.
 
-Estimated Time: 60 minutes
+Estimated Workshop Time: 60 minutes
 
 ### Objectives
 

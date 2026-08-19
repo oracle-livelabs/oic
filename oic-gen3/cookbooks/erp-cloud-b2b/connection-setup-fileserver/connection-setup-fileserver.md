@@ -152,7 +152,7 @@ There are some artifacts which are made available so that you can focus on the c
     Finally,*Save* the connection
 
 4. In the **Configuration Editor**, Select *Activation* in the title bar which brings up the **Review and Activate** section. Hover on the **Change Order ERP PO Proxy** Integration and Select *Activate*. Click **Refresh** icon periodically and confirm the status is changed to **Active**
-![Activate Package Integrations](images/activate-package-integration.png).
+    ![Activate Package Integrations](images/activate-package-integration.png).
     Select the *Tracing* level as **Debug** and click on *Activate*.
     Similarly, activate the **Purchase Order Details Proxy** Integration. Both Integration status turns to **Active** status, which indicates the integration is ready to accept requests.
 

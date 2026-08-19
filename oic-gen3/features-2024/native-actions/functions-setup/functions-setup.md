@@ -30,17 +30,17 @@ If a suitable VCN in which to create network resources doesn't exist already:
 
 3. Click *Start VCN Wizard* to create a new VCN.
 
-![Start VCN Wizard](images/start-vcn-wizard.png)
+    ![Start VCN Wizard](images/start-vcn-wizard.png)
 
 4. In the Start VCN Wizard dialog box, select **VCN with Internet Connectivity** and click *Start VCN Wizard*.
 
 5. Enter a name for the new VCN (example: ll-native-actions-vcn), click *Next*, and then click *Create* to create the VCN along with the related network resources.
 
-![Start VCN Wizard Step 1](images/start-vcn-wizard-step1.png)
+    ![Start VCN Wizard Step 1](images/start-vcn-wizard-step1.png)
 
 6. VCN is created with the all the resources such as Subnets, Route Tables, CIDR blocks, Internet Gateway, Security Lists, NAT Gateways, Service Gateways along with DHCP options
 
-![Start VCN Wizard Resources List](images/start-vcn-wizard-step2.png)
+    ![Start VCN Wizard Resources List](images/start-vcn-wizard-step2.png)
 
 ## Task 2: Create policy for group and service
 
@@ -50,7 +50,7 @@ If a suitable VCN in which to create network resources doesn't exist already:
 
 3. Use the Policy Builder to create the policy. Select *Functions* from the list of Policy use cases, and base the policy on the policy template *Let users create, deploy, and manage functions and applications*. Select the **Identity Domain**, **Groups** , **Location** (example: ll-native-actions compartment)
 
-![Create Policy](images/create-policy.png)
+    ![Create Policy](images/create-policy.png)
 
 
 You may now **proceed to the next lab**.

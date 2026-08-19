@@ -220,7 +220,7 @@ Refresh your page after a few seconds.
 
 4. Look at the Response section to verify the Customer details and all the orders for the Customer. The response status is 200 OK
 
-![Test Integration Flow](images/run-integration-test.png)
+    ![Test Integration Flow](images/run-integration-test.png)
 
 5. Click the link which appears on top to track the instance.
 
@@ -229,7 +229,7 @@ OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and 
 
 6. In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
 
-![Activity Stream](images/acme-invoke-activity-stream.png)
+    ![Activity Stream](images/acme-invoke-activity-stream.png)
 
 ## Task 9: Congratulations 🎉
 

@@ -10,7 +10,7 @@ HCM Atom feeds provide notifications of Oracle Fusion Human Capital Management (
 The following diagram shows the interaction between the systems involved in this use case.
     ![directory-synchronization](../images/directory-synchronization.png)
 
-Estimated Time: 2 hours
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 

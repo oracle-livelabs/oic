@@ -75,16 +75,16 @@ java –jar connectivityagent.jar
 2. Launch the HL7 Simulator application
 
 3. Select the send/receive icons from the top panel as highlighted. Message Receiver and Message Sender panes will be visible at the bottom of the application window.
-![HL7 Inspector Send Receive Message](images/hl7-inspector-send-recieve.png)
+    ![HL7 Inspector Send Receive Message](images/hl7-inspector-send-recieve.png)
 
 4. In the **Message Receiver** window at the bottom, Select the *Setup Server* available in the left hand side tasks. Enter the server port as **2500** and select *Ok*. Message receiver is simulating the Pathology systems to HL7 V2.3 messages.
-![HL7 Receive Configuration](images/hl7-inspector-recieve-pathology.png)
+    ![HL7 Receive Configuration](images/hl7-inspector-recieve-pathology.png)
 
 5. In the left hand side tasks Click on the *Start Receiving Message Service*. Confirmation log says **Listening on port 2500**
-![HL7 Receive Message Start Service](images/hl7-inspector-recieve-pathology-service.png)
+    ![HL7 Receive Message Start Service](images/hl7-inspector-recieve-pathology-service.png)
 
 6. In the **Message Sender** Window, Select *Setup Send..* icon. In the hostname:port enter **localhost:2100**. Message Sender is simulating the EMR systems to send HL7 V2.5 messages.
-![HL7 Send Message Server](images/hl7-inspector-send-emr.png)
+    ![HL7 Send Message Server](images/hl7-inspector-send-emr.png)
 
 ## Task 4: Download Lab Artifacts
 

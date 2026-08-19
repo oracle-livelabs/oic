@@ -143,7 +143,7 @@ Search for the **Stage File** action and click on it. This invokes Stage File Co
       - Click ***Continue***.
 6. Review the summary and click ***Finish***
 7. Click ***Save*** to persist changes
-![ReadFileFromStage](images/readfilefromstage.png)
+    ![ReadFileFromStage](images/readfilefromstage.png)
 
 ## Task 5: Add the ATP invoke activity
 

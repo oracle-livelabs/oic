@@ -39,10 +39,10 @@ In this lab, you will:
 
 1. Login into the Oracle Cloud Account and click on the ![hamburger](images/hamburger.png) and select the **Identity & Security**
 
-![identity-security](images/identity-security.png)
+    ![identity-security](images/identity-security.png)
 
 2. Then click on **Federation**
-![federation](images/federation.png)
+    ![federation](images/federation.png)
 
 3. Then click on **OracleIDentityCloudService**  and click on the url that ends with "/adminconsole"
 > **Note:** https://identitydomain/ui/v1/adminconsole)
@@ -51,15 +51,15 @@ In this lab, you will:
 
 4. Click on the hamburger icon ![hamburger](images/hamburger.png) and then click on the **Users**
 
-![clickUsers](images/click-users.png)
+    ![clickUsers](images/click-users.png)
 
 5. click on the **+ Add** button
 
-![clickonaddbutton](images/clickonaddbutton.png)
+    ![clickonaddbutton](images/clickonaddbutton.png)
 
 6. Enter all the details as below and click the Finish button.
 
-![invokerdetails](images/invokeruserdetails.png)
+    ![invokerdetails](images/invokeruserdetails.png)
 
 
 7. click on the side menu and select **Oracle Cloud Services** and in the search tab type **oic**
@@ -68,7 +68,7 @@ In this lab, you will:
 
 8. Click on the **oic** and then **Application Roles**
 
-![select-application-roles](images/select-application-roles.png)
+    ![select-application-roles](images/select-application-roles.png)
 
 9. In the **Application Roles**, select the **Service Invoker** on the same tile click on the hamburger icon on extreme right and select the **Assign Users** menu option.
 

@@ -134,7 +134,7 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 3. Postman opens a new MCP request tab
 4. The MCP request builder displays with configuration options
 
-![New MCP Request](images/new-mcp-request.png)
+    ![New MCP Request](images/new-mcp-request.png)
 
 ### Step 3: Configure MCP Server Connection
 
@@ -293,7 +293,7 @@ Install from here: https://nodejs.org/en/download
 3. Description: "AI agent for patient utilization review using OIC MCP tools"
 4. Select **Simple Agent** template for simplicity
 
-![Langflow Simple Agent Template](images/langflow-simple-agent-template.png)
+    ![Langflow Simple Agent Template](images/langflow-simple-agent-template.png)
 
 ### Step 4: Add Components to the Flow
 
@@ -309,7 +309,7 @@ Arrange them in order: Chat Input → Agent → Chat Output
 1. Expand **Agent** > Click the **+** icon next to **MCP Tools** to add the component on the canvas
 2. In the configuration panel, click **Add MCP Server**
 
-![Langflow Add MCP Tools](images/langflow-add-mcp-tools.png)
+    ![Langflow Add MCP Tools](images/langflow-add-mcp-tools.png)
 
 
 **For OIC Healthcare Tools Configuration:**

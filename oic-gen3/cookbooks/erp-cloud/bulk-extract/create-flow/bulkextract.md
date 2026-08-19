@@ -312,7 +312,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 
 4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
-![Integration Action Menu](../images/integrationactionsmenu.png)
+    ![Integration Action Menu](../images/integrationactionsmenu.png)
 5. Click on ***Run details***
 6. Copy **Metadata URL** and save it in some text file.
 

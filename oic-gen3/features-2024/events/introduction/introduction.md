@@ -6,7 +6,7 @@ You can create and select events for publishing and subscribing to in integratio
 This LiveLab provides an overview of projects and the life cycle of projects.
 This Livelab provides an overview of the event design life cycle and describes event restrictions.
 
-Estimated Time: 60 minutes
+Estimated Workshop Time: 60 minutes
 
 ### What is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.

@@ -20,7 +20,7 @@ This labs will explore the ERP Cloud adapter and File Adapter features and lets 
   The following diagram shows the runtime interaction between the systems involved in this use case:
     ![FBDIImport](images/bulk-import-simple.png)
 
-Estimated Time: 2 hours
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 

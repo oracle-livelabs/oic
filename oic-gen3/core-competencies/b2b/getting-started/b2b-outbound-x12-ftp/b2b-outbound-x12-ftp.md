@@ -172,11 +172,11 @@ Manage business identifiers that enable you to track fields in messages during r
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
 2. From the **Source** section, seach for  ***orderNumber***. Drag the ***orderNumber*** field to the right side section:
-![businessIdentifiers](images/business-identifiers.png)
+    ![businessIdentifiers](images/business-identifiers.png)
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click on ***Main canvas*** and Click ***Save*** to persist changes.
 5. Final integration flow should look like the below diagram.
-![finalflow diagram](images/finalflow.png)
+    ![finalflow diagram](images/finalflow.png)
 
 ## Task 8: Activate the Integration
 

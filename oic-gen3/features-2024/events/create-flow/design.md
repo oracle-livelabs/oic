@@ -243,7 +243,7 @@ You can create an integration that subscribes to published events. The subscribi
 5. Click ***Save***.
 6. Click on ***&lt; (Go back)*** button.
 7. Your project should look like the screenshot given below.
-![allintegrations-in-project](../images/allintegrations-in-project.png)
+    ![allintegrations-in-project](../images/allintegrations-in-project.png)
 
 ## Task 12: Congratulations
 

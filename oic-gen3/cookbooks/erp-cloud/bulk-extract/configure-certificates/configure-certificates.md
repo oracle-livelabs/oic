@@ -31,7 +31,7 @@ The Oracle ERP cloud certificates must be imported in OIC to authenticate SAML a
 
 4. Similarly, upload orakey certificate with a different alias name
 
-![Message Protection Certificates](images/fusion-certificates.png)
+    ![Message Protection Certificates](images/fusion-certificates.png)
 
 ## Task 2: Create and Assign Service User role in OIC
 

@@ -56,7 +56,7 @@ Create a connection using newly published **Acme OM Application** Adapter to inv
 
 2. In the *Create Connection* dialog, select the **Acme** adapter. To find the adapter, enter *REST* in the search field. Click on the highlighted adapter.
 
-![Acme Adapter Search](images/acme-adapter-search.png)
+    ![Acme Adapter Search](images/acme-adapter-search.png)
 
 3. In the *Create Connection* dialog, enter the following information and click on **Create**:
 

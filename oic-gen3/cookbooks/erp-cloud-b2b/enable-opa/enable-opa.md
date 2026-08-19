@@ -29,7 +29,7 @@ To enable a Process Automation instance with an Oracle Integration instance:
 3. Choose an existing Oracle Integration instance provisioned in the previous lab
 
 4. Click the *Enable* link for **Process Automation** on the Integration instance information tab
-![Enable OPA](images/opa-enable.png)
+    ![Enable OPA](images/opa-enable.png)
 
 5. When prompted, click *Enable* to confirm that you want to enable Process Automation. This may take 10-15 minutes to enable the OPA functionality. Once enablement is completed the status should show as **Active**.
 
@@ -53,7 +53,7 @@ After an Oracle Cloud Infrastructure Process Automation instance has been create
 7. Click the *Application Roles* tab. The available IDCS application roles are displayed
 
 8. Select the **Service Administrator** Role. Click the action menu and then select *Assign Users*
-![Service Admin Role Assign To User](images/service-admin-idcs.png)
+    ![Service Admin Role Assign To User](images/service-admin-idcs.png)
 
 9. In the Assign User dialog, select user to which you want to assign the role and click *Assign*
 
