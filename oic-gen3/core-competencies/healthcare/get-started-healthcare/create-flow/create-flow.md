@@ -201,11 +201,11 @@ Create Child processor Integration to process HL7 V2.5 messages
 2. Map the following values
 
     | **Source**          | **Target**          |       
-| --- | ----------- |
-|**Expand** ReceiveMessage Request &gt; Request Wrapper &gt; Message &gt; **Healthcare Message Reference** | ConvertMessage Request &gt; Convert Message Input &gt; **Healthcare Message Reference** |
-{: title="Map to ConvertMessage Mapping elements"}
+    | --- | ----------- |
+    |**Expand** ReceiveMessage Request &gt; Request Wrapper &gt; Message &gt; **Healthcare Message Reference** | ConvertMessage Request &gt; Convert Message Input &gt; **Healthcare Message Reference** |
+    {: title="Map to ConvertMessage Mapping elements"}
 
-**Switch Action to check FHIR ID**
+    **Switch Action to check FHIR ID**
 
 1. *Add* a **Switch** action Which creates Route1 and Otherwise. Provide **Name** for Route1 as **hasFHIR_ID**
 
@@ -226,26 +226,26 @@ Create Child processor Integration to process HL7 V2.5 messages
 
     ![Switch Otherwise Variables](images/switch-otherwise-variables.png)
 
-| **Variables Names**          | **Values**          |       
-| --- | ----------- |
-|queryFamily |C-PID.5-XPN-01 (search for the element in $ConvertMessage element from Input Sources)|
-|queryGiven |C-PID.5-XPN-02 (search for the element in $ConvertMessage element from Input Sources)|
-|queryPhone |C-PID.13-XTN-01 (search for the element in $ConvertMessage element from Input Sources)|
-|queryBirthdate |C-PID.7-TS-01 (search for the element in $ConvertMessage element from Input Sources)|
-|patientExists |false|
-|queryString |concat('?family=', queryFamily, '&given=', queryGiven, '&birthdate=', queryBirthdate, '&phone=', queryPhone)|
-{: title="Create Variables"}
+    | **Variables Names**          | **Values**          |       
+    | --- | ----------- |
+    |queryFamily |C-PID.5-XPN-01 (search for the element in $ConvertMessage element from Input Sources)|
+    |queryGiven |C-PID.5-XPN-02 (search for the element in $ConvertMessage element from Input Sources)|
+    |queryPhone |C-PID.13-XTN-01 (search for the element in $ConvertMessage element from Input Sources)|
+    |queryBirthdate |C-PID.7-TS-01 (search for the element in $ConvertMessage element from Input Sources)|
+    |patientExists |false|
+    |queryString |concat('?family=', queryFamily, '&given=', queryGiven, '&birthdate=', queryBirthdate, '&phone=', queryPhone)|
+    {: title="Create Variables"}
 
-The Integration flow designed so far
-![Integration Progress After Switch Activity](images/integration-progress-switch-activity.png)
+    The Integration flow designed so far
+    ![Integration Progress After Switch Activity](images/integration-progress-switch-activity.png)
 
-**Parallel Action to upsert patient and translate to HL7 V2.3.1**
+    **Parallel Action to upsert patient and translate to HL7 V2.3.1**
 
-In this section create logic for two branches in parallel action.
-  - Branch1 - Find patient and accordingly insert or update Patient in FHIR Test server
-  - Branch2 - Translate HL7 V2.5 to V2.3.1
+    In this section create logic for two branches in parallel action.
+      - Branch1 - Find patient and accordingly insert or update Patient in FHIR Test server
+      - Branch2 - Translate HL7 V2.5 to V2.3.1
 
-***Branch1***
+    ***Branch1***
 
 1. *Add* **Parallel** action after the Switch activity. Two branches namely Branch1 and Branch2 are created.
 
@@ -367,22 +367,22 @@ In this section create logic for two branches in parallel action.
 
 7. *Edit* the **Map to Patient**. And provide the mapping as per below and *Click* on **Validate** and Navigate back to the canvas
 
-| **Source**          | **Target**          |       
-| --- | ----------- |
-|**queryString** | findPatient Request &gt; Template Parameters &gt; **Query String** |
-{: title="Map to findPatient elements"}
+    | **Source**          | **Target**          |       
+    | --- | ----------- |
+    |**queryString** | findPatient Request &gt; Template Parameters &gt; **Query String** |
+    {: title="Map to findPatient elements"}
 
 8. *Add* **Switch** action after **Invoke findPatient**. Create conditional logic for three routes.
     - Route1 - Insert New Patient info
     - Route2- Update Patient info
     - Otherwise - Logger
 
-Add another route and Integration flow should look like below
-![Integration Progress Parallel Action with Three routes](images/integration-progress-parallel-switch-allroutes.png)
+    Add another route and Integration flow should look like below
+    ![Integration Progress Parallel Action with Three routes](images/integration-progress-parallel-switch-allroutes.png)
 
 9. In the **Route1 - Insert New Patient** Click the **+** sign in the integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
 
-Set the condition for Route1 as **patientExists = "false"**
+    Set the condition for Route1 as **patientExists = "false"**
 
 10. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* property, enter **SaveToHAPIServer**
@@ -541,7 +541,6 @@ Set the condition for Route1 as **patientExists = "false"**
               ]
             },
             "given": [
-              "BÃƒÂ©nÃƒÂ©dicte"
             ]
           },
           "telecom": [
@@ -713,7 +712,6 @@ Set the condition for Route1 as **patientExists = "false"**
                   }
                 ],
                 "name": {
-                  "family": "du MarchÃƒÂ©",
                   "_family": {
                     "extension": [
                       {
@@ -723,7 +721,6 @@ Set the condition for Route1 as **patientExists = "false"**
                     ]
                   },
                   "given": [
-                    "BÃƒÂ©nÃƒÂ©dicte"
                   ]
                 },
                 "telecom": [
@@ -758,44 +755,44 @@ Set the condition for Route1 as **patientExists = "false"**
         ```
 12. *Edit* the **Map to SaveToHAPIServer** activity and perform the below mapping
 
-On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PIX:PID &gt;
+    On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PIX:PID &gt;
 
-On the Target mapping Section *Expand* SaveToHAPIServer Request &gt; Request Wrapper
+    On the Target mapping Section *Expand* SaveToHAPIServer Request &gt; Request Wrapper
 
-Note: Highlight the root element and search for the element to find it easily.
+    Note: Highlight the root element and search for the element to find it easily.
 
-Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
+    Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
 
-Note: Static values are mentioned in quotes. For others use the element name and search in the healthcare xml document
+    Note: Static values are mentioned in quotes. For others use the element name and search in the healthcare xml document
 
-| **Source**| **Target**|       
-| --- | ----------- |
-|"Patient"| Resource Type |
-|"generated"| Status |
-|"http://example.org"| Identifier &gt; System |
-|"001"| Identifier &gt; Value |
-|"official"| Name &gt; Use |
-|SC-XPN.1-FN-01| Name &gt; Family |
-|C-PID.6-XPN-02| Name &gt; Given |
-|lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-02: Telecommunication Use Code, "FHIR\_Telecom\_Use", "home")| Telecom &gt; Use |
-|lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-03: Telecommunication Equipment Type, "FHIR\_Telecom\_Use", "phone")| Telecom &gt; System |
-|C-PID.13-XTN-07| Telecom &gt; Value |
-|lookupValue( "HL7\_to\_FHIR\_Gender\_Map", "HL7", PID08: Administrative Sex, "FHIR", "unknown")| Gender |
-|home| Address &gt; Use |
-|PID11:Patient Address &gt;C-PID.11-XAD-01 &gt; SC-XAD.1-SAD-01: Street or Mailing Address| Address &gt; Text |
-|PID11:Patient Address &gt; C-PID.11-XAD-08: Other Geographic Designation| Address &gt; Line |
-|PID11:Patient Address &gt; C-PID.11-XAD-03: City| Address &gt; City |
-|PID11:Patient Address &gt; C-PID.11-XAD-04: State or Province| Address &gt; State |
-|PID11:Patient Address &gt; C-PID.11-XAD-05: Zip or Postal Code| Address &gt; Postal Code |
-{: title="Map to SaveToHAPIServer elements"}
+    | **Source**| **Target**|       
+    | --- | ----------- |
+    |"Patient"| Resource Type |
+    |"generated"| Status |
+    |"http://example.org"| Identifier &gt; System |
+    |"001"| Identifier &gt; Value |
+    |"official"| Name &gt; Use |
+    |SC-XPN.1-FN-01| Name &gt; Family |
+    |C-PID.6-XPN-02| Name &gt; Given |
+    |lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-02: Telecommunication Use Code, "FHIR\_Telecom\_Use", "home")| Telecom &gt; Use |
+    |lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-03: Telecommunication Equipment Type, "FHIR\_Telecom\_Use", "phone")| Telecom &gt; System |
+    |C-PID.13-XTN-07| Telecom &gt; Value |
+    |lookupValue( "HL7\_to\_FHIR\_Gender\_Map", "HL7", PID08: Administrative Sex, "FHIR", "unknown")| Gender |
+    |home| Address &gt; Use |
+    |PID11:Patient Address &gt;C-PID.11-XAD-01 &gt; SC-XAD.1-SAD-01: Street or Mailing Address| Address &gt; Text |
+    |PID11:Patient Address &gt; C-PID.11-XAD-08: Other Geographic Designation| Address &gt; Line |
+    |PID11:Patient Address &gt; C-PID.11-XAD-03: City| Address &gt; City |
+    |PID11:Patient Address &gt; C-PID.11-XAD-04: State or Province| Address &gt; State |
+    |PID11:Patient Address &gt; C-PID.11-XAD-05: Zip or Postal Code| Address &gt; Postal Code |
+    {: title="Map to SaveToHAPIServer elements"}
 
-![Mapping Save to HAPI Server](images/mapping-new-patient-fhir.png)
+    ![Mapping Save to HAPI Server](images/mapping-new-patient-fhir.png)
 
 13. In the **Route2 - Update Existing Patient** Click the **+** sign in the integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
 
-Set the condition for Route2 as **http.response.status ='200' and resourceType='Patient'**
+    Set the condition for Route2 as **http.response.status ='200' and resourceType='Patient'**
 
-![Update Patient Route 2 Condition](images/update-patient-route2-condition.png)
+    ![Update Patient Route 2 Condition](images/update-patient-route2-condition.png)
 
 14. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* property, enter **updateHAPIServer**
@@ -948,7 +945,6 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
           }
         ],
         "name": {
-          "family": "du MarchÃƒÂ©",
           "_family": {
             "extension": [
               {
@@ -958,7 +954,6 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
             ]
           },
           "given": [
-            "BÃƒÂ©nÃƒÂ©dicte"
           ]
         },
         "telecom": [
@@ -1129,7 +1124,6 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
           }
         ],
         "name": {
-          "family": "du MarchÃƒÂ©",
           "_family": {
             "extension": [
               {
@@ -1139,7 +1133,6 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
             ]
           },
           "given": [
-            "BÃƒÂ©nÃƒÂ©dicte"
           ]
         },
         "telecom": [
@@ -1176,44 +1169,44 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
 
 19. *Edit* the **Map to updateHAPIServer** activity and perform the below mapping
 
-On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PID:PID &gt;
+    On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PID:PID &gt;
 
-On the Target mapping Section *Expand* updateHAPIServer Request &gt; Request Wrapper
+    On the Target mapping Section *Expand* updateHAPIServer Request &gt; Request Wrapper
 
-Note: Highlight the root element and search for the element to find it easily.
+    Note: Highlight the root element and search for the element to find it easily.
 
-Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
+    Note: Wherever lookupValue function is used in the below table expand the mapper drawer at right corner. Under Integration Cloud use lookValue function by drag and drop in the expression box. Do not use the value in the table as it as the actual XPath may vary. Construct the lookupValue function expression based on the values indicated by going through the wizard.
 
-Note: Static values are mentioned in quotes. For others use the element name and search in the healthcare xml document
+    Note: Static values are mentioned in quotes. For others use the element name and search in the healthcare xml document
 
-| **Source**| **Target**|       
-| --- | ----------- |
-|"Patient"| Resource Type |
-|PID04 &gt; C-PID.4-CX-01 | Id |
-|"true"| Active |
-|"official"| Name &gt; Use |
-|SC-XPN.1-FN-01| Name &gt; Family |
-|C-PID.6-XPN-02| Name &gt; Given |
-|lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-02: Telecommunication Use Code, "FHIR\_Telecom\_Use", "home")| Telecom &gt; Use |
-|lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-03: Telecommunication Equipment Type, "FHIR\_Telecom\_Use", "phone")| Telecom &gt; System |
-|C-PID.13-XTN-01| Telecom &gt; Value |
-|lookupValue( "HL7\_to\_FHIR\_Gender\_Map", "HL7", PID08: Administrative Sex, "FHIR", "unknown")| Gender |
-|queryString| Template Parameters &gt; Query String |
-{: title="Map to updateHAPIServer elements"}
+    | **Source**| **Target**|       
+    | --- | ----------- |
+    |"Patient"| Resource Type |
+    |PID04 &gt; C-PID.4-CX-01 | Id |
+    |"true"| Active |
+    |"official"| Name &gt; Use |
+    |SC-XPN.1-FN-01| Name &gt; Family |
+    |C-PID.6-XPN-02| Name &gt; Given |
+    |lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-02: Telecommunication Use Code, "FHIR\_Telecom\_Use", "home")| Telecom &gt; Use |
+    |lookupValue( "HL7\_to\_FHIR\_Telecom\_Use", "HL7\_Telecom\_Use", C-PID.13-XTN-03: Telecommunication Equipment Type, "FHIR\_Telecom\_Use", "phone")| Telecom &gt; System |
+    |C-PID.13-XTN-01| Telecom &gt; Value |
+    |lookupValue( "HL7\_to\_FHIR\_Gender\_Map", "HL7", PID08: Administrative Sex, "FHIR", "unknown")| Gender |
+    |queryString| Template Parameters &gt; Query String |
+    {: title="Map to updateHAPIServer elements"}
 
-![Mapping Save to HAPI Server](images/mapping-update-patient-fhir.png)
+    ![Mapping Save to HAPI Server](images/mapping-update-patient-fhir.png)
 
-*Validate* the mapping and *Save* your work.
+    *Validate* the mapping and *Save* your work.
 
 20. In the **Otherwise** block add a **logger** action with message "Did Nothing"
 
-Integration so far...
+    Integration so far...
 
-![Integration Progress Parallel Action](images/integration-progress-parallel-action-branch1.png)
+    ![Integration Progress Parallel Action](images/integration-progress-parallel-action-branch1.png)
 
 21. Collapse **Branch1** of Parallel action. Expand **Branch2**
 
-***Branch2***
+    ***Branch2***
 
 1. In **Branch 2** of **Parallel** action Click the **+** sign in the integration canvas and *Add* the **Healthcare** action
 
@@ -1223,38 +1216,38 @@ Integration so far...
 
 3. *Edit* the map activity of Healthcare action. Perform the mapping as per below
 
-On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt
+    On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt
 
-On the Target mapping Section *Expand* Translate2NativeHL7 Request &gt; Translate Input &gt; Healthcare XML Document &gt; Transaction Data
+    On the Target mapping Section *Expand* Translate2NativeHL7 Request &gt; Translate Input &gt; Healthcare XML Document &gt; Transaction Data
 
-On Source Side Map all Simple nodes and Child elements of Complex nodes of MSH01 through MSH11 segments to the respective Target nodes. See below
+    On Source Side Map all Simple nodes and Child elements of Complex nodes of MSH01 through MSH11 segments to the respective Target nodes. See below
 
-![Partial mapping of V25 to v231](images/mapping-v25-to-v231.png)
+    ![Partial mapping of V25 to v231](images/mapping-v25-to-v231.png)
 
-Complete the rest of the nodes mapping using below table.
+    Complete the rest of the nodes mapping using below table.
 
-| **Source**| **Target**|       
-| --- | ----------- |
-| "2.3.1" | MSH12 &gt; C-MSH.12-VID-01 |
-|MSH13: Sequence Number | MSH13: Sequence Number |
-|MSH14: Continuation Pointer| MSH14: Continuation Pointer |
-|MSH15: Accept Acknowledgment Type| MSH15: Accept Acknowledgment Type |
-|MSH16: Application Acknowledgment Type| MSH16: Application Acknowledgment Type |
-|MSH17: Country Code| MSH17: Country Code |
-|MSH18: Character Set| MSH18: Character Set |
-{: title="Map to translate2NativeHL7 elements"}
+    | **Source**| **Target**|       
+    | --- | ----------- |
+    | "2.3.1" | MSH12 &gt; C-MSH.12-VID-01 |
+    |MSH13: Sequence Number | MSH13: Sequence Number |
+    |MSH14: Continuation Pointer| MSH14: Continuation Pointer |
+    |MSH15: Accept Acknowledgment Type| MSH15: Accept Acknowledgment Type |
+    |MSH16: Application Acknowledgment Type| MSH16: Application Acknowledgment Type |
+    |MSH17: Country Code| MSH17: Country Code |
+    |MSH18: Character Set| MSH18: Character Set |
+    {: title="Map to translate2NativeHL7 elements"}
 
-We need to map each and every element of EVN and PID segment from source to the target. We can use XSLT function copy-of to do the same instead of mapping each element one by one. The function is helpful in the context where all source elements needs to be mapped to the target elements provided the names of the elements match each other.
+    We need to map each and every element of EVN and PID segment from source to the target. We can use XSLT function copy-of to do the same instead of mapping each element one by one. The function is helpful in the context where all source elements needs to be mapped to the target elements provided the names of the elements match each other.
 
-In the Mapper Select *XSLT* at top of the banner. Click the drawer at the right hand side corner and expand the XSL Constructors pane &gt; Output.
+    In the Mapper Select *XSLT* at top of the banner. Click the drawer at the right hand side corner and expand the XSL Constructors pane &gt; Output.
 
-In the Targets section search for the element **EVN**, right click and **create a target node**. Drag and drop the *copy-of* function from the **XSL Constructors &gt; Output category** on to the *EVN* segment in the target.
+    In the Targets section search for the element **EVN**, right click and **create a target node**. Drag and drop the *copy-of* function from the **XSL Constructors &gt; Output category** on to the *EVN* segment in the target.
 
-![Copy Function for Event Mapping](images/copy-of-function-mapping-event.png)
+    ![Copy Function for Event Mapping](images/copy-of-function-mapping-event.png)
 
-Finally, Map the **EVN** segment from the source to copy-of node in the Target.
+    Finally, Map the **EVN** segment from the source to copy-of node in the Target.
 
-![Copy Function Final mapping](images/mapping-v25-to-v231-copy-of-evn.png)
+    ![Copy Function Final mapping](images/mapping-v25-to-v231-copy-of-evn.png)
 
     Similarly, use copy-of function for PID Segment.
 
