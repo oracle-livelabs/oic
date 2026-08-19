@@ -35,11 +35,11 @@ To access the File Server from an Integration, you will need to create an FTP Co
 
 5. In the *Use a shared Connection* section, Search for **File**. Click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
-![File Server Connection Reference](images/fileserversharedconn.png)
+    ![File Server Connection Reference](images/fileserversharedconn.png)
 
-Please note that the connection with the name **File Server** is already created in your training instance, which is configured and shared with other projects. Although both the connections names are similar, they exist in the different projects. You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
+    Please note that the connection with the name **File Server** is already created in your training instance, which is configured and shared with other projects. Although both the connections names are similar, they exist in the different projects. You can share adapter connection resources across projects. For example, you may have two projects that need to integrate with a common system, such as Oracle ERP Cloud. The connection you created is referencing the shared connection in the instance.
 
-![Shared Connection](images/connection-sharing.png)
+    ![Shared Connection](images/connection-sharing.png)
 
 6. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
 
@@ -77,7 +77,7 @@ Create a connection with the Oracle HCM Cloud Adapter.
     If you are a non Bootcamp user then skip step 5 and continue from step 6..**
 
 5. Search for **HCM Cloud**, Please note that the connection with the name **HCM Cloud** is already created by the instructors, configured and shared with other projects.
-Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **HCM Cloud** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+    Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **HCM Cloud** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
 6. In the *Oracle HCM Cloud Connection* dialog, enter the following information:
 

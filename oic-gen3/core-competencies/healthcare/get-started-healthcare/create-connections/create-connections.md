@@ -44,28 +44,28 @@ Runs directly in the connectivity agent to support connectivity to remote health
 
 1. In the **Project** page, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
+2. From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | HC RECEIVE HL7     |
-| Identifier         | Generated automatically       |
-| Role         | Trigger      |
-| Description  | Receive HL7 messages for processing |
-{: title="Create Connection"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | HC RECEIVE HL7     |
+    | Identifier         | Generated automatically       |
+    | Role         | Trigger      |
+    | Description  | Receive HL7 messages for processing |
+    {: title="Create Connection"}
 
 5. In the Connection Configuration page provide below information
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Listener Port         | 2100      |
-| Role         | Trigger      |
-| Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
-{: title="MLLP Trigger Connection Configuration"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Listener Port         | 2100      |
+    | Role         | Trigger      |
+    | Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
+    {: title="MLLP Trigger Connection Configuration"}
 
-![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
+    ![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
 
 6. Click *Save* and *Test* the connection. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
@@ -74,28 +74,28 @@ Create a connection using MLLP Adapter.
 
 1. In the **Project** page, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
+2. From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | HC SEND HL7     |
-| Identifier         | Generated automatically       |
-| Role         | Invoke      |
-| Description  | Send HL7 messages to Pathology system |
-{: title="Create Connection"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | HC SEND HL7     |
+    | Identifier         | Generated automatically       |
+    | Role         | Invoke      |
+    | Description  | Send HL7 messages to Pathology system |
+    {: title="Create Connection"}
 
 5. In the Connection Configuration page provide below information
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Client IP         | 127.0.0.1   |
-| Client Port         | 2500      |
-| Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
-{: title="MLLP Invoke Connection Configuration"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Client IP         | 127.0.0.1   |
+    | Client Port         | 2500      |
+    | Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
+    {: title="MLLP Invoke Connection Configuration"}
 
-![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
+    ![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
 
 6. Click *Save* and *Test* the connection. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
@@ -104,7 +104,7 @@ Create a connection using REST Adapter to Interface Processor Child Integration.
 
 1. In the **Project** page created previously, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **REST** and Select *REST* adapter.
+2. From the List of Adapters, search for **REST** and Select *REST* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -134,7 +134,7 @@ Create a connection using REST Adapter to invoke FHIR API
 
 1. In the **Project** page created previously, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **REST** and Select *REST* adapter.
+2. From the List of Adapters, search for **REST** and Select *REST* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -147,7 +147,7 @@ Create a connection using REST Adapter to invoke FHIR API
 
     Keep all other values as default.
 
-4.  In the *Configuration* page, enter the following information:
+4. In the *Configuration* page, enter the following information:
 
     | **Field**  | **Values** |
     |---|---|
@@ -162,39 +162,39 @@ Create a connection using REST Adapter to invoke FHIR API
 
 ## Task 6: Create Lookups
 
-1.  In the **Project** page, select *Add* from the **Lookups** tile and Click *Create*.
+1. In the **Project** page, select *Add* from the **Lookups** tile and Click *Create*.
 
-2.  In the Create Lookup dialog provide **Name** as *HL7\_to\_FHIR\_Equipment\_to\_System* and click *Create*
+2. In the Create Lookup dialog provide **Name** as *HL7\_to\_FHIR\_Equipment\_to\_System* and click *Create*
 
-3.  Change the name of the domain\_name\_1 to **HL7\_Telecom\_Equipment**. Similarly, edit the name of the domain\_name\_2 to **FHIR\_Telecom\_System**.
-Provide the values below and *Save* the lookup.
-![Configure HL7 Equipment System Lookup](images/lkp-hl7-equipment-system.png)
+3. Change the name of the domain\_name\_1 to **HL7\_Telecom\_Equipment**. Similarly, edit the name of the domain\_name\_2 to **FHIR\_Telecom\_System**.
+    Provide the values below and *Save* the lookup.
+    ![Configure HL7 Equipment System Lookup](images/lkp-hl7-equipment-system.png)
 
-4.  Refer to the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts. In the unzipped folder refer the **lookups**  folder for csv files. Use each of csv to create separate lookups by importing the same from the lookups section in the Project.
-- HL7\_to\_FHIR\_Gender\_Map.csv
-- HL7\_to\_FHIR\_Telecom\_Use.csv
-- HL7ProcessorRoutes.csv
+4. Refer to the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts. In the unzipped folder refer the **lookups**  folder for csv files. Use each of csv to create separate lookups by importing the same from the lookups section in the Project.
+    - HL7\_to\_FHIR\_Gender\_Map.csv
+    - HL7\_to\_FHIR\_Telecom\_Use.csv
+    - HL7ProcessorRoutes.csv
 
-5.  Finally, four lookups are created.
-![List of Lookups](images/list-of-lookups.png)
+5. Finally, four lookups are created.
+    ![List of Lookups](images/list-of-lookups.png)
 
 ## Task 7: Create Healthcare Documents
 
-1.  Click on *Navigator* &gt; *Healthcare*, Select *Documents*
+1. Click on *Navigator* &gt; *Healthcare*, Select *Documents*
 
-2.  Create 2 documents with Standard as HL7 2.3.1 and 2.5
+2. Create 2 documents with Standard as HL7 2.3.1 and 2.5
 
-3.  Select *Create* and provide the below values and *Save* the document
+3. Select *Create* and provide the below values and *Save* the document
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | A08\_PATIENT\_UPDATE\_2\_3\_1   |
-| Document Standard         | HL7V2      |
-| Document Version  | 2.3.1 |
-| Document Type  | ADT_A08 (Update patient information) |
-{: title="HL7 V 2.3.1 Document"}
+    | **Field**        | **Value**          |       
+    | --- | ----------- |
+    | Name         | A08\_PATIENT\_UPDATE\_2\_3\_1   |
+    | Document Standard         | HL7V2      |
+    | Document Version  | 2.3.1 |
+    | Document Type  | ADT_A08 (Update patient information) |
+    {: title="HL7 V 2.3.1 Document"}
 
-4.  Similarly, create another document with below values
+4. Similarly, create another document with below values
 
 | **Field**        | **Value**          |       
 | --- | ----------- |
@@ -215,4 +215,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management - Oracle Integration & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

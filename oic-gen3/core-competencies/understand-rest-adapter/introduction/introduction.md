@@ -4,7 +4,7 @@
 
 In this workshop, we shall talk about provisioning Oracle Integration 3 instance, provisioning Oracle Autonomous Database and then how to create connections for REST API which complies with Open API 3.0 specification. You will learn how to create an integration flow that exposes REST Interface and consumes OAuth enabled REST API. In the bonus lab, you will learn how to secure OIC Integration Flow with OAuth.
 
-Estimated Time: 1 hour 30 minutes
+Estimated Workshop Time: 1 hour 30 minutes
 
 ### What is Oracle Integration 3?
 

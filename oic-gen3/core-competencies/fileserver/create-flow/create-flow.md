@@ -10,7 +10,7 @@ In this use case, an Event pattern in OIC is used to automate the transfer and p
 
 The Oracle Autonomous Transaction Processing adapter in OIC simplifies inserting the data into the database. Here’s how it works:
 
-# Components Involved
+## Components Involved
 
     1.Oracle Integration Cloud (OIC):
 
@@ -81,7 +81,7 @@ We will start by creating a new integration and adding some basic info.
 6. Click **Create**.
 7. Click **System** on the *Choose event* dialog, expand **File Server**, select **File created**, click **Choose** and click on **Add Filter**  and provide the sample json given below. You need to modify the file name and path as per your use case. 
 
-> **Note:**  Path given below is not a real path, it is just a syntax, you need to modify it as per your use case.
+    > **Note:**  Path given below is not a real path, it is just a syntax, you need to modify it as per your use case.
 
     <copy>
         {"type":"jq_filter","filter-def":".data.path==\"/upload/users/your oic usernumber\" and (.data.name | endswith(\".csv\")) "}
@@ -94,7 +94,7 @@ We will start by creating a new integration and adding some basic info.
 ## Task 2: Get the file reference using File server native action
 
 1. Hover over the outgoing arrow for the **Filecreated1** activity and Click the ***+*** sign in the integration canvas.
-Search for the **File server** activity and click on it. This invokes  the Configuration Wizard.
+    Search for the **File server** activity and click on it. This invokes  the Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***readfileref***
     - for the **Select resource** element, select ***File***
@@ -125,7 +125,7 @@ Search for the **File server** activity and click on it. This invokes  the Confi
 ## Task 4: Read the file using Stage File action
 
 1. Hover over the outgoing arrow for the **File server readfileref** activity and Click the ***+*** sign in the integration canvas.
-Search for the **Stage File** action and click on it. This invokes Stage File Configuration Wizard.
+    Search for the **Stage File** action and click on it. This invokes Stage File Configuration Wizard.
 2. On the **Basic Info** page,
     - for the **What do you want to call your endpoint?** element, enter ***readfile***
     - Click ***Continue***.
@@ -143,7 +143,7 @@ Search for the **Stage File** action and click on it. This invokes Stage File Co
       - Click ***Continue***.
 6. Review the summary and click ***Finish***
 7. Click ***Save*** to persist changes
-![ReadFileFromStage](images/readfilefromstage.png)
+    ![ReadFileFromStage](images/readfilefromstage.png)
 
 ## Task 5: Add the ATP invoke activity
 
@@ -177,7 +177,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 </copy>
     ```
 
- - If *Status* is *Success!* then Click **Continue**, otherwise *fix the query*
+    - If *Status* is *Success!* then Click **Continue**, otherwise *fix the query*
 3. On the Summary page, review the configuration and click **Finish**.
 4. Click **Save** to apply changes.
 
@@ -196,7 +196,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 
     Map all the elements from source to target, can find the image given below for the reference
 
-   ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
+    ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
 
 3. Click **Validate**, then wait for the confirmation message.
 4. Click **&lt; (Go back)**
@@ -228,4 +228,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, Aug 2026

@@ -6,7 +6,7 @@ This workshop shows you how to use Oracle Integration 3 with Oracle ERP Business
 
 The user creates a report in Oracle ERP Cloud and uploads it to a shared folder. Oracle Integration 3 connects to the ERP BIP service, pulls the report, decodes the response, applies the required transformations and writes it into the REST client.
 
-Estimated Time: 1 hour 20 minutes
+Estimated Workshop Time: 1 hour 20 minutes
 
 This lab walks you through the steps to create an Integration flow.
 
@@ -50,4 +50,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

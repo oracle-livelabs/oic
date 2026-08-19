@@ -83,7 +83,7 @@ The Adapter Endpoint Configuration Wizard opens
 
 Add an EDI translate action to the flow to translate XML document to an EDI document
 1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the first **Receive-App-Msg** element.
-The **Configure B2B Action** wizard opens
+    The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     * for the **What do you want to call this B2B action?** element, enter ***EDI-Generate***
     * select a mode as ***B2B Trading Partner mode***, and click **Continue**
@@ -100,25 +100,25 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 1. Click the ***Map EDI-Generate*** action and select ***Edit***
 2. Click on ***Developer*** mode
 3. From Source, expand the ***root element***, expand ***Acme Purchase Order*** and From Target, expand the ***root element***, expand ***Translate Input***, expand ***Edi Xml Document***, expand ***Transaction Data*** and **map** all the mandatory elements given below.
-> **Note**: You can search for the element to find it quickly
+    > **Note**: You can search for the element to find it quickly
 
-| Source | Target |
-| --- | --- |
-| “00” | BEG01 |
-| “NE” | BEG02 |
-| Order Number | BEG03 |
-| drag and drop format-dateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
-|  count (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:lineItems )  | CTT01 |
-| Total Amount | CTT02 |
-| “2L” | CUR01 |
-| Currency Code | CUR02 |
-| Currency Conversion Rate | CUR03 |
-| Line Items | Loop-PO1 |
-| Line Items > SKU | PO101 |
-| Line Items > Quantity | PO102 |
-| Line Items > Unit Of Measure | PO103 |
-| Line Items > Price | PO104 |
-| Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
+    | Source | Target |
+    | --- | --- |
+    | “00” | BEG01 |
+    | “NE” | BEG02 |
+    | Order Number | BEG03 |
+    | drag and drop format-dateTime function from the Components onto the BEG05 and create a string as given here: xp20:format-dateTime (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:orderDate, "[Y0001][M01][D01]" )| BEG05 |
+    |  count (/nssrcmpr:execute/tns:AcmePurchaseOrder/tns:lineItems )  | CTT01 |
+    | Total Amount | CTT02 |
+    | “2L” | CUR01 |
+    | Currency Code | CUR02 |
+    | Currency Conversion Rate | CUR03 |
+    | Line Items | Loop-PO1 |
+    | Line Items > SKU | PO101 |
+    | Line Items > Quantity | PO102 |
+    | Line Items > Unit Of Measure | PO103 |
+    | Line Items > Price | PO104 |
+    | Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
 
 4. Click on ***Validate***
 5. Click ***&lt; (Go back)***
@@ -159,10 +159,10 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 
 1. Edit ***Map Receive-App-Msg*** activity.
 2. From Source, expand **EDI-Generate Response > executeResponse> TranslateOutput** and From Target, expand **Purchase Order Result** and map the following elements per the table given below.
-| Source | Target |
-| --- | --- |
-| Translation Status | Translation Status |
-| Validation Error Report | Validation Error Report |
+    | Source | Target |
+    | --- | --- |
+    | Translation Status | Translation Status |
+    | Validation Error Report | Validation Error Report |
 
 3. Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
 
@@ -172,11 +172,11 @@ Manage business identifiers that enable you to track fields in messages during r
 
 1. Click on the ***(I) Business Identifiers*** menu on the top right.
 2. From the **Source** section, seach for  ***orderNumber***. Drag the ***orderNumber*** field to the right side section:
-![businessIdentifiers](images/business-identifiers.png)
+    ![businessIdentifiers](images/business-identifiers.png)
 3. Click on the ***(I) Business Identifiers*** menu on the top right again to close Business Identifier section
 4. Click on ***Main canvas*** and Click ***Save*** to persist changes.
 5. Final integration flow should look like the below diagram.
-![finalflow diagram](images/finalflow.png)
+    ![finalflow diagram](images/finalflow.png)
 
 ## Task 8: Activate the Integration
 
@@ -188,7 +188,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 1. Select **PO Backend**,  Click on **...(Actions)** menu and Click on ***Run***
 2. Open the file **DellIncPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**) and copy the data and paste it in the **Body** of the request console.
-  ![TestConsole diagram](images/b2b-outbound17.png)
+    ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
 5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BWorkshop/B2BTPDELLOut**
@@ -205,27 +205,27 @@ This feature will very much useful when we have more than one trading partner. W
 In this exercise, you would be creating a new trading partner(US Gas and Electric) and pre-requisites required for integrating with this trading partner.
 1. Create two folders **B2BTPUSGEIn** and **B2BTPUSGEOut** under B2BWorkshop folder in the File Server and provide permissions.
 
-Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/tenancy/?lab=setup#Task1:ConfigureFileServer)
+    Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/tenancy/?lab=setup#Task1:ConfigureFileServer)
 
 2. Create a trading partner and corresponding agreements with the details given below. You can refer [Lab: B2B Trading Partner Manager-Task2 and Task3](../workshops/tenancy/?lab=b2b-trading-partner-manager)
 
-| Identifier Name | Identifier Value |
-| --- | --- |
-| Trading Partner Name | US Gas and Electric |
-|Email|**Use your email id**|
-|EDI Interchange ID Qualifier|SS|
-|EDI Interchange ID|US Gas and Electric|
-|EDI Group ID|02|
-|EDI Group ID Qualifier|US Gas and Electric|
-|Application Partner ID|US Gas and Electric|
-|Input Directory|/B2BTPUSGEIn|
-|Output Directory|/B2BTPUSGEOut|
-|Output File Name|Order-%SEQ%.edi|
-|Integration name prefix|USGE|
+    | Identifier Name | Identifier Value |
+    | --- | --- |
+    | Trading Partner Name | US Gas and Electric |
+    |Email|**Use your email id**|
+    |EDI Interchange ID Qualifier|SS|
+    |EDI Interchange ID|US Gas and Electric|
+    |EDI Group ID|02|
+    |EDI Group ID Qualifier|US Gas and Electric|
+    |Application Partner ID|US Gas and Electric|
+    |Input Directory|/B2BTPUSGEIn|
+    |Output Directory|/B2BTPUSGEOut|
+    |Output File Name|Order-%SEQ%.edi|
+    |Integration name prefix|USGE|
 3. ***Deploy*** the **Transport and Agreements** if not deployed.
 4. Copy&Paste the payload from **USGEPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**)
 5. Go back to Integrations and test using the new trading partner as you did for DellInc
-[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
+    [Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
 6. Monitor the trading partner and backend integrations.
 
 You may now **proceed to the next lab**.

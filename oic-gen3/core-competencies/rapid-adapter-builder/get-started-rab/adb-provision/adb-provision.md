@@ -23,9 +23,9 @@ In this lab, you will:
 
 ## Task 1: Create a new Autonomous Transaction Processing
 
-1.  Log in to the Oracle Cloud.
+1. Log in to the Oracle Cloud.
 
-2.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
+2. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
     ![Database ATP Page](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
@@ -39,23 +39,23 @@ In this lab, you will:
 
     ![ATP Database Name](./images/atp-creation-1.png)
 
-3.  In the Workload type make sure you select **Transaction Processing** and deployment type as **Serverless**.
+3. In the Workload type make sure you select **Transaction Processing** and deployment type as **Serverless**.
 
     ![ATP Workload Type](./images/atp-creation-2.png)
 
-4.  In the **Configure the database** section Select *Always Free* and Choose database Version as **19c**.
+4. In the **Configure the database** section Select *Always Free* and Choose database Version as **19c**.
 
     ![ATP Configure DB](./images/atp-creation-3.png)
 
-5.  In the **Create administrator credentials** section Provide Username and Password
+5. In the **Create administrator credentials** section Provide Username and Password
 
-6.  Choose Network access as **Secure access from everywhere**
+6. Choose Network access as **Secure access from everywhere**
 
     ![ATP Network Type](./images/atp-creation-4.png)
 
-7.  Choose license type as **License Included**
+7. Choose license type as **License Included**
 
-8.  Click on *Create Autonomous Database*
+8. Click on *Create Autonomous Database*
 
 Your ATP Instance should be provisioned in few minutes.
 
@@ -68,4 +68,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

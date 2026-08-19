@@ -4,7 +4,7 @@
 
 This workshop shows you how to design and develop a Bulk Extract Usecase in Oracle Integration 3 integrating with the ERP cloud. Out of the box, ERP Cloud adapter helps an Integration developer to quickly consume Business Events and Business Services in a secured way using various authentication schemes.
 
-Estimated Time: 120 minutes
+Estimated Workshop Time: 120 minutes
 
 ### Usecase
 
@@ -43,4 +43,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta & Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

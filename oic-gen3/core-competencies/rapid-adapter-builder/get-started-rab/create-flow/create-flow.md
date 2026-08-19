@@ -47,7 +47,7 @@ This lab assumes you have:
     Accept all other default values.
 
 5. Click **Create**.
-   ![Create Integration Flow](images/create-integration-initial.png)
+    ![Create Integration Flow](images/create-integration-initial.png)
 
 6. Click on **Horizontal** to change the layout to Horizontal
 
@@ -115,10 +115,10 @@ This lab assumes you have:
 
 ## Task 3: Invoke Get Customer Details
 
-1.  Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
+1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomerOrders* activity (after first activity) and Click the **+** sign in the integration canvas.
-Search for the *Acme OM Connection* connection which was created in the previous Lab and click on it. This invokes the Acme OM Application Adapter Configuration Wizard.
+    Search for the *Acme OM Connection* connection which was created in the previous Lab and click on it. This invokes the Acme OM Application Adapter Configuration Wizard.
 
 3. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* element, enter **getACMECustomerOrders**
@@ -152,7 +152,7 @@ A map action named getACMECustomerOrders is automatically created. We will defin
 ## Task 5: Define the Data Mapping for Composite Response
 
 1. Add a **Map** activity after *Invoke getACMECustomerOrders* action. In the Add Map dialog select the endpoint as **getCustomerOrders** and click *Create*.
-We will create a transformation to reply back with Customer Details and All the orders for the given customer id
+    We will create a transformation to reply back with Customer Details and All the orders for the given customer id
 
 2. Select the action **Map getCustomerOrders** and click on **...** and click on **Edit**
 
@@ -171,7 +171,7 @@ We will create a transformation to reply back with Customer Details and All the 
   | Totalamount         | Totalamount |
   {: title="Customer Order Details mapping."}
 
-  ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
+    ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
 
   - Click on **Validate**.
      - A confirmation message appears.
@@ -181,7 +181,7 @@ We will create a transformation to reply back with Customer Details and All the 
   - Click **Save** to persist changes.
 
   Your final Integration Flow design should be similar to the below
-  ![Complete Integration Flow](images/create-integration-final.png)
+    ![Complete Integration Flow](images/create-integration-final.png)
 
 ## Task 6: Define Tracking Fields
 
@@ -214,24 +214,24 @@ Refresh your page after a few seconds.
 1. Select *Acme Customers Order Integration*,  Click on **...(Actions)** menu and Click on **Run**
 
 2. Configure the URI parameters:
-  - for *customer_id*, enter **1**
+      - for *customer_id*, enter **1**
 
 3. Click **Run** (in the upper right of the page).
 
 4. Look at the Response section to verify the Customer details and all the orders for the Customer. The response status is 200 OK
 
-![Test Integration Flow](images/run-integration-test.png)
+    ![Test Integration Flow](images/run-integration-test.png)
 
 5. Click the link which appears on top to track the instance.
 
-The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and **Instances**
+    The track instance page appears. The Integration state should be processing or successful.
+    OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and **Instances**
 
-6.  In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
+6. In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
 
-![Activity Stream](images/acme-invoke-activity-stream.png)
+    ![Activity Stream](images/acme-invoke-activity-stream.png)
 
-## Task 9: Congratulations 🎉
+## Task 9: Congratulations Ã°Å¸Å½â€°
 
 Congratulations on successfully completing the **Get Started with Rapid Adapter Builder** Live Lab! You've taken an important step in expanding your Oracle Integration skills by learning how to build custom adapters for applications exposing RESTful APIs.
 
@@ -264,4 +264,4 @@ Well done on completing this tutorial, and keep exploring the powerful features 
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

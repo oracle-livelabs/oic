@@ -97,7 +97,7 @@ You'll also explore how these tools can be discovered and used from external age
 
 ![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
 
-Estimated Time: 2 hours
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 

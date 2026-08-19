@@ -7,7 +7,7 @@ This tutorial introduces Oracle Integration Cloud (OIC) capabilities through a s
 Here is the high level architecture reference of the tutorial
 ![Usecase Architecture](images/architecture.png)
 
-Estimated Time: 3 hours 40 minutes
+Estimated Workshop Time: 3 hours 40 minutes
 
 [Introduction to Live Lab Usecase](youtube:yW3TEBWkFbg)
 
@@ -42,4 +42,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram (Oracle Integration, Product Management), Vijaya Vishwanath (Sr. Cloud Solution Engineer - Public Sector)
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

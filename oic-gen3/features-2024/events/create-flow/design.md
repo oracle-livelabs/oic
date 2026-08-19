@@ -109,7 +109,7 @@ You can create an integration that publishes an event. Running the publishing in
 
     You can please skip step1 if you are already on the edit project page.
 2. In the **Integrations** section, click ***Add*** to create an event.
-The Add integration panel opens.
+    The Add integration panel opens.
 3. On the **Add integration** dialog, click on ***Create***.
 4. On the **Create integration** dialog, click on ***Application***.
 5. In the **Create integration** dialog, enter the following information
@@ -138,7 +138,7 @@ The Add integration panel opens.
     * Select ***Add and review parameters for this endpoint*** checkbox
     * Click ***Continue***.
 4. From the **Request Parameters** page, in the **Specify Query Parameter section**, click ***Add***
-A new row appears.
+    A new row appears.
     * Enter ***patientId*** in the **Name** column and select ***string*** from the **Date Type** column
     * Click ***Add***, Enter ***fromDept*** in the **Name** column and select ***string*** from the **Date Type** column
     * Click ***Add***, Enter ***toDept*** in the **Name** column and select ***string*** from the **Date Type** column
@@ -149,7 +149,7 @@ A new row appears.
 ## Task 6: Publish the data to an event
 
 1. Hover over the outgoing arrow for the **PublishPatientData** activity (after first activity) and Click the ***+*** sign in the integration canvas.
-Search for the **Publish event** action and click on it. This invokes the Publish event configuration Wizard.
+    Search for the **Publish event** action and click on it. This invokes the Publish event configuration Wizard.
 2. Select the event which you have created in the previous tasks and click on ***Choose***
     ![publisheventaction](../images/publisheventaction.png)
 
@@ -243,7 +243,7 @@ You can create an integration that subscribes to published events. The subscribi
 5. Click ***Save***.
 6. Click on ***&lt; (Go back)*** button.
 7. Your project should look like the screenshot given below.
-![allintegrations-in-project](../images/allintegrations-in-project.png)
+    ![allintegrations-in-project](../images/allintegrations-in-project.png)
 
 ## Task 12: Congratulations
 
@@ -262,4 +262,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

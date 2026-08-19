@@ -292,7 +292,7 @@ You should see a confirmation in the Output Console.
 
 2. Log in to your Oracle Integration instance and check for the registered adapter. In the navigation pane, click Design, and then click Adapters. On the Adapters page, click the Search icon, type the name of your adapter in the **Search** field, and hit **Enter**.
 
-![Acme Custom Adapter Listed](images/oic-custom-adpater-show.png)
+    ![Acme Custom Adapter Listed](images/oic-custom-adpater-show.png)
 
 3. You'll see the adapter you published in the search results. Point to the adapter's row and click  **View** icon to view its details.
 

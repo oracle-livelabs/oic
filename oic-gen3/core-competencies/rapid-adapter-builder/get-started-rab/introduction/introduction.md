@@ -17,7 +17,7 @@ In this tutorial, you will use the Rapid Adapter Builder's Visual Studio Code ex
 
 By the end of this tutorial, you will have a custom ACME Order Management adapter published in your Oracle Integration instance, ready to be leveraged in integration flows for connecting to the ACME Order Management application.
 
-Estimated Time: 2 hours 15 minutes
+Estimated Workshop Time: 2 hours 15 minutes
 
 Watch the video below for a quick overview of Rapid Adapter Builder
 
@@ -61,4 +61,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Director Product Management, OIC & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026
