@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## Introduction
 
 You can create and select events for publishing and subscribing to in integrations in Projects in Oracle Integration. You define the events in JSON-formatted or XML schema files.
 This LiveLab provides an overview of projects and the life cycle of projects.

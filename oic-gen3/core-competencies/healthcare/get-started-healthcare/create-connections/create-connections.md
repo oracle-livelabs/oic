@@ -48,24 +48,24 @@ Runs directly in the connectivity agent to support connectivity to remote health
 
 3. In the **Create Connection** page provide below and click *Create*
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | HC RECEIVE HL7     |
-| Identifier         | Generated automatically       |
-| Role         | Trigger      |
-| Description  | Receive HL7 messages for processing |
-{: title="Create Connection"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | HC RECEIVE HL7     |
+    | Identifier         | Generated automatically       |
+    | Role         | Trigger      |
+    | Description  | Receive HL7 messages for processing |
+    {: title="Create Connection"}
 
 5. In the Connection Configuration page provide below information
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Listener Port         | 2100      |
-| Role         | Trigger      |
-| Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
-{: title="MLLP Trigger Connection Configuration"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Listener Port         | 2100      |
+    | Role         | Trigger      |
+    | Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
+    {: title="MLLP Trigger Connection Configuration"}
 
-![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
+    ![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
 
 6. Click *Save* and *Test* the connection. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
@@ -78,24 +78,24 @@ Create a connection using MLLP Adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | HC SEND HL7     |
-| Identifier         | Generated automatically       |
-| Role         | Invoke      |
-| Description  | Send HL7 messages to Pathology system |
-{: title="Create Connection"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | HC SEND HL7     |
+    | Identifier         | Generated automatically       |
+    | Role         | Invoke      |
+    | Description  | Send HL7 messages to Pathology system |
+    {: title="Create Connection"}
 
 5. In the Connection Configuration page provide below information
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Client IP         | 127.0.0.1   |
-| Client Port         | 2500      |
-| Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
-{: title="MLLP Invoke Connection Configuration"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Client IP         | 127.0.0.1   |
+    | Client Port         | 2500      |
+    | Connectivity Agent  | Select *Associate agent group* and the Select Agent Group configured in the previous section. Click *Use* |
+    {: title="MLLP Invoke Connection Configuration"}
 
-![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
+    ![Configure MLLP Trigger Connection](images/configure-connection-properties.png)
 
 6. Click *Save* and *Test* the connection. Exit the connection canvas by clicking the back button on the top left side of the screen.
 

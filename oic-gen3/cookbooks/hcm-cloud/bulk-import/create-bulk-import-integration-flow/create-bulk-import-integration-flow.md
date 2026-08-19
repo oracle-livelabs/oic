@@ -223,7 +223,7 @@ Stop | Stop | The end of the integration.
 4. Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
 5. In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter ***/upload/users/```<<your oic usernumber>>```***. Click *Next*.
-The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
+    The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
 6. Click *Next*. Review the summary and click *Finish*.
 
@@ -241,7 +241,7 @@ The Schema page appears. Select *No* to as we don't want to specify the structur
     The **Target** section shows the WriteFile hierarchy.
 
     This data mapping is a representation of the **Worker.dat** file.
-![Map Worker Data File](images/map-write-worker-data.png)
+    ![Map Worker Data File](images/map-write-worker-data.png)
 
 3. Click *Go back*
 
@@ -286,8 +286,8 @@ Refresh your page after few seconds.
 2. Click on *Run*
 
 3. Click the link which appears on the top to track the instance.
-  The track instance page appears. The Integration state should be processing or successful.
-  OR you can also track by clicking on *Observability* tab in your project and Select the *Instances* tab.
+    The track instance page appears. The Integration state should be processing or successful.
+    OR you can also track by clicking on *Observability* tab in your project and Select the *Instances* tab.
 
 4. Wait for your integration to complete.
 
@@ -363,7 +363,7 @@ You need Identity Domain Administrator or Application Administrator credentials 
     - Select *Assign Applications* for the ServiceAdministrator role
       ![Assign Roles to Application](images/client_creds_approle.png)
 
-**Generate Access Token from Postman**
+    **Generate Access Token from Postman**
 
 1. Validate client application and generate access token
     - Use the pre-req information (clientid,scret and scope) to generate the access token using this REST api in Postman
@@ -378,7 +378,7 @@ You need Identity Domain Administrator or Application Administrator credentials 
               ![Postman Body OAuth Token](images/postman-body-oauth-token.png)
         - Click Send and copy the access_token from the response body (ensure to copy only the data between quotes)
 
-**Invoke OIC3 Factory API using access token**
+    **Invoke OIC3 Factory API using access token**
 
 1. Open another tab in Postman and enter the factory REST API to Clone the Integration.
     Provide Verb as POST and endpoint: https://design.integration.&lt;region&gt;.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;

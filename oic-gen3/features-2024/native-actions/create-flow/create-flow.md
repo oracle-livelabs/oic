@@ -75,9 +75,9 @@ You will create a dynamic group and add policies to use functions and manage obj
     ALL {resource.type = 'fnfunc', resource.compartment.id = '<functions-compartment-ocid>'}
     </copy>
     ```
-TIP: Get the ocid of the functions compartment by navigating to Identity &gt; Compartments &gt; ll-native-actions. The first rule is required to group the OIC instance which matches the client id. The second rule groups the functions of a given compartment ocid.
+    TIP: Get the ocid of the functions compartment by navigating to Identity &gt; Compartments &gt; ll-native-actions. The first rule is required to group the OIC instance which matches the client id. The second rule groups the functions of a given compartment ocid.
 
-![Dynamic Group Rules](images/dynamic-group-rules.png)
+    ![Dynamic Group Rules](images/dynamic-group-rules.png)
 
 9. Open the navigation menu and click *Identity & Security*. Under Identity, click *Policies*.
 
@@ -120,16 +120,16 @@ Create a Project in OIC console which provides a single unified workspace for al
 
 3. In the **Create Project** dialog, enter the following information and click on *Create*:
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | OIC Native Actions     |
-| Identifier         | Generated automatically       |
-| Description  | This project is the workspace to create integrations to invoke OCI resources |
-{: title="Create Project"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | OIC Native Actions     |
+    | Identifier         | Generated automatically       |
+    | Description  | This project is the workspace to create integrations to invoke OCI resources |
+    {: title="Create Project"}
 
-![Create Project](images/create-project.png)
+    ![Create Project](images/create-project.png)
 
-***Create Integration Flow***
+    ***Create Integration Flow***
 
 1. In the *Integrations tile*, click *Add*, then *Create*
 
@@ -147,9 +147,9 @@ Create a Project in OIC console which provides a single unified workspace for al
 
     ![Create Integration](images/create-integration.png)
 
-***Assign Variables***
+    ***Assign Variables***
 
-Create 3 variables ObjectstoreNamespace, ObjectstoreSource, ObjectstoreTarget
+    Create 3 variables ObjectstoreNamespace, ObjectstoreSource, ObjectstoreTarget
 
 1. Click *+* icon next to the **Schedule** activity and Select *Assign* action from the action palette and name it as **AssignBucketVariables**
 
@@ -160,9 +160,9 @@ Create 3 variables ObjectstoreNamespace, ObjectstoreSource, ObjectstoreTarget
     ![Create Assign Variable](images/select-assign-action.png)
 
 
-**TIP**: To view your Object Storage namespace string, do the following:
+    **TIP**: To view your Object Storage namespace string, do the following:
 
-Select the Profile menu (Profile menu icon), which is on the upper-right side of the navigation bar at the top of the page, and then click Tenancy: <your_tenancy_name>. Your namespace string is listed under Object Storage Settings.
+    Select the Profile menu (Profile menu icon), which is on the upper-right side of the navigation bar at the top of the page, and then click Tenancy: <your_tenancy_name>. Your namespace string is listed under Object Storage Settings.
 
 3. Similarly, Create 2 more variables per below
 
@@ -174,7 +174,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![List of Assign Variables](images/list-of-os-variables.png)
 
-***List Files in object storage bucket (bucket-excel)***
+    ***List Files in object storage bucket (bucket-excel)***
 
 1. Click *+* icon next to the **AssignBucketVariables** activity and Select *File Server* action from the action palette.
 
@@ -193,7 +193,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-***Add for-each action***
+    ***Add for-each action***
 
 1. Click *+* icon next to the **listFSFiles** action and Select *For Each* action from the action palette.
 
@@ -205,7 +205,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     **Save** your integration.
 
-***Get Excel File***
+    ***Get Excel File***
 
 1. In the For Each scope click on *+* icon and add a **File Server** Native Action
 
@@ -240,7 +240,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Validate*. Click **&lt** icon to Navigate back to the Integration Flow
 
-***Transfer Excel File from File Server to Object Storage Bucket***
+    ***Transfer Excel File from File Server to Object Storage Bucket***
 
 1. **Add** a *OCI Object Storage* action after the **getExcelFile** activity.
 
@@ -275,7 +275,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Integration Flow Milestone After Object Storage](images/integration-flow-after-os-action.png)
 
-***Invoke OCI Function to transform excel file to csv***
+    ***Invoke OCI Function to transform excel file to csv***
 
 1. **Add** a *OCI Function* action after the **MoveFSExcelToOS** activity.
 
@@ -340,7 +340,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Mapping Invoke OCI Function](images/map-invoke-function.png)
 
-***Get Transformed CSV File***
+    ***Get Transformed CSV File***
 
 1. **Add** a *OCI Object Storage* action after the **invokeOCIFunction** activity.
 
@@ -372,7 +372,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Mapping Get CSV](images/map-getcsv.png)
 
-***Add Stage Action***
+    ***Add Stage Action***
 
 1. **Add** a *Stage File* action after the **getCSV** activity.
 
@@ -408,7 +408,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-***Add logger Action***
+    ***Add logger Action***
 
 1. **Add** a *logger* action after the **ReadCSVFile** activity.
 
@@ -416,7 +416,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Configure Log Message](images/config-log-message.png)
 
-***Define Business Identifiers & Activate the Integration Flow***
+    ***Define Business Identifiers & Activate the Integration Flow***
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 

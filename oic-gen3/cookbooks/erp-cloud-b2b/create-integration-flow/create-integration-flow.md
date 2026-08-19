@@ -338,7 +338,7 @@ Understand the Identifiers that we will use.
 {: title="B2B Identifiers"}
 
 4. Click *Save* after every addition.  
-    ![B2B Identifiers](images/tpm-tp-b2bIdentifiers-1.png)
+    ![B2B Identifiers](images/tpm-tp-b2b-identifiers-1.png)
 
 *Define Transports*
 
@@ -591,27 +591,27 @@ Access your ERP Cloud environment.
 
 4. In the **Overview** section, click the ***Tasks*** button on the right.
     ![Tasks in Overview section](images/overview-tasks.png)
-This opens the Tasks menu.
+    This opens the Tasks menu.
 
 5. Under the **Orders** section, select ***Create Order***.
     ![Create Order](images/create-order-action.png)
-The **Create Order** dialog is displayed.
+    The **Create Order** dialog is displayed.
 
 6. Select **Requisitioning BU** and **Procurement BU** as *US1 Business Unit* and Enter *Dell Inc.* in the **Supplier** field and select the corresponding supplier in the dropdown. Rest of the fields should be populated automatically.
     ![Create PO Initial Screen](images/create-po-initial-screen.png)
 
-> **Tip:** You can also search for valid suppliers using the **Search** icon.
+    > **Tip:** You can also search for valid suppliers using the **Search** icon.
 
 7. Click ***Create***.
-The **Edit Document (Purchase Order)** page is displayed. In the **Additional Information** section provide value *null* for **Letter of Credit ID**
+    The **Edit Document (Purchase Order)** page is displayed. In the **Additional Information** section provide value *null* for **Letter of Credit ID**
 
 8. In the **Lines** Tab, click ***+*** to add a Purchase Order line row.
     ![Add PO Line](images/add-po-line.png)
 
 9. Enter values in the below fields (sample values provided) and click on ***Save***
-  | **Field**        | **Value**          |       
-  | --- | ----------- |
-  | Type | *Goods* |
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Type | *Goods* |
   | Description | Enter the description value which you have entered as a filter expression at the time of creating an  integration flow. For example: *Lan Cable B2B&lt;your-initials&gt;*|
   | Category Name | Search for *Computer Supplies* and then select it |
   | Quantity | Enter a valid number, eg. *1* |

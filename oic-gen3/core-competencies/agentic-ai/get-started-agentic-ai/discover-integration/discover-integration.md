@@ -74,9 +74,9 @@ When you enable MCP for a project, the project becomes an MCP server. Any integr
 1. In the Project details panel, locate **Enable MCP server** checkbox
 2. Click to **Enable MCP server**
 3. Click **Save changes**
-   - MCP server URL is created when you save
+    - MCP server URL is created when you save
 
-![Enable MCP In Project](images/enable-mcp-server.png)
+    ![Enable MCP In Project](images/enable-mcp-server.png)
 
 ### Step 3: Retrieve MCP Server URL
 
@@ -84,10 +84,10 @@ When you enable MCP for a project, the project becomes an MCP server. Any integr
 2. Locate the **MCP server URL**
 3. Copy the complete URL - it follows this format:
 
-`https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
+    `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
-**Example:**
-```
+    **Example:**
+    ```
 https://mycompany.integration.us-phoenix-1.ocp.oraclecloud.com/mcp-server/v1/projects/PatientCareUtilizationReview/mcp
 ```
 
@@ -139,11 +139,11 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 ### Step 3: Configure MCP Server Connection
 
 1. Choose the server's communication method:
-   - Select **HTTP**
+    - Select **HTTP**
 
 2. Enter the MCP Server URL:
 
-   `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
+    `https://<oic-instance-host>.integration.<region>.ocp.oraclecloud.com/mcp-server/v1/projects/<project-identifier>/mcp`
 
 ### Step 4: Configure Authorization
 
@@ -178,20 +178,20 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 1. Click **Connect**. The status at the bottom shows as **Connected**. This indicates Postman is now connected with OIC MCP Server
 2. Select the **Message** tab. Postman connects to the OIC MCP server and retrieves available methods
 3. The connection loads the five healthcare tools:
-   - Fetch Patient Record
-   - Match Clinical Guideline
-   - Check Guideline Validity
-   - Escalation Decision
-   - Recommend Care Plan
+    - Fetch Patient Record
+    - Match Clinical Guideline
+    - Check Guideline Validity
+    - Escalation Decision
+    - Recommend Care Plan
 
-![POSTMAN OIC Tools](images/postman-oic-tools.png)
+    ![POSTMAN OIC Tools](images/postman-oic-tools.png)
 
 ### Step 6: Create MCP Request - Fetch Patient Record
 
 1. In the Methods list, select **FETCH\_PATIENT\_RECORD**
 2. Define its arguments:
 
-| Argument | Value | Type |
+    | Argument | Value | Type |
 |----------|-------|------|
 | patientId | P101 | string |
 {: title="Fetch Patient Record Request Parameters"}

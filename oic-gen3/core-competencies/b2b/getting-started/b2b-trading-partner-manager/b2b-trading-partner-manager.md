@@ -134,14 +134,14 @@ This lab assumes you have:
       | Output File Name             | Order-%SEQ%.edi              |
       | Integration Name Prefix      | Dell                         |
 
-> **Note** : If you get an error then please cross check your FTP connection Role, it should be *Invoke* only.  
+    > **Note** : If you get an error then please cross check your FTP connection Role, it should be *Invoke* only.
 
 4. B2B Integrations
 
-Two Integrations are created automatically when a Transport is created. These Integrations are the heart of the Transport for its runtime functioning. The two Integrations process the runtime messages that pass through the Transport.
+    Two Integrations are created automatically when a Transport is created. These Integrations are the heart of the Transport for its runtime functioning. The two Integrations process the runtime messages that pass through the Transport.
 
-* B2B Integration for receiving messages (Dell FTP Receive).
-* B2B Integration for sending messages (Dell FTP Send).
+    * B2B Integration for receiving messages (Dell FTP Receive).
+    * B2B Integration for sending messages (Dell FTP Send).
 
 1. Deploy the Transport Integrations.
 

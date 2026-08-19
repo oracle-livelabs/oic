@@ -115,10 +115,10 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 | Currency Conversion Rate | CUR03 |
 | Line Items | Loop-PO1 |
 | Line Items > SKU | PO101 |
-| Line Items > Quantity | PO102 |
-| Line Items > Unit Of Measure | PO103 |
-| Line Items > Price | PO104 |
-| Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
+    | Line Items > Quantity | PO102 |
+    | Line Items > Unit Of Measure | PO103 |
+    | Line Items > Price | PO104 |
+    | Trading Partner Id | Application Partner ID (This element is there under Translate Input Node) |
 
 4. Click on ***Validate***
 5. Click ***&lt; (Go back)***
@@ -159,10 +159,10 @@ Configure data mappings for the EDI-Generate action and Receive-App-Msg action i
 
 1. Edit ***Map Receive-App-Msg*** activity.
 2. From Source, expand **EDI-Generate Response > executeResponse> TranslateOutput** and From Target, expand **Purchase Order Result** and map the following elements per the table given below.
-| Source | Target |
-| --- | --- |
-| Translation Status | Translation Status |
-| Validation Error Report | Validation Error Report |
+    | Source | Target |
+    | --- | --- |
+    | Translation Status | Translation Status |
+    | Validation Error Report | Validation Error Report |
 
 3. Click on ***Validate*** and Click ***&lt; (Go back)*** and Click ***Save*** to persist changes.
 
@@ -205,27 +205,27 @@ This feature will very much useful when we have more than one trading partner. W
 In this exercise, you would be creating a new trading partner(US Gas and Electric) and pre-requisites required for integrating with this trading partner.
 1. Create two folders **B2BTPUSGEIn** and **B2BTPUSGEOut** under B2BWorkshop folder in the File Server and provide permissions.
 
-Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/tenancy/?lab=setup#Task1:ConfigureFileServer)
+    Follow the instructions from Step5 to Step9 given under [Setup the Environment](../workshops/tenancy/?lab=setup#Task1:ConfigureFileServer)
 
 2. Create a trading partner and corresponding agreements with the details given below. You can refer [Lab: B2B Trading Partner Manager-Task2 and Task3](../workshops/tenancy/?lab=b2b-trading-partner-manager)
 
-| Identifier Name | Identifier Value |
-| --- | --- |
-| Trading Partner Name | US Gas and Electric |
-|Email|**Use your email id**|
-|EDI Interchange ID Qualifier|SS|
-|EDI Interchange ID|US Gas and Electric|
-|EDI Group ID|02|
-|EDI Group ID Qualifier|US Gas and Electric|
-|Application Partner ID|US Gas and Electric|
-|Input Directory|/B2BTPUSGEIn|
-|Output Directory|/B2BTPUSGEOut|
-|Output File Name|Order-%SEQ%.edi|
-|Integration name prefix|USGE|
+    | Identifier Name | Identifier Value |
+    | --- | --- |
+    | Trading Partner Name | US Gas and Electric |
+    |Email|**Use your email id**|
+    |EDI Interchange ID Qualifier|SS|
+    |EDI Interchange ID|US Gas and Electric|
+    |EDI Group ID|02|
+    |EDI Group ID Qualifier|US Gas and Electric|
+    |Application Partner ID|US Gas and Electric|
+    |Input Directory|/B2BTPUSGEIn|
+    |Output Directory|/B2BTPUSGEOut|
+    |Output File Name|Order-%SEQ%.edi|
+    |Integration name prefix|USGE|
 3. ***Deploy*** the **Transport and Agreements** if not deployed.
 4. Copy&Paste the payload from **USGEPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**)
 5. Go back to Integrations and test using the new trading partner as you did for DellInc
-[Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
+    [Refer previous task "Test the integration"](../workshops/tenancy/?lab=b2b-outbound-x12-ftp#Task9:RuntheIntegration)
 6. Monitor the trading partner and backend integrations.
 
 You may now **proceed to the next lab**.

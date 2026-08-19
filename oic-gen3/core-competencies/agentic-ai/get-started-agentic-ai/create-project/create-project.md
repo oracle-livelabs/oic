@@ -76,9 +76,9 @@ All the connections are in draft state. We will configure the connections used b
 
 3. Click on **Test** and *Save* the connection.
 
-**FTP Adapter Connection Configuration**
+    **FTP Adapter Connection Configuration**
 
-Keep the following information handy. Note: Refer File Server Setup section
+    Keep the following information handy. Note: Refer File Server Setup section
     - File Server IP Address.
     - File Server Port.
     - Your Oracle Integration username.
@@ -102,7 +102,7 @@ Keep the following information handy. Note: Refer File Server Setup section
 
 4. Click on **Test** and *Save* the connection.
 
-**OpenAI LLM Adapter Connection Configuration**
+    **OpenAI LLM Adapter Connection Configuration**
 
 1. Edit the open AI LLM Adapter Connection.
 
@@ -125,7 +125,7 @@ Verify that all the connections are in Configured state.
 
 2. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
-Note: The file server path that you would be using below is just a indicative. You may use any directory location of your choice that was already setup in previous lab and you should have access to it.
+    Note: The file server path that you would be using below is just a indicative. You may use any directory location of your choice that was already setup in previous lab and you should have access to it.
 
 3. There are 3 files in the **Data Source** folder. Upload the *care\_recommendations.json*, *medical\_guidelines.json*, *patient\_records.csv* files to the ftp directory ***<your configured file server path>*** for example: /upload/users/KK/in/patient-utilization-review
 
