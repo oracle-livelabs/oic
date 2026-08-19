@@ -148,7 +148,7 @@ The Adapter Endpoint Configuration Wizard opens
    |     Repeating Element       |     Drag and drop ‘message’ repeating element from the path execute   > request-wrapper    |
    |     Current Element Name    |     B2B-Doc-Message |
 
-   ![For-Each-Activity-1](images/foreach-1.png)
+    ![For-Each-Activity-1](images/foreach-1.png)
 
 ## Task 4: Configure Current Message as Tracking Variable
 

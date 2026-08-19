@@ -19,11 +19,11 @@ The diagram illustrates the high-level flow of an integration process involving 
 
 ### Components and Flow Description:
 
-1.  **Source Systems (Left Panel):**
+1. **Source Systems (Left Panel):**
       - This panel shows various enterprise applications and on-premises/legacy systems like Workday, Salesforce, SAP SuccessFactors, Oracle E-Business Suite, PeopleSoft, Siebel, SAP, and mainframe systems.
       - These systems can either send data to or receive data from Oracle Integration via an SFTP client or other integration mechanisms.
 
-2.  **Oracle Integration (Middle Panel):**
+2. **Oracle Integration (Middle Panel):**
       - **Flow 1:**
         - **Initiate Bulk Export:** Oracle Integration initiates a bulk data export request to ERP Cloud.
         - This is a trigger-based flow, typically started by a scheduled process or an event from the source systems.
@@ -32,7 +32,7 @@ The diagram illustrates the high-level flow of an integration process involving 
         - **Enrich/Transform:** The data extracted from UCM is enriched or transformed according to business requirements.
         - **Write Final Formatted File:** The enriched or transformed data is written into a final formatted file, which is then ready for use or for transfer to the target systems.
 
-3.  **ERP Cloud (Right Panel):**
+3. **ERP Cloud (Right Panel):**
       - **Export Bulk Data Process:**
         - The bulk export process in ERP Cloud uses Out of the box Scheduled Jobs which is backed by Business Intelligence Publisher (BIP) report to generate data extracts.
         - The generated data is uploaded to UCM, ensuring secure storage and retrieval.

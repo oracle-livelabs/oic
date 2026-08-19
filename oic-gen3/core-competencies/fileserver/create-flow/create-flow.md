@@ -196,7 +196,7 @@ Add the Oracle ATP Adapter invoke to the integration canvas.
 
     Map all the elements from source to target, can find the image given below for the reference
 
-   ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
+    ![Completed FTP to ATP Mapping](images/mapper-completed-ftp-adp.png)
 
 3. Click **Validate**, then wait for the confirmation message.
 4. Click **&lt; (Go back)**

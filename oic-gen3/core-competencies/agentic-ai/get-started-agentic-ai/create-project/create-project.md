@@ -29,23 +29,23 @@ This lab assumes you have:
 
 ## Task 1: Import Project
 
-1.  Login into Oracle Integration console.
+1. Login into Oracle Integration console.
 
-2.  Navigate to the Projects Section. If you don't see the Projects option, you may need to expand the menu by clicking the hamburger icon (☰) at the top left.
+2. Navigate to the Projects Section. If you don't see the Projects option, you may need to expand the menu by clicking the hamburger icon (☰) at the top left.
 
-3.  On the Projects page, look for an **Add** button in the top-right corner of the page. Click *Add* and Select *Import* action
+3. On the Projects page, look for an **Add** button in the top-right corner of the page. Click *Add* and Select *Import* action
 
     ![Start New Project](images/start-new-project.png)
 
-4.  Locate the OIC project file **Patient\_Utilization\_Review.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
+4. Locate the OIC project file **Patient\_Utilization\_Review.car** on your local computer. Refer the Prerequisites section above to download the artifacts. Drag the file and drop it into the upload area in the dialog
 
-5.  Click on *Import*.
+5. Click on *Import*.
 
-6.  Upon successful import, you should see Project Name: **Patient Care Utilization Review**
+6. Upon successful import, you should see Project Name: **Patient Care Utilization Review**
 
 ## Task 2: Explore the Imported Project
 
-1.  Once inside the project, you should see the Project Overview page showing:
+1. Once inside the project, you should see the Project Overview page showing:
 
     - Project Name: Patient Utilization Review
     - Integrations section with the five integrations:
@@ -70,9 +70,9 @@ All the connections are in draft state. We will configure the connections used b
 
 **REST Connection Configuration**
 
-1.  Edit the REST Connection.
+1. Edit the REST Connection.
 
-2.  Configure the Security Policy as ** OAuth 2.0 Or Basic Authentication**
+2. Configure the Security Policy as ** OAuth 2.0 Or Basic Authentication**
 
 3. Click on **Test** and *Save* the connection.
 
@@ -84,9 +84,9 @@ Keep the following information handy. Note: Refer File Server Setup section
     - Your Oracle Integration username.
     - Your Oracle Integration password.
 
-1.  Edit the FTP Adapter Connection.
+1. Edit the FTP Adapter Connection.
 
-2.  Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.  
+2. Configure the below properties in the connection properties page. Enter the following configurations you previously gathered from the File Server Settings page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -104,9 +104,9 @@ Keep the following information handy. Note: Refer File Server Setup section
 
 **OpenAI LLM Adapter Connection Configuration**
 
-1.  Edit the open AI LLM Adapter Connection.
+1. Edit the open AI LLM Adapter Connection.
 
-2.  Configure the below properties in the connection properties page.
+2. Configure the below properties in the connection properties page.
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -121,13 +121,13 @@ Verify that all the connections are in Configured state.
 
 ## Task 4: Configure FTP Adapter in the Imported Integrations
 
-1.  [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) file and unzip if not already done
+1. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/pPTpr7j-uEqeREEidVSaOBtI8m8hafxYqXJpUiX9QmyUJ_3wYFwx_2yXc9JNhxGj/n/oicpm/b/oiclivelabs/o/oic3/core-competency/agentic-ai/lab_artifacts.zip) file and unzip if not already done
 
-2.  Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
+2. Using an FTP Client of your choice, connect to FTP Server with the information from [File Server Setup](?lab=setup)
 
 Note: The file server path that you would be using below is just a indicative. You may use any directory location of your choice that was already setup in previous lab and you should have access to it.
 
-3.  There are 3 files in the **Data Source** folder. Upload the *care\_recommendations.json*, *medical\_guidelines.json*, *patient\_records.csv* files to the ftp directory ***<your configured file server path>*** for example: /upload/users/KK/in/patient-utilization-review
+3. There are 3 files in the **Data Source** folder. Upload the *care\_recommendations.json*, *medical\_guidelines.json*, *patient\_records.csv* files to the ftp directory ***<your configured file server path>*** for example: /upload/users/KK/in/patient-utilization-review
 
 **Edit the Fetch Patient Record Integration**
 
@@ -156,19 +156,19 @@ c.  Complete the wizard by leaving the rest of the values as defaults and click 
 
 ## Task 5: Activate Integrations and Decision
 
-1.  In the **Patient Care Utilization Review** project, Design View select the **Decision** tab. You should see **Escalation Rules** decision listed.
+1. In the **Patient Care Utilization Review** project, Design View select the **Decision** tab. You should see **Escalation Rules** decision listed.
 
-2.  Click the (...) of the Escalation Rules decision, and Select *Activate* from the Action list.
+2. Click the (...) of the Escalation Rules decision, and Select *Activate* from the Action list.
     ![Activate Decision](images/activate-decision.png)
 
-3.  Navigate to the **Integrations** tab.
+3. Navigate to the **Integrations** tab.
 
-4.  Click the (...) of the **Fetch Patient Record** integration, and Select *Activate* from the Action list. You can also use the activate icon to activate the integration
+4. Click the (...) of the **Fetch Patient Record** integration, and Select *Activate* from the Action list. You can also use the activate icon to activate the integration
     ![Activate Fetch Patient Record](images/activate-fetch-patient-record.png)
 
-5.  In the **Activate Integration** window select *Debug* and Click on *Activate*. The status changes to **Activate**.
+5. In the **Activate Integration** window select *Debug* and Click on *Activate*. The status changes to **Activate**.
 
-6.  Similarly, activate the other integration flows.
+6. Similarly, activate the other integration flows.
     - Match Clinical Guideline
     - Check Guideline Validity
     - Escalation Decision

@@ -373,10 +373,10 @@ You will notice two Integrations are created automatically when a Transport is c
 
 Deploy the Transport Integrations.
 
-1.  Click the *Actions* menu on the **FTP** Transport to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment.  
+1. Click the *Actions* menu on the **FTP** Transport to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment.
 ![Deploy Transport Integrations](images/tpm-tp-transport-1.png)
 
-2.  Starting at the Oracle Integration **Home** page, select *Design*, then *Integrations* again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
+2. Starting at the Oracle Integration **Home** page, select *Design*, then *Integrations* again from the left Navigation pane and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.
 ![Dell FTP Transport Integrations](images/tpm-tp-transport-2.png)
 
 ##  Task 5: Create Agreements
@@ -385,11 +385,11 @@ This section describes creating and managing Agreements. You define one or more 
 
 *Define Outbound Agreement*
 
-1.  Starting at the Oracle Integration **Home** page, select *B2B*, then *Trading Partners*.
+1. Starting at the Oracle Integration **Home** page, select *B2B*, then *Trading Partners*.
 
-2.  Select the *Dell Inc* Trading Partner you created, then click *Transports & Agreements*.
+2. Select the *Dell Inc* Trading Partner you created, then click *Transports & Agreements*.
 
-3.  In the **Outbound Agreements** section, click *+* to add a new Agreement. Enter the details as per the below and click *Add*.  
+3. In the **Outbound Agreements** section, click *+* to add a new Agreement. Enter the details as per the below and click *Add*.
 
 | Field                              | Value                       |
 |------------------------------------|-----------------------------|
@@ -404,7 +404,7 @@ This section describes creating and managing Agreements. You define one or more 
 
 ![Outbound Agreement](images/tpm-tp-agreement-out-1.png)
 
-4.  Click the *Action* menu on the **OutAgreement** Outbound Agreement to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment. Exit the Dell Inc Trading Partner page.
+4. Click the *Action* menu on the **OutAgreement** Outbound Agreement to view available actions. Select *Deploy*, then *Deploy* again to confirm the deployment. Exit the Dell Inc Trading Partner page.
 
 Note: Deploy Transport and Transport Agreements. You can deploy in any sequence and if you modify anything, you can just deploy the corresponding section. For example, if you modify Outbound Transport Agreement then you can deploy (or redeploy) only Outbound Transport Agreement.
 
@@ -465,7 +465,7 @@ Add ERP PO Event trigger to the empty integration canvas.
 
 ##  Task 8: Construct 850 EDI Document and send to Trading Partner
 
-1.  On the designer after the **POEvent** element click on *+* sign. A list of actions and invokes are available for adding to your integration is displayed. Under the actions Select *B2B* action. The **Configure B2B Action** wizard opens
+1. On the designer after the **POEvent** element click on *+* sign. A list of actions and invokes are available for adding to your integration is displayed. Under the actions Select *B2B* action. The **Configure B2B Action** wizard opens
     - On the **Basic Info** page, enter the **name** per the value given below for the action and select a mode as *B2B Trading Partner mode*, and click *Continue*
 
     ```
@@ -480,23 +480,23 @@ Add ERP PO Event trigger to the empty integration canvas.
     Note that the corresponding mapping element is automatically added to the integration flow
     ![Integration Flow B2B](images/b2b-outbound8.png)
 
-2.  On the designer canvas, hover your cursor after the *B2B* activity and click on *+* sign. Select *Parallel action* from **Actions**. A Parallel action is added to the canvas.
+2. On the designer canvas, hover your cursor after the *B2B* activity and click on *+* sign. Select *Parallel action* from **Actions**. A Parallel action is added to the canvas.
 
   **Knowledge Point:** The Parallel action in OIC allows you to define branches to run two or more actions in parallel. This can be useful when you need to perform several time-consuming and independent tasks at the same time. For example, you could use a Parallel action to:
     - Subscribe to an event from a source system and then send the event to multiple downstream systems in parallel.
     - Process a batch of records in parallel, using different processing logic for each record.
     - Invoke multiple web services in parallel, to improve performance.
 
-3.  *Edit* **Branch 1**. Provide a name **Send PO to Supplier Trading Partner**. Similarly, name the **Branch 2** as **Sync downstream app**.
+3. *Edit* **Branch 1**. Provide a name **Send PO to Supplier Trading Partner**. Similarly, name the **Branch 2** as **Sync downstream app**.
 
-4.  Select the  *...* on **B2B** activity and Click on *Cut*. Notice the activity is highlighted with dotted line graphic. Click on *+* sign after **Branch 1** and select *Paste*.
+4. Select the  *...* on **B2B** activity and Click on *Cut*. Notice the activity is highlighted with dotted line graphic. Click on *+* sign after **Branch 1** and select *Paste*.
     ![Cut paste B2B activity](images/b2b-outbound9.png)
     Similarly select *Cut* action in **Map: EDI-Generate** activity and place after **Branch 1** element.
     ![Cut paste B2B Map activity](images/b2b-outbound10.png)
     Save your integration flow.
     You can easily cut and paste activities to redesign your integration flow logic.
 
-5.  Configure data mappings for the EDI-Generate action and PO event action in order to successfully parse the incoming XML message and translate it to EDI message.
+5. Configure data mappings for the EDI-Generate action and PO event action in order to successfully parse the incoming XML message and translate it to EDI message.
 - Click the *Map to EDI-Generate* activity and select *Edit*
 - From Source, expand the *POEvent Request* element. On the Target side, expand the *EDI-Generate Request* > *TranslateInput* > *Edi XML Document* > *Transaction Data* > *BEG: Beginning Segment for Purchase Order*. **Map** all the mandatory elements per below. Some values provided in the double quotes are hardcoded as required for the usecase but in real world scenario these values will need to be derived dynamically.
 
@@ -566,10 +566,10 @@ Congratulations! You have reached a significant milestone in this design. You ma
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
 2. Click on the *(I) Business Identifiers* menu on the top right.
-   ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
+    ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
 3. From the **Source** section, expand *getPurchaseOrderResponse* &gt; *result*, click on 2nd sequence, expand *Value*. Drag the *PO Header Id* and *Order Number*  fields to the right side section:
-   ![Assign Business Identifiers](images/assign-business-identifiers.png)
+    ![Assign Business Identifiers](images/assign-business-identifiers.png)
 
 4. Click on the *(I) Business Identifiers* menu on the top right and Click *Save* and Click on *&lt;* *(Go back)* button.
 
@@ -590,11 +590,11 @@ Access your ERP Cloud environment.
 3. Click *Purchase Orders*.
 
 4. In the **Overview** section, click the ***Tasks*** button on the right.
-   ![Tasks in Overview section](images/overview-tasks.png)
+    ![Tasks in Overview section](images/overview-tasks.png)
 This opens the Tasks menu.
 
 5. Under the **Orders** section, select ***Create Order***.
-   ![Create Order](images/create-order-action.png)
+    ![Create Order](images/create-order-action.png)
 The **Create Order** dialog is displayed.
 
 6. Select **Requisitioning BU** and **Procurement BU** as *US1 Business Unit* and Enter *Dell Inc.* in the **Supplier** field and select the corresponding supplier in the dropdown. Rest of the fields should be populated automatically.
@@ -606,7 +606,7 @@ The **Create Order** dialog is displayed.
 The **Edit Document (Purchase Order)** page is displayed. In the **Additional Information** section provide value *null* for **Letter of Credit ID**
 
 8. In the **Lines** Tab, click ***+*** to add a Purchase Order line row.
-   ![Add PO Line](images/add-po-line.png)
+    ![Add PO Line](images/add-po-line.png)
 
 9. Enter values in the below fields (sample values provided) and click on ***Save***
   | **Field**        | **Value**          |       
@@ -643,26 +643,26 @@ After the PO is submitted, the initial status becomes **Pending Approval**. The 
 
 Use the Oracle Integration dashboard to see the data flow resulting from the create Purchase Order event in ERP Cloud.
 
-1.  In the Integration navigation pane, Go back to the *Home* page &gt; click on *Observability* &gt; *Instances*
+1. In the Integration navigation pane, Go back to the *Home* page &gt; click on *Observability* &gt; *Instances*
 
-2.  Find the corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
+2. Find the corresponding Integration Instance, by matching the *PO Header Id* or *Order Number* from the Purchase Order in ERP Cloud. This should be under the columns *Primary Identifier* or *Business Identifiers*.
 
 3. Click on your *POHeaderId* link to open the corresponding integration instance.
 The flow ran successfully if it is displayed with a green line.
 ![Partially Completed integration flow](images/milestone1-completed-integration-flow.png)
 
-4.  In the Activity Stream window, click on the different *Message* links to review the flow of request and response messages.
+4. In the Activity Stream window, click on the different *Message* links to review the flow of request and response messages.
 
-5.  Click *&lt; (Go back)* button after reviewing the Activity Stream.
+5. Click *&lt; (Go back)* button after reviewing the Activity Stream.
 
-6.  Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
+6. Navigate to **Observability > B2B Tracking** page. You should see Business Messages under the Business Messages Tab for your specific Trading Partner.
 
-7.  Click on the *View* icon and inspect **Message Logs, Payload**
+7. Click on the *View* icon and inspect **Message Logs, Payload**
 
-8.  Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
+8. Similarly, Navigate to **Wire Messages** tab and inspect the Payloads. Expand the unpacked payload and observe the EDI message which is constructed.
 ![Wire Messages](images/observability-wire-messages.png)
 
-9.  (Optional) If you have FTP Client installed on your machine, you can login using the FTP details that you have noted down in the previous lab and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
+9. (Optional) If you have FTP Client installed on your machine, you can login using the FTP details that you have noted down in the previous lab and cross check your EDI file created under folder **/upload/users/B2BTPDELLOut**
 
     Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
 
@@ -687,14 +687,14 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 - Create an event publishing integration
 - Create an event subscription integration
 
-1.  Navigate to the **Integrations** page. By selecting the *...* next to your **LL ERPPO BACKEND B2B** integration. From the list of actions select *Create New Version*. Leave the defaults and Click on *Create*. This will create a minor version change of the integration.
+1. Navigate to the **Integrations** page. By selecting the *...* next to your **LL ERPPO BACKEND B2B** integration. From the list of actions select *Create New Version*. Leave the defaults and Click on *Create*. This will create a minor version change of the integration.
 
-2.  *Edit* the new version of Integration. In **Branch 2**, Click on *+* sign next to Logger activity and add an Action *Publish Event*.
+2. *Edit* the new version of Integration. In **Branch 2**, Click on *+* sign next to Logger activity and add an Action *Publish Event*.
 ![Add Publish Event](images/action-publish-event.png)
 
-3.  Click on **Define new event**. Provide a name **PublishPODetails**. Select *Continue*
+3. Click on **Define new event**. Provide a name **PublishPODetails**. Select *Continue*
 
-4.  In the **Define Event Structure** page paste the below JSON and click *Create* and *Finish* the wizard
+4. In the **Define Event Structure** page paste the below JSON and click *Create* and *Finish* the wizard
 ```
 <copy>
 {
@@ -709,7 +709,7 @@ In the upcoming tasks, you will design extension logic to synchronize the purcha
 }
 </copy>
 ```
-5.  *Edit* the  **Map PUBLISHPODETAILS** activity and define mapping per below.
+5. *Edit* the  **Map PUBLISHPODETAILS** activity and define mapping per below.
 Expand the *Source* node:
 **POEvent Request > Get Purchase Order Response > Result > 2nd <sequence> > Value**
 
@@ -731,18 +731,18 @@ Expand the *Target* node:
 
 *Validate* and *Save* your Integration.
 
-6.  *Activate* your Integration and select tracing level as *Debug*. Notice that earlier version is automatically deactivated, since both the Integrations have same Major version.
+6. *Activate* your Integration and select tracing level as *Debug*. Notice that earlier version is automatically deactivated, since both the Integrations have same Major version.
 
 ## Task 14: Create Subscribe Event Integration
 
-1.  On **Integrations** page click on *Create*.
+1. On **Integrations** page click on *Create*.
 
-2.  In the **Create integration**page select the design pattern *Event* and provide name *Subscribe PO Event Details*. Click on *Create*
+2. In the **Create integration**page select the design pattern *Event* and provide name *Subscribe PO Event Details*. Click on *Create*
 
-3.  In the integration canvas **Choose Event** page select the publisher Event and select *Choose* and *Finish*. Save your integration.
+3. In the integration canvas **Choose Event** page select the publisher Event and select *Choose* and *Finish*. Save your integration.
 ![Subscribe to Publisher Event](images/subscribe-flow-pub-event-choose.png)
 
-4.  Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From the list of **Invoke** connections choose *Visual Builder*
+4. Hover cursor next to **Subscribe to event** activity and Click on *+* sign. From the list of **Invoke** connections choose *Visual Builder*
 - In the **Basic Info** page, configure the endpoint per below and click *Next*
 
 | **Field Name** | **Value** |
@@ -754,7 +754,7 @@ Expand the *Target* node:
 | Configure this endpoint to receive the response | Select the check box |
 {: title="Visual Builder Endpoint Details"}
 
-5.  On the **Request** page configure the following values:
+5. On the **Request** page configure the following values:
 - From the **Select the request payload format** list, select JSON Sample.
 - *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
 - Enter the following JSON Sample and click *OK*
@@ -772,7 +772,7 @@ Expand the *Target* node:
 }
 </copy>
 ```
-6.  On the **Response** page, configure the following values:
+6. On the **Response** page, configure the following values:
 - From the **Select the response payload format** list, select JSON Sample.
 - *Click* the &lt;&lt;&lt;inline&gt;&gt;&gt; link
 - Enter the following JSON Sample and click *OK*
@@ -797,13 +797,13 @@ Expand the *Target* node:
 </copy>
 ```
 
-7.  Click *Next* and finish the wizard.
+7. Click *Next* and finish the wizard.
 
-8.  Define the data mapping between Source (PUBLISHPODETAILS) AND Target (syncPO Request). All the mappings are self explanatory and one to one mapping per below.
+8. Define the data mapping between Source (PUBLISHPODETAILS) AND Target (syncPO Request). All the mappings are self explanatory and one to one mapping per below.
 ![PublishPO To SyncPO mapping](images/publishpo-to-syncpo-mapping.png)
    *Validate* the mapping and *Save* your Integration flow.
 
-9.  Define Business Identifiers **poHeaderId** and **orderNumber**
+9. Define Business Identifiers **poHeaderId** and **orderNumber**
 
 10. *Save* and *Activate* your Integration Flow.
 
@@ -816,7 +816,7 @@ Expand the *Target* node:
 3. Click *Purchase Orders*.
 
 4. In the **Overview** section, click the ***Tasks*** button on the right.
-   ![Tasks in Overview section](images/overview-tasks.png)
+    ![Tasks in Overview section](images/overview-tasks.png)
 This opens the Tasks menu.
 
 5. Under the **Orders** section, select ***Manage Order***.

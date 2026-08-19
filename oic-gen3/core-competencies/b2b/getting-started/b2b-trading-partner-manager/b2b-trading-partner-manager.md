@@ -146,7 +146,7 @@ Two Integrations are created automatically when a Transport is created. These In
 1. Deploy the Transport Integrations.
 
   - Click the ***Action*** menu on the **FTP** Transport to view available actions. Select ***Deploy***, then ***Deploy*** again to confirm the deployment.  
-  ![Deploy Transport Integrations](images\tpm-tp-transport-1.png)
+    ![Deploy Transport Integrations](images\tpm-tp-transport-1.png)
   - Click on *Go back*, Go to *Projects*, select the *Project* you have created,  click on ***Integration*** tab and note the activated **Dell FTP Receive** and **Dell FTP Send** integrations.  
 
 ## Task 3: Create Agreements

@@ -44,7 +44,7 @@ Runs directly in the connectivity agent to support connectivity to remote health
 
 1. In the **Project** page, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
+2. From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -74,7 +74,7 @@ Create a connection using MLLP Adapter.
 
 1. In the **Project** page, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
+2. From the List of Adapters, search for **MLLP** and Select *MLLP* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -104,7 +104,7 @@ Create a connection using REST Adapter to Interface Processor Child Integration.
 
 1. In the **Project** page created previously, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **REST** and Select *REST* adapter.
+2. From the List of Adapters, search for **REST** and Select *REST* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -134,7 +134,7 @@ Create a connection using REST Adapter to invoke FHIR API
 
 1. In the **Project** page created previously, select *Add* from the **Connections** tile.
 
-2.  From the List of Adapters, search for **REST** and Select *REST* adapter.
+2. From the List of Adapters, search for **REST** and Select *REST* adapter.
 
 3. In the **Create Connection** page provide below and click *Create*
 
@@ -147,7 +147,7 @@ Create a connection using REST Adapter to invoke FHIR API
 
     Keep all other values as default.
 
-4.  In the *Configuration* page, enter the following information:
+4. In the *Configuration* page, enter the following information:
 
     | **Field**  | **Values** |
     |---|---|
@@ -162,29 +162,29 @@ Create a connection using REST Adapter to invoke FHIR API
 
 ## Task 6: Create Lookups
 
-1.  In the **Project** page, select *Add* from the **Lookups** tile and Click *Create*.
+1. In the **Project** page, select *Add* from the **Lookups** tile and Click *Create*.
 
-2.  In the Create Lookup dialog provide **Name** as *HL7\_to\_FHIR\_Equipment\_to\_System* and click *Create*
+2. In the Create Lookup dialog provide **Name** as *HL7\_to\_FHIR\_Equipment\_to\_System* and click *Create*
 
-3.  Change the name of the domain\_name\_1 to **HL7\_Telecom\_Equipment**. Similarly, edit the name of the domain\_name\_2 to **FHIR\_Telecom\_System**.
+3. Change the name of the domain\_name\_1 to **HL7\_Telecom\_Equipment**. Similarly, edit the name of the domain\_name\_2 to **FHIR\_Telecom\_System**.
 Provide the values below and *Save* the lookup.
 ![Configure HL7 Equipment System Lookup](images/lkp-hl7-equipment-system.png)
 
-4.  Refer to the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts. In the unzipped folder refer the **lookups**  folder for csv files. Use each of csv to create separate lookups by importing the same from the lookups section in the Project.
+4. Refer to the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts. In the unzipped folder refer the **lookups**  folder for csv files. Use each of csv to create separate lookups by importing the same from the lookups section in the Project.
 - HL7\_to\_FHIR\_Gender\_Map.csv
 - HL7\_to\_FHIR\_Telecom\_Use.csv
 - HL7ProcessorRoutes.csv
 
-5.  Finally, four lookups are created.
+5. Finally, four lookups are created.
 ![List of Lookups](images/list-of-lookups.png)
 
 ## Task 7: Create Healthcare Documents
 
-1.  Click on *Navigator* &gt; *Healthcare*, Select *Documents*
+1. Click on *Navigator* &gt; *Healthcare*, Select *Documents*
 
-2.  Create 2 documents with Standard as HL7 2.3.1 and 2.5
+2. Create 2 documents with Standard as HL7 2.3.1 and 2.5
 
-3.  Select *Create* and provide the below values and *Save* the document
+3. Select *Create* and provide the below values and *Save* the document
 
 | **Field**        | **Value**          |       
 | --- | ----------- |
@@ -194,7 +194,7 @@ Provide the values below and *Save* the lookup.
 | Document Type  | ADT_A08 (Update patient information) |
 {: title="HL7 V 2.3.1 Document"}
 
-4.  Similarly, create another document with below values
+4. Similarly, create another document with below values
 
 | **Field**        | **Value**          |       
 | --- | ----------- |

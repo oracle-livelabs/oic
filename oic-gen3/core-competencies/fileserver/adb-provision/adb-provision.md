@@ -37,7 +37,7 @@ In this lab, you will:
 
 1. Click **Create Autonomous Database** to start the instance creation process.
 
-2.  This brings up the *Create Autonomous Database* screen where you will specify the configuration of the instance.
+2. This brings up the *Create Autonomous Database* screen where you will specify the configuration of the instance.
 
 3. Specify basic information for the autonomous database:
 
@@ -73,7 +73,7 @@ In this lab, you will:
 10. Click **Create Autonomous Database**.
 
 
-11.  Your instance will begin provisioning. In a few minutes, the state will turn from *Provisioning* to *Available*. At this point, your ATP database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
+11. Your instance will begin provisioning. In a few minutes, the state will turn from *Provisioning* to *Available*. At this point, your ATP database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
 Please *proceed to the next lab*.
 

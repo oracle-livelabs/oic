@@ -8,7 +8,7 @@ In this workshop, you would be experiencing ATOM Feeds feature which is availabl
 HCM Atom feeds provide notifications of Oracle Fusion Human Capital Management (HCM) events. When an event occurs in Oracle Fusion HCM, the corresponding Atom feed is delivered automatically to the Atom server. The feed contains details of the REST resource on which the event occurred. Subscribers who consume these Atom feeds use the REST resources to retrieve additional information about the resource.
 
 The following diagram shows the interaction between the systems involved in this use case.
-   ![directory-synchronization](../images/directory-synchronization.png)
+    ![directory-synchronization](../images/directory-synchronization.png)
 
 Estimated Time: 2 hours
 

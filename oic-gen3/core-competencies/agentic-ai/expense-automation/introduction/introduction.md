@@ -121,7 +121,7 @@ These integrations function as agentic AI tools that the agent dynamically orche
 
 ## Task 7: High level workflow of the Workshop
 
- ![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
+    ![Usecase Workflow](images/agentai-lab-highlevel-workflow.png)
 
 ## Task 8: Knowledge Outcomes
 

@@ -29,18 +29,18 @@ In this lab you will learn:
 
 ## Task 1: Run and Test the AI Agent
 
-1.  In the left navigation pane, select **Projects**.
+1. In the left navigation pane, select **Projects**.
 
-2.  Select the **Patient Care Utilization Review** project that you created.
+2. Select the **Patient Care Utilization Review** project that you created.
 
-3.  In the left navigation pane, select **AI Agents** icon.
+3. In the left navigation pane, select **AI Agents** icon.
 
-4.  Run the agent
+4. Run the agent
     a.  In the Agents card, find the AI agent to run: **Patient Care Quality Assessment Agent**
 
     b.  Click **Actions icon**, and select *Run*.
 
-5.  Test the agent.
+5. Test the agent.
     a.  In the Test Agent page, enter a natural language prompt to test the AI agent. Enter the below User prompt.
 
     ```

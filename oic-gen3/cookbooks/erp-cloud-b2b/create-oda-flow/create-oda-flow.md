@@ -23,13 +23,13 @@ In this workshop, you will create a skill that can be used for interactions with
  1. This task assumes you are already signed in into the Oracle Cloud account and are able to navigate to the already provisioned Oracle Digital Assistant instance. With this as a prerequisite, navigate to the Oracle Digital Assistant UI in a browser, Click on the ![hamburger Icon](images/hamburger.png) to open the side menu.
 
 2. Click **Development** and then select **Skills**.
-  ![select skills](images/select-skills.png)
+    ![select skills](images/select-skills.png)
 
 
 3. Click ![hamburger Icon](images/hamburger.png) again to collapse the side menu.
 
 4. Click the **+ New Skill** button.
-  ![new skill](images/tile-new-skill.png)
+    ![new skill](images/tile-new-skill.png)
 
 5. Enter the following details in the create skill dialoge window that appears as below.
     - **Display Name**:
@@ -87,7 +87,7 @@ Hi, how are you?
      ![adding-utterences](images/add-utterences.png)
 
 4. Now hit the **Create** button.
-   ![create-button](images/create-utterences.png)    
+    ![create-button](images/create-utterences.png)
 
 5. Repeat the above steps for another Intent by naming the intent as  **Purchase Order** and add the below list of utterences to that particular intent and click on the **Create** button as shown below:
 
@@ -117,7 +117,7 @@ The conversation dialog looks something like below
 ![PO Bot Flow Dialog View](images/po-bot-flow-dialog-view.png)
 
 We will create Two conversation dialogues.
-1.  Greetings Conversation Flow - To greet the user and ask for what he/she looking for?
+1. Greetings Conversation Flow - To greet the user and ask for what he/she looking for?
 
 2. Purchase Order Conversation - Ask for the order number, verify and get the details of the PO.
 
@@ -127,19 +127,19 @@ We will create Two conversation dialogues.
 
 2. Click on **Add Flow** button.
 
-  ![add-flow-button](images/add-flow-button.png)
+    ![add-flow-button](images/add-flow-button.png)
 
 3. In the **Create Flow** dialogue box enter the name of the flow  **Greetings** and hit the **Create** button, make sure to check the box "**Open created flow afterwards**".
 
- ![create-greeting-flow](images/create-greeting-flow.png)
+    ![create-greeting-flow](images/create-greeting-flow.png)
 
 4. Click on the **Start** , you will see three dots appear like this "**...**", click on the dotes and popdown shows up with text on it as "add start state", click on it to select a template.
 
- ![add-start](images/add-start-state.png)
+    ![add-start](images/add-start-state.png)
 
 5. Select the **Send Message** template and add the **Name** as ***welcomeMessage*** and hit the **Insert** button as shown in the picture below.
 
- ![select-send-message](images/select-send-message-template.png)
+    ![select-send-message](images/select-send-message-template.png)
 
 6. Then a side window opens up with the properties of the template to fill, under the **Component** tab , Please add the below text:
 
@@ -156,15 +156,15 @@ Hello ${profile.firstName}, Welcome to the Purchase Order Assistant! How can I a
 
 2. Click on **Add Flow** button.
 
-   ![add-flow-button](images/add-flow-button.png)
+    ![add-flow-button](images/add-flow-button.png)
 
 3. In the **Create Flow** dialogue box enter the name of the flow  **PurchaseOrderConversationFlow** and hit the **Create**
 button, make sure to check the box "**Open created flow afterwards**".
-   ![purchase-order-flow](images/purchase-order-conversationflow.png)
+    ![purchase-order-flow](images/purchase-order-conversationflow.png)
 
 4. Once Visual Flow design editor opens, click on the **Configuration** tab and add two variables on the **Flow level** in the variables section by click on the **+ Add Variable** .   
 
-   ![add-variable](images/add-variable.png)
+    ![add-variable](images/add-variable.png)
 
 5. Enter the following details to add variables one by one and hit **Apply** button.
 
@@ -234,7 +234,7 @@ button, make sure to check the box "**Open created flow afterwards**".
                   </copy>
                   ```
 
-  ![yaml-code](images/yaml-code.png)
+    ![yaml-code](images/yaml-code.png)
 
 15. Click on the **Transition** tab and click on the **+** button besides **Action**
 
@@ -276,7 +276,7 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 23. After clicking that section scroll down through the list and look for **Call REST Service**, name it **callERPAPI** and hit the **Insert** button
 
-   ![call-erp-api](images/call-erp-api.png)
+    ![call-erp-api](images/call-erp-api.png)
 
 24. Click on the **Component** tab and add the following details:
 
@@ -303,7 +303,7 @@ button, make sure to check the box "**Open created flow afterwards**".
 
 26. In the **Add State** window that opens up select the **Flow Control** section and navigate to **Switch** template and select it, name it as **determineIfValuePresent** and hit the **Insert** button.
 
-  ![add-switch-component](images/add-switch-component.png)
+    ![add-switch-component](images/add-switch-component.png)
 
 27. Select the **determineIfValuePresent** In the **Component** tab under the **Expression** editor add the below free marker expression.
 ```
@@ -312,15 +312,15 @@ ${PurchaseOrderDetails.value.responsePayload.ordernumber?hasContent?then('succes
 </copy>
 ```
             
-  ![free-marker-expression](images/free-marker-expression.png)
+    ![free-marker-expression](images/free-marker-expression.png)
 
 28. Go to the **Transition** tab , under the **Next Transition** section select the **Add State** from the dropdown.
 
- ![next-transition](images/next-transition.png)
+    ![next-transition](images/next-transition.png)
 
 29. when the **Add State** opens up, select the **Send Message** template and name it as **outputFailure** and hit the **Insert** button.
 
-  ![output-failure](images/output-failure.png)
+    ![output-failure](images/output-failure.png)
 
 30. In the **outputFailure** window, go to the **Component** tab and copy the below message and paste it in the editor.
 
@@ -386,11 +386,11 @@ Letter of Credit Id:   "${PurchaseOrderDetails.value.responsePayload.locId}"
                  </copy>
                  ```
 The above code is a **YAML** code make sure the indentation matches with the screenshot below:
-  ![another-order-number](images/another-order-number-yaml.png)
+    ![another-order-number](images/another-order-number-yaml.png)
 
 36. Now click on the **Transitions** tab and under the **Next Transition** drop down select the **askOrderNumber** state.
 
-  ![select-askordernumber-state](images/select-askordernumber-state.png)
+    ![select-askordernumber-state](images/select-askordernumber-state.png)
 
 37. under the **Action** section, add **Action Name** as **No** and in the **Transition To** select **add state** and select the **Send Message** template and name it as **ThankYouMessage**. Go to the **Component** tab is opened copy the below message and paste it in the editor.
 
@@ -400,38 +400,38 @@ Thank you for your time. It was a pleasure to assist you. Please feel free to re
 </copy>
 ```
 
-  ![askanotherordernumber-noaction](images/askanotherordernumber-noaction.png)
+    ![askanotherordernumber-noaction](images/askanotherordernumber-noaction.png)
 
-  ![thankyoumessage](images/thankyoumessage.png)
+    ![thankyoumessage](images/thankyoumessage.png)
 
 38. Now lets go to the **outputFailure** state and  click on the **Transitions** tab in the **Next Transition** dropdown select **resetVariables** state.
 
-  ![outputfailure-nexttransition](images/outputfailure-nexttransition.png)
+    ![outputfailure-nexttransition](images/outputfailure-nexttransition.png)
 
 39. Finally, lets go back to the **noaction_resetVariable** state and click on the **Transitions** tab in the **Next Transition** dropdown select the **Add State...** state.
-  ![No Action Reset Variable](images/noaction-resetvariable-addstate.png)
+    ![No Action Reset Variable](images/noaction-resetvariable-addstate.png)
 
 40. In the **Add State** window Select Template **Ask Question** and name it as *reEnterTheCorrectOrderNumber*. Click **Insert**.
-  ![ReEnter Correct Order](images/ask-question-addstate.png)
+    ![ReEnter Correct Order](images/ask-question-addstate.png)
 
 41. Go to the **Component** tab, copy the below sentence and paste it in the editor, then under the variables select the **OrderNumber** variable in the **Flow** scope
-  ![ReEnter State Component](images/reenter-state-component-details.png)
+    ![ReEnter State Component](images/reenter-state-component-details.png)
 
 42. Click on **Transitions** tab and Select **Next Transition** as *callERPAPI*
-  ![Reenter Transition](images/reenter-transition.png)
+    ![Reenter Transition](images/reenter-transition.png)
 
 43. Your final conversation flow should look as below:
     ![PO Conversation Flow Final](images/final-flow.png)
 
 44. Next, go head and click on the **Main Flow** tab under the **Flow Designer** section. we need to map the conversation design flow the appropriate intents for that you need to create an **Intent Event Handler**. In the Main flow window expand the **Intent Events** section and click on the **+** icon besides it. A window opens up for mapping the Intent with the appropriate mapped flow, make sure to match **Greetings** Intent with **Greetings** mapped flow and hit the **Create** button. Repeat the same for **Purchase Order** Intent to map it with **PurchaseOrderConversationFlow**
 
-   ![Map Intent to PO Flow Add](images/map-intent-to-flow.png)
+    ![Map Intent to PO Flow Add](images/map-intent-to-flow.png)
 
-   ![Map Intent to PO Flow ](images/map-intent-to-flow-po.png)
+    ![Map Intent to PO Flow ](images/map-intent-to-flow-po.png)
 
 45. The final mappings should look like below. With this you have successfully designed the conversation flow for Purchase Order Assistant, you can now proceed to the next Task.
 
-   ![Final Intent Mappings](images/final-mappings.png)
+    ![Final Intent Mappings](images/final-mappings.png)
 
 ## Task 4: Test your Skill
 
@@ -449,7 +449,7 @@ In this section we will just test the happy path scenario of the conversation di
 
      ![conversation-tester-hi](images/conversation-tester-hi.png)
 
-  4.  Then enter the sentence **Purchase Order Status** and hit enter, you should see the bot asking for you to enter the "Order Number " as below:
+  4. Then enter the sentence **Purchase Order Status** and hit enter, you should see the bot asking for you to enter the "Order Number " as below:
 
      ![conversation-po](images/conversation-po.png)
 

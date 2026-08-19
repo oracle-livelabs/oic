@@ -10,9 +10,9 @@ Estimated Time: 30 minutes
 ### Objectives
 In this lab, you will:
 
-1.  Register all five healthcare integrations as agentic AI tools from the AI Agents page
-2.  Configure tool descriptions, identifiers, and parameter guidelines for each tool
-3.  Verify that all tools are properly configured and ready for agent use
+1. Register all five healthcare integrations as agentic AI tools from the AI Agents page
+2. Configure tool descriptions, identifiers, and parameter guidelines for each tool
+3. Verify that all tools are properly configured and ready for agent use
 
 ### Prerequisites and Tool Overview
 

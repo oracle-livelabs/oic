@@ -55,26 +55,26 @@ This lab assumes you have:
 
 2. In the **Integrations** section, click ***Add***.
 
-3.  On the **Add Integration page**, click ***Import***.
+3. On the **Add Integration page**, click ***Import***.
 
-4.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
+4. Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip
 
-5.  On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
+5. On the **Import Integration** dialog, select the downloaded integration archive (.iar), and select ***Import***. Notice that the imported integration appears in the **Integrations** list.
 
-6.  Hover over the integration, then click ***Actions*** icon and select ***Configure***. The **Configuration Editor** page shows two connections.
+6. Hover over the integration, then click ***Actions*** icon and select ***Configure***. The **Configuration Editor** page shows two connections.
 
-7.  If you have created the connections specified in the [earlier Section](?lab=create-connections) with a different name,  edit each of the connections and using the shared connection section and search for the respective adapter connections to configure the connections of the imported integration flow.
+7. If you have created the connections specified in the [earlier Section](?lab=create-connections) with a different name,  edit each of the connections and using the shared connection section and search for the respective adapter connections to configure the connections of the imported integration flow.
 
 ## Task 2: Understand HCM Data Loader DAT Files
 Use the NXSD native schema to generate a DAT file compatible with the HCM Data Loader in an integration.
 
 The NXSD schema defines the structure of the output file (fields) and the formatting of the data.
 
-1.  Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
+1. Download the [Live lab](https://objectstorage.us-phoenix-1.oraclecloud.com/p/wiQrCY6ufO1r1e9izus5_Rpc2amo_cG-d4e5GKuiIcJ1mLKou8fKfpSkrT2Ztia8/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) files and unzip if not already done.
 
-2.  Open the file *worker-hdl.nxsd* in a text editor.
+2. Open the file *worker-hdl.nxsd* in a text editor.
 
-3.  Locate the **schema** element at the beginning of the file.
+3. Locate the **schema** element at the beginning of the file.
 
 This element defines the global schema attributes. You must include a similar **schema** element in the NXSD schemas you build for HDL objects. You will need to change the object names.
         ```
@@ -90,7 +90,7 @@ This element defines the global schema attributes. You must include a similar **
                 nxsd:encodeLineTerminators="false">
         ```
 
-4.   Locate the **WorkerData** element.
+4. Locate the **WorkerData** element.
 This element defines the set of objects and child objects required to load this business object to the HCM Data Loader.
 
 The following elements are specified for each of the objects in the NXSD schema:
@@ -127,7 +127,7 @@ The format for the lines is specified in the **nxsd:startsWidth** attribute with
             </complexType>
         </element>
         ```
-5.  Find the **WokerLabel** element.
+5. Find the **WokerLabel** element.
 This element adds the name of the fields to the **METADATA** line. Each object requires its corresponding label element.
         ```
         <element name="WorkerLabel">
@@ -147,7 +147,7 @@ This element adds the name of the fields to the **METADATA** line. Each object r
         </element>
         ```
 
-6.  Locate the **Worker** element.
+6. Locate the **Worker** element.
 This element defines the fields required by the HCM Data Loader **Worker** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
         ```
         <element name="Worker">
@@ -167,7 +167,7 @@ This element defines the fields required by the HCM Data Loader **Worker** objec
         </element>
         ```
 
-7.  Locate the **PersonName** element
+7. Locate the **PersonName** element
 This element defines the fields required by HCM Data Loader **Person** object. The format is defined in the **nxsd:terminatedBy** attribute which adds a separator at the end of each line.
         ```
         <element name="PersonName">
@@ -214,25 +214,25 @@ Stop | Stop | The end of the integration.
 
 ## Task 4: Edit the ReadFileFromFTP Activity
 
-1.  Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ahJbEWti82iZ5e-VnHr5mrHrgx2YIrDVU9p18TU5_RLJfe4rLkXuwvH1OiW68bhW/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
+1. Download the [Live labs](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ahJbEWti82iZ5e-VnHr5mrHrgx2YIrDVU9p18TU5_RLJfe4rLkXuwvH1OiW68bhW/n/oicpm/b/oiclivelabs/o/oic3/hcm-cloud/bulk-import/bulk-import.zip) file and unzip if not already done
 
-2.  Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
+2. Using an FTP Client of your choice, connect to FTP Server with the information from [Lab3 Setup](?lab=setup)
 
-3.  Copy the *persons.xml* (Refer Prerequisites)file to the directory ***/upload/users/```<<your oic usernumber>>```***
+3. Copy the *persons.xml* (Refer Prerequisites)file to the directory ***/upload/users/```<<your oic usernumber>>```***
 
-4.  Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
+4. Click on *Edit* if the Integration Flow if not opened already. Select the *ReadFileFromFTP* activity. Select the three dots and Click on *Edit*.
 
-5.  In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter ***/upload/users/```<<your oic usernumber>>```***. Click *Next*.
+5. In the FTP Wizard navigate to the **Operations** step. In the Input Directory field, enter ***/upload/users/```<<your oic usernumber>>```***. Click *Next*.
 The Schema page appears. Select *No* to as we don't want to specify the structure for the content of the file.
 
-6.  Click *Next*. Review the summary and click *Finish*.
+6. Click *Next*. Review the summary and click *Finish*.
 
 
 ## Task 5: Understand the Data Mapping
 
-1.  Select the **Map To WriteFile** activity.
+1. Select the **Map To WriteFile** activity.
 
-2.  Click *Edit*
+2. Click *Edit*
 
     The **Map** page appears.
 
@@ -243,30 +243,30 @@ The Schema page appears. Select *No* to as we don't want to specify the structur
     This data mapping is a representation of the **Worker.dat** file.
 ![Map Worker Data File](images/map-write-worker-data.png)
 
-3.  Click *Go back*
+3. Click *Go back*
 
 ## Task 6: Edit the Zip File Action
 
-1.  Select the **Zip File** Activity. Click *Edit*
+1. Select the **Zip File** Activity. Click *Edit*
 
-2.  In the **Basic Info** page Click *Next*. The **Configure Operation** page appears
+2. In the **Basic Info** page Click *Next*. The **Configure Operation** page appears
 
-3.  In the **Specify File Name** Value box edit the expression to change the file name if required. This will help you identify your file in UCM and the HCM DataLoader
+3. In the **Specify File Name** Value box edit the expression to change the file name if required. This will help you identify your file in UCM and the HCM DataLoader
 
-4.  Click *Next* and Review the summary and Click *Finish*
+4. Click *Next* and Review the summary and Click *Finish*
 
 
 ## Task 7: Define the Tracking Fields
 
 Tracking fields specify a unique value to monitor your integration instance.
 
-1.  On the Integration canvas, Click *(I)* **Business Identifiers**.
+1. On the Integration canvas, Click *(I)* **Business Identifiers**.
     ![Business-Identifiers](images/business-identifiers.png)
     The **Business Identifiers** for Tracking dialog appears.
 
-2.  From the **Source** section, select *startTime*. Drag and drop the in the **Business identifier field** expression box under tracking_var_1.
+2. From the **Source** section, select *startTime*. Drag and drop the in the **Business identifier field** expression box under tracking_var_1.
 
-3.  On the Integration canvas, click on main canvas(designer page),  click *Save*, and then click *Go back*
+3. On the Integration canvas, click on main canvas(designer page),  click *Save*, and then click *Go back*
 
 ## Task 8: Activate the Integration Flow
 
@@ -296,30 +296,30 @@ Once integration flow is completed Click on the Integration instance primary ide
 
 The flow for your instance appears. The flow is colored in green to indicate that it ran successfully.
 
-  ![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
+    ![Track Import Pending Worker Instance](images/hdl-integration-flow-track-instance.png)
 
 Click on the Activity Stream and expand **Invoke ImportLoadedData** activity. Make a note of the **Request Id** in the response received from HDL Job.
 
-  ![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
+    ![Import HDL Job](images/hdl-job-activity-stream-requestid.png)
 
 ## Task 10: Verify the Data in HCM
 
-1.  Sign in to HCM Cloud with the credentials used for HCM Cloud connection.
+1. Sign in to HCM Cloud with the credentials used for HCM Cloud connection.
 
-2.  Click the **Navigation Menu**
+2. Click the **Navigation Menu**
 
-3.  Expand **My Client Groups** and then click **Data Exchange**.
+3. Expand **My Client Groups** and then click **Data Exchange**.
 
-4.  In the **HCM Data Loader** section, click **Import and Load Data**.
+4. In the **HCM Data Loader** section, click **Import and Load Data**.
     The Data Sets section shows the file you uploaded.
 
-5.  Click the **Navigation Menu** icon
+5. Click the **Navigation Menu** icon
 
-6.  Expand **My Client Groups** and then click **Person Management**
+6. Expand **My Client Groups** and then click **Person Management**
 
-7.  In the Name field enter Person Name provided in the persons.xml files
+7. In the Name field enter Person Name provided in the persons.xml files
 
-8.  Click Search. The Search Results section shows the data for the Person. This
+8. Click Search. The Search Results section shows the data for the Person. This
     confirms that the data was imported to your HCM instance.
 
 **Congratulations**!🎉 You've configured and run an integration to retrieve a file from File Server, transform it to an HDL format, and finally import pending workers to HCM Cloud.
@@ -334,9 +334,9 @@ In this section you will learn how to clone an integration using the Factory API
 
 You need Identity Domain Administrator or Application Administrator credentials to perform this task. We will create a confidential application in IDCS for client credentials grant type.
 
-1.  Access your Oracle Identity Cloud Service instance.
+1. Access your Oracle Identity Cloud Service instance.
 
-2.  Add a Confidential application for your Oracle Integration instance.
+2. Add a Confidential application for your Oracle Integration instance.
     - In Oracle Identity Cloud Service, from the menu, click *Applications*, then *Add*.
     - Select *Confidential Application* as the type of application.
     - Enter an application name, then click *Next*.
@@ -358,14 +358,14 @@ You need Identity Domain Administrator or Application Administrator credentials 
         - Secret
         - Scope (that ends with urn:opc:resource:consumer::all)
 
-3.  Add roles to the client application
+3. Add roles to the client application
     - Go to the **Application Roles** tab of the Oracle Identity Cloud Service application.
     - Select *Assign Applications* for the ServiceAdministrator role
       ![Assign Roles to Application](images/client_creds_approle.png)
 
 **Generate Access Token from Postman**
 
-1.  Validate client application and generate access token
+1. Validate client application and generate access token
     - Use the pre-req information (clientid,scret and scope) to generate the access token using this REST api in Postman
         - Create a new request in Postman
         - Provide the OAUTH token Endpoint: https://&lt;idcs_host&gt;/oauth2/v1/token
@@ -380,11 +380,11 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 **Invoke OIC3 Factory API using access token**
 
-1.  Open another tab in Postman and enter the factory REST API to Clone the Integration.
+1. Open another tab in Postman and enter the factory REST API to Clone the Integration.
     Provide Verb as POST and endpoint: https://design.integration.&lt;region&gt;.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT\_PENDING\_WORKER|02.00.0000/clone?integrationInstance=&lt;integration_instance&gt;
     >**Note:** Refer OIC Console url for integrationInstance Name
 
-2.  Under the **Authorization** tab
+2. Under the **Authorization** tab
     - Select Type = Bearer token
     - Paste the copied access token into the token field
     - Provide the below json body
@@ -397,7 +397,7 @@ You need Identity Domain Administrator or Application Administrator credentials 
     }</copy>
     ```
 
-3.  Click *Send* button to invoke the REST API. Verify the new cloned integration appear in the  OIC 3 integration list page.
+3. Click *Send* button to invoke the REST API. Verify the new cloned integration appear in the  OIC 3 integration list page.
 
 
 **Congratulations**! You've learnt how to use OIC 3 REST API using Client Credentials OAuth2.0 grant type.

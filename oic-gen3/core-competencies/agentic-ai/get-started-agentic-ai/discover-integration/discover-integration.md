@@ -163,15 +163,15 @@ Postman supports creating MCP requests that interact directly with MCP servers. 
 
    4. Click **Get New Access Token** at the bottom to verify authentication works
 
-   ![Postman Get Access Token](images/postman-oauth-config.png)
+    ![Postman Get Access Token](images/postman-oauth-config.png)
 
    5. Once the token is generated it opens a dialog Manage Access tokens, Click on **Use Token**.
 
-   ![Postman Use Token](images/manage-access-tokens.png)
+    ![Postman Use Token](images/manage-access-tokens.png)
 
    6. You should see the bearer token added to the Current Token
 
-   ![Bearer Token](images/bearer-token.png)
+    ![Bearer Token](images/bearer-token.png)
 
 ### Step 5: Load MCP Server Methods
 
@@ -277,9 +277,9 @@ Install from here: https://nodejs.org/en/download
 
 ### Step 2: Install Langflow
 
-1.  Visit https://www.langflow.org/
-2.  Click **Download** or **Get Started**
-3.  Download **Langflow Desktop** version for your operating system:
+1. Visit https://www.langflow.org/
+2. Click **Download** or **Get Started**
+3. Download **Langflow Desktop** version for your operating system:
      - Windows
      - macOS
      - Linux
@@ -636,18 +636,18 @@ Final: Comprehensive Quality Audit Report
 
 While the agent runs:
 
-1.  **Observe the Chat Display**:
+1. **Observe the Chat Display**:
      - Shows agent reasoning steps
      - Displays which tools are being called
      - Shows tool results and analysis
      - Final recommendations appear at the bottom
 
-2.   **Check Tool Call Details**:
+2. **Check Tool Call Details**:
      - Look for tool invocation messages
      - Verify parameters being sent
      - Review results returned from each tool
 
-3.   **View Execution Logs**:
+3. **View Execution Logs**:
      - See detailed information:
        - Tool names and execution order
        - Input parameters to each tool

@@ -188,7 +188,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 1. Select **PO Backend**,  Click on **...(Actions)** menu and Click on ***Run***
 2. Open the file **DellIncPO.xml** (from the lab artifacts folder **b2b-getting-started\b2b-outbound-x12-ftp**) and copy the data and paste it in the **Body** of the request console.
-  ![TestConsole diagram](images/b2b-outbound17.png)
+    ![TestConsole diagram](images/b2b-outbound17.png)
 3. Click ***Run*** (in the upper right of the page).
 4. You can track by clicking on ***Home***, ***Observability*** and ***Instances***. Cross check your backend integration and trading partner integration ran successfully.
 5. If you have FTP Client installed on your machine, you can login using the FTP details provided to you and cross check your EDI file created under folder **/upload/users/B2BWorkshop/B2BTPDELLOut**

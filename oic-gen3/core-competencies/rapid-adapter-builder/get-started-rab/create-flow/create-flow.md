@@ -47,7 +47,7 @@ This lab assumes you have:
     Accept all other default values.
 
 5. Click **Create**.
-   ![Create Integration Flow](images/create-integration-initial.png)
+    ![Create Integration Flow](images/create-integration-initial.png)
 
 6. Click on **Horizontal** to change the layout to Horizontal
 
@@ -115,7 +115,7 @@ This lab assumes you have:
 
 ## Task 3: Invoke Get Customer Details
 
-1.  Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
+1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomerOrders* activity (after first activity) and Click the **+** sign in the integration canvas.
 Search for the *Acme OM Connection* connection which was created in the previous Lab and click on it. This invokes the Acme OM Application Adapter Configuration Wizard.
@@ -171,7 +171,7 @@ We will create a transformation to reply back with Customer Details and All the 
   | Totalamount         | Totalamount |
   {: title="Customer Order Details mapping."}
 
-  ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
+    ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
 
   - Click on **Validate**.
      - A confirmation message appears.
@@ -181,7 +181,7 @@ We will create a transformation to reply back with Customer Details and All the 
   - Click **Save** to persist changes.
 
   Your final Integration Flow design should be similar to the below
-  ![Complete Integration Flow](images/create-integration-final.png)
+    ![Complete Integration Flow](images/create-integration-final.png)
 
 ## Task 6: Define Tracking Fields
 
@@ -227,7 +227,7 @@ Refresh your page after a few seconds.
 The track instance page appears. The Integration state should be processing or successful.
 OR you can also track by Selecting on **Home &gt;**, **Observability &gt;** and **Instances**
 
-6.  In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
+6. In the Activity Stream Select *Invoke getACMECustomerOrders* and view the sequence of Wire Messages. It shows the sequence steps the adapter executed at runtime for flow action configured for the invoke operation.
 
 ![Activity Stream](images/acme-invoke-activity-stream.png)
 

@@ -74,7 +74,7 @@ You can create customized document definitions to use in your B2B integrations. 
 3. Click ***Clone***.
 4. Click ***Edit*** on the **PurchaseOrderSchema_Customized** Schema.
 5. On the Schema page, find the element you want to customize, and select ***Edit Details***. As an example, select the ***CUR02*** currency code element (part of the ***CUR*** segment) to edit it. You can also add new constructs to the schema.  
-  ![Schema Editor](images/customizeposchema4010-editcur02-1a.png)  
+    ![Schema Editor](images/customizeposchema4010-editcur02-1a.png)
   The Details pane is displayed with the Properties tab selected.
     ![Element Details](images/customizeposchema4010-editcur02-1-1.png)  
   The three tabs on the Details pane enable you to define additional customizations.  
@@ -90,9 +90,9 @@ You can create customized document definitions to use in your B2B integrations. 
 9. Set **Code** to ***EUR*** and **Description** to ***Euro Dollar***. Click ***X*** to close the Code editor.
 10. Hover over the **EUR** Code, click ***+*** to add a new Code line, then click ***Edit*** on the empty Code line.
 11. Set **Code** to ***USD*** and **Description** to ***US Dollar***. Click ***X*** to close the Code editor.  
-  ![Code List Editor](images/currency.png)
+    ![Code List Editor](images/currency.png)
 12. Click ***Save*** to close the Code List editor and save your Schema changes. The segment (CUR) and the element (CUR02) that you customized from the standard schema are identified by a dot.
-  ![Customized Schema](images/customizeposchema4010-editcur02-3-1.png)
+    ![Customized Schema](images/customizeposchema4010-editcur02-3-1.png)
 13. Exit the **PurchaseOrderSchema_Customized** page.
 
 ## Task 4: Implementation Guide
@@ -109,10 +109,10 @@ You can create customized document definitions to use in your B2B integrations. 
 
 1. Click ***Schemas***.
 2. On the Schemas page, select the ***PurchaseOrderSchema_Customized*** Schema and select ***Generate Implementation Guide***.
-  ![Generate Implementation Guide](images/customizeposchema4010-implguide-1-1.png)
+    ![Generate Implementation Guide](images/customizeposchema4010-implguide-1-1.png)
 3. From here you can View or Download the Implementation Guide. Click ***View*** to open a new browser window containing the    Implementation Guide. Search for the **EUR** or **USD** Codes you added to this customized Schema.  
 The following image shows an example Implementation Guide:
-  ![Implementation Guide](images/customizeposchema4010-implguide-2-1.png)
+    ![Implementation Guide](images/customizeposchema4010-implguide-2-1.png)
 
   When done reviewing the Implementation Guide, exit the **Generate Implementation Guide** page.
 

@@ -86,7 +86,7 @@ Follow these steps to create a Database objects which will be used as part of th
 
 ## Task 2: Insert sample data into DB Objects
 
-1.  In the SQL Worksheet execute below set of script to insert data.
+1. In the SQL Worksheet execute below set of script to insert data.
     ```
     <copy>
         INSERT INTO CUSTOMERS(
@@ -161,7 +161,7 @@ Follow these steps to create a Database objects which will be used as part of th
 ## Task 3: Create ORDS Service and respective handlers
 
 
-1.  In the SQL Worksheet execute below set of script to create ORDS service. If your schema name is different modify the p\_schema and p\_url\_mapping\_pattern values accordingly.
+1. In the SQL Worksheet execute below set of script to create ORDS service. If your schema name is different modify the p\_schema and p\_url\_mapping\_pattern values accordingly.
     ```
     <copy>
         BEGIN
@@ -575,13 +575,13 @@ Steps are given below to create a confidential application in IDCS/Domains. Base
 
 ***If you tenancy is enabled with Domains follow the below steps:***
 
-1.  In the OCI Console, Navigate to **Identity & Security &gt; domains &gt; <your domain> &gt; Integrated Applications** section to create a new application
+1. In the OCI Console, Navigate to **Identity & Security &gt; domains &gt; <your domain> &gt; Integrated Applications** section to create a new application
 
-2.  Click **Add application**.
+2. Click **Add application**.
 
-3.  Select **Confidential Application** and select *Launch Workflow*.
+3. Select **Confidential Application** and select *Launch Workflow*.
 
-4.  Complete the **Application Details** page as per below, and click **Next**.
+4. Complete the **Application Details** page as per below, and click **Next**.
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
@@ -589,7 +589,7 @@ Steps are given below to create a confidential application in IDCS/Domains. Base
     | Description  | OAuth App for RAB|
     {: title="Configure Confidential App Details Page"}
 
-5.  In the **Configure OAuth** page, select **Configure this application as a client now**, and complete the following:
+5. In the **Configure OAuth** page, select **Configure this application as a client now**, and complete the following:
 
     - Select **Client Credentials** from the **Allowed Grant Types** list.
     - Select **Client Type** as *Confidential*
@@ -605,9 +605,9 @@ Steps are given below to create a confidential application in IDCS/Domains. Base
     {: title="Scopes of the OIC Instance"}
     - Click on *Next* and Select *Finish*. Do not configure anything in the web tier policy.
 
-6.  Click through the remaining wizard pages without making changes and save the application
+6. Click through the remaining wizard pages without making changes and save the application
 
-7.  Click on *Activate* to activate the application for use.
+7. Click on *Activate* to activate the application for use.
 
     Make a note of below
       - ClientId
@@ -620,15 +620,15 @@ Steps are given below to create a confidential application in IDCS/Domains. Base
 
 In Oracle Identity Cloud Service (IDCS), create a client application for your Oracle Integration instance and obtain the client credentials.
 
-1.  In the Oracle Identity Cloud Service Console, go to the **Applications** section to create a new application.
+1. In the Oracle Identity Cloud Service Console, go to the **Applications** section to create a new application.
 
-2.  Click **Add**.
+2. Click **Add**.
 
-3.  Select **Confidential Application**.
+3. Select **Confidential Application**.
 
-4.  Complete the **Details** page, and click **Next**.
+4. Complete the **Details** page, and click **Next**.
 
-5.  On the **Client** page, select **Configure this application as a client now**, and complete the following:
+5. On the **Client** page, select **Configure this application as a client now**, and complete the following:
 
     - Select **Client Credentials** from the **Allowed Grant Types** list.
     - Select **Specific** in the **Authorized Resources** area of the **Token Issuance Policy** section.
@@ -637,9 +637,9 @@ In Oracle Identity Cloud Service (IDCS), create a client application for your Or
     - Add the scope containing **urn:opc:resource:consumer::all**
     - Save your changes
 
-6.  Click through the remaining wizard pages without making changes and save the application
+6. Click through the remaining wizard pages without making changes and save the application
 
-7.  Click on *Activate* to activate the application for use.
+7. Click on *Activate* to activate the application for use.
 
     Make a note of below
       - ClientId
@@ -654,42 +654,42 @@ To successfully use the client credentials, assign the integration instance **Se
 
 ***If you tenancy is enabled with Domains follow the below steps:***
 
-1.  Go to  **Identity & Security &gt; Domains &gt; Oracle Cloud Services** in the OCI Console.
+1. Go to  **Identity & Security &gt; Domains &gt; Oracle Cloud Services** in the OCI Console.
 
 2. Search for your OIC instance, and Select the instance. Under **Resources** section Select *Application Roles*
 
-3.  From the list of Application Roles, expand the **Service Developer** role, and then click **Assign Applications**. Select the *Show available applications*, and Search for the confidential app created in the previous section.
+3. From the list of Application Roles, expand the **Service Developer** role, and then click **Assign Applications**. Select the *Show available applications*, and Search for the confidential app created in the previous section.
 
-3.  Select the client application and click **Assign**. Now, IAM assigns the integration-instance a service developer role to the application.
+3. Select the client application and click **Assign**. Now, IAM assigns the integration-instance a service developer role to the application.
 
 ***If you tenancy is enabled with IDCS follow the below steps:***
 
-1.  Go to the **Application Roles** tab of the Oracle Identity Cloud Service application. The list of all applicable roles appears.
+1. Go to the **Application Roles** tab of the Oracle Identity Cloud Service application. The list of all applicable roles appears.
 
-2.  Locate and click the **ServiceDeveloper** role, and then click **Assign Applications**. The Assign Applications dialog appears, displaying the client application you created previously.
+2. Locate and click the **ServiceDeveloper** role, and then click **Assign Applications**. The Assign Applications dialog appears, displaying the client application you created previously.
 
-3.  Select the client application and click **OK**. Now, IDCS assigns the integration-instance developer role to the application.
+3. Select the client application and click **OK**. Now, IDCS assigns the integration-instance developer role to the application.
 
 
 ## Task 7: Download and Install the Required Software
 
 To use the Rapid Adapter Builder, you require additional applications or software installed on your system.
 
-1.  Download and install the Postman application. Visit the [Download Postman](https://www.postman.com/downloads/) page. Create an account on Postman to access full features.
+1. Download and install the Postman application. Visit the [Download Postman](https://www.postman.com/downloads/) page. Create an account on Postman to access full features.
 
-2.  Download and install VS Code. Visit the [Download Visual Studio Code](https://code.visualstudio.com/download) page.
+2. Download and install VS Code. Visit the [Download Visual Studio Code](https://code.visualstudio.com/download) page.
 
 ## Task 8: Install the VS Code Extension for Rapid Adapter Builder
 
 Download and install the VS Code extension for Rapid Adapter Builder.
 
-1.  On Visual Studio Marketplace, visit Oracle's [page](https://marketplace.visualstudio.com/publishers/Oracle)
+1. On Visual Studio Marketplace, visit Oracle's [page](https://marketplace.visualstudio.com/publishers/Oracle)
 
-2.  Find and click the **Oracle Integration Rapid Adapter Builder** tile. The Details page opens.
+2. Find and click the **Oracle Integration Rapid Adapter Builder** tile. The Details page opens.
 
-3.  Click **Install**. The extension file opens in VS Code.
+3. Click **Install**. The extension file opens in VS Code.
 
-4.  Click **Install** in VS Code. Now, the extension is installed and appears on the sidebar.
+4. Click **Install** in VS Code. Now, the extension is installed and appears on the sidebar.
 
 You may now **proceed to the next lab**.
 

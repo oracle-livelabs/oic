@@ -48,7 +48,7 @@ This lab assumes you have:
     Accept all other default values.
 
 5. Click **Create**.
-   ![Create Integration Flow](images/create-integration-initial.png)
+    ![Create Integration Flow](images/create-integration-initial.png)
 
 6. Click on **Horizontal** to change the layout to Horizontal
 
@@ -119,7 +119,7 @@ This lab assumes you have:
 
 ## Task 3: Invoke Get Customer Details
 
-1.  Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
+1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomer* activity (after first activity) and Click the **+** sign in the integration canvas.
 Search for the *REST Inventory OAS* connection which was created in the previous Lab and click on it. This invokes the REST  Adapter Configuration Wizard.
@@ -158,7 +158,7 @@ A map action named getCustomer is automatically created. We will define this dat
 4. Select **Validate** and Navigate back to Integration Flow.
 
 ## Task 5: Invoke Get Orders By Customer
-1.  Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
+1. Delete the Map activity created after the Trigger activity and **Save** the Integration Flow
 
 2. Hover over the outgoing arrow for the *getCustomer* activity (after first activity) and Click the **+** sign in the  integration canvas. Search for the *REST Inventory OAS* connection which was created in the previous Lab and click on it. This invokes the REST  Adapter Configuration Wizard.
 
@@ -212,7 +212,7 @@ A map action named getOrdersForCustomer is automatically created. We will define
   | Grade         | Grade |
   {: title="Customer Details mapping."}
 
-  ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
+    ![Customer Details Response Mapping](images/response-mapping-customer-details.png)
 
 5. In the Source section, expand **getOrdersByCustomer Response**, expand **GET Response**, expand **Order GET 200 Response Application JSON**, expand **Items**
 
@@ -228,7 +228,7 @@ A map action named getOrdersForCustomer is automatically created. We will define
   | Salesman Id         | Salesman Id |
   {: title="Order Details Mapping"}
 
-  ![Orders Details Response Mapping](images/response-mapping-order-details.png)
+    ![Orders Details Response Mapping](images/response-mapping-order-details.png)
 
   - Click on **Validate**.
      - A confirmation message appears.
@@ -238,7 +238,7 @@ A map action named getOrdersForCustomer is automatically created. We will define
   - Click **Save** to persist changes.
 
   Your final Integration Flow design should be similar to the below
-  ![Complete Integration Flow](images/create-integration-final.png)
+    ![Complete Integration Flow](images/create-integration-final.png)
 
 ## Task 9: Define Tracking Fields
 

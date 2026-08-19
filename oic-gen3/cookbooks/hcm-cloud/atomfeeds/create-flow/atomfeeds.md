@@ -78,7 +78,7 @@ In the **Variable** field, enter ***ts***, In the **Value** field (click on **sw
 
     ![assignments](../images/assign.png)
 
-3.  Click ***Save*** to apply changes and click on main canvas so that child window disappears
+3. Click ***Save*** to apply changes and click on main canvas so that child window disappears
 
 ## Task 4: Access the HCM Cloud ATOM Feed
 Let's use the HCM Cloud adapter to access the HCM Cloud ATOM feed.

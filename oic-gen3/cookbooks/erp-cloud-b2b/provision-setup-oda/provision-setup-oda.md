@@ -64,7 +64,7 @@ In this lab, you will:
 
 7. click on the side menu and select **Oracle Cloud Services** and in the search tab type **oic**
 
- ![oracle-cloud-services](images/oracle-cloud-services.png)
+    ![oracle-cloud-services](images/oracle-cloud-services.png)
 
 8. Click on the **oic** and then **Application Roles**
 
@@ -72,11 +72,11 @@ In this lab, you will:
 
 9. In the **Application Roles**, select the **Service Invoker** on the same tile click on the hamburger icon on extreme right and select the **Assign Users** menu option.
 
-   ![service-invoker-assign-user](images/service-invoker-assign-user.png)
+    ![service-invoker-assign-user](images/service-invoker-assign-user.png)
 
 10. click on the check box with OIC 3 Invoker details and click on ![okbutton](images/ok-button.png) button.
 
-  ![oic-detail](images/oic-detail.png)
+    ![oic-detail](images/oic-detail.png)
 
 A welcome email with details to activate your account will be received, which helps in activating the account and set the password of your choice. You can now proceed to the Tasks in this lab.
 
@@ -86,12 +86,12 @@ Create a Digital Assistant instance to start working with bots. You can find adv
 
 1. Go to the **Menu, Analytics & AI** and click on **Digital Assistant**:
 
-  ![oda-1-1](images/oda-1-1.png)
+    ![oda-1-1](images/oda-1-1.png)
 
 2. Click on Create **Digital Assistant Instance** button:
 You will have the **root compartment** selected, or pick the one you want.
 
-   ![oda-2](images/oda-2.png)
+    ![oda-2](images/oda-2.png)
 
 3. Fill the information as in the next image. *Development* edition is perfect for this workshop and develop new *Digital Assistant* systems until you want to move to production. Finally click **Create** bottom:
 | Element           | Description               |
@@ -101,16 +101,16 @@ You will have the **root compartment** selected, or pick the one you want.
 | Shape  | Development                      |
 {: title="ODA Provision Properties"}
 
-  ![oda-3](images/oda-3.png)  
+    ![oda-3](images/oda-3.png)
 
 4. Wait for the instance to be *Active*. The creation process will take a few minutes. Once the instance is *Active*, then on the instance menu, click on **Service Console**:
 
-  ![oda-4](images/oda-4.png)  
+    ![oda-4](images/oda-4.png)
 
 
 5. If you see your *Oracle Cloud Account* in the next screen, *click on it*, otherwise follow the next steps to Sign in with a different user account.
 
-  ![oda-dashboard](images/oracle-cloud-account-oda-dashboard.png)
+    ![oda-dashboard](images/oracle-cloud-account-oda-dashboard.png)
 
 6. You will have to *Log-in* again with your **Account name, User** and **Password**. Follow this step, just if you are Sign in with a different user account. Ensure you are on the right *Tenancy* or *Account* and click **Continue**.
 
@@ -124,11 +124,11 @@ You will have the **root compartment** selected, or pick the one you want.
 
 7. Provide your **Username, Password** and click **Sign In** to visit **Oracle Digital Assistant Home** page.
 
-  ![oda-login-new](images/oda-login-2-new.png)
+    ![oda-login-new](images/oda-login-2-new.png)
 
 8. You will be on the Oracle Digital Assistant **Dashboard** where you can start building your bots.
 
-  ![oda-dashboard](images/oda-5-new2.png)
+    ![oda-dashboard](images/oda-5-new2.png)
 
 ## Task 3:  Setup your Digital Assistant
 
@@ -149,11 +149,11 @@ You will have the **root compartment** selected, or pick the one you want.
 
 > **Note:** https://&lt;oic\_host&gt;/ic/api/integration/v1/flows/rest/PURCHASE_ORDER_DETAILS_PROXY/1.0/purchaseOrderDetails/{orderNumber}
 
-  ![create-rest-service](images/create-rest-service.png)
+    ![create-rest-service](images/create-rest-service.png)
 
 4. select the **Authentication Type** as **Basic Authentication** from the dropdown and enter the service account **User Name/Password** and click on the **+** icon  besides the  **Parameters** to add parameter values.
 
-  ![rest-service-details](images/rest-service-details.png)
+    ![rest-service-details](images/rest-service-details.png)
 
 5. Enter the following as parameters as shown below and select the ![right-icon](images/right-icon.png) to save the values. Then click on the **Test Request** button  ![test-request](images/test-request.png) to make sure the api is returning status as 200.
 
@@ -167,9 +167,9 @@ You will have the **root compartment** selected, or pick the one you want.
     - **Value**: US1 Legal Entity
     - **Type**: Query
 
-  ![parameter-values](images/parameter-values.png)
+    ![parameter-values](images/parameter-values.png)
 
-  ![success](images/success.png)
+    ![success](images/success.png)
 
 You can always **Watch Videos** on the **Learn** section at the bottom and explore the documentation of Oracle Digital Assistant by following the links on the dashboard.
 

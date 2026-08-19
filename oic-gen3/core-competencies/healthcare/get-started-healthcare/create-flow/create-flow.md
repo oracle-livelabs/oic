@@ -52,20 +52,20 @@ Create a Parent handler Integration flow to receive HL7 messages from HL7 Inspec
 
     Accept all other default values.
 
-5.  Select **HC RECEIVE HL7** Connection as trigger
+5. Select **HC RECEIVE HL7** Connection as trigger
 
     ![Select Trigger Connection](images/parent-trigger-conn-select.png)
 
-6.   On the *Configure Welcome* page,
+6. On the *Configure Welcome* page,
      - for the *What do you want to call your endpoint?* element, enter **receiveHL7Message**
      - Click *Continue*.
      - Click *Finish*
 
-7.   Click on *Horizontal* to change the layout to Horizontal and *Save*
+7. Click on *Horizontal* to change the layout to Horizontal and *Save*
 
-8.  Hover over the outgoing arrow for the *trigger* activity (after first activity) and Click the *+* sign in the  integration canvas.
+8. Hover over the outgoing arrow for the *trigger* activity (after first activity) and Click the *+* sign in the  integration canvas.
 
-9.  From **Actions** search for **Healthcare** action and Select
+9. From **Actions** search for **Healthcare** action and Select
 
 10. In the Healthcare action **Configure** page provide as per below
     - for the **Name**, enter *translate hl7*
@@ -97,7 +97,7 @@ Create a Parent handler Integration flow to receive HL7 messages from HL7 Inspec
       | Healthcare Message Reference         |  Healthcare Message Reference |
       {: title="Map to translate HL7"}
 
-12.  *Validate* and *Save* the Integration. Navigate back to list of Integrations. We will have to route the messages to the child integration for processing. Let's resume this Integration flow once Child Integrations are designed and activated.
+12. *Validate* and *Save* the Integration. Navigate back to list of Integrations. We will have to route the messages to the child integration for processing. Let's resume this Integration flow once Child Integrations are designed and activated.
 
 ## Task 2: Create Child Processor Integration flow
 
@@ -168,7 +168,7 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 **Initialize Assign Variables**
 
-1.  Hover over the outgoing arrow of the **receiveMessage** activity, Click on *+* sign in the integration canvas. Choose *assign* action and Name it as **setVars**. Create below Variables
+1. Hover over the outgoing arrow of the **receiveMessage** activity, Click on *+* sign in the integration canvas. Choose *assign* action and Name it as **setVars**. Create below Variables
 
 | **Variable**          | **Value**          |       
 | --- | ----------- |
@@ -181,9 +181,9 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 **Healthcare Action**
 
-1.  *Add* **Healthcare** action after the Assign Variables activity
+1. *Add* **Healthcare** action after the Assign Variables activity
 
-2.  In the **Configure** page provide details as below
+2. In the **Configure** page provide details as below
 
 | **Property Name**          | **Value**          |       
 | --- | ----------- |
@@ -196,9 +196,9 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 **Map to Convert Message**
 
-1.  *Edit* the **Map to ConvertMessage** activity
+1. *Edit* the **Map to ConvertMessage** activity
 
-2.  Map the following values
+2. Map the following values
 
 | **Source**          | **Target**          |       
 | --- | ----------- |
@@ -207,22 +207,22 @@ Create Child processor Integration to process HL7 V2.5 messages
 
 **Switch Action to check FHIR ID**
 
-1.  *Add* a **Switch** action Which creates Route1 and Otherwise. Provide **Name** for Route1 as **hasFHIR_ID**
+1. *Add* a **Switch** action Which creates Route1 and Otherwise. Provide **Name** for Route1 as **hasFHIR_ID**
 
-2.  In **Route1** *Add* an  **Assign** action and Name it as **assignID**.
+2. In **Route1** *Add* an  **Assign** action and Name it as **assignID**.
 
 3. *Add* a variable and name it as **queryString** and construct logic to concat('/', C-PID.4-CX-01). Use developer view.
 ![Switch Route1 Assign](images/switch-route1-assign-var-querystring.png)
 
-4.  *Add* another variable and name it as **patientExists** and assign **true**
+4. *Add* another variable and name it as **patientExists** and assign **true**
 ![Switch Route1 Assignment Variables](images/switch-route1-assign-vars.png)
 
-5.  Define **Route1** condition as **string-length(C-PID.4-CX-01) &gt; 0**
+5. Define **Route1** condition as **string-length(C-PID.4-CX-01) &gt; 0**
 ![Switch Route1 Condition](images/switch-route1-condition.png)
 
-6.  *Save* your work.
+6. *Save* your work.
 
-7.  In **Otherwise** route *Add* an  **Assign** action and Name it as **setupSearchTerms** and create variables and assignments as below and *Save*your work.
+7. In **Otherwise** route *Add* an  **Assign** action and Name it as **setupSearchTerms** and create variables and assignments as below and *Save*your work.
 
 ![Switch Otherwise Variables](images/switch-otherwise-variables.png)
 
@@ -247,13 +247,13 @@ In this section create logic for two branches in parallel action.
 
 ***Branch1***
 
-1.  *Add* **Parallel** action after the Switch activity. Two branches namely Branch1 and Branch2 are created.
+1. *Add* **Parallel** action after the Switch activity. Two branches namely Branch1 and Branch2 are created.
 
-2.  Configure the name of **Branch1** as *save\_to\_FHIR\_Repo* and mention the description as "This branch contains logic to find patient in FHIR Repo. Accordingly insert or update the Patient info."
+2. Configure the name of **Branch1** as *save\_to\_FHIR\_Repo* and mention the description as "This branch contains logic to find patient in FHIR Repo. Accordingly insert or update the Patient info."
 
-3.  Click the *+* sign in the Branch1 integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
+3. Click the *+* sign in the Branch1 integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
 
-4.  On the **Basic Info** page,
+4. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* property, enter **findPatient**
     - for the *What is the endpoint's relative resource URI* property, enter **/Patient{query-string}**
     - for the *What action do you want to perform on the endpoint?*, enter **GET**
@@ -261,9 +261,9 @@ In this section create logic for two branches in parallel action.
       - **Add and review parameters for this endpoint**
       - **Configure this endpoint to receive the response**
     - Click **Continue**.
-5.  On the **Request Parameters** leave the defaults. Make sure **query-string** parameter is of **string** type.
+5. On the **Request Parameters** leave the defaults. Make sure **query-string** parameter is of **string** type.
 
-6.  On the **Configure Response** page
+6. On the **Configure Response** page
     - Select the *request payload format* to **JSON Sample**
     - Click the *&lt&lt&ltinline&gt&gt&gt* link.
     - Provide the below JSON and Click *Continue* and *Finish*
@@ -365,14 +365,14 @@ In this section create logic for two branches in parallel action.
     </copy>
     ```
 
-7.  *Edit* the **Map to Patient**. And provide the mapping as per below and *Click* on **Validate** and Navigate back to the canvas
+7. *Edit* the **Map to Patient**. And provide the mapping as per below and *Click* on **Validate** and Navigate back to the canvas
 
 | **Source**          | **Target**          |       
 | --- | ----------- |
 |**queryString** | findPatient Request &gt; Template Parameters &gt; **Query String** |
 {: title="Map to findPatient elements"}
 
-8.  *Add* **Switch** action after **Invoke findPatient**. Create conditional logic for three routes.
+8. *Add* **Switch** action after **Invoke findPatient**. Create conditional logic for three routes.
     - Route1 - Insert New Patient info
     - Route2- Update Patient info
     - Otherwise - Logger
@@ -380,11 +380,11 @@ In this section create logic for two branches in parallel action.
 Add another route and Integration flow should look like below
 ![Integration Progress Parallel Action with Three routes](images/integration-progress-parallel-switch-allroutes.png)
 
-9.  In the **Route1 - Insert New Patient** Click the **+** sign in the integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
+9. In the **Route1 - Insert New Patient** Click the **+** sign in the integration canvas. Search for **HAPI FHIR Test Server**. This invokes the REST  Adapter Configuration Wizard.
 
 Set the condition for Route1 as **patientExists = "false"**
 
-10.  On the **Basic Info** page,
+10. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* property, enter **SaveToHAPIServer**
     - for the *What is the endpoint's relative resource URI* property, enter **/Patient**
     - for the *What action do you want to perform on the endpoint?*, enter **POST**
@@ -393,7 +393,7 @@ Set the condition for Route1 as **patientExists = "false"**
       - **Configure this endpoint to receive the response**
     - Click **Continue**.
 
-11.  On the **Configure Request** page
+11. On the **Configure Request** page
     - Select the *request payload format* to **JSON Sample**
     - Click the *&lt&lt&ltinline&gt&gt&gt* link.
     - Provide the below JSON and Click *Continue*.
@@ -575,7 +575,7 @@ Set the condition for Route1 as **patientExists = "false"**
     </copy>
     ```
 
-12.  On the **Configure Response** page
+12. On the **Configure Response** page
     - Select the *response payload format* to **JSON Sample**
     - Click the *&lt&lt&ltinline&gt&gt&gt* link.
     - Provide the below JSON and Click *Continue* and then *Finish*.
@@ -756,7 +756,7 @@ Set the condition for Route1 as **patientExists = "false"**
           }
         </copy>
         ```
-12.  *Edit* the **Map to SaveToHAPIServer** activity and perform the below mapping
+12. *Edit* the **Map to SaveToHAPIServer** activity and perform the below mapping
 
 On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PIX:PID &gt;
 
@@ -797,7 +797,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
 
 ![Update Patient Route 2 Condition](images/update-patient-route2-condition.png)
 
-14.  On the **Basic Info** page,
+14. On the **Basic Info** page,
     - for the *What do you want to call your endpoint?* property, enter **updateHAPIServer**
     - for the *What is the endpoint's relative resource URI* property, enter **/Patient{query_string}**
     - for the *What action do you want to perform on the endpoint?*, enter **PUT**
@@ -810,7 +810,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
 15. On the **Request parameters** page
     - Select **string** type for parameter **query_string** and Click *Continue*
 
-16.  On the **Configure Request** page
+16. On the **Configure Request** page
     - Select the *request payload format* to **JSON Sample**
     - Click the *&lt&lt&ltinline&gt&gt&gt* link.
     - Provide the below JSON and Click *Continue*.
@@ -991,7 +991,7 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
       </copy>
       ```
 
-17.  On the **Configure Response** page
+17. On the **Configure Response** page
           - Select the *response payload format* to **JSON Sample**
           - Click the *&lt&lt&ltinline&gt&gt&gt* link.
           - Provide the below JSON and Click *Continue* and then *Finish*.
@@ -1172,9 +1172,9 @@ Set the condition for Route2 as **http.response.status ='200' and resourceType='
       </copy>
       ```
 
-18.   Save your integration flow
+18. Save your integration flow
 
-19.  *Edit* the **Map to updateHAPIServer** activity and perform the below mapping
+19. *Edit* the **Map to updateHAPIServer** activity and perform the below mapping
 
 On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt; PID:PID &gt;
 
@@ -1215,13 +1215,13 @@ Integration so far...
 
 ***Branch2***
 
-1.  In **Branch 2** of **Parallel** action Click the **+** sign in the integration canvas and *Add* the **Healthcare** action
+1. In **Branch 2** of **Parallel** action Click the **+** sign in the integration canvas and *Add* the **Healthcare** action
 
-2.  Name the Healthcare Action as **Translate2NativeHL7** and Select the action *Translate to outbound message* and Document as *A08\_PATIENT\_UPDATE\_2\_3\_1*
+2. Name the Healthcare Action as **Translate2NativeHL7** and Select the action *Translate to outbound message* and Document as *A08\_PATIENT\_UPDATE\_2\_3\_1*
 
 ![Configure Healthcare Action](images/branch2-healthcare-action-configure.png)
 
-3.  *Edit* the map activity of Healthcare action. Perform the mapping as per below
+3. *Edit* the map activity of Healthcare action. Perform the mapping as per below
 
 On the Sources Section *Expand* Convert Messsage Reponse &gt; Execute Response &gt; Convert Message Output &gt; Healthcare XML Document &gt; Transaction Data &gt
 
@@ -1262,18 +1262,18 @@ Final, mapping should look like below. *Validate* and *Save* your work.
 
 ![Final Copy of Mapping](images/mapping-v25-to-v231-copy-of-pid.png)
 
-4.  *Add* logger action after the **Healthcare** action Translate2NativeHL7. Log the HL7 V2.3.1 translated **Healthcare Reference Message*
+4. *Add* logger action after the **Healthcare** action Translate2NativeHL7. Log the HL7 V2.3.1 translated **Healthcare Reference Message*
 
 ![Log Outbound Message](images/log-v231-outbound-message.png)
 
-5.  Click the **+** sign in the integration canvas next to the Logger action. Search for **HC SEND HL7**. This invokes the MLLP  Adapter Configuration Wizard.
+5. Click the **+** sign in the integration canvas next to the Logger action. Search for **HC SEND HL7**. This invokes the MLLP  Adapter Configuration Wizard.
 
-6.  On the **Welcome** page,
+6. On the **Welcome** page,
     - for the *What do you want to call your endpoint?* property, enter **MLLPAdapter_Outbound**
 
     Click *Continue* and *Finish* the wizard. The port and host specified during Connection configuration is automatically taken by default.
 
-7.  *Edit* the **Map to MLLPAdapter\_Outbound** perform the following mapping.
+7. *Edit* the **Map to MLLPAdapter\_Outbound** perform the following mapping.
 On the Source section side *Expand* the Translate2NativeHL7Response &gt; Execute Response &gt; Translate Output.
 On the Target section side *Expand* the MLLPAdapter\_Outbound Request &gt; MLLP Outbound Message
 
@@ -1283,9 +1283,9 @@ Map the **Healthcare Message Reference** from the Sources to the **Healthcare Me
 
 *Validate* and *Save* the Integration Flow.
 
-8.  *Add* an **Assign** action after the **Parallel** action. Set tracking variable 2 (Name) and tracking variable 3 (FHIR ID) to use as Business Identifiers.
+8. *Add* an **Assign** action after the **Parallel** action. Set tracking variable 2 (Name) and tracking variable 3 (FHIR ID) to use as Business Identifiers.
 
-9.  Create a new assignment variable by using the existing **tracking\_var\_2** and value as *concat(C-PID.5-XPN-02, ' ', SC-XPN.1-FN-01)*
+9. Create a new assignment variable by using the existing **tracking\_var\_2** and value as *concat(C-PID.5-XPN-02, ' ', SC-XPN.1-FN-01)*
 
 ![Set Tracking Var 2](images/set-tracking-var-2.png)
 
@@ -1305,15 +1305,15 @@ Final Integration Flow
 
 ## Task 3: Invoke Processor Integration from Handler
 
-1.  Open the Handler Integration to continue with the rest of the design.
+1. Open the Handler Integration to continue with the rest of the design.
 
-2.  *Add* an **Assign** action and set tracking variables as per below
+2. *Add* an **Assign** action and set tracking variables as per below
     - Use variable tracking\_var\_2 and assign **translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; document-type**
     - Use variable tracking\_var\_3 and assign **translateHL7 &gt; executeResponse &gt; TranslateOutput &gt; msg-group &gt; document-version**
 
 ![Handler Assign Tracking Variables](images/handler-assign-tracking-vars.png)
 
-3.  *Add* an **Integration** action next to the Assign activity. This will bring up the local integration invoke configuration wizard.
+3. *Add* an **Integration** action next to the Assign activity. This will bring up the local integration invoke configuration wizard.
     - In the *Basic Info* page, enter as per below and Click *Continue*
       - for *What do you want to call your local integration invocation?* property, enter **invokeProcessor**
     - In the *Select Integration* page gives ability invoke another integration in same project or different project. Configure as per below and Click *Continue*
@@ -1322,7 +1322,7 @@ Final Integration Flow
       - for *Integration*, Select Processor Integration
     - In the *Select Operation* page, Select **POST** operation and Click *Continue* and *Finish* the wizard. Save your work.
 
-4.  *Edit* the map activity **invokeProcessor** and perform the mapping below:
+4. *Edit* the map activity **invokeProcessor** and perform the mapping below:
 
 Note: Highlight the root element and search for the element to find it easily.
 
@@ -1343,13 +1343,13 @@ Note: Wherever lookupValue function is used in the below table expand the mapper
 
 ![Map to Invoke Processor Elements Configuration](images/map-invoke-processor-elements.png)
 
-5.  Validate the mapping and Save the Integration flow.
+5. Validate the mapping and Save the Integration flow.
 
-6.  Configure Business Identifier field as **message-control-id** for tracking\_var\_1 variable
+6. Configure Business Identifier field as **message-control-id** for tracking\_var\_1 variable
 
 ![Handler Integration Business Identifier Configuration](images/handler-integration-business-identifier.png)
 
-7.  *Activate* the Integration flow.
+7. *Activate* the Integration flow.
 
 
 ## Task 4: Congratulations

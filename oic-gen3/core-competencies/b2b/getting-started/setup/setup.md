@@ -33,10 +33,10 @@ Configure File Server settings.
 3. Select Users from left Navigation pane, search for your User Name and click on Configure.
 4. Click on Switch to enable and click on Save.
 5. Select ***Folders*** from left Navigation pane.
-  ![Navigation to Files](images/file-server-files1.png)
+    ![Navigation to Files](images/file-server-files1.png)
 6. Click *Create* to create a folder named **upload** and then click on upload folder and again click on Create button to create a new folder named **users**, then enter into the users folder and hit the create button to create the folder named ***B2BWorkshop***. Your final folder structure should look as follows **upload &gt; users &gt; B2BWorkshop**
 7. Select the ***B2BWorkshop*** Folder and create two additional Folders named ***B2BTPDELLIn*** and ***B2BTPDELLOut***.
-  ![Workshop Folder structure](images/file-server-files2.png)
+    ![Workshop Folder structure](images/file-server-files2.png)
 **Note**: You will be using the above Folder structure in next labs.
 8. Select ***Users*** from left Navigation pane. Find and select the user you are currently logged in as.  
 If your user has not yet been configured to use File Server, click ***Select*** to configure your user.  
@@ -46,11 +46,11 @@ Otherwise, click ***Edit Configuration*** for your user.
     * Select **Home Folder** as ***upload &gt; users &gt; B2BWorkshop***, click on ***Save*** and click on ***Close***
     ![User configuration](images/user-permissions2.png)
 9. Select ***Folders*** from left Navigation pane. Click ***Permissions*** on the **B2BWorkshop** folder.
-  ![Select Folder Permissions](images/user-permissions4.png)
+    ![Select Folder Permissions](images/user-permissions4.png)
 10. Click ***Add Permissions*** and select your user. Click ***Add***.
-  ![Add user to Folder permissions](images/user-permissions5.png)
+    ![Add user to Folder permissions](images/user-permissions5.png)
 11. Select ***All*** and ***Propagate to subfolders***. All of the permission check boxes should be checked. Click ***Save*** and exit the Permissions page.
-  ![Folder permissions](images/user-permissions6.png)
+    ![Folder permissions](images/user-permissions6.png)
 
 ## Task 2: Connect to File Server with FTP Client
 
@@ -63,10 +63,10 @@ To access files on the File Server you will need to use an FTP Client. You will 
 
 1. To obtain the File Server IP Address and Port, select **Settings** from left Navigation pane. The IP and Port are located in the **IP and Port Information** section of the **Settings** page.
 2. Using your FTP Client choice, connect to the File Server using the SFTP - SSH File Transfer Protocol.  
-  ![Example FTP Client configuration](images/ftpclient.png)
+    ![Example FTP Client configuration](images/ftpclient.png)
 A example configuration using FileZilla FTP Client.  
 If the permissions are configured correctly, you should be able to list, read, and write files on the **B2BWorkshop**, **B2BTPDELLIn**, and **B2BTPDELLOut** Folders.
-  ![Example FTP Client directory listing](images/user-permissions8.png)
+    ![Example FTP Client directory listing](images/user-permissions8.png)
 
 ## Task 3: Create Connection with File Server
 

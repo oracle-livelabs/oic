@@ -27,37 +27,37 @@ Note: Make sure the Message Receiver and Sender is Open. Receiver is listening t
 
 ![HL7 Inspector Sender Receiver Open](images/hl7-inspector-receive-send-open.png)
 
-1.  Open the HL7 Inspector, Select **File** &gt; **File Open** and browse the 2500\_ADT\_A08\_Barry\_White\_v2.5.hl7 from the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts in **hl7 messages** folder. In the **Import Options** window leave the defaults and Click *OK*.
+1. Open the HL7 Inspector, Select **File** &gt; **File Open** and browse the 2500\_ADT\_A08\_Barry\_White\_v2.5.hl7 from the [downloaded](https://objectstorage.us-phoenix-1.oraclecloud.com/p/WxPypgKK3_4DOtQHJFDhya1hFvbzNqds9Y4MZ1YL84X_o4wexeny3UctLb7UIiL1/n/oicpm/b/oiclivelabs/o/oic3/get-started-oic-hc/get-started-hc-lab-artifacts.zip) artifacts in **hl7 messages** folder. In the **Import Options** window leave the defaults and Click *OK*.
 
 ![Hl7 Inspector Open Message](images/hl7-inspector-receive-send-hl7-message.png)
 
-2.  Click on *Send Selected Message* in the Send Message window at the bottom. This will send the selected HL7 ADT 2.5 message.
+2. Click on *Send Selected Message* in the Send Message window at the bottom. This will send the selected HL7 ADT 2.5 message.
 
-3.  An Acknowledgement message is received in the **Sender Message** window.
+3. An Acknowledgement message is received in the **Sender Message** window.
 
 ![HL7 Inspector Send Message](images/hl7-inspector-send-test-message.png)
 
-4.  Navigate to the **Receiver Message** as highlighted below. Notice the converted HL7 V2.3.1 message, wherein one of the branch in the processor integration flow was able to convert V2.5 to V2.3.1 and delivered the message to HL7 Inspector using MLLP adapter host:port configured.
+4. Navigate to the **Receiver Message** as highlighted below. Notice the converted HL7 V2.3.1 message, wherein one of the branch in the processor integration flow was able to convert V2.5 to V2.3.1 and delivered the message to HL7 Inspector using MLLP adapter host:port configured.
 
 ![HL7 Receiver Converted Message](images/hl7-inspector-receive-231-message.png)
 
-5.  You can track instances and monitor errors in a project from a single workspace during runtime. You can also access and view the activity stream that shows details about the movement of messages through integrations.
+5. You can track instances and monitor errors in a project from a single workspace during runtime. You can also access and view the activity stream that shows details about the movement of messages through integrations.
 
 Navigate to the Project **Healthcare ADT Project**. Click on *Observe* tab and Select *Instances*. Notice that 2 Instances are created (Handler and Processor integrations are triggered).
 
 ![End to End Test Flow Instances View](images/test-flow-observe-instances.png)
 
-6.  Explore the Activity Stream of Processor Integration **Branch1** in parallel action. Notice that one of the routes (Create Patient / Update Patient) is executed based on the patient data available in the HAPI FHIR Test Server. Explore the FHIR API response in the Activity stream.
+6. Explore the Activity Stream of Processor Integration **Branch1** in parallel action. Notice that one of the routes (Create Patient / Update Patient) is executed based on the patient data available in the HAPI FHIR Test Server. Explore the FHIR API response in the Activity stream.
 
 ![Processor Integration Activity Stream](images/test-flow-observe-processor-activity-stream.png)
 
 ## Task 2: Troubleshooting Tips
 
-1.  Processor integration is not triggered: Verify if the processor integration identifier provided is same as in the HL7ProcessorRoutes lookup
+1. Processor integration is not triggered: Verify if the processor integration identifier provided is same as in the HL7ProcessorRoutes lookup
 
-2.  Handler Integration is not triggered: Verify the port provided in the HL7 Simulator application Send Message configuration provided is same as in the HC RECEIVE HL7 connection in OIC
+2. Handler Integration is not triggered: Verify the port provided in the HL7 Simulator application Send Message configuration provided is same as in the HC RECEIVE HL7 connection in OIC
 
-3.  Processor Integration not sending converted HL7 V2.3.1 message to HL7 Inspector: Check the port configured in the HL7 Inspector application **Message Receiver** is same as in the HC SEND HL7 Connection in OIC
+3. Processor Integration not sending converted HL7 V2.3.1 message to HL7 Inspector: Check the port configured in the HL7 Inspector application **Message Receiver** is same as in the HC SEND HL7 Connection in OIC
 
 
 ##  Congratulations! 🎉

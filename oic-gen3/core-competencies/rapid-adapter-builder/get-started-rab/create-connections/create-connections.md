@@ -71,7 +71,7 @@ Create a connection using newly published **Acme OM Application** Adapter to inv
 
 Keep all other values as default.
 
-4.  In the *Configuration* page, enter the following information:
+4. In the *Configuration* page, enter the following information:
 
 | **Field**  | **Values** |
 |---|---|
