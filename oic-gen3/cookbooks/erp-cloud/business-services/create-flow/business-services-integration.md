@@ -504,6 +504,7 @@ There are a few hints in the bonus lab for extending the use case to validate th
 1. Create an Otherwise condition for the supplier and supplier site to return the appropriate fault payload.
 
 The final integration changes for the bonus lab are as follows:
+<<<<<<< HEAD
     ![Final Integration Flow with Bonus](images/final-integration-flow-bonus.png)
 
 **Congratulations!** You have learned how to invoke an ERP Cloud REST API with out-of-the-box adapter capabilities. The ERP Cloud Adapter abstracts APIs, services, and business objects and provides an intuitive interface that simplifies real-time synchronization.
