@@ -33,7 +33,7 @@ In this lab, you will:
 
 1. In the left Navigation pane, click ***Projects***, click on the project which you have created, click ***B2B*** > **Documents** > **+**. ***Create*** a **B2B Document** and name it as **Invoice Document 810 4030** and select ***Document Standard*** as **X12**, ***Document Version*** as **4030** and ***Document Type*** as **810 (Invoice)** and click on ***Create***. Select ***Document Schema*** as **Standard** and click on ***Create***, click on ***Save***
 
-![inbound-b2b-810-invoice-document](images/invoice-document.png)
+    ![inbound-b2b-810-invoice-document](images/invoice-document.png)
 
 ### *Verify Host Profile*
 
@@ -148,7 +148,7 @@ The Adapter Endpoint Configuration Wizard opens
    |     Repeating Element       |     Drag and drop ‘message’ repeating element from the path execute   > request-wrapper    |
    |     Current Element Name    |     B2B-Doc-Message |
 
-   ![For-Each-Activity-1](images/foreach-1.png)
+    ![For-Each-Activity-1](images/foreach-1.png)
 
 ## Task 4: Configure Current Message as Tracking Variable
 
@@ -161,7 +161,7 @@ The Adapter Endpoint Configuration Wizard opens
 ## Task 5: Configure the B2B Translate Action
 
 1. On the right side of the canvas, click ***Actions***  , drag & drop ***B2B*** action on the designer after the **Assign-Current-Msg** element.
-The **Configure B2B Action** wizard opens
+    The **Configure B2B Action** wizard opens
 2. On the **Basic Info** page
     * for the **What do you want to call this B2B action?** element, enter ***Fetch-Message***
     * select a mode as ***B2B Trading Partner mode***, and click ***Continue***.

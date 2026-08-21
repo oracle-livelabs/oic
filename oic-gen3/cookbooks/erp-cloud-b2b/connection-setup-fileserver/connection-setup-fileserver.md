@@ -28,7 +28,7 @@ This lab assumes you have:
 
     If your organization hasn't enabled File Server yet, and you select File Server from the navigation pane, the following message appears: *Start sharing files...*
 
-    ![File Server Not Enabled](images/fileservernotenabled.png =50%x50%)
+    ![File Server Not Enabled](images/file-server-not-enabled.png)
 
 
     To enable File Server:
@@ -37,7 +37,7 @@ This lab assumes you have:
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
 3. Select your instance.
-   The Integration Instance Details page is displayed.
+    The Integration Instance Details page is displayed.
 4. Click the *Enable* link for File Server on the Integration Instance Information tab.
 
     ![Enable File Server](images/file-server-enablement1a.png)
@@ -50,10 +50,10 @@ This lab assumes you have:
 
     ![File Server Enabled](images/file-server-enablement3.png)
 
-7.  Similarly, Click the **Enable** link for Visual Builder on the Integration Instance Information tab
+7. Similarly, Click the **Enable** link for Visual Builder on the Integration Instance Information tab
     ![Enable VB](images/enable-visual-builder.png)
 
-8.  When prompted, click *Enable* to confirm you want to enable Visual Builder. Once complete, the OIC instance status changes back to green with Active Status.
+8. When prompted, click *Enable* to confirm you want to enable Visual Builder. Once complete, the OIC instance status changes back to green with Active Status.
 
 For additional Instructions please refer [Enabling Visual Builder](https://docs.oracle.com/en/cloud/paas/application-integration/visual-admin/administering-visual-builder1.html)
 
@@ -78,7 +78,7 @@ Configure File Server settings. This is required as you are using Embedded File 
 
 6. Click *Create* and create a Folder named **upload**. Create a folder structure as follows **upload &gt; users &gt; B2BTPDELLOut**
 
-6.  Click *Create* to create a folder named **upload** and then click on upload folder and again click on Create button to create a new folder named **users**, then enter into the users folder and hit the create button to create the folder named **B2BTPDELLOut**. Your final folder structure should look as follows **upload &gt; users &gt; B2BTPDELLOut**
+6. Click *Create* to create a folder named **upload** and then click on upload folder and again click on Create button to create a new folder named **users**, then enter into the users folder and hit the create button to create the folder named **B2BTPDELLOut**. Your final folder structure should look as follows **upload &gt; users &gt; B2BTPDELLOut**
 
 7. Click on *Permissions* as highlighted below on the **B2BTPDELLOut** Folder
     ![Workshop Folder structure](images/fs-permissions.png)
@@ -101,33 +101,33 @@ To access files on the File Server you will need to use an FTP Client. You will 
 * Your Oracle Integration username.
 * Your Oracle Integration password.
 
-1.  Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
+1. Alternatively, you can use the OCI console *Cloud Shell* to download the file from the embedded file server.
 
-2.  Navigate to OCI console and click on *Cloud Shell* from the drop-down menu. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
-![Select Cloud Shell](images/select-cloud-shell.png)
+2. Navigate to OCI console and click on *Cloud Shell* from the drop-down menu. Note that the OCI CLI running in the Cloud Shell will execute commands against the region selected in the Console's Region selection menu when the Cloud Shell was started.
+    ![Select Cloud Shell](images/select-cloud-shell.png)
 
-This displays the Cloud Shell in a "drawer" at the bottom of the console
+    This displays the Cloud Shell in a "drawer" at the bottom of the console
 
-3.  Enter the below command to connect with the file server
+3. Enter the below command to connect with the file server
     **sftp -P sftp-port oic-username@sftp-host**
 
     When prompted for adding the fingerprint to the host list enter *yes*.
 
     Replace the sftp-port, oic-username and sftp-host with the information noted in the previous lab (Lab 2- Task 2). When prompted for the password provide your oic credentials.
 
-![Cloud Shell Connect Test](images/cloud-shell-connect-test-1.png)
+    ![Cloud Shell Connect Test](images/cloud-shell-connect-test-1.png)
 
-4.  At the SFTP prompt provide **ls** to list all files and directories. Provide command **cd B2BTPDELLOut** and the provide command **ls** again. Currently, no files are listed.
+4. At the SFTP prompt provide **ls** to list all files and directories. Provide command **cd B2BTPDELLOut** and the provide command **ls** again. Currently, no files are listed.
 
-![Cloud Shell Connect Test SFTP](images/cloud-shell-connect-test.png)
+    ![Cloud Shell Connect Test SFTP](images/cloud-shell-connect-test.png)
 
 ## Task 4: Import supporting lab artifacts
 
 There are some artifacts which are made available so that you can focus on the core part of the usecase. [Download](../files/oic-ocw-artifacts.zip?download=1) the lab artifacts and unzip in any local directory.
 
-1.  Navigate to **OIC console** and from the left corner Hamburger Menu Select *Design* &gt; *Packages*. Select *Import* action and browse for the *oic.ocw.hol.par* package under **Import** folder.
+1. Navigate to **OIC console** and from the left corner Hamburger Menu Select *Design* &gt; *Packages*. Select *Import* action and browse for the *oic.ocw.hol.par* package under **Import** folder.
     ![Import Integration Package](images/import-supporting-package.png)
-Select *Import and Configure*. This will open the *Configuration Editor*
+    Select *Import and Configure*. This will open the *Configuration Editor*
     ![Open Config Editor](images/config-editor-show.png)
     The package consists of 2 Connections and Integration flows
     **Connections**
@@ -137,9 +137,9 @@ Select *Import and Configure*. This will open the *Configuration Editor*
     - Change Order ERP PO Proxy - Integration updates PO information
     - Purchase Order Details Proxy - Integration gets PO details given an Order Number and Legal Entity
 
-2.  *Edit* the **REST Interface** connection and click on *Test*. No other changes required.
+2. *Edit* the **REST Interface** connection and click on *Test*. No other changes required.
 
-3.  Similarly, *Edit* the **ERP Cloud** connection and provide the following information and click on *Test* and wait until you receive a confirmation box that the test was successful.
+3. Similarly, *Edit* the **ERP Cloud** connection and provide the following information and click on *Test* and wait until you receive a confirmation box that the test was successful.
 
     | **Field**  | **Values** |
     |---|---|
@@ -151,8 +151,8 @@ Select *Import and Configure*. This will open the *Configuration Editor*
 
     Finally,*Save* the connection
 
-4.  In the **Configuration Editor**, Select *Activation* in the title bar which brings up the **Review and Activate** section. Hover on the **Change Order ERP PO Proxy** Integration and Select *Activate*. Click **Refresh** icon periodically and confirm the status is changed to **Active**
-![Activate Package Integrations](images/activate-package-integration.png).
+4. In the **Configuration Editor**, Select *Activation* in the title bar which brings up the **Review and Activate** section. Hover on the **Change Order ERP PO Proxy** Integration and Select *Activate*. Click **Refresh** icon periodically and confirm the status is changed to **Active**
+    ![Activate Package Integrations](images/activate-package-integration.png).
     Select the *Tracing* level as **Debug** and click on *Activate*.
     Similarly, activate the **Purchase Order Details Proxy** Integration. Both Integration status turns to **Active** status, which indicates the integration is ready to accept requests.
 
@@ -170,7 +170,7 @@ To access the File Server from an Integration, you will need to create an FTP Co
     If you are a non Bootcamp user then skip step 5 and continue with other steps..
 
 5. Search for **File**, Please note that the connection with the name **File Server** is already created by the instructors, configured and shared with other projects.
-Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
+    Do not get confused with the same name, both the connections are in the different projects so, we are good with it. And click on **File Server** and click on **Save**. Exit the connection canvas by clicking the back button on the top left side of the screen.
 
     ![File Server Connection](images/fileserversharedconn.png).
 
@@ -194,26 +194,26 @@ Do not get confused with the same name, both the connections are in the differen
 1. In OIC Console Home page, on the left Navigation pane Select *Visual Builder* (VB). This will navigate to the VB console.
 
 2. Select *Import* Action
-   ![Import VB App](images/import-vb-app-1.png)
+    ![Import VB App](images/import-vb-app-1.png)
 
 3. In the Import page, Click *Drag and Drop* and browse  **LOCAppTestOPA.zip** application from the downloaded artifacts available under **Import** folder. Leave the values of **Application ID** and **Application Name** to default.
-   Click on *Import*.
-   Select the imported VB application. This will open the VB designer console.
+    Click on *Import*.
+    Select the imported VB application. This will open the VB designer console.
 
 4. From the left side Menu select *Business Objects*. Click on *PO* Business object from the list objects.
     ![Select PO Object](images/select-po-object.png)
 
-5.  On the Right side page, Select *Endpoints* tab. Click on **create\_po** endpoint.
+5. On the Right side page, Select *Endpoints* tab. Click on **create\_po** endpoint.
     ![Select PO Endpoint](images/po-endpoint-1.png)
 
-6.  In the **Endpoints** tab select *Test* tab. Copy the endpoint url and make a note of it. We will use this url when creating a REST connection.
+6. In the **Endpoints** tab select *Test* tab. Copy the endpoint url and make a note of it. We will use this url when creating a REST connection.
     ![Copy Endpoint URL](images/copy-po-endpoint-url.png)
 
 ### Create REST Adapter Connection in OIC pointing to VB endpoint
 
-1.  Navigate back to OIC Console and Projects. Create a connection using **REST Adapter** and name it as *Visual Builder*. Select role as *Invoke*.
+1. Navigate back to OIC Console and Projects. Create a connection using **REST Adapter** and name it as *Visual Builder*. Select role as *Invoke*.
 
-2.  Configure the connection properties and security auth scheme per below
+2. Configure the connection properties and security auth scheme per below
 
     | Field                   | Value                                                 |
     |-------------------------|-------------------------------------------------------|
@@ -225,7 +225,7 @@ Do not get confused with the same name, both the connections are in the differen
     | Access Type            | Public Gateway |
     {: title="Visual Builder Rest connection properties"}
 
-3.  Click on *Test* connection and wait for the confirmation message.
+3. Click on *Test* connection and wait for the confirmation message.
 
 **Congratulations!** You have completed most of the prerequisites setup and configuration to get started with the design phase of the usecase.
 
@@ -241,4 +241,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Oracle Integration Product Management
 * **Contributors** - Subhani Italapuram, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

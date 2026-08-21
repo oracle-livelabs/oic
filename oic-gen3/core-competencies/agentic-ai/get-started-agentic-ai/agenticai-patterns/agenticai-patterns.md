@@ -183,7 +183,7 @@ Invoked via Tool C's integration from Agent 1, the Remediation & Escalation Agen
 7. Manual review occurs before payment
 8. Closed-loop audit trail is maintained
 
-![Pattern OIC Agent As Tool](images/pattern-agent-as-tool.png)
+    ![Pattern OIC Agent As Tool](images/pattern-agent-as-tool.png)
 
 #### Key Benefits
 

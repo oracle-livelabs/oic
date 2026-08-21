@@ -108,7 +108,7 @@ Follow these steps to view the sales orders record in the designated DB table.
     This opens the *ADMIN.V\_SALES\_ORDERS* table window.
 
 8. Click on **Data** in the left menu to display the table data. Verify your inserted Sales Orders records.
-   ![Show SO data](images/show-so-data.png)
+    ![Show SO data](images/show-so-data.png)
 
 ## Task 5: Verify sales orders file in Object Storage
 

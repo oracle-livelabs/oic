@@ -27,17 +27,17 @@ This lab assumes you have:
     You can please skip step1 if you are already on the edit project page.
 2. Click the ***Observe*** tab, click ***Integrations***
 3. Look at the list of integrations which are processes successfully.
-![observe-integrations](../images/observe-integrations.png)
+    ![observe-integrations](../images/observe-integrations.png)
 
 ## Task 2: View Subscribed Instances in a Project
 
 1. Click ***Subscriptions***
-![observe-subscriptions](../images/observe-subscriptions.png)
+    ![observe-subscriptions](../images/observe-subscriptions.png)
 
 ## Task 3: View Instances in a Project
 
 1. Click ***Instances***
-![observe-instances](../images/observe-instances.png)
+    ![observe-instances](../images/observe-instances.png)
 
 You may now **proceed to the next lab**.
 
@@ -50,4 +50,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

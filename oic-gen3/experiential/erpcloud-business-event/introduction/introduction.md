@@ -1,27 +1,32 @@
 # Introduction
 
-## About this Workshop
-The ERP Cloud Business Events Workshop will cover the recommended steps to complete an end-to-end use case based on ERP Cloud Business Events in Oracle Integration 3. This workshop will leverage the Oracle ERP Cloud Adapter, which enables you to create an integration with Oracle Enterprise Resource Planning (ERP) applications. One of the key differentiators of this adapter is support for subscribing to business events raised by various modules in Oracle ERP Cloud and Oracle Supply Chain Cloud.
+## About This Workshop
 
-This workshop will showcase the event subscription capabilities to create an App Driven i.e., real-time integration, with updates in ERP Cloud sent immediately to the Oracle Autonomous Database. The steps outlined in this workshop can be used to demo the event-driven capabilities of the ERP Cloud adapter in Oracle Integration 3.
+The ERP Cloud Business Events Workshop covers the recommended steps to complete an end-to-end use case based on ERP Cloud business events in Oracle Integration 3. This workshop uses the Oracle ERP Cloud Adapter, which enables you to create an integration with Oracle Enterprise Resource Planning (ERP) applications. One of the adapter's key differentiators is its support for subscribing to business events raised by various Oracle ERP Cloud and Oracle Supply Chain Cloud modules.
 
-Estimated workshop time: 2 hours
+This workshop showcases event subscription capabilities by creating an app-driven, real-time integration that sends ERP Cloud updates immediately to Oracle Autonomous Database. The steps outlined in this workshop can be used to demonstrate the event-driven capabilities of the ERP Cloud Adapter in Oracle Integration 3.
 
-### What is Oracle Integration 3
+Estimated Workshop Time: 2 hours
+
+### What Is Oracle Integration 3?
 With Oracle Integration 3 (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, *develop* visual applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
 
 [First Glimpse - Oracle Integration 3](youtube:yW3TEBWkFbg)
 
 
 ### Objectives
-In this workshop, you will learn the following:
-- Create Connections and Integrations in OIC
-- Capture ERP Purchase Order events and orchestrate the data to a target database table
+
+In this workshop, you will learn how to:
+
+- Create connections and integrations in OIC.
+- Capture ERP purchase order events and orchestrate the data to a target database table.
 
 ### Prerequisites
-This lab assumes you have the following:
-- Oracle Cloud Account with credits to provision services.
-- Oracle ERP Cloud access
+
+This lab assumes you have:
+
+- An Oracle Cloud account with credits to provision services.
+- Access to Oracle ERP Cloud.
 
 
 ## Leveraging the ERP Adapter in Oracle Integration 3
@@ -40,11 +45,11 @@ The Oracle ERP Cloud Adapter provides the following key benefits:
 - Enables you to upload a file in the Oracle ERP Cloud business tables.
 - Enables you to upload files to Oracle WebCenter Content (Universal Content Manager) in encrypted or unencrypted format.
 
-## Leveraging the Oracle Autonomous Data Warehouse (ADW) adapter in Oracle Integration 3
-The Oracle Autonomous Data Warehouse Adapter enables you to integrate the Oracle Autonomous Data Warehouse database with Oracle Integration through use of direct connectivity. Use the Oracle Autonomous Data Warehouse Adapter to execute SQL queries or stored procedures in the Oracle database.
+## Leveraging the Oracle Autonomous Data Warehouse (ADW) Adapter in Oracle Integration 3
+The Oracle Autonomous Data Warehouse Adapter enables you to integrate the Oracle Autonomous Data Warehouse database with Oracle Integration through direct connectivity. Use the Oracle Autonomous Data Warehouse Adapter to execute SQL queries or stored procedures in the Oracle database.
 The Oracle Autonomous Data Warehouse Adapter provides the following benefits:
 - Support for using direct connectivity to connect to the Oracle Autonomous Data Warehouse database in place of using the on-premises connectivity agent.
-- Support for the bulk data import operation
+- Supports the bulk data import operation.
 - Support for invocation of stored procedures in the Oracle database.
 - Support for updating or inserting multiple records in a single request.
 
@@ -60,4 +65,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Ravi Chablani, Product Management - Oracle Integration
 * **Author** - Subhani Italapuram, Product Management - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

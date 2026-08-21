@@ -47,7 +47,7 @@ This lab assumes you have:
 
   Once the setup is completed on both the ends (and tested), then the two parties - your company and the external trading partner, are ready to send and receive documents.
 
-  ![Trading Partners](./images/gettingstarted-tradingpartners.png)
+    ![Trading Partners](./images/gettingstarted-tradingpartners.png)
 
 - VAN Providers
 

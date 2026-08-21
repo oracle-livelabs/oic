@@ -19,11 +19,11 @@ The diagram illustrates the high-level flow of an integration process involving 
 
 ### Components and Flow Description:
 
-1.  **Source Systems (Left Panel):**
+1. **Source Systems (Left Panel):**
       - This panel shows various enterprise applications and on-premises/legacy systems like Workday, Salesforce, SAP SuccessFactors, Oracle E-Business Suite, PeopleSoft, Siebel, SAP, and mainframe systems.
       - These systems can either send data to or receive data from Oracle Integration via an SFTP client or other integration mechanisms.
 
-2.  **Oracle Integration (Middle Panel):**
+2. **Oracle Integration (Middle Panel):**
       - **Flow 1:**
         - **Initiate Bulk Export:** Oracle Integration initiates a bulk data export request to ERP Cloud.
         - This is a trigger-based flow, typically started by a scheduled process or an event from the source systems.
@@ -32,7 +32,7 @@ The diagram illustrates the high-level flow of an integration process involving 
         - **Enrich/Transform:** The data extracted from UCM is enriched or transformed according to business requirements.
         - **Write Final Formatted File:** The enriched or transformed data is written into a final formatted file, which is then ready for use or for transfer to the target systems.
 
-3.  **ERP Cloud (Right Panel):**
+3. **ERP Cloud (Right Panel):**
       - **Export Bulk Data Process:**
         - The bulk export process in ERP Cloud uses Out of the box Scheduled Jobs which is backed by Business Intelligence Publisher (BIP) report to generate data extracts.
         - The generated data is uploaded to UCM, ensuring secure storage and retrieval.
@@ -118,7 +118,7 @@ A map action named InitiateExtract is automatically created. We will define this
     - Enter the value given below
 
     ```
-    <copy>"oracle/apps/ess/financials/commonModules/shared/common/outbound,FinOutboundProcess"</copy
+    <copy>"oracle/apps/ess/financials/commonModules/shared/common/outbound,FinOutboundProcess"</copy>
     ```
 
     - Click on Save
@@ -128,22 +128,22 @@ A map action named InitiateExtract is automatically created. We will define this
     - Right click on **Parameter List** and then click on ***Create Target Node*** and enter the value given below.
 
     ```
-    <copy>"92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,#NULL,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,12-19,N,N,300000046975971,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL"</copy
+    <copy>"92,/oracle/apps/ess/financials/commonModules/shared/common/outbound;PayablesTransactionsExtract,BIPREPORT,FULL_EXTRACT,#NULL,300000046987012,#NULL,#NULL,#NULL,#NULL,#NULL,12-19,N,N,300000046975971,#NULL,#NULL,#NULL,FULL_EXTRACT,#NULL,#NULL,#NULL,PayablesTransactionsExtract,#NULL"</copy>
     ```
     - Right click on **Job Options** and then click on ***Create Target Node*** and enter the value given below.
 
     ```
-      <copy>"ExtractFileType=ALL"</copy
+      <copy>"ExtractFileType=ALL"</copy>
     ```
     - For **Callback URL**, skip this mapping for now. We will assign a value after we design and activate the callback flow
     - Right click on **Notification Code** and then click on ***Create Target Node*** and enter the value given below.
     ```
-    <copy>30</copy
+    <copy>30</copy>
     ```
     ![initiateextractMapping](../images/initiate-extract-mapping.png)
 
 7. Click on ***Validate***
-A confirmation message appears.
+    A confirmation message appears.
 8. Click ***&lt; (Go back)***
 9. Click ***Save*** to persist changes.
 
@@ -201,7 +201,7 @@ A confirmation message appears.
 ## Task 7: Create the Download Activity
 1. Hover over the outgoing arrow for the **BulkExtractCallback** activity and click ***+*** icon.
 2. In the Search field, begin typing **ERP Cloud Integration Service** to find your connection and Click on it.
-The Configure SOAP Endpoint wizard appears.
+    The Configure SOAP Endpoint wizard appears.
 3. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***DownloadFile***
      - Click ***Continue***.
@@ -261,7 +261,7 @@ A map action named DownloadFile is automatically created. We will define this da
 1. Hover over the outgoing arrow for the **DownloadFile** activity and click **+** icon.
 2. In the Search field, begin typing **File Server** to find your connection
 3. Select the connection named File Server.
-The Configure Oracle Adapter Endpoint Configuration Wizard appears.
+    The Configure Oracle Adapter Endpoint Configuration Wizard appears.
 4. On the **Basic Info** page,
      - for the **What do you want to call your endpoint?** element, enter ***WriteExtract***
      - Click ***Continue***.
@@ -312,7 +312,7 @@ Manage business identifiers that enable you to track fields in messages during r
 
 
 4. Click on **...(Actions)** menu of the **ERP Bulk Extract Callback** integration (Refresh the page if required)
-![Integration Action Menu](../images/integrationactionsmenu.png)
+    ![Integration Action Menu](../images/integrationactionsmenu.png)
 5. Click on ***Run details***
 6. Copy **Metadata URL** and save it in some text file.
 
@@ -349,8 +349,8 @@ Manage business identifiers that enable you to track fields in messages during r
     ![Run Integration](../images/run-integration.png)
 2. Click on ***Run***
 3. Click the link which appears on top to track the instance.
-The track instance page appears. The Integration state should be processing or successful.
-OR you can also track by clicking on ***Observability*** tab in your project, and click on ***Instances***
+    The track instance page appears. The Integration state should be processing or successful.
+    OR you can also track by clicking on ***Observability*** tab in your project, and click on ***Instances***
 4. Make sure that both the integrations **ERP Bulk Extract** and **Bulk Extract Callback** completed successfully. If not, fix the issues.
 5. Click on ***Observability*** tab in your project, Select ***Instances*** and Click on the Instance of ERP Bulk Extract and make a note of Process Id which is returned as a response from the activity stream.
 
@@ -388,4 +388,4 @@ Through this lab, you've gained valuable insights into:
 
 * **Author** - Subhani Italapuram, Director Product Management, Oracle Integration
 * **Contributors** - Kishore Katta, Director Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

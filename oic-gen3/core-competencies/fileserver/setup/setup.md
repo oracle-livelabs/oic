@@ -79,7 +79,7 @@ Now you have an external table which will be used in the Integration flow.
 2. If needed, select the compartment where you created your Oracle Integration 3 instance. You should see your instance.
 
 3. Select your instance.
-   The Integration Instance Details page is displayed.
+    The Integration Instance Details page is displayed.
 4. Click the Enable link for File Server on the Integration Instance Information tab.
 5. When prompted to confirm enabling File Server, click ***Enable***. The OIC icon turns orange and its status changes to Updating. Enablement can take several minutes.
 
@@ -111,7 +111,7 @@ Configure File Server settings. This is required as you are using Embedded File 
     ![Workshop Folder structure](images/fs-permissions.png)
     
 9. Click **Add Permissions** and select your user. Click **Add**.
-   ![Add user to Folder permissions](images/user-permissions-1.png)
+    ![Add user to Folder permissions](images/user-permissions-1.png)
 10. Select **All** and **Propagate to subfolders**. All of the permission checkboxes should be checked. Click **Save** and exit the Permissions page.
     ![Folder permissions](images/user-permissions1-1.png)
 
@@ -136,4 +136,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Oracle Integration Product Management
-- **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+- **Last Updated By/Date** - Subhani Italapuram, Aug 2026

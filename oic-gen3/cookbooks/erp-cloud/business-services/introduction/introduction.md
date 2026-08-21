@@ -13,7 +13,7 @@ In this workshop, we will build an OIC integration flow that receives invoice an
 Once these validations are complete, the integration will invoke Oracle ERP Cloud's business services to create the invoice and associated line items. Upon successful completion, the system will return a status to the user, indicating whether the invoice was created successfully or if any errors occurred.
 
   The following diagram shows the runtime interaction between the systems involved in this use case:
-  ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
+    ![Create Invoice Architecture](../create-flow/images/create-invoice-architecture.png)
 
 Estimated Workshop Time: 90 minutes
 

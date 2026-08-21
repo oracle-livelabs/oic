@@ -56,7 +56,7 @@ This lab assumes you have
 
 1. In the *Security Console*, select **Users** tab and click **Add User Account**.
 
-2.  In the *Add User Account* Canvas, enter the following information:
+2. In the *Add User Account* Canvas, enter the following information:
 
     | **Field**  | **Value** |
     |---|---|

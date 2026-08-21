@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This lab walks you through the process of setting up a Robot environment to create Robot flows. This includes the installation of the robot agent and its dependencies.
+This lab walks you through the process of setting up a robot environment to create robot flows. This includes installing the robot agent and its dependencies.
 
 ### About Robot Environments
 
 The host where a robot runs, typically a Linux or Windows virtual machine (VM), is called an environment. It is common to group these VMs logically into environment pools to enable load balancing in production.
 
-For this workshop, we will complete the steps to setup a robot on your local machine.
+For this workshop, you will set up a robot on your local machine.
 
 Estimated Lab Time: 15 minutes
 
@@ -16,22 +16,22 @@ Estimated Lab Time: 15 minutes
 
 In this lab, you will:
 
-* Install JAVA Runtime (optional)
-* Install and configure the Robot Agent
-* Start the Robot Agent
+* Install the Java Runtime Environment (optional).
+* Install and configure the Robot Agent.
+* Start the Robot Agent.
 
 ### Prerequisites
 
 This lab assumes you have:
 
-* An Oracle Cloud account
-* Successfully completed all previous labs
+* An Oracle Cloud account.
+* Successfully completed all previous labs.
 
 ## Task 1: Install JAVA Runtime
 
 The Java Runtime Environment (JRE) is software that Java programs require to run correctly. JRE is required to run the robot agent.
 
-1. Verify if a JRE is pre-installed on the host machine by running the below command.
+1. Verify whether a JRE is preinstalled on the host machine by running the following command.
 
     For Linux and macOS, run this command in the **Terminal**.
 
@@ -45,7 +45,7 @@ The Java Runtime Environment (JRE) is software that Java programs require to run
 
     ```Java(TM) SE Runtime Environment (build [your-build-number])```
 
-2. If there is no JRE listed in the response, then one needs to be installed. Follow this link to download the latest JRE the applies to your system platform (Linux, macOS or Windows) and processor:
+2. If no JRE is listed in the response, install one. Follow this link to download the latest JRE that applies to your system platform (Linux, macOS, or Windows) and processor:
 
     <https://www.oracle.com/java/technologies/downloads>
 
@@ -57,19 +57,19 @@ The Robot Agent must be downloaded and installed on your local host. The agent i
 
 1. In the left Navigation pane, click **Design**, followed by **Agents**.
 
-2. On the top right corner of the window, click on **Download**. Then, select **Robot Agent**.
-![Download Robot Agent](./images/download-robot-agent.png ' ')
+2. In the upper-right corner of the window, click **Download**, then select **Robot Agent**.
+    ![Download Robot Agent](./images/download-robot-agent.png ' ')
 
-    You should receive a confirmation about the agent getting downloaded. This could take a couple of minutes.
+    You should receive a confirmation that the agent is downloading. This could take a few minutes.
     ![Download Robot Agent notification](./images/download-robot-agent-notification.png ' ')
 
-3. Once the download has completed, navigate to the designated folder on your local machine to obtain the agent installation file ```rpa_agent.zip```. The default location is typically the **Downloads** folder.
+3. Once the download is complete, navigate to the designated folder on your local machine to locate the agent installation file, `rpa_agent.zip`. The default location is typically the **Downloads** folder.
 
-4. Choose a folder where you would like to move the downloaded ```.zip```. From there, unzip the RPA agent file.
+4. Choose a folder to which you want to move the downloaded `.zip` file. Then unzip the RPA agent file.
 
-5. Open the ```InstallerProfile.cfg``` file located in the agent folder using a text editor (e.g. Notepad, Sublime, etc) and enter a value for the **DISPLAY_NAME** attribute without spaces. For example, `DISPLAY_NAME=LiveLabs-RobotAgent`
+5. Open the `InstallerProfile.cfg` file in the agent folder using a text editor, such as Notepad or Sublime Text. Enter a value without spaces for the **DISPLAY_NAME** attribute. For example, `DISPLAY_NAME=LiveLabs-RobotAgent`.
 
-    Keep all other values as default.
+    Keep all other values at their defaults.
 
 6. **Save** and **Close** the configuration file.
 
@@ -79,7 +79,7 @@ You must start the robot agent from the computer on which it is installed. If a 
 
 1. Return to the unzipped RPA Agent folder.
 
-2. Locate the `.jar` file and note the version number. It should be in the following format: `orpa-agent-x.x.xx.jar`
+2. Locate the `.jar` file and note the version number. It should follow this format: `orpa-agent-x.x.xx.jar`.
 
 3. To run the command:
 
@@ -94,7 +94,7 @@ You must start the robot agent from the computer on which it is installed. If a 
 
     Replace x.x.xx with the actual version number (e.g. `0.1.77`)
 
-5. The robot agent is running successfully when you see below message in the terminal:
+5. The robot agent is running successfully when you see the following message in the terminal:
 
     ```java
     INFO  - Requesting messages from ControlRoom
@@ -105,4 +105,4 @@ You have successfully completed this lab.
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

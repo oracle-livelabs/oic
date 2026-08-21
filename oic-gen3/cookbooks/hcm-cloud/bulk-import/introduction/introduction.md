@@ -11,7 +11,7 @@ This lab walks you through the steps to create Integration flow.
 The following diagram shows the interaction between the systems involved in this use case.
     ![Pending Worker Import](images/pending-worker-import.png)
 
-Estimated Time: 60 minutes
+Estimated Workshop Time: 60 minutes
 
 ### Objectives
 
@@ -40,4 +40,4 @@ You may now **proceed to the next lab**.
 
 * **Author** - Kishore Katta, Product Management, Oracle Integration
 * **Contributors** - Subhani Italapuram, Product Management, Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

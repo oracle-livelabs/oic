@@ -2,17 +2,17 @@
 
 ## Introduction
 
-This lab will walk you through the steps to create a Robot Connection. A robot connection specifies the information that a robot needs to connect to an application. A typical connection specifies the URL and security credentials which the robot can use to login to an application.
+This lab walks you through the steps to create a robot connection. A robot connection specifies the information that a robot needs to connect to an application. A typical connection specifies the URL and security credentials that the robot uses to log in to an application.
 
 Estimated Lab Time: 10 minutes
 
 ### Robot Connection Type
 
-Robot connection types are similar to templates, and allow you to specify the parameters required for a robot connection.
+Robot connection types are similar to templates and allow you to specify the parameters required for a robot connection.
 
 Unlike an integration, a robot doesn't need information about an application's security protocols or its APIs. A robot typically needs only a little information about the application or web page that it's connecting to, such as a URL and credentials. You list the fields that a robot needs to connect to an application in a robot connection type.
 
-A robot connection type doesn't list the values of the fields, and it's not application specific. Therefore, you can base robot connections to different applications on the same robot connection type. For example, any robot connection that requires only a user name, password, and URL to access an application can use one of the predefined robot connection types.
+A robot connection type does not list field values and is not application-specific. Therefore, you can base robot connections for different applications on the same robot connection type. For example, any robot connection that requires only a username, password, and URL to access an application can use one of the predefined robot connection types.
 
 ### Robot Connections
 
@@ -30,18 +30,18 @@ In this lab, you will:
 
 Specify the service URL and login credentials in a robot connection.
 
-1. In the navigation pane, select **Projects** and then click on the project created for this lab.
+1. In the navigation pane, select **Projects**, then click the project created for this lab.
 
     The project page is displayed with the **Integration** category selected.
     ![Projects Overview](images/projects_assets-overview.png "")
 
-2. Click on the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left of your screen.
+2. Click the ![Select Robot category](images/projects_select-robot-category.png "") (**Robot**) icon on the left side of the screen.
 
-3. On the **Robot** category section, go to the **Robot connections** box and click **Add** or **+**.
+3. In the **Robot** category, go to the **Robot connections** box and click **Add** or **+**.
 
     > **Note**: The **Add** button appears if you have no robot connections. The **+** button appears if you have at least one robot connection.
 
-4. On the **Create robot connection** panel, select the Default connection type **Oracle RPA web login**.
+4. On the **Create robot connection** panel, select the default connection type, **Oracle RPA web login**.
 
     ![Create robot flow panel](images/create-robot-connection_select-type.png " ")
 
@@ -70,4 +70,4 @@ You have successfully completed this lab.
 ## Acknowledgements
 
 * **Author** - Ravi Chablani, Principal Product Manager - Oracle Integration
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

@@ -6,8 +6,8 @@ This lab walks you through the steps to create an Integration flow as per the be
 
 This use case describes how to use Native Actions in Oracle Integration to connect with file server, object storage and serverless functions.
 
-1.  Vendors drop Excel files into the system.
-2.  Oracle Integration orchestrates the logic as below:
+1. Vendors drop Excel files into the system.
+2. Oracle Integration orchestrates the logic as below:
     - A scheduler triggers the Integration flow.
     - File Server Native Action gets the file from the source.
     - OCI Object Storage Native Action uploads the Excel file to Object Storage.
@@ -15,13 +15,13 @@ This use case describes how to use Native Actions in Oracle Integration to conne
     - The transformed CSV is retrieved using Object Storage Native Action operations
     - The data is staged in a Virtual File System (VFS).
     - Records are parsed and inserted into the DB system (Optional)
-3.  OCI Serverless Functions are used to process the files:
+3. OCI Serverless Functions are used to process the files:
     - A function is triggered to perform operations on the files.
     - The function interacts with Object Storage, reading from and writing to a bucket.
 
-4.  The OIC File Server stores the Excel files for reference.
-5.  The parsed and processed data is ultimately stored in the ATP DB (Autonomous Transaction Processing Database).
-6.  User Groups have access to the processed files.
+4. The OIC File Server stores the Excel files for reference.
+5. The parsed and processed data is ultimately stored in the ATP DB (Autonomous Transaction Processing Database).
+6. User Groups have access to the processed files.
 
 
 The following diagram shows the interaction between the systems involved in this use case.
@@ -50,24 +50,24 @@ This lab assumes you have:
 
 You will create a dynamic group and add policies to use functions and manage objects.
 
-1.  Sign in to the OCI Console as a tenancy administrator.
+1. Sign in to the OCI Console as a tenancy administrator.
 
-2.  Obtain the client ID of the OAuth application for the Oracle Integration instance. In the upper right corner, select Profile, then click the identity domain.
-![Select Profile](images/select-profile.png)
+2. Obtain the client ID of the OAuth application for the Oracle Integration instance. In the upper right corner, select Profile, then click the identity domain.
+    ![Select Profile](images/select-profile.png)
 
-3.  In the left navigation pane, click *Oracle Cloud Services*.
-![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
+3. In the left navigation pane, click *Oracle Cloud Services*.
+    ![Select Oracle Cloud Services](images/select-oracle-cloud-services.png)
 
-4.  Select the OIC service instance, and scroll down to **General Information** and copy the client ID value to use it in the dynamic group creation.
+4. Select the OIC service instance, and scroll down to **General Information** and copy the client ID value to use it in the dynamic group creation.
 
-5.  In the OCI Console, Open the navigation menu and click *Identity & Security*, Select the domain (example: Default domain).
-![Select Domain](images/default-domain.png)
+5. In the OCI Console, Open the navigation menu and click *Identity & Security*, Select the domain (example: Default domain).
+    ![Select Domain](images/default-domain.png)
 
 6. In the left navigation pane, click *Dynamic groups*
 
-7.  Click *Create Dynamic Group*.
+7. Click *Create Dynamic Group*.
 
-8.  Provide a name (example: ll-dynamic-group) and description. In the **Matching Rules** section, enter the below rules. The resource ID you specify mush match the client ID of the OAuth application of your Oracle Integration instance. Provide the functions compartment ocid in the below rule
+8. Provide a name (example: ll-dynamic-group) and description. In the **Matching Rules** section, enter the below rules. The resource ID you specify mush match the client ID of the OAuth application of your Oracle Integration instance. Provide the functions compartment ocid in the below rule
 
     ```
     <copy>
@@ -75,13 +75,13 @@ You will create a dynamic group and add policies to use functions and manage obj
     ALL {resource.type = 'fnfunc', resource.compartment.id = '<functions-compartment-ocid>'}
     </copy>
     ```
-TIP: Get the ocid of the functions compartment by navigating to Identity &gt; Compartments &gt; ll-native-actions. The first rule is required to group the OIC instance which matches the client id. The second rule groups the functions of a given compartment ocid.
+    TIP: Get the ocid of the functions compartment by navigating to Identity &gt; Compartments &gt; ll-native-actions. The first rule is required to group the OIC instance which matches the client id. The second rule groups the functions of a given compartment ocid.
 
-![Dynamic Group Rules](images/dynamic-group-rules.png)
+    ![Dynamic Group Rules](images/dynamic-group-rules.png)
 
-9.   Open the navigation menu and click *Identity & Security*. Under Identity, click *Policies*.
+9. Open the navigation menu and click *Identity & Security*. Under Identity, click *Policies*.
 
-10.  Select the Policy **ll-native-actions-policy** , and Click on **Edit policy statements**. In the Policy builder add the following statements. Modify the dynamic group name, group name and compartment name as per your configuration.
+10. Select the Policy **ll-native-actions-policy** , and Click on **Edit policy statements**. In the Policy builder add the following statements. Modify the dynamic group name, group name and compartment name as per your configuration.
 
     ```
     <copy>
@@ -97,15 +97,15 @@ TIP: Get the ocid of the functions compartment by navigating to Identity &gt; Co
 
 You will create two buckets namely, bucket-excel and bucket-csv. These buckets are used to upload the source file and processed files.
 
-1.  In the OCI Console, Open the navigation menu and click *Storage &gt; Buckets*.
+1. In the OCI Console, Open the navigation menu and click *Storage &gt; Buckets*.
 
-2.  Select the Compartment **ll-native-actions**
+2. Select the Compartment **ll-native-actions**
 
-3.  Click *Create Bucket* and provide a name (example: bucket-excel) and description. Click **Create**
+3. Click *Create Bucket* and provide a name (example: bucket-excel) and description. Click **Create**
 
-![Create Bucket](images/create-bucket-excel.png)
+    ![Create Bucket](images/create-bucket-excel.png)
 
-4.  Similarly, create another bucket and name it (example: bucket-csv)
+4. Similarly, create another bucket and name it (example: bucket-csv)
 
 
 ## Task 3: Create Integration Flow
@@ -114,22 +114,22 @@ Create a Project in OIC console which provides a single unified workspace for al
 
 ***Create Project***
 
-1.  Login into OIC Console
+1. Login into OIC Console
 
-2.  In the left Navigation pane of OIC console, Click *Projects* and Click *Add*, then *Create*
+2. In the left Navigation pane of OIC console, Click *Projects* and Click *Add*, then *Create*
 
-3.  In the **Create Project** dialog, enter the following information and click on *Create*:
+3. In the **Create Project** dialog, enter the following information and click on *Create*:
 
-| **Field**        | **Value**          |       
-| --- | ----------- |
-| Name         | OIC Native Actions     |
-| Identifier         | Generated automatically       |
-| Description  | This project is the workspace to create integrations to invoke OCI resources |
-{: title="Create Project"}
+    | **Field**        | **Value**          |
+    | --- | ----------- |
+    | Name         | OIC Native Actions     |
+    | Identifier         | Generated automatically       |
+    | Description  | This project is the workspace to create integrations to invoke OCI resources |
+    {: title="Create Project"}
 
-![Create Project](images/create-project.png)
+    ![Create Project](images/create-project.png)
 
-***Create Integration Flow***
+    ***Create Integration Flow***
 
 1. In the *Integrations tile*, click *Add*, then *Create*
 
@@ -147,24 +147,24 @@ Create a Project in OIC console which provides a single unified workspace for al
 
     ![Create Integration](images/create-integration.png)
 
-***Assign Variables***
+    ***Assign Variables***
 
-Create 3 variables ObjectstoreNamespace, ObjectstoreSource, ObjectstoreTarget
+    Create 3 variables ObjectstoreNamespace, ObjectstoreSource, ObjectstoreTarget
 
-1.  Click *+* icon next to the **Schedule** activity and Select *Assign* action from the action palette and name it as **AssignBucketVariables**
+1. Click *+* icon next to the **Schedule** activity and Select *Assign* action from the action palette and name it as **AssignBucketVariables**
 
     ![Select Assign Action](images/select-assign-action.png)
 
-2.  Click on *+* icon and create a **String** data type. Provide the name as **ObjectstoreNamespace** and value **&lt;your-object-storage-namespace&gt;**
+2. Click on *+* icon and create a **String** data type. Provide the name as **ObjectstoreNamespace** and value **&lt;your-object-storage-namespace&gt;**
 
     ![Create Assign Variable](images/select-assign-action.png)
 
 
-**TIP**: To view your Object Storage namespace string, do the following:
+    **TIP**: To view your Object Storage namespace string, do the following:
 
-Select the Profile menu (Profile menu icon), which is on the upper-right side of the navigation bar at the top of the page, and then click Tenancy: <your_tenancy_name>. Your namespace string is listed under Object Storage Settings.
+    Select the Profile menu (Profile menu icon), which is on the upper-right side of the navigation bar at the top of the page, and then click Tenancy: <your_tenancy_name>. Your namespace string is listed under Object Storage Settings.
 
-3.  Similarly, Create 2 more variables per below  
+3. Similarly, Create 2 more variables per below
 
     | **Variable Name**          | **Value**          |       
     | --- | ----------- |
@@ -174,11 +174,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![List of Assign Variables](images/list-of-os-variables.png)
 
-***List Files in object storage bucket (bucket-excel)***
+    ***List Files in object storage bucket (bucket-excel)***
 
-1.  Click *+* icon next to the **AssignBucketVariables** activity and Select *File Server* action from the action palette.
+1. Click *+* icon next to the **AssignBucketVariables** activity and Select *File Server* action from the action palette.
 
-2.  In the **Configure FS Native Action** provide per below values.
+2. In the **Configure FS Native Action** provide per below values.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -193,11 +193,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-***Add for-each action***
+    ***Add for-each action***
 
-1.  Click *+* icon next to the **listFSFiles** action and Select *For Each* action from the action palette.
+1. Click *+* icon next to the **listFSFiles** action and Select *For Each* action from the action palette.
 
-2.  In the **Configure For Each** pane provide array reference in the for-each **Repeating element**. In the Source variable, Expand variable $listFSFiles &gt; ListDirectoryResponse &gt; Directory Definitions &gt; fileList &gt;.
+2. In the **Configure For Each** pane provide array reference in the for-each **Repeating element**. In the Source variable, Expand variable $listFSFiles &gt; ListDirectoryResponse &gt; Directory Definitions &gt; fileList &gt;.
 
     Drag and drop the **file** element to the **Repeating Element** box, and provide the name **Current element name** as *currentFile* per below.
 
@@ -205,11 +205,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     **Save** your integration.
 
-***Get Excel File***
+    ***Get Excel File***
 
-1.  In the For Each scope click on *+* icon and add a **File Server** Native Action
+1. In the For Each scope click on *+* icon and add a **File Server** Native Action
 
-2.  In the **Configure FS Native Action** provide per below values.
+2. In the **Configure FS Native Action** provide per below values.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -224,7 +224,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-3.  *Edit* the **getExcelFile** map activity and perform the mapping per below.
+3. *Edit* the **getExcelFile** map activity and perform the mapping per below.
 
     In the **Sources** pane expand the variable: currentFile &gt; File.
 
@@ -240,11 +240,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Validate*. Click **&lt** icon to Navigate back to the Integration Flow
 
-***Transfer Excel File from File Server to Object Storage Bucket***
+    ***Transfer Excel File from File Server to Object Storage Bucket***
 
-1.  **Add** a *OCI Object Storage* action after the **getExcelFile** activity.
+1. **Add** a *OCI Object Storage* action after the **getExcelFile** activity.
 
-2.  In the **Configure Object Storage** provide per below values.
+2. In the **Configure Object Storage** provide per below values.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -259,7 +259,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-3.  *Edit* the **Map to MoveFSExcelToOS** map activity and perform the mapping per below.
+3. *Edit* the **Map to MoveFSExcelToOS** map activity and perform the mapping per below.
 
     In the **Sources** pane expand the variable:  getExcelFile Response &gt; Get File Reference Response &gt; File Definitions.. &gt;
 
@@ -275,11 +275,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Integration Flow Milestone After Object Storage](images/integration-flow-after-os-action.png)
 
-***Invoke OCI Function to transform excel file to csv***
+    ***Invoke OCI Function to transform excel file to csv***
 
-1.  **Add** a *OCI Function* action after the **MoveFSExcelToOS** activity.
+1. **Add** a *OCI Function* action after the **MoveFSExcelToOS** activity.
 
-2.  In the **Configure OCI Function Call** page provide per below values.
+2. In the **Configure OCI Function Call** page provide per below values.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -295,7 +295,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue*.
 
-3.  In the **Configure Request** Page select *Payload Type* as **JSON Sample**, and provide the below request payload. In the JSON payload include your object storage namespace.
+3. In the **Configure Request** Page select *Payload Type* as **JSON Sample**, and provide the below request payload. In the JSON payload include your object storage namespace.
 
     ```
         <copy>
@@ -310,7 +310,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
       Click *Continue*
 
-4.  In the **Configure Response** Page select *Payload Type* as **JSON Sample**, and provide the below provide request payload.
+4. In the **Configure Response** Page select *Payload Type* as **JSON Sample**, and provide the below provide request payload.
 
     ```
         <copy>
@@ -324,7 +324,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
       Click *Continue* and **Finish** the wizard, Save your integration flow.
 
-5.  *Edit* the **Map to invokeOCIFunction** map activity and perform the mapping per below.
+5. *Edit* the **Map to invokeOCIFunction** map activity and perform the mapping per below.
 
     In the **Target** pane expand the variable: invokeOCIFunction Request &gt; Request Wrapper.
 
@@ -340,11 +340,11 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Mapping Invoke OCI Function](images/map-invoke-function.png)
 
-***Get Transformed CSV File***
+    ***Get Transformed CSV File***
 
-1.  **Add** a *OCI Object Storage* action after the **invokeOCIFunction** activity.
+1. **Add** a *OCI Object Storage* action after the **invokeOCIFunction** activity.
 
-2.  In the **Configure Object Storage** provide per below values.
+2. In the **Configure Object Storage** provide per below values.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -357,7 +357,7 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-3.  *Edit* the **Map to getCSV** map activity and perform the mapping per below.
+3. *Edit* the **Map to getCSV** map activity and perform the mapping per below.
 
     In the **Sources** pane expand the variable:  invokeOCIFunction Response &gt; Invoke Response &gt; Response Wrapper
 
@@ -372,13 +372,13 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     ![Mapping Get CSV](images/map-getcsv.png)
 
-***Add Stage Action***
+    ***Add Stage Action***
 
-1.  **Add** a *Stage File* action after the **getCSV** activity.
+1. **Add** a *Stage File* action after the **getCSV** activity.
 
-2.  In the **Configure Stage File Action** provide the name **ReadCSVFile** and Click on *Continue*
+2. In the **Configure Stage File Action** provide the name **ReadCSVFile** and Click on *Continue*
 
-3.  In the **Configure Operation Page** configure properties per below
+3. In the **Configure Operation Page** configure properties per below
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -391,9 +391,9 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue*
 
-4.  In the **Configure Schema Options** page, Select the file structure as **CSV**. Click *Continue*
+4. In the **Configure Schema Options** page, Select the file structure as **CSV**. Click *Continue*
 
-5.  In the **Configure Format Definition** page, Configure the properties per below and rest as defaults.
+5. In the **Configure Format Definition** page, Configure the properties per below and rest as defaults.
 
     | **Property**          | **Value**          |       
     | --- | ----------- |
@@ -408,20 +408,20 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
     Click *Continue* and **Finish** the wizard. **Save** your integration.
 
-***Add logger Action***
+    ***Add logger Action***
 
-1.  **Add** a *logger* action after the **ReadCSVFile** activity.
+1. **Add** a *logger* action after the **ReadCSVFile** activity.
 
-2.  In the **Configure Logger** page, drag and drop **$ReadCSVFile &gt; ReadResponse** element to the **logger message** text box. This will print the entire csv data in activity stream.
+2. In the **Configure Logger** page, drag and drop **$ReadCSVFile &gt; ReadResponse** element to the **logger message** text box. This will print the entire csv data in activity stream.
 
     ![Configure Log Message](images/config-log-message.png)
 
-***Define Business Identifiers & Activate the Integration Flow***
+    ***Define Business Identifiers & Activate the Integration Flow***
 
 1. Manage business identifiers that enable you to track fields in messages during runtime.
 
 2. Click on the *(I) Business Identifiers* menu on the top right.
-   ![Open Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
+    ![Open Business Identifiers For Tracking](images/open-business-identifiers-dialog.png)
 
 3. From the **Source** section, expand *Schedule* &gt; *start Time* fields to the right side section tracking\_var\_1
 
@@ -429,35 +429,35 @@ Select the Profile menu (Profile menu icon), which is on the upper-right side of
 
 ## Task 4: Activate the Integration.
 
-1.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration as well.
+1. In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Activate*. You can create a deployment and activate. Alternatively, you can activate individual integration as well.
 
     ![Activate Individual Integration](images/activate-integration.png)
 
-2.  In the **Activate Integration** page select *Tracing Level* as *Debug*, and Click on *Activate*
+2. In the **Activate Integration** page select *Tracing Level* as *Debug*, and Click on *Activate*
 
 ## Task 5: Test & Monitor the Integration.
 
-1.  Upload the .xlsx file (available in the lab artifacts) to the directory configured in the Integration Flow File Server Action.
+1. Upload the .xlsx file (available in the lab artifacts) to the directory configured in the Integration Flow File Server Action.
 
-2.  In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Run*.
+2. In the Project **Design** View, Select three dots (...) which is next to the Integration Flow. From the list of Actions select *Run*.
 
-3.  In the **Configure & Run** page, Select *Request Type* as **Ad hoc Request**. Click on *Run*
+3. In the **Configure & Run** page, Select *Request Type* as **Ad hoc Request**. Click on *Run*
 
-4.  An Instance of the integration is created. Select *Instance Id*. In the Instance Monitoring page, Activity Stream section expand the *For Each* action - Iteration 1
+4. An Instance of the integration is created. Select *Instance Id*. In the Instance Monitoring page, Activity Stream section expand the *For Each* action - Iteration 1
 
     ![Monitoring Activity Stream](images/monitoring-activity-stream.png)
 
-5.  Click on the *Eye* icon next to the Logger Action in the activity stream. You should the parsed csv data.
+5. Click on the *Eye* icon next to the Logger Action in the activity stream. You should the parsed csv data.
 
 ## Task 6: Bonus Section
 
 Extend the use case to delete the csv file uploaded in the Object Storage
 
-1.  Orchestrate Object Storage native action in the existing Integration flow
+1. Orchestrate Object Storage native action in the existing Integration flow
 
-2.  Use the delete object operation
+2. Use the delete object operation
 
-3.  In the map activity refer the object name to delete the file from the bucket-csv.
+3. In the map activity refer the object name to delete the file from the bucket-csv.
 
 ## Task 7: Congratulations 🎉
 
@@ -484,4 +484,4 @@ Key Takeaways:
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Director Product Management, Oracle Integration & OPA
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

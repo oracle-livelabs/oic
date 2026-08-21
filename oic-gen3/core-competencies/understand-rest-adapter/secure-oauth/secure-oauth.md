@@ -23,9 +23,9 @@ In this section, you will learn how to Configure a Confidential Application in I
 
 You need Identity Domain Administrator or Application Administrator credentials to perform this task. We will create a confidential application in IDCS for client credentials grant type.
 
-1.  Access your Oracle Identity Cloud Service instance.
+1. Access your Oracle Identity Cloud Service instance.
 
-2.  Add a Confidential application for your Oracle Integration instance.
+2. Add a Confidential application for your Oracle Integration instance.
     - In Oracle Identity Cloud Service, from the menu, click *Applications*, then *Add*.
     - Select *Confidential Application* as the type of application.
     - Enter an application name, then click *Next*.
@@ -47,14 +47,14 @@ You need Identity Domain Administrator or Application Administrator credentials 
         - Secret
         - Scope (that ends with urn:opc:resource:consumer::all)
 
-3.  Add roles to the client application
+3. Add roles to the client application
     - Go to the **Application Roles** tab of the Oracle Identity Cloud Service application.
     - Select *Assign Applications* for the ServiceAdministrator role
       ![Assign Roles to Application](images/client_creds_approle.png)
 
 ## Task 2: Generate Access Token from Postman
 
-1.  Validate client application and generate access token
+1. Validate client application and generate access token
     - Use the pre-req information (clientid,scret and scope) to generate the access token using this REST api in Postman
         - Create a new request in Postman
         - Provide the OAUTH token Endpoint: https://&lt;idcs_host&gt;/oauth2/v1/token
@@ -69,18 +69,18 @@ You need Identity Domain Administrator or Application Administrator credentials 
 
 ## Task 3: Invoke OIC3 Integration Flow using access token
 
-1.  Navigate to *OIC 3 console &gt; Design &gt; Integration*. Select *Customer Order Composite Service*, and Click on **...(Actions)** menu and Click on **Run**
+1. Navigate to *OIC 3 console &gt; Design &gt; Integration*. Select *Customer Order Composite Service*, and Click on **...(Actions)** menu and Click on **Run**
 
-2.  Select the button **Endpoint metadata** and copy the *Endpoint URL*
+2. Select the button **Endpoint metadata** and copy the *Endpoint URL*
     ![Endpoint Metadata](images/endpoint-metadata.png)
 
-2.  Open another tab in Postman and provide the Integration Flow Endpoint URL. Provide Verb as GET
+2. Open another tab in Postman and provide the Integration Flow Endpoint URL. Provide Verb as GET
 
-3.  Under the **Authorization** tab
+3. Under the **Authorization** tab
     - Select Type = Bearer token
     - Paste the copied access token into the token field
 
-4.  Click *Send* button to invoke the Integration Flow interfaced as REST Endpoint. Verify the new instance is created OIC 3 *Observability &gt; Instances* page.
+4. Click *Send* button to invoke the Integration Flow interfaced as REST Endpoint. Verify the new instance is created OIC 3 *Observability &gt; Instances* page.
 
 
   **Congratulations**! You've learnt how to invoke OIC 3 Integration Flow using Client Credentials OAuth2.0 grant type.

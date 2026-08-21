@@ -33,9 +33,9 @@ This hands-on workshop is designed to equip you with the knowledge and skills to
 
 In this workshop, you will learn how to:
 
-1.  Transfer Excel Files from an FTP Server to OCI Object Storage
-2.  Convert Excel Files to CSV Using an OCI Serverless Function
-3.  Process CSV Files in OIC
+1. Transfer Excel Files from an FTP Server to OCI Object Storage
+2. Convert Excel Files to CSV Using an OCI Serverless Function
+3. Process CSV Files in OIC
 
 Note: Inserting records into database is out of the scope of this workshop. However, feel free to play around with the transformed data and push it to the downstream systems.
 
@@ -43,21 +43,21 @@ Note: Inserting records into database is out of the scope of this workshop. Howe
 Here is the high level architecture reference of the workshop
 ![Usecase Architecture](images/native-actions-hla.png)
 
-Estimated Time: 3 hours
+Estimated Workshop Time: 3 hours
 
 ### Objectives
 
 Here are some high-level objectives for the workshop on Oracle Integration using native actions:
 
-1.  Understand OIC Native Actions
+1. Understand OIC Native Actions
     - Gain insights into the capabilities of OIC native actions and how they can be used to integrate with OCI services effectively
-2.  Automate File Transfer
+2. Automate File Transfer
     - Learn how to configure OIC to list and download Excel files from a File server and upload them to OCI Object Storage
-3.  Implement Serverless Functions
+3. Implement Serverless Functions
     - Deploy and use an OCI serverless function to convert Excel files to CSV format.
-4.  Process CSV Files in OIC
+4. Process CSV Files in OIC
     - Discover functions, how to pick up, stage, and finally process CSV files within OIC
-5.  Hands-on activities and exercises
+5. Hands-on activities and exercises
     - Provide hands-on exercises to practice usage of native actions to invoke file server, object storage and serverless functions.
 
 By the end of this workshop, you will have a comprehensive understanding of how to leverage OIC's native actions to invoke OCI services, creating a seamless and automated integration design.
@@ -81,4 +81,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, Sep 2025
+* **Last Updated By/Date** - Subhani Italapuram, Aug 2026

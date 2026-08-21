@@ -65,7 +65,7 @@ Create a connection using REST Adapter to invoke ORDS API.
     {: title="Rest Connection"}
     Keep all other values as default.
 
-4.  In the *Configuration* page, enter the following information:
+4. In the *Configuration* page, enter the following information:
 
     | **Field**  | **Values** |
     |---|---|
