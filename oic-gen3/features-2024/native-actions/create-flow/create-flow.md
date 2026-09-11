@@ -285,7 +285,7 @@ Create a Project in OIC console which provides a single unified workspace for al
     | --- | ----------- |
     | What do you want to call your endpoint? | invokeOCIFunction |
     | Region | &lt; select-your-function-region &gt;|
-    | Compartment | Upload Object |
+    | Compartment | &lt; select-your-compartment &gt; |
     | Select Compartment | &lt; select-your-function-compartment example: ll-native-actions &gt; |
     | Application | &lt; select-your-function-application example: oicnativeaction &gt; |
     | Fucntion | &lt; select-your-function-deployed example: convert2CSV &gt; |

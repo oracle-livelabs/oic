@@ -74,7 +74,7 @@ Submit an adhoc run of Scheduled Integration Flow
 
 ## Task 3: Verify sales orders records in DL Table via Visual Builder web application.
 
-- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oic2027t1-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/)
+- [Verify sales orders](https://oic-vbcs-oic3training3-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/) OR [Verify sales orders](https://oic-vbcs-oicagenticait1-vb-oicpm.builder.us-phoenix-1.ocp.oraclecloud.com/ic/builder/rt/OrderApplication1/live/webApps/orderapps/)
 
 ## Task 4: Verify sales orders records in DL Table
 
@@ -135,4 +135,4 @@ Verify sales orders file archived in OCI Object storage
 
 - **Author** - Kishore Katta, Product Management - Oracle Integration
 - **Author** - Subhani Italapuram, Product Management - Oracle Integration
-- **Last Updated By/Date** - Subhani Italapuram, July 2026
+- **Last Updated By/Date** - Subhani Italapuram, Sep 2026

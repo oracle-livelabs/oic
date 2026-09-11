@@ -39,11 +39,11 @@ The diagram illustrates the high-level flow of an integration process involving 
       - **Callback to Oracle Integration:**
         - Once the data is processed and uploaded, ERP Cloud triggers a callback to Oracle Integration, indicating the data extract is ready for further processing.
 
-### Summary:
+### Summary
 
-    - The process begins with Oracle Integration triggering a bulk data export from ERP Cloud.
-    - ERP Cloud processes the data, stores it in UCM, and notifies Oracle Integration via a callback.
-    - Oracle Integration retrieves, enriches, and formats the data, completing the flow.
+* The process begins with Oracle Integration triggering a bulk data export from ERP Cloud.
+* ERP Cloud processes the data, stores it in UCM, and notifies Oracle Integration via a callback.
+* Oracle Integration retrieves, enriches, and formats the data, completing the flow.
 
 Estimated Time: 60 minutes
 
