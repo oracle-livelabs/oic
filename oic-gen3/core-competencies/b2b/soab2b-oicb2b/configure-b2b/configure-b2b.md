@@ -8,7 +8,7 @@ The trading partner, agreement, document definitions, and schemas must already h
 
 Estimated Time: 10 minutes
 
-### Objective
+### Objectives
 
 Configure an AS2 transport for the pilot trading partner agreement using an Oracle Integration project connection. The transport is used by Oracle Integration B2B to send and receive the partner's B2B documents.
 
@@ -44,14 +44,14 @@ Confirm that you have:
 6. Select **AS2** as the transport protocol.
 7. Select `SOAB2BAS2` as the transport connection.
 8. Configure the transport properties required by the agreement, including:
-   - Sender AS2 identifier
-   - Receiver AS2 identifier
-   - Receive and Send settings
-   - Signing, encryption, and certificate settings, when applicable
-   - Any agreement-specific transport values
-   - Integration name prefix, for example: SOAB2B_850
-     ![B2B TP](images/tp-transports.png)
-     ![B2B TP AS2 Identifiers](images/as2-identifiers.png)
+    - Sender AS2 identifier
+    - Receiver AS2 identifier
+    - Receive and Send settings
+    - Signing, encryption, and certificate settings, when applicable
+    - Any agreement-specific transport values
+    - Integration name prefix, for example: SOAB2B_850
+        ![B2B TP](images/tp-transports.png)
+        ![B2B TP AS2 Identifiers](images/as2-identifiers.png)
 9. Save the transport configuration.
 10. In the **Transports & agreements** section, use the **Actions** menu for the transport and select **Deploy**.
 11. Confirm that the transport deployment completes successfully.

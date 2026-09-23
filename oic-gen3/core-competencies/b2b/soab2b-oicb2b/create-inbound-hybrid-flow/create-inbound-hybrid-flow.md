@@ -30,7 +30,7 @@ The following example shows the Oracle Integration portion of the inbound flow. 
 
 ![Example OIC inbound B2B-to-SOA flow](images/inbound-oic-b2b-flow.png)
 
-### Objective
+### Objectives
 
 Create and validate an inbound hybrid flow for the pilot trading partner. The flow uses the existing SOA input schema and preserves all existing SOA transformations, orchestration, business rules, routing, and backend processing.
 
@@ -118,10 +118,10 @@ Create an inbound integration named `INT_850_TO_SOA_WRAPPER`. In the design show
 4. Click **Create** to open the integration canvas.
 5. Add a **REST Adapter** trigger as the first action.
 6. Configure the REST trigger:
-   1. Select **POST** as the request method.
-   2. Enter an operation name, for example, `INT_850_TO_SOA_Trigger`.
-   3. Configure the request payload to receive the B2B message reference or event passed from the generated B2B receive integration.
-   4. Complete the REST trigger wizard and save the endpoint configuration.
+    1. Select **POST** as the request method.
+    2. Enter an operation name, for example, `INT_850_TO_SOA_Trigger`.
+    3. Configure the request payload to receive the B2B message reference or event passed from the generated B2B receive integration.
+    4. Complete the REST trigger wizard and save the endpoint configuration.
         ![rest-trigger](images/rest-trigger.png)
 
 7. Add a **For Each** action after the REST trigger and name it `ForEach1`.
@@ -153,11 +153,11 @@ Use a valid sample X12 850 document for the pilot partner. For example, use a pu
 
 1. Send the valid pilot inbound document, such as an X12 850 Purchase Order, through the configured test AS2 channel.
 2. In Oracle Integration B2B, confirm that the message:
-   - Is received from the pilot trading partner.
-   - Resolves to the expected agreement.
-   - Passes validation.
-   - Is translated from the B2B document to XML.
-   - Has a B2B tracking record.
+    - Is received from the pilot trading partner.
+    - Resolves to the expected agreement.
+    - Passes validation.
+    - Is translated from the B2B document to XML.
+    - Has a B2B tracking record.
 3. In Oracle Integration monitoring, confirm that the backend integration is triggered and completes successfully.
 4. In the SOA Enterprise Manager console, confirm that the BPEL gateway receives the message.
 5. Confirm that the BPEL gateway invokes the existing SOA composite.
@@ -178,7 +178,9 @@ The selected partner document is received and validated by Oracle Integration B2
 
 ## Key Design Principle
 
-   Oracle Integration B2B owns the B2B edge; the BPEL gateway only bridges to the existing SOA business implementation. This keeps the modernization scope controlled and reduces migration risk.
+- Oracle Integration B2B owns the B2B edge; the BPEL gateway only bridges to the existing SOA business implementation. This keeps the modernization scope controlled and reduces migration risk.
+
+    You may now **proceed to the next lab**.
 
 ## Learn More
 

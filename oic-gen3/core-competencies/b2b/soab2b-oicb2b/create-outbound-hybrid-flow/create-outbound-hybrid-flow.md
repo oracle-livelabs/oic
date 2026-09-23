@@ -26,7 +26,7 @@ The following example shows the outbound Oracle Integration flow used in this wo
 
 ![Example OIC outbound SOA-to-B2B flow](images/outbound-oic-b2b-flow.png)
 
-### Objective
+### Objectives
 
 Create and validate an outbound hybrid flow that accepts the existing SOA business document without requiring additional transformation in SOA, then translates and delivers the message through Oracle Integration B2B.
 
@@ -70,9 +70,9 @@ The illustrated flow performs these actions:
 6. Add **REST** trigger. Select the trigger type that the existing SOA composite can invoke. Reuse the existing SOA outbound contract wherever possible.
 
 7. Configure the trigger:
-   1. Enter an operation name, for example, `Process850`.
-   2. Configure the request input using the same WSDL/XSD and business-document schema currently sent from SOA to SOA B2B.
-   3. Complete the trigger wizard and save the endpoint configuration.
+    1. Enter an operation name, for example, `Process850`.
+    2. Configure the request input using the same WSDL/XSD and business-document schema currently sent from SOA to SOA B2B.
+    3. Complete the trigger wizard and save the endpoint configuration.
 8. Add a **B2B** action after the trigger and name it `EDI-Generate`.
 9. Configure the B2B action:
     1. Select the pilot trading partner.
@@ -134,10 +134,10 @@ Trigger the SOA process to generate an X12 850 Purchase Order with purchase-orde
 3. Confirm that the SOA composite invokes `INT_SOA_OUTBOUND_POC` instead of SOA B2B.
 4. In Oracle Integration monitoring, confirm that the outbound integration receives the message and completes its B2B action.
 5. In Oracle Integration B2B, confirm that the message:
-   - Resolves to the expected trading partner and agreement.
-   - Is translated from XML into the required outbound B2B format.
-   - Uses the deployed AS2 transport.
-   - Has a B2B tracking record.
+    - Resolves to the expected trading partner and agreement.
+    - Is translated from XML into the required outbound B2B format.
+    - Uses the deployed AS2 transport.
+    - Has a B2B tracking record.
 6. Confirm that the document is delivered to the test partner endpoint and that any expected acknowledgment is received.
 7. Compare the delivered document and outcome with the expected X12 850 result.
 
@@ -155,7 +155,9 @@ The existing SOA composite produces its normal business document and invokes Ora
 
 ## Key Design Principle
 
-The SOA composite remains responsible for business processing. Oracle Integration B2B becomes responsible for B2B agreement resolution, translation, transport, delivery, and tracking.
+- The SOA composite remains responsible for business processing. Oracle Integration B2B becomes responsible for B2B agreement resolution, translation, transport, delivery, and tracking.
+
+    You may now **proceed to the next lab**.
 
 ## Learn More
 

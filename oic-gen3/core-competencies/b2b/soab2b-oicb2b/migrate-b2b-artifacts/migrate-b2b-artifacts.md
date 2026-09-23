@@ -8,7 +8,7 @@ At present, this import creates B2B artifacts in the global Oracle Integration B
 
 Estimated Time: 20 minutes
 
-### Objective
+### Objectives
 
 Migrate the core B2B configuration for a pilot trading partner from Oracle SOA B2B to Oracle Integration B2B. This establishes the partner, agreement, identifiers, document definitions, and transport-related configuration required before creating the inbound and outbound hybrid flows.
 
