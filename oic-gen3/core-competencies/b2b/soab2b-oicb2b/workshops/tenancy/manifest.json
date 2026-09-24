@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Modernizing Oracle SOA B2B with Oracle Integration: Hybrid Transition",
+    "help": "livelabs-help-oic_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description":"Modernizing Oracle SOA B2B with a Hybrid Transition to Oracle Integration 3",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Provision Oracle Integration 3",
+            "filename": "../../../../../common/provision-oic/provision.md"
+        },
+        {
+            "title": "Lab 1: Migrate B2B Artifacts to Oracle Integration 3",
+            "filename": "../../migrate-b2b-artifacts/migrate-b2b-artifacts.md"
+        },
+        {
+            "title": "Lab 2: Configure AS2 Transport and Trading Partner Agreement",
+            "filename": "../../configure-b2b/configure-b2b.md"
+        },
+        {
+            "title": "Lab 3: Create the Inbound Hybrid Flow",
+            "filename": "../../create-inbound-hybrid-flow/create-inbound-hybrid-flow.md"
+        },
+        {
+            "title": "Lab 4: Create the Outbound Hybrid Flow",
+            "filename": "../../create-outbound-hybrid-flow/create-outbound-hybrid-flow.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://livelabs.oracle.com/cdn/common//labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
