@@ -6,7 +6,7 @@ The gateway ties your servers and policies together. You choose the MCP servers 
 
 In this lab, you create the `Composite Procurement GW` gateway and attach the six policies from Labs 2 and 3. Then you activate it with audit tracing.
 
-Estimated Time: x
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -35,15 +35,15 @@ This lab assumes you have:
 1. Under **Policies**, expand **OIC MCP Server**. Under **Request**, select these policies:
 
     - **Tool Filter OIC MCP Server**
-    - **check cust id for customer 360**
-    - **Customer ID Check**
+    - **Cust id Check Cust 360**
+    - **Customer ID**
 
 2. Under **Response**, select these policies:
 
     - **PII for Customer 360**
     - **PII Policy for Customer Info**
 
-    Each policy shows its type and target. For example, **check cust id for customer 360** shows **Business**, **Tool**, and `CRM_GETCUSTOME_360`.
+    Each policy shows its type and target. For example, **Cust id Check Cust 360** shows **Business**, **Tool**, and `CRM_GETCUSTOME_360`.
 
     ![Policies section for the OIC MCP Server with request-side and response-side policies](images/gateway-policies.png " ")
 
@@ -53,7 +53,7 @@ This lab assumes you have:
 
 1. Scroll to **Policy evaluation order**. Use the arrows to arrange each pipeline:
 
-    - **Request pipeline**: 1. **check cust id for customer 360**, 2. **Customer ID Check**
+    - **Request pipeline**: 1. **Cust id Check Cust 360**, 2. **Customer ID Check**
     - **Response pipeline**: 1. **PII for Customer 360**, 2. **PII Policy for Customer Info**
 
     ![Policy evaluation order with two business policies in the request pipeline and two PII policies in the response pipeline](images/evaluation-order.png " ")

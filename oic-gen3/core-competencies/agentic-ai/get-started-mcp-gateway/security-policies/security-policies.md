@@ -52,8 +52,7 @@ This lab assumes you have:
 
 ## Task 3: Create a PII Policy for Customer Info
 
-*Note:* MCP Gateway PII Policy uses OCI Language Service. Complete the [pre-requisites](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/prerequisites.html) navigating to OCI console before proceeding further. Configure the Policy specific to OCI Language Service. You can ignore rest of the Policy statements.
-
+> **Note:** The MCP Gateway PII policy uses OCI Language. Before proceeding, navigate to the OCI Console and complete the [prerequisites](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/prerequisites.html). Configure only the policy settings specific to OCI Language; you can ignore the remaining policy statements.
 
 1. Under **Security policies**, click **+** and select **PII detection**. Name the policy `PII Policy for Customer Info` and click **Add**.
 
@@ -109,4 +108,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, September 2026
+* **Last Updated By/Date** - Subhani Italapuram, September 2026

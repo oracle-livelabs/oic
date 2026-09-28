@@ -15,7 +15,7 @@ You place both servers behind a single gateway, protect them with policies, conn
 
 ![Customer support use case: an MCP client reaches CRM and third-party procurement tools through one MCP Gateway](images/demo-use-case.png " ")
 
-Estimated Time: 120 minutes
+Estimated Workshop Time: 2 hours
 
 ### Objectives
 
@@ -80,4 +80,4 @@ This lab assumes you have:
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, September 2026
+* **Last Updated By/Date** - Subhani Italapuram, September 2026

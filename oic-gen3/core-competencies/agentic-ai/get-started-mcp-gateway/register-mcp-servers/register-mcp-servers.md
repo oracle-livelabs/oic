@@ -4,7 +4,7 @@
 
 A gateway can only govern MCP servers it knows about. In this lab, you turn CRM integrations into MCP tools, then register two MCP servers with the project. One is the MCP server built into your project. The other is a third-party ERP procurement server. When you finish, the project lists both servers and all 19 of their tools.
 
-Estimated Time: x
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -88,7 +88,7 @@ This lab assumes you have:
 
 2. Under **MCP servers**, click **+**. Enter the name `OIC MCP Server` and click **Create**. The MCP server editor opens.
 
-3. In **MCP Endpoint**, paste the URL you copied in [Task 3](?lab=register-mcp-servers#Task3:EnabletheProjectMCPServer).
+3. In **MCP Endpoint**, paste the URL you copied in [Task 3](#Task3:EnabletheProjectMCPServer).
 
 4. Open the **Security policy** list. The editor supports four options: **JWT User Assertion for OAuth**, **API Key Based Authentication**, **OAuth 2.0 Client Credentials**, and **No Authentication**. Select **OAuth 2.0 Client Credentials**.
 
@@ -96,9 +96,12 @@ This lab assumes you have:
 
 5. Enter the credentials from your confidential application:
 
-Note: Refer the documentation on [how to create a confidential application in IAM](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-activate-confidential-client-application.html)
+    > **Note:**
+    >
+    > 1. For the non-bootcamp users, Refer to the documentation on [how to create a confidential application in IAM](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-activate-confidential-client-application.html).
+    > 2. For the bootcamp, you can find the required information in the shared spreadsheet.
 
-- **MCP Endpoint**: your OIC MCP Server Endpoint copied from [Task 3](?lab=register-mcp-servers#Task3:EnabletheProjectMCPServer)
+- **MCP Endpoint**: your OIC MCP Server Endpoint copied from [Task 3](#Task3:EnabletheProjectMCPServer)
 - **Access Token URI**: `https://<identity-domain-host>/oauth2/v1/token`
 - **Client ID**: your client ID
 - **Client Secret**: your client secret
@@ -133,4 +136,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, September 2026
+* **Last Updated By/Date** - Subhani Italapuram, September 2026

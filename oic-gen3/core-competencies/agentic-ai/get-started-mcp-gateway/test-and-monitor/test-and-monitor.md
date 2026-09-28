@@ -10,7 +10,7 @@ In this lab, you act as the agent developer. You connect MCPJam Inspector, an MC
 
 Finally, you trace each call in Oracle Integration to see which policies ran and why the gateway denied a request.
 
-Estimated Time: x
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -160,4 +160,4 @@ The workshop mirrors a real rollout: register your MCP servers, encode your gove
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, September 2026
+* **Last Updated By/Date** - Subhani Italapuram, September 2026

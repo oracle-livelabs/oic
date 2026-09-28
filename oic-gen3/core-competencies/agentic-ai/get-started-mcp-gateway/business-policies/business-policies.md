@@ -43,7 +43,7 @@ This lab assumes you have:
     <copy>If customer id pattern is not CUST-XXXX deny with error message "Invalid Customer Id"</copy>
     ```
 
-5. Click **Generate rules**. The **JavaScript Rule** editor fills in a rule similar to this:
+5. Click **Generate rules**. The **JavaScript Rule** editor fills in a rule similar to this OR copy and paste the rule given below:
 
     ```
     <copy>if (!/^CUST-\d{4}$/.test(input.customerId)) {
@@ -61,7 +61,7 @@ This lab assumes you have:
 
 ## Task 2: Create the Customer 360 Policy
 
-1. Return to the **MCP gateway** page. Under **Business policies**, click **+** and name the new policy `check cust id for customer 360`. Click **Create Policy**.
+1. Return to the **MCP gateway** page. Under **Business policies**, click **+** and name the new policy `Cust Id Check Cust 360`. Click **Create Policy**.
 
 2. Select these values:
 
@@ -83,4 +83,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Kishore Katta, Technical Director, Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, September 2026
+* **Last Updated By/Date** - Subhani Italapuram, September 2026
