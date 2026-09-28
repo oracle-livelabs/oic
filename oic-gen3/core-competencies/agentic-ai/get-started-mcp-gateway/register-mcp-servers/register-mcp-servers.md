@@ -101,11 +101,11 @@ This lab assumes you have:
     > 1. For the non-bootcamp users, Refer to the documentation on [how to create a confidential application in IAM](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-activate-confidential-client-application.html).
     > 2. For the bootcamp, you can find the required information in the shared spreadsheet.
 
-- **MCP Endpoint**: your OIC MCP Server Endpoint copied from [Task 3](#Task3:EnabletheProjectMCPServer)
-- **Access Token URI**: `https://<identity-domain-host>/oauth2/v1/token`
-- **Client ID**: your client ID
-- **Client Secret**: your client secret
-- **Client Secret**: your client app scope
+    - **MCP Endpoint**: your OIC MCP Server Endpoint copied from [Task 3](#Task3:EnabletheProjectMCPServer)
+    - **Access Token URI**: `https://<identity-domain-host>/oauth2/v1/token`
+    - **Client ID**: your client ID
+    - **Client Secret**: your client secret
+    - **Client Secret**: your client app scope
 6. Click **Save**, then click **Test**. When the configuration progress reaches 100%, the editor lists five discovered tools.
 
     ![OIC MCP Server configured with OAuth 2.0 Client Credentials and five discovered CRM tools](images/oic-mcp-server.png " ")
