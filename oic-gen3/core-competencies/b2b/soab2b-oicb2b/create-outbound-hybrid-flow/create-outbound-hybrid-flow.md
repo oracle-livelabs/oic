@@ -7,6 +7,7 @@ This task moves outbound partner-facing B2B processing from SOA B2B to Oracle In
 ```text
 Existing SOA Composite -> OIC Outbound Integration -> Oracle Integration B2B -> Trading Partner
 ```
+![outbound-flow](images/outbound-flow.png)
 
 Estimated Time: 20 minutes
 
@@ -73,6 +74,7 @@ The illustrated flow performs these actions:
     1. Enter an operation name, for example, `Process850`.
     2. Configure the request input using the same WSDL/XSD and business-document schema currently sent from SOA to SOA B2B.
     3. Complete the trigger wizard and save the endpoint configuration.
+    ![rest-trigger](images/rest-trigger.png)
 8. Add a **B2B** action after the trigger and name it `EDI-Generate`.
 9. Configure the B2B action:
     1. Select the pilot trading partner.
@@ -81,7 +83,7 @@ The illustrated flow performs these actions:
         ![b2b-action](images/b2b-action.png)
     4. Confirm that the agreement uses the deployed AS2 transport.
     5. Map the incoming `Process850` business document to the B2B action input. If the schemas are the same, use a direct mapping and do not add a new business transformation.
-
+        ![map-edi-generate](images/map-edi-generate.png)
 10. Add a **Switch** action after the B2B action.
 11. Configure a branch with the following condition:
 
@@ -92,10 +94,11 @@ The illustrated flow performs these actions:
 12. Inside the success-or-warning branch, add a **Map** action named `Call_Outbound`.
 13. Add an **Integration** invoke after the `Call_Outbound` map.
 14. Select the generated AS2 send integration, or the approved outbound delivery integration, and name the invoke `Call_Outbound`.
+     ![oic-tp](images/oic-tp.png)
 15. Map the B2B action output to the input required by the generated or configured outbound delivery integration.
-    ![outbound-mapping.png](images/outbound-mapping.png)
+    ![outbound-mapping](images/outbound-mapping.png)
 16. Complete the invoke wizard and verify that it uses the deployed AS2 transport.
-17. Add business identifiers, such as invoice number, purchase-order number, trading partner, and document type.
+17. Add business identifiers.
 18. Activate the Oracle Integration outbound integration and record its endpoint URL and WSDL.
     ![Example OIC outbound SOA-to-B2B flow](images/outbound-oic-b2b-flow.png)
 
@@ -120,6 +123,7 @@ If the existing SOA composite invokes a SOA B2B reference named `B2B_PO_Out`, ad
 7. Replace the existing SOA B2B invoke with the new Oracle Integration invoke.
 8. Keep the existing SOA transformations, orchestration, business rules, routing, and backend logic unchanged.
 9. Deploy the updated SOA composite to the non-production environment.
+    ![soa2oic](images/soa2oic.png)
 
 ## Task 3: Test and Validate the Outbound Flow
 
@@ -129,10 +133,20 @@ Trigger the SOA process to generate an X12 850 Purchase Order with purchase-orde
 
 ### Validation Steps
 
-1. Trigger the existing SOA business process with the approved outbound test data.
+1. Open **Postman**.
+    1. In the **Collections** panel, open the collection that you imported.
+    2. Select the **SOAOutboundRequest-Trigger** request.
+    3. Update the request URL with the details for your target SOA instance, for example, `http://ip:port/soa-infra/services/default/SOAOutbound850App/bpelprocess_outbound_client_ep`
+    4. Open the **Authorization** tab and enter the credentials required by your SOA environment.
+    5. Open the **Body** tab and enter the input data included in the imported collection or modify as per your data. 
+        ![postman-trigger-payload](images/postman-trigger-payload.png)
+    6. Click **Send**.
+    7. Review the response and confirm that the request was accepted by SOA.
+
 2. Confirm that the SOA composite creates its normal business document.
 3. Confirm that the SOA composite invokes `INT_SOA_OUTBOUND_POC` instead of SOA B2B.
 4. In Oracle Integration monitoring, confirm that the outbound integration receives the message and completes its B2B action.
+    ![observe-soa-outbound](images/observe-soa-outbound.png)
 5. In Oracle Integration B2B, confirm that the message:
     - Resolves to the expected trading partner and agreement.
     - Is translated from XML into the required outbound B2B format.
