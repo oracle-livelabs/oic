@@ -19,7 +19,6 @@ The migration moves the B2B processing layer to Oracle Integration. Existing SOA
 This lab assumes you have:
 
 - All previous labs completed.
-- [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/UrkKROO3M8fiP5l9MEfHBkRSo4s8NkprRfGIOqKaDG3-4oiim0y0AWwFmfiO6K97/n/oicpm/b/oiclivelabs/o/oic3/ExpenseCreationLabVer2.zip) the Lab artifacts and unzip on your local computer. The lab artifacts contains a .car file (OIC Project) and .jpeg files which will act as data source for this usecase.
 
 
 ## Task 1: Export the Trading Partner agreement from SOA B2B
