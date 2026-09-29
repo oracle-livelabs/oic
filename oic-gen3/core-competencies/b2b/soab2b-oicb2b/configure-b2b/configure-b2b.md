@@ -30,6 +30,7 @@ Confirm that you have:
 5. Enter a clear connection name, for example, `SOAB2BAS2`.
 6. Configure the endpoint URL as `https://postman-echo.com/post`.
 7. Select the security policy **AS2 Basic Policy**.
+    ![soab2b-as2-conn.png](images/soab2b-as2-conn.png)
 8. Enter only approved non-production test credentials and AS2 identifiers if the adapter configuration requires them.
 9. Save the connection.
 10. Test the connection if the connection wizard provides a test option.
@@ -43,19 +44,18 @@ Confirm that you have:
 5. Create a new transport or edit the imported transport placeholder, as appropriate for the migrated agreement.
 6. Select **AS2** as the transport protocol.
 7. Select `SOAB2BAS2` as the transport connection.
+    ![B2B TP](images/tp-transports.png)
 8. Configure the transport properties required by the agreement, including:
-    - Sender AS2 identifier
-    - Receiver AS2 identifier
+    - Select AS2 identifiers
     - Receive and Send settings
     - Signing, encryption, and certificate settings, when applicable
     - Any agreement-specific transport values
-    - Integration name prefix, for example: SOAB2B_850
-        ![B2B TP](images/tp-transports.png)
+    - Integration name prefix, for example: SOAB2B_850 
         ![B2B TP AS2 Identifiers](images/as2-identifiers.png)
 9. Save the transport configuration.
 10. In the **Transports & agreements** section, use the **Actions** menu for the transport and select **Deploy**.
 11. Confirm that the transport deployment completes successfully.
-12. After transport deployment, it now explains that Oracle Integration automatically creates:
+12. After transport deployment, Oracle Integration automatically creates:
     - A receive integration for inbound messages
     - A send integration for outbound messages
     The validation section now includes checking both generated integrations.
