@@ -7,6 +7,7 @@ This task moves inbound partner-facing B2B processing to Oracle Integration B2B 
 ```text
 Trading Partner -> Oracle Integration B2B -> OIC Backend Integration -> BPEL Gateway -> Existing SOA Composite -> Backend Application
 ```
+![inbound-flow](images/inbound-flow.png)
 
 Estimated Time: 20 minutes
 
@@ -66,6 +67,7 @@ For this workshop, the pilot partner sends an **X12 850 Purchase Order**. The ex
 4. Expose the BPEL process as a SOAP service. Use REST only when the existing SOA environment and the Oracle Integration design require it.
 5. Add a reference to the existing SOA composite or service that currently performs the business processing.
 6. Configure the reference with the existing composite's WSDL and endpoint details.
+    ![BPEL process](images/bpelprocess.png)
 
 ### Configure Minimal Mediation
 
@@ -106,7 +108,7 @@ Create an inbound integration named `INT_850_TO_SOA_WRAPPER`. In the design show
 1. In the Oracle Integration project, open **Connections**.
 2. Create a new connection using the **SOA Adapter**.
 3. Enter a clear name, for example, `SOAB2B`.
-4. Configure the BPEL gateway WSDL or endpoint URL recorded in Task 1.
+4. Configure the SOA URL.
 5. Configure the approved non-production security policy and credentials required by the SOA environment.
 6. Save and test the connection.
 
@@ -120,8 +122,27 @@ Create an inbound integration named `INT_850_TO_SOA_WRAPPER`. In the design show
 6. Configure the REST trigger:
     1. Select **POST** as the request method.
     2. Enter an operation name, for example, `INT_850_TO_SOA_Trigger`.
-    3. Configure the request payload to receive the B2B message reference or event passed from the generated B2B receive integration.
-    4. Complete the REST trigger wizard and save the endpoint configuration.
+    3. Choose the option to define the request payload using an inline JSON sample.
+    4. Paste the following JSON, then save the trigger configuration
+            ```<copy>
+            {
+            "type": "MSG",
+            "id": "12345",
+            "direction": "INBOUND",
+            "trading-partner": "ACME",
+            "document-definition": "PO_850",
+            "message": [
+                {
+                "b2b-message-reference": "biz:0AC400D117503A8246000000347849EB"
+                },
+                {
+                "b2b-message-reference": "biz:0AC400D117503A8246000000347849EA"
+                }
+            ]
+            }
+            </copy>
+            ```
+    5. Complete the REST trigger wizard and save the endpoint configuration.
         ![rest-trigger](images/rest-trigger.png)
 
 7. Add a **For Each** action after the REST trigger and name it `ForEach1`.
@@ -134,7 +155,6 @@ Create an inbound integration named `INT_850_TO_SOA_WRAPPER`. In the design show
     ![b2b-mapping](images/b2b-mapping.png)
 12. call `SOAB2B` connection after the B2B action and name the invoke `SOAWrapper`.
 13. Select the `SOAB2BInboundProject` from the Oracle SOA Suite Adapter connection wizard and select the service.
-
     ![soawrapper](images/soawrapper.png)
 14. When the SOA invoke is added, Oracle Integration automatically creates the required input **Map** action immediately before it. Open that map and map the B2B `FetchMessage` XML output to the BPEL gateway input schema. Map the translated purchase-order data to the `PurchaseOrder` root element expected by the existing SOA composite.
     ![soawrapper-mapping](images/soawrapper-mapping.png)
@@ -152,17 +172,28 @@ Create an inbound integration named `INT_850_TO_SOA_WRAPPER`. In the design show
 Use a valid sample X12 850 document for the pilot partner. For example, use a purchase order with a unique control number such as `PO-10001`. The expected business result is that the existing SOA composite creates or updates the purchase order in the configured backend test system. Use `PO-10001` as the business identifier to trace the same transaction in Oracle Integration B2B tracking, Oracle Integration monitoring, the BPEL gateway audit trail, and the existing SOA composite instance.
 
 1. Send the valid pilot inbound document, such as an X12 850 Purchase Order, through the configured test AS2 channel.
+    1. Open **Postman**.
+    2. In the **Collections** panel, open the collection that you imported.
+    3. Select the **OICInboundRequest-Trigger** request.
+    4. Update the request URL with the details for your target Oracle Integration (OIC) instance.
+    5. Open the **Authorization** tab and enter the credentials required by your OIC environment. Do not save credentials or access tokens in the shared collection.
+    6. Open the **Body** tab and choose one of the sample JSON payloads included in the imported collection. You can also use the inline JSON sample in this guide.
+        ![oic-inbound-trigger-payload](images/oic-inbound-trigger-payload.png)
+    7. Click **Send**.
+    8. Review the response and confirm that the request was accepted by the OIC REST trigger.
+    
 2. In Oracle Integration B2B, confirm that the message:
-    - Is received from the pilot trading partner.
-    - Resolves to the expected agreement.
-    - Passes validation.
-    - Is translated from the B2B document to XML.
-    - Has a B2B tracking record.
-3. In Oracle Integration monitoring, confirm that the backend integration is triggered and completes successfully.
-4. In the SOA Enterprise Manager console, confirm that the BPEL gateway receives the message.
-5. Confirm that the BPEL gateway invokes the existing SOA composite.
-6. Confirm that the existing SOA composite completes its normal processing in the backend application.
-7. Compare the outcome with the expected result for the sample X12 850 document.
+    1. In Oracle Integration project, open the **Observe** tab.
+    2. Find the **AS2 Receive** integration, which is created automatically as part of the B2B configuration.
+        ![soab2b-as2-receive](images/soab2b-as2-receive.png)
+    3. Confirm that the **AS2 Receive** integration was triggered for the message you sent.
+    4. Open the instance details and verify that it invoked the OIC back-end integration.
+    5. Confirm that the backend integration is triggered and completes successfully
+    6. Verify that the OIC back-end integration invoked the SOA wrapper integration.
+    7. In the SOA Enterprise Manager console, confirm that the BPEL gateway receives the message.
+    8. Confirm that the BPEL gateway invokes the existing SOA composite.
+    9. Confirm that the existing SOA composite completes its normal processing in the backend application.
+    10. Compare the outcome with the expected result for the sample X12 850 document.
 
 ## Expected Result
 
