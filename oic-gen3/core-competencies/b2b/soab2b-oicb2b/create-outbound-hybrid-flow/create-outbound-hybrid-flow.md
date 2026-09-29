@@ -63,20 +63,20 @@ The illustrated flow performs these actions:
 
 ### Create the Integration
 
-1. Open the Oracle Integration project.
-2. Click **Integrations**, then click **Create** or the **+** icon.
-3. Select **Application integration**.
-4. Enter `INT_SOA_OUTBOUND_POC` as the integration name. Optionally add a description such as *Receives the SOA purchase order and sends it through Oracle Integration B2B*.
-5. Click **Create** to open the integration canvas.
-6. Add **REST** trigger. Select the trigger type that the existing SOA composite can invoke. Reuse the existing SOA outbound contract wherever possible.
-
-7. Configure the trigger:
+1. [Download the XSD](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ed1KR_p_gZhhS53mb0NhqYO2j3lqiwvzbIMmbm2yk3qpgmNSjetlYuyUDVt0bbJ1/n/oicpm/b/oiclivelabs/o/oic3/b2b/X124010850.xsd)
+2. Open the Oracle Integration project.
+3. Click **Integrations**, then click **Create** or the **+** icon.
+4. Select **Application integration**.
+5. Enter `INT_SOA_OUTBOUND_POC` as the integration name. Optionally add a description such as *Receives the SOA purchase order and sends it through Oracle Integration B2B*.
+6. Click **Create** to open the integration canvas.
+7. Add **REST** trigger. Select the trigger type that the existing SOA composite can invoke. Reuse the existing SOA outbound contract wherever possible.
+8. Configure the trigger:
     1. Enter an operation name, for example, `Process850`.
-    2. Configure the request input using the same WSDL/XSD and business-document schema currently sent from SOA to SOA B2B.
-    3. Complete the trigger wizard and save the endpoint configuration.
+    2. Configure the request input using the same WSDL/XSD and business document schema currently sent from SOA to SOA B2B. For this lab, use the XSD file downloaded in Step 1.
+    3. Select *XML Schema* as the payload format, click *Drag and Drop*, and upload the XSD file. Select *Transaction-850* as the Element, complete the trigger configuration wizard, and save the endpoint configuration.
     ![rest-trigger](images/rest-trigger.png)
-8. Add a **B2B** action after the trigger and name it `EDI-Generate`.
-9. Configure the B2B action:
+9. Add a **B2B** action after the trigger and name it `EDI-Generate`.
+10. Configure the B2B action:
     1. Select the pilot trading partner.
     2. Select the appropriate outbound agreement.
     3. Select the outbound X12 850 document definition and confirm the outbound direction.
@@ -84,22 +84,22 @@ The illustrated flow performs these actions:
     4. Confirm that the agreement uses the deployed AS2 transport.
     5. Map the incoming `Process850` business document to the B2B action input. If the schemas are the same, use a direct mapping and do not add a new business transformation.
         ![map-edi-generate](images/map-edi-generate.png)
-10. Add a **Switch** action after the B2B action.
-11. Configure a branch with the following condition:
+11. Add a **Switch** action after the B2B action.
+12. Configure a branch with the following condition:
 
     ```text
     translation-status = 'Success' OR translation-status = 'Warning'
     ```
 
-12. Inside the success-or-warning branch, add a **Map** action named `Call_Outbound`.
-13. Add an **Integration** invoke after the `Call_Outbound` map.
-14. Select the generated AS2 send integration, or the approved outbound delivery integration, and name the invoke `Call_Outbound`.
+13. Inside the success-or-warning branch, add a **Map** action named `Call_Outbound`.
+14. Add an **Integration** invoke after the `Call_Outbound` map.
+15. Select the generated AS2 send integration, or the approved outbound delivery integration, and name the invoke `Call_Outbound`.
      ![oic-tp](images/oic-tp.png)
-15. Map the B2B action output to the input required by the generated or configured outbound delivery integration.
+16. Map the B2B action output to the input required by the generated or configured outbound delivery integration.
     ![outbound-mapping](images/outbound-mapping.png)
-16. Complete the invoke wizard and verify that it uses the deployed AS2 transport.
-17. Add business identifiers.
-18. Activate the Oracle Integration outbound integration and record its endpoint URL and WSDL.
+17. Complete the invoke wizard and verify that it uses the deployed AS2 transport.
+18. Add business identifiers.
+19. Activate the Oracle Integration outbound integration and record its endpoint URL and WSDL.
     ![Example OIC outbound SOA-to-B2B flow](images/outbound-oic-b2b-flow.png)
 
 ## Task 2: Update the SOA Outbound Configuration
