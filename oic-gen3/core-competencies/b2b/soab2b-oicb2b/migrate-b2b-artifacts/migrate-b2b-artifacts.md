@@ -36,10 +36,10 @@ This lab assumes you have:
 ## Task 2: Use Postman to import the artifacts into OIC
 
 1. Import the provided Oracle Integration B2B migration collection into Postman:
-    1. [Download the postman collection](https://objectstorage.us-phoenix-1.oraclecloud.com/p/K7QWVseRNml1vuJ-_Dn6HBXk-ozjnxygwgKVejVrTQPDKJzbdAHGKe0zVzzxg5fP/n/oicpm/b/oiclivelabs/o/oic3/b2b/B2BPOC.postman_collection.json)
+    1. [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mFjAqRyf_xzjY8mg43i7gaoKB6d_0jGFSGr4vzvxkMvAvoG8bl2ztWXfgd9LJKxb/n/oicpm/b/oiclivelabs/o/oic3/b2b/soa-oic-b2b-artifacts.zip) the artifacts
     2. Open **Postman**.
     3. Click **Import**.
-    4. Select the provided Postman collection file, then click **Import**.
+    4. Select the provided Postman collection file in the zip file, then click **Import**.
     5. Confirm that the imported collection appears in the **Collections** panel.
 2. Open the **B2BImport-OIC3Dev** request in the imported collection.
     ![postman1](images/postman1.png)

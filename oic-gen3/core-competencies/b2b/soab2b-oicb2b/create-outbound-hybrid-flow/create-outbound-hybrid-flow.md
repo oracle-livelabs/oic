@@ -63,7 +63,7 @@ The illustrated flow performs these actions:
 
 ### Create the Integration
 
-1. [Download the XSD](https://objectstorage.us-phoenix-1.oraclecloud.com/p/ed1KR_p_gZhhS53mb0NhqYO2j3lqiwvzbIMmbm2yk3qpgmNSjetlYuyUDVt0bbJ1/n/oicpm/b/oiclivelabs/o/oic3/b2b/X124010850.xsd)
+1. Please [Download](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mFjAqRyf_xzjY8mg43i7gaoKB6d_0jGFSGr4vzvxkMvAvoG8bl2ztWXfgd9LJKxb/n/oicpm/b/oiclivelabs/o/oic3/b2b/soa-oic-b2b-artifacts.zip) the artifacts if you haven't already.
 2. Open the Oracle Integration project.
 3. Click **Integrations**, then click **Create** or the **+** icon.
 4. Select **Application integration**.
@@ -73,7 +73,7 @@ The illustrated flow performs these actions:
 8. Configure the trigger:
     1. Enter an operation name, for example, `Process850`.
     2. Configure the request input using the same WSDL/XSD and business document schema currently sent from SOA to SOA B2B. For this lab, use the XSD file downloaded in Step 1.
-    3. Select *XML Schema* as the payload format, click *Drag and Drop*, and upload the XSD file. Select *Transaction-850* as the Element, complete the trigger configuration wizard, and save the endpoint configuration.
+    3. Select *XML Schema* as the payload format, click *Drag and Drop*, and  upload the XSD file that you downloaded. Select *Transaction-850* as the Element, complete the trigger configuration wizard, and save the endpoint configuration.
     ![rest-trigger](images/rest-trigger.png)
 9. Add a **B2B** action after the trigger and name it `EDI-Generate`.
 10. Configure the B2B action:
