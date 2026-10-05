@@ -25,6 +25,11 @@ This lab assumes you have:
 
 1. Download the workshop project export file from [Download link: Workshop project export](https://objectstorage.us-phoenix-1.oraclecloud.com/p/mQYcQshdftak9USbvK5Q6iNlwpm5RbN1tQbUckZ7uB9MzBi6KIl8QMPAAH6P9GWc/n/oicpm/b/Partner-Enablement/o/Get-Started-MCP-Gateway/OIC_MCP_GW_DEMO_LL.car).
 
+    > **Note:**
+    >
+    > 1. For the non-bootcamp users, Import the lab.
+    > 2. For the bootcamp users, Clone the existing lab named *OIC MCP GW Demo LL-USE This to clone*.
+
 2. Sign in to Oracle Integration, open **Projects**, click **Add**,  click **Import** and select the downloaded file. Open the imported project when it appears in your project list.
 
     ![Import panel with the workshop project export file selected](images/import-project.png " ")
