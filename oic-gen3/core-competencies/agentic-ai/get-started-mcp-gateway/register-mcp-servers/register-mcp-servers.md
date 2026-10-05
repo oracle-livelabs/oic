@@ -99,13 +99,13 @@ This lab assumes you have:
     > **Note:**
     >
     > 1. For the non-bootcamp users, Refer to the documentation on [how to create a confidential application in IAM](https://docs.oracle.com/en/cloud/paas/application-integration/aiagents/complete-prerequisites-create-activate-confidential-client-application.html).
-    > 2. For the bootcamp, you can find the required information in the shared spreadsheet.
+    > 2. For the bootcamp users, you can find the required information in the shared spreadsheet.
 
     - **MCP Endpoint**: your OIC MCP Server Endpoint copied from [Task 3](#Task3:EnabletheProjectMCPServer)
     - **Access Token URI**: `https://<identity-domain-host>/oauth2/v1/token`
     - **Client ID**: your client ID
     - **Client Secret**: your client secret
-    - **Client Secret**: your client app scope
+    - **Scope**: your client app scope
 6. Click **Save**, then click **Test**. When the configuration progress reaches 100%, the editor lists five discovered tools.
 
     ![OIC MCP Server configured with OAuth 2.0 Client Credentials and five discovered CRM tools](images/oic-mcp-server.png " ")
@@ -119,7 +119,7 @@ This lab assumes you have:
     - **MCP Endpoint**: `https://158-101-35-71.sslip.io/api/public/erp-vendor/v2/mcp`
     - **Security policy**: **OAuth 2.0 Client Credentials**
     - **Access Token URI**: `https://158-101-35-71.sslip.io/api/public/oauth/token`
-    - **Client ID** and **Client Secret**: supplied by your instructor
+    - **Client ID** and **Client Secret**: Please get it from the downloaded artifacts.
 
 3. Click **Save**, then **Test**. The editor discovers 14 tools, including `list_vendors`, `get_vendor_performance`, `create_purchase_order`, `approve_purchase_order`, and `get_vendor_risk_profile`.
 
