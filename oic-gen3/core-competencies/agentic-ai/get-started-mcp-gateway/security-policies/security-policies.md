@@ -9,7 +9,7 @@ Security policies govern MCP traffic itself. Oracle Integration offers two types
 
 In this lab, you follow least privilege. A customer-support agent can read vendor data but cannot approve purchase orders. Customer contact details are also masked before they reach the model.
 
-Estimated Time: x
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -52,7 +52,10 @@ This lab assumes you have:
 
 ## Task 3: Create a PII Policy for Customer Info
 
-> **Note:** The MCP Gateway PII policy uses OCI Language. Before proceeding, navigate to the OCI Console and complete the [prerequisites](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/prerequisites.html). Configure only the policy settings specific to OCI Language; you can ignore the remaining policy statements.
+> **Note:**
+    >
+    > 1. For the non-bootcamp users, The MCP Gateway PII policy uses OCI Language. Before proceeding, navigate to the OCI Console and complete the [prerequisites](https://docs.oracle.com/en/cloud/paas/application-integration/integrations-user/prerequisites.html). Configure only the policy settings specific to OCI Language; you can ignore the remaining policy statements.
+    > 2. For the bootcamp users, Configuration is done and select the *EnablementPM* as a compartment name
 
 1. Under **Security policies**, click **+** and select **PII detection**. Name the policy `PII Policy for Customer Info` and click **Add**.
 

@@ -43,12 +43,7 @@ This lab assumes you have:
 
 ## Task 2: Connect MCPJam Inspector to the Gateway
 
-1. Open [app.mcpjam.com](https://app.mcpjam.com) in your browser. Alternatively, run the inspector locally:
-
-    ```
-    <copy>npx @mcpjam/inspector@latest</copy>
-    ```
-
+1. Open [app.mcpjam.com](https://app.mcpjam.com) in your browser.
 2. Select **Connect**, then click **Add Server**.
 
 3. In the **Add MCP Server** dialog, set these values:
