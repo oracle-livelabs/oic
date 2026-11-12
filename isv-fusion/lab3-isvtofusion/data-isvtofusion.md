@@ -28,7 +28,7 @@ This lab assumes you have:
 
 1. Download the **JITSIEVENTS_01.00.0000.iar** file from below link and    import into the OIC instance.
 
-   [OIC Code](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/JITSIEVENTS_01.00.0000.iar).
+   [OIC Code](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/JITSIEVENTS_01.00.0000.iar).
 
 2. Update the Oracle ERP Cloud adapter connection to point your fusion instance.
 

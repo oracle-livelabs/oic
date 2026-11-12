@@ -107,7 +107,7 @@ To expose your B2B integrations as an API, you will need to create a REST Connec
 
 ## Task 5: Download Lab Artifacts
 
-[Download the lab artifacts](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/b2b-getting-started.zip) and unzip in a folder **b2b-getting-started**
+[Download the lab artifacts](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/b2b-getting-started.zip) and unzip in a folder **b2b-getting-started**
 
 You may now **proceed to the next lab**.
 
