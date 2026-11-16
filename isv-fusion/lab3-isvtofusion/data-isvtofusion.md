@@ -28,24 +28,24 @@ This lab assumes you have:
 
 1. Download the **JITSIEVENTS_01.00.0000.iar** file from below link and    import into the OIC instance.
 
-   [OIC Code](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/JITSIEVENTS_01.00.0000.iar).
+    [OIC Code](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/JITSIEVENTS_01.00.0000.iar).
 
 2. Update the Oracle ERP Cloud adapter connection to point your fusion instance.
 
 3. Pick any existing SR number from HR Help Service Request page and update the SR number in the UpdateFusion xslt.
- ![XSLT update](./images/xsltupdate.png)
+    ![XSLT update](./images/xsltupdate.png)
 
 4. Save and Activate the OIC interface.
 
 5. Keep the OIC service url handy and it will be used in the next task.
 
- Click **Metadata URL**
+    Click **Metadata URL**
 
-  ![Get the endpoint url](./images/oicendpoint.png)
+    ![Get the endpoint url](./images/oicendpoint.png)
 
- Copy Endpoint URL.
+    Copy Endpoint URL.
 
- ![Get the endpoint url](./images/oicendpoint1.png)
+    ![Get the endpoint url](./images/oicendpoint1.png)
 
 ## Task 2: JaaS (Jitsi as a Service) configurations
 
@@ -54,24 +54,24 @@ This lab assumes you have:
 2. Go to  [Online Base64 Converter](https://www.base64decode.org/) and Click **Encode**
 
 3. Enter the oic user credentials in the below format.
-   **username:password**  (This user should have ServiceInvoker role assigned)
-   Click **Encode**
+    **username:password**  (This user should have ServiceInvoker role assigned)
+    Click **Encode**
 
 4. Click **Webhooks** > **Add endpoint**.
- | **Element**          | **Value**                                            |
- | -------------------- | ---------------------------------------------------- |
- | Endpoint URL         | `enter the oic url created in the previous step`     |
- | Authorization header | `Basic <<base64encoded value in the previous step>>` |
- | Event                | `ROOM_CREATED`                                       |
-![Webhook configuration](./images/webhookconfig.png)
-![Endpoint url](./images/webhookendpoint.png)
-Click **Add endpoint**
+    | **Element**          | **Value**                                            |
+    | -------------------- | ---------------------------------------------------- |
+    | Endpoint URL         | `enter the oic url created in the previous step`     |
+    | Authorization header | `Basic <<base64encoded value in the previous step>>` |
+    | Event                | `ROOM_CREATED`                                       |
+    ![Webhook configuration](./images/webhookconfig.png)
+    ![Endpoint url](./images/webhookendpoint.png)
+    Click **Add endpoint**
 
 5. Launch the 8x8 video app from the HR Service Request Page through Start Meet link and Join the meeting.
 
 6. You may notice the OIC instance are created and its triggered from the webhook configuration created in the previous step.
 
-![OIC instances](./images/oicinstancecreation.png)
+    ![OIC instances](./images/oicinstancecreation.png)
 
 ![InvestigationExecSummary field](./images/fusionfieldupdate.png)
 
